@@ -52,7 +52,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--ink:#0C1A2E;--blue:#1650D4;--blue2:#2563EB;--blue3:#1e3a8a;--sky:#EBF1FE;--gold:#F59E0B;--gold2:#FEF3C7;--teal:#0D9488;--red:#DC2626;--green:#16A34A;--off:#FAFBFF;--muted:#64748B;--border:#E2E8F5;--card:#F8FAFF;--wa:#25D366}
 html{scroll-behavior:smooth}
-body{font-family:'Bricolage Grotesque',sans-serif;background:#fff;color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{padding-top:112px;font-family:'Bricolage Grotesque',sans-serif;background:#fff;color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 #progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--blue),var(--teal),var(--gold));z-index:9999;border-radius:0 2px 2px 0}
 
 /* NAV */
@@ -79,7 +79,7 @@ nav a:hover{color:var(--ink)}
 .mob-menu a:last-child{border:none}
 
 /* URGENCY */
-.urgency-bar{background:linear-gradient(135deg,#7C3AED,#4F46E5);padding:.65rem 3rem .65rem 1.2rem;display:flex;align-items:center;justify-content:center;gap:.7rem;position:relative;overflow:hidden}
+.urgency-bar{background:linear-gradient(135deg,#7C3AED,#4F46E5);padding:.65rem 3rem .65rem 1.2rem;display:flex;align-items:center;justify-content:center;gap:.7rem;position:fixed;top:68px;left:0;right:0;z-index:499;overflow:hidden;flex-wrap:wrap}
 .ub-dot{width:8px;height:8px;border-radius:50%;background:#FCD34D;animation:pulse 1.5s infinite;flex-shrink:0}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(252,211,77,.5)}70%{box-shadow:0 0 0 6px rgba(252,211,77,0)}}
 .ub-text{font-size:.78rem;font-weight:600;color:#fff;text-align:center;flex:1}
@@ -307,9 +307,9 @@ nav a:hover{color:var(--ink)}
 .g-score{font-family:'Instrument Serif',serif;font-size:1.9rem;font-weight:700;color:#fff}
 .g-count{font-size:.74rem;color:rgba(255,255,255,.45)}
 .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-.tcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:1.8rem;transition:all .25s;position:relative;backdrop-filter:blur(10px)}
+.tcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:1.6rem 1.6rem 1.6rem 1.6rem;transition:all .25s;position:relative;backdrop-filter:blur(10px);padding-top:3.5rem}
 .tcard:hover{background:rgba(255,255,255,.11);border-color:rgba(245,158,11,.3);transform:translateY(-5px)}
-.t-band{position:absolute;top:1.4rem;right:1.4rem;background:linear-gradient(135deg,var(--gold),#F59E0B);border-radius:12px;padding:.38rem .8rem;line-height:1.3;text-align:center}
+.t-band{position:absolute;top:.6rem;right:.6rem;background:linear-gradient(135deg,var(--gold),#F59E0B);border-radius:10px;padding:.3rem .55rem;line-height:1.2;text-align:center;z-index:2;min-width:44px}
 .t-band .tb{font-family:'Instrument Serif',serif;font-size:1.3rem;font-weight:700;color:#fff;display:block;line-height:1}
 .t-band .tl2{font-size:.48rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7)}
 .t-stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:.9rem}
@@ -321,13 +321,13 @@ nav a:hover{color:var(--ink)}
 .t-type{display:inline-flex;align-items:center;gap:.3rem;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:rgba(13,148,136,.12);padding:.18rem .55rem;border-radius:100px;margin-top:4px}
 
 /* RESULTS */
-.results-wrap{background:var(--ink);padding:6rem 4%;position:relative;overflow:hidden}
-.results-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(22,80,212,.25),transparent 60%)}
-.results-inner{max-width:1240px;margin:0 auto;position:relative;z-index:1}
-.results-wrap .stag{background:rgba(245,158,11,.15);color:var(--gold)}
-.results-wrap .sh2{color:#fff}
-.results-wrap .sh2 em{color:var(--gold)}
-.results-wrap .sdesc{color:rgba(255,255,255,.45)}
+
+
+
+
+
+
+
 .results-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;margin:1.5rem 0 2.5rem;padding:1rem 1.5rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;width:fit-content}
 .rm-item{font-size:.82rem;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:.4rem}
 .rm-item strong{color:var(--gold);font-size:.9rem}
@@ -384,7 +384,7 @@ nav a:hover{color:var(--ink)}
 .faq-item.open .faq-icon{background:var(--blue);color:#fff;transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
 .faq-a-inner{padding:0 1.5rem 1.3rem;font-size:.92rem;line-height:1.9;color:var(--muted)}
-.faq-item.open .faq-a{max-height:300px}
+.faq-item.open .faq-a{max-height:600px}
 
 /* WHATSAPP CONTACT SECTION */
 .wa-section{background:linear-gradient(135deg,#022c22 0%,#065f46 60%,#047857 100%);padding:5rem 4%;text-align:center;position:relative;overflow:hidden}
@@ -448,21 +448,6 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
 .splash-bar-wrap{width:160px;height:3px;background:var(--border);border-radius:3px;overflow:hidden}
 .splash-bar{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--teal),var(--gold));border-radius:3px;animation:splashLoad 1.4s .4s ease forwards}
 @keyframes splashLoad{to{width:100%}}
-
-/* EXIT POPUP */
-#exit-popup{position:fixed;inset:0;z-index:99998;display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;visibility:hidden;transition:all .3s}
-#exit-popup.show{opacity:1;visibility:visible}
-.ep-overlay{position:absolute;inset:0;background:rgba(12,26,46,.7);backdrop-filter:blur(4px)}
-.ep-box{position:relative;z-index:1;background:#fff;border-radius:24px;padding:2.5rem;max-width:480px;width:100%;text-align:center;box-shadow:0 40px 100px rgba(0,0,0,.3)}
-.ep-close{position:absolute;top:1rem;right:1rem;background:var(--border);border:none;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;color:var(--muted)}
-.ep-emoji{font-size:3rem;margin-bottom:1rem;display:block}
-.ep-box h3{font-family:'Instrument Serif',serif;font-size:1.9rem;font-weight:700;color:var(--ink);margin-bottom:.5rem;line-height:1.2}
-.ep-box h3 em{font-style:italic;color:var(--blue)}
-.ep-box p{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem}
-.ep-wa-btn{display:flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;border-radius:10px;font-weight:700;font-size:1rem;text-decoration:none;transition:all .2s;box-shadow:0 4px 16px rgba(37,211,102,.3)}
-.ep-wa-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.45)}
-.ep-btn-skip{background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;padding:.4rem;transition:color .2s;font-family:inherit;margin-top:.6rem;display:block;width:100%;text-align:center}
-.ep-btn-skip:hover{color:var(--ink)}
 
 /* REVEAL */
 .rv{opacity:1}
@@ -694,7 +679,7 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
   .how-wrap{padding:4rem 5%}
   .coaches-wrap{padding:4rem 5%}
   .tst-wrap{padding:4rem 5%}
-  .results-wrap{padding:4rem 5%}
+  
   .yt-wrap{padding:4rem 5%}
   .vidtst-wrap{padding:4rem 5%}
   .batch-wrap{padding:4rem 5%}
@@ -757,15 +742,7 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
 
   /* Testimonials */
   .tgrid{grid-template-columns:1fr!important}
-  .tcard{padding:1.4rem}
-  .t-text{font-size:.85rem}
-  .g-bar{gap:1rem;padding:.9rem 1.1rem}
-  .g-score{font-size:1.5rem}
-  .g-stars-lg{font-size:.95rem}
-
-  /* Results */
-  .results-grid{grid-template-columns:repeat(2,1fr)!important}
-  .results-meta{flex-direction:column;gap:.6rem;width:100%}
+  .tcard{padding:1.8rem 5rem 1.8rem 1.8rem;padding:1.6rem 1.6rem 1.6rem 1.6rem;gap:.6rem;width:100%}
   .rm-dot{display:none}
 
   /* Score gallery */
@@ -859,7 +836,10 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
   .foot-top{flex-wrap:wrap;gap:2rem}
 }
 
-</style>
+
+@media(max-width:480px){#urgency-bar{padding:.6rem 2.5rem .6rem .8rem;gap:.4rem}.ub-text{font-size:.75rem}}
+
+@media(max-width:768px){.tcard{padding:1.4rem}.t-band{top:.8rem;right:.8rem;min-width:52px}.t-stars{padding-right:68px}}</style>
 </head>
 <body>
 
@@ -869,33 +849,12 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
 </div>
 
 
-  <a href="https://wa.me/919999999999?text=Hi!%20I%20want%20to%20know%20about%20IELTS%20coaching" class="n-wa" target="_blank">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    💬 Chat Now — Free!
-  </a>
+  
 <div id="progress-bar"></div>
 
-<div id="exit-popup">
-  <div class="ep-overlay"></div>
-  <div class="ep-box">
-    <button class="ep-close" id="ep-close">✕</button>
-    <span class="ep-emoji">💬</span>
-    <h3>Get <em>Free Counselling</em> on WhatsApp!</h3>
-    <p>Our IELTS expert will personally guide you — which program, study plan, and what score you can realistically achieve.</p>
-    <a href="https://wa.me/919999999999?text=Hi!%20I%20want%20free%20IELTS%20counselling" class="ep-wa-btn" target="_blank">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Chat on WhatsApp — It's Free!
-    </a>
-    <button class="ep-btn-skip" id="ep-skip">I'll look around first</button>
-  </div>
-</div>
 
-<div class="urgency-bar" id="urgency-bar">
-  <div class="ub-dot"></div>
-  <div class="ub-text"><strong>🔥 Limited seats left this batch!</strong> Enrollment closes in 3 days — secure your spot now.</div>
-  <a href="https://wa.me/919999999999" class="ub-cta" target="_blank">WhatsApp Us →</a>
-  <button class="ub-close" id="ub-close">×</button>
-</div>
+
+
 
 <nav id="navbar">
   <a href="#" class="nav-logo">
@@ -905,7 +864,6 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
     <li><a href="#coaching">Coaching</a></li>
     <li><a href="#modules">Modules</a></li>
     <li><a href="#coaches">Coaches</a></li>
-    <li><a href="#results">Results</a></li>
     <li><a href="#batches">Batches</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -922,12 +880,18 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
   <a href="#modules">Course Modules</a>
   <a href="#coaches">Our Coaches</a>
   <a href="#batches">Batches</a>
-  <a href="#results">Student Results</a>
-  <a href="#calculator">Band Calculator</a>
+    <a href="#calculator">Band Calculator</a>
   <a href="#pricing">Pricing</a>
   <a href="#faq">FAQ</a>
   <a href="https://www.youtube.com/@prepeveclasses" target="_blank">▶ Free YouTube Classes</a>
   <a href="https://wa.me/919999999999" class="mob-wa" target="_blank">💬 Chat on WhatsApp →</a>
+</div>
+
+<div class="urgency-bar" id="urgency-bar">
+  <div class="ub-dot"></div>
+  <div class="ub-text"><strong>🔥 Limited seats left this batch!</strong> Enrollment closes in 3 days — secure your spot now.</div>
+  <a href="https://wa.me/919999999999" class="ub-cta" target="_blank">WhatsApp Us →</a>
+  <button class="ub-close" id="ub-close">×</button>
 </div>
 
 <!-- HERO -->
@@ -1394,33 +1358,7 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
 </section>
 
 <div class="wave-down" style="background:var(--off)"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 C480,55 960,0 1440,35 L1440,60 L0,60 Z" fill="#0C1A2E"/></svg></div>
-<section class="results-wrap" id="results">
-  <div class="results-inner">
-    <div class="stag rv">Student Results</div>
-    <h2 class="sh2 rv">Real Scores. <em>Real Students.</em></h2>
-    <p class="sdesc rv">93% of our students achieve Band 7 or above. Every result below is verified.</p>
-    <div class="results-meta rv">
-      <div class="rm-item">📊 Showing <strong>10 of 15,000+</strong> verified results</div>
-      <div class="rm-dot"></div>
-      <div class="rm-item">📈 Average improvement: <strong>+1.5 bands</strong></div>
-      <div class="rm-dot"></div>
-      <div class="rm-item">🏆 Success rate: <strong>93%</strong></div>
-    </div>
-    <div class="results-grid">
-      <div class="r-card featured rv"><div class="r-avatar">😊</div><div class="r-name">Taranjeet</div><div class="r-country">🇨🇦 Canada PR</div><div class="r-score">8.5</div><div class="r-label">Overall Band</div><div class="r-type">Academic</div></div>
-      <div class="r-card rv"><div class="r-avatar">🙋‍♀️</div><div class="r-name">Pratishtha</div><div class="r-country">🇬🇧 UK Masters</div><div class="r-score">8.0</div><div class="r-label">Overall Band</div><div class="r-type">Academic</div></div>
-      <div class="r-card rv"><div class="r-avatar">👦</div><div class="r-name">Deepanshu</div><div class="r-country">🇦🇺 Australia PR</div><div class="r-score">7.5</div><div class="r-label">Overall Band</div><div class="r-type">General</div></div>
-      <div class="r-card rv"><div class="r-avatar">👩</div><div class="r-name">Sneha R.</div><div class="r-country">🇺🇸 USA Nursing</div><div class="r-score">7.0</div><div class="r-label">Overall Band</div><div class="r-type">Academic</div></div>
-      <div class="r-card featured rv"><div class="r-avatar">👨</div><div class="r-name">Vikram P.</div><div class="r-country">🇨🇦 Canada Study</div><div class="r-score">8.0</div><div class="r-label">Overall Band</div><div class="r-type">Academic</div></div>
-      <div class="r-card rv"><div class="r-avatar">🧑‍🦱</div><div class="r-name">Anita K.</div><div class="r-country">🇦🇺 Australia PR</div><div class="r-score">7.5</div><div class="r-label">Overall Band</div><div class="r-type">General</div></div>
-      <div class="r-card rv"><div class="r-avatar">🙋‍♂️</div><div class="r-name">Rohit B.</div><div class="r-country">🇬🇧 UK Work Visa</div><div class="r-score">7.0</div><div class="r-label">Overall Band</div><div class="r-type">General</div></div>
-      <div class="r-card featured rv"><div class="r-avatar">👧</div><div class="r-name">Pooja M.</div><div class="r-country">🇳🇿 New Zealand PR</div><div class="r-score">8.5</div><div class="r-label">Overall Band</div><div class="r-type">Academic</div></div>
-      <div class="r-card rv"><div class="r-avatar">👦</div><div class="r-name">Dev S.</div><div class="r-country">🇮🇪 Ireland Study</div><div class="r-score">7.5</div><div class="r-label">Overall Band</div><div class="r-type">Academic</div></div>
-      <div class="r-card rv"><div class="r-avatar">👩</div><div class="r-name">Meena T.</div><div class="r-country">🇨🇦 Canada Nursing</div><div class="r-score">7.0</div><div class="r-label">Overall Band</div><div class="r-type">General</div></div>
-    </div>
-    <div class="results-cta rv">Showing 10 of <strong>15,000+ verified results</strong> — Average score improvement: <strong>+1.5 bands</strong> · 93% success rate</div>
-  </div>
-</section>
+
 
 <!-- YOUTUBE SECTION -->
 <section class="yt-wrap" id="youtube">
@@ -1879,7 +1817,7 @@ if (ham && mob) {
 var ubClose = document.getElementById('ub-close');
 if (ubClose) ubClose.addEventListener('click', function() {
   var ub = document.getElementById('urgency-bar');
-  if (ub) ub.style.display = 'none';
+  if (ub) { ub.style.display='none'; document.body.style.paddingTop='68px'; }
 });
 
 // Reveal on scroll
@@ -1900,29 +1838,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
   });
 });
 
-// Exit popup
-var exitShown = false;
-document.addEventListener('mouseleave', function(e) {
-  if (e.clientY < 10 && !exitShown) {
-    exitShown = true;
-    setTimeout(function() {
-      var ep = document.getElementById('exit-popup');
-      if (ep) ep.classList.add('show');
-    }, 500);
-  }
-});
-['ep-close', 'ep-skip'].forEach(function(id) {
-  var el = document.getElementById(id);
-  if (el) el.addEventListener('click', function() {
-    var ep = document.getElementById('exit-popup');
-    if (ep) ep.classList.remove('show');
-  });
-});
-var epOv = document.querySelector('.ep-overlay');
-if (epOv) epOv.addEventListener('click', function() {
-  var ep = document.getElementById('exit-popup');
-  if (ep) ep.classList.remove('show');
-});
+
 
 // Video lightbox
 function openVideo(src) {
@@ -1973,6 +1889,24 @@ updateCountdown();
 setInterval(updateCountdown, 1000);
 
 
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = btn.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i) {
+      i.classList.remove('open');
+      var icon = i.querySelector('.faq-icon');
+      if (icon) icon.textContent = '+';
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      var icon = item.querySelector('.faq-icon');
+      if (icon) icon.textContent = '\u00d7';
+    }
+  });
+});
 </script>
 
 <!-- BACK TO TOP -->
