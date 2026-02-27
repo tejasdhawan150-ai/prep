@@ -307,14 +307,14 @@ nav a:hover{color:var(--ink)}
 .g-score{font-family:'Instrument Serif',serif;font-size:1.9rem;font-weight:700;color:#fff}
 .g-count{font-size:.74rem;color:rgba(255,255,255,.45)}
 .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-.tcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:1.6rem 1.6rem 1.6rem 1.6rem;transition:all .25s;position:relative;backdrop-filter:blur(10px);padding-top:3.5rem}
+.tcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:1.6rem 1.6rem 1.6rem 1.6rem;transition:all .25s;position:relative;backdrop-filter:blur(10px);padding-top:3.5rem;display:flex;flex-direction:column}
 .tcard:hover{background:rgba(255,255,255,.11);border-color:rgba(245,158,11,.3);transform:translateY(-5px)}
 .t-band{position:absolute;top:.6rem;right:.6rem;background:linear-gradient(135deg,var(--gold),#F59E0B);border-radius:10px;padding:.3rem .55rem;line-height:1.2;text-align:center;z-index:2;min-width:44px}
 .t-band .tb{font-family:'Instrument Serif',serif;font-size:1.3rem;font-weight:700;color:#fff;display:block;line-height:1}
 .t-band .tl2{font-size:.48rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7)}
 .t-stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-bottom:.9rem}
-.t-text{font-size:.9rem;line-height:1.92;color:rgba(255,255,255,.82);margin-bottom:1.4rem}
-.t-author{display:flex;align-items:center;gap:.85rem}
+.t-text{font-size:.9rem;line-height:1.92;color:rgba(255,255,255,.82);margin-bottom:1.4rem;flex:1}
+.t-author{display:flex;align-items:center;gap:.85rem;margin-top:auto}
 .t-photo{width:46px;height:46px;border-radius:50%;flex-shrink:0;border:2.5px solid rgba(255,255,255,.15);background:linear-gradient(135deg,var(--blue3),var(--blue));display:flex;align-items:center;justify-content:center;font-size:1.2rem}
 .t-name{font-size:.9rem;font-weight:700;color:#fff}
 .t-meta{font-size:.7rem;color:rgba(255,255,255,.38);margin-top:2px}
@@ -1256,13 +1256,13 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
         </a>
         <div class="vt-info">
           <div class="vt-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="vt-quote">"I was stuck at Band 6.5 for a year. PrepEve's speaking framework changed everything — I hit 8.5 in just 45 days!"</p>
+          <p class="vt-quote">"I was stuck at Band 6.5 for a year. PrepEve's speaking framework changed everything — I hit 8.0 in just 30 days!"</p>
           <div class="vt-author">
             <div class="vt-av">🧑</div>
             <div>
               <div class="vt-name">Taranjeet</div>
               <div class="vt-dest">Watch on YouTube</div>
-              <div class="vt-improvement">&#8593; From 6.5 to 8.5</div>
+              <div class="vt-improvement">&#8593; From 7.0 to 8.0</div>
             </div>
           </div>
         </div>
@@ -1312,7 +1312,7 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
             <div>
               <div class="vt-name">Deepanshu</div>
               <div class="vt-dest">Watch on YouTube</div>
-              <div class="vt-improvement">&#8593; From 5.5 to 7.5</div>
+              <div class="vt-improvement">&#8593; From 6.5 to 8.0</div>
             </div>
           </div>
         </div>
