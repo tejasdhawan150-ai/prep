@@ -262,8 +262,8 @@ nav a:hover{color:var(--ink)}
 .mcard-foot .tv{font-family:'Instrument Serif',serif;font-size:1.5rem;font-weight:700;color:var(--gold)}
 
 /* HOW */
-.how-wrap{background:linear-gradient(160deg,#EBF1FE,#CCFBF1);padding:6rem 4%}
-.how-inner{max-width:1240px;margin:0 auto}
+
+
 .hsteps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3.5rem;position:relative}
 .hsteps::before{content:'';position:absolute;top:33px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--blue),var(--teal));z-index:0;border-radius:2px}
 .hstep{text-align:center;position:relative;z-index:1}
@@ -274,7 +274,7 @@ nav a:hover{color:var(--ink)}
 .hstep p{font-size:.82rem;color:var(--muted);line-height:1.78}
 
 /* COACHES */
-.coaches-wrap{background:linear-gradient(180deg,var(--off),#fff);padding:6rem 4%}
+.coaches-wrap{background:linear-gradient(180deg,var(--off),#fff);padding:6rem 4% 0}
 .coaches-inner{max-width:1240px;margin:0 auto}
 .coaches-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
 .coach-card{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:2rem;transition:all .25s;text-align:center;position:relative;overflow:hidden}
@@ -676,7 +676,7 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
 @media(max-width:768px){
   .sec{padding:4rem 5%}
   .mod-wrap{padding:4rem 5%}
-  .how-wrap{padding:4rem 5%}
+  
   .coaches-wrap{padding:4rem 5%}
   .tst-wrap{padding:4rem 5%}
   
@@ -1038,7 +1038,7 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
 
 
 <!-- MODULES -->
-<div class="wave-down" style="background:#fff"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#0C1A2E"/></svg></div>
+
 
 <!-- COMPARISON TABLE -->
 <section class="compare-wrap" id="compare">
@@ -1160,24 +1160,11 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
 
 
 <!-- HOW IT WORKS -->
-<div class="wave-down" style="background:#0C1A2E"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,30 C360,0 1080,60 1440,30 L1440,60 L0,60 Z" fill="#EBF1FE"/></svg></div>
-<section class="how-wrap" id="how">
-  <div class="how-inner">
-    <div class="stag rv">The Process</div>
-    <h2 class="sh2 rv">Your Path to <em>Band 7+</em></h2>
-    <p class="sdesc rv">A clear, structured 30-day journey from enrolment to achieving your target band score.</p>
-    <div class="hsteps">
-      <div class="hstep rv"><div class="hstep-n">1</div><div class="hstep-pill">Day 1</div><h3>Diagnostic Test</h3><p>Free mock test + personalised study plan based on your current level and target score.</p></div>
-      <div class="hstep rv"><div class="hstep-n">2</div><div class="hstep-pill">Week 1–4</div><h3>Core Training</h3><p>Daily live classes covering all four skills with structured practice, vocabulary, and grammar correction.</p></div>
-      <div class="hstep rv"><div class="hstep-n">3</div><div class="hstep-pill">Week 5–7</div><h3>Mock & Refine</h3><p>Full-length mock tests under exam conditions followed by detailed score analysis and weak-area drilling.</p></div>
-      <div class="hstep rv"><div class="hstep-n">4</div><div class="hstep-pill">Day 60</div><h3>Exam Ready!</h3><p>Walk into your IELTS exam with confidence. Our students consistently score Band 7–8.5 on test day.</p></div>
-    </div>
-  </div>
-</section>
+
 
 <!-- COACHES -->
 
-<div style="text-align:center;padding:1.5rem 0;font-size:1rem;font-weight:700;color:rgba(255,255,255,0.7);background:var(--ink)">Hear it from our students 👇</div>
+<div style="text-align:center;padding:1.5rem 0;font-size:1rem;font-weight:700;color:rgba(255,255,255,0.7);background:var(--ink);margin-top:0">Hear it from our students 👇</div>
 <section class="tst-wrap" id="testimonials">
   <div class="tst-inner">
     <div class="stag rv">Student Stories</div>
@@ -1331,8 +1318,60 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
     </div>
   </div>
 </section>
+<section class="price-wrap" id="pricing">
+  <div class="price-inner">
+    <div class="stag rv">Pricing</div>
+    <h2 class="sh2 rv">Simple, Transparent <em>Pricing</em></h2>
+    <p class="sdesc rv" style="margin:0 auto 1rem">Not sure which plan? <strong><a href="https://wa.me/919877714284?text=Hi!%20Help%20me%20choose%20the%20right%20IELTS%20plan" style="color:var(--blue);text-decoration:none" target="_blank">Chat with us on WhatsApp</a></strong> — we'll recommend the best one for your goal and timeline.</p>
+    <div class="pgrid">
+      <div class="pcard rv">
+        <div class="pname">Self-Paced</div>
+        <div class="pdiscount"><span class="poriginal"><sup>₹</sup>6,999</span><span class="pbadge">30% OFF</span></div>
+        <div class="pamount"><sup>₹</sup>4,999</div>
+        <div class="pper">30-day access · One-time payment</div>
+        <ul class="pfeats">
+          <li>30 recorded video lectures</li>
+          <li>Covers all 4 IELTS modules</li>
+          <li>2 full-length mock tests</li>
+          <li>Study notes &amp; module guides</li>
+          <li>WhatsApp support for queries</li>
+        </ul>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20Self-Paced%20program%20at%20Rs.4999" class="pbtn pb-wa" target="_blank">💬 Enroll via WhatsApp</a>
+      </div>
+      <div class="pcard pop rv">
+        <div class="pop-badge">🔥 Most Popular</div>
+        <div class="pname">Live Coaching</div>
+        <div class="pdiscount"><span class="poriginal"><sup>₹</sup>21,999</span><span class="pbadge">30% OFF</span></div>
+        <div class="pamount"><sup>₹</sup>14,999</div>
+        <div class="pper">30-day intensive · Max 5 students per batch</div>
+        <ul class="pfeats">
+          <li>Daily live sessions (1.5 hrs each)</li>
+          <li>1-on-1 speaking mock interviews</li>
+          <li>Unlimited writing evaluations</li>
+          <li>5 full-length mock tests</li>
+          <li>WhatsApp doubt support 24/7</li>
+        </ul>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20Live%20Coaching%20at%20Rs.14999" class="pbtn pb-wa-gold" target="_blank">💬 Enroll via WhatsApp</a>
+      </div>
+      <div class="pcard rv">
+        <div class="pname">1-on-1 Mentorship</div>
+        <div class="pdiscount"><span class="poriginal"><sup>₹</sup>27,999</span><span class="pbadge">30% OFF</span></div>
+        <div class="pamount"><sup>₹</sup>19,999</div>
+        <div class="pper">30-day elite program · Limited seats</div>
+        <ul class="pfeats">
+          <li>Everything in Live Coaching</li>
+          <li>Dedicated personal coach</li>
+          <li>Daily 1-on-1 personalised sessions</li>
+          <li>Custom study plan built for you</li>
+          <li>Priority feedback within 4 hours</li>
+        </ul>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20about%201-on-1%20Mentorship" class="pbtn pb-wa" target="_blank">💬 Book Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="wave-down" style="background:var(--off)"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 C480,55 960,0 1440,35 L1440,60 L0,60 Z" fill="#0C1A2E"/></svg></div>
+
 
 
 <!-- YOUTUBE SECTION -->
@@ -1594,58 +1633,7 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
 </script>
 
 
-<section class="price-wrap" id="pricing">
-  <div class="price-inner">
-    <div class="stag rv">Pricing</div>
-    <h2 class="sh2 rv">Simple, Transparent <em>Pricing</em></h2>
-    <p class="sdesc rv" style="margin:0 auto 1rem">Not sure which plan? <strong><a href="https://wa.me/919877714284?text=Hi!%20Help%20me%20choose%20the%20right%20IELTS%20plan" style="color:var(--blue);text-decoration:none" target="_blank">Chat with us on WhatsApp</a></strong> — we'll recommend the best one for your goal and timeline.</p>
-    <div class="pgrid">
-      <div class="pcard rv">
-        <div class="pname">Self-Paced</div>
-        <div class="pdiscount"><span class="poriginal"><sup>₹</sup>6,999</span><span class="pbadge">30% OFF</span></div>
-        <div class="pamount"><sup>₹</sup>4,999</div>
-        <div class="pper">30-day access · One-time payment</div>
-        <ul class="pfeats">
-          <li>30 recorded video lectures</li>
-          <li>Covers all 4 IELTS modules</li>
-          <li>2 full-length mock tests</li>
-          <li>Study notes &amp; module guides</li>
-          <li>WhatsApp support for queries</li>
-        </ul>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20Self-Paced%20program%20at%20Rs.4999" class="pbtn pb-wa" target="_blank">💬 Enroll via WhatsApp</a>
-      </div>
-      <div class="pcard pop rv">
-        <div class="pop-badge">🔥 Most Popular</div>
-        <div class="pname">Live Coaching</div>
-        <div class="pdiscount"><span class="poriginal"><sup>₹</sup>21,999</span><span class="pbadge">30% OFF</span></div>
-        <div class="pamount"><sup>₹</sup>14,999</div>
-        <div class="pper">30-day intensive · Max 5 students per batch</div>
-        <ul class="pfeats">
-          <li>Daily live sessions (1.5 hrs each)</li>
-          <li>1-on-1 speaking mock interviews</li>
-          <li>Unlimited writing evaluations</li>
-          <li>5 full-length mock tests</li>
-          <li>WhatsApp doubt support 24/7</li>
-        </ul>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20Live%20Coaching%20at%20Rs.14999" class="pbtn pb-wa-gold" target="_blank">💬 Enroll via WhatsApp</a>
-      </div>
-      <div class="pcard rv">
-        <div class="pname">1-on-1 Mentorship</div>
-        <div class="pdiscount"><span class="poriginal"><sup>₹</sup>27,999</span><span class="pbadge">30% OFF</span></div>
-        <div class="pamount"><sup>₹</sup>19,999</div>
-        <div class="pper">30-day elite program · Limited seats</div>
-        <ul class="pfeats">
-          <li>Everything in Live Coaching</li>
-          <li>Dedicated personal coach</li>
-          <li>Daily 1-on-1 personalised sessions</li>
-          <li>Custom study plan built for you</li>
-          <li>Priority feedback within 4 hours</li>
-        </ul>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20about%201-on-1%20Mentorship" class="pbtn pb-wa" target="_blank">💬 Book Free Consultation</a>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- FAQ -->
 <section class="faq-wrap" id="faq">
@@ -1690,24 +1678,7 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
 </section>
 
 <!-- WHATSAPP CONTACT SECTION -->
-<section class="wa-section" id="contact">
-  <div class="wa-inner">
-    <div class="stag rv">Contact Us</div>
-    <h2 class="sh2 rv">Talk to Us on <em>WhatsApp</em></h2>
-    <p class="rv">Most of our students enroll, ask questions, and get support entirely through WhatsApp. It's the fastest way to reach us — we reply within minutes!</p>
-    <div class="wa-action-row rv">
-      <div class="wa-contact-box">
-        <div class="wa-num-label">WhatsApp & Call</div>
-        <div class="wa-num">+91 98777 14284</div>
-      </div>
-      <a href="https://wa.me/919877714284?text=Hi!%20I%20found%20you%20on%20your%20website%20and%20want%20to%20know%20more%20about%20IELTS%20coaching" class="wa-big-btn" target="_blank">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Message Us on WhatsApp
-      </a>
-    </div>
-    <p class="wa-tip rv">⏱️ Average response time: <strong>Under 5 minutes</strong> · Available 9am – 9pm IST</p>
-  </div>
-</section>
+
 
 <!-- FINAL CTA -->
 <section class="fcta">
