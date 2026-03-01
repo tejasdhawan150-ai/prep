@@ -360,14 +360,20 @@ select{padding-right:2.8rem;cursor:pointer}
     var waUrl = 'https://wa.me/919877714284?text=' + encodeURIComponent(waMsg);
     var tyUrl = 'thank-you.html?name=' + encodeURIComponent(fname) + '&wa=' + encodeURIComponent(waUrl);
 
-    // ── Send to Google Sheet silently (fire and forget) ──
-    // User gets redirected regardless — sheet save happens in background
+    // ── Redirect: WhatsApp first on ALL devices, then thank-you ──
     function redirect() {
       if (window.innerWidth >= 769) {
+        // Desktop: open WA in new tab, redirect page to thank-you
         window.open(waUrl, '_blank');
         window.location.href = tyUrl;
       } else {
-        window.location.href = tyUrl;
+        // Mobile: open WA directly (same tab), thank-you loads on back
+        // Use location.href so it works in WhatsApp/Instagram in-app browsers too
+        window.location.href = waUrl;
+        // After 1.5s redirect to thank-you in background (some browsers support this)
+        setTimeout(function() {
+          window.location.href = tyUrl;
+        }, 1500);
       }
     }
 
