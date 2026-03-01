@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="color-scheme" content="light"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Book Your Free Demo Class — PrepEve IELTS</title>
+<meta name="robots" content="noindex"/>
+<meta name="description" content="Book your free IELTS demo class with PrepEve. Meet a certified trainer, get a free band score estimate and personalised study plan. No payment needed."/>
+<meta property="og:title" content="Book Your Free IELTS Demo Class — PrepEve"/>
+<meta property="og:description" content="Meet a certified trainer, get a free band score estimate and personalised study plan. 347 students booked this month."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{color-scheme:light only}
+:root{
+  --ink:#0C1A2E;--blue:#1650D4;--teal:#0D9488;
+  --gold:#F59E0B;--green:#25D366;--green2:#128C7E;
+  --muted:#64748B;--border:#E2E8F5;--red:#ef4444;--off:#F8FAFF;
+}
+html{scroll-behavior:smooth}
+html{background:#ffffff}
+body{font-family:'Bricolage Grotesque',sans-serif;color:var(--ink);background:#ffffff;min-height:100vh;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.topbar{background:#fff;border-bottom:1.5px solid var(--border);padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
+.topbar-brand{font-family:'Instrument Serif',serif;font-size:1.4rem;font-weight:700;color:var(--ink);text-decoration:none}
+.topbar-brand em{font-style:italic;color:var(--blue)}
+.topbar-back{font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;padding:.4rem .8rem;border-radius:8px;border:1.5px solid var(--border);background:#fff;transition:all .18s}
+.topbar-back:hover{border-color:var(--blue);color:var(--blue)}
+
+/* Avatar proof */
+.ps-avs{display:flex}
+.ps-av{width:34px;height:34px;border-radius:50%;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;color:#fff;margin-left:-9px;flex-shrink:0;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.ps-av:first-child{margin-left:0}
+.ps-text{font-size:.84rem;color:var(--muted);line-height:1.5}
+.ps-text strong{color:var(--ink);font-weight:800}
+
+/* MOBILE INTRO — headline + proof + trust badges */
+.mob-intro{padding:1.4rem 1.25rem .2rem;text-align:center;background:#ffffff}
+.mob-headline{font-family:'Instrument Serif',serif;font-size:1.65rem;line-height:1.15;font-weight:700;letter-spacing:-.02em;color:var(--ink);margin-bottom:.5rem}
+.mob-headline em{font-style:italic;color:var(--blue)}
+.mob-sub{font-size:.88rem;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+
+.mob-proof{display:flex;align-items:center;justify-content:center;gap:.75rem;margin-bottom:1rem}
+.mob-stars{color:var(--gold);font-size:.95rem;letter-spacing:.05em}
+.mob-proof-text{font-size:.82rem;color:var(--muted);line-height:1.45}
+.mob-proof-text strong{color:var(--ink);font-weight:800}
+
+.trust-badges{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.2rem}
+.tbadge{display:inline-flex;align-items:center;gap:.35rem;background:#ffffff !important;border:1.5px solid var(--border);border-radius:100px;padding:.32rem .85rem;font-size:.74rem;font-weight:700;color:#0C1A2E !important;box-shadow:0 1px 4px rgba(22,80,212,.06)}
+.tbadge-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.tbadge-dot.green{background:var(--green)}
+.tbadge-dot.gold{background:var(--gold)}
+.tbadge-dot.blue{background:var(--blue)}
+
+/* FORM WRAP — mobile padding lives here, outside the grid */
+.form-wrap{padding:1.25rem 1.25rem 5rem;background:#ffffff}
+
+.form-card{background:#ffffff;border-radius:20px;border:1.5px solid var(--border);box-shadow:0 4px 24px rgba(22,80,212,.08);overflow:hidden}
+.form-card-head{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-bottom:1.5px solid #a7f3d0;padding:1.1rem 1.4rem;display:flex;align-items:center;gap:.75rem}
+.fch-icon{font-size:1.5rem;line-height:1;flex-shrink:0}
+.fch-title{font-size:1rem;font-weight:800;color:#166534;line-height:1.2}
+.fch-sub{font-size:.8rem;color:#15803d;margin-top:.2rem;font-weight:500}
+.form-body{padding:1.5rem 1.4rem 1.4rem;background:#ffffff}
+
+/* FIELDS */
+.field{margin-bottom:1.3rem}
+label{display:block;font-size:.84rem;font-weight:700;color:var(--ink);margin-bottom:.5rem}
+label .req{color:var(--red);margin-left:2px}
+
+/* 16px prevents iOS auto-zoom. min-height 54px = easy tap */
+input,select{
+  display:block;width:100%;
+  padding:1rem 1.1rem;
+  font-family:inherit;font-size:16px;
+  color:#0C1A2E !important;background:#ffffff !important;
+  border:1.5px solid var(--border);border-radius:12px;
+  outline:none;-webkit-appearance:none;appearance:none;
+  transition:border-color .2s,box-shadow .2s;
+  min-height:54px;
+}
+input:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(22,80,212,.1)}
+input.err,select.err{border-color:var(--red);background:#fff8f8;box-shadow:0 0 0 4px rgba(239,68,68,.08)}
+input::placeholder{color:#94a3b8;font-size:15px}
+.select-wrap{position:relative}
+.select-wrap::after{content:'';position:absolute;right:1.1rem;top:50%;transform:translateY(-50%);border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--muted);pointer-events:none}
+select{padding-right:2.8rem;cursor:pointer}
+
+.err-msg{font-size:.8rem;color:var(--red);margin-top:.4rem;padding-left:.25rem;display:none;font-weight:500}
+.err-msg.show{display:block}
+
+/* PRIVACY */
+.privacy{display:flex;align-items:flex-start;gap:.6rem;font-size:.8rem;color:var(--muted);line-height:1.6;margin-bottom:1.4rem;padding:.9rem 1rem;background:var(--off);border-radius:10px;border:1px solid var(--border)}
+.privacy svg{flex-shrink:0;color:var(--green);margin-top:2px}
+
+/* SUBMIT */
+.submit-btn{
+  display:flex;align-items:center;justify-content:center;gap:.65rem;
+  width:100%;padding:1.15rem 1.5rem;
+  background:linear-gradient(135deg,var(--green) 0%,var(--green2) 100%);
+  color:#fff;border:none;border-radius:16px;
+  font-family:inherit;font-size:1.1rem;font-weight:800;
+  cursor:pointer;box-shadow:0 8px 28px rgba(37,211,102,.38);
+  transition:transform .2s,box-shadow .2s,opacity .2s;
+  min-height:60px;letter-spacing:-.01em;
+  -webkit-tap-highlight-color:transparent;
+}
+.submit-btn:active{transform:scale(.97);box-shadow:0 4px 14px rgba(37,211,102,.3)}
+.submit-btn.loading{opacity:.7;pointer-events:none}
+.btn-spinner{display:none;width:22px;height:22px;border-radius:50%;border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;animation:spin .7s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.submit-btn.loading .btn-spinner{display:block}
+.submit-btn.loading .btn-icon,.submit-btn.loading .btn-text,.submit-btn.loading .btn-arrow{display:none}
+
+/* URGENCY */
+.urgency{display:flex;align-items:center;justify-content:center;gap:.45rem;margin-top:1rem;font-size:.82rem;color:var(--muted);font-weight:500}
+.urgency-dot{width:8px;height:8px;border-radius:50%;background:var(--red);flex-shrink:0;animation:rp 1.8s infinite}
+@keyframes rp{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.5)}70%{box-shadow:0 0 0 5px rgba(239,68,68,0)}}
+
+/* Force light mode — override any system dark mode */
+@media(prefers-color-scheme:dark){
+  html,body,
+  .mob-intro,.form-wrap,.form-card,.form-body,
+  .form-card-head,input,select,label,
+  .tbadge,.privacy,.field,.topbar{
+    background-color:#ffffff !important;
+    color:#0C1A2E !important;
+  }
+  .form-card-head{background:linear-gradient(135deg,#f0fdf4,#dcfce7) !important}
+  input,select{border-color:#E2E8F5 !important}
+  input::placeholder{color:#94a3b8 !important}
+}
+@media(min-width:769px){
+  body{background:linear-gradient(160deg,#f0f4ff,#e8f5ff 50%,#f0fdf8)}
+  .mob-intro{display:none}
+
+  .desktop-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;max-width:980px;margin:0 auto;padding:4.5rem 3rem;align-items:start}
+  .desktop-info{display:flex;flex-direction:column}
+  .di-tag{display:inline-flex;align-items:center;gap:.5rem;background:#FEF3C7;border:1px solid rgba(245,158,11,.35);border-radius:100px;padding:.38rem 1rem;margin-bottom:1.4rem;width:fit-content}
+  .di-tag-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:dp 2s infinite}
+  .di-tag span{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#92400E}
+  .di-h1{font-family:'Instrument Serif',serif;font-size:clamp(2.1rem,3.5vw,3rem);line-height:1.1;letter-spacing:-.025em;margin-bottom:1rem}
+  .di-h1 em{font-style:italic;color:var(--blue)}
+  .di-h1 .grad{background:linear-gradient(135deg,var(--blue),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .di-sub{font-size:.98rem;color:var(--muted);line-height:1.85;margin-bottom:1.8rem}
+  .di-perks{display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem}
+  .di-perk{display:flex;align-items:flex-start;gap:.9rem;background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:.9rem 1.1rem;box-shadow:0 2px 10px rgba(22,80,212,.05)}
+  .di-perk-icon{font-size:1.3rem;flex-shrink:0;margin-top:.05rem}
+  .di-perk-title{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.18rem}
+  .di-perk-desc{font-size:.78rem;color:var(--muted);line-height:1.65}
+  .di-proof{display:flex;align-items:center;gap:.85rem;padding-top:1.4rem;border-top:1.5px solid var(--border)}
+  .di-proof .ps-text{font-size:.82rem}
+  .form-wrap{padding:0;max-width:100%}
+  .topbar{padding:.9rem 2.5rem}
+}
+@media(max-width:768px){
+  /* On mobile, grid becomes block flow */
+  .desktop-grid{display:block}
+  .desktop-info{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html" class="topbar-brand">Prep<em>Eve</em></a>
+  <a href="index.html" class="topbar-back">← Back</a>
+</div>
+
+
+
+<!-- MOBILE INTRO — visible only on mobile -->
+<div class="mob-intro">
+  <h1 class="mob-headline">Book Your <em>Free</em><br>Demo Class</h1>
+  <p class="mob-sub">Meet your coach &amp; get a personalised study plan — no payment needed</p>
+
+  <div class="mob-proof">
+    <div class="ps-avs">
+      <div class="ps-av" style="background:linear-gradient(135deg,#1650D4,#2563EB)">P</div>
+      <div class="ps-av" style="background:linear-gradient(135deg,#0D9488,#14b8a6)">R</div>
+      <div class="ps-av" style="background:linear-gradient(135deg,#F59E0B,#fbbf24);color:#92400E">S</div>
+      <div class="ps-av" style="background:linear-gradient(135deg,#8B5CF6,#a78bfa)">K</div>
+    </div>
+    <div class="mob-proof-text">
+      <strong>347 students</strong> booked this month<br>
+      <span class="mob-stars">★★★★★</span> 4.7 · 300+ Google reviews
+    </div>
+  </div>
+
+  <div class="trust-badges">
+    <div class="tbadge"><div class="tbadge-dot green"></div>100% Free</div>
+    <div class="tbadge"><div class="tbadge-dot gold"></div>No Payment</div>
+    <div class="tbadge"><div class="tbadge-dot blue"></div>Reply in 30 min</div>
+  </div>
+</div>
+
+<div class="desktop-grid">
+  <div class="desktop-info">
+    <div class="di-tag"><div class="di-tag-dot"></div><span>🎓 Free · No Credit Card</span></div>
+    <h1 class="di-h1">Book Your <em>Free</em><br>Demo Class &amp;<br><span class="grad">See How We Teach</span></h1>
+    <p class="di-sub">Meet your coach, get a free band score estimate, and walk away with a personalised study plan. No pressure, no upsells.</p>
+    <div class="di-perks">
+      <div class="di-perk"><span class="di-perk-icon">🎯</span><div><div class="di-perk-title">Free Band Score Estimate</div><div class="di-perk-desc">Know exactly where you stand and what it takes to hit Band 7+</div></div></div>
+      <div class="di-perk"><span class="di-perk-icon">👩‍🏫</span><div><div class="di-perk-title">Live with a Certified Trainer</div><div class="di-perk-desc">CELTA/DELTA certified — real interaction, not pre-recorded</div></div></div>
+      <div class="di-perk"><span class="di-perk-icon">📋</span><div><div class="di-perk-title">Personalised Study Plan</div><div class="di-perk-desc">A clear week-by-week roadmap tailored to your exam date</div></div></div>
+      <div class="di-perk"><span class="di-perk-icon">⏱️</span><div><div class="di-perk-title">60 Minutes · Completely Free</div><div class="di-perk-desc">No upsells during class. Just pure value.</div></div></div>
+    </div>
+    <div class="di-proof">
+      <div class="ps-avs">
+        <div class="ps-av" style="background:linear-gradient(135deg,#1650D4,#2563EB)">P</div>
+        <div class="ps-av" style="background:linear-gradient(135deg,#0D9488,#14b8a6)">R</div>
+        <div class="ps-av" style="background:linear-gradient(135deg,#F59E0B,#fbbf24);color:#92400E">S</div>
+        <div class="ps-av" style="background:linear-gradient(135deg,#8B5CF6,#a78bfa)">K</div>
+      </div>
+      <div class="ps-text"><strong>347 students</strong> booked this month · ⭐ 4.7 rating</div>
+    </div>
+  </div>
+
+  <div class="form-wrap">
+    <div class="form-card">
+      <div class="form-card-head">
+        <span class="fch-icon">📚</span>
+        <div>
+          <div class="fch-title">Reserve Your Free Demo Slot</div>
+          <div class="fch-sub">We’ll confirm on WhatsApp within 30 minutes</div>
+        </div>
+      </div>
+      <div class="form-body">
+
+        <div class="field">
+          <label for="fname">Your Name <span class="req">*</span></label>
+          <input type="text" id="fname" placeholder="e.g. Priya Sharma" autocomplete="name" inputmode="text" enterkeyhint="next"/>
+          <div class="err-msg" id="fname-err">Please enter your name</div>
+        </div>
+
+        <div class="field">
+          <label for="phone">WhatsApp Number <span class="req">*</span></label>
+          <input type="tel" id="phone" placeholder="e.g. 98765 43210" autocomplete="tel" inputmode="tel" enterkeyhint="next"/>
+          <div class="err-msg" id="phone-err">Enter a valid number (at least 8 digits)</div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address <span class="req">*</span></label>
+          <input type="email" id="email" placeholder="e.g. priya@gmail.com" autocomplete="email" inputmode="email" enterkeyhint="done"/>
+          <div class="err-msg" id="email-err">Please enter a valid email address</div>
+        </div>
+
+        <div class="field">
+          <label for="goal">Target Band Score</label>
+          <div class="select-wrap">
+            <select id="goal">
+              <option value="" disabled selected>What band are you aiming for?</option>
+              <option value="band6">Band 6 – 6.5</option>
+              <option value="band7">Band 7 – 7.5</option>
+              <option value="band8">Band 8+</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="examdate">When is your exam?</label>
+          <div class="select-wrap">
+            <select id="examdate">
+              <option value="" disabled selected>Approx. exam timeline</option>
+              <option value="1month">Within 1 month</option>
+              <option value="2month">1 – 2 months</option>
+              <option value="3month">2 – 3 months</option>
+              <option value="later">3+ months / Not decided</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="privacy">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Your details are private. We only use them to confirm your demo slot — no spam, ever.
+        </div>
+
+        <button class="submit-btn" id="submit-btn" type="button">
+          <div class="btn-spinner"></div>
+          <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span class="btn-text">Book Now — Opens WhatsApp</span>
+          <span class="btn-arrow">→</span>
+        </button>
+
+        <div class="urgency">
+          <div class="urgency-dot"></div>
+          Only 8 seats left for the next batch
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+
+  // ── PASTE YOUR GOOGLE APPS SCRIPT URL HERE ──────────────────
+  var SHEET_URL = 'https://script.google.com/macros/s/AKfycbxV6D1QlPWjlPg7QNH4RBQb3PoyisOElpEaKW_mbFkVkyeBfIJKPi7eiGfO42jUSTYLzg/exec';
+  // e.g. 'https://script.google.com/macros/s/AKfy.../exec'
+  // ────────────────────────────────────────────────────────────
+
+  var btn = document.getElementById('submit-btn');
+
+  function val(id) {
+    var e = document.getElementById(id);
+    return e ? e.value.trim() : '';
+  }
+
+  function setErr(id, show) {
+    var inp = document.getElementById(id), msg = document.getElementById(id + '-err');
+    if (!inp || !msg) return;
+    if (show) { inp.classList.add('err'); msg.classList.add('show'); }
+    else { inp.classList.remove('err'); msg.classList.remove('show'); }
+  }
+
+  ['fname', 'phone', 'email'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('input', function() { setErr(id, false); });
+  });
+
+  btn.addEventListener('click', function() {
+
+    // ── Validate ──
+    var fname = val('fname');
+    var phone = val('phone').replace(/[\s\-\(\)\+]/g, '');
+    var email = val('email');
+    var ok = true;
+
+    if (!fname || fname.length < 2) { setErr('fname', true); ok = false; } else { setErr('fname', false); }
+    if (phone.replace(/\D/g, '').length < 8) { setErr('phone', true); ok = false; } else { setErr('phone', false); }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setErr('email', true); ok = false; } else { setErr('email', false); }
+
+    if (!ok) {
+      var f = document.querySelector('input.err');
+      if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    btn.classList.add('loading');
+
+    // ── Build WhatsApp message ──
+    var goalMap = { band6: 'Band 6-6.5', band7: 'Band 7-7.5', band8: 'Band 8+', unsure: 'Not sure yet' };
+    var examMap = { '1month': 'Within 1 month', '2month': '1-2 months', '3month': '2-3 months', later: '3+ months' };
+    var goal = val('goal'), exam = val('examdate');
+    var bandLabel = goalMap[goal] || 'Not specified';
+    var examLabel = examMap[exam] || 'Not specified';
+
+    var waMsg = 'Hi PrepEve! I want to book a Free Demo Class.\n\n'
+      + 'Name: ' + fname + '\n'
+      + 'Phone: ' + val('phone') + '\n'
+      + 'Email: ' + email + '\n'
+      + 'Target Band: ' + bandLabel + '\n'
+      + 'Exam Date: ' + examLabel;
+
+    var waUrl = 'https://wa.me/919877714284?text=' + encodeURIComponent(waMsg);
+    var tyUrl = 'thank-you.html?name=' + encodeURIComponent(fname) + '&wa=' + encodeURIComponent(waUrl);
+
+    // ── Send to Google Sheet silently (fire and forget) ──
+    // User gets redirected regardless — sheet save happens in background
+    function redirect() {
+      if (window.innerWidth >= 769) {
+        window.open(waUrl, '_blank');
+        window.location.href = tyUrl;
+      } else {
+        window.location.href = tyUrl;
+      }
+    }
+
+    if (SHEET_URL) {
+      // Use no-cors + URL params — the only reliable way to hit Google Apps Script
+      // from an external site without CORS errors
+      var params = '?name=' + encodeURIComponent(fname)
+        + '&phone=' + encodeURIComponent(val('phone'))
+        + '&email=' + encodeURIComponent(email)
+        + '&band='  + encodeURIComponent(bandLabel)
+        + '&exam='  + encodeURIComponent(examLabel);
+
+      fetch(SHEET_URL + params, {
+        method: 'GET',
+        mode: 'no-cors'
+      })
+      .catch(function() {})
+      .finally(function() {
+        setTimeout(redirect, 300);
+      });
+    } else {
+      setTimeout(redirect, 450);
+    }
+
+  });
+
+})();
+</script>
+</body>
+</html>

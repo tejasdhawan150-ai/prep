@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="color-scheme" content="light"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>You're Booked! — PrepEve IELTS</title>
+<meta name="robots" content="noindex"/>
+<meta name="description" content="You've booked your free IELTS demo class with PrepEve. Check WhatsApp — we'll confirm your slot within 30 minutes."/>
+<meta property="og:title" content="Booking Confirmed — PrepEve IELTS"/>
+<meta property="og:description" content="Your free demo slot is reserved. We'll confirm on WhatsApp within 30 minutes."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{color-scheme:light only}
+:root{
+  --ink:#0C1A2E;--blue:#1650D4;--blue2:#2563EB;--teal:#0D9488;
+  --gold:#F59E0B;--gold2:#FEF3C7;--green:#25D366;--green2:#128C7E;
+  --muted:#64748B;--border:#E2E8F5;--off:#F8FAFF
+}
+html{scroll-behavior:smooth}body{position:relative;overflow-x:hidden}html,body{min-height:100vh;font-family:'Bricolage Grotesque',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+body{background:linear-gradient(160deg,#f0fff8 0%,#e8f5ff 50%,#f0f4ff 100%);min-height:100vh;display:block;flex-direction:column;align-items:center;justify-content:center;padding:2rem 5%;position:relative;overflow:hidden}
+
+/* Confetti blobs */
+body::before{content:'';position:absolute;top:-200px;left:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(37,211,102,.12),transparent 70%);pointer-events:none;border-radius:50%}
+body::after{content:'';position:absolute;bottom:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(22,80,212,.1),transparent 70%);pointer-events:none;border-radius:50%}
+
+/* Dot pattern */
+.dot-bg{position:absolute;inset:0;background-image:radial-gradient(circle,#93aef0 1px,transparent 1px);background-size:32px 32px;opacity:.15;pointer-events:none;z-index:0}
+
+/* ── Main card ── */
+.ty-wrap{position:relative;z-index:1;max-width:600px;width:100%;text-align:center}
+
+/* Success animation */
+.success-ring{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green2));display:flex;align-items:center;justify-content:center;margin:0 auto 1.8rem;box-shadow:0 12px 40px rgba(37,211,102,.35);animation:popIn .5s cubic-bezier(.34,1.56,.64,1) both}
+@keyframes popIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.success-ring svg{animation:checkDraw .4s .35s ease both}
+@keyframes checkDraw{from{stroke-dashoffset:40}to{stroke-dashoffset:0}}
+
+.ty-badge{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#d1fae5,#a7f3d0);border:1px solid rgba(16,185,129,.25);border-radius:100px;padding:.4rem 1.1rem;margin-bottom:1.2rem;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#065f46;animation:fadeUp .5s .1s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+.ty-h1{font-family:'Instrument Serif',serif;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.1;letter-spacing:-.02em;color:var(--ink);margin-bottom:.8rem;animation:fadeUp .5s .2s ease both}
+.ty-h1 em{font-style:italic;color:var(--green2)}
+
+.ty-sub{font-size:1rem;line-height:1.8;color:var(--muted);margin-bottom:2rem;animation:fadeUp .5s .3s ease both}
+.ty-sub strong{color:var(--ink);font-weight:700}
+
+/* Next steps */
+.next-steps{background:#fff;border-radius:20px;border:1.5px solid var(--border);padding:1.6rem 1.8rem;margin-bottom:2rem;text-align:left;box-shadow:0 8px 32px rgba(22,80,212,.07);animation:fadeUp .5s .4s ease both}
+.ns-title{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
+.ns-step{display:flex;align-items:flex-start;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--border)}
+.ns-step:last-child{border-bottom:none;padding-bottom:0}
+.ns-num{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-size:.78rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ns-step:nth-child(2) .ns-num{background:linear-gradient(135deg,var(--green),var(--green2))}
+.ns-step:nth-child(3) .ns-num{background:linear-gradient(135deg,var(--gold),#fbbf24)}
+.ns-text .ns-head{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.2rem}
+.ns-text .ns-desc{font-size:.78rem;color:var(--muted);line-height:1.6}
+
+/* WA CTA */
+.wa-cta-wrap{animation:fadeUp .5s .5s ease both}
+.wa-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.8rem;
+  width:100%;max-width:420px;padding:1.1rem 2rem;
+  background:linear-gradient(135deg,var(--green),var(--green2));
+  color:#fff;border-radius:16px;text-decoration:none;
+  font-size:1rem;font-weight:800;
+  box-shadow:0 10px 36px rgba(37,211,102,.38);
+  transition:all .22s;letter-spacing:-.01em
+}
+.wa-btn:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(37,211,102,.52)}
+.wa-tip{font-size:.76rem;color:var(--muted);margin-top:.85rem}
+.wa-tip strong{color:var(--ink)}
+
+/* Divider */
+.or-divider{display:flex;align-items:center;gap:.8rem;margin:1.4rem 0;color:var(--muted);font-size:.78rem;font-weight:600;animation:fadeUp .5s .55s ease both}
+.or-divider::before,.or-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+
+.home-link{display:block;font-size:.82rem;color:var(--muted);text-decoration:none;transition:color .2s;animation:fadeUp .5s .6s ease both}
+.home-link:hover{color:var(--ink)}
+
+/* floating particles */
+.particle{position:fixed;pointer-events:none;border-radius:50%;animation:float-p linear infinite;opacity:0}
+@keyframes float-p{0%{transform:translateY(100vh) rotate(0deg);opacity:1}100%{transform:translateY(-100px) rotate(720deg);opacity:0}}
+
+@media(max-width:480px){
+  .ty-wrap{max-width:100%}
+  .next-steps{padding:1.2rem 1.2rem}
+  .wa-btn{max-width:100%}
+}
+</style>
+</head>
+<body>
+
+<div class="dot-bg"></div>
+
+<!-- Floating particles -->
+<div class="particle" style="width:8px;height:8px;background:#25D366;left:15%;animation-duration:6s;animation-delay:0s"></div>
+<div class="particle" style="width:6px;height:6px;background:#F59E0B;left:35%;animation-duration:8s;animation-delay:1s"></div>
+<div class="particle" style="width:10px;height:10px;background:#1650D4;left:60%;animation-duration:7s;animation-delay:2s"></div>
+<div class="particle" style="width:5px;height:5px;background:#0D9488;left:80%;animation-duration:9s;animation-delay:.5s"></div>
+<div class="particle" style="width:7px;height:7px;background:#F59E0B;left:90%;animation-duration:6.5s;animation-delay:1.5s"></div>
+
+<div class="ty-wrap">
+
+  <div class="success-ring">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="40" stroke-dashoffset="40">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+  </div>
+
+  <div class="ty-badge">✓ Booking Received</div>
+
+  <h1 class="ty-h1">WhatsApp is Open,<br><em id="name-display">Champion!</em></h1>
+
+  <p class="ty-sub">
+    WhatsApp should be open — just <strong>hit Send</strong> and we'll confirm your slot within 30 minutes. If it didn't open, tap the button below.
+  </p>
+
+  <div class="next-steps">
+    <div class="ns-title">What happens next</div>
+    <div class="ns-step">
+      <div class="ns-num">1</div>
+      <div class="ns-text">
+        <div class="ns-head">Message us on WhatsApp below</div>
+        <div class="ns-desc">Your details are pre-filled — just hit send. Takes 10 seconds.</div>
+      </div>
+    </div>
+    <div class="ns-step">
+      <div class="ns-num">2</div>
+      <div class="ns-text">
+        <div class="ns-head">We confirm your slot (within 30 min)</div>
+        <div class="ns-desc">We'll send you a Zoom/Meet link and remind you 1 hour before.</div>
+      </div>
+    </div>
+    <div class="ns-step">
+      <div class="ns-num">3</div>
+      <div class="ns-text">
+        <div class="ns-head">Attend your free 60-min demo class</div>
+        <div class="ns-desc">Meet your coach, get your band estimate, and walk away with a plan.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wa-cta-wrap">
+    <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20book%20a%20free%20demo%20class" id="wa-link" class="wa-btn" target="_blank">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Open WhatsApp Again →
+    </a>
+    <div class="wa-tip">Replies in <strong>under 30 minutes</strong> · Mon–Sat, 9am–9pm IST</div>
+  </div>
+
+  <div class="or-divider">or</div>
+
+  <a href="index.html" class="home-link">← Back to PrepEve home</a>
+
+</div>
+
+<script>
+// Read from URL params — works in ALL browsers including WhatsApp/Instagram in-app
+(function() {
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var name = params.get('name');
+    var waUrl = params.get('wa');
+    if (name && name.trim()) {
+      document.getElementById('name-display').textContent = name.trim() + '!';
+    }
+    if (waUrl) {
+      document.getElementById('wa-link').href = waUrl;
+    }
+  } catch(e) {
+    // fallback — default link already set in HTML
+  }
+})();
+</script>
+</body>
+</html>
