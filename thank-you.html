@@ -19,8 +19,8 @@
   --gold:#F59E0B;--gold2:#FEF3C7;--green:#25D366;--green2:#128C7E;
   --muted:#64748B;--border:#E2E8F5;--off:#F8FAFF
 }
-html{scroll-behavior:smooth}body{position:relative;overflow-x:hidden}html,body{min-height:100vh;font-family:'Bricolage Grotesque',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
-body{background:linear-gradient(160deg,#f0fff8 0%,#e8f5ff 50%,#f0f4ff 100%);min-height:100vh;display:block;flex-direction:column;align-items:center;justify-content:center;padding:2rem 5%;position:relative;overflow:hidden}
+html{scroll-behavior:smooth;-webkit-overflow-scrolling:touch;overflow-y:auto}body{position:relative;overflow-x:hidden}html,body{min-height:100vh;font-family:'Bricolage Grotesque',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+body{background:linear-gradient(160deg,#f0fff8 0%,#e8f5ff 50%,#f0f4ff 100%);min-height:100vh;display:block;flex-direction:column;align-items:center;justify-content:center;padding:2rem 5%;position:relative;overflow-x:hidden}
 
 /* Confetti blobs */
 body::before{content:'';position:absolute;top:-200px;left:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(37,211,102,.12),transparent 70%);pointer-events:none;border-radius:50%}
@@ -81,7 +81,7 @@ body::after{content:'';position:absolute;bottom:-200px;right:-200px;width:600px;
 .home-link:hover{color:var(--ink)}
 
 /* floating particles */
-.particle{position:fixed;pointer-events:none;border-radius:50%;animation:float-p linear infinite;opacity:0}
+.particle{position:absolute;pointer-events:none;border-radius:50%;animation:float-p linear infinite;opacity:0}
 @keyframes float-p{0%{transform:translateY(100vh) rotate(0deg);opacity:1}100%{transform:translateY(-100px) rotate(720deg);opacity:0}}
 
 @media(max-width:480px){
