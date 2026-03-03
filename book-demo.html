@@ -3,7 +3,7 @@
 <head>
 <meta name="color-scheme" content="light"/>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 <title>Book Your Free Demo Class — PrepEve IELTS</title>
 <meta name="robots" content="noindex"/>
 <meta name="description" content="Book your free IELTS demo class with PrepEve. Meet a certified trainer, get a free band score estimate and personalised study plan. No payment needed."/>
@@ -20,61 +20,111 @@
   --gold:#F59E0B;--green:#25D366;--green2:#128C7E;
   --muted:#64748B;--border:#E2E8F5;--red:#ef4444;--off:#F8FAFF;
 }
-html{scroll-behavior:smooth}
-html{background:#ffffff}
-body{font-family:'Bricolage Grotesque',sans-serif;color:var(--ink);background:#ffffff;min-height:100vh;-webkit-font-smoothing:antialiased}
+html{background:#ffffff;-webkit-overflow-scrolling:touch;overflow-y:auto}
+body{font-family:'Bricolage Grotesque',sans-serif;color:var(--ink);background:#ffffff;
+  min-height:100vh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
-/* NAV */
-.topbar{background:#fff;border-bottom:1.5px solid var(--border);padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
-.topbar-brand{font-family:'Instrument Serif',serif;font-size:1.4rem;font-weight:700;color:var(--ink);text-decoration:none}
+/* ── TOPBAR ── */
+.topbar{
+  background:#fff;
+  border-bottom:1.5px solid var(--border);
+  padding:.85rem 1.1rem;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:200;
+}
+.topbar-brand{font-family:'Instrument Serif',serif;font-size:1.35rem;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
 .topbar-brand em{font-style:italic;color:var(--blue)}
-.topbar-back{font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;padding:.4rem .8rem;border-radius:8px;border:1.5px solid var(--border);background:#fff;transition:all .18s}
-.topbar-back:hover{border-color:var(--blue);color:var(--blue)}
+.topbar-back{font-size:.82rem;font-weight:600;color:var(--muted);text-decoration:none;
+  padding:.38rem .85rem;border-radius:8px;border:1.5px solid var(--border);background:#fff}
 
-/* Avatar proof */
-.ps-avs{display:flex}
-.ps-av{width:34px;height:34px;border-radius:50%;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;color:#fff;margin-left:-9px;flex-shrink:0;box-shadow:0 1px 4px rgba(0,0,0,.12)}
-.ps-av:first-child{margin-left:0}
-.ps-text{font-size:.84rem;color:var(--muted);line-height:1.5}
-.ps-text strong{color:var(--ink);font-weight:800}
+/* ── HERO BAND (mobile only) ── */
+.mob-hero{
+  background:linear-gradient(145deg,#0f1f5c 0%,#1650D4 50%,#0D9488 100%);
+  padding:.9rem 1.25rem .8rem;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.mob-hero::before{
+  content:'';position:absolute;top:-80px;right:-80px;width:220px;height:220px;
+  border-radius:50%;background:rgba(255,255,255,.06);pointer-events:none;
+}
+.mob-hero::after{
+  content:'';position:absolute;bottom:-60px;left:-60px;width:180px;height:180px;
+  border-radius:50%;background:rgba(255,255,255,.04);pointer-events:none;
+}
 
-/* MOBILE INTRO — headline + proof + trust badges */
-.mob-intro{padding:1.4rem 1.25rem .2rem;text-align:center;background:#ffffff}
-.mob-headline{font-family:'Instrument Serif',serif;font-size:1.65rem;line-height:1.15;font-weight:700;letter-spacing:-.02em;color:var(--ink);margin-bottom:.5rem}
-.mob-headline em{font-style:italic;color:var(--blue)}
-.mob-sub{font-size:.88rem;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+/* Live pill */
+.hero-live{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);
+  border-radius:100px;padding:.28rem .85rem;
+  font-size:.68rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:#fff;margin-bottom:.55rem;
+  backdrop-filter:blur(6px);
+}
+.hero-live-dot{
+  width:6px;height:6px;border-radius:50%;background:#4ade80;flex-shrink:0;
+  animation:livePulse 2s infinite;
+}
+@keyframes livePulse{0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.6)}70%{box-shadow:0 0 0 5px rgba(74,222,128,0)}}
 
-.mob-proof{display:flex;align-items:center;justify-content:center;gap:.75rem;margin-bottom:1rem}
-.mob-stars{color:var(--gold);font-size:.95rem;letter-spacing:.05em}
-.mob-proof-text{font-size:.82rem;color:var(--muted);line-height:1.45}
-.mob-proof-text strong{color:var(--ink);font-weight:800}
+.mob-h1{
+  font-family:'Instrument Serif',serif;
+  font-size:1.65rem;line-height:1.1;letter-spacing:-.025em;
+  color:#fff;margin-bottom:.35rem;font-weight:700;
+}
+.mob-h1 em{font-style:italic;color:#a5f3cf}
+.mob-sub{font-size:.88rem;color:rgba(255,255,255,.78);line-height:1.5;margin-bottom:.75rem}
 
-.trust-badges{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin-bottom:.2rem}
-.tbadge{display:inline-flex;align-items:center;gap:.35rem;background:#ffffff !important;border:1.5px solid var(--border);border-radius:100px;padding:.32rem .85rem;font-size:.74rem;font-weight:700;color:#0C1A2E !important;box-shadow:0 1px 4px rgba(22,80,212,.06)}
-.tbadge-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-.tbadge-dot.green{background:var(--green)}
-.tbadge-dot.gold{background:var(--gold)}
-.tbadge-dot.blue{background:var(--blue)}
+/* Stats row */
+.hero-stats{
+  display:flex;align-items:center;justify-content:center;
+  gap:0;border-radius:14px;overflow:hidden;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(8px);margin-bottom:.7rem;
+}
+.hstat{flex:1;padding:.45rem .4rem;text-align:center;position:relative}
+.hstat+.hstat::before{content:'';position:absolute;left:0;top:20%;height:60%;width:1px;background:rgba(255,255,255,.2)}
+.hstat-val{font-size:.92rem;font-weight:800;color:#fff;line-height:1}
+.hstat-lbl{font-size:.6rem;color:rgba(255,255,255,.65);margin-top:.15rem;font-weight:600;letter-spacing:.02em}
 
-/* FORM WRAP — mobile padding lives here, outside the grid */
-.form-wrap{padding:1.25rem 1.25rem 5rem;background:#ffffff}
+/* Trust badges */
+.hero-badges{display:flex;justify-content:center;gap:.4rem;flex-wrap:wrap}
+.hbadge{
+  display:inline-flex;align-items:center;gap:.32rem;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);
+  border-radius:100px;padding:.22rem .65rem;
+  font-size:.68rem;font-weight:700;color:#fff;
+}
+.hbadge-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
 
-.form-card{background:#ffffff;border-radius:20px;border:1.5px solid var(--border);box-shadow:0 4px 24px rgba(22,80,212,.08);overflow:hidden}
-.form-card-head{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-bottom:1.5px solid #a7f3d0;padding:1.1rem 1.4rem;display:flex;align-items:center;gap:.75rem}
+/* ── FORM SECTION ── */
+.form-section{padding:.85rem 1rem 5rem;background:#fff}
+
+/* Form card */
+.form-card{
+  background:#fff;border-radius:18px;
+  border:1.5px solid var(--border);
+  box-shadow:0 4px 28px rgba(22,80,212,.09);
+  overflow:hidden;
+}
+.form-card-head{
+  background:linear-gradient(135deg,#f0fdf4,#dcfce7);
+  border-bottom:1.5px solid #a7f3d0;
+  padding:1rem 1.2rem;
+  display:flex;align-items:center;gap:.75rem;
+}
 .fch-icon{font-size:1.5rem;line-height:1;flex-shrink:0}
-.fch-title{font-size:1rem;font-weight:800;color:#166534;line-height:1.2}
-.fch-sub{font-size:.8rem;color:#15803d;margin-top:.2rem;font-weight:500}
-.form-body{padding:1.5rem 1.4rem 1.4rem;background:#ffffff}
+.fch-title{font-size:.98rem;font-weight:800;color:#166534;line-height:1.2}
+.fch-sub{font-size:.78rem;color:#15803d;margin-top:.18rem;font-weight:500}
+.form-body{padding:1.3rem 1.1rem 1.2rem;background:#ffffff}
 
-/* FIELDS */
-.field{margin-bottom:1.3rem}
-label{display:block;font-size:.84rem;font-weight:700;color:var(--ink);margin-bottom:.5rem}
+/* Fields */
+.field{margin-bottom:1.15rem}
+label{display:block;font-size:.84rem;font-weight:700;color:var(--ink);margin-bottom:.45rem}
 label .req{color:var(--red);margin-left:2px}
-
-/* 16px prevents iOS auto-zoom. min-height 54px = easy tap */
 input,select{
-  display:block;width:100%;
-  padding:1rem 1.1rem;
+  display:block;width:100%;padding:1rem 1.05rem;
   font-family:inherit;font-size:16px;
   color:#0C1A2E !important;background:#ffffff !important;
   border:1.5px solid var(--border);border-radius:12px;
@@ -83,81 +133,98 @@ input,select{
   min-height:54px;
 }
 input:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(22,80,212,.1)}
-input.err,select.err{border-color:var(--red);background:#fff8f8;box-shadow:0 0 0 4px rgba(239,68,68,.08)}
+input.err,select.err{border-color:var(--red);background:#fff8f8}
 input::placeholder{color:#94a3b8;font-size:15px}
 .select-wrap{position:relative}
-.select-wrap::after{content:'';position:absolute;right:1.1rem;top:50%;transform:translateY(-50%);border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--muted);pointer-events:none}
+.select-wrap::after{content:'';position:absolute;right:1.1rem;top:50%;transform:translateY(-50%);
+  border-left:5px solid transparent;border-right:5px solid transparent;
+  border-top:6px solid var(--muted);pointer-events:none}
 select{padding-right:2.8rem;cursor:pointer}
-
-.err-msg{font-size:.8rem;color:var(--red);margin-top:.4rem;padding-left:.25rem;display:none;font-weight:500}
+.err-msg{font-size:.78rem;color:var(--red);margin-top:.35rem;padding-left:.2rem;display:none;font-weight:500}
 .err-msg.show{display:block}
 
-/* PRIVACY */
-.privacy{display:flex;align-items:flex-start;gap:.6rem;font-size:.8rem;color:var(--muted);line-height:1.6;margin-bottom:1.4rem;padding:.9rem 1rem;background:var(--off);border-radius:10px;border:1px solid var(--border)}
+/* Privacy */
+.privacy{display:flex;align-items:flex-start;gap:.55rem;font-size:.78rem;
+  color:var(--muted);line-height:1.6;margin-bottom:1.2rem;
+  padding:.8rem .9rem;background:var(--off);border-radius:10px;border:1px solid var(--border)}
 .privacy svg{flex-shrink:0;color:var(--green);margin-top:2px}
 
-/* SUBMIT */
+/* Submit */
 .submit-btn{
-  display:flex;align-items:center;justify-content:center;gap:.65rem;
+  display:flex;align-items:center;justify-content:center;gap:.6rem;
   width:100%;padding:1.15rem 1.5rem;
   background:linear-gradient(135deg,var(--green) 0%,var(--green2) 100%);
   color:#fff;border:none;border-radius:16px;
-  font-family:inherit;font-size:1.1rem;font-weight:800;
+  font-family:inherit;font-size:1.08rem;font-weight:800;
   cursor:pointer;box-shadow:0 8px 28px rgba(37,211,102,.38);
-  transition:transform .2s,box-shadow .2s,opacity .2s;
+  transition:transform .18s,box-shadow .18s,opacity .2s;
   min-height:60px;letter-spacing:-.01em;
   -webkit-tap-highlight-color:transparent;
 }
-.submit-btn:active{transform:scale(.97);box-shadow:0 4px 14px rgba(37,211,102,.3)}
+.submit-btn:active{transform:scale(.97)}
 .submit-btn.loading{opacity:.7;pointer-events:none}
-.btn-spinner{display:none;width:22px;height:22px;border-radius:50%;border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;animation:spin .7s linear infinite;flex-shrink:0}
+.btn-spinner{display:none;width:20px;height:20px;border-radius:50%;border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;animation:spin .7s linear infinite;flex-shrink:0}
 @keyframes spin{to{transform:rotate(360deg)}}
 .submit-btn.loading .btn-spinner{display:block}
 .submit-btn.loading .btn-icon,.submit-btn.loading .btn-text,.submit-btn.loading .btn-arrow{display:none}
 
-/* URGENCY */
-.urgency{display:flex;align-items:center;justify-content:center;gap:.45rem;margin-top:1rem;font-size:.82rem;color:var(--muted);font-weight:500}
+/* Urgency */
+.urgency{display:flex;align-items:center;justify-content:center;gap:.4rem;
+  margin-top:.9rem;font-size:.8rem;color:var(--muted);font-weight:500}
 .urgency-dot{width:8px;height:8px;border-radius:50%;background:var(--red);flex-shrink:0;animation:rp 1.8s infinite}
 @keyframes rp{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.5)}70%{box-shadow:0 0 0 5px rgba(239,68,68,0)}}
 
-/* Force light mode — override any system dark mode */
+/* Force light mode */
 @media(prefers-color-scheme:dark){
-  html,body,
-  .mob-intro,.form-wrap,.form-card,.form-body,
-  .form-card-head,input,select,label,
-  .tbadge,.privacy,.field,.topbar{
-    background-color:#ffffff !important;
-    color:#0C1A2E !important;
+  html,body,.form-section,.form-card,.form-body,.form-card-head,
+  input,select,label,.privacy,.field,.topbar{
+    background-color:#ffffff !important;color:#0C1A2E !important;
   }
   .form-card-head{background:linear-gradient(135deg,#f0fdf4,#dcfce7) !important}
   input,select{border-color:#E2E8F5 !important}
   input::placeholder{color:#94a3b8 !important}
 }
+
+/* ── DESKTOP ── */
 @media(min-width:769px){
   body{background:linear-gradient(160deg,#f0f4ff,#e8f5ff 50%,#f0fdf8)}
-  .mob-intro{display:none}
+  .mob-hero{display:none}
+  .form-section{padding:0;background:transparent}
 
-  .desktop-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;max-width:980px;margin:0 auto;padding:4.5rem 3rem;align-items:start}
+  .desktop-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;
+    max-width:980px;margin:0 auto;padding:4.5rem 3rem;align-items:start}
   .desktop-info{display:flex;flex-direction:column}
-  .di-tag{display:inline-flex;align-items:center;gap:.5rem;background:#FEF3C7;border:1px solid rgba(245,158,11,.35);border-radius:100px;padding:.38rem 1rem;margin-bottom:1.4rem;width:fit-content}
+  .di-tag{display:inline-flex;align-items:center;gap:.5rem;background:#FEF3C7;
+    border:1px solid rgba(245,158,11,.35);border-radius:100px;padding:.38rem 1rem;
+    margin-bottom:1.4rem;width:fit-content}
   .di-tag-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:dp 2s infinite}
+  @keyframes dp{0%,100%{opacity:1}50%{opacity:.4}}
   .di-tag span{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#92400E}
-  .di-h1{font-family:'Instrument Serif',serif;font-size:clamp(2.1rem,3.5vw,3rem);line-height:1.1;letter-spacing:-.025em;margin-bottom:1rem}
+  .di-h1{font-family:'Instrument Serif',serif;font-size:clamp(2.1rem,3.5vw,3rem);
+    line-height:1.1;letter-spacing:-.025em;margin-bottom:1rem}
   .di-h1 em{font-style:italic;color:var(--blue)}
-  .di-h1 .grad{background:linear-gradient(135deg,var(--blue),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .di-h1 .grad{background:linear-gradient(135deg,var(--blue),var(--teal));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
   .di-sub{font-size:.98rem;color:var(--muted);line-height:1.85;margin-bottom:1.8rem}
   .di-perks{display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem}
-  .di-perk{display:flex;align-items:flex-start;gap:.9rem;background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:.9rem 1.1rem;box-shadow:0 2px 10px rgba(22,80,212,.05)}
+  .di-perk{display:flex;align-items:flex-start;gap:.9rem;background:#fff;
+    border:1.5px solid var(--border);border-radius:14px;padding:.9rem 1.1rem;
+    box-shadow:0 2px 10px rgba(22,80,212,.05)}
   .di-perk-icon{font-size:1.3rem;flex-shrink:0;margin-top:.05rem}
   .di-perk-title{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.18rem}
   .di-perk-desc{font-size:.78rem;color:var(--muted);line-height:1.65}
   .di-proof{display:flex;align-items:center;gap:.85rem;padding-top:1.4rem;border-top:1.5px solid var(--border)}
-  .di-proof .ps-text{font-size:.82rem}
-  .form-wrap{padding:0;max-width:100%}
+  .ps-avs{display:flex}
+  .ps-av{width:34px;height:34px;border-radius:50%;border:2.5px solid #fff;display:flex;
+    align-items:center;justify-content:center;font-size:.65rem;font-weight:800;
+    color:#fff;margin-left:-9px;flex-shrink:0;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+  .ps-av:first-child{margin-left:0}
+  .ps-text{font-size:.82rem;color:var(--muted);line-height:1.5}
+  .ps-text strong{color:var(--ink);font-weight:800}
+  .form-wrap{padding:0;max-width:100%;background:transparent}
   .topbar{padding:.9rem 2.5rem}
 }
 @media(max-width:768px){
-  /* On mobile, grid becomes block flow */
   .desktop-grid{display:block}
   .desktop-info{display:none}
 }
@@ -165,38 +232,49 @@ select{padding-right:2.8rem;cursor:pointer}
 </head>
 <body>
 
+<!-- TOPBAR -->
 <div class="topbar">
   <a href="index.html" class="topbar-brand">Prep<em>Eve</em></a>
   <a href="index.html" class="topbar-back">← Back</a>
 </div>
 
+<!-- MOBILE HERO (hidden on desktop) -->
+<div class="mob-hero">
 
+  <div class="hero-live">
+    <div class="hero-live-dot"></div>
+    <span>Enrolling Now</span>
+  </div>
 
-<!-- MOBILE INTRO — visible only on mobile -->
-<div class="mob-intro">
-  <h1 class="mob-headline">Book Your <em>Free</em><br>Demo Class</h1>
-  <p class="mob-sub">Meet your coach &amp; get a personalised study plan — no payment needed</p>
+  <h1 class="mob-h1">Book Your <em>Free</em><br>Demo Class</h1>
+  <p class="mob-sub">Meet your coach · free band estimate · personalised study plan</p>
 
-  <div class="mob-proof">
-    <div class="ps-avs">
-      <div class="ps-av" style="background:linear-gradient(135deg,#1650D4,#2563EB)">P</div>
-      <div class="ps-av" style="background:linear-gradient(135deg,#0D9488,#14b8a6)">R</div>
-      <div class="ps-av" style="background:linear-gradient(135deg,#F59E0B,#fbbf24);color:#92400E">S</div>
-      <div class="ps-av" style="background:linear-gradient(135deg,#8B5CF6,#a78bfa)">K</div>
+  <!-- Stats strip -->
+  <div class="hero-stats">
+    <div class="hstat">
+      <div class="hstat-val">15,000+</div>
+      <div class="hstat-lbl">Students</div>
     </div>
-    <div class="mob-proof-text">
-      <strong>347 students</strong> booked this month<br>
-      <span class="mob-stars">★★★★★</span> 4.7 · 300+ Google reviews
+    <div class="hstat">
+      <div class="hstat-val">★ 4.7</div>
+      <div class="hstat-lbl">Google Rating</div>
+    </div>
+    <div class="hstat">
+      <div class="hstat-val">97%</div>
+      <div class="hstat-lbl">Band 7+</div>
     </div>
   </div>
 
-  <div class="trust-badges">
-    <div class="tbadge"><div class="tbadge-dot green"></div>100% Free</div>
-    <div class="tbadge"><div class="tbadge-dot gold"></div>No Payment</div>
-    <div class="tbadge"><div class="tbadge-dot blue"></div>Reply in 30 min</div>
+  <!-- Trust badges -->
+  <div class="hero-badges">
+    <div class="hbadge"><div class="hbadge-dot" style="background:#4ade80"></div>100% Free</div>
+    <div class="hbadge"><div class="hbadge-dot" style="background:#fbbf24"></div>No Payment</div>
+    <div class="hbadge"><div class="hbadge-dot" style="background:#a5b4fc"></div>Reply in 30 min</div>
   </div>
+
 </div>
 
+<!-- GRID (desktop info + form) -->
 <div class="desktop-grid">
   <div class="desktop-info">
     <div class="di-tag"><div class="di-tag-dot"></div><span>🎓 Free · No Credit Card</span></div>
@@ -219,13 +297,15 @@ select{padding-right:2.8rem;cursor:pointer}
     </div>
   </div>
 
+  <!-- FORM -->
   <div class="form-wrap">
+    <div class="form-section">
     <div class="form-card">
       <div class="form-card-head">
         <span class="fch-icon">📚</span>
         <div>
           <div class="fch-title">Reserve Your Free Demo Slot</div>
-          <div class="fch-sub">We’ll confirm on WhatsApp within 30 minutes</div>
+          <div class="fch-sub">We'll confirm on WhatsApp within 30 minutes</div>
         </div>
       </div>
       <div class="form-body">
@@ -293,113 +373,79 @@ select{padding-right:2.8rem;cursor:pointer}
 
       </div>
     </div>
+    </div>
   </div>
 </div>
 
 <script>
 (function(){
-
-  // ── PASTE YOUR GOOGLE APPS SCRIPT URL HERE ──────────────────
   var SHEET_URL = 'https://script.google.com/macros/s/AKfycbxV6D1QlPWjlPg7QNH4RBQb3PoyisOElpEaKW_mbFkVkyeBfIJKPi7eiGfO42jUSTYLzg/exec';
-  // e.g. 'https://script.google.com/macros/s/AKfy.../exec'
-  // ────────────────────────────────────────────────────────────
 
   var btn = document.getElementById('submit-btn');
 
-  function val(id) {
-    var e = document.getElementById(id);
-    return e ? e.value.trim() : '';
+  function val(id){var e=document.getElementById(id);return e?e.value.trim():'';}
+
+  function setErr(id,show){
+    var inp=document.getElementById(id),msg=document.getElementById(id+'-err');
+    if(!inp||!msg)return;
+    if(show){inp.classList.add('err');msg.classList.add('show');}
+    else{inp.classList.remove('err');msg.classList.remove('show');}
   }
 
-  function setErr(id, show) {
-    var inp = document.getElementById(id), msg = document.getElementById(id + '-err');
-    if (!inp || !msg) return;
-    if (show) { inp.classList.add('err'); msg.classList.add('show'); }
-    else { inp.classList.remove('err'); msg.classList.remove('show'); }
-  }
-
-  ['fname', 'phone', 'email'].forEach(function(id) {
-    var el = document.getElementById(id);
-    if (el) el.addEventListener('input', function() { setErr(id, false); });
+  ['fname','phone','email'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)el.addEventListener('input',function(){setErr(id,false);});
   });
 
-  btn.addEventListener('click', function() {
+  btn.addEventListener('click',function(){
+    var fname=val('fname');
+    var phone=val('phone').replace(/[\s\-\(\)\+]/g,'');
+    var email=val('email');
+    var ok=true;
 
-    // ── Validate ──
-    var fname = val('fname');
-    var phone = val('phone').replace(/[\s\-\(\)\+]/g, '');
-    var email = val('email');
-    var ok = true;
+    if(!fname||fname.length<2){setErr('fname',true);ok=false;}else{setErr('fname',false);}
+    if(phone.replace(/\D/g,'').length<8){setErr('phone',true);ok=false;}else{setErr('phone',false);}
+    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){setErr('email',true);ok=false;}else{setErr('email',false);}
 
-    if (!fname || fname.length < 2) { setErr('fname', true); ok = false; } else { setErr('fname', false); }
-    if (phone.replace(/\D/g, '').length < 8) { setErr('phone', true); ok = false; } else { setErr('phone', false); }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setErr('email', true); ok = false; } else { setErr('email', false); }
-
-    if (!ok) {
-      var f = document.querySelector('input.err');
-      if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      return;
-    }
+    if(!ok){var f=document.querySelector('input.err');if(f)f.scrollIntoView({behavior:'smooth',block:'center'});return;}
 
     btn.classList.add('loading');
 
-    // ── Build WhatsApp message ──
-    var goalMap = { band6: 'Band 6-6.5', band7: 'Band 7-7.5', band8: 'Band 8+', unsure: 'Not sure yet' };
-    var examMap = { '1month': 'Within 1 month', '2month': '1-2 months', '3month': '2-3 months', later: '3+ months' };
-    var goal = val('goal'), exam = val('examdate');
-    var bandLabel = goalMap[goal] || 'Not specified';
-    var examLabel = examMap[exam] || 'Not specified';
+    var goalMap={band6:'Band 6-6.5',band7:'Band 7-7.5',band8:'Band 8+',unsure:'Not sure yet'};
+    var examMap={'1month':'Within 1 month','2month':'1-2 months','3month':'2-3 months',later:'3+ months'};
+    var bandLabel=goalMap[val('goal')]||'Not specified';
+    var examLabel=examMap[val('examdate')]||'Not specified';
 
-    var waMsg = 'Hi PrepEve! I want to book a Free Demo Class.\n\n'
-      + 'Name: ' + fname + '\n'
-      + 'Phone: ' + val('phone') + '\n'
-      + 'Email: ' + email + '\n'
-      + 'Target Band: ' + bandLabel + '\n'
-      + 'Exam Date: ' + examLabel;
+    var waMsg='Hi PrepEve! I want to book a Free Demo Class.\n\n'
+      +'Name: '+fname+'\nPhone: '+val('phone')+'\nEmail: '+email
+      +'\nTarget Band: '+bandLabel+'\nExam Date: '+examLabel;
 
-    var waUrl = 'https://wa.me/919877714284?text=' + encodeURIComponent(waMsg);
-    var tyUrl = 'thank-you.html?name=' + encodeURIComponent(fname) + '&wa=' + encodeURIComponent(waUrl);
+    var waUrl='https://wa.me/919877714284?text='+encodeURIComponent(waMsg);
+    var tyUrl='thank-you.html?name='+encodeURIComponent(fname)+'&wa='+encodeURIComponent(waUrl);
 
-    // ── Redirect: WhatsApp first on ALL devices, then thank-you ──
-    function redirect() {
-      if (window.innerWidth >= 769) {
-        // Desktop: open WA in new tab, redirect page to thank-you
-        window.open(waUrl, '_blank');
-        window.location.href = tyUrl;
-      } else {
-        // Mobile: open WA directly (same tab), thank-you loads on back
-        // Use location.href so it works in WhatsApp/Instagram in-app browsers too
-        window.location.href = waUrl;
-        // After 1.5s redirect to thank-you in background (some browsers support this)
-        setTimeout(function() {
-          window.location.href = tyUrl;
-        }, 1500);
+    function redirect(){
+      if(window.innerWidth>=769){
+        window.open(waUrl,'_blank');
+        window.location.href=tyUrl;
+      }else{
+        window.location.href=waUrl;
+        setTimeout(function(){window.location.href=tyUrl;},1500);
       }
     }
 
-    if (SHEET_URL) {
-      // Use no-cors + URL params — the only reliable way to hit Google Apps Script
-      // from an external site without CORS errors
-      var params = '?name=' + encodeURIComponent(fname)
-        + '&phone=' + encodeURIComponent(val('phone'))
-        + '&email=' + encodeURIComponent(email)
-        + '&band='  + encodeURIComponent(bandLabel)
-        + '&exam='  + encodeURIComponent(examLabel);
-
-      fetch(SHEET_URL + params, {
-        method: 'GET',
-        mode: 'no-cors'
-      })
-      .catch(function() {})
-      .finally(function() {
-        setTimeout(redirect, 300);
-      });
-    } else {
-      setTimeout(redirect, 450);
+    if(SHEET_URL){
+      var params='?name='+encodeURIComponent(fname)
+        +'&phone='+encodeURIComponent(val('phone'))
+        +'&email='+encodeURIComponent(email)
+        +'&band='+encodeURIComponent(bandLabel)
+        +'&exam='+encodeURIComponent(examLabel);
+      fetch(SHEET_URL+params,{method:'GET',mode:'no-cors'})
+        .catch(function(){})
+        .finally(function(){setTimeout(redirect,300);});
+    }else{
+      setTimeout(redirect,450);
     }
-
   });
-
 })();
 </script>
 </body>
