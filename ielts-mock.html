@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IELTS Writing Mock Test — PrepEve AI Examiner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#111827;--ink2:#374151;--muted:#6B7280;--light:#9CA3AF;
+  --border:#E5E7EB;--off:#F9FAFB;--bg:#f5f5f4;--card:#fff;
+  --blue:#1d4ed8;--blue2:#3b82f6;--teal:#0f766e;
+  --gold:#d97706;--green:#15803d;--red:#b91c1c;
+}
+html,body{background:var(--bg);font-family:'DM Sans',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;min-height:100vh}
+
+/* NAV */
+.nav{background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:.8rem 1.3rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:300}
+.brand{font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:var(--ink);text-decoration:none}
+.brand em{font-style:italic;color:var(--blue)}
+.nav-pill{display:flex;align-items:center;gap:.38rem;background:linear-gradient(135deg,#1d4ed8,#0f766e);color:#fff;font-size:.65rem;font-weight:700;padding:.25rem .75rem;border-radius:100px;letter-spacing:.07em;text-transform:uppercase}
+.pulse{width:5px;height:5px;border-radius:50%;background:#86efac;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
+/* PAGES */
+.page{display:none}
+.page.on{display:block;animation:up .3s ease both}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.wrap{max-width:720px;margin:0 auto;padding:1.75rem 1rem 5rem}
+
+/* ── SELECT ── */
+.hero{text-align:center;padding:2rem 1rem 1.5rem}
+.hero-tag{display:inline-flex;align-items:center;gap:.4rem;background:#eff6ff;border:1px solid #bfdbfe;border-radius:100px;padding:.28rem .85rem;font-size:.7rem;font-weight:600;color:var(--blue);letter-spacing:.04em;margin-bottom:.9rem}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--blue2);animation:blink 2s infinite}
+.hero-h{font-family:'Lora',serif;font-size:clamp(1.9rem,5vw,2.8rem);font-weight:700;line-height:1.08;letter-spacing:-.03em;margin-bottom:.55rem}
+.hero-h em{font-style:italic;color:var(--blue)}
+.hero-s{font-size:.9rem;color:var(--muted);line-height:1.7;max-width:430px;margin:0 auto 1.6rem}
+.stats-row{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
+.stat{text-align:center}
+.stat-v{font-family:'Lora',serif;font-size:1.45rem;font-weight:700;color:var(--ink)}
+.stat-l{font-size:.7rem;color:var(--muted);margin-top:.1rem}
+
+.task-grid{display:grid;grid-template-columns:1fr;gap:.85rem;margin-bottom:1.6rem}
+@media(min-width:560px){.task-grid{grid-template-columns:repeat(3,1fr)}}
+.tc{background:var(--card);border:2px solid var(--border);border-radius:18px;padding:1.35rem 1.15rem;cursor:pointer;transition:all .22s cubic-bezier(.34,1.56,.64,1);text-align:left;position:relative}
+.tc:hover{border-color:var(--blue2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(29,78,216,.1)}
+.tc.sel{border-color:var(--blue);background:linear-gradient(135deg,#eff6ff,#f0fdfa);box-shadow:0 6px 24px rgba(29,78,216,.13);transform:translateY(-2px)}
+.tc.sel::after{content:'✓';position:absolute;top:.75rem;right:.8rem;width:21px;height:21px;border-radius:50%;background:var(--blue);color:#fff;font-size:.68rem;font-weight:800;display:flex;align-items:center;justify-content:center}
+.tc-ico{width:40px;height:40px;border-radius:10px;background:var(--off);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:.75rem}
+.tc.sel .tc-ico{background:#dbeafe;border-color:#bfdbfe}
+.tc-sub{font-size:.65rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem}
+.tc-title{font-family:'Lora',serif;font-size:.96rem;font-weight:600;color:var(--ink);margin-bottom:.38rem;line-height:1.3}
+.tc-desc{font-size:.76rem;color:var(--muted);line-height:1.55;margin-bottom:.65rem}
+.tc-chips{display:flex;gap:.4rem;flex-wrap:wrap}
+.chip{background:var(--off);border:1px solid var(--border);border-radius:100px;padding:.15rem .58rem;font-size:.67rem;font-weight:600;color:var(--muted)}
+.tc.sel .chip{background:#dbeafe;border-color:#bfdbfe;color:var(--blue)}
+
+.btn-start{width:100%;padding:1.05rem;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;border:none;border-radius:13px;font-family:'DM Sans',sans-serif;font-size:.96rem;font-weight:700;cursor:pointer;box-shadow:0 6px 22px rgba(29,78,216,.26);transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.5rem}
+.btn-start:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(29,78,216,.35)}
+.btn-start:active{transform:scale(.98)}
+
+/* ── WRITE ── */
+.write-top{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem;margin-bottom:.95rem;flex-wrap:wrap}
+.wt-left{flex:1;min-width:0}
+.wt-sup{font-size:.67rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--blue);margin-bottom:.2rem}
+.wt-title{font-family:'Lora',serif;font-size:1.1rem;font-weight:700;color:var(--ink);line-height:1.25}
+.timer{display:flex;align-items:center;gap:.38rem;background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:.45rem .8rem;font-size:.88rem;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;box-shadow:0 2px 8px rgba(0,0,0,.05);flex-shrink:0;transition:all .3s}
+.timer.warn{background:#fef2f2;border-color:#fca5a5;color:var(--red)}
+
+.prompt-card{background:var(--card);border:1.5px solid var(--border);border-radius:15px;overflow:hidden;margin-bottom:.8rem;box-shadow:0 4px 18px rgba(0,0,0,.05)}
+.pc-stripe{height:3px;background:linear-gradient(90deg,var(--blue),var(--teal))}
+.pc-inner{padding:1.1rem 1.2rem}
+.pc-notice{display:flex;align-items:center;gap:.45rem;background:#fffbeb;border:1px solid #fde68a;border-radius:7px;padding:.5rem .8rem;font-size:.76rem;font-weight:600;color:#92400e;margin-bottom:.85rem}
+.pc-text{font-size:.87rem;color:var(--ink2);line-height:1.85}
+.pc-text strong{color:var(--blue);font-weight:700}
+.pc-text em{display:block;background:var(--off);border:1px solid var(--border);border-radius:7px;padding:.6rem .85rem;margin:.6rem 0;color:var(--muted);font-style:normal;font-size:.8rem}
+.wc-bar{height:2px;background:var(--border)}
+.wc-fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue2),var(--teal));transition:width .3s}
+.wc-fill.done{background:linear-gradient(90deg,var(--green),#4ade80)}
+.wc-foot{display:flex;align-items:center;justify-content:space-between;padding:.55rem 1.2rem;background:var(--off);border-top:1px solid var(--border)}
+.wc-lbl{font-size:.78rem;font-weight:600;color:var(--muted)}
+.wc-lbl .n{font-weight:700;color:var(--ink);transition:color .2s}
+.wc-lbl.ok .n{color:var(--green)}
+.wc-lbl.near .n{color:var(--gold)}
+.wc-req{font-size:.72rem;color:var(--light)}
+
+.shuffle-btn{display:inline-flex;align-items:center;gap:.35rem;font-size:.76rem;font-weight:600;color:var(--blue);cursor:pointer;background:none;border:none;font-family:inherit;padding:0;margin-bottom:.65rem;transition:opacity .15s}
+.shuffle-btn:hover{opacity:.6}
+
+textarea{width:100%;min-height:230px;font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.85;color:var(--ink);background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:1rem 1.1rem;resize:vertical;outline:none;transition:border-color .2s,box-shadow .2s;margin-bottom:.75rem}
+textarea:focus{border-color:var(--blue2);box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+textarea::placeholder{color:var(--light)}
+
+.act-row{display:flex;gap:.6rem;flex-wrap:wrap}
+.btn-submit{flex:1;min-width:190px;padding:.95rem 1.3rem;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;border:none;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:.92rem;font-weight:700;cursor:pointer;box-shadow:0 5px 18px rgba(29,78,216,.24);transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.45rem;letter-spacing:-.01em}
+.btn-submit:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(29,78,216,.32)}
+.btn-submit:active{transform:scale(.98)}
+.btn-ghost{padding:.92rem 1rem;background:var(--card);color:var(--muted);border:1.5px solid var(--border);border-radius:12px;font-family:'DM Sans',sans-serif;font-size:.83rem;font-weight:600;cursor:pointer;transition:all .18s}
+.btn-ghost:hover{border-color:var(--blue2);color:var(--blue);background:#eff6ff}
+
+.err{background:#fef2f2;border:1px solid #fecaca;border-radius:9px;padding:.6rem .9rem;font-size:.79rem;color:#991b1b;margin-bottom:.7rem;display:none}
+.err.on{display:block}
+
+/* ── LOADING ── */
+#page-loading{text-align:center;padding-top:.5rem}
+.orb{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));margin:0 auto 1.3rem;display:flex;align-items:center;justify-content:center;font-size:1.8rem;animation:pop 2.2s ease infinite}
+@keyframes pop{0%{box-shadow:0 0 0 0 rgba(29,78,216,.35)}60%{box-shadow:0 0 0 20px rgba(29,78,216,0)}100%{box-shadow:0 0 0 0 rgba(29,78,216,0)}}
+.load-h{font-family:'Lora',serif;font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:.35rem}
+.load-s{font-size:.84rem;color:var(--muted);margin-bottom:1.7rem}
+.step-list{display:flex;flex-direction:column;gap:.48rem;max-width:300px;margin:0 auto;text-align:left}
+.si{display:flex;align-items:center;gap:.65rem;padding:.52rem .82rem;border-radius:9px;background:var(--card);border:1.5px solid var(--border);font-size:.79rem;font-weight:500;color:var(--muted);transition:all .3s}
+.si.go{border-color:#bfdbfe;background:#eff6ff;color:var(--blue);font-weight:600}
+.si.done{border-color:#bbf7d0;background:#f0fdf4;color:var(--green);font-weight:600}
+.si-e{font-size:.9rem;width:18px;text-align:center;flex-shrink:0}
+.spin{width:13px;height:13px;border-radius:50%;border:2px solid rgba(29,78,216,.2);border-top-color:var(--blue);animation:spin .7s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── RESULTS ── */
+.score-hero{border-radius:20px;overflow:hidden;margin-bottom:1.15rem;box-shadow:0 8px 32px rgba(29,78,216,.15)}
+.sh-bg{background:linear-gradient(160deg,#0f172a 0%,#1d4ed8 55%,#0f766e 100%);padding:1.85rem 1.5rem 1.5rem;text-align:center;position:relative;overflow:hidden}
+.sh-bg::before{content:'';position:absolute;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.04);top:-90px;right:-70px;pointer-events:none}
+.sh-eye{font-size:.66rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.55rem}
+.sh-band{font-family:'Lora',serif;font-size:6rem;font-weight:700;line-height:1;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.2);margin-bottom:.25rem}
+.sh-band sup{font-size:2.3rem;vertical-align:top;margin-top:1.1rem;display:inline-block;opacity:.6}
+.sh-level{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:100px;padding:.27rem .9rem;font-size:.77rem;font-weight:700;color:#fff;margin-bottom:1rem;backdrop-filter:blur(8px)}
+.sh-pills{display:flex;justify-content:center;gap:.38rem;flex-wrap:wrap}
+.sh-pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.17);border-radius:100px;padding:.19rem .62rem;font-size:.68rem;font-weight:600;color:rgba(255,255,255,.8)}
+.sh-pill b{color:#fff;font-weight:800;margin-left:.2rem}
+
+.sec-lbl{font-size:.69rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.65rem;padding-left:.15rem}
+.crit-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-bottom:1.15rem}
+@media(max-width:430px){.crit-grid{grid-template-columns:1fr}}
+.cc{background:var(--card);border:1.5px solid var(--border);border-radius:13px;padding:1rem;box-shadow:0 2px 8px rgba(0,0,0,.04);position:relative;overflow:hidden}
+.cc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.cc.hi::before{background:linear-gradient(90deg,#15803d,#4ade80)}
+.cc.md::before{background:linear-gradient(90deg,#d97706,#fbbf24)}
+.cc.lo::before{background:linear-gradient(90deg,#b91c1c,#f87171)}
+.cc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.48rem}
+.cc-name{font-size:.69rem;font-weight:600;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;line-height:1.3;flex:1;padding-right:.38rem}
+.cc-sc{font-family:'Lora',serif;font-size:1.7rem;font-weight:700;line-height:1;flex-shrink:0}
+.cc-sc.hi{color:var(--green)}.cc-sc.md{color:var(--gold)}.cc-sc.lo{color:var(--red)}
+.cc-track{background:var(--off);border-radius:100px;height:4px;overflow:hidden;margin-bottom:.52rem}
+.cc-bar{height:100%;border-radius:100px;transition:width 1s ease}
+.cc-bar.hi{background:linear-gradient(90deg,#15803d,#4ade80)}
+.cc-bar.md{background:linear-gradient(90deg,#d97706,#fbbf24)}
+.cc-bar.lo{background:linear-gradient(90deg,#b91c1c,#f87171)}
+.cc-fb{font-size:.76rem;color:var(--muted);line-height:1.65}
+
+.acc{margin-bottom:.75rem}
+.acc-head{background:var(--card);border:1.5px solid var(--border);border-radius:13px;padding:.88rem 1.05rem;display:flex;align-items:center;gap:.62rem;cursor:pointer;transition:background .15s;user-select:none}
+.acc.open .acc-head{border-radius:13px 13px 0 0;border-bottom-color:transparent;background:#fafaf9}
+.acc-ico{width:30px;height:30px;border-radius:8px;background:var(--off);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.acc-info{flex:1}
+.acc-title{font-size:.87rem;font-weight:700;color:var(--ink)}
+.acc-sub{font-size:.72rem;color:var(--muted);margin-top:.07rem}
+.acc-chev{color:var(--light);font-size:.7rem;transition:transform .2s;flex-shrink:0}
+.acc.open .acc-chev{transform:rotate(180deg)}
+.acc-body{background:var(--card);border:1.5px solid var(--border);border-top:none;border-radius:0 0 13px 13px;padding:.95rem 1.05rem;display:none}
+.acc.open .acc-body{display:block}
+
+.pts{display:flex;flex-direction:column;gap:.52rem}
+.pt{display:flex;align-items:flex-start;gap:.62rem;font-size:.82rem;color:var(--ink2);line-height:1.65}
+.pt-d{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.67rem;flex-shrink:0;margin-top:.18rem}
+.pt-d.g{background:#dcfce7;color:var(--green)}
+.pt-d.b{background:#dbeafe;color:var(--blue)}
+
+.imp-box{background:linear-gradient(135deg,#f0fdf4,#f0f9ff);border:1.5px solid #bbf7d0;border-radius:10px;padding:1.05rem 1.1rem;font-size:.85rem;line-height:1.9;color:var(--ink2);white-space:pre-wrap}
+.imp-note{display:flex;align-items:center;gap:.42rem;font-size:.72rem;color:var(--green);font-weight:600;margin-bottom:.65rem}
+
+.cta-box{background:linear-gradient(150deg,#0f172a 0%,#1d4ed8 60%,#0f766e 100%);border-radius:18px;padding:1.75rem 1.4rem;text-align:center;margin-top:1.3rem;position:relative;overflow:hidden}
+.cta-box::before{content:'';position:absolute;width:250px;height:250px;border-radius:50%;background:rgba(255,255,255,.04);top:-80px;right:-60px;pointer-events:none}
+.cta-h{font-family:'Lora',serif;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:.42rem;line-height:1.3}
+.cta-h em{font-style:italic;color:#86efac}
+.cta-s{font-size:.82rem;color:rgba(255,255,255,.67);margin-bottom:1.2rem;line-height:1.6}
+.cta-btns{display:flex;gap:.65rem;flex-wrap:wrap;justify-content:center}
+.btn-wa{display:inline-flex;align-items:center;gap:.45rem;background:#25D366;color:#fff;border:none;border-radius:11px;padding:.8rem 1.3rem;font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:700;cursor:pointer;text-decoration:none;box-shadow:0 5px 18px rgba(37,211,102,.3);transition:all .18s}
+.btn-wa:hover{transform:translateY(-1px)}
+.btn-retry{display:inline-flex;align-items:center;gap:.45rem;background:rgba(255,255,255,.11);border:1.5px solid rgba(255,255,255,.2);color:#fff;border-radius:11px;padding:.8rem 1.3rem;font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:600;cursor:pointer;transition:all .18s;backdrop-filter:blur(6px)}
+.btn-retry:hover{background:rgba(255,255,255,.18)}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="#" class="brand">Prep<em>Eve</em></a>
+  <div class="nav-pill"><div class="pulse"></div>AI Examiner</div>
+</div>
+
+<!-- SELECT -->
+<div id="pg-select" class="page on">
+  <div class="wrap">
+    <div class="hero">
+      <div class="hero-tag"><div class="hero-dot"></div>Free · Instant · No Login</div>
+      <h1 class="hero-h">IELTS <em>Writing</em><br>Mock Test</h1>
+      <p class="hero-s">Practise all three IELTS Writing tasks. Get an instant Band score, per-criterion feedback, and an AI-improved version of your response.</p>
+      <div class="stats-row">
+        <div class="stat"><div class="stat-v">Band 1–9</div><div class="stat-l">Accurate Scoring</div></div>
+        <div class="stat"><div class="stat-v">4 Criteria</div><div class="stat-l">Detailed Feedback</div></div>
+        <div class="stat"><div class="stat-v">3 Task Types</div><div class="stat-l">All IELTS Writing</div></div>
+      </div>
+    </div>
+    <div class="task-grid">
+      <div class="tc" data-task="t1a" onclick="pick(this)">
+        <div class="tc-ico">📊</div>
+        <div class="tc-sub">Academic Only</div>
+        <div class="tc-title">Writing Task 1 — Academic</div>
+        <div class="tc-desc">Describe a bar chart, line graph, pie chart, table or process diagram in at least 150 words.</div>
+        <div class="tc-chips"><span class="chip">⏱ 20 min</span><span class="chip">150+ words</span></div>
+      </div>
+      <div class="tc" data-task="t1g" onclick="pick(this)">
+        <div class="tc-ico">✉️</div>
+        <div class="tc-sub">General Training Only</div>
+        <div class="tc-title">Writing Task 1 — General</div>
+        <div class="tc-desc">Write a formal, semi-formal or informal letter in at least 150 words.</div>
+        <div class="tc-chips"><span class="chip">⏱ 20 min</span><span class="chip">150+ words</span></div>
+      </div>
+      <div class="tc" data-task="t2" onclick="pick(this)">
+        <div class="tc-ico">✍️</div>
+        <div class="tc-sub">Academic & General Training</div>
+        <div class="tc-title">Writing Task 2 — Essay</div>
+        <div class="tc-desc">Write a discursive essay — argue, discuss, agree/disagree or give your opinion on a topic.</div>
+        <div class="tc-chips"><span class="chip">⏱ 40 min</span><span class="chip">250+ words</span></div>
+      </div>
+    </div>
+    <div id="sel-err" class="err">Please select a task type to continue.</div>
+    <button class="btn-start" onclick="startTest()">Start Mock Test →</button>
+  </div>
+</div>
+
+<!-- WRITE -->
+<div id="pg-write" class="page">
+  <div class="wrap">
+    <div class="write-top">
+      <div class="wt-left">
+        <div class="wt-sup" id="wt-sup">Task</div>
+        <div class="wt-title" id="wt-title">IELTS Writing Mock</div>
+      </div>
+      <div class="timer" id="timer">⏱ <span id="t-disp">40:00</span></div>
+    </div>
+    <div class="prompt-card">
+      <div class="pc-stripe"></div>
+      <div class="pc-inner">
+        <div class="pc-notice">📌 Read carefully, then write your full response below.</div>
+        <div class="pc-text" id="pc-text">Loading...</div>
+      </div>
+      <div class="wc-bar"><div class="wc-fill" id="wc-fill"></div></div>
+      <div class="wc-foot">
+        <div class="wc-lbl" id="wc-lbl">Words: <span class="n">0</span></div>
+        <div class="wc-req" id="wc-req">Min. 250 words</div>
+      </div>
+    </div>
+    <button class="shuffle-btn" onclick="shuffle()">🔀 Try a different prompt</button>
+    <textarea id="ta" placeholder="Start writing here..." oninput="onType()"></textarea>
+    <div id="write-err" class="err"></div>
+    <div class="act-row">
+      <button class="btn-submit" id="sub-btn" onclick="doSubmit()">✨ Submit for AI Marking</button>
+      <button class="btn-ghost" onclick="goBack()">← Change Task</button>
+    </div>
+  </div>
+</div>
+
+<!-- LOADING -->
+<div id="pg-loading" class="page">
+  <div class="wrap">
+    <div class="orb">🤖</div>
+    <div class="load-h">Marking your response…</div>
+    <div class="load-s">Our AI examiner is reviewing your writing</div>
+    <div class="step-list">
+      <div class="si" id="si0"><span class="si-e">📋</span>Checking Task Achievement</div>
+      <div class="si" id="si1"><span class="si-e">🔗</span>Evaluating Coherence & Cohesion</div>
+      <div class="si" id="si2"><span class="si-e">📚</span>Reviewing Lexical Resource</div>
+      <div class="si" id="si3"><span class="si-e">🔤</span>Assessing Grammatical Range</div>
+      <div class="si" id="si4"><span class="si-e">✨</span>Writing Band 7.5–8 version</div>
+      <div class="si" id="si5"><span class="si-e">🎯</span>Calculating Band Score</div>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div id="pg-results" class="page">
+  <div class="wrap">
+    <div class="score-hero">
+      <div class="sh-bg">
+        <div class="sh-eye">Your Estimated Band Score</div>
+        <div class="sh-band" id="r-band">—<sup>/9</sup></div>
+        <div class="sh-level" id="r-level">—</div>
+        <div class="sh-pills" id="r-pills"></div>
+      </div>
+    </div>
+    <div class="sec-lbl">Score Breakdown — 4 Criteria</div>
+    <div class="crit-grid" id="crit-grid"></div>
+    <div class="acc open" id="acc-str">
+      <div class="acc-head" onclick="tog('acc-str')">
+        <div class="acc-ico">💪</div>
+        <div class="acc-info"><div class="acc-title">What You Did Well</div><div class="acc-sub">Strengths in this response</div></div>
+        <span class="acc-chev">▼</span>
+      </div>
+      <div class="acc-body"><div class="pts" id="r-str"></div></div>
+    </div>
+    <div class="acc open" id="acc-imp">
+      <div class="acc-head" onclick="tog('acc-imp')">
+        <div class="acc-ico">🎯</div>
+        <div class="acc-info"><div class="acc-title">Key Areas to Improve</div><div class="acc-sub">Specific, actionable suggestions</div></div>
+        <span class="acc-chev">▼</span>
+      </div>
+      <div class="acc-body"><div class="pts" id="r-imp"></div></div>
+    </div>
+    <div class="acc" id="acc-ver">
+      <div class="acc-head" onclick="tog('acc-ver')">
+        <div class="acc-ico">✨</div>
+        <div class="acc-info"><div class="acc-title">AI-Improved Version</div><div class="acc-sub">Your ideas rewritten to Band 7.5–8</div></div>
+        <span class="acc-chev">▼</span>
+      </div>
+      <div class="acc-body">
+        <div class="imp-note">✅ Same ideas — elevated vocabulary, structure & cohesion</div>
+        <div class="imp-box" id="r-ver"></div>
+      </div>
+    </div>
+    <div class="cta-box">
+      <div class="cta-h">Want to reach <em>Band 7+</em> faster?</div>
+      <div class="cta-s">Talk to a PrepEve certified trainer. Free 60-min demo class — no payment needed.</div>
+      <div class="cta-btns">
+        <a class="btn-wa" href="https://wa.me/919877714284?text=Hi PrepEve! I just did the IELTS mock test and want to book a free demo class." target="_blank" rel="noopener">📲 Book Free Demo Class</a>
+        <button class="btn-retry" onclick="retry()">🔄 Try Another Test</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── PROMPTS ── */
+const POOL = {
+  t1a:[
+    {lbl:'Academic Task 1',title:'Task 1 — Bar Chart',min:150,time:20,
+     txt:'The bar chart below shows the percentage of IELTS candidates who achieved Band 7+ after attending different preparation programmes.<div style="margin:.75rem 0;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:1rem 1rem .6rem;overflow-x:auto">\n<svg viewBox="0 0 480 220" width="100%" style="max-width:480px;display:block;margin:0 auto;font-family:DM Sans,sans-serif">\n  <!-- Y axis lines -->\n  <line x1="60" y1="10" x2="60" y2="170" stroke="#E5E7EB" stroke-width="1"/>\n  <line x1="60" y1="170" x2="460" y2="170" stroke="#E5E7EB" stroke-width="1"/>\n  <!-- Y gridlines + labels -->\n  <line x1="60" y1="170" x2="460" y2="170" stroke="#f3f4f6" stroke-width="1"/>\n  <line x1="60" y1="127" x2="460" y2="127" stroke="#f3f4f6" stroke-width="1"/>\n  <line x1="60" y1="84" x2="460" y2="84" stroke="#f3f4f6" stroke-width="1"/>\n  <line x1="60" y1="41" x2="460" y2="41" stroke="#f3f4f6" stroke-width="1"/>\n  <text x="52" y="173" text-anchor="end" font-size="11" fill="#9CA3AF">0%</text>\n  <text x="52" y="130" text-anchor="end" font-size="11" fill="#9CA3AF">25%</text>\n  <text x="52" y="87" text-anchor="end" font-size="11" fill="#9CA3AF">50%</text>\n  <text x="52" y="44" text-anchor="end" font-size="11" fill="#9CA3AF">75%</text>\n  <!-- Bars: Self-study 38%, Online 58%, Group 73%, Private 88% -->\n  <!-- Self-study: height = 38/100*160 = 60.8 -->\n  <rect x="75" y="109" width="60" height="61" rx="4" fill="#3b82f6"/>\n  <text x="105" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#1d4ed8">38%</text>\n  <text x="105" y="188" text-anchor="middle" font-size="10" fill="#6B7280">Self-study</text>\n  <!-- Online: height = 58/100*160 = 92.8 -->\n  <rect x="165" y="77" width="60" height="93" rx="4" fill="#0f766e"/>\n  <text x="195" y="73" text-anchor="middle" font-size="12" font-weight="700" fill="#0f766e">58%</text>\n  <text x="195" y="188" text-anchor="middle" font-size="10" fill="#6B7280">Online</text>\n  <text x="195" y="198" text-anchor="middle" font-size="10" fill="#6B7280">course</text>\n  <!-- Group: height = 73/100*160 = 116.8 -->\n  <rect x="255" y="53" width="60" height="117" rx="4" fill="#7c3aed"/>\n  <text x="285" y="49" text-anchor="middle" font-size="12" font-weight="700" fill="#7c3aed">73%</text>\n  <text x="285" y="188" text-anchor="middle" font-size="10" fill="#6B7280">Group</text>\n  <text x="285" y="198" text-anchor="middle" font-size="10" fill="#6B7280">classroom</text>\n  <!-- Private: height = 88/100*160 = 140.8 -->\n  <rect x="345" y="29" width="60" height="141" rx="4" fill="#d97706"/>\n  <text x="375" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="#d97706">88%</text>\n  <text x="375" y="188" text-anchor="middle" font-size="10" fill="#6B7280">Private</text>\n  <text x="375" y="198" text-anchor="middle" font-size="10" fill="#6B7280">tutoring</text>\n  <!-- Y axis title -->\n  <text x="14" y="100" font-size="10" fill="#9CA3AF" transform="rotate(-90,14,100)">% achieving Band 7+</text>\n</svg>\n<div style="text-align:center;font-size:.72rem;color:#9CA3AF;margin-top:.25rem;font-style:italic">Figure 1: IELTS Band 7+ achievement by preparation method</div>\n</div>Summarise the information, selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least <strong>150 words</strong>.'},
+    {lbl:'Academic Task 1',title:'Task 1 — Line Graph',min:150,time:20,
+     txt:'The line graph below shows the number of international students enrolled in universities in three countries between 2005 and 2020.<div style="margin:.75rem 0;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:1rem 1rem .6rem;overflow-x:auto">\n<svg viewBox="0 0 500 230" width="100%" style="max-width:500px;display:block;margin:0 auto;font-family:DM Sans,sans-serif">\n  <!-- Axes -->\n  <line x1="65" y1="10" x2="65" y2="175" stroke="#E5E7EB" stroke-width="1.5"/>\n  <line x1="65" y1="175" x2="480" y2="175" stroke="#E5E7EB" stroke-width="1.5"/>\n  <!-- Gridlines -->\n  <line x1="65" y1="175" x2="480" y2="175" stroke="#f3f4f6" stroke-width="1"/>\n  <line x1="65" y1="131" x2="480" y2="131" stroke="#f3f4f6" stroke-width="1"/>\n  <line x1="65" y1="88"  x2="480" y2="88"  stroke="#f3f4f6" stroke-width="1"/>\n  <line x1="65" y1="44"  x2="480" y2="44"  stroke="#f3f4f6" stroke-width="1"/>\n  <!-- Y labels -->\n  <text x="58" y="178" text-anchor="end" font-size="10" fill="#9CA3AF">0</text>\n  <text x="58" y="134" text-anchor="end" font-size="10" fill="#9CA3AF">200k</text>\n  <text x="58" y="91"  text-anchor="end" font-size="10" fill="#9CA3AF">400k</text>\n  <text x="58" y="47"  text-anchor="end" font-size="10" fill="#9CA3AF">500k</text>\n  <!-- X labels: 2005,2008,2011,2014,2017,2020 -->\n  <!-- x positions: 65,119,173,227,281,335,389,443 spaced by 53.4 for 2000-2020 in steps of 3 -->\n  <!-- Using 4 points: 2005=80, 2010=174, 2015=268, 2020=362 offset so 2005=80 2020=450 step=~24.7/yr -->\n  <!-- x = 80 + (year-2005)*24.7 -->\n  <text x="80"  y="190" text-anchor="middle" font-size="10" fill="#9CA3AF">2005</text>\n  <text x="204" y="190" text-anchor="middle" font-size="10" fill="#9CA3AF">2010</text>\n  <text x="327" y="190" text-anchor="middle" font-size="10" fill="#9CA3AF">2015</text>\n  <text x="450" y="190" text-anchor="middle" font-size="10" fill="#9CA3AF">2020</text>\n  <!-- UK line: 2005=260k, 2008=360k, 2012=490k peak, 2015=430k, 2018=380k, 2020=350k -->\n  <!-- y = 175 - (val/500*165) -->\n  <!-- 260k->89, 360k->56, 490k->13(peak), 430k->33, 380k->50, 350k->59 -->\n  <!-- x: 2005=80, 2008=154, 2012=253, 2015=327, 2018=401, 2020=450 -->\n  <polyline points="80,89 154,56 253,13 327,33 401,50 450,59"\n    fill="none" stroke="#1d4ed8" stroke-width="2.5" stroke-linejoin="round"/>\n  <circle cx="253" cy="13" r="4" fill="#1d4ed8"/>\n  <text x="258" y="10" font-size="10" fill="#1d4ed8" font-weight="700">490k</text>\n  <!-- Australia line: 2005=180k, 2010=260k, 2015=320k, 2020=400k -->\n  <!-- y: 175-180/500*165=116, 260->89, 320->70, 400->43 -->\n  <polyline points="80,116 204,89 327,70 450,43"\n    fill="none" stroke="#0f766e" stroke-width="2.5" stroke-linejoin="round"/>\n  <circle cx="450" cy="43" r="4" fill="#0f766e"/>\n  <text x="455" y="40" font-size="10" fill="#0f766e" font-weight="700">400k</text>\n  <!-- Canada line: 2005=90k, 2010=150k, 2015=220k, 2020=320k -->\n  <!-- y: 175-90/500*165=145, 150->125, 220->103, 320->70 -->\n  <polyline points="80,145 204,125 327,103 450,70"\n    fill="none" stroke="#d97706" stroke-width="2.5" stroke-linejoin="round"/>\n  <circle cx="450" cy="70" r="4" fill="#d97706"/>\n  <text x="455" y="67" font-size="10" fill="#d97706" font-weight="700">320k</text>\n  <!-- Legend -->\n  <rect x="80" y="207" width="10" height="3" rx="1" fill="#1d4ed8"/>\n  <text x="95" y="213" font-size="10" fill="#374151">UK</text>\n  <rect x="130" y="207" width="10" height="3" rx="1" fill="#0f766e"/>\n  <text x="145" y="213" font-size="10" fill="#374151">Australia</text>\n  <rect x="200" y="207" width="10" height="3" rx="1" fill="#d97706"/>\n  <text x="215" y="213" font-size="10" fill="#374151">Canada</text>\n  <!-- Y title -->\n  <text x="14" y="100" font-size="10" fill="#9CA3AF" transform="rotate(-90,14,100)">Students (thousands)</text>\n</svg>\n<div style="text-align:center;font-size:.72rem;color:#9CA3AF;margin-top:.25rem;font-style:italic">Figure 1: International student enrolment 2005–2020</div>\n</div>Summarise the information, selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least <strong>150 words</strong>.'},
+    {lbl:'Academic Task 1',title:'Task 1 — Pie Charts',min:150,time:20,
+     txt:'The two pie charts below show reasons students chose online versus classroom IELTS preparation in 2023.<div style="margin:.75rem 0;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:1rem 1rem .6rem;overflow-x:auto">\n<svg viewBox="0 0 500 210" width="100%" style="max-width:500px;display:block;margin:0 auto;font-family:DM Sans,sans-serif">\n  <!-- Online pie: centre 130,100 r=80 -->\n  <!-- Flexibility 44%: 0deg to 158.4deg -->\n  <path d="M130,100 L130,20 A80,80 0 0,1 204,143 Z" fill="#1d4ed8"/>\n  <!-- Cost 27%: 158.4 to 255.6 -->\n  <path d="M130,100 L204,143 A80,80 0 0,1 60,143 Z" fill="#0f766e"/>\n  <!-- Self-pace 21%: 255.6 to 331.2 -->\n  <path d="M130,100 L60,143 A80,80 0 0,1 91,27 Z" fill="#7c3aed"/>\n  <!-- Other 8%: remaining -->\n  <path d="M130,100 L91,27 A80,80 0 0,1 130,20 Z" fill="#d97706"/>\n  <text x="130" y="195" text-anchor="middle" font-size="11" font-weight="700" fill="#374151">Online Preparation</text>\n  <!-- Labels -->\n  <text x="160" y="75"  font-size="10" font-weight="700" fill="#fff">44%</text>\n  <text x="148" y="148" font-size="10" font-weight="700" fill="#fff">27%</text>\n  <text x="83"  y="90"  font-size="10" font-weight="700" fill="#fff">21%</text>\n  <text x="108" y="38"  font-size="10" font-weight="700" fill="#fff">8%</text>\n\n  <!-- Classroom pie: centre 370,100 r=80 -->\n  <!-- Teacher support 41%: 0 to 147.6 -->\n  <path d="M370,100 L370,20 A80,80 0 0,1 438,137 Z" fill="#1d4ed8"/>\n  <!-- Structure 30%: 147.6 to 255.6 -->\n  <path d="M370,100 L438,137 A80,80 0 0,1 299,140 Z" fill="#0f766e"/>\n  <!-- Peer learning 19%: 255.6 to 324 -->\n  <path d="M370,100 L299,140 A80,80 0 0,1 336,27 Z" fill="#7c3aed"/>\n  <!-- Other 10%: remaining -->\n  <path d="M370,100 L336,27 A80,80 0 0,1 370,20 Z" fill="#d97706"/>\n  <text x="370" y="195" text-anchor="middle" font-size="11" font-weight="700" fill="#374151">Classroom Preparation</text>\n  <text x="396" y="72"  font-size="10" font-weight="700" fill="#fff">41%</text>\n  <text x="382" y="148" font-size="10" font-weight="700" fill="#fff">30%</text>\n  <text x="322" y="90"  font-size="10" font-weight="700" fill="#fff">19%</text>\n  <text x="350" y="40"  font-size="10" font-weight="700" fill="#fff">10%</text>\n</svg>\n<!-- Legend -->\n<div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:.5rem;font-size:.72rem;color:#374151">\n  <span><span style="display:inline-block;width:10px;height:10px;background:#1d4ed8;border-radius:2px;margin-right:3px;vertical-align:middle"></span>Flexibility / Teacher support</span>\n  <span><span style="display:inline-block;width:10px;height:10px;background:#0f766e;border-radius:2px;margin-right:3px;vertical-align:middle"></span>Cost / Structure</span>\n  <span><span style="display:inline-block;width:10px;height:10px;background:#7c3aed;border-radius:2px;margin-right:3px;vertical-align:middle"></span>Self-pace / Peer learning</span>\n  <span><span style="display:inline-block;width:10px;height:10px;background:#d97706;border-radius:2px;margin-right:3px;vertical-align:middle"></span>Other</span>\n</div>\n<div style="text-align:center;font-size:.72rem;color:#9CA3AF;margin-top:.4rem;font-style:italic">Figure 1: Reasons for choosing preparation method (2023)</div>\n</div>Summarise the information, selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least <strong>150 words</strong>.'},
+  ],
+  t1g:[
+    {lbl:'General Training Task 1',title:'Task 1 — Formal Complaint',min:150,time:20,
+     txt:'You recently bought a laptop online. It arrived damaged and the company has not responded to your emails for two weeks.\n\nWrite a letter to the customer service manager. In your letter:\n• describe the damage\n• explain your attempts to resolve the issue\n• say what action you want the company to take\n\nWrite at least <strong>150 words</strong>. Do NOT write any addresses.\nBegin: <em>Dear Sir or Madam,</em>'},
+    {lbl:'General Training Task 1',title:'Task 1 — Request Letter',min:150,time:20,
+     txt:'You are at a college and want to join an advanced English writing class. A recommendation letter from your current teacher is required.\n\nWrite a letter to your teacher. In your letter:\n• explain why you want to join the advanced class\n• describe your current level and progress\n• ask your teacher for a recommendation\n\nWrite at least <strong>150 words</strong>.\nBegin: <em>Dear [Teacher\'s name],</em>'},
+    {lbl:'General Training Task 1',title:'Task 1 — Informal Letter',min:150,time:20,
+     txt:'Your friend in another city is thinking of moving to where you live to find work.\n\nWrite a letter to your friend. In your letter:\n• describe the job opportunities in your city\n• advise on accommodation and cost of living\n• say whether you recommend they move\n\nWrite at least <strong>150 words</strong>.\nBegin: <em>Dear [Friend\'s name],</em>'},
+  ],
+  t2:[
+    {lbl:'Task 2 — Essay',title:'Discussion Essay',min:250,time:40,
+     txt:'Some people believe children should be taught to manage money at school. Others think this is the responsibility of parents.\n\nDiscuss both views and give your own opinion.\n\nGive reasons and include relevant examples.\nWrite at least <strong>250 words</strong>.'},
+    {lbl:'Task 2 — Essay',title:'Advantages & Disadvantages',min:250,time:40,
+     txt:'In many countries, people are choosing to have children later in life.\n\nWhat are the advantages and disadvantages of this trend?\n\nGive reasons and include relevant examples.\nWrite at least <strong>250 words</strong>.'},
+    {lbl:'Task 2 — Essay',title:'Problem & Solution',min:250,time:40,
+     txt:'Traffic congestion is a serious problem in cities worldwide.\n\nWhat are the main causes and what measures can be taken to reduce it?\n\nGive reasons and include relevant examples.\nWrite at least <strong>250 words</strong>.'},
+    {lbl:'Task 2 — Essay',title:'Agree or Disagree',min:250,time:40,
+     txt:'Remote working has become more common. Some argue this negatively affects workplace communication and teamwork.\n\nTo what extent do you agree or disagree?\n\nGive reasons and include relevant examples.\nWrite at least <strong>250 words</strong>.'},
+    {lbl:'Task 2 — Essay',title:'Two-Part Question',min:250,time:40,
+     txt:'Many young people spend large amounts of time on social media every day.\n\nWhy do you think this is? Is this a positive or negative development?\n\nGive reasons and include relevant examples.\nWrite at least <strong>250 words</strong>.'},
+  ]
+};
+
+const LEVELS = {9:'Expert User',8.5:'Very Good User',8:'Very Good User',7.5:'Good User',7:'Good User',6.5:'Competent User',6:'Competent User',5.5:'Modest User',5:'Modest User',4.5:'Limited User',4:'Limited User',3.5:'Extremely Limited',3:'Extremely Limited'};
+const STEP_LABELS = ['Checking Task Achievement','Evaluating Coherence & Cohesion','Reviewing Lexical Resource','Assessing Grammatical Range','Writing Band 7.5–8 version','Calculating Band Score'];
+const STEP_EMOJIS = ['📋','🔗','📚','🔤','✨','🎯'];
+
+let task=null, pidx=0, tsec=0, tiv=null, stepIv=null;
+
+/* ── SELECT ── */
+function pick(el){
+  document.querySelectorAll('.tc').forEach(c=>c.classList.remove('sel'));
+  el.classList.add('sel');
+  task=el.dataset.task;
+  document.getElementById('sel-err').classList.remove('on');
+}
+
+function startTest(){
+  if(!task){document.getElementById('sel-err').classList.add('on');return;}
+  pidx=0; loadPrompt(); show('pg-write'); startTimer();
+}
+
+/* ── WRITE ── */
+function loadPrompt(){
+  const p=POOL[task][pidx%POOL[task].length];
+  document.getElementById('wt-sup').textContent=p.lbl;
+  document.getElementById('wt-title').textContent=p.title;
+  document.getElementById('pc-text').innerHTML=p.txt;
+  document.getElementById('wc-req').textContent='Min. '+p.min+' words';
+  tsec=p.time*60; updTimer();
+}
+
+function shuffle(){
+  pidx=(pidx+1)%POOL[task].length;
+  loadPrompt();
+  document.getElementById('ta').value='';
+  onType();
+}
+
+function goBack(){clearInterval(tiv);show('pg-select');}
+
+function startTimer(){
+  clearInterval(tiv);
+  tiv=setInterval(()=>{tsec--;updTimer();if(tsec<=0){clearInterval(tiv);doSubmit();}},1000);
+}
+function updTimer(){
+  const m=Math.floor(tsec/60),s=tsec%60;
+  document.getElementById('t-disp').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  document.getElementById('timer').className='timer'+(tsec<=300?' warn':'');
+}
+
+function onType(){
+  const v=document.getElementById('ta').value.trim();
+  const wc=v?v.split(/\s+/).length:0;
+  const mn=POOL[task][pidx%POOL[task].length].min;
+  const pct=Math.min(wc/mn*100,100);
+  const lbl=document.getElementById('wc-lbl');
+  lbl.innerHTML='Words: <span class="n">'+wc+'</span>';
+  lbl.className='wc-lbl'+(wc>=mn?' ok':wc>=mn*.7?' near':'');
+  const f=document.getElementById('wc-fill');
+  f.style.width=pct+'%';
+  f.className='wc-fill'+(wc>=mn?' done':'');
+  document.getElementById('write-err').classList.remove('on');
+}
+
+/* ── SUBMIT ── */
+async function doSubmit(){
+  clearInterval(tiv);
+  const text=document.getElementById('ta').value.trim();
+  const wc=text?text.split(/\s+/).length:0;
+  const errEl=document.getElementById('write-err');
+  if(wc<40){errEl.textContent='Please write at least 40 words before submitting.';errEl.classList.add('on');startTimer();return;}
+
+  const p=POOL[task][pidx%POOL[task].length];
+  const tname={t1a:'IELTS Academic Writing Task 1',t1g:'IELTS General Training Writing Task 1',t2:'IELTS Writing Task 2'}[task];
+
+  show('pg-loading');
+  startSteps();
+
+  const SYS=`You are a senior IELTS examiner with 15 years of marking experience. Follow the official IELTS Band Descriptors precisely.
+
+Return ONLY a valid JSON object — no markdown, no code fences, no extra text.
+
+{
+  "overallBand": 6.5,
+  "criteria": {
+    "taskAchievement": {"score": 6.5, "feedback": "2-3 sentences specific to this student's response"},
+    "coherenceCohesion": {"score": 6.0, "feedback": "specific feedback"},
+    "lexicalResource": {"score": 7.0, "feedback": "specific feedback"},
+    "grammaticalRange": {"score": 6.5, "feedback": "specific feedback"}
+  },
+  "strengths": ["specific strength 1", "specific strength 2", "specific strength 3"],
+  "improvements": ["actionable improvement 1 with example", "improvement 2", "improvement 3"],
+  "improvedVersion": "Full rewrite preserving the student's ideas but elevated to Band 7.5-8. Similar length to original. Better vocabulary, sentence variety, cohesive devices, task fulfilment."
+}
+
+overallBand = average of 4 scores rounded to nearest 0.5. Be honest — most score 5.0-7.0. Never inflate. All feedback must reference what this specific student wrote.`;
+
+  const USR='Task: '+tname+'\nPrompt: '+p.txt.replace(/<[^>]+>/g,'')+'\nMin words: '+p.min+'\nStudent response ('+wc+' words):\n'+text;
+
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json',
+        'x-api-key':'YOUR_API_KEY_HERE',
+        'anthropic-version':'2023-06-01',
+        'anthropic-dangerous-direct-browser-access':'true'
+      },
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:1500,
+        system:SYS,
+        messages:[{role:'user',content:USR}]
+      })
+    });
+    if(!res.ok){const e=await res.json();throw new Error(e.error?.message||'HTTP '+res.status);}
+    const d=await res.json();
+    const raw=d.content.map(c=>c.text||'').join('');
+    const j=JSON.parse(raw.replace(/```json|```/g,'').trim());
+    clearInterval(stepIv);
+    renderResults(j);
+    show('pg-results');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }catch(e){
+    clearInterval(stepIv);
+    show('pg-write');
+    errEl.textContent='Error: '+e.message+'. Make sure the API key is set correctly.';
+    errEl.classList.add('on');
+  }
+}
+
+/* ── LOADING ANIMATION ── */
+function startSteps(){
+  clearInterval(stepIv);
+  // Reset all
+  for(let i=0;i<6;i++){
+    const el=document.getElementById('si'+i);
+    if(el){el.className='si';el.innerHTML='<span class="si-e">'+STEP_EMOJIS[i]+'</span>'+STEP_LABELS[i];}
+  }
+  let i=0;
+  stepIv=setInterval(()=>{
+    if(i>0){
+      const prev=document.getElementById('si'+(i-1));
+      if(prev){prev.className='si done';prev.innerHTML='<span class="si-e">✅</span>'+STEP_LABELS[i-1];}
+    }
+    if(i<6){
+      const cur=document.getElementById('si'+i);
+      if(cur){cur.className='si go';cur.innerHTML='<div class="spin"></div>'+STEP_LABELS[i];}
+      i++;
+    }else clearInterval(stepIv);
+  },900);
+}
+
+/* ── RENDER RESULTS ── */
+function renderResults(r){
+  document.getElementById('r-band').innerHTML=r.overallBand+'<sup>/9</sup>';
+  document.getElementById('r-level').textContent=LEVELS[r.overallBand]||'';
+
+  const crits=[
+    {k:'taskAchievement',l:'Task Achievement',s:'TA'},
+    {k:'coherenceCohesion',l:'Coherence & Cohesion',s:'CC'},
+    {k:'lexicalResource',l:'Lexical Resource',s:'LR'},
+    {k:'grammaticalRange',l:'Grammatical Range',s:'GRA'}
+  ];
+
+  document.getElementById('r-pills').innerHTML=crits.map(c=>{
+    const sc=r.criteria&&r.criteria[c.k]?r.criteria[c.k].score:'—';
+    return '<div class="sh-pill">'+c.s+'<b>'+sc+'</b></div>';
+  }).join('');
+
+  document.getElementById('crit-grid').innerHTML=crits.map(c=>{
+    const sc=(r.criteria&&r.criteria[c.k])||{score:0,feedback:''};
+    const v=sc.score||0;
+    const cls=v>=7?'hi':v>=5.5?'md':'lo';
+    return '<div class="cc '+cls+'"><div class="cc-top"><div class="cc-name">'+c.l+'</div><div class="cc-sc '+cls+'">'+v+'</div></div><div class="cc-track"><div class="cc-bar '+cls+'" style="width:'+(v/9*100)+'%"></div></div><div class="cc-fb">'+sc.feedback+'</div></div>';
+  }).join('');
+
+  document.getElementById('r-str').innerHTML=(r.strengths||[]).map(s=>'<div class="pt"><div class="pt-d g">✓</div><div>'+s+'</div></div>').join('');
+  document.getElementById('r-imp').innerHTML=(r.improvements||[]).map(s=>'<div class="pt"><div class="pt-d b">→</div><div>'+s+'</div></div>').join('');
+  document.getElementById('r-ver').innerHTML=(r.improvedVersion||'').replace(/\n/g,'<br/>');
+}
+
+/* ── HELPERS ── */
+function show(id){
+  document.querySelectorAll('.page').forEach(p=>{p.classList.remove('on');p.style.display='none';});
+  const el=document.getElementById(id);
+  el.style.display='block';
+  void el.offsetWidth;
+  el.classList.add('on');
+}
+function tog(id){document.getElementById(id).classList.toggle('open');}
+function retry(){show('pg-select');document.getElementById('ta').value='';}
+</script>
+</body>
+</html>
