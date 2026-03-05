@@ -458,6 +458,13 @@ select{padding-right:2.5rem;cursor:pointer}
         </div>
 
         <div class="field">
+          <label for="email">Email Address <span class="req">*</span></label>
+          <input type="email" id="email" placeholder="e.g. priya@gmail.com"
+            autocomplete="email" inputmode="email" enterkeyhint="next"/>
+          <div class="err-msg" id="email-err">Please enter a valid email</div>
+        </div>
+
+        <div class="field">
           <label for="goal">Target Band Score</label>
           <div class="select-wrap">
             <select id="goal">
@@ -466,6 +473,19 @@ select{padding-right:2.5rem;cursor:pointer}
               <option value="band7">Band 7 – 7.5</option>
               <option value="band8">Band 8+</option>
               <option value="unsure">Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="examdate">When is your exam?</label>
+          <div class="select-wrap">
+            <select id="examdate">
+              <option value="" disabled selected>Approx. exam timeline</option>
+              <option value="1month">Within 1 month</option>
+              <option value="2month">1 – 2 months</option>
+              <option value="3month">2 – 3 months</option>
+              <option value="later">3+ months / Not decided</option>
             </select>
           </div>
         </div>
@@ -516,7 +536,7 @@ select{padding-right:2.5rem;cursor:pointer}
     else{inp.classList.remove('err');msg.classList.remove('show');}
   }
 
-  ['fname','phone'].forEach(function(id){
+  ['fname','phone','email'].forEach(function(id){
     var el=document.getElementById(id);
     if(el) el.addEventListener('input',function(){setErr(id,false);});
   });
@@ -524,10 +544,12 @@ select{padding-right:2.5rem;cursor:pointer}
   btn.addEventListener('click',function(){
     var fname=val('fname');
     var phone=val('phone').replace(/[\s\-\(\)\+]/g,'');
+    var email=val('email');
     var ok=true;
 
     if(!fname||fname.length<2){setErr('fname',true);ok=false;}else{setErr('fname',false);}
     if(phone.replace(/\D/g,'').length<8){setErr('phone',true);ok=false;}else{setErr('phone',false);}
+    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){setErr('email',true);ok=false;}else{setErr('email',false);}
 
     if(!ok){
       var f=document.querySelector('input.err');
@@ -538,11 +560,15 @@ select{padding-right:2.5rem;cursor:pointer}
     btn.classList.add('loading');
 
     var goalMap={band6:'Band 6-6.5',band7:'Band 7-7.5',band8:'Band 8+',unsure:'Not sure yet'};
+    var examMap={'1month':'Within 1 month','2month':'1-2 months','3month':'2-3 months',later:'3+ months'};
     var bandLabel=goalMap[val('goal')]||'Not specified';
+    var examLabel=examMap[val('examdate')]||'Not specified';
 
     var waMsg='Hi PrepEve! I want to book a Free Demo Class.\n\n'
       +'Name: '+fname+'\nPhone: '+val('phone')
-      +'\nTarget Band: '+bandLabel;
+      +'\nEmail: '+email
+      +'\nTarget Band: '+bandLabel
+      +'\nExam Date: '+examLabel;
 
     var waUrl='https://wa.me/919877714284?text='+encodeURIComponent(waMsg);
     var tyUrl='thank-you.html?name='+encodeURIComponent(fname)+'&wa='+encodeURIComponent(waUrl);
@@ -557,16 +583,18 @@ select{padding-right:2.5rem;cursor:pointer}
       }
     }
 
+    // Save to sheet in background — never blocks redirect
     if(SHEET_URL){
       var params='?name='+encodeURIComponent(fname)
         +'&phone='+encodeURIComponent(val('phone'))
-        +'&band='+encodeURIComponent(bandLabel);
-      fetch(SHEET_URL+params,{method:'GET',mode:'no-cors'})
-        .catch(function(){})
-        .finally(function(){setTimeout(redirect,300);});
-    }else{
-      setTimeout(redirect,450);
+        +'&email='+encodeURIComponent(email)
+        +'&band='+encodeURIComponent(bandLabel)
+        +'&exam='+encodeURIComponent(examLabel);
+      fetch(SHEET_URL+params,{method:'GET',mode:'no-cors'}).catch(function(){});
     }
+
+    // Redirect immediately — no waiting
+    setTimeout(redirect, 300);
   });
 })();
 </script>
