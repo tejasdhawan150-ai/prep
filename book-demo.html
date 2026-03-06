@@ -7,6 +7,29 @@
 <title>Book Your Free Demo Class — PrepEve IELTS</title>
 <meta name="robots" content="noindex"/>
 <meta name="description" content="Book your free IELTS demo class with PrepEve. Meet a certified trainer, get a free band score estimate and personalised study plan."/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-765652199"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-765652199');
+</script>
+<!-- Event snippet for Demo Booking -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-765652199/zZIDCPHd74McEOfZi-0C',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
 <style>
@@ -582,6 +605,9 @@ select{padding-right:2.5rem;cursor:pointer}
         setTimeout(function(){window.location.href=tyUrl;},1500);
       }
     }
+
+    // Fire Google Ads conversion
+    gtag_report_conversion();
 
     // Save to sheet in background — never blocks redirect
     if(SHEET_URL){
