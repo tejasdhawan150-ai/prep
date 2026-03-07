@@ -421,10 +421,6 @@ select{padding-right:2.5rem;cursor:pointer}
 .tcard-meta{font-size:.71rem;color:var(--muted);margin-top:.1rem}
 
 /* Hide sections on desktop — desktop has its own layout */
-@media(min-width:769px){
-  .section-wrap{display:none}
-}
-
 /* Video testimonials */
 .video-grid{display:flex;flex-direction:column;gap:.85rem}
 .video-card{
@@ -470,10 +466,6 @@ select{padding-right:2.5rem;cursor:pointer}
 .video-meta{font-size:.72rem;color:var(--muted);margin-top:.18rem}
 
 /* Hide on desktop */
-@media(min-width:769px){
-  .section-wrap{display:none}
-}
-
 /* Sticky bottom bar — mobile only */
 .sticky-bar{
   display:none;
@@ -584,6 +576,43 @@ select{padding-right:2.5rem;cursor:pointer}
   .av:first-child{margin-left:0}
   .proof-txt{font-size:.8rem;color:var(--muted);line-height:1.5}
   .proof-txt strong{color:var(--ink);font-weight:800}
+
+  /* ── SECTIONS ON DESKTOP ── */
+  .section-wrap{
+    display:block;
+    max-width:980px;margin:0 auto;
+    padding:1.2rem 3rem;
+    border-top:1.5px solid var(--border);
+  }
+  .section-wrap:first-of-type{border-top:none;}
+
+  /* Two-column grids on desktop */
+  .testi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1rem;
+  }
+  .video-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1rem;
+  }
+  .nowont-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:.85rem;
+  }
+  .faq-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:.5rem;
+  }
+  .demo-steps{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:.75rem;
+  }
+  .sticky-bar{display:none !important;}
 }
 @media(max-width:768px){
   .desktop-wrap{display:block}
@@ -638,9 +667,6 @@ select{padding-right:2.5rem;cursor:pointer}
 .faq-item.open .faq-a{max-height:200px;padding:.1rem 1rem 1rem;}
 
 /* Hide new sections on desktop too */
-@media(min-width:769px){
-  .section-wrap{display:none}
-}
 
 </style>
 </head>
@@ -768,6 +794,12 @@ select{padding-right:2.5rem;cursor:pointer}
         </div>
 
 
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="e.g. priya@gmail.com"
+            autocomplete="email" inputmode="email" enterkeyhint="next"/>
+        </div>
 
         <div class="field">
           <label for="goal">Target Band Score</label>
@@ -1075,6 +1107,7 @@ select{padding-right:2.5rem;cursor:pointer}
 
     var waMsg='Hi PrepEve! I want to book a Free Demo Class.\n\n'
       +'Name: '+fname+'\nPhone: '+val('phone')
+      +'\nEmail: '+val('email')
       +'\nTarget Band: '+bandLabel;
 
     var waUrl='https://wa.me/919877714284?text='+encodeURIComponent(waMsg);
@@ -1097,6 +1130,7 @@ select{padding-right:2.5rem;cursor:pointer}
     if(SHEET_URL){
       var params='?name='+encodeURIComponent(fname)
         +'&phone='+encodeURIComponent(val('phone'))
+        +'&email='+encodeURIComponent(val('email'))
         +'&band='+encodeURIComponent(bandLabel);
       fetch(SHEET_URL+params,{method:'GET',mode:'no-cors'}).catch(function(){});
     }
