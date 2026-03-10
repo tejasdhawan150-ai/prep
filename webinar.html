@@ -412,6 +412,21 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);o
   input,select{border-color:var(--border) !important;background:var(--off) !important;}
 }
 
+/* ─── VIDEO TESTIMONIALS ─── */
+.video-grid{display:flex;flex-direction:column;gap:.85rem}
+.video-card{display:block;text-decoration:none;border-radius:16px;overflow:hidden;border:1.5px solid var(--border);box-shadow:0 2px 12px rgba(22,80,212,.07);background:#fff;-webkit-tap-highlight-color:transparent;}
+.video-thumb-wrap{position:relative;width:100%;padding-top:56.25%;overflow:hidden;background:linear-gradient(160deg,#080F28 0%,#0D1B3E 60%,#0C2040 100%);}
+.video-thumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
+.video-card:hover .video-thumb{transform:scale(1.03)}
+.video-overlay{position:absolute;inset:0;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;}
+.play-btn{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.3);}
+.play-btn svg{margin-left:3px;fill:var(--ink)}
+.video-badge{position:absolute;top:.6rem;left:.6rem;background:rgba(0,0,0,.6);color:#fff;font-size:.65rem;font-weight:700;padding:.2rem .55rem;border-radius:100px;letter-spacing:.04em;}
+.video-info{padding:.75rem 1rem}
+.video-title{font-size:.84rem;font-weight:700;color:var(--ink)}
+.video-meta{font-size:.72rem;color:var(--muted);margin-top:.18rem}
+@media(min-width:560px){.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}}
+
 /* entrance anim */
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 .hero-copy{animation:fadeUp .7s ease both;}
@@ -606,37 +621,38 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);o
 <div class="page-body">
 
   <section class="sec">
-    <div class="sec-label">Student results</div>
-    <h2 class="sec-h2">What students <em>say</em></h2>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-top"><div class="testi-avatar testi-avatar-rs">RS</div><div class="testi-info"><div class="testi-name">Rajveer Singh</div><div class="testi-score">Band 8.0</div><span class="testi-dest">Canada PR · Punjab</span></div></div>
-        <div class="testi-quote">"I attended not expecting much. Sanjita broke down Writing Task 2 in a way no YouTube video had. Went from 6.5 to 8.0 in six weeks."</div>
-        <div class="testi-stars">★★★★★</div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-top"><div class="testi-avatar testi-avatar-pm">PM</div><div class="testi-info"><div class="testi-name">Priya Mehta</div><div class="testi-score">Band 7.5</div><span class="testi-dest">Australia PR · Gujarat</span></div></div>
-        <div class="testi-quote">"The band estimate alone was worth it. I knew exactly what to fix before leaving the class. Cleared IELTS next attempt with 7.5 overall."</div>
-        <div class="testi-stars">★★★★★</div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-top"><div class="testi-avatar testi-avatar-ak">AK</div><div class="testi-info"><div class="testi-name">Arjun Kapoor</div><div class="testi-score">Band 7.0</div><span class="testi-dest">UK Visa · Delhi</span></div></div>
-        <div class="testi-quote">"Speaking was my biggest fear. After Sanjita's class I had a real strategy for Part 2. Scored 7.0 — something I never thought possible."</div>
-        <div class="testi-stars">★★★★★</div>
-      </div>
-    </div>
-  </section>
+    <div class="sec-label">🎥 Hear it from our students</div>
+    <h2 class="sec-h2">Real results, <em>real voices</em></h2>
+    <div class="video-grid">
 
-  <section class="sec">
-    <div class="sec-label">The curriculum</div>
-    <h2 class="sec-h2">What you'll <em>learn</em></h2>
-    <div class="learn-grid">
-      <div class="learn-item"><div class="learn-num">01</div><div><div class="learn-title">Writing Task 2 Formula</div><div class="learn-desc">A clear structure that earns Band 7+ every time, regardless of topic</div></div></div>
-      <div class="learn-item"><div class="learn-num">02</div><div><div class="learn-title">Speaking Fluency Hacks</div><div class="learn-desc">Stop freezing in Part 2. Speak confidently for a full 2 minutes</div></div></div>
-      <div class="learn-item"><div class="learn-num">03</div><div><div class="learn-title">Listening Trap Avoidance</div><div class="learn-desc">The 5 tricks IELTS uses in Section 3 & 4 — and how to dodge them</div></div></div>
-      <div class="learn-item"><div class="learn-num">04</div><div><div class="learn-title">Reading Speed Strategy</div><div class="learn-desc">Finish all 40 questions in time with skimming and scanning</div></div></div>
-      <div class="learn-item"><div class="learn-num">05</div><div><div class="learn-title">Band Score Estimate</div><div class="learn-desc">Know exactly where you stand and the gap to your target band</div></div></div>
-      <div class="learn-item"><div class="learn-num">06</div><div><div class="learn-title">Personalised Study Plan</div><div class="learn-desc">A week-by-week roadmap built around your exam date and goal</div></div></div>
+      <a href="https://youtu.be/rb0zGLtppdA" target="_blank" class="video-card">
+        <div class="video-thumb-wrap">
+          <img src="https://img.youtube.com/vi/rb0zGLtppdA/hqdefault.jpg" alt="Student testimonial" class="video-thumb" loading="lazy"/>
+          <div class="video-overlay">
+            <div class="play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-badge">Student Story</div>
+        </div>
+        <div class="video-info">
+          <div class="video-title">Sumit: Band 6.0 → 9.0</div>
+          <div class="video-meta">Real student · Opens on YouTube</div>
+        </div>
+      </a>
+
+      <a href="https://youtu.be/UockDTvcolo" target="_blank" class="video-card">
+        <div class="video-thumb-wrap">
+          <img src="https://img.youtube.com/vi/UockDTvcolo/hqdefault.jpg" alt="Student testimonial" class="video-thumb" loading="lazy"/>
+          <div class="video-overlay">
+            <div class="play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-badge">Student Story</div>
+        </div>
+        <div class="video-info">
+          <div class="video-title">Jhanvi: Band 5.5 → 8.0 for Canada PR</div>
+          <div class="video-meta">Real student · Opens on YouTube</div>
+        </div>
+      </a>
+
     </div>
   </section>
 
@@ -657,6 +673,40 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);o
         </div>
         <div class="host-quote">"Most students are one strategy away from Band 7+. This class shows you exactly what that strategy is — for your specific exam and timeline."</div>
       </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-label">🎥 Hear it from our students</div>
+    <h2 class="sec-h2">Real results, <em>real voices</em></h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-top"><div class="testi-avatar testi-avatar-rs">RS</div><div class="testi-info"><div class="testi-name">Rajveer Singh</div><div class="testi-score">Band 8.0</div><span class="testi-dest">Canada PR · Punjab</span></div></div>
+        <div class="testi-quote">"I attended not expecting much. Sanjita broke down Writing Task 2 in a way no YouTube video had. Went from 6.5 to 8.0 in six weeks."</div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-top"><div class="testi-avatar testi-avatar-pm">PM</div><div class="testi-info"><div class="testi-name">Priya Mehta</div><div class="testi-score">Band 7.5</div><span class="testi-dest">Australia PR · Gujarat</span></div></div>
+        <div class="testi-quote">"The band estimate alone was worth it. I knew exactly what to fix before leaving the class. Cleared IELTS next attempt with 7.5 overall."</div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-top"><div class="testi-avatar testi-avatar-ak">AK</div><div class="testi-info"><div class="testi-name">Arjun Kapoor</div><div class="testi-score">Band 7.0</div><span class="testi-dest">UK Visa · Delhi</span></div></div>
+        <div class="testi-quote">"Speaking was my biggest fear. After Sanjita's class I had a real strategy for Part 2. Scored 7.0 — something I never thought possible."</div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-h2">What you'll <em>learn</em></h2>
+    <div class="learn-grid">
+      <div class="learn-item"><div class="learn-num">01</div><div><div class="learn-title">Writing Task 2 Formula</div><div class="learn-desc">A clear structure that earns Band 7+ every time, regardless of topic</div></div></div>
+      <div class="learn-item"><div class="learn-num">02</div><div><div class="learn-title">Speaking Fluency Hacks</div><div class="learn-desc">Stop freezing in Part 2. Speak confidently for a full 2 minutes</div></div></div>
+      <div class="learn-item"><div class="learn-num">03</div><div><div class="learn-title">Listening Trap Avoidance</div><div class="learn-desc">The 5 tricks IELTS uses in Section 3 & 4 — and how to dodge them</div></div></div>
+      <div class="learn-item"><div class="learn-num">04</div><div><div class="learn-title">Reading Speed Strategy</div><div class="learn-desc">Finish all 40 questions in time with skimming and scanning</div></div></div>
+      <div class="learn-item"><div class="learn-num">05</div><div><div class="learn-title">Band Score Estimate</div><div class="learn-desc">Know exactly where you stand and the gap to your target band</div></div></div>
+      <div class="learn-item"><div class="learn-num">06</div><div><div class="learn-title">Personalised Study Plan</div><div class="learn-desc">A week-by-week roadmap built around your exam date and goal</div></div></div>
     </div>
   </section>
 
