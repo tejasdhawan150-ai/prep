@@ -1099,15 +1099,46 @@ b,strong{font-weight:700;}
       if(phone.replace(/[^0-9]/g,'').length<8){show(ids.pe);ok=false;}
       if(!ok)return;
       btn.classList.add('ld');
-      var fd=new FormData();
-      fd.append('name',name);fd.append('phone',phone);
-      fd.append('email',email);fd.append('goal',goal);
-      fd.append('course','French');fd.append('source','book-demo-french');
-      fetch(SHEET,{method:'POST',body:fd}).catch(function(){}).finally(function(){
-        gtag_conv();
-        var wa='Hi Sanjita! I want to book a free French demo + Canada PR strategy session.\nName: '+name+'\nGoal: '+(goal||'Not specified');
-        window.location='https://wa.me/919877714284?text='+encodeURIComponent(wa);
-      });
+
+      // Map goal value to readable label
+      var goals={
+        'express_entry':'In Express Entry pool — need more CRS',
+        'not_started':'Not started PR process yet',
+        'tef_tcf':'Need TEF Canada / TCF score',
+        'delf':'DELF / DALF exam preparation',
+        'other':'Just exploring options'
+      };
+      var goalLabel=goals[goal]||goal||'Not specified';
+
+      // FIX 1: Google Sheets — use GET with URL params (Apps Script requires this)
+      var qs='?name='+encodeURIComponent(name)
+        +'&phone='+encodeURIComponent(phone)
+        +'&email='+encodeURIComponent(email)
+        +'&goal='+encodeURIComponent(goalLabel)
+        +'&course=French'
+        +'&source=book-demo-french';
+      fetch(SHEET+qs,{method:'GET',mode:'no-cors'}).catch(function(){});
+
+      // FIX 2: Thank-you page redirect after WhatsApp
+      var waMsg='Hi Sanjita! I want to book a free French demo + Canada PR strategy session.\nName: '+name+'\nGoal: '+goalLabel;
+      var waUrl='https://wa.me/919877714284?text='+encodeURIComponent(waMsg);
+      var tyUrl='../thank-you?name='+encodeURIComponent(name)+'&wa='+encodeURIComponent(waUrl);
+
+      // Fire Google Ads conversion
+      if(typeof gconv==='function')gconv();
+      if(typeof gtag_conv==='function')gtag_conv();
+
+      setTimeout(function(){
+        if(window.innerWidth>=900){
+          // Desktop: open WhatsApp in new tab, redirect to thank-you
+          window.open(waUrl,'_blank');
+          window.location.href=tyUrl;
+        } else {
+          // Mobile: go to WhatsApp first, then thank-you after delay
+          window.location.href=waUrl;
+          setTimeout(function(){window.location.href=tyUrl;},1800);
+        }
+      },350);
     });
   }
 
