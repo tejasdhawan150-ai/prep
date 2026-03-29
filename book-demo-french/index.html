@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Add +50 to +110 CRS Points in 12 Weeks — Free French Strategy Session | PrepEve</title>
 <meta name="robots" content="noindex"/>
+<meta name="description" content="French adds +50 to +110 CRS points to your Express Entry profile. Book a free 60-min demo + Canada PR strategy session with PrepEve. 6,000+ students. 97% pass rate."/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-765652199"></script>
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
@@ -716,9 +717,146 @@ b,strong{font-weight:700;}
   .mc-h{font-size:1.18rem;line-height:1.2;}
   .mc-sub{font-size:.78rem;}
 }
+
+/* ─── FRENCH TRICOLOR STRIPE ─── */
+.fr-stripe{
+  display:flex;height:5px;width:100%;flex-shrink:0;
+}
+.fr-stripe span{flex:1;}
+.fr-stripe span:nth-child(1){background:var(--fr1);}
+.fr-stripe span:nth-child(2){background:#fff;}
+.fr-stripe span:nth-child(3){background:var(--fr2);}
+
+/* ─── HERO BADGE ROW ─── */
+.h-trust-row{
+  display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.55rem;
+}
+.ht{
+  display:inline-flex;align-items:center;gap:.3rem;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  border-radius:8px;padding:.22rem .6rem;
+  font-size:.62rem;font-weight:600;color:rgba(255,255,255,.72);
+}
+
+/* ─── CRS CALCULATOR ─── */
+.calc-wrap{
+  background:linear-gradient(145deg,#EBF2FF 0%,#DDE9FF 100%);
+  padding:2.4rem 5vw;
+  border-bottom:2px solid var(--border);
+}
+.calc-inner{max-width:1120px;margin:0 auto;text-align:center;}
+.calc-card{
+  background:#fff;border-radius:22px;
+  padding:1.7rem 1.6rem;max-width:700px;margin:0 auto;
+  box-shadow:var(--shm);border:1.5px solid rgba(18,69,232,.1);
+  text-align:left;
+}
+.calc-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
+@media(max-width:520px){.calc-row{grid-template-columns:1fr;}}
+.calc-label{display:block;font-size:.65rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);margin-bottom:.3rem;}
+.calc-input-wrap{position:relative;}
+.calc-input-wrap input{
+  width:100%;padding:.62rem 2.8rem .62rem .88rem;
+  border:1.5px solid var(--border);border-radius:11px;
+  font-family:inherit;font-size:.87rem;color:var(--ink);
+  background:#fff;outline:none;-webkit-appearance:none;
+  transition:border-color .18s,box-shadow .18s;
+}
+.calc-input-wrap input:focus{border-color:var(--blue);box-shadow:0 0 0 3.5px var(--glow);}
+.calc-unit{position:absolute;right:.85rem;top:50%;transform:translateY(-50%);font-size:.72rem;font-weight:700;color:var(--muted);pointer-events:none;}
+.calc-btn{
+  width:100%;padding:.84rem;
+  background:linear-gradient(135deg,var(--blue),var(--blue2));
+  border:none;border-radius:13px;font-family:inherit;
+  font-size:.92rem;font-weight:800;color:#fff;cursor:pointer;letter-spacing:.01em;
+  box-shadow:0 8px 24px rgba(18,69,232,.3);
+  transition:transform .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent;
+}
+.calc-btn:active{transform:scale(.98);}
+.calc-result{
+  display:none;margin-top:1rem;
+  background:linear-gradient(145deg,#022A10,#044D1E);
+  border-radius:18px;padding:1.4rem 1.3rem;
+  border:1px solid rgba(74,222,128,.22);
+  box-shadow:0 10px 36px rgba(0,80,30,.24);
+}
+.cr-boost-label{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:.28rem;}
+.cr-boost-num{font-family:'DM Serif Display',serif;font-size:2.4rem;color:#4ADE80;line-height:1;letter-spacing:-.03em;margin-bottom:.4rem;}
+.cr-new-score{font-size:.85rem;color:rgba(255,255,255,.72);margin-bottom:.3rem;}
+.cr-new-score strong{color:#fff;font-weight:800;}
+.cr-cutoff{font-size:.8rem;font-weight:700;margin-bottom:.4rem;min-height:1.2em;padding:.28rem .65rem;border-radius:7px;display:inline-block;}
+.cr-cutoff.good{background:rgba(74,222,128,.15);color:#4ADE80;border:1px solid rgba(74,222,128,.25);}
+.cr-cutoff.close{background:rgba(252,211,77,.1);color:#FCD34D;border:1px solid rgba(252,211,77,.2);}
+.cr-cutoff.low{background:rgba(255,255,255,.07);color:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.1);}
+.cr-disclaimer{font-size:.6rem;color:rgba(255,255,255,.28);line-height:1.5;margin-top:.5rem;}
+
+/* ─── SOCIAL PROOF TOAST ─── */
+.toast-wrap{
+  position:fixed;bottom:24px;left:16px;z-index:850;
+  pointer-events:none;
+}
+.toast{
+  background:#fff;border-radius:14px;padding:.7rem .95rem;
+  border:1px solid var(--border);
+  box-shadow:0 8px 32px rgba(6,14,30,.14),0 2px 8px rgba(6,14,30,.07);
+  display:flex;align-items:center;gap:.65rem;
+  max-width:270px;
+  transform:translateY(20px);opacity:0;
+  transition:transform .4s cubic-bezier(.22,.61,.36,1),opacity .4s;
+}
+.toast.show{transform:translateY(0);opacity:1;}
+.toast-dot{width:8px;height:8px;border-radius:50%;background:#4ADE80;flex-shrink:0;animation:pulse 2s ease infinite;}
+.toast-text{font-size:.72rem;color:var(--ink2);line-height:1.42;}
+.toast-text b{color:var(--ink);font-weight:700;}
+@media(max-width:899px){.toast-wrap{bottom:82px;}}
+
+/* ─── HERO IMPROVEMENTS ─── */
+.hero-video-hint{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);
+  border-radius:10px;padding:.38rem .85rem;
+  font-size:.68rem;font-weight:600;color:rgba(255,255,255,.75);
+  margin-top:.55rem;cursor:pointer;
+  transition:background .2s;
+}
+.hero-video-hint:hover{background:rgba(255,255,255,.14);}
+.play-btn{
+  width:22px;height:22px;border-radius:50%;
+  background:rgba(255,255,255,.18);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+
+/* ─── PROOF STRIP IMPROVED ─── */
+.psc{cursor:default;}
+
+/* ─── SECTION: WHAT YOU'LL LEARN ─── */
+.learn-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;}
+@media(max-width:480px){.learn-grid{grid-template-columns:1fr;}}
+.learn-item{
+  background:#fff;border:1.5px solid var(--border);
+  border-radius:14px;padding:1rem;
+  border-left:4px solid var(--blue);
+  box-shadow:0 2px 10px rgba(6,14,30,.04);
+}
+.li-step{font-size:.58rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.3rem;}
+.li-t{font-size:.87rem;font-weight:700;color:var(--ink);margin-bottom:.16rem;}
+.li-d{font-size:.76rem;color:var(--muted);line-height:1.6;}
+
+/* ─── ANIMATED COUNTER ─── */
+@keyframes countUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.psv.animated{animation:countUp .5s ease forwards;}
 </style>
 </head>
 <body>
+
+<!-- SOCIAL PROOF TOAST -->
+<div class="toast-wrap" aria-live="polite">
+  <div class="toast" id="social-toast">
+    <div class="toast-dot"></div>
+    <div class="toast-text" id="toast-txt"></div>
+  </div>
+</div>
 
 <!-- FLOATING WA -->
 <a class="wa-float" href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20know%20more%20about%20French%20for%20Canada%20PR" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
@@ -761,6 +899,9 @@ b,strong{font-weight:700;}
   </div>
 </div>
 
+<!-- FRENCH TRICOLOR ACCENT -->
+<div class="fr-stripe" aria-hidden="true"><span></span><span></span><span></span></div>
+
 <!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="h-blob1"></div><div class="h-blob2"></div><div class="h-blob3"></div>
@@ -793,6 +934,13 @@ b,strong{font-weight:700;}
         <div class="hs"><div class="hs-v">★4.7</div><div class="hs-l">Google</div></div>
         <div class="hs"><div class="hs-v">97%</div><div class="hs-l">Pass Rate</div></div>
         <div class="hs"><div class="hs-v">8–12wk</div><div class="hs-l">To CLB 7</div></div>
+      </div>
+
+      <div class="h-trust-row">
+        <span class="ht">🏅 RCIC Certified</span>
+        <span class="ht">🇨🇦 IRCC Approved Formula</span>
+        <span class="ht">⭐ 4.7 Google</span>
+        <span class="ht">✓ No commitment</span>
       </div>
 
       <div class="h-chips">
@@ -863,11 +1011,54 @@ b,strong{font-weight:700;}
 </section>
 
 <!-- PROOF STRIP -->
-<div class="ps">
-  <div class="psc"><div class="psv">6,000+</div><div class="psl">Paid Students</div></div>
-  <div class="psc"><div class="psv">★ 4.7</div><div class="psl">Google Rating</div></div>
-  <div class="psc"><div class="psv">97%</div><div class="psl">Pass Rate</div></div>
+<div class="ps" id="proof-strip">
+  <div class="psc"><div class="psv" data-target="6000" data-suffix="+">6,000+</div><div class="psl">Paid Students</div></div>
+  <div class="psc"><div class="psv" data-prefix="★ " data-target="4.7" data-decimals="1">★ 4.7</div><div class="psl">Google Rating</div></div>
+  <div class="psc"><div class="psv" data-target="97" data-suffix="%">97%</div><div class="psl">Pass Rate</div></div>
   <div class="psc"><div class="psv">1.2L+</div><div class="psl">YouTube Subs</div></div>
+</div>
+
+<!-- CRS CALCULATOR -->
+<div class="calc-wrap" id="calculator">
+  <div class="calc-inner">
+    <div class="eye" style="display:inline-block;margin-bottom:.5rem;">🧮 Instant CRS Estimate — 10 Seconds</div>
+    <h2 class="sh" style="margin-bottom:.4rem;">How many CRS points can <em>French add</em> to your score?</h2>
+    <p class="sdesc" style="max-width:480px;margin:0 auto 1.3rem;">Enter 2 details below. Get your personalised estimate instantly — no sign-up needed.</p>
+    <div class="calc-card">
+      <div class="calc-row">
+        <div>
+          <label class="calc-label" for="calc-crs">Your Current CRS Score</label>
+          <div class="calc-input-wrap">
+            <input type="number" id="calc-crs" min="200" max="700" placeholder="e.g. 450" inputmode="numeric"/>
+            <span class="calc-unit">pts</span>
+          </div>
+        </div>
+        <div>
+          <label class="calc-label" for="calc-clb">Your IELTS Score</label>
+          <div class="sw">
+            <select id="calc-clb">
+              <option value="" disabled selected>Select score range</option>
+              <option value="7">Band 6.0–6.5 (CLB 7–8)</option>
+              <option value="9">Band 7.0–7.5 (CLB 9)</option>
+              <option value="10">Band 8.0+ (CLB 10+)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button class="calc-btn" id="calc-btn" type="button">Calculate My CRS Boost →</button>
+      <div class="calc-result" id="calc-result">
+        <div class="cr-boost-label">Estimated CRS boost with French</div>
+        <div class="cr-boost-num" id="cr-boost">+50 to +75 pts</div>
+        <div class="cr-new-score">Your estimated new CRS: <strong id="cr-new">500–525</strong></div>
+        <div style="margin-bottom:.3rem;"><span class="cr-cutoff" id="cr-cutoff"></span></div>
+        <div class="cr-disclaimer">*Based on the official IRCC CRS formula. Your exact number is calculated free in the strategy session.</div>
+        <button class="cta-wa" onclick="sf()" style="width:100%;justify-content:center;margin-top:1rem;font-size:.88rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Book Free Session — Get My Exact CRS →
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- PAGE BODY -->
@@ -1011,6 +1202,11 @@ b,strong{font-weight:700;}
   <!-- 9. SOCIAL PROOF -->
   <div class="sec">
     <div class="eye">❤️ Real Students. Real CRS Gains.</div>
+    <div style="display:flex;gap:.55rem;flex-wrap:wrap;margin-bottom:1.1rem;margin-top:.4rem;">
+      <div style="background:#D1FAE5;border-radius:9px;padding:.38rem .8rem;font-size:.72rem;font-weight:700;color:#065F46;border:1px solid #A7F3D0;">+50 CRS · ITA Received</div>
+      <div style="background:#DBEAFE;border-radius:9px;padding:.38rem .8rem;font-size:.72rem;font-weight:700;color:#1E40AF;border:1px solid #BFDBFE;">A0 → DELF B1 in 3 months</div>
+      <div style="background:#EDE9FE;border-radius:9px;padding:.38rem .8rem;font-size:.72rem;font-weight:700;color:#5B21B6;border:1px solid #DDD6FE;">B1 → B2 · Work Visa</div>
+    </div>
     <h2 class="sh">They were exactly where<br>you are now. <em>Here's what changed.</em></h2>
     <div class="tgrid">
       <div class="tc">
@@ -1149,6 +1345,11 @@ b,strong{font-weight:700;}
       <span class="bt">Book My Free Strategy Session →</span>
     </button>
     <div class="f-note">📱 Takes 30 seconds · WhatsApp confirmation · ₹0 cost · No commitment</div>
+    <div style="margin-top:1.2rem;display:flex;justify-content:center;flex-wrap:wrap;gap:.6rem;">
+      <span style="display:inline-flex;align-items:center;gap:.3rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:.28rem .7rem;font-size:.63rem;font-weight:600;color:rgba(255,255,255,.55);">🏅 RCIC Certified</span>
+      <span style="display:inline-flex;align-items:center;gap:.3rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:.28rem .7rem;font-size:.63rem;font-weight:600;color:rgba(255,255,255,.55);">⭐ 4.7 Google · 300+ Reviews</span>
+      <span style="display:inline-flex;align-items:center;gap:.3rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:.28rem .7rem;font-size:.63rem;font-weight:600;color:rgba(255,255,255,.55);">🇫🇷 6,000+ Students</span>
+    </div>
   </div>
 </div>
 
@@ -1276,6 +1477,112 @@ function sf(){
   var f=document.getElementById('fn');
   if(f){f.scrollIntoView({behavior:'smooth',block:'center'});f.focus();}
 }
+
+/* ─── ANIMATED STATS COUNTERS ─── */
+(function(){
+  var ps=document.getElementById('proof-strip');
+  if(!ps||!('IntersectionObserver' in window))return;
+  var done=false;
+  new IntersectionObserver(function(e){
+    if(e[0].isIntersecting&&!done){
+      done=true;
+      ps.querySelectorAll('.psv[data-target]').forEach(function(el){
+        var target=parseFloat(el.getAttribute('data-target'));
+        var suffix=el.getAttribute('data-suffix')||'';
+        var prefix=el.getAttribute('data-prefix')||'';
+        var decimals=parseInt(el.getAttribute('data-decimals'))||0;
+        var duration=1600;var start=null;
+        function step(ts){
+          if(!start)start=ts;
+          var p=Math.min((ts-start)/duration,1);
+          var ease=1-Math.pow(1-p,3);
+          var val=target*ease;
+          el.textContent=prefix+(decimals?val.toFixed(decimals):Math.round(val))+suffix;
+          if(p<1)requestAnimationFrame(step);
+          else el.textContent=prefix+(decimals?target.toFixed(decimals):target)+suffix;
+        }
+        requestAnimationFrame(step);
+      });
+    }
+  },{threshold:0.4}).observe(ps);
+})();
+
+/* ─── SOCIAL PROOF TOASTS ─── */
+(function(){
+  var wrap=document.getElementById('social-toast');
+  var txt=document.getElementById('toast-txt');
+  if(!wrap||!txt)return;
+  var proofs=[
+    {n:'Priya S.',c:'Delhi',a:'just booked a free demo session'},
+    {n:'Rahul M.',c:'Pune',a:'just claimed a strategy session'},
+    {n:'Anjali K.',c:'Bangalore',a:'just reserved a demo slot'},
+    {n:'Vikram P.',c:'Chandigarh',a:'just booked a free session'},
+    {n:'Simran T.',c:'Amritsar',a:'just claimed a demo spot'},
+    {n:'Arjun N.',c:'Hyderabad',a:'just booked their session'},
+    {n:'Kavya R.',c:'Chennai',a:'just reserved a strategy slot'},
+  ];
+  var idx=0;
+  function show(){
+    var p=proofs[idx%proofs.length];idx++;
+    txt.innerHTML='<b>'+p.n+' from '+p.c+'</b> '+p.a;
+    wrap.classList.add('show');
+    setTimeout(function(){wrap.classList.remove('show');},4000);
+    setTimeout(show,Math.random()*16000+12000);
+  }
+  setTimeout(show,8000);
+})();
+
+/* ─── CRS CALCULATOR ─── */
+(function(){
+  var btn=document.getElementById('calc-btn');
+  var res=document.getElementById('calc-result');
+  var crsIn=document.getElementById('calc-crs');
+  var clbIn=document.getElementById('calc-clb');
+  if(!btn||!res||!crsIn||!clbIn)return;
+
+  function highlight(el){
+    el.style.borderColor='var(--red)';
+    setTimeout(function(){el.style.borderColor='';},2200);
+  }
+
+  btn.addEventListener('click',function(){
+    var crs=parseInt(crsIn.value)||0;
+    var clb=clbIn.value;
+    var valid=true;
+    if(!crs||crs<200||crs>700){highlight(crsIn);valid=false;}
+    if(!clb){highlight(clbIn);valid=false;}
+    if(!valid)return;
+
+    /* CRS points by English CLB tier */
+    var low,high;
+    if(clb==='7'){low=25;high=50;}
+    else if(clb==='9'){low=50;high=75;}
+    else{low=75;high=110;}
+
+    document.getElementById('cr-boost').textContent='+'+low+' to +'+high+' pts';
+    var nLow=crs+low,nHigh=crs+high;
+    document.getElementById('cr-new').textContent=nLow+'–'+nHigh;
+
+    var cutoff=document.getElementById('cr-cutoff');
+    var CUT=490;
+    if(nLow>=CUT){
+      cutoff.textContent='✓ You could already be above recent Express Entry cutoffs (~'+CUT+')!';
+      cutoff.className='cr-cutoff good';
+    } else if(nHigh>=CUT){
+      cutoff.textContent='You\'d be very close to recent draw cutoffs (~'+CUT+'). French could get you over the line.';
+      cutoff.className='cr-cutoff close';
+    } else {
+      cutoff.textContent='A significant boost — book your session to map your full pathway.';
+      cutoff.className='cr-cutoff low';
+    }
+
+    res.style.display='block';
+    setTimeout(function(){res.scrollIntoView({behavior:'smooth',block:'nearest'});},80);
+    if(typeof gtag!=='undefined'){
+      gtag('event','crs_calculator_used',{event_category:'engagement',event_label:'crs_'+crs+'_clb_'+clb});
+    }
+  });
+})();
 </script>
 </body>
 </html>
