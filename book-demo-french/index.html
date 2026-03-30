@@ -99,7 +99,7 @@ b,strong{font-weight:700;}
 
 /* ─── HERO ─── */
 .hero{
-  background:linear-gradient(160deg,#05101E 0%,#091830 45%,#0D2040 100%);
+  background:linear-gradient(160deg,#020A18 0%,#071A3A 45%,#0A2248 100%);
   padding:2.2rem 5vw 2rem;
   position:relative;overflow:hidden;
 }
@@ -119,10 +119,10 @@ b,strong{font-weight:700;}
 /* Hero eyebrow */
 .h-eyebrow{
   display:inline-flex;align-items:center;gap:.55rem;
-  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
   border-radius:100px;padding:.32rem 1.05rem;
   font-size:.63rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
-  color:rgba(255,255,255,.88);margin-bottom:.9rem;
+  color:rgba(255,255,255,.92);margin-bottom:.9rem;
   width:fit-content;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
 }
 .ey-dot{width:6px;height:6px;border-radius:50%;background:#4ADE80;flex-shrink:0;animation:pulse 2s ease infinite;}
@@ -168,10 +168,10 @@ b,strong{font-weight:700;}
   font-size:1.4rem;font-weight:400;color:#FCD34D;
   line-height:1;letter-spacing:-.03em;
 }
-.crs-label{font-size:.68rem;color:rgba(255,255,255,.55);margin-top:.12rem;font-weight:500;line-height:1.38;}
+.crs-label{font-size:.68rem;color:rgba(255,255,255,.68);margin-top:.12rem;font-weight:500;line-height:1.38;}
 
 /* Hero sub */
-.h-sub{font-size:.88rem;color:rgba(255,255,255,.68);line-height:1.68;max-width:480px;margin-bottom:.75rem;}
+.h-sub{font-size:.88rem;color:rgba(255,255,255,.78);line-height:1.68;max-width:480px;margin-bottom:.75rem;}
 .h-sub b{color:rgba(255,255,255,.88);font-weight:700;}
 
 /* Stats */
@@ -184,7 +184,7 @@ b,strong{font-weight:700;}
 .hs{flex:1;padding:.5rem .35rem;text-align:center;position:relative;}
 .hs+.hs::before{content:'';position:absolute;left:0;top:16%;height:68%;width:1px;background:rgba(255,255,255,.1);}
 .hs-v{font-family:'DM Serif Display',serif;font-size:.95rem;color:#fff;line-height:1;letter-spacing:-.02em;}
-.hs-l{font-size:.46rem;color:rgba(255,255,255,.38);margin-top:.18rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;}
+.hs-l{font-size:.46rem;color:rgba(255,255,255,.52);margin-top:.18rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;}
 
 /* Trust chips — hidden to reduce clutter */
 .h-chips{display:none;}
@@ -202,10 +202,17 @@ b,strong{font-weight:700;}
 .cr{font-size:.62rem;color:rgba(255,255,255,.42);margin-top:.08rem;line-height:1.35;}
 
 /* ─── FORM ─── */
+.hero .form-card{
+  animation:formGlow 2.5s ease-in-out infinite alternate;
+}
+@keyframes formGlow{
+  0%{box-shadow:0 0 0 2px rgba(18,69,232,.18),0 24px 80px rgba(6,14,30,.22),0 0 40px rgba(18,69,232,.08);}
+  100%{box-shadow:0 0 0 2px rgba(18,69,232,.28),0 24px 80px rgba(6,14,30,.26),0 0 60px rgba(18,69,232,.18);}
+}
 .form-card{
   background:#fff;border-radius:24px;
-  box-shadow:0 24px 80px rgba(6,14,30,.18),0 4px 16px rgba(6,14,30,.08);
-  overflow:hidden;border:1px solid rgba(18,69,232,.08);
+  box-shadow:0 0 0 2px rgba(18,69,232,.18),0 24px 80px rgba(6,14,30,.22),0 4px 16px rgba(6,14,30,.10),0 0 60px rgba(18,69,232,.12);
+  overflow:hidden;border:2px solid rgba(18,69,232,.2);
 }
 .fu-bar{
   background:linear-gradient(135deg,#D42515,#9E1B0C);
@@ -214,7 +221,7 @@ b,strong{font-weight:700;}
 }
 .fu-dot{width:7px;height:7px;border-radius:50%;background:#fff;flex-shrink:0;animation:blink 1.6s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-.fh{background:linear-gradient(135deg,#020810,#071228);padding:1.1rem 1.3rem;}
+.fh{background:linear-gradient(135deg,#020810,#0B1A3E);padding:1.1rem 1.3rem;}
 .fh-title{font-family:'DM Serif Display',serif;font-size:1.15rem;color:#fff;line-height:1.22;margin-bottom:.2rem;letter-spacing:-.015em;}
 .fh-sub{font-size:.69rem;color:rgba(255,255,255,.45);}
 .fb{padding:1.1rem 1.3rem 1.3rem;}
@@ -238,11 +245,11 @@ b,strong{font-weight:700;}
 .privacy{display:flex;align-items:center;justify-content:center;gap:.35rem;font-size:.66rem;color:var(--muted);margin-bottom:.72rem;}
 .book-btn{
   width:100%;padding:.92rem;
-  background:linear-gradient(135deg,#28D966,#1A9E52);
+  background:linear-gradient(135deg,#2EE06E,#1AAF55);
   border:none;border-radius:14px;font-family:inherit;
   font-size:.94rem;font-weight:800;color:#fff;cursor:pointer;
   display:flex;align-items:center;justify-content:center;gap:.58rem;
-  box-shadow:0 10px 32px rgba(37,211,102,.38);
+  box-shadow:0 10px 32px rgba(37,211,102,.42),0 0 0 1px rgba(37,211,102,.15);
   transition:transform .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent;
   margin-bottom:.65rem;letter-spacing:.01em;
 }
@@ -1418,14 +1425,15 @@ b,strong{font-weight:700;}
       };
       var goalLabel=goals[goal]||goal||'Not specified';
 
-      // FIX 1: Google Sheets — use GET with URL params (Apps Script requires this)
+      // Google Sheets — GET with URL params via hidden image (bypasses CORS redirect issue)
       var qs='?name='+encodeURIComponent(name)
         +'&phone='+encodeURIComponent(phone)
         +'&email='+encodeURIComponent(email)
         +'&goal='+encodeURIComponent(goalLabel)
         +'&course=French'
         +'&source=book-demo-french';
-      fetch(SHEET+qs,{method:'GET',mode:'no-cors'}).catch(function(){});
+      // Image-based ping follows redirects natively (Apps Script 302 → exec redirect)
+      var img=new Image();img.src=SHEET+qs;
 
       // FIX 2: Thank-you page redirect after WhatsApp
       var waMsg='Hi Sanjita! I want to book a free French demo + Canada PR strategy session.\nName: '+name+'\nGoal: '+goalLabel;
