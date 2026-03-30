@@ -13,19 +13,14 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-765652199');
+  gtag('config', 'AW-765652199', {'transport_type': 'beacon', 'send_page_view': true});
 </script>
 <!-- Event snippet for Demo Booking -->
 <script>
 function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
   gtag('event', 'conversion', {
     'send_to': 'AW-765652199/zZIDCPHd74McEOfZi-0C',
-    'event_callback': callback
+    'transport_type': 'beacon'
   });
   return false;
 }
@@ -1137,7 +1132,10 @@ select{padding-right:2.5rem;cursor:pointer}
         +'&phone='+encodeURIComponent(val('phone'))
         +'&email='+encodeURIComponent(val('email'))
         +'&band='+encodeURIComponent(bandLabel);
-      fetch(SHEET_URL+params,{method:'GET',mode:'no-cors'}).catch(function(){});
+      var sheetTarget=SHEET_URL+params+'&t='+Date.now();
+      if(navigator.sendBeacon){navigator.sendBeacon(sheetTarget);}
+      else{(new Image()).src=sheetTarget;}
+      fetch(sheetTarget,{method:'GET',mode:'no-cors'}).catch(function(){});
     }
 
     // Redirect immediately — no waiting
