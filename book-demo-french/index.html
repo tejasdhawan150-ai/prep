@@ -68,13 +68,13 @@ b,strong{font-weight:700;}
 /* ─── AD MATCH BAR ─── */
 .ad-bar{
   background:linear-gradient(135deg,#06101E,#0E1E42);
-  padding:.75rem 5vw;
+  padding:.55rem 5vw;
   display:flex;align-items:center;justify-content:center;gap:.8rem;
   flex-wrap:wrap;
 }
 .ad-bar-text{
-  font-size:.78rem;font-weight:600;color:rgba(255,255,255,.88);
-  text-align:center;line-height:1.58;
+  font-size:.74rem;font-weight:600;color:rgba(255,255,255,.88);
+  text-align:center;line-height:1.5;
 }
 .ad-bar-text b{color:#fff;}
 .ad-bar-text em{
@@ -83,40 +83,42 @@ b,strong{font-weight:700;}
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   background-clip:text;
 }
+@media(max-width:899px){.ad-bar{display:none;}}
 
 /* ─── TICKER ─── */
-.ticker{background:linear-gradient(135deg,#8A0C1A,#B81424);overflow:hidden;padding:.46rem 0;}
+.ticker{background:linear-gradient(135deg,#8A0C1A,#B81424);overflow:hidden;padding:.38rem 0;}
 .tick-inner{display:flex;width:fit-content;animation:tick 34s linear infinite;}
 .tick-inner:hover{animation-play-state:paused;}
 @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .ti{
   display:inline-flex;align-items:center;padding:0 1.5rem;
-  font-size:.63rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  font-size:.58rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
   color:rgba(255,255,255,.88);white-space:nowrap;
 }
 .ti b{color:#fff;}
 .ti::after{content:'✦';margin-left:1.5rem;opacity:.35;}
+@media(max-width:899px){.ticker{display:none;}}
 
 /* ─── HERO ─── */
 .hero{
   background:linear-gradient(160deg,#020A18 0%,#071A3A 45%,#0A2248 100%);
-  padding:2.2rem 5vw 2rem;
+  padding:1.6rem 5vw 1.8rem;
   position:relative;overflow:hidden;
 }
-.h-blob1{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(22,65,216,.24) 0%,transparent 60%);top:-200px;left:-160px;pointer-events:none;}
-.h-blob2{position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(200,120,0,.18) 0%,transparent 65%);bottom:-100px;right:-60px;pointer-events:none;}
+.h-blob1{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(22,65,216,.2) 0%,transparent 60%);top:-200px;left:-160px;pointer-events:none;}
+.h-blob2{position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(200,120,0,.14) 0%,transparent 65%);bottom:-100px;right:-60px;pointer-events:none;}
 .h-blob3{display:none;}
 .hero-inner{
   position:relative;z-index:1;
   max-width:1120px;margin:0 auto;
-  display:flex;flex-direction:column;gap:1.5rem;
+  display:flex;flex-direction:column;gap:0;
 }
 @media(min-width:900px){
   .hero{padding:3.5rem 5vw 3.2rem;}
   .hero-inner{display:grid;grid-template-columns:1fr 390px;gap:3rem;align-items:start;}
 }
 
-/* Hero eyebrow */
+/* Hero eyebrow — mobile: hidden, desktop: shown */
 .h-eyebrow{
   display:inline-flex;align-items:center;gap:.55rem;
   background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
@@ -127,14 +129,15 @@ b,strong{font-weight:700;}
 }
 .ey-dot{width:6px;height:6px;border-radius:50%;background:#4ADE80;flex-shrink:0;animation:pulse 2s ease infinite;}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.7)}50%{box-shadow:0 0 0 6px rgba(74,222,128,0)}}
+@media(max-width:899px){.h-eyebrow{display:none;}}
 
 /* HERO H1 */
 .hero-h1{
   font-family:'DM Serif Display',serif;
   font-size:clamp(1.9rem,4.8vw,2.75rem);
-  font-weight:400;line-height:1.1;
+  font-weight:400;line-height:1.08;
   letter-spacing:-.03em;color:#fff;
-  margin-bottom:.75rem;
+  margin-bottom:.55rem;
 }
 .h1-gold{
   font-style:italic;
@@ -147,7 +150,7 @@ b,strong{font-weight:700;}
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 
-/* CRS impact box */
+/* CRS impact box — desktop only */
 .crs-impact{
   display:flex;align-items:stretch;gap:0;
   background:rgba(252,211,77,.06);
@@ -169,12 +172,24 @@ b,strong{font-weight:700;}
   line-height:1;letter-spacing:-.03em;
 }
 .crs-label{font-size:.68rem;color:rgba(255,255,255,.68);margin-top:.12rem;font-weight:500;line-height:1.38;}
+@media(max-width:899px){.crs-impact{display:none;}}
 
 /* Hero sub */
 .h-sub{font-size:.88rem;color:rgba(255,255,255,.78);line-height:1.68;max-width:480px;margin-bottom:.75rem;}
 .h-sub b{color:rgba(255,255,255,.88);font-weight:700;}
 
-/* Stats */
+/* Mobile hero proof — compact single line */
+.hero-proof-mobile{
+  display:none;
+  align-items:center;justify-content:center;gap:.6rem;
+  margin:.45rem 0 .85rem;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.7);
+}
+.hero-proof-mobile b{color:#fff;font-weight:800;}
+.hero-proof-mobile .hpm-sep{color:rgba(255,255,255,.2);}
+@media(max-width:899px){.hero-proof-mobile{display:flex;}}
+
+/* Stats — desktop only */
 .h-stats{
   display:flex;gap:0;max-width:420px;
   background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11);
@@ -185,12 +200,13 @@ b,strong{font-weight:700;}
 .hs+.hs::before{content:'';position:absolute;left:0;top:16%;height:68%;width:1px;background:rgba(255,255,255,.1);}
 .hs-v{font-family:'DM Serif Display',serif;font-size:.95rem;color:#fff;line-height:1;letter-spacing:-.02em;}
 .hs-l{font-size:.46rem;color:rgba(255,255,255,.52);margin-top:.18rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;}
+@media(max-width:899px){.h-stats{display:none;}}
 
-/* Trust chips — hidden to reduce clutter */
+/* Trust chips — hidden */
 .h-chips{display:none;}
 .chip{display:none;}
 
-/* Coach strip */
+/* Coach strip — desktop only */
 .coach-strip{
   display:flex;align-items:center;gap:.7rem;
   background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11);
@@ -200,6 +216,7 @@ b,strong{font-weight:700;}
 .ci{width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid rgba(255,255,255,.18);flex-shrink:0;}
 .cn{font-size:.78rem;font-weight:700;color:#fff;}
 .cr{font-size:.62rem;color:rgba(255,255,255,.42);margin-top:.08rem;line-height:1.35;}
+@media(max-width:899px){.coach-strip{display:none;}}
 
 /* ─── FORM ─── */
 .hero .form-card{
@@ -223,7 +240,7 @@ b,strong{font-weight:700;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 .fh{background:linear-gradient(135deg,#020810,#0B1A3E);padding:1.1rem 1.3rem;}
 .fh-title{font-family:'DM Serif Display',serif;font-size:1.15rem;color:#fff;line-height:1.22;margin-bottom:.2rem;letter-spacing:-.015em;}
-.fh-sub{font-size:.69rem;color:rgba(255,255,255,.45);}
+.fh-sub{font-size:.66rem;color:rgba(255,255,255,.5);}
 .fb{padding:1.1rem 1.3rem 1.3rem;}
 .field{margin-bottom:.72rem;}
 .field label{display:block;font-size:.65rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);margin-bottom:.3rem;}
@@ -655,23 +672,25 @@ b,strong{font-weight:700;}
   .sec{padding:2.2rem 0;}
   .page{padding:0 4.5vw;}
 
-  /* Hero: bigger, bolder on mobile */
-  .hero{padding:2.2rem 4.5vw 2rem;}
-  .hero-h1{font-size:clamp(2rem,8.5vw,2.6rem);margin-bottom:.9rem;}
-  .h-eyebrow{font-size:.6rem;padding:.3rem .9rem;margin-bottom:.75rem;}
-  .h-sub{font-size:.86rem;line-height:1.62;}
-  .crs-pts{font-size:1.3rem;}
-  .h-stats{max-width:100%;}
-  .hs-v{font-size:.88rem;}
+  /* Hero: clean, tight on mobile — form above fold */
+  .hero{padding:1.4rem 4.5vw 1.2rem;}
+  .hero-h1{font-size:clamp(1.7rem,7.5vw,2.3rem);margin-bottom:.3rem;line-height:1.08;}
+  .h-sub{font-size:.82rem;line-height:1.55;margin-bottom:.35rem;}
 
-  /* Form: larger touch targets */
-  .field input,.field select{padding:.72rem .9rem;font-size:.9rem;border-radius:12px;}
-  .field label{font-size:.63rem;}
-  .fb{padding:1rem 1.1rem 1.2rem;}
-  .fh{padding:1rem 1.1rem;}
-  .fh-title{font-size:1.1rem;}
-  .book-btn{padding:.96rem;font-size:.96rem;border-radius:14px;}
-  .fu-bar{padding:.5rem 1.1rem;}
+  /* Form: compact but tappable */
+  .field{margin-bottom:.55rem;}
+  .field input,.field select{padding:.62rem .85rem;font-size:.88rem;border-radius:11px;}
+  .field label{font-size:.6rem;margin-bottom:.22rem;}
+  .fb{padding:.85rem 1rem 1rem;}
+  .fh{padding:.75rem 1rem;}
+  .fh-title{font-size:1rem;}
+  .fh-sub{font-size:.64rem;}
+  .book-btn{padding:.82rem;font-size:.92rem;border-radius:12px;}
+  .fu-bar{padding:.38rem 1rem;font-size:.65rem;}
+  .seats-row{font-size:.66rem;}
+  .microcopy{font-size:.62rem;}
+  .privacy{font-size:.62rem;margin-bottom:.5rem;}
+  .fp{font-size:.62rem;}
 
   /* Content cards: better padding on small screens */
   .prob{padding:.88rem .95rem;}
@@ -733,12 +752,13 @@ b,strong{font-weight:700;}
 
 /* ─── FRENCH TRICOLOR STRIPE ─── */
 .fr-stripe{
-  display:flex;height:5px;width:100%;flex-shrink:0;
+  display:flex;height:4px;width:100%;flex-shrink:0;
 }
 .fr-stripe span{flex:1;}
 .fr-stripe span:nth-child(1){background:var(--fr1);}
 .fr-stripe span:nth-child(2){background:#fff;}
 .fr-stripe span:nth-child(3){background:var(--fr2);}
+@media(max-width:899px){.fr-stripe{height:3px;}}
 
 /* ─── HERO BADGE ROW ─── */
 .h-trust-row{
@@ -750,6 +770,7 @@ b,strong{font-weight:700;}
   border-radius:8px;padding:.22rem .6rem;
   font-size:.62rem;font-weight:600;color:rgba(255,255,255,.72);
 }
+@media(max-width:899px){.h-trust-row{display:none;}}
 
 /* ─── CRS CALCULATOR ─── */
 .calc-wrap{
@@ -926,13 +947,18 @@ b,strong{font-weight:700;}
       <div class="h-eyebrow"><div class="ey-dot"></div>Free French Demo + Canada PR Strategy Session</div>
 
       <h1 class="hero-h1">
-        <span class="h1-gold">French Unlocks</span><br>
+        <span class="h1-gold">French Unlocks</span>
         <span class="h1-sky">+110 CRS Points</span><br>
         for Canada PR.
       </h1>
 
+      <!-- Mobile: single compact proof line -->
+      <div class="hero-proof-mobile">
+        <b>6,000+</b> students <span class="hpm-sep">|</span> <b>★4.7</b> Google <span class="hpm-sep">|</span> <b>97%</b> pass rate
+      </div>
+
       <p class="h-sub">
-        French proficiency adds <b>50–110 extra CRS points</b> — built into the official IRCC formula, and ignored by most applicants.
+        The fastest way to boost your Express Entry score. <b>Free 60-min strategy session</b> — zero cost, zero commitment.
       </p>
 
       <div class="crs-impact">
