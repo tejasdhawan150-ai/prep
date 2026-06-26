@@ -17,493 +17,238 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/design-system.css"/>
 
 <style>
-/* ─── RESET & BASE ─── */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+/* ============================================================================
+   PAGE-SPECIFIC STYLES — book-demo-french/index.html
+   Generic tokens/type/buttons/cards/badges/sections/.rv reveal all come from
+   /assets/css/design-system.css. This page keeps red/maple as ITS accent
+   color (Canada-flag identity for this French/Express-Entry ad campaign)
+   while using the shared fonts, spacing, radius and shadow scale — see
+   --maple/--red overrides right below. No nav, no footer: single-purpose
+   WhatsApp conversion funnel, same as book-demo/.
+   ========================================================================= */
 :root{
-  --red:#C8102E;
-  --red-l:#FFF0F2;
-  --green:#1A9E52;
-  --green-b:#25D366;
-  --green-d:#16863F;
-  --wa:#25D366;
-  --wa-d:#1A9E52;
-  --ink:#0D1117;
-  --ink2:#2D3748;
-  --muted:#6B7280;
-  --pale:#9CA3AF;
-  --bg:#FAFAFA;
-  --border:#E5E7EB;
-  --white:#FFFFFF;
-  --gold:#D97706;
-  --blue:#1A56DB;
   --maple:#B91225;
-  --sh:0 2px 12px rgba(0,0,0,.07);
-  --shm:0 6px 28px rgba(0,0,0,.11);
-  --radius:14px;
+  --red-accent:#C8102E;
+  --red-l:#FFF0F2;
+  --wa-dark:#1A9E52;
 }
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
-body{
-  font-family:'Sora',sans-serif;
-  background:var(--bg);color:var(--ink);
-  overflow-x:hidden;line-height:1.6;
-  font-size:15px;
-}
-a{text-decoration:none;color:inherit;}
-img{max-width:100%;display:block;}
+body{ padding-top:0; background:var(--ink-50); } /* no fixed nav on this page, override design-system's nav offset */
+a{ text-decoration:none; color:inherit; }
+img{ max-width:100%; display:block; }
 
-/* ─── URGENCY BAR ─── */
+/* ---- URGENCY BAR --------------------------------------------------------*/
 .urg-bar{
-  background:var(--maple);
-  padding:.5rem 1rem;
-  text-align:center;
-  font-size:.72rem;font-weight:700;
-  color:#fff;letter-spacing:.03em;
-  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  background:var(--maple); padding:.5rem 1rem; text-align:center;
+  font-size:.72rem; font-weight:700; color:#fff; letter-spacing:.03em;
+  display:flex; align-items:center; justify-content:center; gap:.5rem;
 }
-.urg-dot{width:7px;height:7px;border-radius:50%;background:#FFD700;flex-shrink:0;animation:blink 1.4s infinite;}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.urg-dot{ width:7px; height:7px; border-radius:50%; background:var(--gold-300); flex-shrink:0; animation:ubpulse 1.4s infinite; }
+@keyframes ubpulse{ 0%,100%{opacity:1} 50%{opacity:.25} }
 
-/* ─── HERO ─── */
-.hero{
-  background:#fff;
-  padding:2rem 1.2rem 2.4rem;
-  border-bottom:3px solid var(--border);
-  position:relative;
-}
+/* ---- HERO ----------------------------------------------------------------*/
+.hero{ background:#fff; padding:2rem 1.2rem 2.4rem; border-bottom:3px solid var(--border); position:relative; }
 .hero-flag{
-  display:inline-flex;align-items:center;gap:.45rem;
-  background:var(--red-l);border:1px solid rgba(200,16,46,.2);
-  border-radius:100px;padding:.28rem .85rem;
-  font-size:.68rem;font-weight:700;letter-spacing:.06em;
-  color:var(--red);text-transform:uppercase;margin-bottom:1.1rem;
+  display:inline-flex; align-items:center; gap:.45rem;
+  background:var(--red-l); border:1px solid rgba(200,16,46,.2);
+  border-radius:var(--r-full); padding:.28rem .85rem;
+  font-size:.68rem; font-weight:700; letter-spacing:.06em;
+  color:var(--red-accent); text-transform:uppercase; margin-bottom:1.1rem;
 }
 .hero h1{
-  font-family:'Lora',serif;
-  font-size:clamp(1.7rem,7.5vw,2.6rem);
-  font-weight:600;line-height:1.12;
-  color:var(--ink);margin-bottom:.8rem;letter-spacing:-.02em;
+  font-family:var(--font-serif);
+  font-size:clamp(1.9rem,7.5vw,2.8rem);
+  font-weight:400; line-height:1.12;
+  color:var(--ink); margin-bottom:.8rem; letter-spacing:-.02em;
 }
-.hero h1 em{font-style:italic;color:var(--maple);}
-.hero-sub{
-  font-size:.95rem;color:var(--ink2);line-height:1.65;
-  margin-bottom:1.4rem;max-width:480px;
-}
-.hero-sub strong{color:var(--ink);font-weight:700;}
+.hero h1 em{ font-style:italic; color:var(--maple); }
+.hero-sub{ font-size:.95rem; color:var(--ink-700); line-height:1.65; margin-bottom:1.4rem; max-width:480px; }
+.hero-sub strong{ color:var(--ink); font-weight:700; }
 
-/* ─── CTA BUTTONS ─── */
+/* ---- CTA BUTTONS (page keeps its own WhatsApp button look: full width,
+   stacked, mobile-funnel style — shares tokens with .btn-whatsapp) ----------*/
 .btn-wa{
-  display:flex;align-items:center;justify-content:center;gap:.6rem;
-  background:linear-gradient(160deg,var(--wa),var(--wa-d));
-  color:#fff;border:none;border-radius:var(--radius);
+  display:flex; align-items:center; justify-content:center; gap:.6rem;
+  background:linear-gradient(135deg,var(--wa),var(--wa-dark));
+  color:#fff; border:none; border-radius:var(--r-md);
   padding:.95rem 1.4rem;
-  font-family:'Sora',sans-serif;
-  font-size:1rem;font-weight:800;
-  cursor:pointer;width:100%;
-  box-shadow:0 8px 32px rgba(37,211,102,.38);
+  font-family:var(--font-sans); font-size:1rem; font-weight:800;
+  cursor:pointer; width:100%;
+  box-shadow:var(--shadow-wa);
   transition:transform .14s,box-shadow .14s;
-  -webkit-tap-highlight-color:transparent;
-  letter-spacing:-.01em;
-  position:relative;overflow:hidden;
+  -webkit-tap-highlight-color:transparent; letter-spacing:-.01em;
+  position:relative; overflow:hidden;
 }
-.btn-wa::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(rgba(255,255,255,.12),transparent);
-  pointer-events:none;
-}
-.btn-wa:active{transform:scale(.97);box-shadow:0 4px 16px rgba(37,211,102,.28);}
-.btn-wa svg{flex-shrink:0;}
+.btn-wa::after{ content:''; position:absolute; inset:0; background:linear-gradient(rgba(255,255,255,.12),transparent); pointer-events:none; }
+.btn-wa:active{ transform:scale(.97); box-shadow:0 4px 16px rgba(37,211,102,.28); }
+.btn-wa:hover{ transform:translateY(-2px); }
+.btn-wa svg{ flex-shrink:0; }
 
 .btn-sec{
-  display:flex;align-items:center;justify-content:center;gap:.5rem;
-  background:#fff;color:var(--ink);
-  border:2px solid var(--border);border-radius:var(--radius);
+  display:flex; align-items:center; justify-content:center; gap:.5rem;
+  background:#fff; color:var(--ink);
+  border:2px solid var(--border); border-radius:var(--r-md);
   padding:.8rem 1.4rem;
-  font-family:'Sora',sans-serif;
-  font-size:.9rem;font-weight:700;
-  cursor:pointer;width:100%;margin-top:.72rem;
+  font-family:var(--font-sans); font-size:.9rem; font-weight:700;
+  cursor:pointer; width:100%; margin-top:.72rem;
   transition:border-color .15s,background .15s;
   -webkit-tap-highlight-color:transparent;
 }
-.btn-sec:active{background:var(--bg);}
+.btn-sec:hover{ border-color:var(--maple); }
+.btn-sec:active{ background:var(--ink-50); }
 
-.cta-note{
-  text-align:center;font-size:.67rem;color:var(--pale);
-  margin-top:.55rem;
-}
+.cta-note{ text-align:center; font-size:.67rem; color:var(--ink-300); margin-top:.55rem; }
 
-/* ─── FRICTION LINE ─── */
-.friction-row{
-  display:flex;align-items:center;justify-content:center;
-  gap:1.2rem;flex-wrap:wrap;
-  margin-top:.9rem;
-  font-size:.7rem;font-weight:600;color:var(--muted);
-}
-.friction-row span{display:flex;align-items:center;gap:.28rem;}
+/* ---- FRICTION LINE ------------------------------------------------------*/
+.friction-row{ display:flex; align-items:center; justify-content:center; gap:1.2rem; flex-wrap:wrap; margin-top:.9rem; font-size:.7rem; font-weight:600; color:var(--muted); }
+.friction-row span{ display:flex; align-items:center; gap:.28rem; }
 
-/* ─── PROOF STRIP ─── */
-.proof-strip{
-  background:var(--ink);
-  padding:1rem 1.2rem;
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:0;
-}
-.ps-cell{
-  text-align:center;padding:.4rem .2rem;
-  position:relative;
-}
-.ps-cell+.ps-cell::before{
-  content:'';position:absolute;left:0;top:15%;height:70%;
-  width:1px;background:rgba(255,255,255,.12);
-}
-.ps-num{
-  font-family:'Lora',serif;
-  font-size:1.3rem;font-weight:600;
-  color:#fff;line-height:1;
-}
-.ps-label{font-size:.57rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-top:.18rem;}
+/* ---- PROOF STRIP ----------------------------------------------------------*/
+.proof-strip{ background:var(--ink); padding:1rem 1.2rem; display:grid; grid-template-columns:repeat(3,1fr); gap:0; }
+.ps-cell{ text-align:center; padding:.4rem .2rem; position:relative; }
+.ps-cell+.ps-cell::before{ content:''; position:absolute; left:0; top:15%; height:70%; width:1px; background:rgba(255,255,255,.12); }
+.ps-num{ font-family:var(--font-serif); font-size:1.5rem; font-weight:400; color:#fff; line-height:1; }
+.ps-label{ font-size:.57rem; font-weight:600; letter-spacing:.07em; text-transform:uppercase; color:rgba(255,255,255,.42); margin-top:.18rem; }
 
-/* ─── SECTION WRAPPER ─── */
-.sec{padding:2rem 1.2rem;border-bottom:1px solid var(--border);}
-.sec:last-of-type{border-bottom:none;}
-.sec-eye{
-  display:inline-flex;align-items:center;gap:.38rem;
-  font-size:.63rem;font-weight:800;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--maple);
-  margin-bottom:.55rem;
-}
-.sec h2{
-  font-family:'Lora',serif;
-  font-size:clamp(1.35rem,5.5vw,1.9rem);
-  font-weight:600;line-height:1.18;
-  color:var(--ink);margin-bottom:.65rem;letter-spacing:-.02em;
-}
-.sec h2 em{font-style:italic;color:var(--maple);}
-.sec p{font-size:.88rem;color:var(--ink2);line-height:1.72;margin-bottom:1rem;}
+/* ---- SECTION WRAPPER -------------------------------------------------------
+   This page uses a tighter single-column "sec" rather than design-system's
+   wide .ds-section (kept local: it's a mobile-first linear funnel, not a
+   multi-column marketing section). */
+.sec{ padding:2rem 1.2rem; border-bottom:1px solid var(--border); }
+.sec:last-of-type{ border-bottom:none; }
+.sec-eye{ display:inline-flex; align-items:center; gap:.38rem; font-size:.63rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--maple); margin-bottom:.55rem; }
+.sec h2{ font-family:var(--font-serif); font-size:clamp(1.5rem,5.5vw,2.1rem); font-weight:400; line-height:1.18; color:var(--ink); margin-bottom:.65rem; letter-spacing:-.02em; }
+.sec h2 em{ font-style:italic; color:var(--maple); }
+.sec p{ font-size:.88rem; color:var(--ink-700); line-height:1.72; margin-bottom:1rem; }
 
-/* ─── CRS VISUALIZER ─── */
-.crs-viz{
-  background:linear-gradient(135deg,#0D1117,#1A2540);
-  border-radius:18px;padding:1.5rem 1.2rem;
-  margin:1.1rem 0;
-  position:relative;overflow:hidden;
-}
-.crs-viz::before{
-  content:'';position:absolute;
-  width:200px;height:200px;border-radius:50%;
-  background:radial-gradient(circle,rgba(200,16,46,.28),transparent 65%);
-  top:-70px;right:-50px;pointer-events:none;
-}
-.crs-viz::after{
-  content:'';position:absolute;
-  width:160px;height:160px;border-radius:50%;
-  background:radial-gradient(circle,rgba(26,86,219,.22),transparent 65%);
-  bottom:-50px;left:-40px;pointer-events:none;
-}
-.crs-label-row{
-  display:flex;justify-content:space-between;align-items:center;
-  margin-bottom:.7rem;
-  position:relative;z-index:1;
-}
-.crs-score-label{font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
-.crs-score-label.before{color:rgba(255,255,255,.35);}
-.crs-score-label.after{color:#FFD700;}
-.crs-bar-wrap{position:relative;z-index:1;margin-bottom:.65rem;}
-.crs-bar-bg{
-  height:10px;background:rgba(255,255,255,.1);
-  border-radius:100px;overflow:visible;position:relative;
-}
-.crs-bar-before{
-  position:absolute;left:0;top:0;height:100%;
-  background:rgba(255,255,255,.25);border-radius:100px;
-  width:58%;
-}
-.crs-bar-after{
-  position:absolute;left:0;top:0;height:100%;
-  background:linear-gradient(90deg,var(--maple),#FF6B35);
-  border-radius:100px;
-  width:85%;
-  animation:growBar 1.8s ease forwards;
-}
-@keyframes growBar{from{width:58%}to{width:85%}}
-.crs-scores{
-  display:flex;justify-content:space-between;align-items:flex-end;
-  position:relative;z-index:1;
-}
-.crs-num{
-  font-family:'Lora',serif;font-size:2.2rem;font-weight:600;line-height:1;
-}
-.crs-num.before{color:rgba(255,255,255,.4);}
-.crs-num.after{
-  color:#FFD700;
-  text-shadow:0 0 30px rgba(255,215,0,.4);
-}
-.crs-arrow{
-  font-size:1.4rem;color:rgba(255,255,255,.25);
-  align-self:center;padding:0 .4rem;
-}
-.crs-boost{
-  background:rgba(255,215,0,.12);border:1px solid rgba(255,215,0,.3);
-  border-radius:8px;padding:.3rem .7rem;
-  font-size:.73rem;font-weight:800;color:#FFD700;
-  white-space:nowrap;
-}
-.crs-caption{
-  font-size:.68rem;color:rgba(255,255,255,.32);
-  text-align:center;margin-top:.65rem;
-  position:relative;z-index:1;
-}
+/* ---- CRS VISUALIZER --------------------------------------------------------*/
+.crs-viz{ background:linear-gradient(135deg,#0D1117,#1A2540); border-radius:var(--r-xl); padding:1.5rem 1.2rem; margin:1.1rem 0; position:relative; overflow:hidden; }
+.crs-viz::before{ content:''; position:absolute; width:200px; height:200px; border-radius:50%; background:radial-gradient(circle,rgba(185,18,37,.28),transparent 65%); top:-70px; right:-50px; pointer-events:none; }
+.crs-viz::after{ content:''; position:absolute; width:160px; height:160px; border-radius:50%; background:radial-gradient(circle,rgba(22,80,212,.22),transparent 65%); bottom:-50px; left:-40px; pointer-events:none; }
+.crs-label-row{ display:flex; justify-content:space-between; align-items:center; margin-bottom:.7rem; position:relative; z-index:1; }
+.crs-score-label{ font-size:.65rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.crs-score-label.before{ color:rgba(255,255,255,.35); }
+.crs-score-label.after{ color:var(--gold-300); }
+.crs-bar-wrap{ position:relative; z-index:1; margin-bottom:.65rem; }
+.crs-bar-bg{ height:10px; background:rgba(255,255,255,.1); border-radius:var(--r-full); overflow:visible; position:relative; }
+.crs-bar-before{ position:absolute; left:0; top:0; height:100%; background:rgba(255,255,255,.25); border-radius:var(--r-full); width:58%; }
+.crs-bar-after{ position:absolute; left:0; top:0; height:100%; background:linear-gradient(90deg,var(--maple),#FF6B35); border-radius:var(--r-full); width:85%; animation:growBar 1.8s ease forwards; }
+@keyframes growBar{ from{width:58%} to{width:85%} }
+.crs-scores{ display:flex; justify-content:space-between; align-items:flex-end; position:relative; z-index:1; }
+.crs-num{ font-family:var(--font-serif); font-size:2.4rem; font-weight:400; line-height:1; }
+.crs-num.before{ color:rgba(255,255,255,.4); }
+.crs-num.after{ color:var(--gold-300); text-shadow:0 0 30px rgba(255,215,0,.4); }
+.crs-arrow{ font-size:1.4rem; color:rgba(255,255,255,.25); align-self:center; padding:0 .4rem; }
+.crs-boost{ background:rgba(255,215,0,.12); border:1px solid rgba(255,215,0,.3); border-radius:var(--r-sm); padding:.3rem .7rem; font-size:.73rem; font-weight:800; color:var(--gold-300); white-space:nowrap; }
+.crs-caption{ font-size:.68rem; color:rgba(255,255,255,.32); text-align:center; margin-top:.65rem; position:relative; z-index:1; }
+.crs-sub-label{ font-size:.6rem; margin-top:.18rem; }
 
-/* ─── INSIGHT CARDS ─── */
-.insight-grid{
-  display:flex;flex-direction:column;gap:.6rem;
-  margin-top:.8rem;
-}
-.insight-card{
-  display:flex;align-items:flex-start;gap:.85rem;
-  background:#fff;border:1.5px solid var(--border);
-  border-radius:12px;padding:.9rem 1rem;
-  box-shadow:var(--sh);
-}
-.ic-num{
-  width:32px;height:32px;border-radius:9px;
-  background:var(--red-l);
-  font-size:.75rem;font-weight:800;color:var(--maple);
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;
-}
-.ic-title{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.15rem;}
-.ic-desc{font-size:.76rem;color:var(--muted);line-height:1.56;}
+/* ---- INSIGHT CARDS ---------------------------------------------------------*/
+.insight-grid{ display:flex; flex-direction:column; gap:.6rem; margin-top:.8rem; }
+.insight-card{ display:flex; align-items:flex-start; gap:.85rem; background:#fff; border:1.5px solid var(--border); border-radius:var(--r-md); padding:.9rem 1rem; box-shadow:var(--shadow-sm); }
+.ic-num{ width:32px; height:32px; border-radius:var(--r-sm); background:var(--red-l); font-size:.75rem; font-weight:800; color:var(--maple); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.ic-title{ font-size:.88rem; font-weight:700; color:var(--ink); margin-bottom:.15rem; }
+.ic-desc{ font-size:.76rem; color:var(--muted); line-height:1.56; }
 
-/* ─── TESTIMONIALS ─── */
-.testi-stack{display:flex;flex-direction:column;gap:.75rem;margin-top:.9rem;}
-.testi{
-  background:#fff;border:1.5px solid var(--border);
-  border-radius:14px;padding:1.1rem;
-  box-shadow:var(--sh);
-}
-.testi-wa-badge{
-  display:inline-flex;align-items:center;gap:.3rem;
-  background:#F0FFF4;border:1px solid rgba(37,211,102,.25);
-  border-radius:100px;padding:.18rem .6rem;
-  font-size:.6rem;font-weight:700;color:var(--green);
-  margin-bottom:.62rem;
-}
-.testi-text{
-  font-size:.86rem;color:var(--ink2);line-height:1.68;
-  font-style:italic;margin-bottom:.7rem;
-  padding-left:.75rem;border-left:3px solid var(--maple);
-}
-.testi-foot{display:flex;align-items:center;gap:.6rem;}
-.testi-avatar{
-  width:36px;height:36px;border-radius:50%;
-  background:linear-gradient(135deg,var(--maple),#FF6B35);
-  display:flex;align-items:center;justify-content:center;
-  font-size:.75rem;font-weight:800;color:#fff;flex-shrink:0;
-}
-.testi-name{font-size:.8rem;font-weight:700;color:var(--ink);}
-.testi-meta{font-size:.67rem;color:var(--pale);}
-.testi-result{
-  display:inline-flex;align-items:center;gap:.2rem;
-  background:#F0FFF4;border:1px solid rgba(26,158,82,.2);
-  border-radius:5px;padding:.06rem .4rem;
-  font-size:.64rem;font-weight:700;color:var(--green);
-  margin-left:.4rem;
-}
+/* ---- TESTIMONIALS -----------------------------------------------------------*/
+.testi-stack{ display:flex; flex-direction:column; gap:.75rem; margin-top:.9rem; }
+.testi{ background:#fff; border:1.5px solid var(--border); border-radius:var(--r-lg); padding:1.1rem; box-shadow:var(--shadow-sm); }
+.testi-wa-badge{ display:inline-flex; align-items:center; gap:.3rem; background:var(--wa-50); border:1px solid rgba(37,211,102,.25); border-radius:var(--r-full); padding:.18rem .6rem; font-size:.6rem; font-weight:700; color:var(--green); margin-bottom:.62rem; }
+.testi-text{ font-size:.86rem; color:var(--ink-700); line-height:1.68; font-style:italic; margin-bottom:.7rem; padding-left:.75rem; border-left:3px solid var(--maple); }
+.testi-foot{ display:flex; align-items:center; gap:.6rem; }
+.testi-avatar{ width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--maple),#FF6B35); display:flex; align-items:center; justify-content:center; font-size:.75rem; font-weight:800; color:#fff; flex-shrink:0; }
+.testi-name{ font-size:.8rem; font-weight:700; color:var(--ink); }
+.testi-meta{ font-size:.67rem; color:var(--ink-300); }
+.testi-result{ display:inline-flex; align-items:center; gap:.2rem; background:var(--wa-50); border:1px solid rgba(22,163,74,.2); border-radius:5px; padding:.06rem .4rem; font-size:.64rem; font-weight:700; color:var(--green); margin-left:.4rem; }
 
-/* ─── BENEFIT LIST ─── */
-.benefit-list{
-  display:flex;flex-direction:column;gap:.5rem;
-  margin:.85rem 0 1.1rem;
-}
-.benefit{
-  display:flex;align-items:center;gap:.75rem;
-  padding:.72rem .9rem;background:#fff;
-  border:1.5px solid var(--border);border-radius:11px;
-  font-size:.86rem;font-weight:600;color:var(--ink2);
-}
-.benefit-ico{
-  width:28px;height:28px;border-radius:8px;
-  background:var(--red-l);
-  display:flex;align-items:center;justify-content:center;
-  font-size:.95rem;flex-shrink:0;
-}
+/* ---- BENEFIT LIST -----------------------------------------------------------*/
+.benefit-list{ display:flex; flex-direction:column; gap:.5rem; margin:.85rem 0 1.1rem; }
+.benefit{ display:flex; align-items:center; gap:.75rem; padding:.72rem .9rem; background:#fff; border:1.5px solid var(--border); border-radius:var(--r-md); font-size:.86rem; font-weight:600; color:var(--ink-700); }
+.benefit-ico{ width:28px; height:28px; border-radius:var(--r-sm); background:var(--red-l); display:flex; align-items:center; justify-content:center; font-size:.95rem; flex-shrink:0; }
 
-/* ─── BEFORE/AFTER ─── */
-.ba-wrap{
-  display:grid;grid-template-columns:1fr 1fr;gap:.6rem;
-  margin:.9rem 0;
-}
-.ba-card{
-  border-radius:12px;padding:1rem .85rem;
-  border:1.5px solid;
-}
-.ba-card.before{
-  background:#FFF8F8;border-color:rgba(200,16,46,.15);
-}
-.ba-card.after{
-  background:#F0FFF4;border-color:rgba(26,158,82,.2);
-}
-.ba-tag{font-size:.58rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;}
-.ba-tag.b{color:var(--maple);}
-.ba-tag.a{color:var(--green);}
-.ba-score{
-  font-family:'Lora',serif;
-  font-size:1.8rem;font-weight:600;line-height:1;margin-bottom:.28rem;
-}
-.ba-score.b{color:rgba(13,17,23,.4);}
-.ba-score.a{color:var(--green);}
-.ba-desc{font-size:.68rem;color:var(--muted);line-height:1.45;}
-.ba-arrow-row{
-  display:flex;align-items:center;justify-content:center;
-  grid-column:1/-1;
-  font-size:.72rem;font-weight:700;color:var(--green);
-  gap:.35rem;margin-top:-.35rem;margin-bottom:-.35rem;
-  position:relative;z-index:1;
-}
+/* ---- BEFORE/AFTER -----------------------------------------------------------*/
+.ba-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:.6rem; margin:.9rem 0; }
+.ba-card{ border-radius:var(--r-md); padding:1rem .85rem; border:1.5px solid; }
+.ba-card.before{ background:#FFF8F8; border-color:rgba(185,18,37,.15); }
+.ba-card.after{ background:var(--wa-50); border-color:rgba(22,163,74,.2); }
+.ba-tag{ font-size:.58rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; margin-bottom:.5rem; }
+.ba-tag.b{ color:var(--maple); }
+.ba-tag.a{ color:var(--green); }
+.ba-score{ font-family:var(--font-serif); font-size:2rem; font-weight:400; line-height:1; margin-bottom:.28rem; }
+.ba-score.b{ color:rgba(12,26,46,.4); }
+.ba-score.a{ color:var(--green); }
+.ba-desc{ font-size:.68rem; color:var(--muted); line-height:1.45; }
+.ba-arrow-row{ display:flex; align-items:center; justify-content:center; grid-column:1/-1; font-size:.72rem; font-weight:700; color:var(--green); gap:.35rem; margin-top:-.35rem; margin-bottom:-.35rem; position:relative; z-index:1; }
 
-/* ─── HOW IT WORKS ─── */
-.how-steps{
-  display:flex;flex-direction:column;
-  gap:0;margin:.9rem 0;
-  position:relative;
-}
-.how-steps::before{
-  content:'';position:absolute;
-  left:17px;top:28px;bottom:28px;width:2px;
-  background:linear-gradient(to bottom,var(--maple),transparent);
-}
-.how-step{
-  display:flex;gap:1rem;padding:.85rem 0;
-  position:relative;
-}
-.hs-num{
-  width:36px;height:36px;border-radius:50%;
-  background:var(--maple);color:#fff;
-  font-size:.78rem;font-weight:800;
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;z-index:1;
-  box-shadow:0 0 0 4px #fff,0 0 0 5px rgba(200,16,46,.2);
-}
-.hs-title{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.15rem;}
-.hs-desc{font-size:.76rem;color:var(--muted);line-height:1.55;}
-.hs-badge{
-  display:inline-flex;align-items:center;gap:.2rem;
-  background:var(--red-l);border-radius:5px;
-  padding:.1rem .42rem;font-size:.6rem;font-weight:700;
-  color:var(--maple);margin-top:.28rem;
-}
+/* ---- HOW IT WORKS -----------------------------------------------------------*/
+.how-steps{ display:flex; flex-direction:column; gap:0; margin:.9rem 0; position:relative; }
+.how-steps::before{ content:''; position:absolute; left:17px; top:28px; bottom:28px; width:2px; background:linear-gradient(to bottom,var(--maple),transparent); }
+.how-step{ display:flex; gap:1rem; padding:.85rem 0; position:relative; }
+.hs-num{ width:36px; height:36px; border-radius:50%; background:var(--maple); color:#fff; font-size:.78rem; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; z-index:1; box-shadow:0 0 0 4px #fff,0 0 0 5px rgba(185,18,37,.2); }
+.hs-title{ font-size:.88rem; font-weight:700; color:var(--ink); margin-bottom:.15rem; }
+.hs-desc{ font-size:.76rem; color:var(--muted); line-height:1.55; }
+.hs-badge{ display:inline-flex; align-items:center; gap:.2rem; background:var(--red-l); border-radius:5px; padding:.1rem .42rem; font-size:.6rem; font-weight:700; color:var(--maple); margin-top:.28rem; }
 
-/* ─── MID CTA BLOCK ─── */
-.mid-cta{
-  background:linear-gradient(150deg,#0D1117,#1C2A3F);
-  border-radius:18px;padding:1.6rem 1.2rem;
-  text-align:center;margin:0;
-  position:relative;overflow:hidden;
-}
-.mid-cta::before{
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(circle at 80% 20%,rgba(200,16,46,.22),transparent 55%),
-                   radial-gradient(circle at 15% 85%,rgba(37,211,102,.14),transparent 50%);
-}
-.mid-cta>*{position:relative;z-index:1;}
-.mid-cta-eye{font-size:.6rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:.38rem;}
-.mid-cta h3{
-  font-family:'Lora',serif;
-  font-size:1.3rem;font-weight:600;color:#fff;
-  line-height:1.22;margin-bottom:.38rem;
-}
-.mid-cta h3 em{font-style:italic;color:#FFD700;}
-.mid-cta p{font-size:.79rem;color:rgba(255,255,255,.5);margin-bottom:1.1rem;}
+/* ---- MID CTA BLOCK -----------------------------------------------------------*/
+.mid-cta{ background:linear-gradient(150deg,#0D1117,#1C2A3F); border-radius:var(--r-xl); padding:1.6rem 1.2rem; text-align:center; margin:0; position:relative; overflow:hidden; }
+.mid-cta::before{ content:''; position:absolute; inset:0; background-image:radial-gradient(circle at 80% 20%,rgba(185,18,37,.22),transparent 55%),radial-gradient(circle at 15% 85%,rgba(37,211,102,.14),transparent 50%); }
+.mid-cta>*{ position:relative; z-index:1; }
+.mid-cta-eye{ font-size:.6rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:rgba(255,255,255,.28); margin-bottom:.38rem; }
+.mid-cta h3{ font-family:var(--font-serif); font-size:1.5rem; font-weight:400; color:#fff; line-height:1.22; margin-bottom:.38rem; }
+.mid-cta h3 em{ font-style:italic; color:var(--gold-300); }
+.mid-cta p{ font-size:.79rem; color:rgba(255,255,255,.5); margin-bottom:1.1rem; }
 
-/* ─── TRUST LOGOS ROW ─── */
-.trust-row{
-  display:flex;align-items:center;justify-content:center;
-  gap:.5rem;flex-wrap:wrap;margin-top:.9rem;
-}
-.trust-badge{
-  display:inline-flex;align-items:center;gap:.3rem;
-  background:#fff;border:1.5px solid var(--border);
-  border-radius:8px;padding:.32rem .7rem;
-  font-size:.65rem;font-weight:700;color:var(--ink2);
-  box-shadow:var(--sh);
-}
+/* ---- TRUST BADGES ROW --------------------------------------------------------*/
+.trust-row{ display:flex; align-items:center; justify-content:center; gap:.5rem; flex-wrap:wrap; margin-top:.9rem; }
+.trust-badge{ display:inline-flex; align-items:center; gap:.3rem; background:#fff; border:1.5px solid var(--border); border-radius:var(--r-sm); padding:.32rem .7rem; font-size:.65rem; font-weight:700; color:var(--ink-700); box-shadow:var(--shadow-sm); }
 
-/* ─── FINAL CTA ─── */
-.final{
-  background:#fff;
-  padding:2.4rem 1.2rem;
-  text-align:center;
-  border-top:1px solid var(--border);
-}
-.final h2{
-  font-family:'Lora',serif;
-  font-size:clamp(1.4rem,6vw,2rem);
-  font-weight:600;line-height:1.15;
-  color:var(--ink);margin-bottom:.5rem;
-  letter-spacing:-.02em;
-}
-.final h2 em{font-style:italic;color:var(--maple);}
-.final p{font-size:.86rem;color:var(--muted);margin-bottom:1.3rem;line-height:1.6;}
-.urgency-line{
-  display:flex;align-items:center;justify-content:center;gap:.42rem;
-  font-size:.72rem;font-weight:700;color:var(--maple);
-  margin-bottom:1rem;
-}
-.ul-dot{width:6px;height:6px;border-radius:50%;background:var(--maple);animation:blink 1.4s infinite;}
-.final-note{font-size:.65rem;color:var(--pale);margin-top:.65rem;}
+/* ---- FINAL CTA -----------------------------------------------------------*/
+.final{ background:#fff; padding:2.4rem 1.2rem; text-align:center; border-top:1px solid var(--border); }
+.final h2{ font-family:var(--font-serif); font-size:clamp(1.6rem,6vw,2.2rem); font-weight:400; line-height:1.15; color:var(--ink); margin-bottom:.5rem; letter-spacing:-.02em; }
+.final h2 em{ font-style:italic; color:var(--maple); }
+.final p{ font-size:.86rem; color:var(--muted); margin-bottom:1.3rem; line-height:1.6; }
+.urgency-line{ display:flex; align-items:center; justify-content:center; gap:.42rem; font-size:.72rem; font-weight:700; color:var(--maple); margin-bottom:1rem; }
+.ul-dot{ width:6px; height:6px; border-radius:50%; background:var(--maple); animation:ubpulse 1.4s infinite; }
+.final-note{ font-size:.65rem; color:var(--ink-300); margin-top:.65rem; }
 
-/* ─── STICKY BOTTOM ─── */
-.sticky-cta{
-  position:fixed;bottom:0;left:0;right:0;z-index:900;
-  background:#fff;border-top:2px solid var(--border);
-  padding:.72rem 1.1rem calc(.72rem + env(safe-area-inset-bottom));
-  box-shadow:0 -6px 28px rgba(0,0,0,.1);
-}
-.sticky-inner{
-  display:flex;gap:.55rem;align-items:center;max-width:540px;margin:0 auto;
-}
-.sticky-label{
-  flex:1;font-size:.7rem;color:var(--muted);line-height:1.35;font-weight:500;
-}
-.sticky-label b{color:var(--ink);font-weight:700;display:block;font-size:.8rem;}
-.sticky-btn{
-  background:linear-gradient(160deg,var(--wa),var(--wa-d));
-  color:#fff;border:none;border-radius:11px;
-  padding:.72rem 1rem;
-  font-family:'Sora',sans-serif;
-  font-size:.82rem;font-weight:800;
-  cursor:pointer;white-space:nowrap;
-  display:flex;align-items:center;gap:.4rem;
-  box-shadow:0 4px 18px rgba(37,211,102,.32);
-  -webkit-tap-highlight-color:transparent;
-}
+/* ---- STICKY BOTTOM (mobile only) ---------------------------------------------*/
+.sticky-cta{ position:fixed; bottom:0; left:0; right:0; z-index:900; background:#fff; border-top:2px solid var(--border); padding:.72rem 1.1rem calc(.72rem + env(safe-area-inset-bottom)); box-shadow:0 -6px 28px rgba(0,0,0,.1); }
+.sticky-inner{ display:flex; gap:.55rem; align-items:center; max-width:540px; margin:0 auto; }
+.sticky-label{ flex:1; font-size:.7rem; color:var(--muted); line-height:1.35; font-weight:500; }
+.sticky-label b{ color:var(--ink); font-weight:700; display:block; font-size:.8rem; }
+.sticky-btn{ background:linear-gradient(135deg,var(--wa),var(--wa-dark)); color:#fff; border:none; border-radius:var(--r-sm); padding:.72rem 1rem; font-family:var(--font-sans); font-size:.82rem; font-weight:800; cursor:pointer; white-space:nowrap; display:flex; align-items:center; gap:.4rem; box-shadow:0 4px 18px rgba(37,211,102,.32); -webkit-tap-highlight-color:transparent; }
 
-/* ─── PAGE SPACER ─── */
-.page-spacer{height:80px;}
+/* ---- PAGE SPACER (mobile sticky compensation) --------------------------------*/
+.page-spacer{ height:80px; }
 
-/* ─── ANIMATIONS ─── */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(16px);}
-  to{opacity:1;transform:translateY(0);}
-}
-.hero h1,.hero-sub,.btn-wa,.btn-sec{animation:fadeUp .5s ease both;}
-.hero h1{animation-delay:.05s;}
-.hero-sub{animation-delay:.12s;}
-.btn-wa{animation-delay:.2s;}
-.btn-sec{animation-delay:.27s;}
+/* ---- MODAL --------------------------------------------------------------------*/
+#score-modal{ display:none; position:fixed; inset:0; background:rgba(0,0,0,.55); z-index:1000; align-items:flex-end; justify-content:center; }
+#score-modal.open{ display:flex!important; }
+.modal-sheet{ background:#fff; border-radius:var(--r-xl) var(--r-xl) 0 0; padding:1.8rem 1.4rem 2.2rem; width:100%; max-width:540px; animation:slideUp .3s ease; }
+@keyframes slideUp{ from{transform:translateY(100%)} to{transform:translateY(0)} }
+.modal-grabber{ width:40px; height:4px; background:var(--border); border-radius:4px; margin:0 auto 1.4rem; }
+.modal-eye{ font-size:.6rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--maple); margin-bottom:.4rem; }
+.modal-h{ font-family:var(--font-serif); font-size:1.4rem; font-weight:400; color:var(--ink); margin-bottom:.3rem; }
+.modal-sub{ font-size:.82rem; color:var(--muted); margin-bottom:1.3rem; }
+.modal-result{ display:none; background:linear-gradient(135deg,var(--wa-50),#ECFDF5); border:1.5px solid rgba(22,163,74,.22); border-radius:var(--r-md); padding:1rem; margin-bottom:1.1rem; text-align:center; }
+.modal-result-eye{ font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--green); margin-bottom:.25rem; }
+#m-new-score{ font-family:var(--font-serif); font-size:2.7rem; font-weight:400; color:var(--ink); line-height:1; }
+#m-boost{ font-size:.8rem; color:var(--green); font-weight:700; margin-top:.25rem; }
+.modal-result-foot{ font-size:.65rem; color:var(--muted); margin-top:.4rem; }
+.modal-close-btn{ width:100%; margin-top:.55rem; background:none; border:none; font-family:var(--font-sans); font-size:.8rem; color:var(--ink-300); cursor:pointer; padding:.5rem; }
 
-/* ─── DESKTOP ─── */
+/* ---- DESKTOP --------------------------------------------------------------*/
 @media(min-width:640px){
-  .hero{padding:3rem 5vw 3.5rem;max-width:640px;margin:0 auto;}
-  .sec{padding:2.5rem 5vw;max-width:640px;margin:0 auto;}
-  .proof-strip{max-width:640px;margin:0 auto;}
-  .mid-cta{margin:0 5vw;border-radius:20px;}
-  .final{padding:3rem 5vw;}
-  .sticky-cta{display:none;}
-  .page-spacer{height:0;}
+  .hero{ padding:3rem 5vw 3.5rem; max-width:640px; margin:0 auto; }
+  .sec{ padding:2.5rem 5vw; max-width:640px; margin:0 auto; }
+  .proof-strip{ max-width:640px; margin:0 auto; }
+  .mid-cta{ margin:0 5vw; border-radius:var(--r-2xl); }
+  .final{ padding:3rem 5vw; }
+  .sticky-cta{ display:none; }
+  .page-spacer{ height:0; }
 }
 </style>
 </head>
@@ -521,9 +266,9 @@ img{max-width:100%;display:block;}
 <section class="hero">
   <div class="hero-flag">🇨🇦 Canada PR Strategy</div>
 
-  <h1>Planning Canada PR?<br>You Could Be Missing<br><em>50–110 CRS Points.</em></h1>
+  <h1 class="rv">Planning Canada PR?<br>You Could Be Missing<br><em>50–110 CRS Points.</em></h1>
 
-  <p class="hero-sub">
+  <p class="hero-sub rv">
     <strong>Most Indian applicants don't know this:</strong> French proficiency adds 50–110 CRS points directly inside Canada's official formula — on top of your IELTS. In 8–12 weeks, you can claim them.
   </p>
 
@@ -567,10 +312,10 @@ img{max-width:100%;display:block;}
      CRS VISUALIZER
 ════════════════════════════════════════ -->
 <section class="sec">
-  <div class="sec-eye">📊 Real Numbers</div>
-  <h2>Here's what French<br>actually does to <em>your score</em></h2>
+  <div class="sec-eye rv">📊 Real Numbers</div>
+  <h2 class="rv">Here's what French<br>actually does to <em>your score</em></h2>
 
-  <div class="crs-viz">
+  <div class="crs-viz rv">
     <div class="crs-label-row">
       <span class="crs-score-label before">Without French</span>
       <span class="crs-score-label after">With French ✦</span>
@@ -584,12 +329,12 @@ img{max-width:100%;display:block;}
     <div class="crs-scores">
       <div>
         <div class="crs-num before">462</div>
-        <div style="font-size:.6rem;color:rgba(255,255,255,.25);margin-top:.18rem;">Your current CRS</div>
+        <div class="crs-sub-label" style="color:rgba(255,255,255,.25);">Your current CRS</div>
       </div>
       <div class="crs-arrow">→</div>
       <div style="text-align:right">
         <div class="crs-num after">572</div>
-        <div style="font-size:.6rem;color:rgba(255,215,0,.45);margin-top:.18rem;">After French</div>
+        <div class="crs-sub-label" style="color:rgba(255,215,0,.45);">After French</div>
       </div>
       <div class="crs-boost">+110 pts 🍁</div>
     </div>
@@ -603,32 +348,32 @@ img{max-width:100%;display:block;}
      WHY THIS WORKS
 ════════════════════════════════════════ -->
 <section class="sec">
-  <div class="sec-eye">🔑 Why It Works</div>
-  <h2>4 reasons French is the<br><em>smartest move</em> you can make</h2>
+  <div class="sec-eye rv">🔑 Why It Works</div>
+  <h2 class="rv">4 reasons French is the<br><em>smartest move</em> you can make</h2>
 
   <div class="insight-grid">
-    <div class="insight-card">
+    <div class="insight-card rv">
       <div class="ic-num">01</div>
       <div>
         <div class="ic-title">Points are permanent</div>
         <div class="ic-desc">TEF/TCF CRS points don't expire — unlike IELTS which expires in 2 years. One exam. Lifetime advantage.</div>
       </div>
     </div>
-    <div class="insight-card">
+    <div class="insight-card rv">
       <div class="ic-num">02</div>
       <div>
         <div class="ic-title">Almost nobody is doing it</div>
         <div class="ic-desc">500,000+ applicants compete on IELTS. Bilingual candidates face a fraction of that pool. It's a smaller, faster queue.</div>
       </div>
     </div>
-    <div class="insight-card">
+    <div class="insight-card rv">
       <div class="ic-num">03</div>
       <div>
         <div class="ic-title">Opens 3+ extra PR pathways</div>
         <div class="ic-desc">Quebec, NB PNP, Francophone streams — lower cutoffs, fewer competitors. French unlocks doors IELTS can't.</div>
       </div>
     </div>
-    <div class="insight-card">
+    <div class="insight-card rv">
       <div class="ic-num">04</div>
       <div>
         <div class="ic-title">Complete beginners reach CLB 7 in 8–12 weeks</div>
@@ -641,12 +386,12 @@ img{max-width:100%;display:block;}
 <!-- ═══════════════════════════════════════
      MID PAGE CTA
 ════════════════════════════════════════ -->
-<div style="padding:.1rem 1.2rem 2rem;background:var(--bg);">
-  <div class="mid-cta">
+<div style="padding:.1rem 1.2rem 2rem;background:var(--ink-50);">
+  <div class="mid-cta rv">
     <div class="mid-cta-eye">Free · No commitment · Instant reply</div>
     <h3>Find out exactly how many CRS points<br><em>French adds to YOUR profile.</em></h3>
     <p>One WhatsApp message. Our expert calculates it live — for free.</p>
-    <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20know%20exactly%20how%20many%20CRS%20points%20French%20adds%20to%20my%20profile." onclick="fireConversion()" class="btn-wa" style="border-radius:12px;">
+    <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20know%20exactly%20how%20many%20CRS%20points%20French%20adds%20to%20my%20profile." onclick="fireConversion()" class="btn-wa" style="border-radius:var(--r-md);">
       <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Chat with Expert — It's Free
     </a>
@@ -658,10 +403,10 @@ img{max-width:100%;display:block;}
      BEFORE / AFTER
 ════════════════════════════════════════ -->
 <section class="sec">
-  <div class="sec-eye">📈 Real Results</div>
-  <h2>Before French<br>vs. <em>After French</em></h2>
+  <div class="sec-eye rv">📈 Real Results</div>
+  <h2 class="rv">Before French<br>vs. <em>After French</em></h2>
 
-  <div class="ba-wrap">
+  <div class="ba-wrap rv">
     <div class="ba-card before">
       <div class="ba-tag b">BEFORE</div>
       <div class="ba-score b">455</div>
@@ -676,10 +421,11 @@ img{max-width:100%;display:block;}
       <span>↑ +88 CRS points · 8 weeks of French coaching</span>
     </div>
   </div>
+  <p style="font-size:.68rem;color:var(--ink-300);text-align:center;margin-top:-.4rem;">*Illustrative example profile</p>
 
   <!-- TESTIMONIALS -->
   <div class="testi-stack">
-    <div class="testi">
+    <div class="testi rv">
       <div class="testi-wa-badge">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Verified Student
@@ -694,14 +440,14 @@ img{max-width:100%;display:block;}
       </div>
     </div>
 
-    <div class="testi">
+    <div class="testi rv">
       <div class="testi-wa-badge">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Verified Student
       </div>
       <p class="testi-text">"Was stuck at 448 for 8 months. Sanjita told me exactly what French would add to MY profile in the free session. 12 weeks later, 543 CRS. No idea why nobody told me this before."</p>
       <div class="testi-foot">
-        <div class="testi-avatar" style="background:linear-gradient(135deg,#1A56DB,#0EA5E9)">PM</div>
+        <div class="testi-avatar" style="background:linear-gradient(135deg,var(--blue),var(--teal))">PM</div>
         <div>
           <div class="testi-name">Priya M.<span class="testi-result">+95 CRS ✓</span></div>
           <div class="testi-meta">Pharmacist, Pune · Express Entry ITA 2024</div>
@@ -715,20 +461,20 @@ img{max-width:100%;display:block;}
      WHAT YOU GET
 ════════════════════════════════════════ -->
 <section class="sec" style="background:#fff;">
-  <div class="sec-eye">🎁 Free Session Includes</div>
-  <h2>What happens when you<br><em>message us now</em></h2>
+  <div class="sec-eye rv">🎁 Free Session Includes</div>
+  <h2 class="rv">What happens when you<br><em>message us now</em></h2>
 
   <div class="benefit-list">
-    <div class="benefit"><div class="benefit-ico">🧮</div>Your exact CRS boost calculated live — for your specific profile</div>
-    <div class="benefit"><div class="benefit-ico">📚</div>Personalised week-by-week study plan (yours to keep)</div>
-    <div class="benefit"><div class="benefit-ico">🎯</div>TEF vs TCF — which exam suits your PR pathway</div>
-    <div class="benefit"><div class="benefit-ico">🏫</div>Live French demo class: real teaching, not a sales pitch</div>
-    <div class="benefit"><div class="benefit-ico">🗺️</div>Your fastest route to ITA — laid out in one session</div>
+    <div class="benefit rv"><div class="benefit-ico">🧮</div>Your exact CRS boost calculated live — for your specific profile</div>
+    <div class="benefit rv"><div class="benefit-ico">📚</div>Personalised week-by-week study plan (yours to keep)</div>
+    <div class="benefit rv"><div class="benefit-ico">🎯</div>TEF vs TCF — which exam suits your PR pathway</div>
+    <div class="benefit rv"><div class="benefit-ico">🏫</div>Live French demo class: real teaching, not a sales pitch</div>
+    <div class="benefit rv"><div class="benefit-ico">🗺️</div>Your fastest route to ITA — laid out in one session</div>
   </div>
 
-  <div style="background:var(--red-l);border:1.5px solid rgba(200,16,46,.18);border-radius:12px;padding:.9rem 1rem;margin-bottom:1.1rem;">
+  <div class="rv" style="background:var(--red-l);border:1.5px solid rgba(185,18,37,.18);border-radius:var(--r-md);padding:.9rem 1rem;margin-bottom:1.1rem;">
     <div style="font-size:.63rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--maple);margin-bottom:.3rem;">Value ₹4,999 — yours for ₹0</div>
-    <div style="font-size:.84rem;color:var(--ink2);font-weight:600;line-height:1.5;">No hidden charges. No automatic enrollment. No credit card ever. Free means free.</div>
+    <div style="font-size:.84rem;color:var(--ink-700);font-weight:600;line-height:1.5;">No hidden charges. No automatic enrollment. No credit card ever. Free means free.</div>
   </div>
 
   <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20book%20my%20free%20CRS%20strategy%20session." onclick="fireConversion()" class="btn-wa">
@@ -742,11 +488,11 @@ img{max-width:100%;display:block;}
      HOW IT WORKS
 ════════════════════════════════════════ -->
 <section class="sec">
-  <div class="sec-eye">⚡ How It Works</div>
-  <h2>From message to <em>CRS boost</em><br>in 3 steps</h2>
+  <div class="sec-eye rv">⚡ How It Works</div>
+  <h2 class="rv">From message to <em>CRS boost</em><br>in 3 steps</h2>
 
   <div class="how-steps">
-    <div class="how-step">
+    <div class="how-step rv">
       <div class="hs-num">1</div>
       <div>
         <div class="hs-title">Message us on WhatsApp</div>
@@ -754,7 +500,7 @@ img{max-width:100%;display:block;}
         <div class="hs-badge">⏱ 30 seconds</div>
       </div>
     </div>
-    <div class="how-step">
+    <div class="how-step rv">
       <div class="hs-num">2</div>
       <div>
         <div class="hs-title">Get your free CRS calculation</div>
@@ -762,7 +508,7 @@ img{max-width:100%;display:block;}
         <div class="hs-badge">⏱ Same day</div>
       </div>
     </div>
-    <div class="how-step">
+    <div class="how-step rv">
       <div class="hs-num">3</div>
       <div>
         <div class="hs-title">Start your 12-week sprint</div>
@@ -787,7 +533,7 @@ img{max-width:100%;display:block;}
     <div class="ul-dot"></div>
     <span>Next batch filling fast · Limited spots this week</span>
   </div>
-  <h2>Every draw you miss<br>is someone else claiming<br><em>your spot in Canada.</em></h2>
+  <h2 class="rv">Every draw you miss<br>is someone else claiming<br><em>your spot in Canada.</em></h2>
   <p>CRS cutoffs are rising every round. French is still the fastest, most underused advantage in Express Entry — but only if you start now.</p>
 
   <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20check%20how%20much%20French%20can%20boost%20my%20CRS%20score." onclick="fireConversion()" class="btn-wa" style="max-width:420px;margin:0 auto 0;">
@@ -817,20 +563,20 @@ img{max-width:100%;display:block;}
 </div>
 
 <!-- ─── CRS SCORE CHECKER MODAL ─── -->
-<div id="score-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:1000;align-items:flex-end;justify-content:center;">
-  <div style="background:#fff;border-radius:20px 20px 0 0;padding:1.8rem 1.4rem 2.2rem;width:100%;max-width:540px;animation:slideUp .3s ease;">
-    <div style="width:40px;height:4px;background:var(--border);border-radius:4px;margin:0 auto 1.4rem;"></div>
-    <div style="font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--maple);margin-bottom:.4rem;">Free CRS Calculator</div>
-    <div style="font-family:'Lora',serif;font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:.3rem;">Your CRS with French</div>
-    <div style="font-size:.82rem;color:var(--muted);margin-bottom:1.3rem;">Enter your details to see your estimated CRS boost.</div>
+<div id="score-modal">
+  <div class="modal-sheet">
+    <div class="modal-grabber"></div>
+    <div class="modal-eye">Free CRS Calculator</div>
+    <div class="modal-h">Your CRS with French</div>
+    <div class="modal-sub">Enter your details to see your estimated CRS boost.</div>
 
-    <div style="margin-bottom:.75rem;">
-      <label style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink2);display:block;margin-bottom:.3rem;">Current CRS Score (approx.)</label>
-      <input id="m-crs" type="number" placeholder="e.g. 450" style="width:100%;padding:.65rem .9rem;border:2px solid var(--border);border-radius:10px;font-family:'Sora',sans-serif;font-size:.9rem;outline:none;color:var(--ink);" oninput="calcCRS()"/>
+    <div class="field">
+      <label for="m-crs">Current CRS Score (approx.)</label>
+      <input id="m-crs" type="number" placeholder="e.g. 450" oninput="calcCRS()"/>
     </div>
-    <div style="margin-bottom:1.1rem;">
-      <label style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink2);display:block;margin-bottom:.3rem;">Your IELTS overall band</label>
-      <select id="m-ielts" style="width:100%;padding:.65rem .9rem;border:2px solid var(--border);border-radius:10px;font-family:'Sora',sans-serif;font-size:.9rem;outline:none;color:var(--ink);background:#fff;-webkit-appearance:none;" onchange="calcCRS()">
+    <div class="field">
+      <label for="m-ielts">Your IELTS overall band</label>
+      <select id="m-ielts" onchange="calcCRS()">
         <option value="">Select band</option>
         <option value="6">6.0 or below</option>
         <option value="7">7.0–7.5</option>
@@ -838,34 +584,29 @@ img{max-width:100%;display:block;}
       </select>
     </div>
 
-    <div id="m-result" style="display:none;background:linear-gradient(135deg,#F0FFF4,#ECFDF5);border:1.5px solid rgba(26,158,82,.22);border-radius:12px;padding:1rem;margin-bottom:1.1rem;text-align:center;">
-      <div style="font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin-bottom:.25rem;">Estimated CRS with French</div>
-      <div id="m-new-score" style="font-family:'Lora',serif;font-size:2.5rem;font-weight:600;color:var(--ink);line-height:1;"></div>
-      <div id="m-boost" style="font-size:.8rem;color:var(--green);font-weight:700;margin-top:.25rem;"></div>
-      <div style="font-size:.65rem;color:var(--muted);margin-top:.4rem;">*Official IRCC formula estimate · Exact calculation in your free session</div>
+    <div id="m-result" class="modal-result">
+      <div class="modal-result-eye">Estimated CRS with French</div>
+      <div id="m-new-score"></div>
+      <div id="m-boost"></div>
+      <div class="modal-result-foot">*Official IRCC formula estimate · Exact calculation in your free session</div>
     </div>
 
     <a id="m-wa-btn" href="#" onclick="fireConversion()" style="display:none;" class="btn-wa">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Get Exact Calculation on WhatsApp
     </a>
-    <button onclick="closeModal()" style="width:100%;margin-top:.55rem;background:none;border:none;font-family:'Sora',sans-serif;font-size:.8rem;color:var(--pale);cursor:pointer;padding:.5rem;">Close</button>
+    <button onclick="closeModal()" class="modal-close-btn">Close</button>
   </div>
 </div>
 
-<style>
-@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
-#score-modal.open{display:flex!important;}
-</style>
-
+<script src="/assets/js/common.js"></script>
 <script>
 // ─── CRS SCORE CHECKER ───
 function openScoreChecker(){
   document.getElementById('score-modal').classList.add('open');
-  document.getElementById('score-modal').style.display='flex';
 }
 function closeModal(){
-  document.getElementById('score-modal').style.display='none';
+  document.getElementById('score-modal').classList.remove('open');
 }
 document.getElementById('score-modal').addEventListener('click',function(e){
   if(e.target===this)closeModal();
@@ -875,7 +616,7 @@ function calcCRS(){
   var crs=parseInt(document.getElementById('m-crs').value)||0;
   var ielts=document.getElementById('m-ielts').value;
   if(crs<300||crs>1200||!ielts)return;
-  
+
   var boost=50; // French alone minimum
   if(ielts==='8')boost=110; // bilingual max
   else if(ielts==='7')boost=80;
