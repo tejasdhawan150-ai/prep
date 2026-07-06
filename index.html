@@ -1067,7 +1067,7 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
 <body>
 <div class="urgency-bar" id="urgency-bar">
   <div class="ub-dot"></div>
-  <div class="ub-text"><strong>🔥 Limited seats left this batch!</strong> Enrollment closes in 3 days — secure your spot now.</div>
+  <div class="ub-text"><strong>🔥 Limited seats left this batch!</strong> Enrollment closes soon — secure your spot now.</div>
   <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20more%20about%20PrepEve%20IELTS" class="ub-cta" target="_blank">💬 Chat With Us →</a>
   <button class="ub-close" id="ub-close">×</button>
 </div>
@@ -1766,18 +1766,11 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
 </section>
 
 
-<!-- BAND SCORE CALCULATOR -->
-
-
-</section>
-
-
-
-<!-- BAND SCORE CALCULATOR -->
+<!-- BATCH SCHEDULE -->
 <section class="batch-wrap" id="batches">
   <div class="batch-inner">
     <div class="stag rv">Upcoming Batches</div>
-    <h2 class="sh2 rv">Next Batch Starts <em>Soon</em></h2>
+    <h2 class="sh2 rv">Next Batch Starts <em id="batch-heading-month">Soon</em></h2>
     <p class="sdesc rv" style="color:rgba(255,255,255,.45);margin-bottom:2.5rem">Seats fill up fast — every batch is capped at 5 students for quality. Reserve yours now on WhatsApp.</p>
 
     <div class="countdown-banner rv">
@@ -1797,24 +1790,24 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
       <div class="batch-card hot rv">
         <span class="batch-badge badge-hot">🔥 Filling Fast</span>
         <div class="batch-type">Live Coaching · Academic</div>
-        <div class="batch-name">March Batch</div>
-        <div class="batch-date">📅 Starts Apr 1, 2026</div>
+        <div class="batch-name" id="batch-name-academic">Next Batch</div>
+        <div class="batch-date" id="batch-date-academic">📅 Starting soon</div>
         <div class="batch-seats">
           <div class="seats-bar"><div class="seats-fill" style="width:85%"></div></div>
           <div class="seats-text">3 seats left</div>
         </div>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20reserve%20a%20seat%20in%20the%20February%20Batch" class="batch-btn" target="_blank">💬 Reserve My Seat</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20reserve%20a%20seat%20in%20the%20Academic%20batch" class="batch-btn" target="_blank" id="batch-link-academic">💬 Reserve My Seat</a>
       </div>
       <div class="batch-card rv">
         <span class="batch-badge badge-open">✓ Enrolling Open</span>
         <div class="batch-type">Live Coaching · General Training</div>
-        <div class="batch-name">March Batch</div>
-        <div class="batch-date">📅 Starts Apr 1, 2026</div>
+        <div class="batch-name" id="batch-name-general">Next Batch</div>
+        <div class="batch-date" id="batch-date-general">📅 Starting soon</div>
         <div class="batch-seats">
           <div class="seats-bar"><div class="seats-fill" style="width:40%"></div></div>
           <div class="seats-text">12 seats left</div>
         </div>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20the%20March%20General%20Training%20Batch" class="batch-btn" target="_blank">💬 Reserve My Seat</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20the%20General%20Training%20batch" class="batch-btn" target="_blank" id="batch-link-general">💬 Reserve My Seat</a>
       </div>
       <div class="batch-card rv">
         <span class="batch-badge badge-open">✓ Enrolling Open</span>
@@ -2064,7 +2057,7 @@ footer{background:var(--ink);padding:4rem 4% 2rem}
     <a href="https://wa.me/919877714284" target="_blank" style="color:#25D366;text-decoration:none;font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:.4rem">💬 WhatsApp</a>
     <a href="https://instagram.com/prepeve" target="_blank" style="color:#fff;text-decoration:none;font-size:.85rem;font-weight:600;opacity:.8;display:flex;align-items:center;gap:.4rem">📸 Instagram</a>
   </div>
-  <div class="foot-copy">© 2025 PrepEve Education Pvt. Ltd. · All rights reserved · Band 7+ Guarantee · Privacy Policy · Terms of Service · WhatsApp: +91 98777 14284</div>
+  <div class="foot-copy">© <span id="foot-year">2025</span> PrepEve Education Pvt. Ltd. · All rights reserved · Privacy Policy · Terms of Service · WhatsApp: +91 98777 14284</div>
 </footer>
 
 <!-- WA FLOAT -->
@@ -2202,6 +2195,50 @@ function updateCountdown() {
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+
+// -- DYNAMIC BATCH DATES ------------------------------------------------------
+// Batch names and start dates update automatically each month so the page never
+// shows a stale month. "Next batch" = the 1st of next month.
+(function () {
+  var MONTHS = ['January','February','March','April','May','June',
+                'July','August','September','October','November','December'];
+
+  var now = new Date();
+  // First day of next month
+  var start = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+  var monthName = MONTHS[start.getMonth()];
+  var startLabel = monthName + ' 1, ' + start.getFullYear();
+
+  function setText(id, txt) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = txt;
+  }
+  function setHref(id, url) {
+    var el = document.getElementById(id);
+    if (el) el.setAttribute('href', url);
+  }
+
+  setText('batch-heading-month', monthName);
+
+  ['academic', 'general'].forEach(function (type) {
+    setText('batch-name-' + type, monthName + ' Batch');
+    setText('batch-date-' + type, '\uD83D\uDCC5 Starts ' + startLabel);
+  });
+
+  var waBase = 'https://wa.me/919877714284?text=';
+  setHref('batch-link-academic',
+    waBase + encodeURIComponent('Hi! I want to reserve a seat in the ' + monthName + ' Academic batch'));
+  setHref('batch-link-general',
+    waBase + encodeURIComponent('Hi! I want to join the ' + monthName + ' General Training batch'));
+})();
+
+
+// -- DYNAMIC FOOTER YEAR ------------------------------------------------------
+(function () {
+  var el = document.getElementById('foot-year');
+  if (el) el.textContent = new Date().getFullYear();
+})();
 
 
 
