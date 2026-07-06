@@ -267,23 +267,31 @@ input:focus,select:focus{border-color:var(--blue2);outline:none;background:#fff;
 .success-title{font-family:'Instrument Serif',serif;font-size:1.3rem;font-weight:700;color:#fff;}
 .success-sub{font-size:.73rem;color:rgba(255,255,255,.7);margin-top:.15rem;}
 .success-body{padding:1.25rem 1.3rem 1.35rem;}
+.last-step{
+  display:flex;align-items:center;gap:.45rem;justify-content:center;
+  font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  color:#B45309;margin-bottom:.6rem;
+}
+.last-step::before,.last-step::after{content:'';height:1.5px;flex:1;background:#FDE68A;}
 .wa-confirm-btn{
-  display:flex;align-items:center;justify-content:center;gap:.55rem;
+  display:flex;align-items:center;justify-content:center;gap:.6rem;
   background:linear-gradient(135deg,var(--wa),var(--wa2));
-  color:#fff;border-radius:12px;padding:.95rem;
-  font-size:.95rem;font-weight:700;width:100%;
-  box-shadow:0 5px 20px rgba(37,211,102,.3);
+  color:#fff;border-radius:14px;padding:1.1rem .9rem;
+  font-size:1.02rem;font-weight:800;width:100%;
+  box-shadow:0 6px 22px rgba(37,211,102,.38);
   -webkit-tap-highlight-color:transparent;
-  margin-bottom:1.1rem;
+  margin-bottom:.7rem;
+  animation:wapulse 2s ease-out infinite;
 }
-.wa-note{font-size:.68rem;color:var(--muted);text-align:center;margin:-.55rem 0 1.15rem;}
-.cal-btn{
-  display:flex;align-items:center;justify-content:center;gap:.5rem;
-  border:1.5px solid var(--blue-m);background:var(--blue-l);color:var(--blue);
-  border-radius:12px;padding:.8rem;font-size:.86rem;font-weight:700;width:100%;
-  margin:-.35rem 0 1.15rem;
-  -webkit-tap-highlight-color:transparent;
+.wa-confirm-btn svg{width:24px;height:24px;flex-shrink:0;fill:#fff;}
+.wa-confirm-btn:active{transform:scale(.982);}
+@keyframes wapulse{
+  0%{box-shadow:0 6px 22px rgba(37,211,102,.38),0 0 0 0 rgba(37,211,102,.45);}
+  70%{box-shadow:0 6px 22px rgba(37,211,102,.38),0 0 0 13px rgba(37,211,102,0);}
+  100%{box-shadow:0 6px 22px rgba(37,211,102,.38),0 0 0 0 rgba(37,211,102,0);}
 }
+.wa-note{font-size:.7rem;color:var(--muted);text-align:center;margin:0 0 1.2rem;line-height:1.55;}
+.wa-note b{color:var(--ink);}
 .step2{
   background:var(--bg);border:1.5px solid var(--border);border-radius:14px;
   padding:1rem 1rem 1.1rem;margin-bottom:1.15rem;
@@ -717,14 +725,13 @@ input:focus,select:focus{border-color:var(--blue2);outline:none;background:#fff;
         </div>
         <div class="success-body">
 
-          <a class="wa-confirm-btn" id="wa-confirm" href="#" target="_blank" rel="noopener">
-            Confirm on WhatsApp — get my joining link
-          </a>
-          <p class="wa-note">One tap sends us a pre-filled message. You'll get the Google Meet link back on WhatsApp.</p>
+          <div class="last-step">One step left</div>
 
-          <a class="cal-btn" id="cal-btn" href="#" target="_blank" rel="noopener">
-            Add to Google Calendar — so you don't miss it
+          <a class="wa-confirm-btn" id="wa-confirm" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+            Get My Joining Link on WhatsApp
           </a>
+          <p class="wa-note">Opens WhatsApp with a ready message — <b>just press send</b>. Your Google Meet link comes back to you there.</p>
 
           <div class="step2" id="step2">
             <div class="s2-title">One last thing (optional, 10 seconds)</div>
@@ -757,8 +764,8 @@ input:focus,select:focus{border-color:var(--blue2);outline:none;background:#fff;
           <div class="success-step">
             <div class="ss-num">1</div>
             <div>
-              <div class="ss-title">Tap the green button above</div>
-              <div class="ss-desc">Your joining link arrives on WhatsApp — usually within 30 minutes.</div>
+              <div class="ss-title">Tap the green WhatsApp button above</div>
+              <div class="ss-desc">Press send on the ready message — your joining link arrives on WhatsApp, usually within 30 minutes.</div>
             </div>
           </div>
           <div class="success-step">
@@ -1356,20 +1363,6 @@ $('submit-btn').addEventListener('click', function(){
   $('wa-confirm').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
   $('success-sess').textContent = sessName + ' ' + shortDate(sessDate) + ' · 7:00 PM IST · Google Meet';
 
-  // Add-to-calendar: 7:00–8:00 PM IST on the chosen day (floating time + ctz)
-  (function(){
-    function fmt(d,hh){ 
-      var y=d.getFullYear(), m=String(d.getMonth()+1).padStart(2,'0'), dd=String(d.getDate()).padStart(2,'0');
-      return ''+y+m+dd+'T'+hh+'0000';
-    }
-    var cal = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
-      + '&text=' + encodeURIComponent('Free IELTS Masterclass — PrepEve (live with Sanjita)')
-      + '&dates=' + fmt(sessDate,'19') + '/' + fmt(sessDate,'20')
-      + '&ctz=Asia/Kolkata'
-      + '&details=' + encodeURIComponent('Your Google Meet joining link arrives on WhatsApp before the session. Bring a notebook — Sanjita takes live questions.');
-    $('cal-btn').href = cal;
-  })();
-
   // 4) Swap to the success state. No redirect — the success screen IS the next step.
   setTimeout(function(){
     $('reg-form').style.display = 'none';
@@ -1430,7 +1423,6 @@ document.querySelectorAll('.vid-thumb').forEach(function(t){
   $('fname').addEventListener('focus', once);
   $('phone').addEventListener('focus', once);
   $('wa-confirm').addEventListener('click', function(){ track('whatsapp_confirm_click'); });
-  $('cal-btn').addEventListener('click', function(){ track('calendar_add_click'); });
 })();
 
 /* ── Hero video slot: activates itself once HERO_VIDEO_ID is set above ── */
