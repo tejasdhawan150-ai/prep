@@ -26,6 +26,21 @@
       "source": "/ielts-coaching-comparison",
       "destination": "/best-online-ielts-coaching-india",
       "permanent": true
+    },
+    {
+      "source": "/ielts-coaching-mohali",
+      "destination": "/ielts-coaching-chandigarh#mohali",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-coaching-panchkula",
+      "destination": "/ielts-coaching-chandigarh#panchkula",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-coaching-tricity",
+      "destination": "/ielts-coaching-chandigarh",
+      "permanent": true
     }
   ],
   "headers": [
