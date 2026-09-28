@@ -1,5 +1,36 @@
+# Search engines and AI assistants are welcome to read and cite PrepEve.
 User-agent: *
 Allow: /
 Disallow: /thank-you
+
+# OpenAI (ChatGPT search, ChatGPT browsing, model training)
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Google Gemini / AI Overviews, Microsoft Copilot (Bing), Apple Intelligence
+User-agent: Google-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
 
 Sitemap: https://www.prepeve.com/sitemap.xml
