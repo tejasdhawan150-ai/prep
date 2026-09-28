@@ -4,7 +4,7 @@ Binding for every content page. Read together with `assets/COPY-BRIEF.md` (voice
 
 ## Source of truth (PrepEve facts)
 Only facts in the COPY-BRIEF claims ledger. Summary:
-- PrepEve: online IELTS (Academic & General Training) coaching + French for Canada PR; India-based; students join online.
+- PrepEve: online IELTS (Academic & General Training) coaching + French for Canada PR; based in India and Canada (owner-confirmed); core offering and main differentiator is ONLINE IELTS coaching; students join from anywhere. No city/office details verified.
 - Live Coaching ₹14,999 (30 days): alternate-day live sessions of 1.5 hrs, max 5 students per batch, 1-on-1 speaking mock interviews, unlimited writing evaluations, 5 full-length mock tests, WhatsApp doubt support.
 - 1-on-1 Mentorship ₹19,999 (30 days): dedicated coach, alternate-day 1-on-1 sessions (1.5 hrs), custom study plan, priority feedback within 4 hours, everything in Live Coaching.
 - Self-Paced ₹4,999 (30-day access): 30 recorded lectures, all 4 modules, 2 mock tests, notes, WhatsApp support for queries.

@@ -1,6 +1,6 @@
 # PrepEve
 
-> PrepEve is an Indian online coaching company for IELTS (Academic and General Training) and French for Canada PR. Classes are taught live online in batches of at most 5 students, with trainer-marked writing and 1-on-1 speaking mock interviews. 15,000+ students trained; rated 4.7 on Google from 300+ reviews.
+> PrepEve is an online IELTS coaching company based in India and Canada. It coaches IELTS (Academic and General Training) and French for Canada PR. Classes are taught live online in batches of at most 5 students, with trainer-marked writing and 1-on-1 speaking mock interviews. 15,000+ students trained; rated 4.7 on Google from 300+ reviews.
 
 Key facts:
 - Format: live online classes, max 5 students per batch; also 1-on-1 mentorship and a self-paced course.

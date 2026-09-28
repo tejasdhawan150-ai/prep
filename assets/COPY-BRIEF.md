@@ -28,6 +28,7 @@ Never: "unlock your potential", "dream big", "journey", "transform your life", "
 
 ## Claims ledger (checked against the owner's original site)
 USE freely (sourced on the original site):
+- PrepEve is based in India and Canada (confirmed by the owner). Core offering / main moat: online IELTS coaching. No city or office address is verified.
 - 15,000+ students trained (IELTS). Where relevant: "across Canada PR, UK, Australia and study-abroad goals".
 - 4.7★ on Google from 300+ reviews.
 - Live Coaching batches capped at 5 students.
