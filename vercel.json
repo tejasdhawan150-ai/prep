@@ -16,6 +16,16 @@
       "source": "/index",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/ielts-online-coaching",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-coaching-comparison",
+      "destination": "/best-online-ielts-coaching-india",
+      "permanent": true
     }
   ],
   "headers": [
