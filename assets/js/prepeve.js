@@ -1,4 +1,22 @@
 /* PrepEve shared behaviour: nav, reveal, video modal, sticky CTA, analytics events. */
+/* Analytics IDs: paste them here once and every page picks them up. Leave '' to keep disabled. */
+var PV_GA4_ID = '';          // e.g. 'G-XXXXXXXXXX'
+var PV_META_PIXEL_ID = '';   // e.g. '123456789012345'
+
+(function () {
+  if (PV_GA4_ID && typeof window.gtag === 'function') window.gtag('config', PV_GA4_ID);
+  if (PV_META_PIXEL_ID && !window.fbq) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    window.fbq('init', PV_META_PIXEL_ID);
+    window.fbq('track', 'PageView');
+  }
+  // Every demo/webinar booking lands on /thank-you: count it once as a lead for GA4 and Meta.
+  if (/^\/thank-you\/?$/.test(location.pathname)) {
+    if (PV_GA4_ID && typeof window.gtag === 'function') window.gtag('event', 'generate_lead', { send_to: PV_GA4_ID });
+    if (window.fbq) window.fbq('track', 'Lead');
+  }
+})();
+
 (function () {
   function track(name, params) {
     if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
@@ -75,7 +93,10 @@
     if (!a) return;
     var href = a.getAttribute('href') || '';
     var loc = a.getAttribute('data-cta') || '';
-    if (href.indexOf('wa.me') > -1 || href.indexOf('chat.whatsapp.com') > -1) track('whatsapp_click', { cta_location: loc || 'unlabelled' });
+    if (href.indexOf('wa.me') > -1 || href.indexOf('chat.whatsapp.com') > -1) {
+      track('whatsapp_click', { cta_location: loc || 'unlabelled' });
+      if (window.fbq) window.fbq('track', 'Contact');
+    }
     else if (loc) track('cta_click', { cta_location: loc });
   });
 

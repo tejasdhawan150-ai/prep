@@ -17,9 +17,8 @@
   gtag('js', new Date());
   gtag('config', 'AW-765652199', {'transport_type': 'beacon', 'send_page_view': true});
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link rel="preload" href="/assets/fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="stylesheet" href="/assets/css/prepeve.css"/>
 <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
 <style>
@@ -90,6 +89,7 @@ body{background:linear-gradient(180deg,var(--bg-3) 0%,#fff 420px) no-repeat,#fff
         <span class="eyebrow" id="next-h">What happens next</span>
         <div class="steps">
           <div class="step">
+<h2 class="sr-only">What happens next</h2>
             <div class="step-n">1</div>
             <div><h3>Now: send the WhatsApp message</h3><p>It's pre-filled. Until you send it, we can't confirm your seat.</p></div>
           </div>

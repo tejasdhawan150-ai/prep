@@ -13,9 +13,8 @@
   gtag('js', new Date());
   gtag('config', 'AW-765652199');
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link rel="preload" href="/assets/fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="stylesheet" href="/assets/css/prepeve.css"/>
 <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
 <style>
@@ -65,19 +64,20 @@
       <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20need%20help%20finding%20a%20page." class="btn btn-ghost" data-cta="404" target="_blank" rel="noopener">Ask a Trainer on WhatsApp</a>
     </div>
 
+    <h2 class="sr-only">Popular pages</h2>
     <div class="grid g3 nf-links">
       <a href="/webinar" class="card card-hover" data-cta="404-webinar">
-        <div class="ico" aria-hidden="true">🎓</div>
+        <div class="ico" aria-hidden="true"><svg><use href="/assets/img/icons.svg#i-graduation-cap"/></svg></div>
         <h3>Free IELTS Webinar</h3>
         <p>60 minutes, live. Leave knowing where your marks are going and what to fix first.</p>
       </a>
       <a href="/book-demo" class="card card-hover" data-cta="404-demo">
-        <div class="ico" aria-hidden="true">📅</div>
+        <div class="ico" aria-hidden="true"><svg><use href="/assets/img/icons.svg#i-calendar-days"/></svg></div>
         <h3>Free Demo Class</h3>
         <p>A live mini-class, your current level assessed and a personal study plan to keep.</p>
       </a>
       <a href="/book-demo-french" class="card card-hover" data-cta="404-french">
-        <div class="ico" aria-hidden="true">🍁</div>
+        <div class="ico" aria-hidden="true"><svg><use href="/assets/img/icons.svg#i-plane"/></svg></div>
         <h3>French for Canada PR</h3>
         <p>NCLC 7 in French adds up to 50 CRS points. Try a free class first.</p>
       </a>
