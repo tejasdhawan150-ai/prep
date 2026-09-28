@@ -343,6 +343,16 @@ function gtag_report_conversion(url) {
 
 <script src="/assets/js/prepeve.js" defer></script>
 <script>
+function pvUserData(phone, email){
+  if(typeof gtag!=='function') return;
+  var d=String(phone||'').replace(/\D/g,''), ud={};
+  if(d.length===10) d='91'+d;
+  if(d.length>=11) ud.phone_number='+'+d;
+  email=String(email||'').trim().toLowerCase();
+  if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) ud.email=email;
+  if(ud.phone_number||ud.email) gtag('set','user_data',ud);
+}
+
 (function(){
   var SHEET_URL = 'https://script.google.com/macros/s/AKfycbxV6D1QlPWjlPg7QNH4RBQb3PoyisOElpEaKW_mbFkVkyeBfIJKPi7eiGfO42jUSTYLzg/exec';
 
@@ -401,6 +411,7 @@ function gtag_report_conversion(url) {
     }
 
     // Fire Google Ads conversion
+    pvUserData(val('phone'), val('email'));
     gtag_report_conversion();
 
     // Save to sheet in background — never blocks redirect

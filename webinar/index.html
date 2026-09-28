@@ -410,6 +410,16 @@ function v(id){return document.getElementById(id).value.trim();}
   if(chipTime) chipTime.textContent = '7:00 PM IST';
 })();
 /* ── Form submit ── */
+function pvUserData(phone, email){
+  if(typeof gtag!=='function') return;
+  var d=String(phone||'').replace(/\D/g,''), ud={};
+  if(d.length===10) d='91'+d;
+  if(d.length>=11) ud.phone_number='+'+d;
+  email=String(email||'').trim().toLowerCase();
+  if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) ud.email=email;
+  if(ud.phone_number||ud.email) gtag('set','user_data',ud);
+}
+
 document.getElementById('submit-btn').addEventListener('click', function(){
   var name = v('fname');
   var rawPhone = v('phone').replace(/\s/g,'');
@@ -448,6 +458,8 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     + '&source=ielts-webinar',
     {method:'GET', mode:'no-cors'}).catch(function(){});
 
+  // Enhanced Conversions: gtag hashes these before sending
+  pvUserData(phone, '');
   // Fire Google Ads conversion
   fireConv();
 
