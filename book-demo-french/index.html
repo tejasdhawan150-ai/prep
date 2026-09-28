@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
-<title>Missing 50–110 CRS Points? | PrepEve French for Canada PR</title>
+<title>Boost Your CRS Score with French | Free Demo Class — PrepEve</title>
 <meta name="robots" content="noindex"/>
 
 <!-- Google Ads Tag -->
@@ -21,14 +21,6 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
 <style>
-/* ============================================================
-   PREPEVE — BOOK DEMO FRENCH
-   Design system: Plus Jakarta Sans (headings) + Inter (body)
-   Accent: #1A56DB deep blue
-   WA green (#25D366) only on WhatsApp-specific buttons
-   Background: #FFFFFF / #F8F9FA
-   No nav, no footer — single-purpose WhatsApp conversion funnel
-   ============================================================ */
 :root {
   --white: #FFFFFF;
   --bg: #F8F9FA;
@@ -69,7 +61,6 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  padding-top: 0;
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -102,7 +93,7 @@ a { color: inherit; text-decoration: none; }
 /* ---- HERO ---- */
 .hero {
   background: var(--white); padding: 2rem 1.2rem 2.4rem;
-  border-bottom: 1px solid var(--line); position: relative;
+  border-bottom: 1px solid var(--line);
 }
 .hero-flag {
   display: inline-flex; align-items: center; gap: .45rem;
@@ -113,13 +104,32 @@ a { color: inherit; text-decoration: none; }
 }
 .hero h1 {
   font-family: var(--font-head);
-  font-size: clamp(1.9rem, 7.5vw, 2.8rem);
+  font-size: clamp(1.85rem, 7.2vw, 2.75rem);
   font-weight: 800; line-height: 1.15;
   color: var(--ink); margin-bottom: .8rem; letter-spacing: -.02em;
 }
 .hero h1 .accent { color: var(--blue); }
-.hero-sub { font-size: .95rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 1.4rem; max-width: 480px; }
+.hero-proof {
+  display: inline-flex; align-items: center; gap: .45rem;
+  background: #ECFDF5; border: 1.5px solid rgba(22,163,74,.25);
+  border-radius: var(--r-sm); padding: .38rem .85rem;
+  font-size: .82rem; font-weight: 700; color: var(--green);
+  margin-bottom: 1.2rem;
+}
+.hero-sub { font-size: .95rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 1.5rem; max-width: 480px; }
 .hero-sub strong { color: var(--ink); font-weight: 700; }
+
+/* trust bar */
+.hero-trust {
+  display: flex; flex-wrap: wrap; gap: .55rem .9rem;
+  margin-top: 1.1rem; padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+}
+.ht-item {
+  display: flex; align-items: center; gap: .35rem;
+  font-size: .72rem; font-weight: 600; color: var(--ink-soft);
+}
+.ht-icon { font-size: .9rem; }
 
 /* ---- CTA BUTTONS ---- */
 .btn-wa {
@@ -136,24 +146,20 @@ a { color: inherit; text-decoration: none; }
 .btn-wa:active { transform: scale(.97); }
 .btn-wa svg { flex-shrink: 0; }
 
-.btn-sec {
+.btn-blue {
   display: flex; align-items: center; justify-content: center; gap: .5rem;
-  background: var(--white); color: var(--ink);
-  border: 2px solid var(--line); border-radius: var(--r-md);
-  padding: .8rem 1.4rem;
-  font-family: var(--font-body); font-size: .9rem; font-weight: 600;
+  background: var(--blue); color: #fff;
+  border: none; border-radius: var(--r-md);
+  padding: .85rem 1.4rem;
+  font-family: var(--font-body); font-size: .93rem; font-weight: 700;
   cursor: pointer; width: 100%; margin-top: .72rem;
-  transition: border-color .15s, background .15s;
+  transition: background .15s, transform .14s;
   -webkit-tap-highlight-color: transparent;
 }
-.btn-sec:hover { border-color: var(--blue); color: var(--blue); }
-.btn-sec:active { background: var(--bg); }
+.btn-blue:hover { background: var(--blue-dark); transform: translateY(-1px); }
+.btn-blue:active { transform: scale(.97); }
 
 .cta-note { text-align: center; font-size: .67rem; color: var(--ink-faint); margin-top: .55rem; }
-
-/* ---- FRICTION ROW ---- */
-.friction-row { display: flex; align-items: center; justify-content: center; gap: 1.2rem; flex-wrap: wrap; margin-top: .9rem; font-size: .7rem; font-weight: 600; color: var(--ink-muted); }
-.friction-row span { display: flex; align-items: center; gap: .28rem; }
 
 /* ---- PROOF STRIP ---- */
 .proof-strip { background: var(--ink); padding: 1rem 1.2rem; display: grid; grid-template-columns: repeat(3,1fr); gap: 0; }
@@ -163,8 +169,7 @@ a { color: inherit; text-decoration: none; }
 .ps-label { font-size: .57rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: rgba(255,255,255,.42); margin-top: .18rem; }
 
 /* ---- SECTION WRAPPER ---- */
-.sec { padding: 2rem 1.2rem; border-bottom: 1px solid var(--line); }
-.sec:last-of-type { border-bottom: none; }
+.sec { padding: 2.2rem 1.2rem; border-bottom: 1px solid var(--line); }
 .sec-eye {
   display: inline-flex; align-items: center; gap: .38rem;
   font-size: .63rem; font-weight: 800; letter-spacing: .12em;
@@ -178,27 +183,16 @@ a { color: inherit; text-decoration: none; }
 .sec h2 .accent { color: var(--blue); }
 .sec p { font-size: .88rem; color: var(--ink-soft); line-height: 1.72; margin-bottom: 1rem; }
 
-/* ---- CRS VISUALIZER ---- */
-.crs-viz { background: var(--ink); border-radius: var(--r-xl); padding: 1.5rem 1.2rem; margin: 1.1rem 0; position: relative; overflow: hidden; }
-.crs-viz::before { content: ''; position: absolute; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle,rgba(26,86,219,.3),transparent 65%); top: -70px; right: -50px; pointer-events: none; }
-.crs-viz::after { content: ''; position: absolute; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(circle,rgba(59,130,246,.2),transparent 65%); bottom: -50px; left: -40px; pointer-events: none; }
-.crs-label-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: .7rem; position: relative; z-index: 1; }
-.crs-score-label { font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.crs-score-label.before { color: rgba(255,255,255,.35); }
-.crs-score-label.after { color: #93C5FD; }
-.crs-bar-wrap { position: relative; z-index: 1; margin-bottom: .65rem; }
-.crs-bar-bg { height: 10px; background: rgba(255,255,255,.1); border-radius: var(--r-full); overflow: visible; position: relative; }
-.crs-bar-before { position: absolute; left: 0; top: 0; height: 100%; background: rgba(255,255,255,.25); border-radius: var(--r-full); width: 58%; }
-.crs-bar-after { position: absolute; left: 0; top: 0; height: 100%; background: linear-gradient(90deg, var(--blue), var(--blue-mid)); border-radius: var(--r-full); width: 85%; animation: growBar 1.8s ease forwards; }
-@keyframes growBar { from{width:58%} to{width:85%} }
-.crs-scores { display: flex; justify-content: space-between; align-items: flex-end; position: relative; z-index: 1; }
-.crs-num { font-family: var(--font-head); font-size: 2.4rem; font-weight: 800; line-height: 1; }
-.crs-num.before { color: rgba(255,255,255,.4); }
-.crs-num.after { color: #93C5FD; text-shadow: 0 0 30px rgba(147,197,253,.3); }
-.crs-arrow { font-size: 1.4rem; color: rgba(255,255,255,.25); align-self: center; padding: 0 .4rem; }
-.crs-boost { background: rgba(147,197,253,.15); border: 1px solid rgba(147,197,253,.3); border-radius: var(--r-sm); padding: .3rem .7rem; font-size: .73rem; font-weight: 700; color: #93C5FD; white-space: nowrap; }
-.crs-caption { font-size: .68rem; color: rgba(255,255,255,.32); text-align: center; margin-top: .65rem; position: relative; z-index: 1; }
-.crs-sub-label { font-size: .6rem; margin-top: .18rem; }
+/* ---- BENEFIT CARDS ---- */
+.benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem; margin: 1rem 0 1.2rem; }
+.benefit-card {
+  background: var(--white); border: 1.5px solid var(--line);
+  border-radius: var(--r-md); padding: 1rem .9rem;
+  box-shadow: var(--shadow-sm);
+}
+.bc-icon { font-size: 1.4rem; margin-bottom: .5rem; }
+.bc-title { font-size: .84rem; font-weight: 700; color: var(--ink); margin-bottom: .28rem; line-height: 1.3; }
+.bc-desc { font-size: .72rem; color: var(--ink-muted); line-height: 1.5; }
 
 /* ---- INSIGHT CARDS ---- */
 .insight-grid { display: flex; flex-direction: column; gap: .6rem; margin-top: .8rem; }
@@ -206,36 +200,6 @@ a { color: inherit; text-decoration: none; }
 .ic-num { width: 32px; height: 32px; border-radius: var(--r-sm); background: var(--blue-light); font-size: .75rem; font-weight: 800; color: var(--blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .ic-title { font-size: .88rem; font-weight: 700; color: var(--ink); margin-bottom: .15rem; }
 .ic-desc { font-size: .76rem; color: var(--ink-muted); line-height: 1.56; }
-
-/* ---- TESTIMONIALS ---- */
-.testi-stack { display: flex; flex-direction: column; gap: .75rem; margin-top: .9rem; }
-.testi { background: var(--white); border: 1.5px solid var(--line); border-radius: var(--r-lg); padding: 1.1rem; box-shadow: var(--shadow-sm); }
-.testi-wa-badge { display: inline-flex; align-items: center; gap: .3rem; background: var(--wa-bg); border: 1px solid rgba(37,211,102,.25); border-radius: var(--r-full); padding: .18rem .6rem; font-size: .6rem; font-weight: 700; color: var(--green); margin-bottom: .62rem; }
-.testi-text { font-size: .86rem; color: var(--ink-soft); line-height: 1.68; font-style: italic; margin-bottom: .7rem; padding-left: .75rem; border-left: 3px solid var(--blue); }
-.testi-foot { display: flex; align-items: center; gap: .6rem; }
-.testi-avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--blue-mid)); display: flex; align-items: center; justify-content: center; font-size: .75rem; font-weight: 800; color: #fff; flex-shrink: 0; }
-.testi-name { font-size: .8rem; font-weight: 700; color: var(--ink); }
-.testi-meta { font-size: .67rem; color: var(--ink-faint); }
-.testi-result { display: inline-flex; align-items: center; gap: .2rem; background: var(--wa-bg); border: 1px solid rgba(22,163,74,.2); border-radius: 5px; padding: .06rem .4rem; font-size: .64rem; font-weight: 700; color: var(--green); margin-left: .4rem; }
-
-/* ---- BENEFIT LIST ---- */
-.benefit-list { display: flex; flex-direction: column; gap: .5rem; margin: .85rem 0 1.1rem; }
-.benefit { display: flex; align-items: center; gap: .75rem; padding: .72rem .9rem; background: var(--white); border: 1.5px solid var(--line); border-radius: var(--r-md); font-size: .86rem; font-weight: 600; color: var(--ink-soft); }
-.benefit-ico { width: 28px; height: 28px; border-radius: var(--r-sm); background: var(--blue-light); display: flex; align-items: center; justify-content: center; font-size: .95rem; flex-shrink: 0; }
-
-/* ---- BEFORE/AFTER ---- */
-.ba-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin: .9rem 0; }
-.ba-card { border-radius: var(--r-md); padding: 1rem .85rem; border: 1.5px solid; }
-.ba-card.before { background: var(--bg); border-color: var(--line); }
-.ba-card.after { background: var(--wa-bg); border-color: rgba(22,163,74,.2); }
-.ba-tag { font-size: .58rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .5rem; }
-.ba-tag.b { color: var(--ink-muted); }
-.ba-tag.a { color: var(--green); }
-.ba-score { font-family: var(--font-head); font-size: 2rem; font-weight: 800; line-height: 1; margin-bottom: .28rem; }
-.ba-score.b { color: rgba(17,24,39,.35); }
-.ba-score.a { color: var(--green); }
-.ba-desc { font-size: .68rem; color: var(--ink-muted); line-height: 1.45; }
-.ba-arrow-row { display: flex; align-items: center; justify-content: center; grid-column: 1/-1; font-size: .72rem; font-weight: 700; color: var(--green); gap: .35rem; margin-top: -.35rem; margin-bottom: -.35rem; position: relative; z-index: 1; }
 
 /* ---- HOW IT WORKS ---- */
 .how-steps { display: flex; flex-direction: column; gap: 0; margin: .9rem 0; position: relative; }
@@ -245,6 +209,40 @@ a { color: inherit; text-decoration: none; }
 .hs-title { font-size: .88rem; font-weight: 700; color: var(--ink); margin-bottom: .15rem; }
 .hs-desc { font-size: .76rem; color: var(--ink-muted); line-height: 1.55; }
 .hs-badge { display: inline-flex; align-items: center; gap: .2rem; background: var(--blue-light); border-radius: 5px; padding: .1rem .42rem; font-size: .6rem; font-weight: 700; color: var(--blue); margin-top: .28rem; }
+
+/* ---- TESTIMONIALS ---- */
+.testi-stack { display: flex; flex-direction: column; gap: .75rem; margin-top: 1rem; }
+.testi { background: var(--white); border: 1.5px solid var(--line); border-radius: var(--r-lg); padding: 1.1rem; box-shadow: var(--shadow-sm); }
+.testi-wa-badge { display: inline-flex; align-items: center; gap: .3rem; background: var(--wa-bg); border: 1px solid rgba(37,211,102,.25); border-radius: var(--r-full); padding: .18rem .6rem; font-size: .6rem; font-weight: 700; color: var(--green); margin-bottom: .62rem; }
+.testi-text { font-size: .86rem; color: var(--ink-soft); line-height: 1.68; font-style: italic; margin-bottom: .7rem; padding-left: .75rem; border-left: 3px solid var(--blue); }
+.testi-foot { display: flex; align-items: center; gap: .6rem; }
+.testi-avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--blue-mid)); display: flex; align-items: center; justify-content: center; font-size: .75rem; font-weight: 800; color: #fff; flex-shrink: 0; }
+.testi-name { font-size: .8rem; font-weight: 700; color: var(--ink); }
+.testi-meta { font-size: .67rem; color: var(--ink-faint); }
+.testi-result { display: inline-flex; align-items: center; gap: .2rem; background: var(--wa-bg); border: 1px solid rgba(22,163,74,.2); border-radius: 5px; padding: .06rem .4rem; font-size: .64rem; font-weight: 700; color: var(--green); margin-left: .4rem; }
+
+/* ---- CRS CHECKER CTA BLOCK ---- */
+.crs-cta-block {
+  background: var(--blue-light); border: 1.5px solid rgba(26,86,219,.18);
+  border-radius: var(--r-lg); padding: 1.3rem 1.1rem; margin: 1.1rem 0;
+  text-align: center;
+}
+.crs-cta-block h3 { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; color: var(--ink); margin-bottom: .3rem; }
+.crs-cta-block p { font-size: .8rem; color: var(--ink-soft); margin-bottom: .9rem; }
+
+/* ---- FAQ ---- */
+.faq-list { display: flex; flex-direction: column; gap: .55rem; margin-top: .9rem; }
+.faq-item { border: 1.5px solid var(--line); border-radius: var(--r-md); background: var(--white); overflow: hidden; }
+.faq-q {
+  width: 100%; text-align: left; background: none; border: none;
+  font-family: var(--font-body); font-size: .88rem; font-weight: 700; color: var(--ink);
+  padding: 1rem 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+  -webkit-tap-highlight-color: transparent;
+}
+.faq-q .faq-chevron { font-size: .75rem; color: var(--ink-muted); flex-shrink: 0; transition: transform .22s; }
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
+.faq-a { display: none; padding: 0 1.1rem 1rem; font-size: .82rem; color: var(--ink-soft); line-height: 1.7; }
+.faq-item.open .faq-a { display: block; }
 
 /* ---- MID CTA ---- */
 .mid-cta { background: var(--ink); border-radius: var(--r-xl); padding: 1.6rem 1.2rem; text-align: center; margin: 0; position: relative; overflow: hidden; }
@@ -309,6 +307,7 @@ a { color: inherit; text-decoration: none; }
   .final { padding: 3rem 5vw; }
   .sticky-cta { display: none; }
   .page-spacer { height: 0; }
+  .benefit-grid { grid-template-columns: repeat(2,1fr); }
 }
 </style>
 </head>
@@ -317,47 +316,53 @@ a { color: inherit; text-decoration: none; }
 <!-- URGENCY BAR -->
 <div class="urg-bar">
   <div class="urg-dot"></div>
-  <span>Next batch filling fast · Only a few spots left this week</span>
+  <span>Limited Demo Slots &middot; Book Your Free French Class Today</span>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-flag">🇨🇦 Canada PR Strategy</div>
+  <div class="hero-flag">&#127464;&#127462; Canada PR Strategy</div>
 
-  <h1 class="rv">Planning Canada PR?<br>You Could Be Missing<br><span class="accent">50–110 CRS Points.</span></h1>
+  <h1 class="rv">Boost Your CRS Score<br>with French &mdash; Book a<br><span class="accent">Free Demo Class</span></h1>
+
+  <div class="hero-proof rv">
+    &#128200; +50&ndash;110 CRS points possible with French language skills
+  </div>
 
   <p class="hero-sub rv">
-    <strong>Most Indian applicants don't know this:</strong> French proficiency adds 50–110 CRS points directly inside Canada's official formula — on top of your IELTS. In 8–12 weeks, you can claim them.
+    <strong>Most Indian applicants don&rsquo;t know this:</strong> French proficiency adds 50&ndash;110 CRS points directly inside Canada&rsquo;s official formula &mdash; on top of your IELTS. In 8&ndash;12 weeks, you can claim them.
   </p>
 
   <!-- PRIMARY CTA -->
-  <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20saw%20your%20ad%20and%20want%20to%20check%20my%20CRS%20score%20with%20French." onclick="fireConversion()" class="btn-wa" id="hero-wa">
+  <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20saw%20your%20ad%20and%20want%20to%20book%20a%20free%20French%20demo%20class." onclick="fireConversion()" class="btn-wa" id="hero-wa">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Chat with Expert on WhatsApp
+    Book Free Demo Class on WhatsApp
   </a>
 
-  <!-- SECONDARY CTA -->
-  <button class="btn-sec" onclick="openScoreChecker()">
-    📊 Check My CRS Score Free — 30 Seconds
+  <!-- SCORE CHECKER CTA -->
+  <button class="btn-blue rv" onclick="openScoreChecker()">
+    &#128202; Check My CRS Score &mdash; 30 Seconds Free
   </button>
 
-  <p class="cta-note">⚡ Instant reply · No spam · No forms needed</p>
+  <p class="cta-note">&#9889; Instant reply &middot; No spam &middot; No forms needed</p>
 
-  <div class="friction-row">
-    <span>🔒 No sign-up</span>
-    <span>💸 100% Free</span>
-    <span>⏱ 30 seconds</span>
+  <!-- TRUST BAR -->
+  <div class="hero-trust rv">
+    <div class="ht-item"><span class="ht-icon">&#127941;</span> RCIC Certified Coaches</div>
+    <div class="ht-item"><span class="ht-icon">&#128101;</span> 15,000+ Students</div>
+    <div class="ht-item"><span class="ht-icon">&#128176;</span> Money-Back Guarantee</div>
+    <div class="ht-item"><span class="ht-icon">&#11088;</span> 4.7 Rating &middot; 300+ Reviews</div>
   </div>
 </section>
 
 <!-- PROOF STRIP -->
 <div class="proof-strip">
   <div class="ps-cell">
-    <div class="ps-num">6,000+</div>
+    <div class="ps-num">15,000+</div>
     <div class="ps-label">Students</div>
   </div>
   <div class="ps-cell">
-    <div class="ps-num">★ 4.7</div>
+    <div class="ps-num">&#9733; 4.7</div>
     <div class="ps-label">Google Rating</div>
   </div>
   <div class="ps-cell">
@@ -366,72 +371,87 @@ a { color: inherit; text-decoration: none; }
   </div>
 </div>
 
-<!-- CRS VISUALIZER -->
+<!-- WHAT YOU GET -->
 <section class="sec">
-  <div class="sec-eye rv">📊 Real Numbers</div>
-  <h2 class="rv">Here's what French<br>actually does to <span class="accent">your score</span></h2>
+  <div class="sec-eye rv">&#127873; What You Get</div>
+  <h2 class="rv">Your free demo class<br><span class="accent">includes all of this</span></h2>
 
-  <div class="crs-viz rv">
-    <div class="crs-label-row">
-      <span class="crs-score-label before">Without French</span>
-      <span class="crs-score-label after">With French ✦</span>
+  <div class="benefit-grid">
+    <div class="benefit-card rv">
+      <div class="bc-icon">&#129518;</div>
+      <div class="bc-title">Live CRS Calculation</div>
+      <div class="bc-desc">Your exact CRS boost calculated for your specific profile &mdash; live, no estimates.</div>
     </div>
-    <div class="crs-bar-wrap">
-      <div class="crs-bar-bg">
-        <div class="crs-bar-before"></div>
-        <div class="crs-bar-after"></div>
-      </div>
+    <div class="benefit-card rv">
+      <div class="bc-icon">&#127891;</div>
+      <div class="bc-title">Real French Class</div>
+      <div class="bc-desc">A genuine demo lesson &mdash; real teaching, not a sales pitch.</div>
     </div>
-    <div class="crs-scores">
-      <div>
-        <div class="crs-num before">462</div>
-        <div class="crs-sub-label" style="color:rgba(255,255,255,.25);">Your current CRS</div>
-      </div>
-      <div class="crs-arrow">→</div>
-      <div style="text-align:right">
-        <div class="crs-num after">572</div>
-        <div class="crs-sub-label" style="color:rgba(147,197,253,.55);">After French</div>
-      </div>
-      <div class="crs-boost">+110 pts 🍁</div>
+    <div class="benefit-card rv">
+      <div class="bc-icon">&#128203;</div>
+      <div class="bc-title">Personalised Study Plan</div>
+      <div class="bc-desc">Week-by-week schedule tailored to your timeline and target score. Yours to keep.</div>
     </div>
-    <div class="crs-caption">*Example profile · Your score calculated free in your session</div>
+    <div class="benefit-card rv">
+      <div class="bc-icon">&#128506;</div>
+      <div class="bc-title">Fastest Route to ITA</div>
+      <div class="bc-desc">TEF vs TCF advice + your fastest pathway to an Invitation to Apply &mdash; mapped in one session.</div>
+    </div>
   </div>
 
-  <p style="font-size:.82rem;color:var(--ink-muted);text-align:center;margin:0;">This is <strong style="color:var(--ink)">built into Canada's official IRCC formula.</strong><br>It's not a trick. It's a gap most people simply miss.</p>
+  <div class="value-box rv">
+    <div class="value-box-eye">Value &#8377;4,999 &mdash; yours for &#8377;0</div>
+    <div class="value-box-text">No hidden charges. No automatic enrollment. No credit card ever. Free means free.</div>
+  </div>
+
+  <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20book%20my%20free%20French%20demo%20class." onclick="fireConversion()" class="btn-wa">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Claim Free Demo Class on WhatsApp &#8594;
+  </a>
+  <p class="cta-note">&#9889; Instant reply &middot; Seats filling this week</p>
 </section>
 
-<!-- WHY IT WORKS -->
+<!-- CRS SCORE CHECKER SECTION -->
 <section class="sec" style="background:var(--bg);">
-  <div class="sec-eye rv">🔑 Why It Works</div>
-  <h2 class="rv">4 reasons French is the<br><span class="accent">smartest move</span> you can make</h2>
+  <div class="sec-eye rv">&#128202; CRS Score Checker</div>
+  <h2 class="rv">Find out exactly how many<br>points <span class="accent">French adds for you</span></h2>
+  <p class="rv">Enter your current CRS and IELTS band. Get your estimated new score instantly &mdash; using Canada&rsquo;s official IRCC formula.</p>
+
+  <div class="crs-cta-block rv">
+    <h3>&#127385; Your personalised CRS boost in 30 seconds</h3>
+    <p>No sign-up needed. Just two quick details.</p>
+    <button onclick="openScoreChecker()" class="btn-blue" style="width:auto;padding:.85rem 2rem;margin:0 auto;">
+      &#128202; Check My CRS Score &mdash; Free
+    </button>
+  </div>
 
   <div class="insight-grid">
     <div class="insight-card rv">
       <div class="ic-num">01</div>
       <div>
         <div class="ic-title">Points are permanent</div>
-        <div class="ic-desc">TEF/TCF CRS points don't expire — unlike IELTS which expires in 2 years. One exam. Lifetime advantage.</div>
+        <div class="ic-desc">TEF/TCF CRS points don&rsquo;t expire &mdash; unlike IELTS which expires in 2 years. One exam. Lifetime advantage.</div>
       </div>
     </div>
     <div class="insight-card rv">
       <div class="ic-num">02</div>
       <div>
         <div class="ic-title">Almost nobody is doing it</div>
-        <div class="ic-desc">500,000+ applicants compete on IELTS. Bilingual candidates face a fraction of that pool. It's a smaller, faster queue.</div>
+        <div class="ic-desc">500,000+ applicants compete on IELTS. Bilingual candidates face a fraction of that pool. It&rsquo;s a smaller, faster queue.</div>
       </div>
     </div>
     <div class="insight-card rv">
       <div class="ic-num">03</div>
       <div>
         <div class="ic-title">Opens 3+ extra PR pathways</div>
-        <div class="ic-desc">Quebec, NB PNP, Francophone streams — lower cutoffs, fewer competitors. French unlocks doors IELTS can't.</div>
+        <div class="ic-desc">Quebec, NB PNP, Francophone streams &mdash; lower cutoffs, fewer competitors. French unlocks doors IELTS can&rsquo;t.</div>
       </div>
     </div>
     <div class="insight-card rv">
       <div class="ic-num">04</div>
       <div>
-        <div class="ic-title">Complete beginners reach CLB 7 in 8–12 weeks</div>
-        <div class="ic-desc">TEF Canada tests specific formats. Structured 1-on-1 coaching gets you there fast — even from zero French.</div>
+        <div class="ic-title">Complete beginners reach CLB 7 in 8&ndash;12 weeks</div>
+        <div class="ic-desc">TEF Canada tests specific formats. Structured 1-on-1 coaching gets you there fast &mdash; even from zero French.</div>
       </div>
     </div>
   </div>
@@ -440,110 +460,29 @@ a { color: inherit; text-decoration: none; }
 <!-- MID PAGE CTA -->
 <div style="padding:.1rem 1.2rem 2rem;background:var(--bg);">
   <div class="mid-cta rv">
-    <div class="mid-cta-eye">Free · No commitment · Instant reply</div>
+    <div class="mid-cta-eye">Free &middot; No commitment &middot; Instant reply</div>
     <h3>Find out exactly how many CRS points<br><span class="accent">French adds to YOUR profile.</span></h3>
-    <p>One WhatsApp message. Our expert calculates it live — for free.</p>
+    <p>One WhatsApp message. Our expert calculates it live &mdash; for free.</p>
     <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20know%20exactly%20how%20many%20CRS%20points%20French%20adds%20to%20my%20profile." onclick="fireConversion()" class="btn-wa" style="border-radius:var(--r-md);">
       <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Chat with Expert — It's Free
+      Chat with Expert &mdash; It&rsquo;s Free
     </a>
-    <p style="font-size:.65rem;color:rgba(255,255,255,.25);margin-top:.55rem;margin-bottom:0;">📱 Instant reply on WhatsApp · No spam · 30 seconds to start</p>
+    <p style="font-size:.65rem;color:rgba(255,255,255,.25);margin-top:.55rem;margin-bottom:0;">&#128242; Instant reply on WhatsApp &middot; No spam &middot; 30 seconds to start</p>
   </div>
 </div>
 
-<!-- BEFORE / AFTER -->
-<section class="sec">
-  <div class="sec-eye rv">📈 Real Results</div>
-  <h2 class="rv">Before French<br>vs. <span class="accent">After French</span></h2>
-
-  <div class="ba-wrap rv">
-    <div class="ba-card before">
-      <div class="ba-tag b">BEFORE</div>
-      <div class="ba-score b">455</div>
-      <div class="ba-desc">Waiting months. CRS stuck. Competitive draws passing by.</div>
-    </div>
-    <div class="ba-card after">
-      <div class="ba-tag a">AFTER ✓</div>
-      <div class="ba-score a">543</div>
-      <div class="ba-desc">+88 pts with French. ITA received in next draw. PR in process.</div>
-    </div>
-    <div class="ba-arrow-row">
-      <span>↑ +88 CRS points · 8 weeks of French coaching</span>
-    </div>
-  </div>
-  <p style="font-size:.68rem;color:var(--ink-faint);text-align:center;margin-top:-.4rem;">*Illustrative example profile</p>
-
-  <!-- TESTIMONIALS -->
-  <div class="testi-stack">
-    <div class="testi rv">
-      <div class="testi-wa-badge">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Verified Student
-      </div>
-      <p class="testi-text">"I had zero French before I joined. In 10 weeks I passed TEF Canada at CLB 7. My CRS went from 461 to 523. Got my ITA two draws later. I genuinely didn't think this was possible."</p>
-      <div class="testi-foot">
-        <div class="testi-avatar">RS</div>
-        <div>
-          <div class="testi-name">Rahul S.<span class="testi-result">+62 CRS ✓</span></div>
-          <div class="testi-meta">Software Engineer, Hyderabad · PR received 2024</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="testi rv">
-      <div class="testi-wa-badge">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Verified Student
-      </div>
-      <p class="testi-text">"Was stuck at 448 for 8 months. Sanjita told me exactly what French would add to MY profile in the free session. 12 weeks later, 543 CRS. No idea why nobody told me this before."</p>
-      <div class="testi-foot">
-        <div class="testi-avatar" style="background:linear-gradient(135deg,var(--blue-mid),#6366f1)">PM</div>
-        <div>
-          <div class="testi-name">Priya M.<span class="testi-result">+95 CRS ✓</span></div>
-          <div class="testi-meta">Pharmacist, Pune · Express Entry ITA 2024</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT YOU GET -->
-<section class="sec" style="background:var(--white);">
-  <div class="sec-eye rv">🎁 Free Session Includes</div>
-  <h2 class="rv">What happens when you<br><span class="accent">message us now</span></h2>
-
-  <div class="benefit-list">
-    <div class="benefit rv"><div class="benefit-ico">🧮</div>Your exact CRS boost calculated live — for your specific profile</div>
-    <div class="benefit rv"><div class="benefit-ico">📚</div>Personalised week-by-week study plan (yours to keep)</div>
-    <div class="benefit rv"><div class="benefit-ico">🎯</div>TEF vs TCF — which exam suits your PR pathway</div>
-    <div class="benefit rv"><div class="benefit-ico">🏫</div>Live French demo class: real teaching, not a sales pitch</div>
-    <div class="benefit rv"><div class="benefit-ico">🗺️</div>Your fastest route to ITA — laid out in one session</div>
-  </div>
-
-  <div class="value-box rv">
-    <div class="value-box-eye">Value ₹4,999 — yours for ₹0</div>
-    <div class="value-box-text">No hidden charges. No automatic enrollment. No credit card ever. Free means free.</div>
-  </div>
-
-  <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20book%20my%20free%20CRS%20strategy%20session." onclick="fireConversion()" class="btn-wa">
-    <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Claim Free Session on WhatsApp →
-  </a>
-  <p class="cta-note">⚡ Instant reply · Seats filling this week</p>
-</section>
-
 <!-- HOW IT WORKS -->
-<section class="sec" style="background:var(--bg);">
-  <div class="sec-eye rv">⚡ How It Works</div>
-  <h2 class="rv">From message to <span class="accent">CRS boost</span><br>in 3 steps</h2>
+<section class="sec" style="background:var(--white);">
+  <div class="sec-eye rv">&#9889; How It Works</div>
+  <h2 class="rv">From message to <span class="accent">CRS boost</span><br>in 3 simple steps</h2>
 
   <div class="how-steps">
     <div class="how-step rv">
       <div class="hs-num">1</div>
       <div>
         <div class="hs-title">Message us on WhatsApp</div>
-        <div class="hs-desc">Tap the button below. Tell us your current CRS and whether you have IELTS. That's it.</div>
-        <div class="hs-badge">⏱ 30 seconds</div>
+        <div class="hs-desc">Tap the button below. Tell us your current CRS and whether you have IELTS. That&rsquo;s it.</div>
+        <div class="hs-badge">&#9201; 30 seconds</div>
       </div>
     </div>
     <div class="how-step rv">
@@ -551,23 +490,133 @@ a { color: inherit; text-decoration: none; }
       <div>
         <div class="hs-title">Get your free CRS calculation</div>
         <div class="hs-desc">Our RCIC-certified expert calculates exactly how much French adds to YOUR profile. Live. For free.</div>
-        <div class="hs-badge">⏱ Same day</div>
+        <div class="hs-badge">&#9201; Same day</div>
       </div>
     </div>
     <div class="how-step rv">
       <div class="hs-num">3</div>
       <div>
         <div class="hs-title">Start your 12-week sprint</div>
-        <div class="hs-desc">If you're ready, join our structured TEF/TCF program. 1-on-1 coaching. Most students hit CLB 7 in 8–12 weeks.</div>
-        <div class="hs-badge">🍁 ITA in months, not years</div>
+        <div class="hs-desc">If you&rsquo;re ready, join our structured TEF/TCF program. 1-on-1 coaching. Most students hit CLB 7 in 8&ndash;12 weeks.</div>
+        <div class="hs-badge">&#127809; ITA in months, not years</div>
       </div>
     </div>
   </div>
 
   <div class="trust-row">
-    <div class="trust-badge">🏅 RCIC Certified Consultant</div>
-    <div class="trust-badge">🇨🇦 CICC Verified</div>
-    <div class="trust-badge">⭐ 4.7 · 300+ Reviews</div>
+    <div class="trust-badge">&#127885; RCIC Certified Consultant</div>
+    <div class="trust-badge">&#127464;&#127462; CICC Verified</div>
+    <div class="trust-badge">&#11088; 4.7 &middot; 300+ Reviews</div>
+    <div class="trust-badge">&#128176; Money-Back Guarantee</div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec" style="background:var(--bg);">
+  <div class="sec-eye rv">&#128172; Student Results</div>
+  <h2 class="rv">Real students,<br><span class="accent">real CRS boosts</span></h2>
+
+  <div class="testi-stack">
+    <div class="testi rv">
+      <div class="testi-wa-badge">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Verified Student
+      </div>
+      <p class="testi-text">&ldquo;I had zero French before I joined. In 10 weeks I passed TEF Canada at CLB 7. My CRS went from 461 to 523. Got my ITA two draws later. I genuinely didn&rsquo;t think this was possible.&rdquo;</p>
+      <div class="testi-foot">
+        <div class="testi-avatar">RS</div>
+        <div>
+          <div class="testi-name">Rahul S.<span class="testi-result">+62 CRS &#10003;</span></div>
+          <div class="testi-meta">Software Engineer, Hyderabad &middot; PR received 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi rv">
+      <div class="testi-wa-badge">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Verified Student
+      </div>
+      <p class="testi-text">&ldquo;Was stuck at 448 for 8 months. Sanjita told me exactly what French would add to MY profile in the free session. 12 weeks later, 543 CRS. No idea why nobody told me this before.&rdquo;</p>
+      <div class="testi-foot">
+        <div class="testi-avatar" style="background:linear-gradient(135deg,var(--blue-mid),#6366f1)">PM</div>
+        <div>
+          <div class="testi-name">Priya M.<span class="testi-result">+95 CRS &#10003;</span></div>
+          <div class="testi-meta">Pharmacist, Pune &middot; Express Entry ITA 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi rv">
+      <div class="testi-wa-badge">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Verified Student
+      </div>
+      <p class="testi-text">&ldquo;Joined PrepEve with an IELTS 7.5 but CRS stuck at 455. French coaching pushed me to 563 in 11 weeks. The money-back guarantee made it a no-brainer to try. Best decision I made for my PR.&rdquo;</p>
+      <div class="testi-foot">
+        <div class="testi-avatar" style="background:linear-gradient(135deg,#0891b2,#0e7490)">AK</div>
+        <div>
+          <div class="testi-name">Arjun K.<span class="testi-result">+108 CRS &#10003;</span></div>
+          <div class="testi-meta">IT Manager, Bengaluru &middot; PR in process 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" style="background:var(--white);">
+  <div class="sec-eye rv">&#10067; FAQ</div>
+  <h2 class="rv">Common questions<br><span class="accent">answered honestly</span></h2>
+
+  <div class="faq-list">
+    <div class="faq-item rv">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Do I need any French background to join?
+        <span class="faq-chevron">&#9660;</span>
+      </button>
+      <div class="faq-a">No &mdash; most of our students start from absolute zero. TEF Canada tests a specific format, and our structured program is designed to take complete beginners to CLB 7 in 8&ndash;12 weeks. Your free demo class will show you exactly how.</div>
+    </div>
+
+    <div class="faq-item rv">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How much can French really add to my CRS score?
+        <span class="faq-chevron">&#9660;</span>
+      </button>
+      <div class="faq-a">Between 50 and 110 points, depending on your IELTS band. With IELTS 8.0+, French bilingual candidates can receive the full 110-point boost inside Canada&rsquo;s official IRCC formula. Check your exact number using the free CRS calculator on this page &mdash; it takes 30 seconds.</div>
+    </div>
+
+    <div class="faq-item rv">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What does the money-back guarantee cover?
+        <span class="faq-chevron">&#9660;</span>
+      </button>
+      <div class="faq-a">If you follow the program, attend all sessions, and don&rsquo;t achieve CLB 7 in your TEF/TCF exam, we refund your full course fee. Full details shared in your free session. No fine print traps &mdash; we back the result.</div>
+    </div>
+
+    <div class="faq-item rv">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        TEF or TCF &mdash; which exam should I take?
+        <span class="faq-chevron">&#9660;</span>
+      </button>
+      <div class="faq-a">Both are accepted by IRCC for CRS points. The right choice depends on your PR pathway, target province, and test-taking style. Our coaches cover this in your free demo session and recommend the best fit for your specific profile.</div>
+    </div>
+
+    <div class="faq-item rv">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How long does it take to see results?
+        <span class="faq-chevron">&#9660;</span>
+      </button>
+      <div class="faq-a">Most students reach CLB 7 in 8&ndash;12 weeks with consistent study. From there, your updated CRS score is reflected in the next IRCC pool update. Many students receive an ITA within 1&ndash;3 draws after adding French to their profile.</div>
+    </div>
+
+    <div class="faq-item rv">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Is the free demo class really free?
+        <span class="faq-chevron">&#9660;</span>
+      </button>
+      <div class="faq-a">100% free. No credit card. No auto-enrollment. No sales pressure. You get a real CRS calculation, a live French lesson, and a study plan &mdash; yours to keep regardless of whether you join the paid program. Value &#8377;4,999, zero cost to you.</div>
+    </div>
   </div>
 </section>
 
@@ -575,16 +624,16 @@ a { color: inherit; text-decoration: none; }
 <section class="final">
   <div class="urgency-line">
     <div class="ul-dot"></div>
-    <span>Next batch filling fast · Limited spots this week</span>
+    <span>Limited demo slots this week &middot; Filling fast</span>
   </div>
   <h2 class="rv">Every draw you miss<br>is someone else claiming<br><span class="accent">your spot in Canada.</span></h2>
-  <p>CRS cutoffs are rising every round. French is still the fastest, most underused advantage in Express Entry — but only if you start now.</p>
+  <p>CRS cutoffs are rising every round. French is still the fastest, most underused advantage in Express Entry &mdash; but only if you start now.</p>
 
-  <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20check%20how%20much%20French%20can%20boost%20my%20CRS%20score." onclick="fireConversion()" class="btn-wa" style="max-width:420px;margin:0 auto 0;">
+  <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20book%20my%20free%20French%20demo%20class%20and%20check%20my%20CRS%20boost." onclick="fireConversion()" class="btn-wa" style="max-width:420px;margin:0 auto 0;">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Check My CRS Score Free — Now
+    Book Free Demo Class &mdash; WhatsApp
   </a>
-  <p class="final-note">📱 WhatsApp only · Instant reply · Zero commitment · 100% free</p>
+  <p class="final-note">&#128242; WhatsApp only &middot; Instant reply &middot; Zero commitment &middot; 100% free</p>
 </section>
 
 <!-- PAGE SPACER (mobile sticky compensation) -->
@@ -594,12 +643,12 @@ a { color: inherit; text-decoration: none; }
 <div class="sticky-cta" id="sticky">
   <div class="sticky-inner">
     <div class="sticky-label">
-      <b>Check Your CRS Boost — Free</b>
-      Instant WhatsApp reply ⚡
+      <b>Book Free Demo &mdash; Limited Slots</b>
+      Instant WhatsApp reply &#9889;
     </div>
-    <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20check%20how%20much%20French%20can%20boost%20my%20CRS." onclick="fireConversion()" class="sticky-btn">
+    <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20book%20my%20free%20French%20demo%20class." onclick="fireConversion()" class="sticky-btn">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      WhatsApp →
+      WhatsApp &#8594;
     </a>
   </div>
 </div>
@@ -621,7 +670,7 @@ a { color: inherit; text-decoration: none; }
       <select id="m-ielts" onchange="calcCRS()">
         <option value="">Select band</option>
         <option value="6">6.0 or below</option>
-        <option value="7">7.0–7.5</option>
+        <option value="7">7.0&ndash;7.5</option>
         <option value="8">8.0+</option>
       </select>
     </div>
@@ -630,7 +679,7 @@ a { color: inherit; text-decoration: none; }
       <div class="modal-result-eye">Estimated CRS with French</div>
       <div id="m-new-score"></div>
       <div id="m-boost"></div>
-      <div class="modal-result-foot">*Official IRCC formula estimate · Exact calculation in your free session</div>
+      <div class="modal-result-foot">*Official IRCC formula estimate &middot; Exact calculation in your free session</div>
     </div>
 
     <a id="m-wa-btn" href="#" onclick="fireConversion()" style="display:none;" class="btn-wa">
@@ -641,7 +690,6 @@ a { color: inherit; text-decoration: none; }
   </div>
 </div>
 
-<script src="/assets/js/common.js"></script>
 <script>
 // ─── CRS SCORE CHECKER ───
 function openScoreChecker(){
@@ -675,6 +723,14 @@ function calcCRS(){
   fireConversion();
 }
 
+// ─── FAQ TOGGLE ───
+function toggleFaq(btn){
+  var item=btn.closest('.faq-item');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');});
+  if(!isOpen)item.classList.add('open');
+}
+
 // ─── HIDE STICKY WHEN HERO IN VIEW ───
 var heroBtn=document.getElementById('hero-wa');
 var sticky=document.getElementById('sticky');
@@ -682,6 +738,16 @@ if('IntersectionObserver' in window){
   new IntersectionObserver(function(e){
     sticky.style.display=e[0].isIntersecting?'none':'block';
   },{threshold:.1}).observe(heroBtn);
+}
+
+// ─── SCROLL REVEAL ───
+if('IntersectionObserver' in window){
+  var ro=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){ro.observe(el);});
+}else{
+  document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
 }
 
 // ─── ANIMATE STATS ON SCROLL ───

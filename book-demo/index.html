@@ -4,9 +4,9 @@
 <meta name="color-scheme" content="light"/>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Book Your Free Demo Class — PrepEve IELTS</title>
+<title>Book Your Free IELTS Demo Class — PrepEve</title>
 <meta name="robots" content="noindex"/>
-<meta name="description" content="Book your free IELTS demo class with PrepEve. Meet a certified trainer, get a free band score estimate and personalised study plan."/>
+<meta name="description" content="Book a free 60-minute live IELTS demo class with PrepEve. Get a certified trainer, a free band score estimate and a personalised study plan — at zero cost."/>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-765652199"></script>
@@ -29,468 +29,578 @@ function gtag_report_conversion(url) {
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"/>
 
 <style>
 /* ============================================================
-   PREPEVE BOOK-DEMO — matches homepage premium redesign
-   Background: #FFFFFF / #F8F9FA
-   Fonts: Plus Jakarta Sans (headings) + Inter (body)
-   Accent: #1A56DB (deep blue)
-   WA green #25D366 ONLY on WhatsApp-specific buttons
+   PrepEve Book-Demo — Premium Conversion Page
+   White (#FFFFFF) / Near-white (#F8F9FA) background
+   Plus Jakarta Sans (headings) · Inter (body)
+   Accent: #1A56DB · WA green #25D366 only on WA buttons
    ============================================================ */
 :root {
-  --white: #FFFFFF;
-  --bg: #F8F9FA;
-  --bg-alt: #F1F3F5;
-  --ink: #111827;
-  --ink-soft: #374151;
-  --ink-muted: #6B7280;
-  --ink-faint: #9CA3AF;
-  --line: #E5E7EB;
-  --blue: #1A56DB;
-  --blue-dark: #1341B0;
-  --blue-light: #EEF2FF;
-  --blue-mid: #3B82F6;
-  --wa: #25D366;
-  --wa-dark: #128C7E;
-  --r-sm: 8px;
-  --r-md: 12px;
-  --r-lg: 16px;
-  --r-xl: 24px;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
-  --shadow: 0 4px 16px rgba(0,0,0,.08);
-  --shadow-lg: 0 10px 40px rgba(0,0,0,.1);
-  --font-head: 'Plus Jakarta Sans', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --white:      #FFFFFF;
+  --bg:         #F8F9FA;
+  --bg-alt:     #F1F3F5;
+  --ink:        #111827;
+  --ink-soft:   #374151;
+  --ink-muted:  #6B7280;
+  --line:       #E5E7EB;
+  --blue:       #1A56DB;
+  --blue-dk:    #1341B0;
+  --blue-lt:    #EEF2FF;
+  --wa:         #25D366;
+  --wa-dk:      #128C7E;
+  --red:        #EF4444;
+  --r-sm:  8px;
+  --r-md:  12px;
+  --r-lg:  16px;
+  --r-xl:  24px;
+  --sh-sm: 0 1px 3px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.04);
+  --sh:    0 4px 16px rgba(0,0,0,.08);
+  --sh-lg: 0 12px 40px rgba(0,0,0,.10);
+  --fh:    'Plus Jakarta Sans', sans-serif;
+  --fb:    'Inter', sans-serif;
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--white);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  padding-top: 0;
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--white);
+  color:var(--ink);
+  font-family:var(--fb);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
 }
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
 
-/* Reveal animation */
-.rv { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
-.rv.in { opacity: 1; transform: translateY(0); }
+/* ── Scroll reveal ─────────────────────────────────── */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease;}
+.rv.in{opacity:1;transform:translateY(0);}
 
-/* ---- HERO (mobile only) ---- */
-.hero {
-  background: var(--blue);
-  padding: 2rem 1.25rem 1.75rem;
-  position: relative;
-  overflow: hidden;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  width: 280px; height: 280px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.06);
-  bottom: -100px; right: -80px;
-  pointer-events: none;
-}
+/* ── Animations ────────────────────────────────────── */
+@keyframes spin   {to{transform:rotate(360deg);}}
+@keyframes pulse  {0%,100%{box-shadow:0 0 0 0 rgba(26,86,219,.5)}60%{box-shadow:0 0 0 8px rgba(26,86,219,0)}}
+@keyframes pulseR {0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.4)}60%{box-shadow:0 0 0 6px rgba(239,68,68,0)}}
+@keyframes pulseW {0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.5)}60%{box-shadow:0 0 0 8px rgba(255,255,255,0)}}
 
-.live-badge {
-  display: inline-flex; align-items: center; gap: .45rem;
-  background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
-  border-radius: 999px; padding: .28rem .85rem;
-  font-size: .67rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  color: #fff; margin-bottom: .8rem; position: relative; z-index: 1;
+/* ══════════════════════════════════════════════════════
+   MOBILE HERO (hidden on desktop)
+   ══════════════════════════════════════════════════════ */
+.hero{
+  background:#1A56DB;
+  padding:2.25rem 1.25rem 1.75rem;
+  position:relative;
+  overflow:hidden;
 }
-.live-dot {
-  width: 7px; height: 7px; border-radius: 50%; background: #fff; flex-shrink: 0;
-  animation: hpulse 2s infinite;
+.hero::before{
+  content:'';position:absolute;
+  width:320px;height:320px;border-radius:50%;
+  background:rgba(255,255,255,.05);
+  top:-120px;right:-120px;pointer-events:none;
 }
-@keyframes hpulse { 0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.6)} 60%{box-shadow:0 0 0 7px rgba(255,255,255,0)} }
-
-.hero h1 {
-  font-family: var(--font-head);
-  font-size: clamp(1.8rem, 7.5vw, 2.3rem);
-  line-height: 1.15; letter-spacing: -.025em;
-  color: #fff; margin-bottom: .55rem;
-  font-weight: 800; position: relative; z-index: 1;
-}
-.hero h1 em {
-  font-style: normal;
-  text-decoration: underline;
-  text-decoration-color: rgba(255,255,255,.5);
-  text-underline-offset: 4px;
-}
-.hero-sub {
-  font-size: .88rem; color: rgba(255,255,255,.8);
-  line-height: 1.65; margin-bottom: 1.1rem; position: relative; z-index: 1;
+.hero::after{
+  content:'';position:absolute;
+  width:220px;height:220px;border-radius:50%;
+  background:rgba(255,255,255,.04);
+  bottom:-80px;left:-60px;pointer-events:none;
 }
 
-.stats-row {
-  display: grid; grid-template-columns: repeat(3,1fr);
-  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
-  border-radius: var(--r-lg); overflow: hidden;
-  margin-bottom: .25rem; position: relative; z-index: 1;
+.badge{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);
+  border-radius:999px;padding:.3rem .9rem;
+  font-size:.66rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:#fff;margin-bottom:.9rem;position:relative;z-index:1;
 }
-.stat { padding: .65rem .4rem; text-align: center; position: relative; }
-.stat + .stat::before {
-  content: ''; position: absolute; left: 0; top: 15%; height: 70%;
-  width: 1px; background: rgba(255,255,255,.2);
-}
-.stat-val { font-family: var(--font-head); font-size: .95rem; font-weight: 800; color: #fff; line-height: 1; letter-spacing: -.02em; }
-.stat-lbl { font-size: .56rem; color: rgba(255,255,255,.65); margin-top: .22rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
-
-/* ---- COACH STRIP (mobile only) ---- */
-.coach-strip {
-  display: flex; align-items: center; gap: .85rem;
-  margin: .9rem .9rem 0;
-  background: var(--bg); border: 1.5px solid var(--line);
-  border-radius: var(--r-lg); padding: .75rem .95rem;
-  box-shadow: var(--shadow-sm);
-}
-.coach-info { flex: 1; }
-.coach-name { font-family: var(--font-head); font-size: .87rem; color: var(--ink); font-weight: 700; margin-bottom: .12rem; }
-.coach-name span { color: var(--blue); }
-.coach-role { font-size: .72rem; color: var(--blue); font-weight: 600; margin-bottom: .1rem; }
-.coach-note { font-size: .69rem; color: var(--ink-muted); }
-
-/* ---- FORM AREA ---- */
-.form-wrap { padding: .9rem .9rem 2rem; }
-
-.form-card {
-  background: var(--white); border-radius: var(--r-xl);
-  border: 1.5px solid var(--line); box-shadow: var(--shadow-lg); overflow: hidden;
-}
-.form-head {
-  background: var(--blue-light); border-bottom: 1.5px solid #DBEAFE;
-  padding: .9rem 1.15rem; display: flex; align-items: center; gap: .75rem;
-}
-.form-head-icon { font-size: 1.3rem; flex-shrink: 0; }
-.form-head-title { font-family: var(--font-head); font-size: .95rem; font-weight: 800; color: var(--blue-dark); }
-.form-head-sub { font-size: .73rem; color: var(--blue); margin-top: .1rem; font-weight: 500; }
-
-.form-body { padding: 1.15rem 1rem 1rem; }
-
-/* Field styles */
-.field { margin-bottom: .95rem; }
-.field label {
-  display: block; font-size: .82rem; font-weight: 600; color: var(--ink-soft);
-  margin-bottom: .38rem;
-}
-.field input, .field select {
-  width: 100%; padding: .75rem .9rem; font-size: 16px; font-family: var(--font-body);
-  color: var(--ink); background: var(--white);
-  border: 1.5px solid var(--line); border-radius: var(--r-md);
-  outline: none; transition: border-color .15s, box-shadow .15s;
-  min-height: 52px; appearance: none; -webkit-appearance: none;
-}
-.field input:focus, .field select:focus {
-  border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,86,219,.1);
-}
-.field input.err, .field select.err { border-color: #EF4444; }
-.err-msg { font-size: .77rem; color: #EF4444; margin-top: .3rem; display: none; font-weight: 500; }
-.err-msg.show { display: block; }
-.req { color: #EF4444; margin-left: 2px; }
-
-.select-wrap { position: relative; }
-.select-wrap::after {
-  content: ''; position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);
-  border-left: 5px solid transparent; border-right: 5px solid transparent;
-  border-top: 6px solid var(--ink-muted); pointer-events: none;
-}
-.field select { padding-right: 2.5rem; cursor: pointer; }
-
-.privacy {
-  display: flex; align-items: center; gap: .5rem;
-  font-size: .77rem; color: var(--ink-muted);
-  background: var(--bg); border: 1px solid var(--line); border-radius: var(--r-sm);
-  padding: .65rem .85rem; margin-bottom: 1.1rem;
+.badge-dot{
+  width:7px;height:7px;border-radius:50%;background:#fff;
+  flex-shrink:0;animation:pulseW 2s infinite;
 }
 
-.cta-btn {
-  width: 100%; padding: 1.1rem;
-  background: var(--wa); color: #fff; border: none;
-  border-radius: var(--r-lg); font-family: var(--font-body);
-  font-size: 1.05rem; font-weight: 700; letter-spacing: -.01em;
-  cursor: pointer; box-shadow: 0 4px 16px rgba(37,211,102,.3);
-  transition: transform .15s, box-shadow .15s; min-height: 58px;
-  display: flex; align-items: center; justify-content: center; gap: .55rem;
-  -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+.hero h1{
+  font-family:var(--fh);
+  font-size:clamp(1.85rem,7.5vw,2.4rem);
+  line-height:1.13;letter-spacing:-.025em;
+  color:#fff;font-weight:800;
+  margin-bottom:.6rem;position:relative;z-index:1;
 }
-.cta-btn:hover { background: var(--wa-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37,211,102,.35); }
-.cta-btn:active { transform: scale(.97); }
-.cta-btn.loading { opacity: .7; pointer-events: none; }
-.spinner {
-  display: none; width: 20px; height: 20px; border-radius: 50%;
-  border: 2.5px solid rgba(255,255,255,.35); border-top-color: #fff;
-  animation: spin .7s linear infinite; flex-shrink: 0;
-}
-@keyframes spin { to{ transform: rotate(360deg); } }
-.cta-btn.loading .spinner { display: block; }
-.cta-btn.loading .cta-icon, .cta-btn.loading .cta-txt { display: none; }
-
-.phone-fallback {
-  text-align: center; font-size: .84rem; font-weight: 600; color: var(--ink-soft);
-  margin-top: .75rem;
-  background: var(--bg); border: 1.5px solid var(--line); border-radius: var(--r-sm);
-  padding: .7rem 1rem; display: flex; align-items: center; justify-content: center; gap: .4rem;
-}
-.phone-fallback a { color: var(--blue); font-weight: 700; font-size: .95rem; }
-
-.urgency {
-  display: flex; align-items: center; justify-content: center; gap: .4rem;
-  margin-top: .75rem; font-size: .78rem; color: var(--ink-muted); font-weight: 500;
-}
-.urgency-dot {
-  width: 7px; height: 7px; border-radius: 50%; background: #EF4444; flex-shrink: 0;
-  animation: redpulse 2s infinite;
-}
-@keyframes redpulse { 0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.4)} 60%{box-shadow:0 0 0 5px rgba(239,68,68,0)} }
-
-/* ---- SECTIONS ---- */
-.section-wrap { padding: 1.75rem 1rem; border-top: 1.5px solid var(--line); }
-.section-label {
-  font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--ink-muted); margin-bottom: 1.1rem;
+.hero h1 em{
+  font-style:normal;
+  text-decoration:underline;
+  text-decoration-color:rgba(255,255,255,.45);
+  text-underline-offset:5px;
 }
 
-/* Demo steps */
-.demo-steps { display: flex; flex-direction: column; gap: .75rem; }
-.demo-step {
-  display: flex; align-items: flex-start; gap: .9rem;
-  background: var(--bg); border: 1.5px solid var(--line);
-  border-radius: var(--r-lg); padding: .95rem 1rem;
-}
-.demo-num {
-  width: 30px; height: 30px; border-radius: 50%; background: var(--blue);
-  color: #fff; font-size: .75rem; font-weight: 800;
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-  font-family: var(--font-head);
-}
-.demo-step:nth-child(2) .demo-num { background: #0891B2; }
-.demo-step:nth-child(3) .demo-num { background: #D97706; }
-.demo-step:nth-child(4) .demo-num { background: #7C3AED; }
-.demo-title { font-family: var(--font-head); font-size: .87rem; font-weight: 700; color: var(--ink); margin-bottom: .2rem; }
-.demo-desc { font-size: .78rem; color: var(--ink-muted); line-height: 1.65; }
-.demo-note {
-  margin-top: .9rem; text-align: center; font-size: .78rem; color: var(--ink-muted); font-weight: 500;
-  padding: .65rem .8rem; background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: var(--r-md);
+.hero-sub{
+  font-size:.875rem;color:rgba(255,255,255,.82);
+  line-height:1.7;margin-bottom:1.25rem;position:relative;z-index:1;
 }
 
-/* Testimonials */
-.testi-grid { display: flex; flex-direction: column; gap: .75rem; }
-.testi-card {
-  background: var(--white); border: 1.5px solid var(--line);
-  border-radius: var(--r-lg); padding: 1.05rem; box-shadow: var(--shadow-sm);
+/* Stats bar */
+.stats-row{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  background:rgba(255,255,255,.11);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--r-lg);overflow:hidden;
+  position:relative;z-index:1;
 }
-.testi-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: .5rem; }
-.tcard-stars { font-size: .8rem; }
-.tcard-flag { font-size: 1.1rem; }
-.tcard-quote { font-size: .82rem; color: var(--ink-soft); line-height: 1.65; font-weight: 500; margin-bottom: .75rem; font-style: italic; }
-.tcard-author { display: flex; align-items: center; gap: .6rem; }
-.tcard-avatar {
-  width: 40px; height: 40px; border-radius: 50%; color: #fff;
-  font-family: var(--font-head); font-size: .72rem; font-weight: 800;
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+.stat{padding:.7rem .35rem;text-align:center;position:relative;}
+.stat+.stat::before{
+  content:'';position:absolute;left:0;top:15%;height:70%;
+  width:1px;background:rgba(255,255,255,.18);
 }
-.tcard-name { font-family: var(--font-head); font-size: .82rem; font-weight: 700; color: var(--ink); }
-.tcard-meta { font-size: .71rem; color: var(--ink-muted); margin-top: .1rem; }
-
-/* Video testimonials */
-.video-grid { display: flex; flex-direction: column; gap: .85rem; }
-.video-card {
-  display: block; border-radius: var(--r-lg); overflow: hidden;
-  border: 1.5px solid var(--line); box-shadow: var(--shadow-sm);
-  background: var(--white); cursor: pointer; -webkit-tap-highlight-color: transparent;
+.stat-val{
+  font-family:var(--fh);font-size:.94rem;font-weight:800;
+  color:#fff;line-height:1;letter-spacing:-.02em;
 }
-.video-thumb-wrap {
-  position: relative; width: 100%; padding-top: 56.25%; overflow: hidden;
-  background: #111827;
-}
-.video-thumb {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-  object-fit: cover; display: block; transition: transform .3s;
-}
-.video-card:active .video-thumb { transform: scale(1.03); }
-.video-overlay {
-  position: absolute; inset: 0; background: rgba(0,0,0,.3);
-  display: flex; align-items: center; justify-content: center;
-}
-.play-btn {
-  width: 52px; height: 52px; border-radius: 50%;
-  background: rgba(255,255,255,.95);
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,.25);
-}
-.play-btn svg { margin-left: 3px; }
-.video-badge {
-  position: absolute; top: .6rem; left: .6rem;
-  background: rgba(0,0,0,.55); color: #fff;
-  font-size: .65rem; font-weight: 700; padding: .2rem .55rem;
-  border-radius: 999px; letter-spacing: .04em;
-}
-.video-info { padding: .75rem 1rem; }
-.video-title { font-family: var(--font-head); font-size: .84rem; font-weight: 700; color: var(--ink); }
-.video-meta { font-size: .72rem; color: var(--ink-muted); margin-top: .18rem; }
-
-/* What you won't get */
-.nowont-grid { display: flex; flex-direction: column; gap: .75rem; }
-.nowont-item {
-  display: flex; align-items: flex-start; gap: .85rem;
-  background: var(--white); border: 1.5px solid var(--line);
-  border-radius: var(--r-lg); padding: .95rem 1rem; box-shadow: var(--shadow-sm);
-}
-.nowont-icon {
-  width: 36px; height: 36px; border-radius: var(--r-sm);
-  background: #FEF2F2; border: 1px solid #FECACA;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1rem; flex-shrink: 0;
-}
-.nowont-title { font-family: var(--font-head); font-size: .87rem; font-weight: 700; color: var(--ink); margin-bottom: .18rem; }
-.nowont-desc { font-size: .77rem; color: var(--ink-muted); line-height: 1.65; }
-
-/* FAQ */
-.faq-list { display: flex; flex-direction: column; gap: .5rem; }
-.faq-item {
-  background: var(--white); border: 1.5px solid var(--line);
-  border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-sm);
-  transition: border-color .2s;
-}
-.faq-item.open { border-color: var(--blue); }
-.faq-q {
-  width: 100%; background: none; border: none; cursor: pointer;
-  display: flex; align-items: center; justify-content: space-between;
-  gap: .75rem; padding: .95rem 1rem; font-family: var(--font-body);
-  font-size: .85rem; font-weight: 600; color: var(--ink); text-align: left;
-  -webkit-tap-highlight-color: transparent; touch-action: manipulation;
-}
-.faq-icon { flex-shrink: 0; color: var(--blue); font-size: 1.1rem; font-weight: 700; width: 20px; text-align: center; }
-.faq-a {
-  font-size: .8rem; color: var(--ink-muted); line-height: 1.7;
-  padding: 0 1rem; max-height: 0; overflow: hidden;
-  transition: max-height .3s ease, padding .3s ease;
-}
-.faq-item.open .faq-a { max-height: 240px; padding: 0 1rem 1rem; }
-
-/* Sticky bottom bar */
-.sticky-bar {
-  display: none; position: fixed; bottom: 0; left: 0; right: 0;
-  background: var(--white); border-top: 1.5px solid var(--line);
-  padding: .75rem 1rem; z-index: 300; box-shadow: 0 -4px 20px rgba(0,0,0,.08);
-}
-.sticky-bar-btn {
-  width: 100%; padding: 1rem;
-  background: var(--wa); color: #fff;
-  border: none; border-radius: var(--r-md);
-  font-family: var(--font-body); font-size: 1rem; font-weight: 700;
-  cursor: pointer; min-height: 54px;
-  display: flex; align-items: center; justify-content: center; gap: .5rem;
-  -webkit-tap-highlight-color: transparent; touch-action: manipulation;
-  box-shadow: 0 4px 14px rgba(37,211,102,.28);
+.stat-lbl{
+  font-size:.56rem;color:rgba(255,255,255,.68);
+  margin-top:.22rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
 }
 
-@media(max-width: 768px) {
-  .sticky-bar { display: block; }
-  .form-wrap { padding-bottom: 6rem; }
+/* ── Coach strip (mobile) ─── */
+.coach-strip{
+  display:flex;align-items:center;gap:.9rem;
+  margin:.85rem .85rem 0;
+  background:var(--white);border:1.5px solid var(--line);
+  border-radius:var(--r-lg);padding:.8rem 1rem;
+  box-shadow:var(--sh-sm);
+}
+.coach-avt{
+  width:42px;height:42px;border-radius:50%;
+  background:var(--blue);color:#fff;
+  font-family:var(--fh);font-size:.75rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.coach-name{font-family:var(--fh);font-size:.88rem;font-weight:700;color:var(--ink);}
+.coach-name span{color:var(--blue);}
+.coach-role{font-size:.72rem;color:var(--blue);font-weight:600;margin-top:.08rem;}
+.coach-note{font-size:.68rem;color:var(--ink-muted);margin-top:.06rem;}
+
+/* ══════════════════════════════════════════════════════
+   FORM AREA
+   ══════════════════════════════════════════════════════ */
+.form-wrap{padding:.9rem .85rem 2rem;}
+
+.form-card{
+  background:var(--white);
+  border-radius:var(--r-xl);
+  border:1.5px solid var(--line);
+  box-shadow:var(--sh-lg);
+  overflow:hidden;
 }
 
-/* ---- DESKTOP ---- */
-@media(min-width: 769px) {
-  body { background: var(--bg); }
-  .hero, .coach-strip { display: none; }
-  .form-wrap { padding: 0; max-width: 460px; background: transparent; }
+.form-head{
+  background:var(--blue-lt);
+  border-bottom:1.5px solid #DBEAFE;
+  padding:.95rem 1.2rem;
+  display:flex;align-items:center;gap:.75rem;
+}
+.form-head-icon{font-size:1.35rem;flex-shrink:0;}
+.form-head-title{
+  font-family:var(--fh);font-size:.95rem;font-weight:800;
+  color:var(--blue-dk);
+}
+.form-head-sub{font-size:.73rem;color:var(--blue);margin-top:.1rem;font-weight:500;}
 
-  .desktop-wrap {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem;
-    max-width: 980px; margin: 0 auto; padding: 4rem 3rem; align-items: start;
+.form-body{padding:1.2rem 1.1rem 1.1rem;}
+
+/* Fields */
+.field{margin-bottom:1rem;}
+.field label{
+  display:block;font-size:.82rem;font-weight:600;
+  color:var(--ink-soft);margin-bottom:.4rem;
+}
+.field input,.field select{
+  width:100%;padding:.78rem .95rem;
+  font-size:16px;font-family:var(--fb);
+  color:var(--ink);background:var(--white);
+  border:1.5px solid var(--line);border-radius:var(--r-md);
+  outline:none;transition:border-color .15s,box-shadow .15s;
+  min-height:52px;appearance:none;-webkit-appearance:none;
+}
+.field input:focus,.field select:focus{
+  border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,86,219,.12);
+}
+.field input.err,.field select.err{border-color:var(--red);}
+.err-msg{
+  font-size:.77rem;color:var(--red);
+  margin-top:.3rem;display:none;font-weight:500;
+}
+.err-msg.show{display:block;}
+.req{color:var(--red);margin-left:2px;}
+
+.select-wrap{position:relative;}
+.select-wrap::after{
+  content:'';position:absolute;right:1rem;top:50%;transform:translateY(-50%);
+  border-left:5px solid transparent;border-right:5px solid transparent;
+  border-top:6px solid var(--ink-muted);pointer-events:none;
+}
+.field select{padding-right:2.5rem;cursor:pointer;}
+
+.privacy{
+  display:flex;align-items:center;gap:.5rem;
+  font-size:.77rem;color:var(--ink-muted);
+  background:var(--bg);border:1px solid var(--line);
+  border-radius:var(--r-sm);padding:.65rem .85rem;margin-bottom:1.1rem;
+}
+
+/* CTA button — WhatsApp green */
+.cta-btn{
+  width:100%;padding:1.1rem;
+  background:var(--wa);color:#fff;border:none;
+  border-radius:var(--r-lg);
+  font-family:var(--fb);font-size:1.05rem;font-weight:700;letter-spacing:-.01em;
+  cursor:pointer;min-height:58px;
+  display:flex;align-items:center;justify-content:center;gap:.55rem;
+  box-shadow:0 4px 18px rgba(37,211,102,.28);
+  transition:background .15s,transform .12s,box-shadow .15s;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;
+}
+.cta-btn:hover{background:var(--wa-dk);transform:translateY(-1px);box-shadow:0 7px 22px rgba(37,211,102,.32);}
+.cta-btn:active{transform:scale(.97);}
+.cta-btn.loading{opacity:.72;pointer-events:none;}
+.spinner{
+  display:none;width:20px;height:20px;border-radius:50%;
+  border:2.5px solid rgba(255,255,255,.35);border-top-color:#fff;
+  animation:spin .7s linear infinite;flex-shrink:0;
+}
+.cta-btn.loading .spinner{display:block;}
+.cta-btn.loading .cta-icon,.cta-btn.loading .cta-txt{display:none;}
+
+.phone-fallback{
+  text-align:center;font-size:.84rem;font-weight:600;color:var(--ink-soft);
+  margin-top:.8rem;background:var(--bg);border:1.5px solid var(--line);
+  border-radius:var(--r-sm);padding:.7rem 1rem;
+  display:flex;align-items:center;justify-content:center;gap:.4rem;
+}
+.phone-fallback a{color:var(--blue);font-weight:700;font-size:.94rem;}
+
+.urgency{
+  display:flex;align-items:center;justify-content:center;gap:.42rem;
+  margin-top:.8rem;font-size:.78rem;color:var(--ink-muted);font-weight:500;
+}
+.urgency-dot{
+  width:7px;height:7px;border-radius:50%;background:var(--red);
+  flex-shrink:0;animation:pulseR 2s infinite;
+}
+
+/* ══════════════════════════════════════════════════════
+   DESKTOP LAYOUT
+   ══════════════════════════════════════════════════════ */
+@media(min-width:769px){
+  body{background:var(--bg);}
+  .hero,.coach-strip{display:none;}
+  .form-wrap{padding:0;max-width:460px;background:transparent;}
+
+  .page-hero{
+    border-bottom:1.5px solid var(--line);
+    background:var(--white);
   }
-  .desktop-left { display: flex; flex-direction: column; }
-
-  .dtag {
-    display: inline-flex; align-items: center; gap: .5rem;
-    background: var(--blue-light); border: 1px solid rgba(26,86,219,.2);
-    border-radius: 999px; padding: .35rem .95rem; margin-bottom: 1.4rem; width: fit-content;
+  .desktop-wrap{
+    display:grid;grid-template-columns:1fr 460px;gap:4rem;
+    max-width:1020px;margin:0 auto;padding:4.5rem 3rem;align-items:start;
   }
-  .dtag-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); animation: hpulse 2s infinite; }
-  .dtag span { font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--blue); }
+  .desktop-left{display:flex;flex-direction:column;}
 
-  .dh1 {
-    font-family: var(--font-head);
-    font-size: clamp(2.1rem, 3.2vw, 2.9rem);
-    line-height: 1.1; letter-spacing: -.025em;
-    margin-bottom: .9rem; color: var(--ink); font-weight: 800;
+  .dtag{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--blue-lt);border:1px solid rgba(26,86,219,.2);
+    border-radius:999px;padding:.38rem 1rem;margin-bottom:1.5rem;width:fit-content;
   }
-  .dh1 em { font-style: normal; color: var(--blue); }
+  .dtag-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);animation:pulse 2s infinite;flex-shrink:0;}
+  .dtag span{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);}
 
-  .dsub { font-size: .97rem; color: var(--ink-muted); line-height: 1.85; margin-bottom: 1.8rem; }
-
-  .dperks { display: flex; flex-direction: column; gap: .65rem; margin-bottom: 2rem; }
-  .dperk {
-    display: flex; align-items: flex-start; gap: .85rem;
-    background: var(--white); border: 1.5px solid var(--line);
-    border-radius: var(--r-lg); padding: .85rem 1rem; box-shadow: var(--shadow-sm);
+  .dh1{
+    font-family:var(--fh);
+    font-size:clamp(2.1rem,3.2vw,3rem);
+    line-height:1.08;letter-spacing:-.03em;
+    color:var(--ink);font-weight:800;margin-bottom:1rem;
   }
-  .dperk-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: .05rem; }
-  .dperk-title { font-family: var(--font-head); font-size: .87rem; font-weight: 700; color: var(--ink); margin-bottom: .15rem; }
-  .dperk-desc { font-size: .77rem; color: var(--ink-muted); line-height: 1.6; }
+  .dh1 em{font-style:normal;color:var(--blue);}
 
-  .dproof {
-    display: flex; align-items: center; gap: .8rem;
-    padding-top: 1.3rem; border-top: 1.5px solid var(--line);
+  .dsub{
+    font-size:.975rem;color:var(--ink-muted);
+    line-height:1.9;margin-bottom:2rem;max-width:440px;
   }
-  .avs { display: flex; }
-  .av {
-    width: 32px; height: 32px; border-radius: 50%; border: 2.5px solid var(--white);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-head); font-size: .62rem; font-weight: 800; color: #fff;
-    margin-left: -8px; flex-shrink: 0; box-shadow: 0 1px 4px rgba(0,0,0,.12);
-  }
-  .av:first-child { margin-left: 0; }
-  .proof-txt { font-size: .8rem; color: var(--ink-muted); line-height: 1.5; }
-  .proof-txt strong { color: var(--ink); font-weight: 700; }
 
-  .section-wrap {
-    display: block; max-width: 980px; margin: 0 auto;
-    padding: 1.6rem 3rem; border-top: 1.5px solid var(--line);
+  /* Perk cards on left */
+  .dperks{display:flex;flex-direction:column;gap:.7rem;margin-bottom:2.2rem;}
+  .dperk{
+    display:flex;align-items:flex-start;gap:.9rem;
+    background:var(--white);border:1.5px solid var(--line);
+    border-radius:var(--r-lg);padding:.9rem 1.05rem;box-shadow:var(--sh-sm);
   }
-  .section-wrap:first-of-type { border-top: none; }
+  .dperk-icon{font-size:1.3rem;flex-shrink:0;margin-top:.04rem;}
+  .dperk-title{font-family:var(--fh);font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.14rem;}
+  .dperk-desc{font-size:.77rem;color:var(--ink-muted);line-height:1.65;}
 
-  .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
-  .video-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; }
-  .nowont-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: .85rem; }
-  .faq-list { display: grid; grid-template-columns: repeat(2,1fr); gap: .5rem; }
-  .demo-steps { display: grid; grid-template-columns: repeat(2,1fr); gap: .75rem; }
-  .sticky-bar { display: none !important; }
+  /* Social proof row */
+  .dproof{
+    display:flex;align-items:center;gap:.85rem;
+    padding-top:1.4rem;border-top:1.5px solid var(--line);
+  }
+  .avs{display:flex;}
+  .av{
+    width:33px;height:33px;border-radius:50%;border:2.5px solid var(--white);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--fh);font-size:.62rem;font-weight:800;color:#fff;
+    margin-left:-9px;flex-shrink:0;box-shadow:0 1px 5px rgba(0,0,0,.12);
+  }
+  .av:first-child{margin-left:0;}
+  .proof-txt{font-size:.8rem;color:var(--ink-muted);line-height:1.55;}
+  .proof-txt strong{color:var(--ink);font-weight:700;}
+
+  /* Sections on desktop */
+  .section-wrap{
+    max-width:1020px;margin:0 auto;
+    padding:2rem 3rem;border-top:1.5px solid var(--line);
+    background:var(--white);
+  }
+  .section-wrap:nth-child(even){background:var(--bg);}
+
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+  .video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem;}
+  .nowont-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;}
+  .faq-list{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;}
+  .demo-steps{display:grid;grid-template-columns:repeat(2,1fr);gap:.85rem;}
+  .sticky-bar{display:none!important;}
 }
-@media(max-width: 768px) {
-  .desktop-wrap { display: block; }
-  .desktop-left { display: none; }
+
+@media(max-width:768px){
+  .desktop-wrap{display:block;}
+  .desktop-left{display:none;}
+  .page-hero{display:block;}
 }
 
-/* Video modal */
-.vt-modal { position: fixed; inset: 0; z-index: 1100; display: none; align-items: center; justify-content: center; padding: 4%; }
-.vt-modal.show { display: flex; }
-.vt-modal-bg { position: absolute; inset: 0; background: rgba(0,0,0,.85); }
-.vt-modal-content { position: relative; width: 100%; max-width: 900px; aspect-ratio: 16/9; z-index: 1; }
-.vt-modal-content iframe { width: 100%; height: 100%; border-radius: var(--r-md); }
-.vt-modal-close { position: absolute; top: -42px; right: 0; background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer; line-height: 1; }
+/* ══════════════════════════════════════════════════════
+   BODY SECTIONS
+   ══════════════════════════════════════════════════════ */
+.section-wrap{
+  padding:1.85rem 1rem;
+  border-top:1.5px solid var(--line);
+}
+
+.section-label{
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:1.2rem;
+}
+
+/* ── Demo steps ──────────────── */
+.demo-steps{display:flex;flex-direction:column;gap:.75rem;}
+.demo-step{
+  display:flex;align-items:flex-start;gap:.95rem;
+  background:var(--bg);border:1.5px solid var(--line);
+  border-radius:var(--r-lg);padding:1rem 1.05rem;
+}
+.demo-num{
+  width:32px;height:32px;border-radius:50%;
+  background:var(--blue);color:#fff;
+  font-size:.74rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-family:var(--fh);
+}
+.demo-step:nth-child(2) .demo-num{background:#0891B2;}
+.demo-step:nth-child(3) .demo-num{background:#D97706;}
+.demo-step:nth-child(4) .demo-num{background:#7C3AED;}
+.demo-title{font-family:var(--fh);font-size:.87rem;font-weight:700;color:var(--ink);margin-bottom:.22rem;}
+.demo-desc{font-size:.79rem;color:var(--ink-muted);line-height:1.65;}
+.demo-note{
+  margin-top:1rem;text-align:center;
+  font-size:.79rem;color:#166534;font-weight:600;
+  padding:.7rem .9rem;
+  background:#F0FDF4;border:1px solid #BBF7D0;border-radius:var(--r-md);
+}
+
+/* ── Why PrepEve differentiators ── */
+.nowont-grid{display:flex;flex-direction:column;gap:.75rem;}
+.nowont-item{
+  display:flex;align-items:flex-start;gap:.9rem;
+  background:var(--white);border:1.5px solid var(--line);
+  border-radius:var(--r-lg);padding:1rem 1.05rem;box-shadow:var(--sh-sm);
+}
+.nowont-icon{
+  width:38px;height:38px;border-radius:var(--r-sm);
+  background:#FEF2F2;border:1px solid #FECACA;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;flex-shrink:0;
+}
+.nowont-title{font-family:var(--fh);font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.18rem;}
+.nowont-desc{font-size:.78rem;color:var(--ink-muted);line-height:1.65;}
+
+/* ── Testimonial cards ────────── */
+.testi-grid{display:flex;flex-direction:column;gap:.8rem;}
+.testi-card{
+  background:var(--white);border:1.5px solid var(--line);
+  border-radius:var(--r-lg);padding:1.1rem;box-shadow:var(--sh-sm);
+}
+.testi-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem;}
+.tcard-stars{font-size:.82rem;}
+.tcard-flag{font-size:1.1rem;}
+.tcard-quote{
+  font-size:.83rem;color:var(--ink-soft);line-height:1.7;
+  font-weight:500;font-style:italic;margin-bottom:.8rem;
+}
+.tcard-author{display:flex;align-items:center;gap:.65rem;}
+.tcard-avatar{
+  width:40px;height:40px;border-radius:50%;
+  color:#fff;font-family:var(--fh);font-size:.72rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.tcard-name{font-family:var(--fh);font-size:.83rem;font-weight:700;color:var(--ink);}
+.tcard-meta{font-size:.71rem;color:var(--ink-muted);margin-top:.1rem;}
+
+/* ── Video testimonial cards ───── */
+.video-grid{display:flex;flex-direction:column;gap:.9rem;}
+.video-card{
+  display:block;border-radius:var(--r-lg);overflow:hidden;
+  border:1.5px solid var(--line);box-shadow:var(--sh-sm);
+  background:var(--white);cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.video-thumb-wrap{
+  position:relative;width:100%;padding-top:56.25%;
+  overflow:hidden;background:#111827;
+}
+.video-thumb{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;display:block;transition:transform .3s;
+}
+.video-card:active .video-thumb{transform:scale(1.03);}
+.video-overlay{
+  position:absolute;inset:0;background:rgba(0,0,0,.28);
+  display:flex;align-items:center;justify-content:center;
+}
+.play-btn{
+  width:54px;height:54px;border-radius:50%;
+  background:rgba(255,255,255,.95);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(0,0,0,.22);
+}
+.play-btn svg{margin-left:3px;}
+.video-badge{
+  position:absolute;top:.6rem;left:.6rem;
+  background:rgba(0,0,0,.52);color:#fff;
+  font-size:.64rem;font-weight:700;padding:.2rem .55rem;
+  border-radius:999px;letter-spacing:.04em;
+}
+.video-info{padding:.8rem 1.05rem;}
+.video-title{font-family:var(--fh);font-size:.85rem;font-weight:700;color:var(--ink);}
+.video-meta{font-size:.72rem;color:var(--ink-muted);margin-top:.18rem;}
+
+/* ── FAQ ──────────────────────── */
+.faq-list{display:flex;flex-direction:column;gap:.55rem;}
+.faq-item{
+  background:var(--white);border:1.5px solid var(--line);
+  border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-sm);
+  transition:border-color .2s;
+}
+.faq-item.open{border-color:var(--blue);}
+.faq-q{
+  width:100%;background:none;border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:.75rem;padding:1rem 1.05rem;
+  font-family:var(--fb);font-size:.855rem;font-weight:600;
+  color:var(--ink);text-align:left;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;
+}
+.faq-icon{
+  flex-shrink:0;color:var(--blue);
+  font-size:1.1rem;font-weight:700;
+  width:20px;text-align:center;
+}
+.faq-a{
+  font-size:.805rem;color:var(--ink-muted);line-height:1.75;
+  padding:0 1.05rem;max-height:0;overflow:hidden;
+  transition:max-height .32s ease,padding .32s ease;
+}
+.faq-item.open .faq-a{max-height:260px;padding:0 1.05rem 1.05rem;}
+
+/* ── Footer CTA ───────────────── */
+.footer-cta{
+  background:var(--blue);
+  padding:2.5rem 1.25rem;
+  text-align:center;
+}
+.footer-cta h2{
+  font-family:var(--fh);
+  font-size:clamp(1.45rem,5vw,2rem);
+  font-weight:800;color:#fff;
+  letter-spacing:-.02em;line-height:1.2;
+  margin-bottom:.6rem;
+}
+.footer-cta p{
+  font-size:.9rem;color:rgba(255,255,255,.8);
+  margin-bottom:1.5rem;line-height:1.7;
+}
+.footer-cta-btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:var(--wa);color:#fff;border:none;
+  border-radius:var(--r-lg);padding:1.05rem 2rem;
+  font-family:var(--fb);font-size:1rem;font-weight:700;
+  cursor:pointer;box-shadow:0 4px 18px rgba(37,211,102,.3);
+  transition:background .15s,transform .12s;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;
+}
+.footer-cta-btn:hover{background:var(--wa-dk);transform:translateY(-1px);}
+
+/* ── Sticky bottom bar (mobile) ── */
+.sticky-bar{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;
+  background:var(--white);border-top:1.5px solid var(--line);
+  padding:.75rem 1rem;z-index:300;
+  box-shadow:0 -4px 20px rgba(0,0,0,.07);
+}
+.sticky-bar-btn{
+  width:100%;padding:1rem;
+  background:var(--wa);color:#fff;
+  border:none;border-radius:var(--r-md);
+  font-family:var(--fb);font-size:1rem;font-weight:700;
+  cursor:pointer;min-height:54px;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  box-shadow:0 4px 14px rgba(37,211,102,.26);
+}
+@media(max-width:768px){
+  .sticky-bar{display:block;}
+  .form-wrap{padding-bottom:6rem;}
+}
+
+/* ── Video modal ──────────────── */
+.vt-modal{
+  position:fixed;inset:0;z-index:1100;
+  display:none;align-items:center;justify-content:center;padding:4%;
+}
+.vt-modal.show{display:flex;}
+.vt-modal-bg{position:absolute;inset:0;background:rgba(0,0,0,.86);}
+.vt-modal-content{
+  position:relative;width:100%;max-width:900px;
+  aspect-ratio:16/9;z-index:1;
+}
+.vt-modal-content iframe{width:100%;height:100%;border-radius:var(--r-md);}
+.vt-modal-close{
+  position:absolute;top:-44px;right:0;
+  background:none;border:none;color:#fff;
+  font-size:1.9rem;cursor:pointer;line-height:1;
+}
 </style>
 </head>
 <body>
 
-<!-- HERO — mobile only -->
-<div class="hero">
-  <div class="live-badge rv"><div class="live-dot"></div><span>3 Slots Left This Week</span></div>
+<!-- ════════════════════════════════
+     MOBILE HERO
+     ════════════════════════════════ -->
+<div class="hero page-hero">
+  <div class="badge"><div class="badge-dot"></div><span>3 Slots Left This Week</span></div>
 
-  <h1 class="rv">Get Band 7+<br>Start with a <em>Free</em><br>60-Min Class</h1>
-  <p class="hero-sub rv">Live coaching · real band score · your study plan. 97% of our students hit Band 7+.</p>
+  <h1>Get Band 7+<br>Start with a <em>Free</em><br>60-Min Class</h1>
+  <p class="hero-sub">Live coaching · real band score estimate · your study plan. 97% of our students hit Band 7+.</p>
 
-  <div class="stats-row rv">
+  <div class="stats-row">
     <div class="stat">
       <div class="stat-val">15,000+</div>
       <div class="stat-lbl">Students Coached</div>
@@ -498,7 +608,7 @@ a { color: inherit; text-decoration: none; }
     <div class="stat">
       <a href="https://share.google/zxOM5s1aDVqw20ORd" target="_blank" rel="noopener" style="display:block;">
         <div class="stat-val">★ 4.7</div>
-        <div class="stat-lbl" style="color:rgba(255,255,255,.7);text-decoration:underline;text-underline-offset:2px;">Google ↗</div>
+        <div class="stat-lbl" style="color:rgba(255,255,255,.75);text-decoration:underline;text-underline-offset:2px;">Google ↗</div>
       </a>
     </div>
     <div class="stat">
@@ -508,167 +618,178 @@ a { color: inherit; text-decoration: none; }
   </div>
 </div>
 
-<!-- COACH STRIP — mobile only -->
+<!-- Coach strip — mobile -->
 <div class="coach-strip rv">
-  <div class="coach-info">
+  <div class="coach-avt">SJ</div>
+  <div>
     <div class="coach-name">You'll meet <span>Sanjita</span></div>
     <div class="coach-role">🏅 Founder, PrepEve</div>
     <div class="coach-note">Regulated Canadian Immigration Consultant · IELTS &amp; CELPIP</div>
   </div>
 </div>
 
-<!-- DESKTOP LAYOUT -->
-<div class="desktop-wrap">
-  <div class="desktop-left">
+<!-- ════════════════════════════════
+     DESKTOP: two-column hero + form
+     ════════════════════════════════ -->
+<div class="page-hero" style="background:var(--white);">
+  <div class="desktop-wrap">
 
-    <div class="dtag"><div class="dtag-dot"></div><span>100% Free · No Credit Card</span></div>
+    <!-- Left: copy + perks -->
+    <div class="desktop-left">
+      <div class="dtag"><div class="dtag-dot"></div><span>100% Free · No Credit Card</span></div>
 
-    <h1 class="dh1">Get Band 7+<br>Start with a <em>Free</em><br>60-Min Class</h1>
+      <h1 class="dh1">Book Your Free<br><em>IELTS Demo Class</em><br>Today</h1>
 
-    <p class="dsub">Live coaching, a real band score estimate, and a study plan built for your exam date — all in one free session.</p>
+      <p class="dsub">Live coaching with a CELTA-certified trainer, a free band score estimate, and a week-by-week study plan — all in one 60-minute session at zero cost.</p>
 
-    <div class="dperks">
-      <div class="dperk">
-        <span class="dperk-icon">🎯</span>
-        <div>
-          <div class="dperk-title">Free Band Score Estimate</div>
-          <div class="dperk-desc">Know exactly where you stand and what it takes to reach Band 7+</div>
-        </div>
-      </div>
-      <div class="dperk">
-        <span class="dperk-icon">👩‍🏫</span>
-        <div>
-          <div class="dperk-title">Live with a Certified Trainer</div>
-          <div class="dperk-desc">CELTA certified — real interaction, not pre-recorded videos</div>
-        </div>
-      </div>
-      <div class="dperk">
-        <span class="dperk-icon">📋</span>
-        <div>
-          <div class="dperk-title">Personalised Study Plan</div>
-          <div class="dperk-desc">Week-by-week roadmap tailored to your band goal and exam date</div>
-        </div>
-      </div>
-      <div class="dperk">
-        <span class="dperk-icon">🌏</span>
-        <div>
-          <div class="dperk-title">Canada &amp; Australia PR Ready</div>
-          <div class="dperk-desc">97% of our students hit Band 7+ — the score most PR pathways need</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="dproof">
-      <div class="avs">
-        <div class="av" style="background:#1A56DB">R</div>
-        <div class="av" style="background:#0891B2">P</div>
-        <div class="av" style="background:#D97706">A</div>
-        <div class="av" style="background:#7C3AED">K</div>
-      </div>
-      <div class="proof-txt"><strong>347 students</strong> booked this month · <a href="https://share.google/zxOM5s1aDVqw20ORd" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700;">⭐ 4.7 on Google ↗</a></div>
-    </div>
-
-  </div>
-
-  <!-- FORM -->
-  <div class="form-wrap">
-    <div class="form-card">
-      <div class="form-head">
-        <span class="form-head-icon">📚</span>
-        <div>
-          <div class="form-head-title">Reserve Your Free Demo Slot</div>
-          <div class="form-head-sub">We'll confirm on WhatsApp within 30 minutes</div>
-        </div>
-      </div>
-      <div class="form-body">
-
-        <div class="field">
-          <label for="fname">Your Name <span class="req">*</span></label>
-          <input type="text" id="fname" placeholder="e.g. Priya Sharma"
-            autocomplete="name" inputmode="text" enterkeyhint="next"/>
-          <div class="err-msg" id="fname-err">Please enter your name</div>
-        </div>
-
-        <div class="field">
-          <label for="phone">WhatsApp Number <span class="req">*</span></label>
-          <input type="tel" id="phone" placeholder="e.g. 98765 43210"
-            autocomplete="tel" inputmode="tel" enterkeyhint="next"/>
-          <div class="err-msg" id="phone-err">Enter a valid number (at least 8 digits)</div>
-        </div>
-
-        <div class="field">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="e.g. priya@gmail.com"
-            autocomplete="email" inputmode="email" enterkeyhint="next"/>
-        </div>
-
-        <div class="field">
-          <label for="goal">Target Band Score</label>
-          <div class="select-wrap">
-            <select id="goal">
-              <option value="" disabled selected>What band are you aiming for?</option>
-              <option value="band6">Band 6 – 6.5</option>
-              <option value="band7">Band 7 – 7.5</option>
-              <option value="band8">Band 8+</option>
-              <option value="unsure">Not sure yet</option>
-            </select>
+      <div class="dperks">
+        <div class="dperk">
+          <span class="dperk-icon">🎯</span>
+          <div>
+            <div class="dperk-title">Free Band Score Estimate</div>
+            <div class="dperk-desc">Know exactly where you stand and what it takes to reach Band 7+</div>
           </div>
         </div>
-
-        <div class="privacy">
-          🔒 Private · No spam, ever.
+        <div class="dperk">
+          <span class="dperk-icon">👩‍🏫</span>
+          <div>
+            <div class="dperk-title">Live with a Certified Trainer</div>
+            <div class="dperk-desc">CELTA certified — real interaction, not pre-recorded videos</div>
+          </div>
         </div>
-
-        <button class="cta-btn" id="submit-btn" type="button">
-          <div class="spinner"></div>
-          <svg class="cta-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          <span class="cta-txt">Book My Free Demo →</span>
-        </button>
-
-        <div class="phone-fallback">
-          📞 <a href="tel:+919877714284">+91 98 777 14284</a> · Call us directly
+        <div class="dperk">
+          <span class="dperk-icon">📋</span>
+          <div>
+            <div class="dperk-title">Personalised Study Plan</div>
+            <div class="dperk-desc">Week-by-week roadmap tailored to your band goal and exam date</div>
+          </div>
         </div>
-
-        <div class="urgency">
-          <div class="urgency-dot"></div>
-          <span id="seats-txt">Only 8 seats left for the next batch</span>
+        <div class="dperk">
+          <span class="dperk-icon">🌏</span>
+          <div>
+            <div class="dperk-title">Canada &amp; Australia PR Ready</div>
+            <div class="dperk-desc">97% of our students hit Band 7+ — the score most PR pathways need</div>
+          </div>
         </div>
+      </div>
 
+      <div class="dproof">
+        <div class="avs">
+          <div class="av" style="background:#1A56DB">R</div>
+          <div class="av" style="background:#0891B2">P</div>
+          <div class="av" style="background:#D97706">A</div>
+          <div class="av" style="background:#7C3AED">K</div>
+        </div>
+        <div class="proof-txt">
+          <strong>347 students</strong> booked this month ·
+          <a href="https://share.google/zxOM5s1aDVqw20ORd" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700;">⭐ 4.7 on Google ↗</a>
+        </div>
       </div>
     </div>
+
+    <!-- Right: form -->
+    <div class="form-wrap">
+      <div class="form-card">
+        <div class="form-head">
+          <span class="form-head-icon">📚</span>
+          <div>
+            <div class="form-head-title">Reserve Your Free Demo Slot</div>
+            <div class="form-head-sub">We'll confirm on WhatsApp within 30 minutes</div>
+          </div>
+        </div>
+        <div class="form-body">
+
+          <div class="field">
+            <label for="fname">Your Name <span class="req">*</span></label>
+            <input type="text" id="fname" placeholder="e.g. Priya Sharma"
+              autocomplete="name" inputmode="text" enterkeyhint="next"/>
+            <div class="err-msg" id="fname-err">Please enter your name</div>
+          </div>
+
+          <div class="field">
+            <label for="phone">WhatsApp Number <span class="req">*</span></label>
+            <input type="tel" id="phone" placeholder="e.g. 98765 43210"
+              autocomplete="tel" inputmode="tel" enterkeyhint="next"/>
+            <div class="err-msg" id="phone-err">Enter a valid number (at least 8 digits)</div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="e.g. priya@gmail.com"
+              autocomplete="email" inputmode="email" enterkeyhint="next"/>
+          </div>
+
+          <div class="field">
+            <label for="goal">Target Band Score</label>
+            <div class="select-wrap">
+              <select id="goal">
+                <option value="" disabled selected>What band are you aiming for?</option>
+                <option value="band6">Band 6 – 6.5</option>
+                <option value="band7">Band 7 – 7.5</option>
+                <option value="band8">Band 8+</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="privacy">
+            🔒 Private · No spam, ever.
+          </div>
+
+          <button class="cta-btn" id="submit-btn" type="button">
+            <div class="spinner"></div>
+            <svg class="cta-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span class="cta-txt">Book My Free Demo →</span>
+          </button>
+
+          <div class="phone-fallback">
+            📞 <a href="tel:+919877714284">+91 98 777 14284</a> · Call us directly
+          </div>
+
+          <div class="urgency">
+            <div class="urgency-dot"></div>
+            <span id="seats-txt">Only 8 seats left for the next batch</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<!-- ── WHAT HAPPENS IN YOUR DEMO ── -->
+<!-- ════════════════════════════════
+     WHAT HAPPENS IN YOUR DEMO
+     ════════════════════════════════ -->
 <div class="section-wrap">
   <div class="section-label rv">⏱ What Happens in Your 60-Min Demo</div>
   <div class="demo-steps">
     <div class="demo-step rv">
       <div class="demo-num">1</div>
-      <div class="demo-content">
+      <div>
         <div class="demo-title">Meet Your Trainer (5 min)</div>
         <div class="demo-desc">Quick intro with your assigned CELTA-certified trainer. They'll ask about your current band and your goal.</div>
       </div>
     </div>
     <div class="demo-step rv">
       <div class="demo-num">2</div>
-      <div class="demo-content">
+      <div>
         <div class="demo-title">Live Band Assessment (20 min)</div>
         <div class="demo-desc">A short speaking and writing exercise. Your trainer pinpoints exactly where you're losing marks.</div>
       </div>
     </div>
     <div class="demo-step rv">
       <div class="demo-num">3</div>
-      <div class="demo-content">
+      <div>
         <div class="demo-title">Free Band Score Estimate (10 min)</div>
         <div class="demo-desc">You'll know your current band and exactly what it takes to reach Band 7+ — no guessing.</div>
       </div>
     </div>
     <div class="demo-step rv">
       <div class="demo-num">4</div>
-      <div class="demo-content">
+      <div>
         <div class="demo-title">Your Personalised Study Plan (25 min)</div>
         <div class="demo-desc">A week-by-week roadmap built around your exam date. You leave with a clear action plan.</div>
       </div>
@@ -677,7 +798,39 @@ a { color: inherit; text-decoration: none; }
   <div class="demo-note rv">🎯 No upsells during the class. Just 60 minutes of pure value.</div>
 </div>
 
-<!-- ── TESTIMONIALS ── -->
+<!-- ════════════════════════════════
+     WHY PREPEVE
+     ════════════════════════════════ -->
+<div class="section-wrap">
+  <div class="section-label rv">🚫 What You Won't Get</div>
+  <div class="nowont-grid">
+    <div class="nowont-item rv">
+      <div class="nowont-icon">📹</div>
+      <div>
+        <div class="nowont-title">No Recorded Classes</div>
+        <div class="nowont-desc">Every session is live, interactive, and tailored to you — not a YouTube playlist.</div>
+      </div>
+    </div>
+    <div class="nowont-item rv">
+      <div class="nowont-icon">💸</div>
+      <div>
+        <div class="nowont-title">No Upsells in the Demo</div>
+        <div class="nowont-desc">60 minutes of pure value. We earn your trust first — we never pitch during class.</div>
+      </div>
+    </div>
+    <div class="nowont-item rv">
+      <div class="nowont-icon">📋</div>
+      <div>
+        <div class="nowont-title">No Generic Study Plans</div>
+        <div class="nowont-desc">Your plan is built around your band, your exam date, and your weakest skills.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     TEXT TESTIMONIALS
+     ════════════════════════════════ -->
 <div class="section-wrap">
   <div class="section-label rv">❤️ What Our Students Say</div>
   <div class="testi-grid">
@@ -730,14 +883,16 @@ a { color: inherit; text-decoration: none; }
   </div>
 </div>
 
-<!-- ── VIDEO TESTIMONIALS ── -->
+<!-- ════════════════════════════════
+     VIDEO TESTIMONIALS
+     ════════════════════════════════ -->
 <div class="section-wrap">
   <div class="section-label rv">🎥 Hear It From Our Students</div>
   <div class="video-grid">
 
     <div class="video-card rv" onclick="openVideo('https://www.youtube.com/embed/rb0zGLtppdA')">
       <div class="video-thumb-wrap">
-        <img src="https://img.youtube.com/vi/rb0zGLtppdA/hqdefault.jpg" alt="Student testimonial" class="video-thumb" loading="lazy"/>
+        <img src="https://img.youtube.com/vi/rb0zGLtppdA/hqdefault.jpg" alt="Sumit student testimonial" class="video-thumb" loading="lazy"/>
         <div class="video-overlay">
           <div class="play-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#111827"><path d="M8 5v14l11-7z"/></svg>
@@ -753,7 +908,7 @@ a { color: inherit; text-decoration: none; }
 
     <div class="video-card rv" onclick="openVideo('https://www.youtube.com/embed/UockDTvcolo')">
       <div class="video-thumb-wrap">
-        <img src="https://img.youtube.com/vi/UockDTvcolo/hqdefault.jpg" alt="Student testimonial" class="video-thumb" loading="lazy"/>
+        <img src="https://img.youtube.com/vi/UockDTvcolo/hqdefault.jpg" alt="Jhanvi student testimonial" class="video-thumb" loading="lazy"/>
         <div class="video-overlay">
           <div class="play-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#111827"><path d="M8 5v14l11-7z"/></svg>
@@ -770,35 +925,9 @@ a { color: inherit; text-decoration: none; }
   </div>
 </div>
 
-<!-- ── WHAT YOU WON'T GET ── -->
-<div class="section-wrap">
-  <div class="section-label rv">🚫 What You Won't Get</div>
-  <div class="nowont-grid">
-    <div class="nowont-item rv">
-      <div class="nowont-icon">📹</div>
-      <div>
-        <div class="nowont-title">No Recorded Classes</div>
-        <div class="nowont-desc">Every session is live, interactive, and tailored to you — not a YouTube playlist.</div>
-      </div>
-    </div>
-    <div class="nowont-item rv">
-      <div class="nowont-icon">💸</div>
-      <div>
-        <div class="nowont-title">No Upsells in the Demo</div>
-        <div class="nowont-desc">60 minutes of pure value. We earn your trust first — we never pitch during class.</div>
-      </div>
-    </div>
-    <div class="nowont-item rv">
-      <div class="nowont-icon">📋</div>
-      <div>
-        <div class="nowont-title">No Generic Study Plans</div>
-        <div class="nowont-desc">Your plan is built around your band, your exam date, and your weakest skills.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── FAQ ── -->
+<!-- ════════════════════════════════
+     FAQ
+     ════════════════════════════════ -->
 <div class="section-wrap">
   <div class="section-label rv">❓ Common Questions</div>
   <div class="faq-list" id="faq-list">
@@ -838,10 +967,22 @@ a { color: inherit; text-decoration: none; }
   </div>
 </div>
 
-<!-- bottom spacer so sticky bar never covers content -->
+<!-- ════════════════════════════════
+     FOOTER CTA
+     ════════════════════════════════ -->
+<div class="footer-cta rv">
+  <h2>Still Thinking?<br>Your Band 7+ Starts Here.</h2>
+  <p>Join 15,000+ students who trusted PrepEve. It's free, it's live, and it could change everything.</p>
+  <button class="footer-cta-btn" onclick="document.getElementById('fname').scrollIntoView({behavior:'smooth',block:'center'});document.getElementById('fname').focus();">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Book My Free Demo on WhatsApp →
+  </button>
+</div>
+
+<!-- Bottom spacer so sticky bar never covers content -->
 <div style="height:5rem"></div>
 
-<!-- Sticky bottom CTA — mobile only -->
+<!-- Sticky bottom bar — mobile only -->
 <div class="sticky-bar" id="sticky-bar">
   <button class="sticky-bar-btn" onclick="document.getElementById('fname').scrollIntoView({behavior:'smooth',block:'center'});document.getElementById('fname').focus();">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -849,7 +990,9 @@ a { color: inherit; text-decoration: none; }
   </button>
 </div>
 
-<!-- ── VIDEO LIGHTBOX (shared via common.js window.openVideo/closeVideo) ── -->
+<!-- ════════════════════════════════
+     VIDEO LIGHTBOX
+     ════════════════════════════════ -->
 <div id="vt-modal" class="vt-modal">
   <div id="vt-modal-bg" class="vt-modal-bg"></div>
   <div class="vt-modal-content">
@@ -863,32 +1006,40 @@ a { color: inherit; text-decoration: none; }
 (function(){
   var SHEET_URL = 'https://script.google.com/macros/s/AKfycbxV6D1QlPWjlPg7QNH4RBQb3PoyisOElpEaKW_mbFkVkyeBfIJKPi7eiGfO42jUSTYLzg/exec';
 
-  // Hide sticky bar when submit button scrolls into view
+  // Scroll reveal
+  var obs = ('IntersectionObserver' in window)
+    ? new IntersectionObserver(function(entries){
+        entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');}});
+      },{threshold:.12})
+    : null;
+  document.querySelectorAll('.rv').forEach(function(el){
+    if(obs){obs.observe(el);}else{el.classList.add('in');}
+  });
+
+  // Hide sticky bar when submit button is in view
   var stickyBar = document.getElementById('sticky-bar');
   var submitBtn = document.getElementById('submit-btn');
   if(stickyBar && submitBtn && 'IntersectionObserver' in window){
-    var obs = new IntersectionObserver(function(entries){
+    var sObs = new IntersectionObserver(function(entries){
       stickyBar.style.display = entries[0].isIntersecting ? 'none' : 'block';
-    },{threshold:0.5});
-    obs.observe(submitBtn);
+    },{threshold:.5});
+    sObs.observe(submitBtn);
   }
 
-  // Randomise seats
+  // Randomise seats count
   var n = [6,7,8,9,10,11][Math.floor(Math.random()*6)];
-  var el = document.getElementById('seats-txt');
-  if(el) el.textContent = 'Only ' + n + ' seats left for the next batch';
+  var seatsEl = document.getElementById('seats-txt');
+  if(seatsEl) seatsEl.textContent = 'Only ' + n + ' seats left for the next batch';
 
+  // Form helpers
   var btn = document.getElementById('submit-btn');
-
   function val(id){var e=document.getElementById(id);return e?e.value.trim():'';}
-
   function setErr(id,show){
     var inp=document.getElementById(id),msg=document.getElementById(id+'-err');
     if(!inp||!msg)return;
     if(show){inp.classList.add('err');msg.classList.add('show');}
     else{inp.classList.remove('err');msg.classList.remove('show');}
   }
-
   ['fname','phone','email'].forEach(function(id){
     var el=document.getElementById(id);
     if(el) el.addEventListener('input',function(){setErr(id,false);});
