@@ -12,6 +12,7 @@
 <meta name="author" content="PrepEve Education"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://prepeve.com/"/>
+<link rel="icon" type="image/svg+xml" href="/assets/img/mark.svg"/>
 <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
 
 <!-- Open Graph -->
@@ -86,6 +87,25 @@
 .score-all{display:flex;align-items:center;justify-content:space-between;margin-top:12px;padding:14px 16px;border-radius:var(--r);background:var(--blue);color:#DCE7FD;font-size:.85rem}
 .score-all b{font-family:var(--f-head);font-size:2rem;color:#fff}
 .score-foot{margin-top:14px;text-align:center}
+.hero-grid{align-items:center}
+.hero h1{font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.05;letter-spacing:-.035em;max-width:13ch}
+.hero .lead{font-size:clamp(1.05rem,1.5vw,1.25rem);margin-top:4px}
+.hero-trust{flex-wrap:wrap;gap:8px 22px}.hero-trust>span{white-space:nowrap}
+.hero h1 .pd{margin-left:-.06em}
+.hp{position:relative;padding:26px}
+.hp::before{content:"";position:absolute;inset:-40px -30px auto auto;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(26,86,219,.16),transparent 70%);z-index:-1}
+.hp-head .eyebrow{margin:0 0 14px}
+.hp-list{list-style:none;display:grid;gap:10px}
+.hp-list li{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r);background:#fff}
+.hp-list b{display:block;font-family:var(--f-head);color:var(--ink);font-size:.98rem}
+.hp-list small{color:var(--muted);font-size:.82rem}
+.hp-band{margin-left:auto;font-family:var(--f-head);font-weight:800;color:var(--ok);background:var(--ok-lt);padding:6px 10px;border-radius:var(--r-sm);white-space:nowrap}
+.hp-band s{color:var(--faint);font-weight:600;text-decoration-thickness:1.5px}
+.hp-quote{margin:16px 0 0;padding:16px;border-radius:var(--r);background:var(--bg-2)}
+.hp-quote blockquote{font-size:.95rem;color:var(--ink-2);line-height:1.55}
+.hp-quote blockquote::before{content:"\201C"}.hp-quote blockquote::after{content:"\201D"}
+.hp-quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.hp-more{display:inline-block;margin-top:14px;font-weight:700;color:var(--blue);font-size:.92rem;min-height:32px;line-height:32px}
 .g-logo{display:inline-flex;vertical-align:middle}
 .course .badge{margin-bottom:14px}
 .course .ticks{margin:16px 0 22px;font-size:.94rem}
@@ -124,6 +144,14 @@
 .qband small{font-size:.6rem;letter-spacing:.08em;margin-top:6px;opacity:.85}
 .qres h4{margin:18px 0 10px;font-size:.95rem}
 .qres .btn-row{margin-top:20px}
+@media(max-width:767px){
+.hero h1{font-size:2.15rem!important;line-height:1.08!important}
+.hero-grid>aside.hp{display:block!important;padding:16px;margin-top:6px;box-shadow:var(--sh-sm)}
+.hp::before,.hp .hp-quote,.hp .hp-more{display:none}
+.hp-head .eyebrow{margin-bottom:10px}
+.hp-list li{padding:10px 12px}
+.hp-list .avatar{width:36px;height:36px;font-size:.9rem}
+}
 </style>
 <style>
 .proof-q{margin:0 0 14px;font-size:.98rem;color:var(--ink-2);line-height:1.55}
@@ -188,7 +216,7 @@
 <body>
 <header class="nav">
   <div class="wrap">
-    <a href="/" class="logo" aria-label="PrepEve home"><img src="/assets/img/logo.png" alt="" width="34" height="34"/>Prep<span>Eve</span></a>
+    <a href="/" class="logo" aria-label="PrepEve home"><img src="/assets/img/mark.svg" alt="" width="36" height="36"/>Prep<span>Eve</span></a>
     <ul class="nav-links">
       <li><a href="/#courses">Courses</a></li>
       <li><a href="/#results">Results</a></li>
@@ -217,29 +245,33 @@
 <!-- HERO -->
 <section class="hero" data-hide-mcta>
   <div class="wrap hero-grid">
-    <div>
-      <span class="badge">Live online IELTS coaching · Academic &amp; General</span>
-      <h1>Stop guessing why your band is stuck. <em>We'll show you where you're losing marks</em> and fix it with you.</h1>
-      <p class="lead">Live classes with no more than 5 students, so your trainer actually hears you.<span class="m-hide"> Every essay marked by a trainer, with the sentences costing you marks. 1-on-1 speaking mocks, so exam day feels like practice.</span></p>
+    <div class="hero-copy">
+      <span class="badge"><span>Live online IELTS coaching<span class="m-hide"> · Academic &amp; General</span></span></span>
+      <h1>Stop guessing why your IELTS band is <em>stuck<span class="pd">.</span></em></h1>
+      <p class="lead">We show you exactly where you're losing marks — and fix it with you, live, in batches of no more than 5.<span class="m-hide"> Every essay marked by a trainer. 1-on-1 speaking mocks, so exam day feels like practice.</span></p>
       <div class="btn-row hero-cta">
         <a href="/book-demo" class="btn btn-primary btn-lg" data-cta="hero">Book My Free Demo Class</a>
         <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20enroll%20in%20PrepEve%20IELTS%20coaching" class="btn btn-wa btn-lg" data-cta="hero" target="_blank" rel="noopener">Talk to a Trainer on WhatsApp</a>
       </div>
-      <p class="hero-note m-hide">Free demo: a live mini-class, your current level assessed and a study plan to keep. <strong>Slot confirmed on WhatsApp within 30 minutes.</strong> No payment.</p>
-      <div class="trust">
+      <p class="hero-note m-hide">Free, no payment. A live mini-class, your level assessed and a study plan to keep.</p>
+      <div class="trust hero-trust">
         <span><span class="stars">★★★★★</span> <strong>4.7</strong> on Google · 300+ reviews</span>
         <span class="m-hide"><strong>15,000+</strong> students trained</span>
         <span><strong>Max 5</strong> per live batch</span>
       </div>
     </div>
-    <aside class="form-card score" aria-label="Student review">
-      <div class="score-top">
-        <div><span class="eyebrow" style="margin:0">Google review</span><small>PrepEve IELTS student</small></div>
-        <span class="band-pill">Band 8.5</span>
-      </div>
-      <p class="proof-q">It's been almost two years since I took my IELTS classes with them, and they still support me whenever I reach out. That kind of dedication is rare.</p>
-      <div class="score-all"><div>Overall IELTS band<br/><strong style="color:#fff">Anooj Motghare</strong></div><b>8.5</b></div>
-      <div class="score-foot"><a class="src" href="https://www.google.com/maps/contrib/102113621604889428073/reviews/@49.1476785,-165.0496148,3z/data=!4m3!8m2!3m1!1e1?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Read the full review on Google</a></div>
+    <aside class="form-card score hp" aria-label="Student results">
+      <div class="hp-head"><span class="eyebrow">Real students · real bands</span></div>
+      <ul class="hp-list">
+        <li><span class="avatar">T</span><div><b>Taranjeet</b><small>Canada PR · in 30 days</small></div><span class="hp-band"><s>6.5</s> → 8.5</span></li>
+        <li><span class="avatar" style="background:#2563EB">P</span><div><b>Pratishtha</b><small>UCL, UK</small></div><span class="hp-band"><s>6.0</s> → 8.0</span></li>
+        <li><span class="avatar" style="background:#1240A8">D</span><div><b>Deepanshu</b><small>IELTS Academic</small></div><span class="hp-band"><s>6.5</s> → 7.5</span></li>
+      </ul>
+      <figure class="hp-quote">
+        <blockquote>It's been almost two years since I took my IELTS classes with them, and they still support me whenever I reach out.</blockquote>
+        <figcaption><span class="stars">★★★★★</span> Anooj Motghare · Band 8.5 · <a class="src" href="https://www.google.com/maps/contrib/102113621604889428073/reviews/@49.1476785,-165.0496148,3z/data=!4m3!8m2!3m1!1e1?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Google review</a></figcaption>
+      </figure>
+      <a href="#results" class="hp-more" data-cta="hero-results">Watch their stories →</a>
     </aside>
   </div>
 </section>
@@ -621,7 +653,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="/" class="logo"><img src="/assets/img/logo.png" alt="" width="34" height="34" loading="lazy"/>Prep<span>Eve</span></a>
+        <a href="/" class="logo"><img src="/assets/img/mark-white.svg" alt="" width="36" height="36" loading="lazy"/>Prep<span>Eve</span></a>
         <p class="mt-s">Live online IELTS coaching and French for Canada PR, taught by certified trainers.</p>
       </div>
       <div>

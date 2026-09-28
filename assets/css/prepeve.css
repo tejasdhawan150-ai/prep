@@ -98,7 +98,7 @@ p{max-width:68ch}
 .nav.scrolled{border-color:var(--line);box-shadow:var(--sh-sm)}
 .nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .logo{display:inline-flex;align-items:center;gap:0;white-space:nowrap;font-family:var(--f-head);font-size:1.4rem;font-weight:800;color:var(--ink);letter-spacing:-.03em}
-.logo img{width:34px;height:34px;border-radius:8px;background:#fff;object-fit:contain;margin-right:8px}
+.logo img{width:36px;height:36px;object-fit:contain;margin-right:9px;margin-top:-4px}
 .logo span{color:var(--blue)}
 .nav-links{display:none;list-style:none;gap:28px;font-weight:600;font-size:.94rem}
 .nav-links a{color:var(--ink-2)}.nav-links a:hover{color:var(--blue)}
