@@ -54,6 +54,13 @@ body{background:linear-gradient(180deg,var(--bg-3) 0%,#fff 420px) no-repeat,#fff
 @media(min-width:720px){.ty-vids{grid-template-columns:repeat(3,1fr)}.ty-wait{max-width:1000px;margin-left:auto;margin-right:auto}}
 .ty-home{display:inline-block;margin-top:48px;font-weight:600;color:var(--muted)}
 .ty-home:hover{color:var(--blue)}
+.ty-cal{margin-top:20px;text-align:left}
+.ty-cal-h{font-size:1.1rem;margin-bottom:6px}
+.ty-cal-sub{color:var(--muted);font-size:.92rem;margin-bottom:14px}
+.ty-cal-rows{display:grid;gap:10px}
+.ty-cal-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2)}
+.ty-cal-row b{font-family:var(--f-head);color:var(--ink)}
+.ty-cal-row a{color:var(--blue);font-weight:700;display:inline-block;min-height:40px;line-height:40px}
 </style>
 </head>
 <body>
@@ -85,6 +92,15 @@ body{background:linear-gradient(180deg,var(--bg-3) 0%,#fff 420px) no-repeat,#fff
         </a>
         <p class="ty-note">Your details are already in the message. Just tap Send.</p>
       </div>
+
+      <section class="card ty-cal" id="ty-cal" hidden aria-labelledby="cal-h">
+        <h2 id="cal-h" class="ty-cal-h">Put the webinar in your calendar</h2>
+        <p class="ty-cal-sub">Pick the session you'll attend — both run 7:00–8:00 PM IST. Your joining link still comes on WhatsApp.</p>
+        <div class="ty-cal-rows">
+          <div class="ty-cal-row"><b data-day="0"></b><span><a data-g="0" target="_blank" rel="noopener" data-cta="cal-google-sat">Google Calendar</a> · <a data-ics="0" href="#" data-cta="cal-ics-sat">Apple / Outlook</a></span></div>
+          <div class="ty-cal-row"><b data-day="1"></b><span><a data-g="1" target="_blank" rel="noopener" data-cta="cal-google-sun">Google Calendar</a> · <a data-ics="1" href="#" data-cta="cal-ics-sun">Apple / Outlook</a></span></div>
+        </div>
+      </section>
 
       <section class="card ty-steps rv" aria-labelledby="next-h">
         <span class="eyebrow" id="next-h">What happens next</span>
@@ -167,6 +183,35 @@ body{background:linear-gradient(180deg,var(--bg-3) 0%,#fff 420px) no-repeat,#fff
   } catch (e) {
     // fallback — default href already set in HTML
   }
+}());
+</script>
+<script>
+(function () {
+  try {
+    var q = new URLSearchParams(location.search);
+    var sess = q.get('sess');
+    if (q.get('src') !== 'webinar' || !/^\d{4}-\d{2}-\d{2}$/.test(sess || '')) return;
+    var p = sess.split('-'), mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var title = 'PrepEve Free IELTS Webinar';
+    var desc = 'Free 60-minute live IELTS strategy session with PrepEve. Your joining link is sent on WhatsApp. Questions: https://wa.me/919877714284';
+    function pad(n) { return ('0' + n).slice(-2); }
+    [0, 1].forEach(function (k) {
+      var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + k, 13, 30));
+      var e = new Date(d.getTime() + 3600000);
+      function z(x) { return x.getUTCFullYear() + pad(x.getUTCMonth() + 1) + pad(x.getUTCDate()) + 'T' + pad(x.getUTCHours()) + pad(x.getUTCMinutes()) + '00Z'; }
+      document.querySelector('[data-day="' + k + '"]').textContent = (k ? 'Sun ' : 'Sat ') + d.getUTCDate() + ' ' + mo[d.getUTCMonth()] + ' · 7:00 PM IST';
+      document.querySelector('[data-g="' + k + '"]').href = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(title) + '&dates=' + z(d) + '/' + z(e) + '&details=' + encodeURIComponent(desc) + '&location=' + encodeURIComponent('Online (link on WhatsApp)');
+      document.querySelector('[data-ics="' + k + '"]').addEventListener('click', function (ev) {
+        ev.preventDefault();
+        var ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//PrepEve//Webinar//EN', 'BEGIN:VEVENT', 'UID:' + z(d) + '@prepeve.com', 'DTSTAMP:' + z(new Date()), 'DTSTART:' + z(d), 'DTEND:' + z(e), 'SUMMARY:' + title, 'DESCRIPTION:' + desc, 'LOCATION:Online (link on WhatsApp)', 'BEGIN:VALARM', 'TRIGGER:-PT30M', 'ACTION:DISPLAY', 'DESCRIPTION:' + title + ' starts in 30 minutes', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
+        a.download = 'prepeve-ielts-webinar.ics';
+        document.body.appendChild(a); a.click(); a.remove();
+      });
+    });
+    document.getElementById('ty-cal').hidden = false;
+  } catch (e) {}
 }());
 </script>
 <script src="/assets/js/prepeve.js" defer></script>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IELTS Band Calculator: Overall Band & CLB | PrepEve</title>
+<meta name="description" content="Free IELTS band calculator. Add your Listening, Reading, Writing and Speaking bands to get your overall band (official rounding), plus CLB for Canada PR."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.prepeve.com/ielts-band-calculator"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="PrepEve"/>
+<meta property="og:title" content="IELTS Band Calculator: Overall Band & CLB | PrepEve"/>
+<meta property="og:description" content="Free IELTS band calculator. Add your Listening, Reading, Writing and Speaking bands to get your overall band (official rounding), plus CLB for Canada PR."/>
+<meta property="og:url" content="https://www.prepeve.com/ielts-band-calculator"/>
+<meta property="og:image" content="https://www.prepeve.com/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="IELTS Band Calculator: Overall Band & CLB | PrepEve"/>
+<meta name="twitter:description" content="Free IELTS band calculator. Add your Listening, Reading, Writing and Speaking bands to get your overall band (official rounding), plus CLB for Canada PR."/>
+<meta name="twitter:image" content="https://www.prepeve.com/og-image.jpg"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-765652199"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-765652199');
+</script>
+<link rel="preload" href="/assets/fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="stylesheet" href="/assets/css/prepeve.css"/>
+<link rel="icon" type="image/svg+xml" href="/assets/img/mark.svg"/>
+<link rel="icon" type="image/png" href="/assets/img/logo.png"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "IELTS Band Calculator",
+ "description": "Free IELTS band calculator. Add your Listening, Reading, Writing and Speaking bands to get your overall band (official rounding), plus CLB for Canada PR.",
+ "url": "https://www.prepeve.com/ielts-band-calculator",
+ "applicationCategory": "EducationalApplication",
+ "operatingSystem": "Any",
+ "browserRequirements": "Requires JavaScript",
+ "isAccessibleForFree": true,
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "INR"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "PrepEve",
+  "url": "https://www.prepeve.com/"
+ },
+ "datePublished": "2026-09-28",
+ "inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.prepeve.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "IELTS Band Calculator",
+   "item": "https://www.prepeve.com/ielts-band-calculator"
+  }
+ ]
+}
+</script>
+<style>
+.art{padding:40px 0 64px;background:linear-gradient(180deg,var(--bg-3),#fff 320px)}
+.art .wrap{max-width:792px}
+.art-body{font-size:1.0625rem;line-height:1.75;color:var(--ink-2)}
+.art-body p,.art-body ul,.art-body ol{margin:0 0 1.1em}
+.art-body ul,.art-body ol{padding-left:1.3em}
+.art-body li{margin-bottom:.45em}
+.art h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.15;margin:10px 0 16px}
+.art h2{font-size:clamp(1.35rem,3.4vw,1.75rem);margin:2.2em 0 .6em;scroll-margin-top:calc(var(--nav-h) + 16px)}
+.art h3{font-size:1.15rem;margin:1.6em 0 .5em;scroll-margin-top:calc(var(--nav-h) + 16px)}
+.crumbs{font-size:.85rem;color:var(--muted)}
+.crumbs a{color:var(--blue)}
+.meta-line{font-size:.85rem;color:var(--muted);margin-bottom:24px}
+.toc{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:18px 22px;margin:24px 0 8px}
+.toc h2{font-size:1rem;margin:0 0 8px}
+.toc ol{margin:0;padding-left:1.2em;font-size:.97rem}
+.toc a{color:var(--blue)}
+.art table.cmp{min-width:0}
+.art .tbl-wrap{margin:0 0 1.2em}
+.art .cmp th,.art .cmp td{padding:10px 12px}
+.note{background:var(--gold-lt);border-left:4px solid var(--gold);border-radius:var(--r-sm);padding:12px 16px;font-size:.95rem;margin:0 0 1.2em}
+.ex{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin:0 0 1.2em;font-size:.97rem}
+.ex div{padding:10px 14px}
+.ex .bad{background:#FEF2F2}
+.ex .good{background:var(--ok-lt)}
+.ex b{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
+.ex .bad b{color:var(--err)}.ex .good b{color:var(--ok)}
+.soft{background:var(--blue-lt);border:1px solid #C7D6F6;border-radius:var(--r-lg);padding:22px;margin:2em 0}
+.soft h2,.soft h3{margin:0 0 6px;font-size:1.2rem}
+.soft p{margin:0 0 14px}
+.endcta{background:var(--navy);color:#fff;border-radius:var(--r-xl);padding:30px 24px;margin:2.6em 0 0}
+.endcta h2{color:#fff;margin:0 0 10px}
+.endcta p{color:#CBD5E1;margin:0 0 18px}
+.endcta .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.related{margin-top:2.6em}
+.related h2{margin-top:0}
+.related .grid{gap:14px}
+.related .card{padding:18px}
+.related .card h3{font-size:1.02rem;margin:0 0 4px}
+.chk{list-style:none;padding-left:0!important}
+.chk li{padding-left:30px;position:relative}
+.chk li::before{content:"";position:absolute;left:0;top:.35em;width:18px;height:18px;border:2px solid var(--blue);border-radius:4px}
+.srcline{font-size:.88rem;color:var(--muted)}
+</style><style>
+.calc{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--sh);padding:22px;margin:24px 0}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
+.calc .field{margin:0}
+.calc-out{margin-top:18px;background:var(--bg-3);border-radius:var(--r-lg);padding:18px;text-align:center}
+.calc-out .big{font-family:var(--f-head);font-weight:800;font-size:3rem;line-height:1;color:var(--blue)}
+.calc-out p{margin:6px 0 0;font-size:.95rem}
+.tog{display:flex;align-items:center;gap:10px;margin-top:16px;font-weight:600;cursor:pointer}
+.tog input{width:20px;height:20px;accent-color:var(--blue)}
+.clb-out{margin-top:14px}
+.clb-out[hidden]{display:none}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a href="/" class="logo" aria-label="PrepEve home"><img src="/assets/img/mark.svg" alt="" width="36" height="36"/>Prep<span>Eve</span></a>
+    <ul class="nav-links">
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#results">Results</a></li>
+      <li><a href="/#trainers">Trainers</a></li>
+      <li><a href="/webinar">Free Webinar</a></li>
+      <li><a href="/book-demo-french">French for Canada PR</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="/book-demo" class="btn btn-primary nav-cta" data-cta="nav">Book Free Demo</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobile">
+  <a href="/#courses">Courses</a>
+  <a href="/#results">Results</a>
+  <a href="/#trainers">Trainers</a>
+  <a href="/webinar">Free IELTS Webinar</a>
+  <a href="/book-demo-french">French for Canada PR</a>
+  <a href="/#faq">FAQ</a>
+  <a href="/book-demo" class="btn btn-primary btn-block" data-cta="mnav">Book Free Demo Class</a>
+</nav>
+
+<main class="art">
+<div class="wrap">
+<article class="art-body">
+<p class="crumbs"><a href="/">Home</a> › IELTS Band Calculator</p>
+<h1>IELTS band calculator</h1>
+<p class="meta-line">By the PrepEve team · Published 28 September 2026</p>
+<p class="lead">Choose your four skill bands. The calculator shows your overall band using the official rounding rule. Turn on "Canada PR" to see your CLB level for each skill.</p>
+
+
+<section class="calc" aria-labelledby="calc-h">
+<h2 id="calc-h" style="margin-top:0">Enter your four bands</h2>
+<form id="bandCalc" novalidate onsubmit="return false">
+<div class="calc-grid"><div class="field"><label for="b-l">Listening band</label><select id="b-l" name="l"><option value="9.0">9.0</option><option value="8.5">8.5</option><option value="8.0">8.0</option><option value="7.5">7.5</option><option value="7.0">7.0</option><option value="6.5" selected>6.5</option><option value="6.0">6.0</option><option value="5.5">5.5</option><option value="5.0">5.0</option><option value="4.5">4.5</option><option value="4.0">4.0</option><option value="3.5">3.5</option><option value="3.0">3.0</option><option value="2.5">2.5</option><option value="2.0">2.0</option><option value="1.5">1.5</option><option value="1.0">1.0</option><option value="0.5">0.5</option><option value="0.0">0.0</option></select></div><div class="field"><label for="b-r">Reading band</label><select id="b-r" name="r"><option value="9.0">9.0</option><option value="8.5">8.5</option><option value="8.0">8.0</option><option value="7.5">7.5</option><option value="7.0">7.0</option><option value="6.5" selected>6.5</option><option value="6.0">6.0</option><option value="5.5">5.5</option><option value="5.0">5.0</option><option value="4.5">4.5</option><option value="4.0">4.0</option><option value="3.5">3.5</option><option value="3.0">3.0</option><option value="2.5">2.5</option><option value="2.0">2.0</option><option value="1.5">1.5</option><option value="1.0">1.0</option><option value="0.5">0.5</option><option value="0.0">0.0</option></select></div><div class="field"><label for="b-w">Writing band</label><select id="b-w" name="w"><option value="9.0">9.0</option><option value="8.5">8.5</option><option value="8.0">8.0</option><option value="7.5">7.5</option><option value="7.0">7.0</option><option value="6.5" selected>6.5</option><option value="6.0">6.0</option><option value="5.5">5.5</option><option value="5.0">5.0</option><option value="4.5">4.5</option><option value="4.0">4.0</option><option value="3.5">3.5</option><option value="3.0">3.0</option><option value="2.5">2.5</option><option value="2.0">2.0</option><option value="1.5">1.5</option><option value="1.0">1.0</option><option value="0.5">0.5</option><option value="0.0">0.0</option></select></div><div class="field"><label for="b-sp">Speaking band</label><select id="b-sp" name="sp"><option value="9.0">9.0</option><option value="8.5">8.5</option><option value="8.0">8.0</option><option value="7.5">7.5</option><option value="7.0">7.0</option><option value="6.5" selected>6.5</option><option value="6.0">6.0</option><option value="5.5">5.5</option><option value="5.0">5.0</option><option value="4.5">4.5</option><option value="4.0">4.0</option><option value="3.5">3.5</option><option value="3.0">3.0</option><option value="2.5">2.5</option><option value="2.0">2.0</option><option value="1.5">1.5</option><option value="1.0">1.0</option><option value="0.5">0.5</option><option value="0.0">0.0</option></select></div></div>
+<label class="tog" for="b-pr"><input type="checkbox" id="b-pr"/> Canada PR: show my CLB (IELTS General Training)</label>
+</form>
+<div class="calc-out" aria-live="polite" aria-atomic="true" id="calcOut">
+<div>Your overall band</div>
+<div class="big" id="ovBand">6.5</div>
+<p id="ovWhy">Average 6.50 → rounds to 6.5</p>
+</div>
+<div class="clb-out" id="clbOut" hidden aria-live="polite">
+<div class="tbl-wrap"><table class="cmp"><caption class="sr-only">Your CLB level per skill</caption><thead><tr><th scope="col">Skill</th><th scope="col">Your band</th><th scope="col">CLB level</th></tr></thead><tbody><tr><th scope="row">Listening</th><td><span id="cb-l">–</span></td><td><span id="cl-l">–</span></td></tr><tr><th scope="row">Reading</th><td><span id="cb-r">–</span></td><td><span id="cl-r">–</span></td></tr><tr><th scope="row">Writing</th><td><span id="cb-w">–</span></td><td><span id="cl-w">–</span></td></tr><tr><th scope="row">Speaking</th><td><span id="cb-sp">–</span></td><td><span id="cl-sp">–</span></td></tr></tbody></table></div>
+<p id="clbMin"></p>
+<p class="srcline">Your CLB is typically judged per skill; many programs require a minimum in each. Based on IELTS General Training only. Source: IRCC — language test equivalency charts. Checked September 2026; confirm on canada.ca before applying.</p>
+</div>
+</section>
+
+<h2 id="how">How the overall band is rounded</h2>
+<p>Your overall band is the average of your four bands, rounded to the nearest half band. An average ending in .25 rounds up to .5. An average ending in .75 rounds up to the next whole band.</p>
+<ul>
+<li>6.5, 6.5, 5.0, 7.0 → average 6.25 → <strong>6.5</strong></li>
+<li>7.0, 7.0, 6.5, 6.5 → average 6.75 → <strong>7.0</strong></li>
+<li>6.5, 6.5, 5.5, 6.0 → average 6.125 → <strong>6.0</strong></li>
+</ul>
+<p>Full details are in <a href="/ielts-guide/band-scores">how IELTS band scores work</a>.</p>
+<p>This calculator gives an estimate for planning. Your official result always comes from your Test Report Form.</p>
+
+<aside class="soft" aria-label="Free webinar">
+<h3>Know your numbers. Now find out why.</h3>
+<p>The free live webinar shows where marks usually go in each skill and what to fix first.</p>
+<a href="/webinar" class="btn btn-primary" data-cta="guide-calculator-mid">Join the Free IELTS Webinar</a>
+</aside>
+
+<h2 id="clb">CLB levels for Canada PR</h2>
+<p>For Express Entry, IRCC turns each IELTS General Training band into a CLB level. Here is the full table:</p>
+<div class="tbl-wrap"><table class="cmp"><caption class="sr-only">IELTS General Training minimum band per skill for each CLB level</caption><thead><tr><th scope="col">CLB level</th><th scope="col">Listening</th><th scope="col">Reading</th><th scope="col">Writing</th><th scope="col">Speaking</th></tr></thead><tbody><tr><th scope="row">CLB 10</th><td>8.5</td><td>8.0</td><td>7.5</td><td>7.5</td></tr><tr><th scope="row">CLB 9</th><td>8.0</td><td>7.0</td><td>7.0</td><td>7.0</td></tr><tr><th scope="row">CLB 8</th><td>7.5</td><td>6.5</td><td>6.5</td><td>6.5</td></tr><tr><th scope="row">CLB 7</th><td>6.0</td><td>6.0</td><td>6.0</td><td>6.0</td></tr><tr><th scope="row">CLB 6</th><td>5.5</td><td>5.0</td><td>5.5</td><td>5.5</td></tr><tr><th scope="row">CLB 5</th><td>5.0</td><td>4.0</td><td>5.0</td><td>5.0</td></tr><tr><th scope="row">CLB 4</th><td>4.5</td><td>3.5</td><td>4.0</td><td>4.0</td></tr></tbody></table></div>
+<p>Not sure which test you need? Read <a href="/ielts-guide/general-vs-academic-canada-pr">IELTS General vs Academic for Canada PR</a>.</p>
+
+<section class="endcta" aria-labelledby="end-h">
+<h2 id="end-h">Want to see where <em>your</em> marks go?</h2>
+<p>Join the free live IELTS webinar. It's 60 minutes, on Saturdays and Sundays at 7:00 PM IST. Even if you never join a course, you'll leave knowing where your marks are going and what to fix first.</p>
+<div class="btn-row"><a href="/webinar" class="btn btn-primary" data-cta="guide-ielts-band-calculator">Join the Free IELTS Webinar</a></div>
+</section>
+
+<script>
+(function () {
+  'use strict';
+  var CLB = [[10, 8.5, 8.0, 7.5, 7.5], [9, 8.0, 7.0, 7.0, 7.0], [8, 7.5, 6.5, 6.5, 6.5], [7, 6.0, 6.0, 6.0, 6.0], [6, 5.5, 5.0, 5.5, 5.5], [5, 5.0, 4.0, 5.0, 5.0], [4, 4.5, 3.5, 4.0, 4.0]];
+  var KEYS = ['l', 'r', 'w', 'sp'];
+  function overall(bands) {
+    var sum = 0;
+    for (var i = 0; i < bands.length; i++) sum += bands[i];
+    var avg = sum / bands.length;
+    return { avg: avg, band: Math.floor(avg * 2 + 0.5) / 2 };
+  }
+  function clbFor(skillIdx, band) {
+    for (var i = 0; i < CLB.length; i++) if (band >= CLB[i][skillIdx + 1]) return CLB[i][0];
+    return 0;
+  }
+  if (typeof module !== 'undefined' && module.exports) { module.exports = { overall: overall, clbFor: clbFor }; return; }
+  var $ = function (id) { return document.getElementById(id); };
+  function update() {
+    var bands = KEYS.map(function (k) { return parseFloat($('b-' + k).value); });
+    var o = overall(bands);
+    $('ovBand').textContent = o.band.toFixed(1);
+    $('ovWhy').textContent = 'Average ' + o.avg.toFixed(o.avg * 8 % 2 ? 3 : 2) + ' → rounds to ' + o.band.toFixed(1);
+    var pr = $('b-pr').checked;
+    $('clbOut').hidden = !pr;
+    if (!pr) return;
+    var min = 99;
+    KEYS.forEach(function (k, i) {
+      var c = clbFor(i, bands[i]);
+      $('cb-' + k).textContent = bands[i].toFixed(1);
+      $('cl-' + k).textContent = c ? 'CLB ' + c : 'Below CLB 4';
+      min = Math.min(min, c);
+    });
+    $('clbMin').textContent = min
+      ? 'Your lowest skill is at CLB ' + min + '. For a rule like "CLB ' + min + ' in all four skills", that is the level you meet.'
+      : 'At least one skill is below CLB 4.';
+  }
+  KEYS.concat(['pr']).forEach(function (k) { $('b-' + k).addEventListener('change', update); });
+  update();
+})();
+</script>
+
+<section class="related" aria-labelledby="rel-h"><h2 id="rel-h">Related guides</h2><div class="grid g3"><a href="/ielts-guide/band-scores" class="card card-hover"><h3>How IELTS Band Scores Work</h3><p>The 0–9 scale, the rounding rule and how each skill is marked.</p></a><a href="/ielts-guide/writing-task-2-mistakes" class="card card-hover"><h3>Writing Task 2 Mistakes That Keep You at 6.5</h3><p>Specific errors that cap your essay, with before/after fixes.</p></a><a href="/ielts-guide/general-vs-academic-canada-pr" class="card card-hover"><h3>IELTS General vs Academic for Canada PR</h3><p>Which test Express Entry needs, and the CLB table.</p></a></div></section>
+</article>
+</div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="/" class="logo"><img src="/assets/img/mark-white.svg" alt="" width="36" height="36" loading="lazy"/>Prep<span>Eve</span></a>
+        <p class="mt-s">Live online IELTS coaching and French for Canada PR, taught by certified trainers.</p>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="/#courses">IELTS Courses</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/book-demo-french">French for Canada PR</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Free</h4>
+        <ul>
+          <li><a href="/webinar">IELTS Webinar</a></li>
+          <li><a href="/book-demo">Demo Class</a></li>
+          <li><a href="/ielts-band-calculator">Band Calculator</a></li>
+          <li><a href="/ielts-guide/band-scores">IELTS Guides</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/919877714284" data-cta="footer" target="_blank" rel="noopener">WhatsApp +91 98777 14284</a></li>
+          <li><a href="https://www.youtube.com/@prepeveclasses" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span data-year>2026</span> PrepEve. All rights reserved.</span>
+      <span>IELTS is a registered trademark of the British Council, IDP and Cambridge. PrepEve is independent.</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/prepeve.js" defer></script>
+</body>
+</html>
