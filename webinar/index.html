@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Free IELTS Webinar — Learn What Moves Your Band Score | PrepEve</title>
-<meta name="description" content="Free live IELTS webinar by PrepEve, every weekend at 7:00 PM IST. Learn how IELTS is scored, what separates Band 6 from Band 7+, and leave with a clear prep roadmap."/>
+<title>Free IELTS Webinar: Find Where You Lose Marks | PrepEve</title>
+<meta name="description" content="Free 60-minute live IELTS session, Sat &amp; Sun 7:00 PM IST. Find out where you're losing marks and what to fix first before your next attempt."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://www.prepeve.com/webinar"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="PrepEve"/>
 <meta property="og:url" content="https://www.prepeve.com/webinar"/>
-<meta property="og:title" content="Free IELTS Webinar — Learn What Moves Your Band Score | PrepEve"/>
-<meta property="og:description" content="A free, live 60-minute IELTS strategy session every weekend. Scoring, Band 7+ habits, section tactics and a prep roadmap — plus live Q&amp;A."/>
+<meta property="og:title" content="Find out exactly where you're losing IELTS marks — free live session"/>
+<meta property="og:description" content="One free 60-minute live IELTS session, every Saturday and Sunday at 7:00 PM IST. Leave knowing what's holding your band back and what to fix first."/>
 <meta property="og:image" content="https://prepeve.com/og-image.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Free IELTS Webinar — Learn What Moves Your Band Score | PrepEve"/>
-<meta name="twitter:description" content="A free, live 60-minute IELTS strategy session every weekend. Reserve your free seat."/>
+<meta name="twitter:title" content="Find out exactly where you're losing IELTS marks — free live session"/>
+<meta name="twitter:description" content="Free 60-minute live IELTS session, Sat &amp; Sun 7:00 PM IST. Save your free seat."/>
 <meta name="twitter:image" content="https://prepeve.com/og-image.jpg"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Free IELTS Webinar — Learn What Moves Your Band Score",
+  "name": "Free IELTS Webinar: Find Where You Lose Marks",
   "url": "https://www.prepeve.com/webinar",
-  "description": "Free live IELTS webinar by PrepEve: how IELTS is scored, what separates Band 6 from Band 7+, section strategies and a preparation roadmap.",
+  "description": "Free 60-minute live IELTS session by PrepEve, every Saturday and Sunday at 7:00 PM IST. Find out where you're losing marks and what to fix first.",
   "inLanguage": "en",
   "isPartOf": {"@type": "WebSite", "name": "PrepEve", "url": "https://www.prepeve.com/"}
 }
@@ -45,10 +45,21 @@ function fireConv(){
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="/assets/css/prepeve.css"/>
+<link rel="icon" type="image/png" href="/assets/img/logo.png"/>
 <style>
 /* webinar-page specifics only */
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 20px}
-.chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:var(--r-full);padding:8px 14px;font-size:.88rem;font-weight:600;color:var(--ink)}
+/* Hero: on phones the form sits right after the subhead; trust items go below it */
+.hero-grid{grid-template-areas:"copy" "form" "trust"}
+.hero-copy{grid-area:copy}.hero-form{grid-area:form}.hero-trust{grid-area:trust}
+@media(max-width:999px){.hero{padding:20px 0 40px}.hero-grid{gap:18px}.hero h1{font-size:1.85rem;margin:10px 0 10px}.hero .lead{font-size:1rem}.h1-x{display:none}}
+@media(min-width:1000px){.hero-grid{grid-template-areas:"copy form" "trust form";row-gap:28px}}
+.facts{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 0;padding:0;list-style:none}
+.facts li{background:#fff;border:1px solid var(--line);border-radius:var(--r-full);padding:5px 11px;font-size:.82rem;font-weight:600;color:var(--ink)}
+@media(min-width:1000px){.facts{gap:8px;margin-top:22px}.facts li{padding:8px 14px;font-size:.88rem}}
+.hero-trust .trust{margin-bottom:10px}
+.hero-trust p{font-size:.9rem;color:var(--muted);max-width:56ch}
+.hero-form h2{margin-bottom:4px}
+.hero-form .form-sub{margin-bottom:14px}
 .f2{display:grid;grid-template-columns:1fr;gap:0 12px}
 @media(min-width:420px){.f2{grid-template-columns:1fr 1fr}}
 #submit-btn .spin{display:none}
@@ -56,15 +67,18 @@ function fireConv(){
 #success-wrap{display:none;text-align:center;padding:12px 0}
 #success-wrap .ok{width:56px;height:56px;border-radius:50%;background:var(--ok-lt);color:var(--ok);display:grid;place-items:center;font-size:1.6rem;margin:0 auto 14px}
 #success-wrap p{margin:8px auto 0;color:var(--muted)}
+.keep{max-width:860px;margin:0 auto;display:grid;gap:20px}
+@media(min-width:760px){.keep{grid-template-columns:1fr 1fr}}
+.keep .card h3{margin-bottom:10px}
 .inst{display:grid;gap:24px;align-items:start;max-width:860px;margin:0 auto}
 @media(min-width:720px){.inst{grid-template-columns:auto 1fr;gap:36px}}
 .inst .avatar{width:112px;height:112px;font-size:2.4rem}
 .inst-role{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-family:var(--f-head)}
 .inst h3{font-size:1.6rem;margin:6px 0 10px}
-.inst blockquote{margin-top:18px;border-left:3px solid var(--blue);background:var(--bg-2);padding:14px 18px;border-radius:0 var(--r) var(--r) 0;font-style:italic;color:var(--ink-2)}
+.inst p+p{margin-top:12px}
 .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .steps{max-width:720px;margin:0 auto}
-.proof-link{text-align:center;margin-top:28px}
+.story-q{max-width:760px;margin:0 auto}
 .foot-min{padding:28px 0}
 .foot-min .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
 .foot-min a:hover{color:#fff}
@@ -74,7 +88,7 @@ function fireConv(){
 
 <header class="nav">
   <div class="wrap">
-    <a href="/" class="logo" aria-label="PrepEve home">Prep<span>Eve</span></a>
+    <a href="/" class="logo" aria-label="PrepEve home"><img src="/assets/img/logo.png" alt="" width="34" height="34"/>Prep<span>Eve</span></a>
     <span class="nav-label">Free IELTS Webinar</span>
     <a href="#register" class="btn btn-primary nav-cta" data-cta="nav">Reserve My Free Seat</a>
   </div>
@@ -84,42 +98,36 @@ function fireConv(){
 <!-- HERO -->
 <section class="hero">
   <div class="wrap hero-grid">
-    <div class="rv">
-      <span class="badge"><span class="dot"></span>Free live IELTS webinar</span>
-      <h1>Learn What Actually Moves Your IELTS Score — <em>Free Live Webinar</em></h1>
-      <p class="lead">In 60 minutes, see how IELTS is really scored, what separates Band 6 from Band 7+, and leave with a preparation plan you can start the next day.</p>
-      <div class="chips" aria-label="Webinar details">
-        <span class="chip">🎟️ Free</span>
-        <span class="chip">📡 Live</span>
-        <span class="chip">💻 Online</span>
-        <span class="chip">📅 <span id="chip-date">Every weekend</span></span>
-        <span class="chip">🕐 <span id="chip-time">7:00 PM IST</span></span>
-      </div>
-      <div class="trust">
-        <span>🎓 15,000+ students trained</span>
-        <span><span class="stars" aria-hidden="true">★</span> 4.7 Google rating</span>
-        <span>🏅 97% Band 7+ rate</span>
-      </div>
-      <p class="mt-s"><a href="#register" class="btn btn-primary btn-lg" data-cta="hero">Reserve My Free Seat</a></p>
+    <div class="hero-copy rv">
+      <span class="badge"><span class="dot"></span>Free live IELTS session</span>
+      <h1>Find out exactly where you're losing IELTS marks<span class="h1-x"> — <em>in one free 60-minute live session</em></span></h1>
+      <p class="lead">See how examiners actually mark you, spot what's holding your band back, and leave knowing what to fix first.</p>
+      <ul class="facts" aria-label="Session details">
+        <li>Free</li>
+        <li>Live online</li>
+        <li><span id="chip-date">Sat &amp; Sun</span></li>
+        <li><span id="chip-time">7:00 PM IST</span></li>
+        <li>60 min</li>
+      </ul>
     </div>
 
-    <div class="form-card rv" id="register" data-hide-mcta>
+    <div class="form-card hero-form rv" id="register" data-hide-mcta>
       <div id="reg-form" data-form="webinar-register">
-        <h2>Reserve Your Free Seat</h2>
-        <p class="form-sub">60-minute live session · Sat &amp; Sun, 7:00 PM IST</p>
+        <h2>Save your free seat</h2>
+        <p class="form-sub">Every Sat &amp; Sun · 7:00 PM IST · 60 minutes · join either day</p>
         <div class="field">
           <label for="fname">Your name <span class="req">*</span></label>
           <input type="text" id="fname" placeholder="e.g. Priya Sharma" autocomplete="name"/>
-          <div class="field-err" id="fname-err">Please enter your name</div>
+          <div class="field-err" id="fname-err">Please type your name so we know who's joining</div>
         </div>
         <div class="field">
-          <label for="phone">WhatsApp number <span class="req">*</span></label>
+          <label for="phone">WhatsApp number — your joining link comes here <span class="req">*</span></label>
           <input type="tel" id="phone" placeholder="10-digit mobile number" autocomplete="tel" inputmode="tel"/>
-          <div class="field-err" id="phone-err">Please enter a valid phone number</div>
+          <div class="field-err" id="phone-err">Please enter your 10-digit WhatsApp number so we can send your link</div>
         </div>
         <div class="f2">
           <div class="field">
-            <label for="exam">Exam type</label>
+            <label for="exam">Which IELTS? (optional)</label>
             <select id="exam">
               <option value="">Select exam</option>
               <option value="Academic">Academic</option>
@@ -128,7 +136,7 @@ function fireConv(){
             </select>
           </div>
           <div class="field">
-            <label for="band">Target band</label>
+            <label for="band">Band you need (optional)</label>
             <select id="band">
               <option value="">Select band</option>
               <option value="6.0">Band 6.0</option>
@@ -144,14 +152,22 @@ function fireConv(){
           <span class="wa-ico" aria-hidden="true"></span>
           <span id="cta-txt">Reserve My Free Seat</span>
         </button>
-        <div class="form-note"><span>Free registration</span><span>No payment required</span><span>Join from anywhere</span></div>
-        <div class="form-alt">Prefer WhatsApp? <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20register%20for%20the%20free%20IELTS%20webinar." target="_blank" rel="noopener" data-cta="form-wa">Register via WhatsApp</a></div>
+        <div class="form-note"><span>Free</span><span>No payment</span><span>Link sent on WhatsApp</span></div>
+        <div class="form-alt">Have a question first? <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20have%20a%20question%20about%20the%20free%20IELTS%20webinar." target="_blank" rel="noopener" data-cta="form-wa">Ask on WhatsApp</a></div>
       </div>
       <div id="success-wrap" role="status" aria-live="polite">
         <div class="ok">✓</div>
-        <h3>You're registered!</h3>
-        <p>Your seat is reserved. We're opening WhatsApp so you can get the webinar link. Redirecting you shortly…</p>
+        <h3>Your seat is reserved</h3>
+        <p>WhatsApp is opening with a message already written for you. Press <b>Send</b> — that confirms your seat, and we reply in the same chat with your joining link.</p>
       </div>
+    </div>
+
+    <div class="hero-trust rv">
+      <div class="trust">
+        <span>🎓 15,000+ students trained</span>
+        <span><span class="stars" aria-hidden="true">★</span> 4.7 on Google from 300+ reviews</span>
+      </div>
+      <p>Hosted by PrepEve, the team behind live IELTS batches of max 5 students. Works on your phone. No IELTS knowledge needed.</p>
     </div>
   </div>
 </section>
@@ -160,111 +176,109 @@ function fireConv(){
 <section class="sec sec-alt">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Inside this free webinar</span>
-      <h2>Here's exactly what you'll learn</h2>
-      <p>Six high-impact topics in 60 minutes of live strategy.</p>
+      <span class="eyebrow">What you'll learn</span>
+      <h2>60 minutes. Six things most IELTS students never get told.</h2>
+      <p>Not a list of tips. The reasons behind your band, and what to do about them.</p>
     </div>
     <div class="grid g3">
-      <div class="card rv"><span class="num">01</span><h3>How IELTS is actually scored</h3><p>The real criteria examiners use — not what most prep books tell you.</p></div>
-      <div class="card rv"><span class="num">02</span><h3>What separates Band 6 from Band 7+</h3><p>The specific skills and habits that decide whether you fall short or hit your target.</p></div>
-      <div class="card rv"><span class="num">03</span><h3>The biggest candidate mistakes</h3><p>Common errors that silently reduce your score — and how to stop making them.</p></div>
-      <div class="card rv"><span class="num">04</span><h3>How to approach each section</h3><p>Listening, Reading, Writing and Speaking — practical, exam-ready strategies.</p></div>
-      <div class="card rv"><span class="num">05</span><h3>Your preparation roadmap</h3><p>A clear, actionable framework for your next attempt — not generic advice.</p></div>
-      <div class="card rv"><span class="num">06</span><h3>What to do before test day</h3><p>Final-week strategies to maximise your score when it counts most.</p></div>
+      <div class="card rv"><span class="num">01</span><h3>Why good English can still get you 6.5</h3><p>Examiners don't mark "how good your English is". They mark four specific things. Find out which one is usually holding people back.</p></div>
+      <div class="card rv"><span class="num">02</span><h3>The real gap between Band 6.5 and 7</h3><p>It's smaller and more specific than most students think. See exactly what an examiner needs to see before giving the higher band.</p></div>
+      <div class="card rv"><span class="num">03</span><h3>How to find your own weak spot</h3><p>A simple way to see which skill is costing you the most marks, so you stop spreading your time across everything.</p></div>
+      <div class="card rv"><span class="num">04</span><h3>Writing and Speaking structures that work at your level</h3><p>You don't need native-level English. You need answers built the way examiners expect them.</p></div>
+      <div class="card rv"><span class="num">05</span><h3>A timing plan for Reading and Listening</h3><p>Stop running out of time on the questions that carry the marks.</p></div>
+      <div class="card rv"><span class="num">06</span><h3>What to do between now and your test</h3><p>A clear plan for your next few weeks, based on your test date and the band you need.</p></div>
     </div>
     <p class="center mt"><a href="#register" class="btn btn-primary" data-cta="learn">Reserve My Free Seat</a></p>
   </div>
 </section>
 
-<!-- WHY ATTEND -->
+<!-- WORTH IT + WHY FREE -->
 <section class="sec">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">60 minutes well spent</span>
-      <h2>Why attend?</h2>
+      <span class="eyebrow">Straight answers</span>
+      <h2>Worth your hour, even if you never buy a thing</h2>
     </div>
-    <div class="grid g2">
-      <div class="card rv"><div class="ico">🚫</div><h3>Stop wasting time on random tips</h3><p>Generic advice keeps you spinning in circles. Get a structured approach built around how IELTS is actually marked.</p></div>
-      <div class="card rv"><div class="ico">🗺️</div><h3>Leave with a preparation roadmap</h3><p>Not just motivation — a concrete plan you can start using the day after the webinar.</p></div>
-      <div class="card rv"><div class="ico">🔍</div><h3>Find where your score is being lost</h3><p>Most candidates don't know which section is costing them half a band. After this session, you will.</p></div>
-      <div class="card rv"><div class="ico">👩‍🏫</div><h3>Learn from an experienced trainer</h3><p>Real strategies from 10+ years of IELTS coaching, with live Q&amp;A for your own situation.</p></div>
+    <div class="keep">
+      <div class="card rv">
+        <h3>What you walk away with</h3>
+        <p>Even if you never join a course, you'll leave knowing where your marks are going and what to fix first. Most students spend weeks practising the wrong thing. This hour is about making sure you don't.</p>
+      </div>
+      <div class="card rv">
+        <h3>Why is this free?</h3>
+        <p>It's how most of our students first meet us. We'd rather show you how we teach than tell you. At the end we'll briefly mention our courses. No pressure, and no payment details asked, ever.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- WHO SHOULD ATTEND -->
+<!-- WHO IT'S FOR -->
 <section class="sec sec-alt">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Is this for you?</span>
-      <h2>This webinar is for you if you're…</h2>
+      <h2>This session is for you if…</h2>
     </div>
     <div class="grid g3">
-      <div class="card rv"><div class="ico">🎓</div><h3>Planning to study abroad</h3><p>UK, Australia, Canada or USA — IELTS is your gateway. Make sure you hit the score.</p></div>
-      <div class="card rv"><div class="ico">🍁</div><h3>Applying for Canada PR</h3><p>Your IELTS band directly affects your CRS score and PR eligibility.</p></div>
-      <div class="card rv"><div class="ico">💼</div><h3>A working professional</h3><p>Get a focused, time-efficient strategy that fits around your job.</p></div>
-      <div class="card rv"><div class="ico">🆕</div><h3>Just starting out</h3><p>Walk away with a clear roadmap so you never feel lost in your preparation.</p></div>
-      <div class="card rv"><div class="ico">🔄</div><h3>Stuck below Band 7</h3><p>Already attempted IELTS? Learn exactly what's holding your score back and how to fix it.</p></div>
+      <div class="card rv"><div class="ico">🔄</div><h3>You've already sat IELTS and missed your band</h3><p>Missing by 0.5 or 1.0 hurts. Before you pay for another attempt, find out what actually went wrong.</p></div>
+      <div class="card rv"><div class="ico">❓</div><h3>You don't know your current band</h3><p>You'll learn how the marking works, so you can judge where you stand and what's realistic.</p></div>
+      <div class="card rv"><div class="ico">💼</div><h3>You work full-time</h3><p>Weekend evenings, 60 minutes, on your phone. You'll leave with a plan that fits limited study hours.</p></div>
+      <div class="card rv"><div class="ico">🍁</div><h3>You need IELTS for Canada PR</h3><p>Every band counts toward your CRS score. Know where to focus before you book your test.</p></div>
+      <div class="card rv"><div class="ico">🎓</div><h3>You're applying to study abroad</h3><p>UK, Australia, Canada or elsewhere: your admission needs a specific band. Plan for it properly.</p></div>
+      <div class="card rv"><div class="ico">🆕</div><h3>You're just starting out</h3><p>No IELTS knowledge needed. Start with the right picture instead of random YouTube tips.</p></div>
     </div>
   </div>
 </section>
 
-<!-- SOCIAL PROOF -->
+<!-- PROOF -->
 <section class="sec">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Real results</span>
-      <h2>Students who trusted PrepEve</h2>
-    </div>
-    <div class="stats rv">
-      <div class="stat"><b>15,000+</b><span>Students trained</span></div>
-      <div class="stat"><b>97%</b><span>Band 7+ rate</span></div>
-      <div class="stat"><b>4.7★</b><span>Google rating</span></div>
-      <div class="stat"><b>+1.5</b><span>Avg band improvement</span></div>
+      <span class="eyebrow">Real students</span>
+      <h2>They found what was costing them marks. Then they fixed it.</h2>
     </div>
 
-    <div class="grid g3 mt">
-      <div class="card quote rv">
-        <blockquote>“I was so confused watching videos online. After a 2-day free webinar, I enrolled. Their class notes let you skim every module quickly, and they assist with Speaking &amp; Writing mocks. I benefited more than what I paid for.”</blockquote>
-        <div class="quote-by"><span class="avatar">SR</span><div><b>Shashikanth Revelly</b><small><a href="https://www.google.com/maps/contrib/110923457556373260953/reviews" target="_blank" rel="noopener nofollow">Review on Google</a></small></div><span class="band-pill">7.5</span></div>
+    <div class="grid g3">
+      <div class="rv">
+        <button class="vcard" type="button" data-vid="8agy5ojp36I" aria-label="Play video: Taranjeet, Band 6.5 to 8.5">
+          <img src="https://img.youtube.com/vi/8agy5ojp36I/hqdefault.jpg" alt="Taranjeet talks about going from Band 6.5 to 8.5" width="480" height="360" loading="lazy" decoding="async"/>
+          <span class="play" aria-hidden="true"></span>
+        </button>
+        <div class="vcap"><b>Taranjeet: 6.5 → 8.5 in 30 days</b><span>Needed it for Canada PR</span></div>
       </div>
-      <div class="card quote rv">
-        <blockquote>“Honestly, I can't thank the team enough. It's been almost two years since I took my IELTS classes with them, and they still support me whenever I reach out. That kind of dedication is rare.”</blockquote>
-        <div class="quote-by"><span class="avatar">AM</span><div><b>Anooj Motghare</b><small><a href="https://www.google.com/maps/contrib/102113621604889428073/reviews" target="_blank" rel="noopener nofollow">Review on Google</a></small></div><span class="band-pill">8.5</span></div>
+      <div class="rv">
+        <button class="vcard" type="button" data-vid="5FbjLsycE2k" aria-label="Play video: Pratishtha, Band 6.0 to 8.0">
+          <img src="https://img.youtube.com/vi/5FbjLsycE2k/hqdefault.jpg" alt="Pratishtha talks about going from Band 6.0 to 8.0" width="480" height="360" loading="lazy" decoding="async"/>
+          <span class="play" aria-hidden="true"></span>
+        </button>
+        <div class="vcap"><b>Pratishtha: 6.0 → 8.0</b><span>Now at UCL, UK</span></div>
       </div>
-      <div class="card quote rv">
-        <blockquote>“The coaching was extremely helpful and highly effective. The study materials were well-structured and perfectly aligned with the actual exam pattern. I truly appreciate the support throughout.”</blockquote>
-        <div class="quote-by"><span class="avatar">YP</span><div><b>Yashaswini Palakonda</b><small><a href="https://www.google.com/maps/contrib/109065652692536741630/reviews" target="_blank" rel="noopener nofollow">Review on Google</a></small></div><span class="band-pill">8.0</span></div>
+      <div class="rv">
+        <button class="vcard" type="button" data-vid="2f9jwGWIREI" aria-label="Play video: Deepanshu, Band 6.5 to 7.5">
+          <img src="https://img.youtube.com/vi/2f9jwGWIREI/hqdefault.jpg" alt="Deepanshu talks about going from Band 6.5 to 7.5" width="480" height="360" loading="lazy" decoding="async"/>
+          <span class="play" aria-hidden="true"></span>
+        </button>
+        <div class="vcap"><b>Deepanshu: 6.5 → 7.5</b><span>A full band up</span></div>
       </div>
     </div>
 
-    <div class="grid g3 mt">
-      <div class="rv">
-        <button class="vcard" type="button" data-vid="8agy5ojp36I" aria-label="Play video: Taranjeet, Band 8.5">
-          <img src="https://img.youtube.com/vi/8agy5ojp36I/hqdefault.jpg" alt="Taranjeet — Band 8.5 student testimonial" width="480" height="360" loading="lazy" decoding="async"/>
-          <span class="play" aria-hidden="true"></span>
-        </button>
-        <div class="vcap"><b>Taranjeet — Band 8.5</b><span>6.5 → 8.5 in 30 days · Canada PR</span></div>
+    <div class="story-q mt">
+      <div class="card quote rv">
+        <blockquote>“I was so confused watching videos online. After attending a 2-day free webinar, I enrolled. Their class notes let you skim through every module quickly. They will assist with Speaking &amp; Writing mock tests. I felt like I benefited more than what I paid for.”</blockquote>
+        <div class="quote-by"><span class="avatar">SR</span><div><b>Shashikanth Revelly</b><small>Started with this free webinar · <a href="https://www.google.com/maps/contrib/110923457556373260953/reviews?hl=en-IN" target="_blank" rel="noopener nofollow">Review on Google</a></small></div><span class="band-pill">7.5</span></div>
       </div>
-      <div class="rv">
-        <button class="vcard" type="button" data-vid="5FbjLsycE2k" aria-label="Play video: Pratishtha, Band 8.0">
-          <img src="https://img.youtube.com/vi/5FbjLsycE2k/hqdefault.jpg" alt="Pratishtha — Band 8.0 student testimonial" width="480" height="360" loading="lazy" decoding="async"/>
-          <span class="play" aria-hidden="true"></span>
-        </button>
-        <div class="vcap"><b>Pratishtha — Band 8.0</b><span>6.0 → 8.0 · UCL, UK</span></div>
-      </div>
-      <div class="rv">
-        <button class="vcard" type="button" data-vid="2f9jwGWIREI" aria-label="Play video: Deepanshu, Band 7.5">
-          <img src="https://img.youtube.com/vi/2f9jwGWIREI/hqdefault.jpg" alt="Deepanshu — Band 7.5 student testimonial" width="480" height="360" loading="lazy" decoding="async"/>
-          <span class="play" aria-hidden="true"></span>
-        </button>
-        <div class="vcap"><b>Deepanshu — Band 7.5</b><span>6.5 → 7.5</span></div>
-      </div>
+    </div>
+
+    <div class="stats rv mt">
+      <div class="stat"><b>15,000+</b><span>IELTS students trained</span></div>
+      <div class="stat"><b>4.7★</b><span>Google, 300+ reviews</span></div>
+      <div class="stat"><b>Max 5</b><span>Students per live batch</span></div>
+      <div class="stat"><b>60 min</b><span>Free, live, every weekend</span></div>
     </div>
 
     <div class="btn-row mt" style="justify-content:center">
       <a href="#register" class="btn btn-primary" data-cta="proof">Reserve My Free Seat</a>
-      <a href="https://chat.whatsapp.com/EoZiGZKTLak9FUD1JjMFdi" class="btn btn-wa" target="_blank" rel="noopener" data-cta="proof-wa-group">Join 15,000+ students on WhatsApp</a>
+      <a href="https://chat.whatsapp.com/EoZiGZKTLak9FUD1JjMFdi" class="btn btn-wa" target="_blank" rel="noopener" data-cta="proof-wa-group">Join Our Free IELTS WhatsApp Group</a>
     </div>
   </div>
 </section>
@@ -273,23 +287,21 @@ function fireConv(){
 <section class="sec sec-alt">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Your instructor</span>
-      <h2>Learn From IELTS Experts</h2>
-      <p>Real trainers. Real experience. Real results.</p>
+      <span class="eyebrow">Who's teaching</span>
+      <h2>Taught live by a trainer, not a recording</h2>
     </div>
     <div class="inst rv">
       <span class="avatar" aria-hidden="true">S</span>
       <div>
-        <div class="inst-role">Founder, PrepEve · IELTS Expert · RCIC Certified</div>
+        <div class="inst-role">Founder &amp; Trainer, PrepEve · Regulated Canadian Immigration Consultant</div>
         <h3>Sanjita</h3>
-        <p>10+ years coaching IELTS, CELPIP and TEF Canada. Trained 10,000+ students across India. Known for making Band 7+ feel achievable — even for repeat test-takers and complete beginners.</p>
+        <p>Sanjita built PrepEve from the ground up around one idea: students improve fastest when a trainer actually hears them and corrects them. She teaches IELTS, CELPIP, PTE, TOEFL and Duolingo.</p>
+        <p>As a Regulated Canadian Immigration Consultant, she also knows why your band matters, not just how the test works. Bring your questions about your score and your plans.</p>
         <div class="pills">
-          <span class="badge">10,000+ students trained</span>
-          <span class="badge badge-gold">4.7★ Google rating</span>
-          <span class="badge badge-ok">RCIC certified</span>
-          <span class="badge">1.2L+ YouTube subscribers</span>
+          <span class="badge">15,000+ students trained</span>
+          <span class="badge badge-gold">4.7★ on Google</span>
+          <span class="badge badge-ok">Regulated Canadian Immigration Consultant</span>
         </div>
-        <blockquote>"Most students fail IELTS not because they lack English — but because nobody showed them the format. One class changes everything."</blockquote>
         <p class="mt-s"><a href="#register" class="btn btn-primary" data-cta="instructor">Reserve My Free Seat</a></p>
       </div>
     </div>
@@ -300,16 +312,16 @@ function fireConv(){
 <section class="sec">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Webinar agenda</span>
-      <h2>What happens during the webinar</h2>
-      <p>A structured 60-minute session built for clarity and action.</p>
+      <span class="eyebrow">How the hour works</span>
+      <h2>What you'll do in the session</h2>
+      <p>Bring a notebook. This is a working session, not a lecture.</p>
     </div>
     <div class="steps">
-      <div class="step rv"><span class="step-n">1</span><div><h3>Introduction to IELTS scoring</h3><p>The real criteria behind every band score — what examiners look for vs. what most candidates focus on.</p></div></div>
-      <div class="step rv"><span class="step-n">2</span><div><h3>High-impact strategies for each section</h3><p>Section-by-section tactics you can apply in your very next attempt.</p></div></div>
-      <div class="step rv"><span class="step-n">3</span><div><h3>Score-killing mistakes, fixed</h3><p>The common errors that cost half a band or more, and how to stop making them.</p></div></div>
-      <div class="step rv"><span class="step-n">4</span><div><h3>Building your prep roadmap</h3><p>A framework for your own timeline, target band and available study hours.</p></div></div>
-      <div class="step rv"><span class="step-n">5</span><div><h3>Live Q&amp;A</h3><p>Ask about your specific situation, weak areas or preparation challenges.</p></div></div>
+      <div class="step rv"><span class="step-n">1</span><div><h3>See how you're really marked</h3><p>Walk through the criteria examiners use, and compare them with what you've been practising.</p></div></div>
+      <div class="step rv"><span class="step-n">2</span><div><h3>Spot your weakest skill</h3><p>Use a quick self-check to find where your marks are most likely going.</p></div></div>
+      <div class="step rv"><span class="step-n">3</span><div><h3>Learn the fixes for each section</h3><p>Note down structures for Writing and Speaking, and a timing plan for Reading and Listening.</p></div></div>
+      <div class="step rv"><span class="step-n">4</span><div><h3>Build your plan</h3><p>Map out your next few weeks around your test date, target band and study hours.</p></div></div>
+      <div class="step rv"><span class="step-n">5</span><div><h3>Ask your own question, live</h3><p>Your score, your module, your deadline. Get a straight answer from a trainer.</p></div></div>
     </div>
   </div>
 </section>
@@ -318,8 +330,8 @@ function fireConv(){
 <section class="sec" style="padding-top:0;padding-bottom:0">
   <div class="wrap">
     <div class="cta-band rv">
-      <h2>Ready to stop guessing and start preparing?</h2>
-      <p>One free session. A clear strategy. Free · Live · Online · No commitment.</p>
+      <h2>Know what to fix before you book your next test</h2>
+      <p>Next sessions: <span class="js-date">this Saturday &amp; Sunday</span>, 7:00 PM IST. Free · Live · 60 minutes.</p>
       <a href="#register" class="btn btn-light btn-lg" data-cta="mid">Reserve My Free Seat</a>
     </div>
   </div>
@@ -329,17 +341,18 @@ function fireConv(){
 <section class="sec">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">FAQ</span>
-      <h2>Frequently asked questions</h2>
+      <span class="eyebrow">Questions</span>
+      <h2>Before you reserve</h2>
     </div>
     <div class="faq rv">
-      <details><summary>Is the webinar really free?</summary><div>Yes, completely free. No payment, no card, no hidden charges. Just reserve your seat and show up.</div></details>
-      <details><summary>When is the webinar?</summary><div>Every Saturday and Sunday at 7:00 PM IST. The session is about 60 minutes including live Q&amp;A.</div></details>
-      <details><summary>Who is this for?</summary><div>Anyone preparing for IELTS — beginners, retakers, working professionals, and students planning to study or migrate abroad.</div></details>
-      <details><summary>Do I need prior IELTS knowledge?</summary><div>No. It's useful at any stage — whether you've never opened an IELTS book or have already taken the exam.</div></details>
-      <details><summary>Academic or General Training?</summary><div>We cover strategies for both Academic and General Training, and you'll leave clear on what applies to your module.</div></details>
-      <details><summary>How will I get the webinar link?</summary><div>After you register, we send the link on WhatsApp — so please enter your WhatsApp number correctly.</div></details>
-      <details><summary>Can I attend on my phone?</summary><div>Yes. The webinar works on mobile — no laptop needed, just a stable internet connection.</div></details>
+      <details><summary>Is it really free?</summary><div>Yes. No payment, no card, nothing to cancel later. Leave your name and WhatsApp number and join on the day.</div></details>
+      <details><summary>Is this just a sales pitch?</summary><div>No. The session is about your IELTS score. At the end we'll briefly mention our courses, in case you want more help. No pressure. What you learn is yours to keep either way.</div></details>
+      <details><summary>How do I get the joining link?</summary><div>After you reserve, WhatsApp opens with a message ready for you. Press Send and we'll reply in that chat with your link. Please enter your WhatsApp number carefully.</div></details>
+      <details><summary>Can I join on my phone?</summary><div>Yes. You only need your phone and a stable internet connection. No laptop needed.</div></details>
+      <details><summary>Academic or General Training?</summary><div>Both. Listening and Speaking are the same for both modules, and the marking ideas apply to both. Where Reading and Writing differ, we'll point it out.</div></details>
+      <details><summary>I'm a complete beginner. Is it too advanced?</summary><div>No. You don't need any IELTS knowledge. Starting with a clear picture of how the test is marked is the best place to begin.</div></details>
+      <details><summary>I've already failed once. Will this help?</summary><div>That's exactly who it's built for. Most students who miss their band repeat the same mistake on the next attempt. This session helps you find it first.</div></details>
+      <details><summary>When is it?</summary><div>Every Saturday and Sunday at 7:00 PM IST, for about 60 minutes including live Q&amp;A. The next sessions are <span class="js-date">this Saturday &amp; Sunday</span>.</div></details>
     </div>
   </div>
 </section>
@@ -347,9 +360,9 @@ function fireConv(){
 <!-- FINAL CTA -->
 <section class="sec sec-dark center">
   <div class="wrap">
-    <span class="eyebrow">Don't wait</span>
-    <h2>Your IELTS prep doesn't need to be guesswork</h2>
-    <p style="margin:14px auto 28px">Join thousands of students who used PrepEve's approach to reach their target band. Reserve your free seat in this weekend's live webinar.</p>
+    <span class="eyebrow">Next session: <span class="js-date">this weekend</span></span>
+    <h2>Your next attempt shouldn't be a guess</h2>
+    <p style="margin:14px auto 28px">Spend 60 minutes finding out where your marks are going and what to fix first. Free, live, on your phone.</p>
     <a href="#register" class="btn btn-primary btn-lg" data-cta="final">Reserve My Free Seat</a>
   </div>
 </section>
@@ -357,8 +370,8 @@ function fireConv(){
 
 <footer class="foot foot-min">
   <div class="wrap">
-    <a href="/" class="logo">Prep<span>Eve</span></a>
-    <span>© <span data-year>2026</span> PrepEve</span>
+    <a href="/" class="logo"><img src="/assets/img/logo.png" alt="" width="34" height="34" loading="lazy"/>Prep<span>Eve</span></a>
+    <span>© <span data-year>2026</span> PrepEve · IELTS is a registered trademark of the British Council, IDP and Cambridge. PrepEve is independent.</span>
     <a href="https://wa.me/919877714284" target="_blank" rel="noopener" data-cta="footer">WhatsApp +91 98777 14284</a>
   </div>
 </footer>
@@ -421,7 +434,7 @@ document.getElementById('submit-btn').addEventListener('click', function(){
 
   // Loading state
   document.getElementById('spinner').style.display = 'block';
-  document.getElementById('cta-txt').textContent = 'Reserving your seat...';
+  document.getElementById('cta-txt').textContent = 'Reserving your seat…';
   document.querySelector('.wa-ico').style.display = 'none';
   this.disabled = true;
 
@@ -439,7 +452,7 @@ document.getElementById('submit-btn').addEventListener('click', function(){
   fireConv();
 
   // Build WhatsApp message
-  var msg = 'Hi PrepEve! I just registered for the free IELTS webinar.\n\nName: ' + name
+  var msg = 'Hi PrepEve! I just reserved my free seat for the IELTS webinar. Please send me the joining link.\n\nName: ' + name
     + '\nPhone: +' + phone
     + '\nExam: ' + exam
     + '\nTarget Band: ' + band;
@@ -455,6 +468,14 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     }, 1500);
   }, 900);
 });
+</script>
+<script>
+/* Copy the computed session dates into the other date slots on the page */
+(function(){
+  var d = document.getElementById('chip-date');
+  if(!d || !/\d/.test(d.textContent)) return;
+  document.querySelectorAll('.js-date').forEach(function(el){ el.textContent = d.textContent; });
+})();
 </script>
 <script src="/assets/js/prepeve.js" defer></script>
 </body>

@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /thank-you
-Disallow: /assets/partials.html
 
 Sitemap: https://www.prepeve.com/sitemap.xml
