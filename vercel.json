@@ -26,6 +26,316 @@
       "source": "/ielts-coaching-comparison",
       "destination": "/best-online-ielts-coaching-india",
       "permanent": true
+    },
+    {
+      "source": "/ielts-coaching-mohali",
+      "destination": "/ielts-coaching-chandigarh#mohali",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-coaching-panchkula",
+      "destination": "/ielts-coaching-chandigarh#panchkula",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-coaching-tricity",
+      "destination": "/ielts-coaching-chandigarh",
+      "permanent": true
+    },
+    {
+      "source": "/ielts",
+      "destination": "/ielts-preparation",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-test-preparation",
+      "destination": "/ielts-preparation",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-coaching",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-coaching-india",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-writing",
+      "destination": "/ielts-writing-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-speaking",
+      "destination": "/ielts-speaking-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-for-pr",
+      "destination": "/canada-pr-language-requirements",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-band-requirement-for-pr",
+      "destination": "/canada-pr-language-requirements",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-for-canada-pr",
+      "destination": "/ielts-coaching-for-canada",
+      "permanent": true
+    },
+    {
+      "source": "/canada-pr-ielts",
+      "destination": "/ielts-coaching-for-canada",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-score-for-canada-pr",
+      "destination": "/ielts-coaching-for-canada",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-for-express-entry",
+      "destination": "/canada-pr-language-requirements",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-for-pnp",
+      "destination": "/canada-pr-language-requirements",
+      "permanent": true
+    },
+    {
+      "source": "/canada-express-entry-language-test",
+      "destination": "/canada-pr-language-requirements",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-general-vs-academic-for-pr",
+      "destination": "/ielts-guide/general-vs-academic-canada-pr",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-for-australia-pr",
+      "destination": "/ielts-coaching-for-australia",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-score-for-australia-pr",
+      "destination": "/australia-pr-english-test",
+      "permanent": true
+    },
+    {
+      "source": "/australia-pr-ielts",
+      "destination": "/ielts-coaching-for-australia",
+      "permanent": true
+    },
+    {
+      "source": "/australia-pr-pte",
+      "destination": "/australia-pr-english-test",
+      "permanent": true
+    },
+    {
+      "source": "/australia-english-language-requirements",
+      "destination": "/australia-pr-english-test",
+      "permanent": true
+    },
+    {
+      "source": "/pte-for-australia",
+      "destination": "/australia-pr-english-test",
+      "permanent": true
+    },
+    {
+      "source": "/pte-score-for-australia",
+      "destination": "/australia-pr-english-test",
+      "permanent": true
+    },
+    {
+      "source": "/pte-vs-ielts-for-australia",
+      "destination": "/pte-vs-ielts",
+      "permanent": true
+    },
+    {
+      "source": "/pte-for-pr",
+      "destination": "/pte",
+      "permanent": true
+    },
+    {
+      "source": "/uk-ielts",
+      "destination": "/ielts-coaching-for-uk",
+      "permanent": true
+    },
+    {
+      "source": "/uk-english-test",
+      "destination": "/uk-english-language-requirements",
+      "permanent": true
+    },
+    {
+      "source": "/french",
+      "destination": "/french-for-canada-pr",
+      "permanent": true
+    },
+    {
+      "source": "/french-coaching",
+      "destination": "/french-online-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/french-classes-online",
+      "destination": "/french-online-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/french-language-classes",
+      "destination": "/french-online-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/french-coaching-india",
+      "destination": "/french-online-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/french-for-pr",
+      "destination": "/french-for-canada-pr",
+      "permanent": true
+    },
+    {
+      "source": "/french-for-immigration",
+      "destination": "/french-for-canada-pr",
+      "permanent": true
+    },
+    {
+      "source": "/french-language-for-canada",
+      "destination": "/french-for-canada-pr",
+      "permanent": true
+    },
+    {
+      "source": "/canada-pr-french",
+      "destination": "/french-for-canada-pr",
+      "permanent": true
+    },
+    {
+      "source": "/french-language-test-canada",
+      "destination": "/tef-vs-tcf",
+      "permanent": true
+    },
+    {
+      "source": "/french-nclc-7",
+      "destination": "/french-nclc#nclc-7",
+      "permanent": true
+    },
+    {
+      "source": "/french-nclc-9",
+      "destination": "/french-nclc#nclc-9",
+      "permanent": true
+    },
+    {
+      "source": "/french-nclc-10",
+      "destination": "/french-nclc#nclc-10",
+      "permanent": true
+    },
+    {
+      "source": "/tef-canada-preparation",
+      "destination": "/tef-canada",
+      "permanent": true
+    },
+    {
+      "source": "/tcf-canada-preparation",
+      "destination": "/tcf-canada",
+      "permanent": true
+    },
+    {
+      "source": "/canada-pr-tef",
+      "destination": "/tef-canada",
+      "permanent": true
+    },
+    {
+      "source": "/canada-pr-tcf",
+      "destination": "/tcf-canada",
+      "permanent": true
+    },
+    {
+      "source": "/pte-online-coaching",
+      "destination": "/pte-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/pte-coaching-india",
+      "destination": "/pte-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/pte-preparation",
+      "destination": "/pte",
+      "permanent": true
+    },
+    {
+      "source": "/best-pte-coaching",
+      "destination": "/pte-coaching",
+      "permanent": true
+    },
+    {
+      "source": "/celpip-coaching",
+      "destination": "/celpip",
+      "permanent": true
+    },
+    {
+      "source": "/celpip-online-coaching",
+      "destination": "/celpip",
+      "permanent": true
+    },
+    {
+      "source": "/celpip-for-canada",
+      "destination": "/celpip",
+      "permanent": true
+    },
+    {
+      "source": "/celpip-for-pr",
+      "destination": "/celpip",
+      "permanent": true
+    },
+    {
+      "source": "/celpip-preparation",
+      "destination": "/celpip",
+      "permanent": true
+    },
+    {
+      "source": "/celpip-general",
+      "destination": "/celpip",
+      "permanent": true
+    },
+    {
+      "source": "/canada-pr-celpip",
+      "destination": "/celpip",
+      "permanent": true
+    },
+    {
+      "source": "/celpip-vs-ielts-for-canada",
+      "destination": "/celpip-vs-ielts",
+      "permanent": true
+    },
+    {
+      "source": "/toefl-coaching",
+      "destination": "/toefl",
+      "permanent": true
+    },
+    {
+      "source": "/toefl-online-coaching",
+      "destination": "/toefl",
+      "permanent": true
+    },
+    {
+      "source": "/toefl-preparation",
+      "destination": "/toefl",
+      "permanent": true
+    },
+    {
+      "source": "/canada-pr-language-test",
+      "destination": "/canada-pr-language-requirements",
+      "permanent": true
     }
   ],
   "headers": [

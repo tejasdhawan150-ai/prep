@@ -16,7 +16,7 @@
 </script>
 <link rel="preload" href="/assets/fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin/>
-<link rel="stylesheet" href="/assets/css/prepeve.css?v=f001249a"/>
+<link rel="stylesheet" href="/assets/css/prepeve.css?v=4c90b2a1"/>
 <link rel="icon" type="image/svg+xml" href="/assets/img/mark.svg"/>
 <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
 
@@ -38,10 +38,7 @@
    "logo": "https://www.prepeve.com/assets/img/logo.png",
    "telephone": "+919877714284",
    "areaServed": "Worldwide",
-   "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "IN"
-   },
+   "address": [{"@type":"PostalAddress","addressCountry":"IN"},{"@type":"PostalAddress","addressCountry":"CA"}],
    "sameAs": [
     "https://www.youtube.com/@prepeveclasses"
    ],
@@ -155,7 +152,7 @@
      "name": "What is PrepEve?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "PrepEve is an Indian online coaching company for IELTS (Academic and General Training) and French for Canada PR. Classes are live online in batches of at most 5 students."
+      "text": "PrepEve is an online IELTS coaching company based in India and Canada, coaching IELTS (Academic and General Training) and French for Canada PR. Classes are live online in batches of at most 5 students."
      }
     },
     {
@@ -231,12 +228,11 @@
   <div class="wrap">
     <a href="/" class="logo" aria-label="PrepEve home"><img src="/assets/img/mark.svg" alt="" width="36" height="36"/>Prep<span>Eve</span></a>
     <ul class="nav-links">
-      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#courses">IELTS Courses</a></li>
+      <li><a href="/language-tests">Language Tests</a></li>
+      <li><a href="/french-for-canada-pr">French for PR</a></li>
       <li><a href="/#results">Results</a></li>
-      <li><a href="/#trainers">Trainers</a></li>
       <li><a href="/webinar">Free Webinar</a></li>
-      <li><a href="/book-demo-french">French for Canada PR</a></li>
-      <li><a href="/#faq">FAQ</a></li>
     </ul>
     <div class="nav-right">
       <a href="/book-demo" class="btn btn-primary nav-cta" data-cta="nav">Book Free Demo</a>
@@ -245,12 +241,12 @@
   </div>
 </header>
 <nav class="mnav" id="mnav" aria-label="Mobile">
-  <a href="/#courses">Courses</a>
+  <a href="/#courses">IELTS Courses</a>
+  <a href="/language-tests">Language Tests: PTE, CELPIP, TOEFL</a>
+  <a href="/french-for-canada-pr">French for Canada PR</a>
   <a href="/#results">Results</a>
-  <a href="/#trainers">Trainers</a>
   <a href="/webinar">Free IELTS Webinar</a>
-  <a href="/book-demo-french">French for Canada PR</a>
-  <a href="/#faq">FAQ</a>
+  <a href="/ielts-preparation">IELTS Guides</a>
   <a href="/book-demo" class="btn btn-primary btn-block" data-cta="mnav">Book Free Demo Class</a>
 </nav>
 
@@ -262,8 +258,8 @@
 
     <h2>PrepEve at a glance</h2>
     <dl class="facts">
-      <div><dt>What PrepEve is</dt><dd>Online coaching for IELTS (Academic &amp; General Training) and French for Canada PR</dd></div>
-      <div><dt>Based in</dt><dd>India · students join online from anywhere</dd></div>
+      <div><dt>What PrepEve is</dt><dd>Online IELTS coaching (our core) for IELTS (Academic &amp; General Training) and French for Canada PR</dd></div>
+      <div><dt>Based in</dt><dd>India and Canada · online classes you join from anywhere</dd></div>
       <div><dt>Class format</dt><dd>Live online, max 5 students per batch; 1-on-1 mentorship; self-paced course</dd></div>
       <div><dt>Students trained</dt><dd>15,000+ in IELTS · 6,000+ in French</dd></div>
       <div><dt>Google rating</dt><dd>4.7 from 300+ reviews</dd></div>
@@ -301,7 +297,7 @@
 
     <h2>Common questions</h2>
     <div class="faq">
-      <details><summary>What is PrepEve?</summary><div>PrepEve is an Indian online coaching company for IELTS (Academic and General Training) and French for Canada PR. Classes are live online in batches of at most 5 students.</div></details>
+      <details><summary>What is PrepEve?</summary><div>PrepEve is an online IELTS coaching company based in India and Canada, coaching IELTS (Academic and General Training) and French for Canada PR. Classes are live online in batches of at most 5 students.</div></details>
       <details><summary>How much does PrepEve IELTS coaching cost?</summary><div>Self-Paced is ₹4,999, Live Coaching is ₹14,999 and 1-on-1 Mentorship is ₹19,999. Each is a 30-day program.</div></details>
       <details><summary>Does PrepEve offer a guarantee?</summary><div>Yes, the Exam-Cleared Guarantee on Live Coaching and 1-on-1 Mentorship: attend every session, submit every practice task and take every mock test — if you still don't clear your exam, the full fee is refunded. It does not apply to Self-Paced.</div></details>
       <details><summary>Can I try PrepEve for free?</summary><div>Yes. You can book a free live demo class, where a trainer assesses your level and gives you a study plan to keep, or join the free 60-minute live IELTS webinar on Saturdays and Sundays at 7:00 PM IST.</div></details>
@@ -338,6 +334,15 @@
         </ul>
       </div>
       <div>
+        <h4>Tests &amp; PR</h4>
+        <ul>
+          <li><a href="/language-tests">All language tests</a></li>
+          <li><a href="/canada-pr-language-requirements">Canada PR language rules</a></li>
+          <li><a href="/pte">PTE</a> · <a href="/celpip">CELPIP</a> · <a href="/toefl">TOEFL</a></li>
+          <li><a href="/tef-canada">TEF Canada</a> · <a href="/tcf-canada">TCF Canada</a></li>
+        </ul>
+      </div>
+      <div>
         <h4>Free</h4>
         <ul>
           <li><a href="/webinar">IELTS Webinar</a></li>
@@ -360,6 +365,6 @@
     </div>
   </div>
 </footer>
-<script src="/assets/js/prepeve.js?v=f001249a" defer></script>
+<script src="/assets/js/prepeve.js?v=4c90b2a1" defer></script>
 </body>
 </html>

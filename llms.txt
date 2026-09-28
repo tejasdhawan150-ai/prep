@@ -1,6 +1,6 @@
 # PrepEve
 
-> PrepEve is an Indian online coaching company for IELTS (Academic and General Training) and French for Canada PR. Classes are taught live online in batches of at most 5 students, with trainer-marked writing and 1-on-1 speaking mock interviews. 15,000+ students trained; rated 4.7 on Google from 300+ reviews.
+> PrepEve is an online IELTS coaching company based in India and Canada. It coaches IELTS (Academic and General Training) and French for Canada PR. Classes are taught live online in batches of at most 5 students, with trainer-marked writing and 1-on-1 speaking mock interviews. 15,000+ students trained; rated 4.7 on Google from 300+ reviews.
 
 Key facts:
 - Format: live online classes, max 5 students per batch; also 1-on-1 mentorship and a self-paced course.
@@ -27,7 +27,25 @@ Key facts:
 - [IELTS Writing coaching](https://www.prepeve.com/ielts-writing-coaching) · [IELTS Speaking coaching](https://www.prepeve.com/ielts-speaking-coaching)
 - [IELTS for Canada PR](https://www.prepeve.com/ielts-coaching-for-canada) · [IELTS for the UK](https://www.prepeve.com/ielts-coaching-for-uk) · [IELTS for Australia](https://www.prepeve.com/ielts-coaching-for-australia)
 
+## Language tests & PR (PrepEve coaches IELTS, PTE, CELPIP, TOEFL, Duolingo and French online)
+- [All language tests: which fits your goal](https://www.prepeve.com/language-tests)
+- [Canada PR language requirements (IRCC tests, CLB/NCLC)](https://www.prepeve.com/canada-pr-language-requirements)
+- [English tests for Australia PR](https://www.prepeve.com/australia-pr-english-test) · [UK English requirements](https://www.prepeve.com/uk-english-language-requirements)
+- [PTE](https://www.prepeve.com/pte) · [PTE coaching](https://www.prepeve.com/pte-coaching) · [PTE vs IELTS](https://www.prepeve.com/pte-vs-ielts)
+- [CELPIP and coaching](https://www.prepeve.com/celpip) · [CELPIP vs IELTS](https://www.prepeve.com/celpip-vs-ielts)
+- [TOEFL](https://www.prepeve.com/toefl) · [TOEFL vs IELTS](https://www.prepeve.com/toefl-vs-ielts)
+
+## French for Canada PR
+- [French for Canada PR: tests, NCLC, CRS points](https://www.prepeve.com/french-for-canada-pr)
+- [Online French coaching (TEF & TCF)](https://www.prepeve.com/french-online-coaching)
+- [TEF Canada](https://www.prepeve.com/tef-canada) · [TCF Canada](https://www.prepeve.com/tcf-canada) · [TEF vs TCF](https://www.prepeve.com/tef-vs-tcf) · [NCLC levels explained](https://www.prepeve.com/french-nclc)
+
+## Chandigarh, Mohali & Panchkula (online)
+- [Online IELTS coaching for the Tricity](https://www.prepeve.com/ielts-coaching-chandigarh)
+- [Blog](https://www.prepeve.com/blog)
+
 ## IELTS guides
+- [IELTS Listening](https://www.prepeve.com/ielts-listening) · [IELTS Reading](https://www.prepeve.com/ielts-reading)
 - [How IELTS band scores work](https://www.prepeve.com/ielts-guide/band-scores): the 0–9 scale, overall-band rounding, marking criteria
 - [Writing Task 2 mistakes that keep you at 6.5](https://www.prepeve.com/ielts-guide/writing-task-2-mistakes)
 - [IELTS General vs Academic for Canada PR](https://www.prepeve.com/ielts-guide/general-vs-academic-canada-pr): IELTS-to-CLB table

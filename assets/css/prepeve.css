@@ -212,7 +212,8 @@ table.cmp{width:100%;min-width:620px;border-collapse:collapse;font-size:.93rem}
 /* Footer */
 .foot{background:var(--navy);color:#94A3B8;padding:56px 0 28px;font-size:.92rem}
 .foot-grid{display:grid;gap:32px;grid-template-columns:1fr}
-@media(min-width:800px){.foot-grid{grid-template-columns:1.6fr 1fr 1fr 1fr}}
+@media(min-width:640px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.foot-grid{grid-template-columns:1.5fr 1fr 1fr 1fr 1fr}}
 .foot .logo{color:#fff}.foot .logo span{color:#8FB0F5}
 .foot h4{color:#fff;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
 .foot ul{list-style:none;display:grid;gap:10px}
