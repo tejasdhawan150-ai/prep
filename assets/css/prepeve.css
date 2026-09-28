@@ -93,7 +93,8 @@ p{max-width:68ch}
 .nav{position:sticky;top:0;z-index:50;height:var(--nav-h);background:rgba(255,255,255,.92);backdrop-filter:saturate(1.6) blur(12px);-webkit-backdrop-filter:saturate(1.6) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
 .nav.scrolled{border-color:var(--line);box-shadow:var(--sh-sm)}
 .nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.logo{font-family:var(--f-head);font-size:1.4rem;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+.logo{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-head);font-size:1.4rem;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+.logo img{width:34px;height:34px;border-radius:8px;background:#fff;object-fit:contain}
 .logo span{color:var(--blue)}
 .nav-links{display:none;list-style:none;gap:28px;font-weight:600;font-size:.94rem}
 .nav-links a{color:var(--ink-2)}.nav-links a:hover{color:var(--blue)}
