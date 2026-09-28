@@ -4,9 +4,20 @@
 <meta name="color-scheme" content="light"/>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Book Your Free IELTS Demo Class — PrepEve</title>
+<title>Free IELTS Demo Class: Find Out Your Band — PrepEve</title>
 <meta name="robots" content="noindex"/>
-<meta name="description" content="Book a free 60-minute live IELTS demo class with PrepEve. Get a certified trainer, a free band score estimate and a personalised study plan — at zero cost."/>
+<meta name="description" content="A free 60-minute live IELTS class. A trainer checks your speaking and writing, tells you your current band and where you lose marks, and builds a study plan you keep, even if you never join."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://prepeve.com/book-demo"/>
+<meta property="og:title" content="Free IELTS Demo Class — find out your band and what to fix first"/>
+<meta property="og:description" content="60 minutes, live with a PrepEve trainer. Your current band, where you lose marks, and a study plan you keep. Free, no payment."/>
+<meta property="og:image" content="https://prepeve.com/og-image.jpg"/>
+<meta property="og:site_name" content="PrepEve"/>
+<meta property="og:locale" content="en_IN"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Free IELTS Demo Class — find out your band and what to fix first"/>
+<meta name="twitter:description" content="60 minutes, live with a PrepEve trainer. Your current band, where you lose marks, and a study plan you keep. Free, no payment."/>
+<meta name="twitter:image" content="https://prepeve.com/og-image.jpg"/>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-765652199"></script>
@@ -31,19 +42,27 @@ function gtag_report_conversion(url) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="/assets/css/prepeve.css"/>
+<link rel="icon" type="image/png" href="/assets/img/logo.png"/>
 <style>
 /* Page-only tweaks on top of prepeve.css */
 .field input.err,.field select.err{border-color:var(--err)}
 .hero-stats{margin-top:28px}
 .hero-stats .stat{padding:16px 10px}
 .hero-stats .stat b{font-size:1.4rem}
-.coach{display:flex;align-items:center;gap:16px;max-width:720px;margin:0 auto}
+.hero-gets{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px}
+.hero-gets li{padding-left:28px;position:relative;color:var(--ink-2)}
+.hero-gets li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:800}
+.hint{display:block;font-weight:400;color:var(--muted);font-size:.82rem;margin-top:2px}
+.coach{display:flex;align-items:flex-start;gap:16px}
 .coach b{display:block;color:var(--ink);font-family:var(--f-head);font-size:1.05rem}
-.coach small{color:var(--muted);font-size:.9rem}
+.coach small{display:block;color:var(--muted);font-size:.9rem}
+.coach p{margin-top:8px;font-size:.95rem}
 .demo-note{margin:28px auto 0;max-width:720px;text-align:center;background:var(--ok-lt);color:var(--ok);font-weight:600;border-radius:var(--r);padding:12px 16px}
 .steps{max-width:720px;margin:0 auto}
-.submit-btn .spin{display:none}
-.submit-btn.loading .spin{display:block}
+.step .get{display:block;margin-top:6px;font-weight:600;color:var(--ink)}
+.submit-btn .spin,.submit-btn .load-txt{display:none}
+.submit-btn.loading .spin,.submit-btn.loading .load-txt{display:block}
+.submit-btn.loading .btn-txt{display:none}
 .mini-foot .foot-bot{margin-top:0;padding-top:0;border-top:0;align-items:center}
 </style>
 </head>
@@ -51,7 +70,7 @@ function gtag_report_conversion(url) {
 
 <header class="nav">
   <div class="wrap">
-    <a href="/" class="logo" aria-label="PrepEve home">Prep<span>Eve</span></a>
+    <a href="/" class="logo" aria-label="PrepEve home"><img src="/assets/img/logo.png" alt="" width="34" height="34"/>Prep<span>Eve</span></a>
     <span class="nav-label">Free IELTS Demo Class</span>
     <a href="#register" class="btn btn-primary nav-cta" data-cta="nav">Book My Free Demo</a>
   </div>
@@ -62,47 +81,45 @@ function gtag_report_conversion(url) {
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="badge">100% Free · Live · 60 Minutes</span>
-      <h1>Book Your Free <em>IELTS Demo Class</em></h1>
-      <p class="lead">One live 60-minute session with a CELTA-certified trainer: a short speaking and writing assessment, a free band score estimate, and a week-by-week study plan built around your exam date.</p>
+      <span class="badge">Free · Live · 60 minutes</span>
+      <h1>Find out your real IELTS band — and <em>exactly what's holding it back</em></h1>
+      <p class="lead">One live 60-minute class with a PrepEve trainer. You speak, you write, and the trainer shows you where you're losing marks. You leave with your current band and a week-by-week study plan for your exam date. The plan is yours to keep, even if you never join.</p>
+      <ul class="hero-gets">
+        <li>A real mini-class, not a sales call</li>
+        <li>Your speaking and writing checked by a trainer, live</li>
+        <li>A study plan built around your exam date and your weakest skill</li>
+      </ul>
       <div class="trust mt-s">
         <span><a href="https://share.google/zxOM5s1aDVqw20ORd" target="_blank" rel="noopener" data-cta="hero-google"><span class="stars">★★★★★</span> 4.7 on Google (300+ reviews)</a></span>
-        <span>15,000+ students coached</span>
-        <span>No upsells in the class</span>
-      </div>
-      <div class="stats hero-stats">
-        <div class="stat"><b>4.7★</b><span>Google rating</span></div>
-        <div class="stat"><b>15,000+</b><span>Students</span></div>
-        <div class="stat"><b>97%</b><span>Hit Band 7+</span></div>
-        <div class="stat"><b>+1.5</b><span>Avg. band gain</span></div>
+        <span>15,000+ IELTS students trained</span>
       </div>
     </div>
 
     <div class="form-card" id="register" data-hide-mcta data-form="book-demo">
-      <h2>Reserve your free demo slot</h2>
-      <p class="form-sub">We'll confirm on WhatsApp within 30 minutes.</p>
+      <h2>Book your free demo class</h2>
+      <p class="form-sub">Takes 30 seconds. We'll confirm your slot on WhatsApp within 30 minutes.</p>
 
       <div class="field">
-        <label for="fname">Your Name <span class="req">*</span></label>
+        <label for="fname">Your name <span class="req">*</span><span class="hint">So your trainer knows who they're meeting</span></label>
         <input type="text" id="fname" placeholder="e.g. Priya Sharma" autocomplete="name" inputmode="text" enterkeyhint="next"/>
-        <div class="err-msg" id="fname-err">Please enter your name</div>
+        <div class="err-msg" id="fname-err">Please tell us your name so your trainer knows who to expect.</div>
       </div>
 
       <div class="field">
-        <label for="phone">WhatsApp Number <span class="req">*</span></label>
+        <label for="phone">WhatsApp number <span class="req">*</span><span class="hint">We'll send your slot and class link here</span></label>
         <input type="tel" id="phone" placeholder="e.g. 98765 43210" autocomplete="tel" inputmode="tel" enterkeyhint="next"/>
-        <div class="err-msg" id="phone-err">Enter a valid number (at least 8 digits)</div>
+        <div class="err-msg" id="phone-err">Please enter your WhatsApp number, e.g. 98765 43210. We need it to send your class link.</div>
       </div>
 
       <div class="field">
-        <label for="email">Email Address</label>
+        <label for="email">Email <span class="hint">Optional — for a copy of your study plan</span></label>
         <input type="email" id="email" placeholder="e.g. priya@gmail.com" autocomplete="email" inputmode="email" enterkeyhint="next"/>
       </div>
 
       <div class="field">
-        <label for="goal">Target Band Score</label>
+        <label for="goal">Band you need <span class="hint">Helps your trainer plan the class around your goal</span></label>
         <select id="goal">
-          <option value="" disabled selected>What band are you aiming for?</option>
+          <option value="" disabled selected>Choose the band you need</option>
           <option value="band6">Band 6 – 6.5</option>
           <option value="band7">Band 7 – 7.5</option>
           <option value="band8">Band 8+</option>
@@ -112,10 +129,11 @@ function gtag_report_conversion(url) {
 
       <button class="btn btn-primary btn-lg btn-block submit-btn" id="submit-btn" type="button" data-cta="form-submit">
         <span class="spin" aria-hidden="true"></span>
+        <span class="load-txt">Booking your class…</span>
         <span class="btn-txt">Book My Free Demo</span>
       </button>
-      <div class="form-note"><span>Free</span><span>·</span><span>No payment</span><span>·</span><span>Confirmed on WhatsApp</span></div>
-      <div class="form-alt">Prefer to talk? Call <a href="tel:+919877714284" data-cta="form-call">+91 98777 14284</a></div>
+      <div class="form-note"><span>Free</span><span>·</span><span>No payment</span><span>·</span><span>Slot confirmed on WhatsApp within 30 minutes</span></div>
+      <div class="form-alt">Prefer to talk first? Call <a href="tel:+919877714284" data-cta="form-call">+91 98777 14284</a></div>
     </div>
   </div>
 </section>
@@ -124,30 +142,31 @@ function gtag_report_conversion(url) {
 <section class="sec sec-alt">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Your 60-minute demo</span>
+      <span class="eyebrow">Your 60 minutes</span>
       <h2>What happens in your free class</h2>
+      <p>Four parts. Each one gives you something you take away.</p>
     </div>
     <div class="steps">
-      <div class="step rv"><span class="step-n">1</span><div><h3>Meet your trainer (5 min)</h3><p>Quick intro with your assigned CELTA-certified trainer. They'll ask about your current band and your goal.</p></div></div>
-      <div class="step rv"><span class="step-n">2</span><div><h3>Live band assessment (20 min)</h3><p>A short speaking and writing exercise. Your trainer pinpoints exactly where you're losing marks.</p></div></div>
-      <div class="step rv"><span class="step-n">3</span><div><h3>Free band score estimate (10 min)</h3><p>You'll know your current band and exactly what it takes to reach Band 7+ — no guessing.</p></div></div>
-      <div class="step rv"><span class="step-n">4</span><div><h3>Your personalised study plan (25 min)</h3><p>A week-by-week roadmap built around your exam date. You leave with a clear action plan.</p></div></div>
+      <div class="step rv"><span class="step-n">1</span><div><h3>Meet your trainer (5 min)</h3><p>Tell them the band you need, why, and when your exam is.<span class="get">You get: a trainer who knows your goal before the class starts.</span></p></div></div>
+      <div class="step rv"><span class="step-n">2</span><div><h3>Live speaking and writing check (20 min)</h3><p>You answer speaking questions and write a short response. Your trainer listens and reads, then points to the exact places you lose marks.<span class="get">You get: your mistakes named, not guessed.</span></p></div></div>
+      <div class="step rv"><span class="step-n">3</span><div><h3>Your current band (10 min)</h3><p>Your trainer tells you roughly where you stand today and the gap to the band you need.<span class="get">You get: an honest starting point.</span></p></div></div>
+      <div class="step rv"><span class="step-n">4</span><div><h3>Your study plan (25 min)</h3><p>A week-by-week plan built around your exam date, starting with the skill costing you the most marks.<span class="get">You get: a plan you keep, whether or not you join.</span></p></div></div>
     </div>
-    <p class="demo-note rv">No upsells during the class. Just 60 minutes of pure value.</p>
+    <p class="demo-note rv">No pitch during the class. If you want to know about courses, ask at the end.</p>
   </div>
 </section>
 
-<!-- WHY PREPEVE -->
+<!-- WHAT YOU WON'T GET -->
 <section class="sec">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Why PrepEve</span>
+      <span class="eyebrow">Straight talk</span>
       <h2>What you won't get from us</h2>
     </div>
     <div class="grid g3">
-      <div class="card rv"><div class="ico" aria-hidden="true">▶</div><h3>No recorded classes</h3><p>Every session is live, interactive, and tailored to you — not a YouTube playlist.</p></div>
-      <div class="card rv"><div class="ico" aria-hidden="true">₹</div><h3>No upsells in the demo</h3><p>60 minutes of pure value. We earn your trust first — we never pitch during class.</p></div>
-      <div class="card rv"><div class="ico" aria-hidden="true">✎</div><h3>No generic study plans</h3><p>Your plan is built around your band, your exam date, and your weakest skills.</p></div>
+      <div class="card rv"><div class="ico" aria-hidden="true">▶</div><h3>No recorded video</h3><p>The class is live. A trainer hears you speak and answers your questions on the spot.</p></div>
+      <div class="card rv"><div class="ico" aria-hidden="true">₹</div><h3>No hard sell</h3><p>No pitch in the class, no payment asked. If you don't want to join, that's fine — keep the plan.</p></div>
+      <div class="card rv"><div class="ico" aria-hidden="true">✎</div><h3>No copy-paste plan</h3><p>Your plan is built from your answers in the class, your exam date and your weakest skill.</p></div>
     </div>
   </div>
 </section>
@@ -156,37 +175,51 @@ function gtag_report_conversion(url) {
 <section class="sec sec-alt" id="results">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Results</span>
-      <h2>Real students, real band scores</h2>
-    </div>
-    <div class="stats rv">
-      <div class="stat"><b>4.7★</b><span>Google, 300+ reviews</span></div>
-      <div class="stat"><b>15,000+</b><span>Students coached</span></div>
-      <div class="stat"><b>97%</b><span>Reach Band 7+</span></div>
-      <div class="stat"><b>+1.5</b><span>Average band improvement</span></div>
+      <span class="eyebrow">Student stories</span>
+      <h2>They were stuck too. Here's where they ended up.</h2>
+      <p>Hear it from them — tap to watch.</p>
     </div>
 
-    <div class="grid g3 mt">
+    <div class="grid g3">
       <div class="rv">
         <button class="vcard" data-vid="8agy5ojp36I" data-cta="video-taranjeet" aria-label="Play Taranjeet's story">
           <img src="https://img.youtube.com/vi/8agy5ojp36I/hqdefault.jpg" alt="Taranjeet, PrepEve student" loading="lazy"/><span class="play"></span>
         </button>
-        <div class="vcap"><b>Taranjeet</b><span>Band 8.5</span></div>
+        <div class="vcap"><b>Taranjeet · Canada PR</b><span>6.5 → 8.5 in 30 days</span></div>
       </div>
       <div class="rv">
         <button class="vcard" data-vid="5FbjLsycE2k" data-cta="video-pratishtha" aria-label="Play Pratishtha's story">
           <img src="https://img.youtube.com/vi/5FbjLsycE2k/hqdefault.jpg" alt="Pratishtha, PrepEve student" loading="lazy"/><span class="play"></span>
         </button>
-        <div class="vcap"><b>Pratishtha</b><span>Band 8.0</span></div>
+        <div class="vcap"><b>Pratishtha · UCL, UK</b><span>6.0 → 8.0</span></div>
       </div>
       <div class="rv">
         <button class="vcard" data-vid="2f9jwGWIREI" data-cta="video-deepanshu" aria-label="Play Deepanshu's story">
           <img src="https://img.youtube.com/vi/2f9jwGWIREI/hqdefault.jpg" alt="Deepanshu, PrepEve student" loading="lazy"/><span class="play"></span>
         </button>
-        <div class="vcap"><b>Deepanshu</b><span>Band 7.5</span></div>
+        <div class="vcap"><b>Deepanshu</b><span>6.5 → 7.5</span></div>
       </div>
     </div>
 
+    <div class="grid g3 mt">
+      <figure class="card quote rv">
+        <span class="stars" aria-label="5 stars">★★★★★</span>
+        <blockquote>"Honestly, I can't thank the team enough. It's been almost two years since I took my IELTS classes with them, and they still support me whenever I reach out. That kind of dedication is rare. Highly recommend to anyone serious about their IELTS journey."</blockquote>
+        <figcaption class="quote-by"><span class="avatar">A</span><span><b>Anooj Motghare</b><small><a class="src" href="https://www.google.com/maps/contrib/102113621604889428073/reviews/@49.1476785,-165.0496148,3z/data=!4m3!8m2!3m1!1e1?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Google review</a></small></span><span class="band-pill">Band 8.5</span></figcaption>
+      </figure>
+      <figure class="card quote rv">
+        <span class="stars" aria-label="5 stars">★★★★★</span>
+        <blockquote>"I had a great experience with PrepEve for my IELTS preparation. The coaching was extremely helpful and highly effective. The study materials were well-structured and perfectly aligned with the actual exam pattern. I truly appreciate the support and guidance provided throughout the process."</blockquote>
+        <figcaption class="quote-by"><span class="avatar">Y</span><span><b>Yashaswini Palakonda</b><small><a class="src" href="https://www.google.com/maps/contrib/109065652692536741630/reviews?hl=en-IN" target="_blank" rel="noopener">Google review</a></small></span><span class="band-pill">Band 8.0</span></figcaption>
+      </figure>
+      <figure class="card quote rv">
+        <span class="stars" aria-label="5 stars">★★★★★</span>
+        <blockquote>"Highly recommended! I was so confused watching videos online. After attending a 2-day free webinar, I enrolled. Their class notes let you skim through every module quickly. They will assist with Speaking &amp; Writing mock tests. I felt like I benefited more than what I paid for. Just go with it — they will give you exactly what you need!"</blockquote>
+        <figcaption class="quote-by"><span class="avatar">S</span><span><b>Shashikanth Revelly</b><small><a class="src" href="https://www.google.com/maps/contrib/110923457556373260953/reviews?hl=en-IN" target="_blank" rel="noopener">Google review</a></small></span><span class="band-pill">Band 7.5</span></figcaption>
+      </figure>
+    </div>
+
+    <!-- OWNER MUST CONFIRM: the three quotes below come from the owner's original page but are not verifiable (no source link). Remove if not real. -->
     <div class="grid g3 mt">
       <figure class="card quote rv">
         <span class="stars" aria-label="5 stars">★★★★★</span>
@@ -204,20 +237,37 @@ function gtag_report_conversion(url) {
         <figcaption class="quote-by"><span class="avatar">AK</span><span><b>Arjun K.</b><small>Delhi</small></span><span class="band-pill">6 → 7.5</span></figcaption>
       </figure>
     </div>
+
+    <div class="stats rv mt">
+      <div class="stat"><b>15,000+</b><span>IELTS students trained</span></div>
+      <div class="stat"><b>4.7★</b><span>Google, 300+ reviews</span></div>
+      <div class="stat"><b>5</b><span>Max students per Live batch</span></div>
+      <div class="stat"><b>97%</b><span>Hit Band 7+ (PrepEve student data)</span></div>
+    </div>
   </div>
 </section>
 
-<!-- TRAINER -->
+<!-- TRAINERS -->
 <section class="sec">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Who you'll learn with</span>
-      <h2>Certified trainers, led by our founder</h2>
-      <p>Every demo is taught live by a CELTA-certified trainer.</p>
+      <span class="eyebrow">Who you'll meet</span>
+      <h2>Your class is taught by one of our trainers</h2>
+      <p>The same people who teach our paid batches. Not a sales rep.</p>
     </div>
-    <div class="card coach rv">
-      <span class="avatar" aria-hidden="true">SJ</span>
-      <div><b>Sanjita, Founder, PrepEve</b><small>Regulated Canadian Immigration Consultant · IELTS &amp; CELPIP</small></div>
+    <div class="grid g3">
+      <div class="card coach rv">
+        <span class="avatar" aria-hidden="true">S</span>
+        <div><b>Sanjita</b><small>Founder &amp; Trainer · Regulated Canadian Immigration Consultant</small><p>Teaches IELTS and CELPIP. Built PrepEve around small, personal classes — and knows what score your PR file actually needs.</p></div>
+      </div>
+      <div class="card coach rv">
+        <span class="avatar" aria-hidden="true">L</span>
+        <div><b>Lesancy Sharma</b><small>PrepEve Master Trainer · IELTS</small><p>Known for clear explanations and structured feedback on every answer.</p></div>
+      </div>
+      <div class="card coach rv">
+        <span class="avatar" aria-hidden="true">K</span>
+        <div><b>Khushpreet</b><small>PrepEve Trainer · IELTS</small><p>Structured guidance and personal feedback across all four modules.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -226,14 +276,19 @@ function gtag_report_conversion(url) {
 <section class="sec sec-alt" id="faq">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">FAQ</span>
-      <h2>Common questions</h2>
+      <span class="eyebrow">Before you book</span>
+      <h2>Questions students ask us</h2>
     </div>
     <div class="faq">
-      <details><summary>Is the demo really free? No hidden charges?</summary><div>100% free. No credit card, no registration fee, nothing. You get a full 60-minute live session at zero cost. We believe once you experience the quality, you'll want to continue — that's our only ask.</div></details>
-      <details><summary>I'm a complete beginner. Is this for me?</summary><div>Absolutely. Many of our students start with Band 4–5 and reach Band 7+ within 8–12 weeks. The demo class will assess exactly where you are and build a plan that works for your level — no experience needed.</div></details>
-      <details><summary>How is PrepEve different from YouTube or apps?</summary><div>YouTube can't tell you why you specifically lost marks in Writing Task 2. Apps can't correct your speaking in real time. PrepEve gives you a live certified trainer who listens, corrects, and adapts — every single session.</div></details>
-      <details><summary>What happens after I book?</summary><div>You'll get a WhatsApp message from us within 30 minutes to confirm your slot and share the class link. The demo runs on Google Meet — no downloads needed, works on any phone.</div></details>
+      <details><summary>Is the demo just a sales pitch?</summary><div>No. It's a real class: you speak, you write, a trainer corrects you and builds your plan. We don't pitch during the class and we don't ask for payment. If you want to hear about courses, ask at the end. If not, keep the plan and go.</div></details>
+      <details><summary>Is it really free? What's the catch?</summary><div>It's free, with no card and no payment. There's no catch: it's how most students first meet us. We'd rather show you how we teach than tell you.</div></details>
+      <details><summary>I'm a beginner. Is this for me?</summary><div>Yes. The class starts from where you are today. Your trainer checks your level and builds a plan that begins with the basics you need, not with advanced tricks.</div></details>
+      <details><summary>I've already taken IELTS and missed my band. Will this help?</summary><div>This is who the demo helps most. Bring your last scores. Your trainer will find the skill pulling your band down and show you what to fix first, so the next attempt isn't a repeat of the last one.</div></details>
+      <details><summary>I work full-time. Can I fit this in?</summary><div>The demo is 60 minutes, online, on your phone or laptop. When we confirm on WhatsApp, tell us what time suits you and we'll arrange your slot. Your study plan is built around the hours you actually have.</div></details>
+      <details><summary>Why pay for coaching when YouTube is free?</summary><div>YouTube teaches everyone the same thing. It can't hear your speaking or read your essay and tell you which sentences cost you marks. That personal feedback is what moves a stuck band — and the demo lets you try it free.</div></details>
+      <details><summary>Does online coaching actually work?</summary><div>Our classes are live, not recorded, and Live Coaching batches have at most 5 students. A trainer hears every answer you give and corrects you on the spot. You don't need to travel, and you can join from anywhere.</div></details>
+      <details><summary>What if I join a course and don't improve?</summary><div><b>The Exam-Cleared Guarantee:</b> attend every session, submit every practice task and take every mock test — if you still don't clear your exam, we refund your full fee. Applies to Live Coaching and 1-on-1 Mentorship.</div></details>
+      <details><summary>What happens after I book?</summary><div>Within 30 minutes we message you on WhatsApp to confirm your slot and send the class link. The class runs on Google Meet — no download needed, and it works on any phone.</div></details>
     </div>
   </div>
 </section>
@@ -242,11 +297,11 @@ function gtag_report_conversion(url) {
 <section class="sec">
   <div class="wrap">
     <div class="cta-band rv">
-      <h2>Your Band 7+ plan starts with one free class</h2>
-      <p>Join 15,000+ students who trusted PrepEve. It's free, it's live, and you leave with a clear plan.</p>
+      <h2>60 minutes to know your band and what to fix first</h2>
+      <p>A live class, your speaking and writing checked, and a study plan you keep. Free, no payment.</p>
       <div class="btn-row" style="justify-content:center">
         <a href="#register" class="btn btn-light btn-lg" data-cta="final-band">Book My Free Demo</a>
-        <a href="https://wa.me/919877714284" class="btn btn-wa btn-lg" target="_blank" rel="noopener" data-cta="final-wa">Chat on WhatsApp</a>
+        <a href="https://wa.me/919877714284" class="btn btn-wa btn-lg" target="_blank" rel="noopener" data-cta="final-wa">Ask a Trainer on WhatsApp</a>
       </div>
     </div>
   </div>
@@ -256,7 +311,7 @@ function gtag_report_conversion(url) {
 <footer class="foot mini-foot">
   <div class="wrap">
     <div class="foot-bot">
-      <a href="/" class="logo">Prep<span>Eve</span></a>
+      <a href="/" class="logo"><img src="/assets/img/logo.png" alt="" width="34" height="34" loading="lazy"/>Prep<span>Eve</span></a>
       <span>© <span data-year>2026</span> PrepEve. All rights reserved.</span>
       <a href="https://wa.me/919877714284" data-cta="footer" target="_blank" rel="noopener">WhatsApp +91 98777 14284</a>
     </div>
