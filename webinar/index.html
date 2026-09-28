@@ -2,14 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
-<title>Free Live IELTS Webinar | Learn What Actually Moves Your Score — PrepEve</title>
-<meta name="description" content="Join PrepEve's free live IELTS webinar. Learn proven strategies, scoring insights and a clear preparation framework to reach Band 7+. Reserve your free seat now."/>
-<meta name="robots" content="noindex"/>
-<meta property="og:title" content="Free Live IELTS Webinar | Learn What Actually Moves Your Score — PrepEve"/>
-<meta property="og:description" content="Join PrepEve's free live IELTS webinar. Learn proven strategies, scoring insights and a clear preparation framework to reach Band 7+. Reserve your free seat now."/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Free IELTS Webinar — Learn What Moves Your Band Score | PrepEve</title>
+<meta name="description" content="Free live IELTS webinar by PrepEve, every weekend at 7:00 PM IST. Learn how IELTS is scored, what separates Band 6 from Band 7+, and leave with a clear prep roadmap."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.prepeve.com/webinar"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="PrepEve"/>
+<meta property="og:url" content="https://www.prepeve.com/webinar"/>
+<meta property="og:title" content="Free IELTS Webinar — Learn What Moves Your Band Score | PrepEve"/>
+<meta property="og:description" content="A free, live 60-minute IELTS strategy session every weekend. Scoring, Band 7+ habits, section tactics and a prep roadmap — plus live Q&amp;A."/>
 <meta property="og:image" content="https://prepeve.com/og-image.jpg"/>
-
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Free IELTS Webinar — Learn What Moves Your Band Score | PrepEve"/>
+<meta name="twitter:description" content="A free, live 60-minute IELTS strategy session every weekend. Reserve your free seat."/>
+<meta name="twitter:image" content="https://prepeve.com/og-image.jpg"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Free IELTS Webinar — Learn What Moves Your Band Score",
+  "url": "https://www.prepeve.com/webinar",
+  "description": "Free live IELTS webinar by PrepEve: how IELTS is scored, what separates Band 6 from Band 7+, section strategies and a preparation roadmap.",
+  "inLanguage": "en",
+  "isPartOf": {"@type": "WebSite", "name": "PrepEve", "url": "https://www.prepeve.com/"}
+}
+</script>
 <!-- Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-765652199"></script>
 <script>
@@ -23,1038 +41,344 @@ function fireConv(){
   }
 }
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/prepeve.css"/>
 <style>
-/* ── Tokens ── */
-:root{
-  --white:#FFFFFF;
-  --bg:#F8F9FA;
-  --ink:#111827;
-  --ink-soft:#374151;
-  --ink-muted:#6B7280;
-  --line:#E5E7EB;
-  --blue:#1A56DB;
-  --blue-dark:#1341B0;
-  --blue-bg:#EEF2FF;
-  --wa:#25D366;
-  --wa-dark:#1aad54;
-  --green:#16A34A;
-  --gold:#F59E0B;
-  --font-head:'Plus Jakarta Sans',sans-serif;
-  --font-body:'Inter',sans-serif;
-  --r-sm:8px;
-  --r-md:12px;
-  --r-lg:16px;
-  --sh-sm:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.06);
-  --sh-md:0 4px 12px rgba(0,0,0,.08),0 2px 6px rgba(0,0,0,.05);
-  --sh-lg:0 10px 30px rgba(0,0,0,.1),0 4px 10px rgba(0,0,0,.06);
-}
-
-/* ── Reset ── */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-body{font-family:var(--font-body);background:var(--white);color:var(--ink);line-height:1.6;overflow-x:hidden;}
-img{max-width:100%;display:block;}
-a{color:inherit;text-decoration:none;}
-button{cursor:pointer;border:none;outline:none;font-family:var(--font-body);}
-input,select,textarea{font-family:var(--font-body);}
-em{font-style:normal;color:var(--blue);}
-
-/* ── Layout ── */
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
-.sec{padding:72px 0;}
-.sec-alt{background:var(--bg);}
-.sec-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.75rem;}
-.section-head{text-align:center;margin-bottom:3rem;}
-.section-head h2{font-family:var(--font-head);font-size:clamp(1.6rem,3vw,2.25rem);font-weight:800;letter-spacing:-.03em;line-height:1.15;}
-.section-head p{color:var(--ink-soft);font-size:1rem;margin-top:.75rem;max-width:54ch;margin-left:auto;margin-right:auto;}
-
-/* ── Reveal ── */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease;}
-.rv.in{opacity:1;transform:none;}
-
-/* ── Navbar ── */
-#navbar{
-  position:sticky;top:0;z-index:100;
-  background:rgba(255,255,255,.92);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-  border-bottom:1px solid transparent;
-  transition:border-color .2s,box-shadow .2s;
-}
-#navbar.sc{border-color:var(--line);box-shadow:var(--sh-sm);}
-.nav-inner{
-  max-width:1120px;margin:0 auto;padding:0 24px;
-  height:64px;display:flex;align-items:center;justify-content:space-between;
-}
-.nav-logo{font-family:var(--font-head);font-size:1.25rem;font-weight:800;color:var(--ink);letter-spacing:-.02em;}
-.nav-logo span{color:var(--blue);}
-.nav-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);background:var(--blue-bg);padding:.35rem .8rem;border-radius:20px;}
-.nav-cta{
-  background:var(--blue);color:#fff;
-  font-size:.82rem;font-weight:700;letter-spacing:.02em;
-  padding:.55rem 1.2rem;border-radius:var(--r-sm);
-  transition:background .2s,transform .1s;
-  white-space:nowrap;
-}
-.nav-cta:hover{background:var(--blue-dark);transform:translateY(-1px);}
-@media(max-width:640px){
-  .nav-label{display:none;}
-  .nav-inner{padding:0 16px;}
-}
-
-/* ── Hero ── */
-.hero{
-  background:var(--white);
-  padding:56px 0 64px;
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1fr 420px;
-  gap:3rem;
-  align-items:start;
-}
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:2rem;}
-}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:.5rem;
-  background:var(--blue-bg);color:var(--blue);
-  font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  padding:.45rem .9rem;border-radius:20px;margin-bottom:1.25rem;
-}
-.hero-h1{
-  font-family:var(--font-head);
-  font-size:clamp(1.9rem,4vw,3rem);
-  font-weight:800;
-  letter-spacing:-.04em;
-  line-height:1.1;
-  margin-bottom:1rem;
-  color:var(--ink);
-}
-.hero-sub{
-  font-size:1.05rem;
-  color:var(--ink-soft);
-  line-height:1.65;
-  margin-bottom:1.5rem;
-  max-width:52ch;
-}
-.trust-row{
-  display:flex;flex-wrap:wrap;gap:.5rem .75rem;
-  margin-bottom:1.75rem;
-}
-.trust-pill{
-  display:inline-flex;align-items:center;gap:.35rem;
-  font-size:.8rem;font-weight:600;color:var(--ink-soft);
-}
-.trust-pill::before{content:'✓';color:var(--green);font-weight:700;}
-.webinar-info-card{
-  background:var(--bg);border:1px solid var(--line);
-  border-radius:var(--r-md);padding:1rem 1.25rem;
-  display:flex;flex-wrap:wrap;gap:.5rem .9rem;
-}
-.info-chip{
-  display:inline-flex;align-items:center;gap:.4rem;
-  font-size:.82rem;font-weight:600;color:var(--ink-soft);
-}
-
-/* ── Registration card ── */
-.reg-card{
-  background:var(--white);
-  border:1px solid var(--line);
-  border-radius:var(--r-lg);
-  box-shadow:var(--sh-lg);
-  overflow:hidden;
-  position:sticky;
-  top:80px;
-}
-.reg-card-header{
-  background:var(--blue);
-  padding:1.25rem 1.5rem;
-  text-align:center;
-}
-.reg-card-title{
-  font-family:var(--font-head);
-  font-size:1.15rem;font-weight:800;color:#fff;
-  letter-spacing:-.02em;
-  margin-bottom:.25rem;
-}
-.reg-card-sub{
-  font-size:.78rem;color:rgba(255,255,255,.85);font-weight:500;
-}
-.reg-card-body{padding:1.5rem;}
-.form-row{margin-bottom:1rem;}
-.form-row label{
-  display:block;font-size:.8rem;font-weight:600;color:var(--ink);
-  margin-bottom:.4rem;
-}
-.req{color:#ef4444;}
-.form-row input,
-.form-row select{
-  width:100%;
-  padding:.7rem .85rem;
-  border:1.5px solid var(--line);
-  border-radius:var(--r-sm);
-  font-size:.9rem;color:var(--ink);
-  background:var(--white);
-  transition:border-color .2s,box-shadow .2s;
-  -webkit-appearance:none;
-}
-.form-row input:focus,
-.form-row select:focus{
-  outline:none;
-  border-color:var(--blue);
-  box-shadow:0 0 0 3px rgba(26,86,219,.12);
-}
-.field-err{display:none;font-size:.75rem;color:#ef4444;margin-top:.3rem;}
-.form-row-2col{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
-.btn-submit{
-  width:100%;
-  background:var(--blue);
-  color:#fff;
-  font-size:.92rem;font-weight:700;letter-spacing:.04em;
-  padding:.9rem;border-radius:var(--r-sm);
-  margin-top:.25rem;
-  transition:background .2s,transform .1s,box-shadow .2s;
-  display:flex;align-items:center;justify-content:center;gap:.5rem;
-}
-.btn-submit:hover{background:var(--blue-dark);transform:translateY(-1px);box-shadow:0 4px 16px rgba(26,86,219,.3);}
-.btn-submit:active{transform:none;}
-.submit-reassure{
-  text-align:center;margin-top:.85rem;
-  font-size:.75rem;color:var(--ink-muted);
-  display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem .6rem;
-}
-.submit-reassure span{display:inline-flex;align-items:center;gap:.25rem;}
-.submit-reassure span::before{content:'✓';color:var(--green);font-weight:700;}
-.wa-alt{
-  text-align:center;margin-top:.9rem;padding-top:.9rem;
-  border-top:1px solid var(--line);
-  font-size:.78rem;color:var(--ink-muted);
-}
-.wa-alt a{color:var(--wa-dark);font-weight:600;}
-.wa-alt a:hover{text-decoration:underline;}
-.form-urg{
-  background:#FFF7ED;border:1px solid #FED7AA;
-  border-radius:var(--r-sm);padding:.55rem .85rem;
-  font-size:.78rem;font-weight:600;color:#92400E;
-  text-align:center;margin-bottom:1rem;
-}
-.spinner{
-  width:18px;height:18px;
-  border:2.5px solid rgba(255,255,255,.35);
-  border-top-color:#fff;
-  border-radius:50%;
-  animation:spin .7s linear infinite;
-  display:none;
-}
-@keyframes spin{to{transform:rotate(360deg);}}
-.wa-ico{display:inline-flex;}
-
-/* ── Success wrap ── */
-#success-wrap{display:none;padding:2.5rem 1.5rem;text-align:center;}
-.success-icon{font-size:2.5rem;margin-bottom:.75rem;}
-.success-h{font-family:var(--font-head);font-size:1.3rem;font-weight:800;color:var(--ink);margin-bottom:.5rem;}
-.success-p{font-size:.9rem;color:var(--ink-soft);line-height:1.6;}
-
-/* ── Learn section ── */
-.learn-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1.25rem;
-}
-@media(max-width:768px){.learn-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:480px){.learn-grid{grid-template-columns:1fr;}}
-.learn-card{
-  background:var(--white);
-  border:1px solid var(--line);
-  border-radius:var(--r-md);
-  padding:1.5rem 1.25rem;
-  transition:box-shadow .2s,transform .2s;
-}
-.learn-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px);}
-.learn-num{
-  font-family:var(--font-head);
-  font-size:.65rem;font-weight:800;letter-spacing:.1em;
-  color:var(--blue);margin-bottom:.6rem;
-}
-.learn-icon{font-size:1.6rem;margin-bottom:.6rem;}
-.learn-h{font-family:var(--font-head);font-size:.95rem;font-weight:700;margin-bottom:.35rem;}
-.learn-p{font-size:.82rem;color:var(--ink-muted);line-height:1.55;}
-
-/* ── Who section ── */
-.who-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-  gap:1rem;
-}
-.who-card{
-  background:var(--white);
-  border:1px solid var(--line);
-  border-radius:var(--r-md);
-  padding:1.25rem 1.35rem;
-  display:flex;align-items:flex-start;gap:.85rem;
-}
-.who-icon{font-size:1.4rem;flex-shrink:0;margin-top:.1rem;}
-.who-text h4{font-family:var(--font-head);font-size:.92rem;font-weight:700;margin-bottom:.2rem;}
-.who-text p{font-size:.8rem;color:var(--ink-muted);line-height:1.5;}
-.who-check{width:22px;height:22px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.who-check svg{width:12px;height:12px;fill:#fff;}
-
-/* ── Why section ── */
-.why-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:1.5rem;
-}
-@media(max-width:640px){.why-grid{grid-template-columns:1fr;}}
-.why-block{
-  background:var(--white);
-  border-radius:var(--r-md);
-  padding:1.5rem;
-  border:1px solid var(--line);
-  display:flex;gap:1rem;align-items:flex-start;
-}
-.why-icon{font-size:1.75rem;flex-shrink:0;}
-.why-h{font-family:var(--font-head);font-size:1rem;font-weight:700;margin-bottom:.35rem;}
-.why-p{font-size:.85rem;color:var(--ink-soft);line-height:1.6;}
-
-/* ── Instructor ── */
-.instructor-wrap{
-  display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:start;
-}
-@media(max-width:640px){.instructor-wrap{grid-template-columns:1fr;gap:1.5rem;}}
-.instructor-avatar{
-  width:120px;height:120px;border-radius:50%;
-  background:var(--blue);color:#fff;
-  font-family:var(--font-head);font-size:2.5rem;font-weight:800;
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;
-  box-shadow:var(--sh-md);
-}
-.instructor-role{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.35rem;}
-.instructor-name{font-family:var(--font-head);font-size:1.75rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.65rem;}
-.instructor-bio{font-size:.92rem;color:var(--ink-soft);line-height:1.7;margin-bottom:1.1rem;max-width:54ch;}
-.inst-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.1rem;}
-.inst-badge{
-  background:var(--blue-bg);color:var(--blue);
-  font-size:.75rem;font-weight:600;
-  padding:.35rem .75rem;border-radius:20px;
-}
-.instructor-quote{
-  border-left:3px solid var(--blue);
-  padding:.75rem 1rem;
-  background:var(--bg);border-radius:0 var(--r-sm) var(--r-sm) 0;
-  font-size:.9rem;font-style:italic;color:var(--ink-soft);
-  line-height:1.6;
-}
-.instructor-frame{
-  text-align:center;margin-bottom:2.5rem;
-  font-size:.88rem;font-weight:600;color:var(--ink-muted);
-  letter-spacing:.03em;
-}
-
-/* ── Stats row ── */
-.stats-row{
-  display:flex;flex-wrap:wrap;justify-content:center;gap:1px;
-  background:var(--line);border-radius:var(--r-md);
-  overflow:hidden;margin-bottom:2.5rem;
-}
-.stat-cell{
-  flex:1;min-width:120px;
-  background:var(--white);
-  padding:1.25rem 1rem;text-align:center;
-}
-.stat-n{font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--blue);letter-spacing:-.03em;}
-.stat-l{font-size:.75rem;color:var(--ink-muted);font-weight:500;margin-top:.15rem;}
-
-/* ── Video grid ── */
-.video-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;
-}
-@media(max-width:768px){.video-grid{grid-template-columns:1fr;gap:1rem;}}
-.video-card{
-  display:block;
-  border-radius:var(--r-md);overflow:hidden;
-  border:1px solid var(--line);
-  cursor:pointer;
-  transition:box-shadow .2s,transform .2s;
-}
-.video-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px);}
-.video-thumb-wrap{position:relative;}
-.video-thumb-wrap img{width:100%;aspect-ratio:16/9;object-fit:cover;}
-.video-overlay{
-  position:absolute;inset:0;
-  background:rgba(0,0,0,.3);
-  display:flex;align-items:center;justify-content:center;
-  transition:background .2s;
-}
-.video-card:hover .video-overlay{background:rgba(0,0,0,.45);}
-.video-play{
-  width:50px;height:50px;border-radius:50%;
-  background:rgba(255,255,255,.95);
-  display:flex;align-items:center;justify-content:center;
-}
-.video-play svg{fill:var(--blue);width:20px;height:20px;margin-left:3px;}
-.video-band{
-  position:absolute;top:.6rem;right:.6rem;
-  background:var(--gold);color:#fff;
-  font-size:.7rem;font-weight:700;letter-spacing:.04em;
-  padding:.25rem .55rem;border-radius:var(--r-sm);
-}
-.video-info{padding:.85rem 1rem;}
-.video-title{font-family:var(--font-head);font-size:.92rem;font-weight:700;margin-bottom:.2rem;}
-.video-meta{font-size:.78rem;color:var(--ink-muted);}
-
-/* ── WA community ── */
-.wa-cta-wrap{
-  margin-top:2rem;text-align:center;
-}
-.btn-wa{
-  display:inline-flex;align-items:center;gap:.6rem;
-  background:var(--wa);color:#fff;
-  font-size:.9rem;font-weight:700;
-  padding:.8rem 1.75rem;border-radius:var(--r-sm);
-  transition:background .2s,transform .1s;
-}
-.btn-wa:hover{background:var(--wa-dark);transform:translateY(-1px);}
-.btn-wa svg{fill:#fff;}
-
-/* ── Agenda / timeline ── */
-.agenda-list{
-  max-width:640px;margin:0 auto;
-  display:flex;flex-direction:column;gap:0;
-}
-.agenda-item{
-  display:flex;align-items:flex-start;gap:1.25rem;
-  padding:1.25rem 0;
-  border-bottom:1px solid var(--line);
-}
-.agenda-item:last-child{border-bottom:none;}
-.agenda-num{
-  width:40px;height:40px;border-radius:50%;
-  background:var(--blue-bg);color:var(--blue);
-  font-family:var(--font-head);font-size:.8rem;font-weight:800;
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;
-}
-.agenda-h{font-family:var(--font-head);font-size:.95rem;font-weight:700;margin-bottom:.2rem;}
-.agenda-p{font-size:.82rem;color:var(--ink-muted);line-height:1.5;}
-
-/* ── Mid CTA ── */
-.mid-cta{
-  background:var(--ink);
-  padding:72px 0;text-align:center;
-}
-.mid-cta h2{
-  font-family:var(--font-head);
-  font-size:clamp(1.5rem,3vw,2.25rem);
-  font-weight:800;letter-spacing:-.03em;
-  color:#fff;margin-bottom:.75rem;
-}
-.mid-cta p{color:rgba(255,255,255,.7);font-size:1rem;margin-bottom:2rem;}
-.btn-primary{
-  display:inline-flex;align-items:center;gap:.5rem;
-  background:var(--blue);color:#fff;
-  font-size:.92rem;font-weight:700;letter-spacing:.04em;
-  padding:.9rem 2.25rem;border-radius:var(--r-sm);
-  transition:background .2s,transform .1s,box-shadow .2s;
-}
-.btn-primary:hover{background:var(--blue-dark);transform:translateY(-1px);box-shadow:0 6px 20px rgba(26,86,219,.4);}
-.btn-primary-sub{font-size:.75rem;color:rgba(255,255,255,.6);margin-top:.85rem;letter-spacing:.06em;font-weight:600;}
-
-/* ── FAQ ── */
-.faq-list{max-width:720px;margin:0 auto;}
-.faq-item{border:1px solid var(--line);border-radius:var(--r-md);margin-bottom:.65rem;overflow:hidden;}
-.faq-q{
-  width:100%;background:var(--white);
-  padding:1.1rem 1.35rem;
-  display:flex;align-items:center;justify-content:space-between;gap:1rem;
-  text-align:left;
-  font-family:var(--font-head);font-size:.95rem;font-weight:700;color:var(--ink);
-  cursor:pointer;
-  transition:background .15s;
-}
-.faq-q:hover{background:var(--bg);}
-.faq-icon{
-  width:22px;height:22px;border-radius:50%;
-  background:var(--blue-bg);color:var(--blue);
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;
-  transition:transform .25s;
-  font-size:.85rem;font-weight:700;
-}
-.faq-item.open .faq-icon{transform:rotate(45deg);}
-.faq-a{
-  max-height:0;overflow:hidden;
-  transition:max-height .3s ease,padding .3s;
-  font-size:.88rem;color:var(--ink-soft);line-height:1.65;
-}
-.faq-item.open .faq-a{max-height:200px;padding:0 1.35rem 1.1rem;}
-
-/* ── Final CTA ── */
-.final-cta{
-  background:var(--bg);
-  padding:80px 0;text-align:center;
-}
-.final-cta h2{
-  font-family:var(--font-head);
-  font-size:clamp(1.5rem,3vw,2.1rem);
-  font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem;
-}
-.final-cta p{font-size:1rem;color:var(--ink-soft);max-width:52ch;margin:0 auto 2rem;}
-.btn-sub{
-  font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--ink-muted);
-  margin-top:.85rem;text-transform:uppercase;
-}
-
-/* ── Footer ── */
-footer{
-  background:var(--ink);
-  padding:24px;text-align:center;
-  font-size:.8rem;color:rgba(255,255,255,.5);
-}
-footer a{color:rgba(255,255,255,.7);}
-footer a:hover{color:#fff;}
-
-/* ── Mobile sticky bar ── */
-#sticky-bar{
-  display:none;
-  position:fixed;bottom:0;left:0;right:0;z-index:200;
-  background:var(--blue);
-  padding:.85rem 1rem;
-  box-shadow:0 -2px 16px rgba(0,0,0,.15);
-}
-.sticky-btn{
-  width:100%;background:transparent;color:#fff;
-  font-size:.92rem;font-weight:700;letter-spacing:.03em;
-  padding:.35rem;
-  display:flex;align-items:center;justify-content:center;gap:.5rem;
-}
-@media(max-width:767px){
-  #sticky-bar{display:block;}
-  body{padding-bottom:66px;}
-  .sec{padding:52px 0;}
-}
-
-/* ── Urgency bar ── */
-#urg-bar{
-  background:var(--ink);
-  padding:.6rem 1rem;text-align:center;
-  font-size:.78rem;font-weight:600;color:#fff;letter-spacing:.02em;
-}
-#urg-bar strong{color:#FCD34D;}
-
-/* ── Lightbox ── */
-#lightbox{
-  display:none;position:fixed;inset:0;z-index:500;
-  background:rgba(0,0,0,.85);
-  align-items:center;justify-content:center;
-  padding:1rem;
-}
-#lightbox.open{display:flex;}
-.lb-inner{
-  position:relative;width:100%;max-width:800px;
-  aspect-ratio:16/9;background:#000;border-radius:var(--r-md);overflow:hidden;
-}
-.lb-inner iframe{width:100%;height:100%;border:none;}
-.lb-close{
-  position:absolute;top:-40px;right:0;
-  background:transparent;color:#fff;font-size:1.75rem;line-height:1;
-  font-weight:300;
-}
-
-/* ── Utility ── */
-.text-center{text-align:center;}
-.mt-1{margin-top:.5rem;}
-.mt-2{margin-top:1rem;}
+/* webinar-page specifics only */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 20px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:var(--r-full);padding:8px 14px;font-size:.88rem;font-weight:600;color:var(--ink)}
+.f2{display:grid;grid-template-columns:1fr;gap:0 12px}
+@media(min-width:420px){.f2{grid-template-columns:1fr 1fr}}
+#submit-btn .spin{display:none}
+.form-note span::before{content:"✓ ";color:var(--ok);font-weight:700}
+#success-wrap{display:none;text-align:center;padding:12px 0}
+#success-wrap .ok{width:56px;height:56px;border-radius:50%;background:var(--ok-lt);color:var(--ok);display:grid;place-items:center;font-size:1.6rem;margin:0 auto 14px}
+#success-wrap p{margin:8px auto 0;color:var(--muted)}
+.inst{display:grid;gap:24px;align-items:start;max-width:860px;margin:0 auto}
+@media(min-width:720px){.inst{grid-template-columns:auto 1fr;gap:36px}}
+.inst .avatar{width:112px;height:112px;font-size:2.4rem}
+.inst-role{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-family:var(--f-head)}
+.inst h3{font-size:1.6rem;margin:6px 0 10px}
+.inst blockquote{margin-top:18px;border-left:3px solid var(--blue);background:var(--bg-2);padding:14px 18px;border-radius:0 var(--r) var(--r) 0;font-style:italic;color:var(--ink-2)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.steps{max-width:720px;margin:0 auto}
+.proof-link{text-align:center;margin-top:28px}
+.foot-min{padding:28px 0}
+.foot-min .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+.foot-min a:hover{color:#fff}
 </style>
 </head>
 <body>
 
-<!-- ── Urgency bar ── -->
-<div id="urg-bar"><strong id="urg-msg"></strong></div>
-
-<!-- ── Navbar ── -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo">Prep<span>Eve</span></a>
-    <div class="nav-label">FREE IELTS WEBINAR</div>
-    <a href="#reg-form" class="nav-cta">Reserve My Seat →</a>
+<header class="nav">
+  <div class="wrap">
+    <a href="/" class="logo" aria-label="PrepEve home">Prep<span>Eve</span></a>
+    <span class="nav-label">Free IELTS Webinar</span>
+    <a href="#register" class="btn btn-primary nav-cta" data-cta="nav">Reserve My Free Seat</a>
   </div>
-</nav>
+</header>
 
-<!-- ── HERO ── -->
+<main>
+<!-- HERO -->
 <section class="hero">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <span class="badge"><span class="dot"></span>Free live IELTS webinar</span>
+      <h1>Learn What Actually Moves Your IELTS Score — <em>Free Live Webinar</em></h1>
+      <p class="lead">In 60 minutes, see how IELTS is really scored, what separates Band 6 from Band 7+, and leave with a preparation plan you can start the next day.</p>
+      <div class="chips" aria-label="Webinar details">
+        <span class="chip">🎟️ Free</span>
+        <span class="chip">📡 Live</span>
+        <span class="chip">💻 Online</span>
+        <span class="chip">📅 <span id="chip-date">Every weekend</span></span>
+        <span class="chip">🕐 <span id="chip-time">7:00 PM IST</span></span>
+      </div>
+      <div class="trust">
+        <span>🎓 15,000+ students trained</span>
+        <span><span class="stars" aria-hidden="true">★</span> 4.7 Google rating</span>
+        <span>🏅 97% Band 7+ rate</span>
+      </div>
+      <p class="mt-s"><a href="#register" class="btn btn-primary btn-lg" data-cta="hero">Reserve My Free Seat</a></p>
+    </div>
+
+    <div class="form-card rv" id="register" data-hide-mcta>
+      <div id="reg-form" data-form="webinar-register">
+        <h2>Reserve Your Free Seat</h2>
+        <p class="form-sub">60-minute live session · Sat &amp; Sun, 7:00 PM IST</p>
+        <div class="field">
+          <label for="fname">Your name <span class="req">*</span></label>
+          <input type="text" id="fname" placeholder="e.g. Priya Sharma" autocomplete="name"/>
+          <div class="field-err" id="fname-err">Please enter your name</div>
+        </div>
+        <div class="field">
+          <label for="phone">WhatsApp number <span class="req">*</span></label>
+          <input type="tel" id="phone" placeholder="10-digit mobile number" autocomplete="tel" inputmode="tel"/>
+          <div class="field-err" id="phone-err">Please enter a valid phone number</div>
+        </div>
+        <div class="f2">
+          <div class="field">
+            <label for="exam">Exam type</label>
+            <select id="exam">
+              <option value="">Select exam</option>
+              <option value="Academic">Academic</option>
+              <option value="General Training">General Training</option>
+              <option value="Not sure">Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="band">Target band</label>
+            <select id="band">
+              <option value="">Select band</option>
+              <option value="6.0">Band 6.0</option>
+              <option value="6.5">Band 6.5</option>
+              <option value="7.0">Band 7.0</option>
+              <option value="7.5">Band 7.5</option>
+              <option value="8.0">Band 8.0+</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" id="submit-btn" type="button">
+          <span class="spin" id="spinner" aria-hidden="true"></span>
+          <span class="wa-ico" aria-hidden="true"></span>
+          <span id="cta-txt">Reserve My Free Seat</span>
+        </button>
+        <div class="form-note"><span>Free registration</span><span>No payment required</span><span>Join from anywhere</span></div>
+        <div class="form-alt">Prefer WhatsApp? <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20register%20for%20the%20free%20IELTS%20webinar." target="_blank" rel="noopener" data-cta="form-wa">Register via WhatsApp</a></div>
+      </div>
+      <div id="success-wrap" role="status" aria-live="polite">
+        <div class="ok">✓</div>
+        <h3>You're registered!</h3>
+        <p>Your seat is reserved. We're opening WhatsApp so you can get the webinar link. Redirecting you shortly…</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU'LL LEARN -->
+<section class="sec sec-alt">
   <div class="wrap">
-    <div class="hero-grid">
-      <!-- Left column -->
+    <div class="sec-head rv">
+      <span class="eyebrow">Inside this free webinar</span>
+      <h2>Here's exactly what you'll learn</h2>
+      <p>Six high-impact topics in 60 minutes of live strategy.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card rv"><span class="num">01</span><h3>How IELTS is actually scored</h3><p>The real criteria examiners use — not what most prep books tell you.</p></div>
+      <div class="card rv"><span class="num">02</span><h3>What separates Band 6 from Band 7+</h3><p>The specific skills and habits that decide whether you fall short or hit your target.</p></div>
+      <div class="card rv"><span class="num">03</span><h3>The biggest candidate mistakes</h3><p>Common errors that silently reduce your score — and how to stop making them.</p></div>
+      <div class="card rv"><span class="num">04</span><h3>How to approach each section</h3><p>Listening, Reading, Writing and Speaking — practical, exam-ready strategies.</p></div>
+      <div class="card rv"><span class="num">05</span><h3>Your preparation roadmap</h3><p>A clear, actionable framework for your next attempt — not generic advice.</p></div>
+      <div class="card rv"><span class="num">06</span><h3>What to do before test day</h3><p>Final-week strategies to maximise your score when it counts most.</p></div>
+    </div>
+    <p class="center mt"><a href="#register" class="btn btn-primary" data-cta="learn">Reserve My Free Seat</a></p>
+  </div>
+</section>
+
+<!-- WHY ATTEND -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">60 minutes well spent</span>
+      <h2>Why attend?</h2>
+    </div>
+    <div class="grid g2">
+      <div class="card rv"><div class="ico">🚫</div><h3>Stop wasting time on random tips</h3><p>Generic advice keeps you spinning in circles. Get a structured approach built around how IELTS is actually marked.</p></div>
+      <div class="card rv"><div class="ico">🗺️</div><h3>Leave with a preparation roadmap</h3><p>Not just motivation — a concrete plan you can start using the day after the webinar.</p></div>
+      <div class="card rv"><div class="ico">🔍</div><h3>Find where your score is being lost</h3><p>Most candidates don't know which section is costing them half a band. After this session, you will.</p></div>
+      <div class="card rv"><div class="ico">👩‍🏫</div><h3>Learn from an experienced trainer</h3><p>Real strategies from 10+ years of IELTS coaching, with live Q&amp;A for your own situation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO SHOULD ATTEND -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Is this for you?</span>
+      <h2>This webinar is for you if you're…</h2>
+    </div>
+    <div class="grid g3">
+      <div class="card rv"><div class="ico">🎓</div><h3>Planning to study abroad</h3><p>UK, Australia, Canada or USA — IELTS is your gateway. Make sure you hit the score.</p></div>
+      <div class="card rv"><div class="ico">🍁</div><h3>Applying for Canada PR</h3><p>Your IELTS band directly affects your CRS score and PR eligibility.</p></div>
+      <div class="card rv"><div class="ico">💼</div><h3>A working professional</h3><p>Get a focused, time-efficient strategy that fits around your job.</p></div>
+      <div class="card rv"><div class="ico">🆕</div><h3>Just starting out</h3><p>Walk away with a clear roadmap so you never feel lost in your preparation.</p></div>
+      <div class="card rv"><div class="ico">🔄</div><h3>Stuck below Band 7</h3><p>Already attempted IELTS? Learn exactly what's holding your score back and how to fix it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Real results</span>
+      <h2>Students who trusted PrepEve</h2>
+    </div>
+    <div class="stats rv">
+      <div class="stat"><b>15,000+</b><span>Students trained</span></div>
+      <div class="stat"><b>97%</b><span>Band 7+ rate</span></div>
+      <div class="stat"><b>4.7★</b><span>Google rating</span></div>
+      <div class="stat"><b>+1.5</b><span>Avg band improvement</span></div>
+    </div>
+
+    <div class="grid g3 mt">
+      <div class="card quote rv">
+        <blockquote>“I was so confused watching videos online. After a 2-day free webinar, I enrolled. Their class notes let you skim every module quickly, and they assist with Speaking &amp; Writing mocks. I benefited more than what I paid for.”</blockquote>
+        <div class="quote-by"><span class="avatar">SR</span><div><b>Shashikanth Revelly</b><small><a href="https://www.google.com/maps/contrib/110923457556373260953/reviews" target="_blank" rel="noopener nofollow">Review on Google</a></small></div><span class="band-pill">7.5</span></div>
+      </div>
+      <div class="card quote rv">
+        <blockquote>“Honestly, I can't thank the team enough. It's been almost two years since I took my IELTS classes with them, and they still support me whenever I reach out. That kind of dedication is rare.”</blockquote>
+        <div class="quote-by"><span class="avatar">AM</span><div><b>Anooj Motghare</b><small><a href="https://www.google.com/maps/contrib/102113621604889428073/reviews" target="_blank" rel="noopener nofollow">Review on Google</a></small></div><span class="band-pill">8.5</span></div>
+      </div>
+      <div class="card quote rv">
+        <blockquote>“The coaching was extremely helpful and highly effective. The study materials were well-structured and perfectly aligned with the actual exam pattern. I truly appreciate the support throughout.”</blockquote>
+        <div class="quote-by"><span class="avatar">YP</span><div><b>Yashaswini Palakonda</b><small><a href="https://www.google.com/maps/contrib/109065652692536741630/reviews" target="_blank" rel="noopener nofollow">Review on Google</a></small></div><span class="band-pill">8.0</span></div>
+      </div>
+    </div>
+
+    <div class="grid g3 mt">
       <div class="rv">
-        <div class="hero-badge">🎓 Free Live Webinar — IELTS Masterclass</div>
-        <h1 class="hero-h1">The Free IELTS Webinar That Teaches You What Actually Moves Your Score.</h1>
-        <p class="hero-sub">Learn how IELTS is actually scored, what separates Band 6 from Band 7+, and how to build a preparation plan that works — in one free live session.</p>
-        <div class="trust-row">
-          <span class="trust-pill">15,000+ Students</span>
-          <span class="trust-pill">Free</span>
-          <span class="trust-pill">Live Online</span>
-          <span class="trust-pill">Actionable Strategy</span>
-        </div>
-        <div class="webinar-info-card">
-          <span class="info-chip">📅 <span id="chip-date">Every Weekend</span></span>
-          <span class="info-chip">🕐 <span id="chip-time">7:00 PM IST</span></span>
-          <span class="info-chip">💻 Online</span>
-          <span class="info-chip">🎟️ Free</span>
-        </div>
+        <button class="vcard" type="button" data-vid="8agy5ojp36I" aria-label="Play video: Taranjeet, Band 8.5">
+          <img src="https://img.youtube.com/vi/8agy5ojp36I/hqdefault.jpg" alt="Taranjeet — Band 8.5 student testimonial" width="480" height="360" loading="lazy" decoding="async"/>
+          <span class="play" aria-hidden="true"></span>
+        </button>
+        <div class="vcap"><b>Taranjeet — Band 8.5</b><span>6.5 → 8.5 in 30 days · Canada PR</span></div>
       </div>
+      <div class="rv">
+        <button class="vcard" type="button" data-vid="5FbjLsycE2k" aria-label="Play video: Pratishtha, Band 8.0">
+          <img src="https://img.youtube.com/vi/5FbjLsycE2k/hqdefault.jpg" alt="Pratishtha — Band 8.0 student testimonial" width="480" height="360" loading="lazy" decoding="async"/>
+          <span class="play" aria-hidden="true"></span>
+        </button>
+        <div class="vcap"><b>Pratishtha — Band 8.0</b><span>6.0 → 8.0 · UCL, UK</span></div>
+      </div>
+      <div class="rv">
+        <button class="vcard" type="button" data-vid="2f9jwGWIREI" aria-label="Play video: Deepanshu, Band 7.5">
+          <img src="https://img.youtube.com/vi/2f9jwGWIREI/hqdefault.jpg" alt="Deepanshu — Band 7.5 student testimonial" width="480" height="360" loading="lazy" decoding="async"/>
+          <span class="play" aria-hidden="true"></span>
+        </button>
+        <div class="vcap"><b>Deepanshu — Band 7.5</b><span>6.5 → 7.5</span></div>
+      </div>
+    </div>
 
-      <!-- Right column: Registration card -->
-      <div class="rv" style="transition-delay:.12s">
-        <div class="reg-card">
-          <div class="reg-card-header">
-            <div class="reg-card-title">Reserve Your Free Seat</div>
-            <div class="reg-card-sub">60-min live session · Limited seats</div>
-          </div>
-          <div class="reg-card-body">
-            <div class="form-urg" id="form-urg">🔴 <span id="form-urg-txt">Seats filling up fast this weekend</span></div>
-            <div id="reg-form">
-              <div class="form-row">
-                <label for="fname">Your Name <span class="req">*</span></label>
-                <input type="text" id="fname" placeholder="e.g. Priya Sharma" autocomplete="name" inputmode="text"/>
-                <div class="field-err" id="fname-err">Please enter your name</div>
-              </div>
-              <div class="form-row">
-                <label for="phone">WhatsApp Number <span class="req">*</span></label>
-                <input type="tel" id="phone" placeholder="10-digit mobile number" autocomplete="tel" inputmode="tel"/>
-                <div class="field-err" id="phone-err">Please enter a valid phone number</div>
-              </div>
-              <div class="form-row-2col">
-                <div class="form-row" style="margin-bottom:0">
-                  <label for="exam">Exam Type</label>
-                  <select id="exam">
-                    <option value="">Select exam</option>
-                    <option value="Academic">Academic</option>
-                    <option value="General Training">General Training</option>
-                    <option value="Not sure">Not sure yet</option>
-                  </select>
-                </div>
-                <div class="form-row" style="margin-bottom:0">
-                  <label for="band">Target Band</label>
-                  <select id="band">
-                    <option value="">Select band</option>
-                    <option value="6.0">Band 6.0</option>
-                    <option value="6.5">Band 6.5</option>
-                    <option value="7.0">Band 7.0</option>
-                    <option value="7.5">Band 7.5</option>
-                    <option value="8.0">Band 8.0+</option>
-                  </select>
-                </div>
-              </div>
-              <button class="btn-submit" id="submit-btn" type="button">
-                <span class="spinner" id="spinner"></span>
-                <span class="wa-ico">
-                  <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                </span>
-                <span id="cta-txt">RESERVE MY FREE SEAT →</span>
-              </button>
-              <div class="submit-reassure">
-                <span>Free registration</span>
-                <span>No payment required</span>
-                <span>Join from anywhere</span>
-              </div>
-              <div class="wa-alt">
-                Prefer WhatsApp? → <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%20want%20to%20register%20for%20the%20free%20IELTS%20webinar." target="_blank" rel="noopener">Register via WhatsApp</a>
-              </div>
-            </div>
-            <div id="success-wrap">
-              <div class="success-icon">✅</div>
-              <div class="success-h">You're Registered!</div>
-              <div class="success-p">Your seat is reserved. We're opening WhatsApp so you can join the group and get the webinar link. Redirecting you shortly…</div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="btn-row mt" style="justify-content:center">
+      <a href="#register" class="btn btn-primary" data-cta="proof">Reserve My Free Seat</a>
+      <a href="https://chat.whatsapp.com/EoZiGZKTLak9FUD1JjMFdi" class="btn btn-wa" target="_blank" rel="noopener" data-cta="proof-wa-group">Join 15,000+ students on WhatsApp</a>
     </div>
   </div>
 </section>
 
-<!-- ── What You'll Learn ── -->
-<section class="sec sec-alt rv">
+<!-- INSTRUCTOR -->
+<section class="sec sec-alt">
   <div class="wrap">
-    <div class="section-head">
-      <div class="sec-label">INSIDE THIS FREE WEBINAR</div>
-      <h2>Here's Exactly What You'll Learn</h2>
-      <p>Six high-impact topics packed into 60 minutes of live strategy.</p>
-    </div>
-    <div class="learn-grid">
-      <div class="learn-card rv">
-        <div class="learn-num">01</div>
-        <div class="learn-icon">📊</div>
-        <div class="learn-h">How IELTS is actually scored</div>
-        <div class="learn-p">Understand the real scoring criteria examiners use — not what most prep books tell you.</div>
-      </div>
-      <div class="learn-card rv" style="transition-delay:.06s">
-        <div class="learn-num">02</div>
-        <div class="learn-icon">🎯</div>
-        <div class="learn-h">What separates Band 6 from Band 7+</div>
-        <div class="learn-p">The specific skills and habits that make the difference between falling short and hitting your target.</div>
-      </div>
-      <div class="learn-card rv" style="transition-delay:.12s">
-        <div class="learn-num">03</div>
-        <div class="learn-icon">❌</div>
-        <div class="learn-h">The biggest mistakes IELTS candidates make</div>
-        <div class="learn-p">Common errors that silently reduce your score — and how to stop making them immediately.</div>
-      </div>
-      <div class="learn-card rv" style="transition-delay:.18s">
-        <div class="learn-num">04</div>
-        <div class="learn-icon">📝</div>
-        <div class="learn-h">How to approach each IELTS section</div>
-        <div class="learn-p">Listening, Reading, Writing and Speaking — covered with practical, exam-ready strategies.</div>
-      </div>
-      <div class="learn-card rv" style="transition-delay:.24s">
-        <div class="learn-num">05</div>
-        <div class="learn-icon">🗺️</div>
-        <div class="learn-h">How to build your preparation roadmap</div>
-        <div class="learn-p">A clear, actionable plan for your next attempt — not generic advice, but a real framework.</div>
-      </div>
-      <div class="learn-card rv" style="transition-delay:.3s">
-        <div class="learn-num">06</div>
-        <div class="learn-icon">✅</div>
-        <div class="learn-h">What to do before your test date</div>
-        <div class="learn-p">Final week strategies to maximise your score when it counts most.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Who Should Attend ── -->
-<section class="sec rv">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="sec-label">IS THIS FOR YOU?</div>
-      <h2>This Webinar Is For You If…</h2>
-    </div>
-    <div class="who-grid">
-      <div class="who-card rv">
-        <div class="who-icon">🎓</div>
-        <div class="who-text">
-          <h4>Planning to study abroad</h4>
-          <p>UK, Australia, Canada or USA — IELTS is your gateway. Let's make sure you hit the score.</p>
-        </div>
-      </div>
-      <div class="who-card rv" style="transition-delay:.05s">
-        <div class="who-icon">🍁</div>
-        <div class="who-text">
-          <h4>Applying for Canada PR or immigration</h4>
-          <p>Your IELTS band directly impacts your CRS score and PR eligibility.</p>
-        </div>
-      </div>
-      <div class="who-card rv" style="transition-delay:.1s">
-        <div class="who-icon">💼</div>
-        <div class="who-text">
-          <h4>Working professional balancing prep with work</h4>
-          <p>This session gives you a focused, time-efficient strategy that fits your schedule.</p>
-        </div>
-      </div>
-      <div class="who-card rv" style="transition-delay:.15s">
-        <div class="who-icon">🔄</div>
-        <div class="who-text">
-          <h4>Already attempted IELTS but stuck below Band 7</h4>
-          <p>You'll learn exactly what's holding your score back and how to fix it.</p>
-        </div>
-      </div>
-      <div class="who-card rv" style="transition-delay:.2s">
-        <div class="who-icon">🆕</div>
-        <div class="who-text">
-          <h4>Just starting IELTS and don't know where to begin</h4>
-          <p>Walk away with a clear roadmap so you never feel lost in your preparation again.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Why Attend ── -->
-<section class="sec sec-alt rv">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="sec-label">60 MINUTES WELL SPENT</div>
-      <h2>Why Spend 60 Minutes Here?</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-block rv">
-        <div class="why-icon">🚫</div>
-        <div>
-          <div class="why-h">Stop wasting time on random YouTube tips</div>
-          <div class="why-p">Generic advice with no direction keeps you spinning in circles. This session gives you a structured approach built around how IELTS is actually marked.</div>
-        </div>
-      </div>
-      <div class="why-block rv" style="transition-delay:.07s">
-        <div class="why-icon">🗺️</div>
-        <div>
-          <div class="why-h">Walk away with a preparation roadmap</div>
-          <div class="why-p">Not just motivation — a concrete, week-by-week plan you can start using the day after the webinar.</div>
-        </div>
-      </div>
-      <div class="why-block rv" style="transition-delay:.14s">
-        <div class="why-icon">🔍</div>
-        <div>
-          <div class="why-h">Identify exactly where your score is being lost</div>
-          <div class="why-p">Most candidates don't know which section is costing them half a band. After this session, you will.</div>
-        </div>
-      </div>
-      <div class="why-block rv" style="transition-delay:.21s">
-        <div class="why-icon">👩‍🏫</div>
-        <div>
-          <div class="why-h">Learn from an experienced IELTS trainer</div>
-          <div class="why-p">Real strategies from 10+ years of coaching, not algorithm-generated advice or recycled YouTube scripts.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Instructor ── -->
-<section class="sec rv">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="sec-label">👩‍🏫 YOUR INSTRUCTOR</div>
+    <div class="sec-head rv">
+      <span class="eyebrow">Your instructor</span>
       <h2>Learn From IELTS Experts</h2>
+      <p>Real trainers. Real experience. Real results.</p>
     </div>
-    <div class="instructor-frame">Real trainers. Real experience. Real results.</div>
-    <div class="instructor-wrap">
-      <div class="instructor-avatar">S</div>
+    <div class="inst rv">
+      <span class="avatar" aria-hidden="true">S</span>
       <div>
-        <div class="instructor-role">Founder, PrepEve · IELTS Expert · RCIC Certified</div>
-        <div class="instructor-name">Sanjita</div>
-        <div class="instructor-bio">10+ years coaching IELTS, CELPIP, and TEF Canada. Trained 10,000+ students across India. Known for making Band 7+ feel achievable — even for repeat test-takers and complete beginners who don't know where to start.</div>
-        <div class="inst-badges">
-          <span class="inst-badge">🎓 10,000+ students trained</span>
-          <span class="inst-badge">⭐ 4.7 Google Rating</span>
-          <span class="inst-badge">🏅 RCIC Certified</span>
-          <span class="inst-badge">📺 1.2L+ YouTube Subscribers</span>
+        <div class="inst-role">Founder, PrepEve · IELTS Expert · RCIC Certified</div>
+        <h3>Sanjita</h3>
+        <p>10+ years coaching IELTS, CELPIP and TEF Canada. Trained 10,000+ students across India. Known for making Band 7+ feel achievable — even for repeat test-takers and complete beginners.</p>
+        <div class="pills">
+          <span class="badge">10,000+ students trained</span>
+          <span class="badge badge-gold">4.7★ Google rating</span>
+          <span class="badge badge-ok">RCIC certified</span>
+          <span class="badge">1.2L+ YouTube subscribers</span>
         </div>
-        <div class="instructor-quote">"Most students fail IELTS not because they lack English — but because nobody showed them the format. One class changes everything."</div>
+        <blockquote>"Most students fail IELTS not because they lack English — but because nobody showed them the format. One class changes everything."</blockquote>
+        <p class="mt-s"><a href="#register" class="btn btn-primary" data-cta="instructor">Reserve My Free Seat</a></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── Student Results ── -->
-<section class="sec sec-alt rv">
+<!-- AGENDA -->
+<section class="sec">
   <div class="wrap">
-    <div class="section-head">
-      <div class="sec-label">📈 REAL RESULTS</div>
-      <h2>Students Who Trusted PrepEve</h2>
-    </div>
-    <div class="stats-row rv">
-      <div class="stat-cell">
-        <div class="stat-n">15,000+</div>
-        <div class="stat-l">Students Trained</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-n">97%</div>
-        <div class="stat-l">Band 7+ Rate</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-n">4.7★</div>
-        <div class="stat-l">Google Rating</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-n">+1.5</div>
-        <div class="stat-l">Avg Band Improvement</div>
-      </div>
-    </div>
-    <div class="video-grid">
-      <div class="video-card" data-vid="8agy5ojp36I">
-        <div class="video-thumb-wrap">
-          <img src="https://img.youtube.com/vi/8agy5ojp36I/hqdefault.jpg" alt="Taranjeet Band 8.5 testimonial" loading="lazy"/>
-          <div class="video-overlay"><div class="video-play"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-          <div class="video-band">Band 8.5</div>
-        </div>
-        <div class="video-info">
-          <div class="video-title">Taranjeet — Band 8.5</div>
-          <div class="video-meta">6.5 → 8.5 in 30 days · Watch on YouTube →</div>
-        </div>
-      </div>
-      <div class="video-card" data-vid="5FbjLsycE2k">
-        <div class="video-thumb-wrap">
-          <img src="https://img.youtube.com/vi/5FbjLsycE2k/hqdefault.jpg" alt="Pratishtha Band 8.0 testimonial" loading="lazy"/>
-          <div class="video-overlay"><div class="video-play"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-          <div class="video-band">Band 8.0</div>
-        </div>
-        <div class="video-info">
-          <div class="video-title">Pratishtha — Band 8.0</div>
-          <div class="video-meta">6.0 → 8.0 · UK UCL · Watch on YouTube →</div>
-        </div>
-      </div>
-      <div class="video-card" data-vid="2f9jwGWIREI">
-        <div class="video-thumb-wrap">
-          <img src="https://img.youtube.com/vi/2f9jwGWIREI/hqdefault.jpg" alt="Deepanshu Band 7.5 testimonial" loading="lazy"/>
-          <div class="video-overlay"><div class="video-play"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-          <div class="video-band">Band 7.5</div>
-        </div>
-        <div class="video-info">
-          <div class="video-title">Deepanshu — Band 7.5</div>
-          <div class="video-meta">6.5 → 7.5 · Watch on YouTube →</div>
-        </div>
-      </div>
-    </div>
-    <div class="wa-cta-wrap rv">
-      <a class="btn-wa" href="https://chat.whatsapp.com/EoZiGZKTLak9FUD1JjMFdi" target="_blank" rel="noopener">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Join 15,000+ Students on WhatsApp →
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ── Webinar Agenda ── -->
-<section class="sec rv">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="sec-label">WEBINAR AGENDA</div>
-      <h2>What Happens During the Webinar</h2>
+    <div class="sec-head rv">
+      <span class="eyebrow">Webinar agenda</span>
+      <h2>What happens during the webinar</h2>
       <p>A structured 60-minute session built for clarity and action.</p>
     </div>
-    <div class="agenda-list">
-      <div class="agenda-item rv">
-        <div class="agenda-num">01</div>
-        <div>
-          <div class="agenda-h">Introduction to IELTS Scoring System</div>
-          <div class="agenda-p">Understand the real criteria behind every band score — what examiners look for vs. what most candidates focus on.</div>
-        </div>
-      </div>
-      <div class="agenda-item rv" style="transition-delay:.07s">
-        <div class="agenda-num">02</div>
-        <div>
-          <div class="agenda-h">High-Impact Strategies for Each Section</div>
-          <div class="agenda-p">Listening, Reading, Writing and Speaking — section-by-section tactics you can apply in your very next attempt.</div>
-        </div>
-      </div>
-      <div class="agenda-item rv" style="transition-delay:.14s">
-        <div class="agenda-num">03</div>
-        <div>
-          <div class="agenda-h">Score-Killing Mistakes — Identified and Fixed</div>
-          <div class="agenda-p">The most common errors that cost candidates half a band or more, and exactly how to stop making them.</div>
-        </div>
-      </div>
-      <div class="agenda-item rv" style="transition-delay:.21s">
-        <div class="agenda-num">04</div>
-        <div>
-          <div class="agenda-h">Building Your Personalised Prep Roadmap</div>
-          <div class="agenda-p">A framework you can apply to your own timeline, target band, and available study hours.</div>
-        </div>
-      </div>
-      <div class="agenda-item rv" style="transition-delay:.28s">
-        <div class="agenda-num">05</div>
-        <div>
-          <div class="agenda-h">Live Q&amp;A — Get Your Questions Answered</div>
-          <div class="agenda-p">Ask anything about your specific situation, weak areas, or preparation challenges directly in the session.</div>
-        </div>
-      </div>
+    <div class="steps">
+      <div class="step rv"><span class="step-n">1</span><div><h3>Introduction to IELTS scoring</h3><p>The real criteria behind every band score — what examiners look for vs. what most candidates focus on.</p></div></div>
+      <div class="step rv"><span class="step-n">2</span><div><h3>High-impact strategies for each section</h3><p>Section-by-section tactics you can apply in your very next attempt.</p></div></div>
+      <div class="step rv"><span class="step-n">3</span><div><h3>Score-killing mistakes, fixed</h3><p>The common errors that cost half a band or more, and how to stop making them.</p></div></div>
+      <div class="step rv"><span class="step-n">4</span><div><h3>Building your prep roadmap</h3><p>A framework for your own timeline, target band and available study hours.</p></div></div>
+      <div class="step rv"><span class="step-n">5</span><div><h3>Live Q&amp;A</h3><p>Ask about your specific situation, weak areas or preparation challenges.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- ── Mid-page CTA ── -->
-<section class="mid-cta rv">
+<!-- MID CTA -->
+<section class="sec" style="padding-top:0;padding-bottom:0">
   <div class="wrap">
-    <h2>Ready to Stop Guessing and Start Preparing?</h2>
-    <p>One free session. A clear strategy. Your next band score starts here.</p>
-    <a href="#reg-form" class="btn-primary">RESERVE MY FREE SEAT →</a>
-    <div class="btn-primary-sub">FREE · LIVE · ONLINE · NO COMMITMENT</div>
+    <div class="cta-band rv">
+      <h2>Ready to stop guessing and start preparing?</h2>
+      <p>One free session. A clear strategy. Free · Live · Online · No commitment.</p>
+      <a href="#register" class="btn btn-light btn-lg" data-cta="mid">Reserve My Free Seat</a>
+    </div>
   </div>
 </section>
 
-<!-- ── FAQ ── -->
-<section class="sec sec-alt rv">
+<!-- FAQ -->
+<section class="sec">
   <div class="wrap">
-    <div class="section-head">
-      <div class="sec-label">FAQ</div>
-      <h2>Frequently Asked Questions</h2>
+    <div class="sec-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2>Frequently asked questions</h2>
     </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q">Is the webinar really free? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Yes, completely free. No payment, no credit card, no hidden charges. Just reserve your seat and show up.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Who is this for? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Anyone preparing for IELTS — beginners, retakers, working professionals, students planning to study or immigrate abroad.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do I need prior IELTS knowledge? <span class="faq-icon">+</span></button>
-        <div class="faq-a">No. The webinar is designed to be useful at any stage of your preparation — whether you've never opened an IELTS book or you've already attempted the exam.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Academic or General Training? <span class="faq-icon">+</span></button>
-        <div class="faq-a">We cover strategies applicable to both Academic and General Training. You'll leave with clarity on what applies specifically to your module.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How long is the webinar? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Approximately 60 minutes including the live Q&amp;A session at the end.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How will I get the webinar link? <span class="faq-icon">+</span></button>
-        <div class="faq-a">After you register, we'll send the link via WhatsApp. Make sure your WhatsApp number is correct when you fill in the form.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Can I attend on my phone? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Yes. The webinar is fully accessible on mobile — no laptop required. Just a stable internet connection and you're good to go.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Will there be a recording? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Attend live to get the most out of the session. A recording may be shared with registered attendees at PrepEve's discretion.</div>
-      </div>
+    <div class="faq rv">
+      <details><summary>Is the webinar really free?</summary><div>Yes, completely free. No payment, no card, no hidden charges. Just reserve your seat and show up.</div></details>
+      <details><summary>When is the webinar?</summary><div>Every Saturday and Sunday at 7:00 PM IST. The session is about 60 minutes including live Q&amp;A.</div></details>
+      <details><summary>Who is this for?</summary><div>Anyone preparing for IELTS — beginners, retakers, working professionals, and students planning to study or migrate abroad.</div></details>
+      <details><summary>Do I need prior IELTS knowledge?</summary><div>No. It's useful at any stage — whether you've never opened an IELTS book or have already taken the exam.</div></details>
+      <details><summary>Academic or General Training?</summary><div>We cover strategies for both Academic and General Training, and you'll leave clear on what applies to your module.</div></details>
+      <details><summary>How will I get the webinar link?</summary><div>After you register, we send the link on WhatsApp — so please enter your WhatsApp number correctly.</div></details>
+      <details><summary>Can I attend on my phone?</summary><div>Yes. The webinar works on mobile — no laptop needed, just a stable internet connection.</div></details>
     </div>
   </div>
 </section>
 
-<!-- ── Final CTA ── -->
-<section class="final-cta rv">
+<!-- FINAL CTA -->
+<section class="sec sec-dark center">
   <div class="wrap">
-    <div class="section-head" style="margin-bottom:1.5rem">
-      <div class="sec-label">DON'T WAIT</div>
-    </div>
-    <h2>Your IELTS Preparation Doesn't Have to Be Guesswork.</h2>
-    <p>Join thousands of students who have used PrepEve's proven approach to reach their target band. Reserve your free seat in the live webinar.</p>
-    <a href="#reg-form" class="btn-primary">RESERVE MY FREE SEAT →</a>
-    <div class="btn-sub">FREE · LIVE · ONLINE · NO PAYMENT REQUIRED</div>
+    <span class="eyebrow">Don't wait</span>
+    <h2>Your IELTS prep doesn't need to be guesswork</h2>
+    <p style="margin:14px auto 28px">Join thousands of students who used PrepEve's approach to reach their target band. Reserve your free seat in this weekend's live webinar.</p>
+    <a href="#register" class="btn btn-primary btn-lg" data-cta="final">Reserve My Free Seat</a>
   </div>
 </section>
+</main>
 
-<!-- ── Footer ── -->
-<footer>
-  PrepEve © 2024 &nbsp;·&nbsp; <a href="/">Back to Home</a>
+<footer class="foot foot-min">
+  <div class="wrap">
+    <a href="/" class="logo">Prep<span>Eve</span></a>
+    <span>© <span data-year>2026</span> PrepEve</span>
+    <a href="https://wa.me/919877714284" target="_blank" rel="noopener" data-cta="footer">WhatsApp +91 98777 14284</a>
+  </div>
 </footer>
 
-<!-- ── Mobile sticky bar ── -->
-<div id="sticky-bar">
-  <button class="sticky-btn" onclick="scrollForm()">
-    🎓 FREE IELTS WEBINAR — Reserve My Seat →
-  </button>
+<div class="mcta">
+  <a href="#register" class="btn btn-primary" data-cta="sticky">Reserve My Free Seat</a>
 </div>
 
-<!-- ── Lightbox ── -->
-<div id="lightbox" onclick="closeLb(event)">
-  <div class="lb-inner">
-    <button class="lb-close" onclick="closeLb()">×</button>
-    <iframe id="lb-frame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="vmodal" role="dialog" aria-modal="true" aria-label="Video">
+  <div class="vmodal-in">
+    <button class="vmodal-x" aria-label="Close video">×</button>
+    <iframe title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
 
-<script src="/assets/js/common.js"></script>
 <script>
 var WA = '919877714284';
 var SHEET = 'https://script.google.com/macros/s/AKfycbxV6D1QlPWjlPg7QNH4RBQb3PoyisOElpEaKW_mbFkVkyeBfIJKPi7eiGfO42jUSTYLzg/exec';
-
 function v(id){return document.getElementById(id).value.trim();}
-
-/* ── Dynamic weekend dates ── */
+/* ── Dynamic weekend dates (Sat & Sun, 7:00 PM IST) ── */
 (function(){
   var now = new Date();
   var day = now.getDay();
@@ -1071,44 +395,7 @@ function v(id){return document.getElementById(id).value.trim();}
   if(chipDate) chipDate.textContent = rangeStr;
   var chipTime = document.getElementById('chip-time');
   if(chipTime) chipTime.textContent = '7:00 PM IST';
-  // Urgency on Fri/Sat/Sun
-  var d = now.getDay();
-  if(d===0||d===5||d===6){
-    var msgs = ['🔴 Only 9 seats left this weekend','🔴 Filling fast — last few spots','🔴 Registration closes Sunday'];
-    var urgMsg = document.getElementById('urg-msg');
-    if(urgMsg) urgMsg.textContent = msgs[Math.floor(Math.random()*msgs.length)];
-    var urgBar = document.getElementById('urg-bar');
-    if(urgBar) urgBar.style.display = 'block';
-    var seats = [8,9,10,11,12,13,14][Math.floor(Math.random()*7)];
-    var formUrgEl = document.getElementById('form-urg-txt');
-    if(formUrgEl) formUrgEl.textContent = 'Only ' + seats + ' seats remaining';
-  } else {
-    var urgBar2 = document.getElementById('urg-bar');
-    if(urgBar2) urgBar2.style.display = 'none';
-  }
 })();
-
-/* ── Scroll to form ── */
-function scrollForm(){
-  var el = document.getElementById('reg-form') || document.getElementById('form');
-  if(!el) return;
-  el.scrollIntoView({behavior:'smooth', block:'center'});
-  setTimeout(function(){
-    var nameEl = document.getElementById('fname');
-    if(nameEl) nameEl.focus();
-  }, 600);
-}
-
-/* ── Hide sticky bar when form visible ── */
-(function(){
-  var formEl = document.getElementById('reg-form');
-  var bar = document.getElementById('sticky-bar');
-  if(!formEl || !bar || !('IntersectionObserver' in window)) return;
-  new IntersectionObserver(function(e){
-    bar.style.display = e[0].isIntersecting ? 'none' : 'block';
-  },{threshold:.1}).observe(formEl);
-})();
-
 /* ── Form submit ── */
 document.getElementById('submit-btn').addEventListener('click', function(){
   var name = v('fname');
@@ -1168,53 +455,7 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     }, 1500);
   }, 900);
 });
-
-/* ── FAQ accordion ── */
-document.querySelectorAll('.faq-q').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var item = this.closest('.faq-item');
-    var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(function(el){ el.classList.remove('open'); });
-    if(!isOpen) item.classList.add('open');
-  });
-});
-
-/* ── Nav scroll class ── */
-window.addEventListener('scroll', function(){
-  document.getElementById('navbar').classList.toggle('sc', window.scrollY > 10);
-},{passive:true});
-
-/* ── Reveal on scroll ── */
-(function(){
-  if(!('IntersectionObserver' in window)){
-    document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); });
-    return;
-  }
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
-  },{threshold:.08});
-  document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
-})();
-
-/* ── Video lightbox ── */
-document.querySelectorAll('.video-card[data-vid]').forEach(function(card){
-  card.addEventListener('click', function(e){
-    e.preventDefault();
-    var vid = this.getAttribute('data-vid');
-    document.getElementById('lb-frame').src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1&rel=0';
-    document.getElementById('lightbox').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  });
-});
-function closeLb(e){
-  if(e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lb-close')) return;
-  document.getElementById('lightbox').classList.remove('open');
-  document.getElementById('lb-frame').src = '';
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', function(e){
-  if(e.key === 'Escape') closeLb({target:document.getElementById('lightbox')});
-});
 </script>
+<script src="/assets/js/prepeve.js" defer></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="color-scheme" content="light"/>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="color-scheme" content="light"/>
 <title>You're Booked! — PrepEve IELTS</title>
 <meta name="robots" content="noindex"/>
 <meta name="description" content="You've booked your free IELTS demo class with PrepEve. Check WhatsApp — we'll confirm your slot within 30 minutes."/>
@@ -19,324 +19,129 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/prepeve.css"/>
 <style>
-:root {
-  --white: #FFFFFF;
-  --ink: #111827;
-  --ink-soft: #374151;
-  --ink-muted: #6B7280;
-  --line: #E5E7EB;
-  --blue: #1A56DB;
-  --blue-dark: #1341B0;
-  --blue-light: #EEF2FF;
-  --success: #16A34A;
-  --success-light: #DCFCE7;
-  --wa: #25D366;
-  --wa-dark: #128C7E;
-  --gold: #F59E0B;
-  --font-head: 'Plus Jakarta Sans', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --r-md: 10px;
-  --r-lg: 14px;
-  --r-xl: 20px;
-  --shadow: 0 2px 12px rgba(0,0,0,.07);
-  --shadow-lg: 0 8px 32px rgba(0,0,0,.1);
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-
-body {
-  background: #FFFFFF;
-  background-image: linear-gradient(180deg, #EEF2FF 0%, #FFFFFF 280px);
-  font-family: var(--font-body);
-  color: var(--ink);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2.5rem 1rem;
-}
-
-/* ── Main container ── */
-.ty-wrap {
-  max-width: 560px;
-  width: 100%;
-  text-align: center;
-}
-
-/* ── Success ring ── */
-.success-ring {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 3px solid var(--success);
-  background: var(--success-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem;
-  animation: popIn .55s cubic-bezier(.34,1.56,.64,1) both;
-}
-@keyframes popIn {
-  from { transform: scale(0); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
-}
-.success-ring svg {
-  stroke-dasharray: 40;
-  stroke-dashoffset: 40;
-  animation: checkDraw .4s .45s ease forwards;
-}
-@keyframes checkDraw {
-  to { stroke-dashoffset: 0; }
-}
-
-/* ── Confirmation badge ── */
-.ty-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  background: var(--success-light);
-  border: 1px solid rgba(22,163,74,.25);
-  border-radius: 100px;
-  padding: .3rem .9rem;
-  margin-bottom: 1rem;
-  font-family: var(--font-head);
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: #15803D;
-  animation: fadeUp .5s .1s ease both;
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ── Headline ── */
-.ty-h1 {
-  font-family: var(--font-head);
-  font-size: clamp(1.9rem, 5.5vw, 2.75rem);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -.035em;
-  color: var(--ink);
-  margin-bottom: .65rem;
-  animation: fadeUp .5s .2s ease both;
-}
-.ty-h1 .name-accent {
-  color: var(--blue);
-}
-
-/* ── Subtext ── */
-.ty-sub {
-  font-size: .975rem;
-  line-height: 1.7;
-  color: var(--ink-muted);
-  margin-bottom: 2rem;
-  animation: fadeUp .5s .3s ease both;
-}
-.ty-sub strong { color: var(--ink-soft); font-weight: 600; }
-
-/* ── Next steps card ── */
-.next-steps {
-  background: var(--white);
-  border-radius: var(--r-xl);
-  border: 1.5px solid var(--line);
-  padding: 1.5rem 1.75rem;
-  margin-bottom: 1.5rem;
-  text-align: left;
-  box-shadow: var(--shadow);
-  animation: fadeUp .5s .4s ease both;
-}
-.ns-label {
-  font-family: var(--font-head);
-  font-size: .63rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  margin-bottom: 1.1rem;
-}
-.ns-step {
-  display: flex;
-  align-items: flex-start;
-  gap: .9rem;
-  padding: .7rem 0;
-  border-bottom: 1px solid var(--line);
-}
-.ns-step:last-child { border-bottom: none; padding-bottom: 0; }
-.ns-num {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-family: var(--font-head);
-  font-size: .75rem;
-  font-weight: 800;
-  color: #fff;
-}
-.ns-num.n1 { background: var(--wa); }
-.ns-num.n2 { background: var(--blue); }
-.ns-num.n3 { background: var(--gold); }
-.ns-head {
-  font-family: var(--font-head);
-  font-size: .875rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: .2rem;
-}
-.ns-desc { font-size: .78rem; color: var(--ink-muted); line-height: 1.55; }
-
-/* ── WhatsApp CTA ── */
-.wa-cta-wrap { animation: fadeUp .5s .5s ease both; }
-.wa-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: .7rem;
-  width: 100%;
-  max-width: 400px;
-  padding: 1rem 2rem;
-  background: var(--wa);
-  color: #fff;
-  border-radius: var(--r-lg);
-  text-decoration: none;
-  font-family: var(--font-head);
-  font-size: 1.025rem;
-  font-weight: 800;
-  letter-spacing: -.01em;
-  box-shadow: 0 6px 20px rgba(37,211,102,.35);
-  transition: transform .18s, box-shadow .18s;
-}
-.wa-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(37,211,102,.45);
-}
-.wa-btn:active { transform: translateY(-1px); }
-
-.wa-trust {
-  font-size: .75rem;
-  color: var(--ink-muted);
-  margin-top: .85rem;
-  line-height: 1.5;
-}
-.wa-trust strong { color: var(--ink-soft); font-weight: 600; }
-
-/* ── Divider + home link ── */
-.divider {
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-  margin: 1.1rem 0 .9rem;
-  color: var(--ink-muted);
-  font-size: .76rem;
-  font-weight: 500;
-  animation: fadeUp .5s .55s ease both;
-}
-.divider::before, .divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--line);
-}
-
-.home-link {
-  display: inline-block;
-  font-size: .82rem;
-  color: var(--ink-muted);
-  text-decoration: none;
-  transition: color .18s;
-  animation: fadeUp .5s .6s ease both;
-}
-.home-link:hover { color: var(--blue); }
-
-@media (max-width: 480px) {
-  body { padding: 2rem .75rem; }
-  .next-steps { padding: 1.25rem 1.1rem; }
-  .wa-btn { max-width: 100%; font-size: .95rem; }
-}
+body{background:linear-gradient(180deg,var(--bg-3) 0%,#fff 420px) no-repeat,#fff}
+.ty-head{padding:22px 0 0;text-align:center}
+.ty-main{padding:36px 0 64px}
+.ty-col{max-width:620px;margin:0 auto;text-align:center}
+.ty-check{width:84px;height:84px;margin:0 auto 22px;border-radius:50%;background:var(--ok-lt);border:3px solid var(--ok);display:grid;place-items:center;animation:tyPop .55s cubic-bezier(.34,1.56,.64,1) both}
+.ty-check svg{width:38px;height:38px;stroke-dasharray:40;stroke-dashoffset:40;animation:tyDraw .45s .4s ease forwards}
+@keyframes tyPop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes tyDraw{to{stroke-dashoffset:0}}
+@keyframes tyUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.ty-in{animation:tyUp .5s ease both}
+.ty-d1{animation-delay:.1s}.ty-d2{animation-delay:.2s}.ty-d3{animation-delay:.3s}.ty-d4{animation-delay:.4s}
+@media(prefers-reduced-motion:reduce){.ty-check svg{stroke-dashoffset:0}}
+.ty-col h1{margin:16px 0 12px;font-size:clamp(1.9rem,6vw,2.75rem);line-height:1.15;letter-spacing:-.03em}
+.ty-col h1 #name-display{color:var(--blue)}
+.ty-sub{font-size:1.05rem;color:var(--muted);max-width:46ch;margin:0 auto 28px}
+.ty-sub strong{color:var(--ink);font-weight:600}
+.ty-cta{width:100%;max-width:420px}
+.ty-note{margin-top:12px;font-size:.85rem;color:var(--muted)}
+.ty-steps{margin-top:36px;text-align:left}
+.ty-steps .eyebrow{display:block;text-align:center}
+.ty-steps .step-n{width:40px;height:40px}
+.ty-steps .step:nth-child(1) .step-n{background:var(--wa)}
+.ty-steps .step:nth-child(3) .step-n{background:var(--gold)}
+.ty-steps h3{font-size:1.02rem}
+.ty-wait{margin-top:56px}
+.ty-wait h2{font-size:clamp(1.4rem,4vw,1.8rem);margin-bottom:6px}
+.ty-wait>p{color:var(--muted);margin-bottom:24px}
+.ty-vids{display:grid;gap:22px;grid-template-columns:1fr;text-align:left}
+@media(min-width:720px){.ty-vids{grid-template-columns:repeat(3,1fr)}.ty-wait{max-width:1000px;margin-left:auto;margin-right:auto}}
+.ty-home{display:inline-block;margin-top:48px;font-weight:600;color:var(--muted)}
+.ty-home:hover{color:var(--blue)}
 </style>
 </head>
 <body>
 
-<div class="ty-wrap">
-
-  <!-- 1. Success animation -->
-  <div class="success-ring">
-    <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
-         stroke="#16A34A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="20 6 9 17 4 12"/>
-    </svg>
+<header class="ty-head">
+  <div class="wrap">
+    <a href="/" class="logo" aria-label="PrepEve home">Prep<span>Eve</span></a>
   </div>
+</header>
 
-  <!-- 2. Confirmation badge -->
-  <div class="ty-badge">✓ Booking Received</div>
-
-  <!-- 3. Headline -->
-  <h1 class="ty-h1">You're Booked, <span class="name-accent" id="name-display">Champion</span>!</h1>
-
-  <!-- 4. Subtext -->
-  <p class="ty-sub">
-    WhatsApp should be open — <strong>hit Send</strong> and we'll confirm your slot in 30&nbsp;minutes.
-    If it didn't open, tap the button below.
-  </p>
-
-  <!-- 5. Next steps -->
-  <div class="next-steps">
-    <div class="ns-label">What happens next</div>
-
-    <div class="ns-step">
-      <div class="ns-num n1">1</div>
-      <div>
-        <div class="ns-head">Message us on WhatsApp</div>
-        <div class="ns-desc">Your details are pre-filled — just hit send. Takes 10 seconds.</div>
+<main class="ty-main">
+  <div class="wrap">
+    <div class="ty-col">
+      <div class="ty-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#15803D" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
+
+      <span class="badge badge-ok ty-in ty-d1">You're registered</span>
+
+      <h1 class="ty-in ty-d2">You're booked, <span id="name-display">Champion</span>!</h1>
+
+      <p class="ty-sub ty-in ty-d3">WhatsApp should have opened — just hit <strong>Send</strong> and we'll confirm within 30&nbsp;minutes.</p>
+
+      <div class="ty-in ty-d4">
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20book%20a%20free%20demo%20class"
+           id="wa-link" class="btn btn-wa btn-lg ty-cta" data-cta="thankyou-wa" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Open WhatsApp &amp; hit Send
+        </a>
+        <p class="ty-note">Replies in under 30 minutes · Mon–Sat, 9am–9pm IST</p>
+      </div>
+
+      <section class="card ty-steps rv" aria-labelledby="next-h">
+        <span class="eyebrow" id="next-h">What happens next</span>
+        <div class="steps">
+          <div class="step">
+            <div class="step-n">1</div>
+            <div><h3>Send the WhatsApp message</h3><p>Your details are pre-filled — it takes 10 seconds.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-n">2</div>
+            <div><h3>We confirm your slot within 30 min</h3><p>You'll get the class link plus a reminder 1 hour before.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-n">3</div>
+            <div><h3>Attend your free 60-min demo</h3><p>Meet your coach, get a band estimate and leave with a clear plan.</p></div>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <div class="ns-step">
-      <div class="ns-num n2">2</div>
-      <div>
-        <div class="ns-head">We confirm your slot within 30 min</div>
-        <div class="ns-desc">You'll get a Zoom/Meet link plus a reminder 1 hour before class.</div>
+    <section class="ty-wait center rv" aria-labelledby="wait-h">
+      <span class="eyebrow">While you wait</span>
+      <h2 id="wait-h">Hear from students who've been where you are</h2>
+      <p>Real PrepEve students on how they got their band.</p>
+      <div class="ty-vids">
+        <div>
+          <button class="vcard" data-vid="8agy5ojp36I" aria-label="Play Taranjeet's story">
+            <img src="https://i.ytimg.com/vi/8agy5ojp36I/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"/>
+            <span class="play"></span>
+          </button>
+          <div class="vcap"><b>Taranjeet</b><span>PrepEve student</span></div>
+        </div>
+        <div>
+          <button class="vcard" data-vid="5FbjLsycE2k" aria-label="Play Pratishtha's story">
+            <img src="https://i.ytimg.com/vi/5FbjLsycE2k/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"/>
+            <span class="play"></span>
+          </button>
+          <div class="vcap"><b>Pratishtha</b><span>PrepEve student</span></div>
+        </div>
+        <div>
+          <button class="vcard" data-vid="2f9jwGWIREI" aria-label="Play Deepanshu's story">
+            <img src="https://i.ytimg.com/vi/2f9jwGWIREI/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"/>
+            <span class="play"></span>
+          </button>
+          <div class="vcap"><b>Deepanshu</b><span>PrepEve student</span></div>
+        </div>
       </div>
-    </div>
-
-    <div class="ns-step">
-      <div class="ns-num n3">3</div>
-      <div>
-        <div class="ns-head">Attend your free 60-min demo class</div>
-        <div class="ns-desc">Meet your coach, get your band estimate, and walk away with a plan.</div>
-      </div>
-    </div>
+      <a href="/" class="ty-home">← Back to homepage</a>
+    </section>
   </div>
+</main>
 
-  <!-- 6. Primary CTA -->
-  <div class="wa-cta-wrap">
-    <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20book%20a%20free%20demo%20class"
-       id="wa-link"
-       class="wa-btn"
-       target="_blank"
-       rel="noopener">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-      </svg>
-      Open WhatsApp →
-    </a>
-
-    <!-- 7. Trust micro-copy -->
-    <p class="wa-trust">Replies in <strong>under 30 minutes</strong> · Mon–Sat, 9am–9pm IST</p>
+<!-- VIDEO MODAL -->
+<div class="vmodal" role="dialog" aria-modal="true" aria-label="Video">
+  <div class="vmodal-in">
+    <button class="vmodal-x" aria-label="Close video">×</button>
+    <iframe title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
   </div>
-
-  <!-- 8. Back to home -->
-  <div class="divider">or</div>
-  <a href="/" class="home-link">← Back to PrepEve home</a>
-
 </div>
 
 <script>
@@ -347,15 +152,19 @@ body {
     var name  = params.get('name');
     var waUrl = params.get('wa');
     if (name && name.trim()) {
-      document.getElementById('name-display').textContent = name.trim();
+      document.getElementById('name-display').textContent = name.trim().slice(0, 40);
     }
     if (waUrl) {
-      document.getElementById('wa-link').href = waUrl;
+      waUrl = waUrl.trim();
+      if (waUrl.indexOf('https://wa.me/') === 0 || waUrl.indexOf('https://api.whatsapp.com/') === 0) {
+        document.getElementById('wa-link').href = waUrl;
+      }
     }
   } catch (e) {
     // fallback — default href already set in HTML
   }
 }());
 </script>
+<script src="/assets/js/prepeve.js" defer></script>
 </body>
 </html>
