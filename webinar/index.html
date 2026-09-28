@@ -464,7 +464,13 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     document.getElementById('reg-form').style.display = 'none';
     document.getElementById('success-wrap').style.display = 'block';
     setTimeout(function(){
-      window.location.href = 'https://www.prepeve.com/thank-you';
+      var ref = new Date(), sat = new Date(ref);
+      sat.setDate(ref.getDate() + ((6 - ref.getDay() + 7) % 7 || 7));
+      var sess = sat.getFullYear() + '-' + ('0' + (sat.getMonth() + 1)).slice(-2) + '-' + ('0' + sat.getDate()).slice(-2);
+      window.location.href = 'https://www.prepeve.com/thank-you?src=webinar'
+        + '&name=' + encodeURIComponent(name)
+        + '&wa=' + encodeURIComponent(waUrl)
+        + '&sess=' + sess;
     }, 1500);
   }, 900);
 });
