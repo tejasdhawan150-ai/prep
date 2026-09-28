@@ -13,7 +13,7 @@
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://prepeve.com/"/>
 
-<!-- Open Graph (WhatsApp, Facebook, LinkedIn previews) -->
+<!-- Open Graph -->
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://prepeve.com/"/>
 <meta property="og:title" content="PrepEve — IELTS Coaching | Band 7+ Guaranteed | 15,000+ Students"/>
@@ -29,11 +29,9 @@
 <meta name="twitter:title" content="PrepEve — IELTS Coaching | Band 7+ Guaranteed"/>
 <meta name="twitter:description" content="India's most trusted IELTS platform. 15,000+ students. 97% Band 7+ success rate. Enroll on WhatsApp!"/>
 <meta name="twitter:image" content="https://prepeve.com/og-image.jpg"/>
+<meta property="og:whatsapp:title" content="PrepEve IELTS Coaching — Band 7+ Guaranteed"/>
 
-<!-- WhatsApp specific -->
-<meta property="og:whatsapp:title" content="PrepEve IELTS Coaching — Band 7+ Guaranteed 🎯"/>
-
-<!-- Structured Data (Google Rich Results) -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,6 +45,7 @@
   "sameAs": ["https://www.youtube.com/@prepeveclasses"]
 }
 </script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-765652199"></script>
 <script>
@@ -55,483 +54,768 @@
   gtag('js', new Date());
   gtag('config', 'AW-765652199');
 </script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
 <style>
-/* ============================================================================
-   PREPEVE — FROM-SCRATCH VISUAL SYSTEM
-   Palette: warm paper/cream ground, charcoal ink, single coral accent.
-   Type: Fraunces (display serif, editorial) + Space Grotesk (UI sans).
-   Rhythm: numbered editorial sections, asymmetric grids, underline links,
-   thick rule dividers — not a SaaS-blue card grid.
-   ========================================================================= */
-:root{
-  --paper:#FAF6EF;
-  --paper-deep:#F1EADC;
-  --ink:#211C16;
-  --ink-soft:#5C5347;
-  --ink-faint:#9A9082;
-  --line:#DDD3C0;
-  --coral:#E5572C;
-  --coral-deep:#C0421C;
-  --coral-pale:#FBE4D8;
-  --moss:#3E5C45;
-  --moss-pale:#E1E9DD;
-  --gold:#C9971F;
-  --cream:#FFFDF9;
-  --wa:#1E8A4C;
-  --r-sm:8px;
-  --r-md:14px;
-  --r-lg:24px;
-  --r-full:999px;
-  --shadow:0 18px 50px -20px rgba(33,28,22,.25);
-  --shadow-sm:0 6px 18px -10px rgba(33,28,22,.25);
-  --ease:cubic-bezier(.22,1,.36,1);
-  --container:1180px;
+/* ============================================================
+   PREPEVE — CLEAN PROFESSIONAL REDESIGN
+   Background: white / near-white
+   Type: Plus Jakarta Sans (headings) + Inter (body)
+   Accent: Deep Blue #1A56DB
+   WA green only for WhatsApp CTAs
+   ============================================================ */
+:root {
+  --white: #FFFFFF;
+  --bg: #F8F9FA;
+  --bg-alt: #F1F3F5;
+  --ink: #111827;
+  --ink-soft: #374151;
+  --ink-muted: #6B7280;
+  --ink-faint: #9CA3AF;
+  --line: #E5E7EB;
+  --blue: #1A56DB;
+  --blue-dark: #1341B0;
+  --blue-light: #EEF2FF;
+  --blue-mid: #3B82F6;
+  --wa: #25D366;
+  --wa-dark: #128C7E;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+  --shadow: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 10px 40px rgba(0,0,0,.1);
+  --container: 1160px;
+  --font-head: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:'Space Grotesk',sans-serif;
-  font-size:16px;
-  line-height:1.55;
-  -webkit-font-smoothing:antialiased;
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
-img{max-width:100%;display:block;}
-a{color:inherit;}
-.serif{font-family:'Fraunces',serif;}
-.container{max-width:var(--container);margin:0 auto;padding:0 6%;}
-.sec{padding:7rem 0;}
-@media (max-width:760px){ .sec{padding:4.5rem 0;} }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
 
-/* reveal-on-scroll */
-.rv{opacity:0; transform:translateY(18px); transition:opacity .7s var(--ease), transform .7s var(--ease);}
-.rv.in{opacity:1; transform:translateY(0);}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+.sec { padding: 80px 0; }
+.sec-alt { background: var(--bg); }
 
-/* ---- shared bits ---- */
-.kicker{
-  display:inline-flex; align-items:center; gap:.55rem;
-  font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--coral-deep);
-  margin-bottom:1.1rem;
+/* reveal */
+.rv { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.rv.in { opacity: 1; transform: translateY(0); }
+
+/* ---- TYPOGRAPHY ---- */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 12px;
 }
-.kicker::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--coral); }
-.kicker.alt{ color:var(--moss); }
-.kicker.alt::before{ background:var(--moss); }
-.h2{
-  font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2rem,4vw,3.1rem);
-  line-height:1.06; letter-spacing:-.01em; margin:0 0 1.1rem; color:var(--ink);
+.eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--blue); border-radius: 2px; }
+
+h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.2; }
+h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 800; color: var(--ink); }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.25rem); font-weight: 800; color: var(--ink); }
+h3 { font-size: 1.1rem; font-weight: 700; }
+.lede { font-size: 1.05rem; color: var(--ink-soft); max-width: 600px; line-height: 1.7; }
+.section-head { margin-bottom: 48px; }
+.section-head .lede { margin-top: 12px; }
+
+/* ---- BUTTONS ---- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--font-body); font-size: 15px; font-weight: 600; line-height: 1;
+  padding: 12px 22px; border-radius: var(--r-md); border: none; cursor: pointer;
+  text-decoration: none; transition: all .2s ease; white-space: nowrap;
 }
-.h2 em{ font-style:italic; color:var(--coral); font-weight:500; }
-.lede{
-  font-size:1.08rem; color:var(--ink-soft); max-width:640px; line-height:1.7; margin:0 0 2.6rem;
+.btn-blue { background: var(--blue); color: #fff; }
+.btn-blue:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(26,86,219,.3); }
+.btn-blue-outline { background: transparent; color: var(--blue); border: 2px solid var(--blue); }
+.btn-blue-outline:hover { background: var(--blue-light); }
+.btn-wa { background: var(--wa); color: #fff; }
+.btn-wa:hover { background: var(--wa-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37,211,102,.3); }
+.btn-ghost { background: transparent; color: var(--ink-soft); border: 1.5px solid var(--line); }
+.btn-ghost:hover { border-color: var(--ink-muted); color: var(--ink); }
+.btn-lg { padding: 15px 28px; font-size: 16px; border-radius: var(--r-lg); }
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.95); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
 }
-.rule{ border:none; border-top:1.5px solid var(--line); margin:0; }
-.btn{
-  display:inline-flex; align-items:center; gap:.6rem;
-  font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:.92rem;
-  padding:.95rem 1.6rem; border-radius:var(--r-full); text-decoration:none;
-  border:1.5px solid transparent; transition:transform .2s var(--ease), box-shadow .2s var(--ease), background .2s;
-  cursor:pointer; white-space:nowrap;
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px; max-width: var(--container); margin: 0 auto; padding: 0 24px;
 }
-.btn:active{ transform:scale(.97); }
-.btn-coral{ background:var(--coral); color:var(--cream); box-shadow:var(--shadow-sm); }
-.btn-coral:hover{ background:var(--coral-deep); transform:translateY(-2px); }
-.btn-ink{ background:var(--ink); color:var(--cream); }
-.btn-ink:hover{ transform:translateY(-2px); }
-.btn-ghost{ background:transparent; color:var(--ink); border-color:var(--line); }
-.btn-ghost:hover{ border-color:var(--ink); }
-.btn-wa{ background:var(--wa); color:#fff; }
-.btn-wa:hover{ background:#176b3b; transform:translateY(-2px); }
-.tag-num{ font-family:'Fraunces',serif; font-style:italic; color:var(--ink-faint); font-size:1rem; }
+.logo { font-family: var(--font-head); font-size: 1.35rem; font-weight: 800; color: var(--ink); }
+.logo span { color: var(--blue); }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a { font-size: 14px; font-weight: 500; color: var(--ink-soft); transition: color .15s; }
+.nav-links a:hover { color: var(--blue); }
+.nav-cta { margin-left: 12px; }
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.hamburger span { width: 22px; height: 2px; background: var(--ink); border-radius: 2px; display: block; transition: .3s; }
+.mob-menu {
+  display: none; position: fixed; inset: 64px 0 0 0; background: var(--white);
+  z-index: 99; padding: 24px; flex-direction: column; gap: 4px;
+  border-top: 1px solid var(--line); overflow-y: auto;
+}
+.mob-menu.open { display: flex; }
+.mob-menu a {
+  padding: 12px 16px; border-radius: var(--r-md); font-size: 15px; font-weight: 500;
+  color: var(--ink-soft); transition: all .15s;
+}
+.mob-menu a:hover { background: var(--bg); color: var(--blue); }
+.mob-menu .mob-cta {
+  margin-top: 8px; display: flex; align-items: center; justify-content: center;
+  padding: 14px; border-radius: var(--r-lg); font-weight: 700; text-align: center;
+}
 
-/* ---- progress + splash ---- */
-#progress-bar{ position:fixed; top:0; left:0; height:3px; width:0; background:var(--coral); z-index:1001; transition:width .12s linear; }
-#splash{ position:fixed; inset:0; z-index:9999; background:var(--paper); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.1rem; transition:opacity .45s var(--ease), visibility .45s; }
-#splash.hide{ opacity:0; visibility:hidden; pointer-events:none; }
-.splash-mark{ font-family:'Fraunces',serif; font-weight:600; font-size:2rem; letter-spacing:-.02em; }
-.splash-mark em{ font-style:italic; color:var(--coral); }
-.splash-bar-wrap{ width:150px; height:3px; background:var(--line); border-radius:3px; overflow:hidden; }
-.splash-bar{ width:40%; height:100%; background:var(--coral); border-radius:3px; animation:splashmove 1.1s ease-in-out infinite; }
-@keyframes splashmove{ 0%{ transform:translateX(-120%); } 100%{ transform:translateX(380%); } }
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+}
 
-/* ---- urgency bar ---- */
-.ubar{ position:fixed; top:0; left:0; right:0; z-index:1002; display:flex; align-items:center; gap:.7rem; background:var(--ink); color:var(--paper); padding:.6rem 6%; font-size:.78rem; font-family:'Space Grotesk',sans-serif; }
-.ubar .dot{ width:7px; height:7px; border-radius:50%; background:var(--coral); flex-shrink:0; animation:pulse 1.6s ease-in-out infinite; }
-@keyframes pulse{ 0%,100%{ opacity:1; } 50%{ opacity:.3; } }
-.ubar .txt{ flex:1; line-height:1.4; }
-.ubar .txt strong{ color:#F2B85A; }
-.ubar .cta{ flex-shrink:0; background:var(--coral); color:#fff; font-weight:700; font-size:.74rem; padding:.4rem .85rem; border-radius:var(--r-full); text-decoration:none; white-space:nowrap; }
-.ubar .x{ flex-shrink:0; background:none; border:none; color:rgba(250,246,239,.55); font-size:1.2rem; line-height:1; cursor:pointer; padding:0 .2rem; }
-@media (max-width:700px){ .ubar{ font-size:.7rem; } .ubar .cta{ display:none; } }
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  background: var(--white);
+  padding: 80px 0 64px;
+  border-bottom: 1px solid var(--line);
+}
+.hero-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--blue-light); color: var(--blue); border-radius: 100px;
+  font-size: 13px; font-weight: 600; padding: 6px 14px; margin-bottom: 20px;
+}
+.hero-eyebrow::before { content: ''; width: 7px; height: 7px; background: var(--blue); border-radius: 50%; flex-shrink: 0; }
+.hero h1 { margin-bottom: 16px; }
+.hero h1 .accent { color: var(--blue); }
+.hero-sub { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 28px; max-width: 520px; }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.hero-note {
+  font-size: 13px; color: var(--ink-muted); display: flex; align-items: center; gap: 6px;
+  margin-bottom: 28px;
+}
+.hero-note strong { color: var(--ink-soft); }
 
-/* ---- nav ---- */
-#navbar{ position:fixed; top:0; left:0; right:0; z-index:1000; height:74px; display:flex; align-items:center; justify-content:space-between; padding:0 6%; background:rgba(250,246,239,.82); backdrop-filter:blur(14px); border-bottom:1px solid transparent; transition:border-color .25s, background .25s; }
-#navbar.sc{ border-bottom-color:var(--line); background:rgba(250,246,239,.97); }
-.brand{ font-family:'Fraunces',serif; font-weight:600; font-size:1.4rem; text-decoration:none; color:var(--ink); letter-spacing:-.01em; }
-.brand em{ font-style:italic; color:var(--coral); }
-#navbar ul{ display:flex; align-items:center; gap:1.9rem; list-style:none; margin:0; padding:0; }
-#navbar ul a{ text-decoration:none; font-size:.86rem; font-weight:500; color:var(--ink-soft); transition:color .2s; }
-#navbar ul a:hover{ color:var(--coral-deep); }
-.nav-cta{ background:var(--ink); color:var(--paper) !important; padding:.6rem 1.15rem; border-radius:var(--r-full); font-weight:600 !important; }
-.nav-wa{ background:var(--wa); color:#fff !important; padding:.6rem 1.15rem; border-radius:var(--r-full); font-weight:600 !important; }
-.hamburger{ display:none; flex-direction:column; justify-content:center; gap:5px; width:30px; height:30px; background:none; border:none; cursor:pointer; padding:0; }
-.hamburger span{ width:100%; height:2.5px; background:var(--ink); border-radius:2px; transition:transform .25s, opacity .25s; }
-.hamburger.open span:nth-child(1){ transform:translateY(7.5px) rotate(45deg); }
-.hamburger.open span:nth-child(2){ opacity:0; }
-.hamburger.open span:nth-child(3){ transform:translateY(-7.5px) rotate(-45deg); }
-.mob-menu{ position:fixed; top:74px; left:0; right:0; bottom:0; background:var(--paper); z-index:999; display:flex; flex-direction:column; gap:.2rem; padding:1.4rem 6%; transform:translateY(-8px); opacity:0; visibility:hidden; transition:opacity .22s, transform .22s, visibility .22s; overflow-y:auto; }
-.mob-menu.open{ opacity:1; visibility:visible; transform:translateY(0); }
-.mob-menu a{ color:var(--ink); text-decoration:none; font-weight:600; font-size:1.05rem; padding:.9rem 0; border-bottom:1px solid var(--line); }
-.mob-cta{ display:flex; align-items:center; justify-content:center; margin-top:.9rem; border-radius:var(--r-md); border-bottom:none !important; padding:1rem !important; font-weight:700; text-decoration:none; }
-@media (max-width:860px){ #navbar ul{ display:none; } .hamburger{ display:flex; } }
-@media (min-width:861px){ .mob-menu{ display:none; } }
+/* Trust bar */
+.trust-bar {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  padding: 16px 0; border-top: 1px solid var(--line);
+}
+.trust-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: var(--ink-soft);
+}
+.trust-item strong { color: var(--ink); font-size: 14px; }
+.trust-sep { color: var(--line); font-size: 18px; }
 
-/* ---- hero ---- */
-.hero{ padding:calc(74px + 4.5rem) 0 0; position:relative; overflow:hidden; }
-.hero-grid{ display:grid; grid-template-columns:1.08fr .92fr; gap:4rem; align-items:end; }
-@media (max-width:920px){ .hero-grid{ grid-template-columns:1fr; gap:2.5rem; } }
-.hero-eyebrow{ display:inline-flex; align-items:center; gap:.55rem; font-size:.78rem; font-weight:600; color:var(--ink-soft); margin-bottom:1.6rem; }
-.hero-eyebrow .dot{ width:7px; height:7px; border-radius:50%; background:var(--wa); animation:pulse 1.6s ease-in-out infinite; }
-.hero h1{ font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.6rem,6vw,4.6rem); line-height:1.0; letter-spacing:-.02em; margin:0 0 1.5rem; }
-.hero h1 .it{ font-style:italic; color:var(--coral); }
-.hero h1 .ul{ text-decoration:underline; text-decoration-color:var(--coral); text-decoration-thickness:.06em; text-underline-offset:.08em; }
-.hero-p{ font-size:1.1rem; color:var(--ink-soft); max-width:480px; line-height:1.7; margin:0 0 2rem; }
-.hero-btns{ display:flex; gap:.9rem; flex-wrap:wrap; margin-bottom:1.4rem; }
-.hero-note{ font-size:.84rem; color:var(--ink-faint); margin-bottom:1.8rem; }
-.hero-note strong{ color:var(--ink); }
-.proof-row{ display:flex; flex-wrap:wrap; gap:1.6rem; padding-top:1.6rem; border-top:1.5px solid var(--line); }
-.proof-item{ font-size:.84rem; color:var(--ink-soft); }
-.proof-item b{ font-family:'Fraunces',serif; font-size:1.15rem; color:var(--ink); font-weight:600; margin-right:.3rem; }
+/* Hero panel (score card) */
+.hero-panel {
+  position: relative;
+}
+.score-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--r-xl);
+  padding: 24px; box-shadow: var(--shadow-lg);
+}
+.score-card-label {
+  font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink-muted); margin-bottom: 4px;
+}
+.score-card-title { font-family: var(--font-head); font-size: 1rem; font-weight: 700; margin-bottom: 20px; }
+.score-bands { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.sband {
+  background: var(--bg); border-radius: var(--r-md); padding: 12px 14px;
+  border: 1px solid var(--line);
+}
+.sband .sk { font-size: 11px; color: var(--ink-muted); font-weight: 600; margin-bottom: 2px; }
+.sband .sv { font-family: var(--font-head); font-weight: 800; font-size: 1.5rem; color: var(--ink); }
+.score-total {
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px dashed var(--line); padding-top: 16px;
+}
+.score-total-lbl { font-size: 13px; color: var(--ink-soft); }
+.score-total-name { font-size: 11px; color: var(--ink-faint); margin-top: 2px; }
+.score-total-val {
+  font-family: var(--font-head); font-weight: 800; font-size: 2.5rem; color: var(--blue);
+}
+.float-chip {
+  position: absolute; top: -20px; right: -16px;
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--white); border: 1px solid var(--line); border-radius: 100px;
+  padding: 8px 16px; box-shadow: var(--shadow); font-size: 13px;
+  font-family: var(--font-head); font-weight: 600;
+}
+.float-chip .fv { font-weight: 800; color: var(--blue); }
+.float-chip .fl { font-size: 11px; color: var(--ink-muted); }
 
-.hero-panel{ position:relative; }
-.score-card{ background:var(--cream); border:1.5px solid var(--line); border-radius:var(--r-lg); padding:1.8rem; box-shadow:var(--shadow); }
-.score-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:1.3rem; }
-.score-head .lbl{ font-size:.74rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-faint); }
-.score-head .badge{ font-size:.7rem; font-weight:700; color:var(--moss); background:var(--moss-pale); padding:.3rem .65rem; border-radius:var(--r-full); }
-.score-bands{ display:grid; grid-template-columns:1fr 1fr; gap:.7rem; margin-bottom:1.3rem; }
-.sband{ border:1.5px solid var(--line); border-radius:var(--r-sm); padding:.8rem .9rem; }
-.sband .k{ font-size:.7rem; color:var(--ink-faint); font-weight:600; }
-.sband .v{ font-family:'Fraunces',serif; font-weight:600; font-size:1.5rem; }
-.score-total{ display:flex; justify-content:space-between; align-items:center; border-top:1.5px dashed var(--line); padding-top:1.2rem; }
-.score-total .stl{ font-size:.78rem; color:var(--ink-soft); }
-.score-total .sname{ display:block; font-size:.72rem; color:var(--ink-faint); margin-top:.15rem; }
-.score-total .sval{ font-family:'Fraunces',serif; font-weight:700; font-size:2.6rem; color:var(--coral); }
-.float-chip{ position:absolute; background:var(--ink); color:var(--paper); border-radius:var(--r-md); padding:.85rem 1.1rem; display:flex; align-items:center; gap:.7rem; box-shadow:var(--shadow-sm); font-size:.84rem; }
-.float-chip .fv{ font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem; }
-.float-chip .fl{ font-size:.72rem; color:rgba(250,246,239,.6); }
-.fc1{ top:-2.4rem; right:-1.5rem; }
-.fc2{ bottom:-2rem; left:-1.6rem; background:var(--coral); }
-@media (max-width:920px){ .fc1,.fc2{ position:static; margin:1rem 0 0; } }
-.g-row{ display:flex; align-items:center; gap:.7rem; margin-top:1.6rem; font-size:.84rem; color:var(--ink-soft); }
-.g-row .stars{ color:var(--gold); letter-spacing:.05em; }
+/* Guarantee badge on card */
+.guarantee-badge {
+  margin-top: 16px;
+  display: flex; align-items: center; gap: 8px;
+  background: #F0FDF4; border: 1px solid #86EFAC; border-radius: var(--r-md);
+  padding: 10px 14px; font-size: 13px; font-weight: 600; color: #166534;
+}
 
-/* ---- ticker ---- */
-.ticker-wrap{ background:var(--ink); padding:.95rem 0; overflow:hidden; white-space:nowrap; }
-.ticker-t{ display:inline-flex; gap:2.4rem; animation:tick 32s linear infinite; }
-.ticker-t span{ font-size:.85rem; font-weight:600; color:rgba(250,246,239,.7); white-space:nowrap; }
-.ticker-t span::after{ content:"·"; margin-left:2.4rem; color:var(--coral); }
-@keyframes tick{ 0%{ transform:translateX(0); } 100%{ transform:translateX(-50%); } }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-panel { display: none; }
+  .hero { padding: 56px 0 48px; }
+}
 
-/* ---- section label row ---- */
-.sec-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:2rem; margin-bottom:3rem; flex-wrap:wrap; }
-.sec-head .lede{ margin-bottom:0; }
+/* ============================================================
+   TICKER STRIP
+   ============================================================ */
+.ticker-wrap {
+  background: var(--blue); color: #fff; overflow: hidden; padding: 10px 0;
+}
+.ticker-track {
+  display: flex; gap: 0; width: max-content;
+  animation: ticker 28s linear infinite;
+}
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.ticker-item {
+  white-space: nowrap; padding: 0 28px; font-size: 13px; font-weight: 600;
+  display: flex; align-items: center; gap: 10px;
+}
+.ticker-item::after { content: '·'; margin-left: 10px; opacity: .5; }
 
-/* ---- course types ---- */
-.ctype-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.6rem; }
-@media (max-width:760px){ .ctype-grid{ grid-template-columns:1fr; } }
-.ctype-card{ background:var(--cream); border:1.5px solid var(--line); border-radius:var(--r-lg); padding:2.4rem; position:relative; transition:transform .25s var(--ease), box-shadow .25s; }
-.ctype-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow); }
-.ctype-tag{ display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; padding:.35rem .8rem; border-radius:var(--r-full); margin-bottom:1.2rem; }
-.ct-pop .ctype-tag{ background:var(--coral-pale); color:var(--coral-deep); }
-.ct-flex .ctype-tag{ background:var(--moss-pale); color:var(--moss); }
-.ctype-card h3{ font-family:'Fraunces',serif; font-size:1.5rem; font-weight:600; margin:0 0 .7rem; }
-.ctype-card>p{ color:var(--ink-soft); font-size:.92rem; line-height:1.6; margin:0 0 1.4rem; }
-.ctype-feats{ list-style:none; margin:0 0 1.8rem; padding:0; display:flex; flex-direction:column; gap:.6rem; }
-.ctype-feats li{ font-size:.88rem; color:var(--ink); padding-left:1.4rem; position:relative; }
-.ctype-feats li::before{ content:"→"; position:absolute; left:0; color:var(--coral); font-weight:700; }
+/* ============================================================
+   SOCIAL PROOF STRIP
+   ============================================================ */
+.proof-strip {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--line);
+}
+.proof-strip-inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px;
+}
+.proof-stat { text-align: center; }
+.proof-stat .ps-val {
+  font-family: var(--font-head); font-size: 2rem; font-weight: 800; color: var(--ink); line-height: 1;
+}
+.proof-stat .ps-lbl { font-size: 13px; color: var(--ink-muted); margin-top: 4px; }
+.proof-divider { width: 1px; height: 48px; background: var(--line); }
+.proof-google {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--bg); border: 1px solid var(--line); border-radius: var(--r-lg);
+  padding: 12px 20px;
+}
+.proof-google .pg-stars { color: #F59E0B; font-size: 18px; letter-spacing: 2px; }
+.proof-google .pg-text { font-size: 13px; font-weight: 600; }
+.proof-google .pg-sub { font-size: 11px; color: var(--ink-muted); }
 
-/* ---- compare table ---- */
-.cmp-table{ width:100%; border-collapse:collapse; font-size:.9rem; background:var(--cream); border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-sm); }
-.cmp-table th,.cmp-table td{ padding:1rem 1.2rem; text-align:center; border-bottom:1px solid var(--line); }
-.cmp-table th{ font-weight:700; font-size:.78rem; letter-spacing:.04em; text-transform:uppercase; }
-.cmp-table thead th:first-child{ text-align:left; background:var(--ink); color:var(--paper); }
-.cmp-table th.col-pe{ background:var(--coral); color:#fff; }
-.cmp-table th.col-other,.cmp-table th.col-self{ background:var(--paper-deep); color:var(--ink-soft); }
-.cmp-table td:first-child{ text-align:left; font-weight:500; }
-.cmp-table tbody tr:last-child td{ border-bottom:none; }
-.yes{ color:var(--moss); font-weight:800; }
-.no{ color:var(--ink-faint); font-weight:800; }
-.partial{ color:var(--gold); font-weight:600; font-size:.82rem; }
-.cmp-note{ font-size:.78rem; color:var(--ink-faint); margin:1.2rem 0 0; }
-.cmp-scroll{ overflow-x:auto; }
-@media (max-width:700px){ .cmp-table{ font-size:.78rem; } .cmp-table th,.cmp-table td{ padding:.7rem .6rem; } }
+/* ============================================================
+   COURSE OPTIONS
+   ============================================================ */
+.ctype-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.ctype-card {
+  border: 1.5px solid var(--line); border-radius: var(--r-xl); padding: 28px;
+  background: var(--white); position: relative;
+  transition: box-shadow .2s, border-color .2s;
+}
+.ctype-card:hover { box-shadow: var(--shadow-lg); border-color: var(--blue); }
+.ctype-card.popular { border-color: var(--blue); }
+.ctype-tag {
+  display: inline-block; background: var(--blue); color: #fff;
+  font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 100px; margin-bottom: 14px;
+}
+.ctype-card .ctype-tag.flex-tag { background: var(--bg-alt); color: var(--ink-soft); }
+.ctype-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+.ctype-card p { font-size: 14px; color: var(--ink-soft); margin-bottom: 16px; line-height: 1.6; }
+.feat-list { list-style: none; display: flex; flex-direction: column; gap: 7px; margin-bottom: 24px; }
+.feat-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: var(--ink-soft); }
+.feat-list li::before { content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
-/* ---- pricing ---- */
-.pgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
-@media (max-width:980px){ .pgrid{ grid-template-columns:1fr; max-width:440px; margin:0 auto; } }
-.pcard{ background:var(--cream); border:1.5px solid var(--line); border-radius:var(--r-lg); padding:2.2rem; position:relative; display:flex; flex-direction:column; }
-.pcard.pop{ border-color:var(--coral); box-shadow:var(--shadow); }
-.pop-flag{ position:absolute; top:-13px; left:2.2rem; background:var(--coral); color:#fff; font-size:.7rem; font-weight:700; padding:.3rem .8rem; border-radius:var(--r-full); }
-.pname{ font-family:'Fraunces',serif; font-size:1.25rem; font-weight:600; margin-bottom:1rem; }
-.pdisc{ display:flex; align-items:center; gap:.6rem; margin-bottom:.3rem; }
-.poriginal{ text-decoration:line-through; color:var(--ink-faint); font-size:.95rem; }
-.pbadge{ font-size:.68rem; font-weight:700; color:var(--coral-deep); background:var(--coral-pale); padding:.2rem .55rem; border-radius:var(--r-full); }
-.pamount{ font-family:'Fraunces',serif; font-weight:700; font-size:2.6rem; margin-bottom:.2rem; }
-.pamount sup{ font-size:1.2rem; font-weight:500; }
-.pper{ font-size:.8rem; color:var(--ink-faint); margin-bottom:1.6rem; }
-.pfeats{ list-style:none; margin:0 0 1.8rem; padding:0; display:flex; flex-direction:column; gap:.65rem; flex:1; }
-.pfeats li{ font-size:.86rem; color:var(--ink); padding-left:1.3rem; position:relative; }
-.pfeats li::before{ content:"✓"; position:absolute; left:0; color:var(--moss); font-weight:800; }
-.pbtn{ text-align:center; padding:.95rem; border-radius:var(--r-full); font-weight:700; font-size:.88rem; text-decoration:none; }
-.pbtn-out{ border:1.5px solid var(--ink); color:var(--ink); }
-.pbtn-out:hover{ background:var(--ink); color:var(--paper); }
-.pbtn-fill{ background:var(--coral); color:#fff; }
-.pbtn-fill:hover{ background:var(--coral-deep); }
+@media (max-width: 640px) { .ctype-grid { grid-template-columns: 1fr; } }
 
-/* ---- french ---- */
-.fr-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
-@media (max-width:980px){ .fr-grid{ grid-template-columns:1fr; } }
-.fr-card{ background:var(--moss-pale); border-radius:var(--r-lg); padding:2rem; }
-.fr-card.fr-cta{ background:var(--ink); color:var(--paper); }
-.fr-tag{ font-size:.7rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--moss); margin-bottom:.9rem; }
-.fr-card.fr-cta .fr-tag{ color:#F2B85A; }
-.fr-card h3{ font-family:'Fraunces',serif; font-weight:600; font-size:1.3rem; margin:0 0 .6rem; }
-.fr-card p{ font-size:.88rem; color:var(--ink-soft); line-height:1.6; }
-.fr-card.fr-cta p{ color:rgba(250,246,239,.7); }
-.fr-feats{ list-style:none; margin:1rem 0 0; padding:0; display:flex; flex-direction:column; gap:.5rem; }
-.fr-feats li{ font-size:.82rem; padding-left:1.2rem; position:relative; }
-.fr-feats li::before{ content:"·"; position:absolute; left:0; font-weight:800; color:var(--moss); }
-.fr-proof{ display:flex; flex-direction:column; gap:.45rem; margin:1.1rem 0 1.4rem; }
-.fr-proof span{ font-size:.78rem; color:rgba(250,246,239,.75); }
-.fr-btn{ display:inline-flex; background:var(--coral); color:#fff; padding:.8rem 1.3rem; border-radius:var(--r-full); font-weight:700; font-size:.84rem; text-decoration:none; }
+/* ============================================================
+   COMPARISON TABLE
+   ============================================================ */
+.cmp-scroll { overflow-x: auto; }
+.cmp-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.cmp-table th {
+  padding: 14px 18px; text-align: center; font-weight: 700; font-size: 13px;
+  border-bottom: 2px solid var(--line); background: var(--bg);
+}
+.cmp-table th:first-child { text-align: left; }
+.cmp-table th.col-pe { background: var(--blue-light); color: var(--blue); }
+.cmp-table td { padding: 12px 18px; border-bottom: 1px solid var(--line); text-align: center; }
+.cmp-table td:first-child { text-align: left; font-weight: 500; }
+.cmp-table tr:last-child td { border-bottom: none; }
+.cmp-table tr:hover td { background: var(--bg); }
+.cmp-table .yes { color: #16a34a; font-weight: 700; font-size: 16px; }
+.cmp-table .no { color: #dc2626; font-size: 16px; }
+.cmp-table .partial { color: var(--ink-muted); font-size: 13px; }
+.cmp-note { font-size: 12px; color: var(--ink-faint); margin-top: 12px; }
 
-/* ---- coaches ---- */
-.coach-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
-@media (max-width:860px){ .coach-grid{ grid-template-columns:1fr; } }
-.coach-card{ background:var(--cream); border:1.5px solid var(--line); border-radius:var(--r-lg); padding:2rem; }
-.coach-name{ font-family:'Fraunces',serif; font-weight:600; font-size:1.3rem; }
-.coach-role{ font-size:.82rem; color:var(--coral-deep); font-weight:600; margin:.2rem 0 .8rem; }
-.coach-exams{ font-size:.7rem; color:var(--ink-faint); font-weight:600; letter-spacing:.03em; margin-bottom:.9rem; }
-.coach-bio{ font-size:.86rem; color:var(--ink-soft); line-height:1.65; }
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.t-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.t-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--r-xl);
+  padding: 24px; display: flex; flex-direction: column; gap: 12px;
+  transition: box-shadow .2s;
+}
+.t-card:hover { box-shadow: var(--shadow); }
+.t-band-row { display: flex; align-items: center; gap: 10px; }
+.t-band {
+  font-family: var(--font-head); font-size: 1.75rem; font-weight: 800; color: var(--blue);
+}
+.t-band-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--ink-muted); letter-spacing: .06em; }
+.t-stars { color: #F59E0B; font-size: 15px; letter-spacing: 2px; }
+.t-text { font-size: 14px; color: var(--ink-soft); line-height: 1.7; flex: 1; }
+.t-name { font-weight: 700; font-size: 14px; }
+.t-link { font-size: 12px; color: var(--blue); font-weight: 600; }
+.t-link:hover { text-decoration: underline; }
+.t-verified { font-size: 11px; color: #16a34a; font-weight: 600; }
 
-/* ---- testimonials ---- */
-.tgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
-@media (max-width:860px){ .tgrid{ grid-template-columns:1fr; } }
-.tcard{ background:var(--cream); border:1.5px solid var(--line); border-radius:var(--r-lg); padding:2.1rem; display:flex; flex-direction:column; }
-.tcard .tband{ font-family:'Fraunces',serif; font-weight:700; font-size:1.8rem; color:var(--coral); }
-.tcard .tband-lbl{ font-size:.68rem; color:var(--ink-faint); font-weight:600; margin-bottom:1rem; }
-.tcard .tstars{ color:var(--gold); margin-bottom:.9rem; letter-spacing:.05em; }
-.tcard .ttext{ font-size:.9rem; color:var(--ink); line-height:1.65; flex:1; margin-bottom:1.3rem; }
-.tcard .tname{ font-weight:700; font-size:.92rem; }
-.tcard .tlink{ font-size:.78rem; color:var(--coral-deep); text-decoration:none; display:inline-flex; gap:.3rem; margin-top:.3rem; }
-.tcard .tverif{ font-size:.74rem; color:var(--moss); font-weight:600; margin-top:.25rem; }
+@media (max-width: 900px) { .t-grid { grid-template-columns: 1fr; } }
+@media (min-width: 641px) and (max-width: 900px) { .t-grid { grid-template-columns: 1fr 1fr; } }
 
-/* ---- video testimonials ---- */
-.vgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
-@media (max-width:860px){ .vgrid{ grid-template-columns:1fr; } }
-.vcard{ background:var(--cream); border:1.5px solid var(--line); border-radius:var(--r-lg); overflow:hidden; }
-.vthumb{ position:relative; display:block; aspect-ratio:16/9; text-decoration:none; }
-.vthumb img{ width:100%; height:100%; object-fit:cover; }
-.vthumb .play{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(33,28,22,.25); }
-.vthumb .play span{ width:52px; height:52px; background:var(--coral); border-radius:50%; display:flex; align-items:center; justify-content:center; }
-.vthumb .vband{ position:absolute; top:.9rem; right:.9rem; background:var(--ink); color:var(--paper); border-radius:var(--r-sm); padding:.4rem .7rem; font-size:.7rem; font-weight:700; }
-.vinfo{ padding:1.4rem 1.5rem; }
-.vinfo .vstars{ color:var(--gold); font-size:.85rem; margin-bottom:.6rem; }
-.vinfo .vquote{ font-size:.86rem; color:var(--ink); line-height:1.55; margin-bottom:.9rem; }
-.vinfo .vname{ font-weight:700; font-size:.88rem; }
-.vinfo .vmeta{ font-size:.76rem; color:var(--ink-faint); }
-.vinfo .vimp{ font-size:.76rem; color:var(--moss); font-weight:600; margin-top:.2rem; }
-.yt-cta-row{ margin-top:2rem; display:flex; justify-content:space-between; align-items:center; gap:1.5rem; background:var(--ink); color:var(--paper); border-radius:var(--r-lg); padding:1.8rem 2.2rem; flex-wrap:wrap; }
-.yt-cta-row .t{ font-weight:700; font-size:1rem; margin-bottom:.3rem; }
-.yt-cta-row .s{ font-size:.84rem; color:rgba(250,246,239,.65); }
+/* ============================================================
+   VIDEO TESTIMONIALS
+   ============================================================ */
+.v-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.v-card { border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--line); }
+.v-thumb {
+  display: block; position: relative; aspect-ratio: 16/9; overflow: hidden;
+  background: var(--bg);
+}
+.v-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.v-thumb:hover img { transform: scale(1.03); }
+.v-play {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,.3);
+}
+.v-play-btn {
+  width: 52px; height: 52px; background: var(--blue); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(26,86,219,.4);
+  transition: transform .2s;
+}
+.v-thumb:hover .v-play-btn { transform: scale(1.1); }
+.v-band-badge {
+  position: absolute; top: 10px; right: 10px; background: var(--ink); color: #fff;
+  border-radius: 100px; padding: 3px 10px; font-size: 12px; font-weight: 700;
+}
+.v-info { padding: 16px; background: var(--white); }
+.v-stars { color: #F59E0B; font-size: 13px; margin-bottom: 6px; }
+.v-quote { font-size: 13px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 8px; }
+.v-name { font-weight: 700; font-size: 14px; }
+.v-meta { font-size: 12px; color: var(--ink-muted); }
+.v-imp { font-size: 12px; font-weight: 700; color: var(--blue); margin-top: 4px; }
 
-/* ---- demo class ---- */
-.demo-box{ background:var(--moss); color:var(--paper); border-radius:var(--r-lg); padding:3.2rem; }
-.demo-box .h2{ color:var(--paper); }
-.demo-box .h2 em{ color:#F2B85A; }
-.demo-box .lede{ color:rgba(250,246,239,.7); }
-.demo-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.3rem; margin-bottom:2.2rem; }
-@media (max-width:860px){ .demo-cards{ grid-template-columns:1fr; } }
-.demo-card{ background:rgba(250,246,239,.08); border:1px solid rgba(250,246,239,.18); border-radius:var(--r-md); padding:1.5rem; }
-.demo-card .di{ font-size:1.6rem; margin-bottom:.7rem; }
-.demo-card .dt{ font-weight:700; margin-bottom:.4rem; font-size:.95rem; }
-.demo-card .dd{ font-size:.82rem; color:rgba(250,246,239,.65); line-height:1.55; }
-.demo-btns{ display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1rem; }
-.demo-note{ font-size:.78rem; color:rgba(250,246,239,.55); }
+@media (max-width: 860px) { .v-grid { grid-template-columns: 1fr; } }
+@media (min-width: 641px) and (max-width: 860px) { .v-grid { grid-template-columns: 1fr 1fr; } }
 
-/* ---- youtube channel ---- */
-.yt-section{ background:var(--paper-deep); }
-.yt-grid{ display:grid; grid-template-columns:.9fr 1.1fr; gap:3rem; align-items:center; }
-@media (max-width:860px){ .yt-grid{ grid-template-columns:1fr; } }
-.yt-stats-row{ display:flex; gap:2.4rem; margin-top:2rem; }
-.yt-stats-row .v{ font-family:'Fraunces',serif; font-weight:700; font-size:1.9rem; }
-.yt-stats-row .l{ font-size:.78rem; color:var(--ink-faint); }
+/* ============================================================
+   PRICING
+   ============================================================ */
+.p-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.p-card {
+  background: var(--white); border: 1.5px solid var(--line); border-radius: var(--r-xl);
+  padding: 28px; display: flex; flex-direction: column;
+  transition: box-shadow .2s, border-color .2s;
+}
+.p-card:hover { box-shadow: var(--shadow-lg); }
+.p-card.pop { border-color: var(--blue); position: relative; }
+.p-pop-flag {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--blue); color: #fff; font-size: 12px; font-weight: 700;
+  padding: 5px 16px; border-radius: 100px; white-space: nowrap;
+}
+.p-name { font-family: var(--font-head); font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+.p-orig { font-size: 14px; color: var(--ink-muted); text-decoration: line-through; }
+.p-disc-badge {
+  display: inline-block; background: #FEF3C7; color: #92400E;
+  font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 100px;
+  margin-left: 6px;
+}
+.p-amount {
+  font-family: var(--font-head); font-size: 2.5rem; font-weight: 800;
+  color: var(--ink); line-height: 1; margin: 8px 0 4px;
+}
+.p-amount sup { font-size: 1rem; vertical-align: super; }
+.p-per { font-size: 13px; color: var(--ink-muted); margin-bottom: 20px; }
+.p-feats { list-style: none; flex: 1; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+.p-feats li { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: var(--ink-soft); }
+.p-feats li::before { content: '✓'; color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+.p-guarantee {
+  display: flex; align-items: center; gap: 6px;
+  background: #F0FDF4; border: 1px solid #86EFAC; border-radius: var(--r-md);
+  padding: 8px 12px; font-size: 12px; font-weight: 600; color: #166534;
+  margin-bottom: 16px;
+}
 
-/* ---- calculator ---- */
-.calc-section{ background:var(--ink); padding:6rem 0; position:relative; overflow:hidden; }
-.calc-section::before{ content:""; position:absolute; inset:0; background-image:radial-gradient(circle,rgba(250,246,239,.05) 1px,transparent 1px); background-size:26px 26px; }
-.calc-wrap{ max-width:680px; margin:0 auto; position:relative; z-index:1; text-align:center; padding:0 6%; }
-.calc-wrap .kicker{ color:#F2B85A; justify-content:center; }
-.calc-wrap .kicker::before{ background:#F2B85A; }
-.calc-wrap h2{ font-family:'Fraunces',serif; color:var(--paper); font-size:clamp(2rem,4vw,2.9rem); margin-bottom:.7rem; }
-.calc-wrap h2 em{ color:var(--coral); font-style:italic; }
-.calc-wrap>p{ color:rgba(250,246,239,.55); margin-bottom:2rem; }
-.qbar-row{ display:flex; align-items:center; gap:.8rem; margin-bottom:1.6rem; }
-.qbar-track{ flex:1; height:5px; background:rgba(250,246,239,.12); border-radius:3px; overflow:hidden; }
-.qbar-fill{ height:100%; width:0%; background:var(--coral); border-radius:3px; transition:width .4s ease; }
-#QLabel{ font-size:.72rem; font-weight:600; color:rgba(250,246,239,.4); white-space:nowrap; }
-#QBOX{ background:rgba(250,246,239,.07); border:1px solid rgba(250,246,239,.14); border-radius:var(--r-lg); padding:2.2rem 2rem; text-align:left; }
+@media (max-width: 860px) { .p-grid { grid-template-columns: 1fr; } }
+@media (min-width: 641px) and (max-width: 860px) { .p-grid { grid-template-columns: 1fr 1fr; } }
 
-/* ---- batches ---- */
-.batch-section{ background:var(--ink); color:var(--paper); }
-.batch-section .h2{ color:var(--paper); }
-.batch-section .h2 em{ color:var(--coral); }
-.countdown-banner{ display:flex; align-items:center; justify-content:space-between; gap:1.5rem; background:rgba(250,246,239,.06); border:1px solid rgba(250,246,239,.14); border-radius:var(--r-lg); padding:1.6rem 2rem; margin-bottom:2.6rem; flex-wrap:wrap; }
-.cb-label{ font-size:.88rem; font-weight:600; display:flex; align-items:center; gap:.5rem; }
-.cd-units{ display:flex; align-items:center; gap:.7rem; }
-.cu{ text-align:center; min-width:50px; }
-.cu-val{ font-family:'Fraunces',serif; font-weight:700; font-size:1.7rem; color:var(--coral); }
-.cu-lbl{ font-size:.66rem; color:rgba(250,246,239,.5); text-transform:uppercase; letter-spacing:.05em; }
-.cu-sep{ color:rgba(250,246,239,.3); font-weight:700; }
-.batch-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
-@media (max-width:860px){ .batch-grid{ grid-template-columns:1fr; } .countdown-banner{ justify-content:center; text-align:center; } }
-.batch-card{ background:rgba(250,246,239,.05); border:1px solid rgba(250,246,239,.14); border-radius:var(--r-lg); padding:1.7rem; }
-.batch-card.hot{ border-color:var(--coral); }
-.b-badge{ font-size:.68rem; font-weight:700; padding:.3rem .7rem; border-radius:var(--r-full); margin-bottom:1rem; display:inline-block; }
-.b-badge.hot{ background:var(--coral); color:#fff; }
-.b-badge.open{ background:rgba(250,246,239,.12); color:rgba(250,246,239,.8); }
-.b-type{ font-size:.72rem; color:rgba(250,246,239,.5); margin-bottom:.3rem; }
-.b-name{ font-family:'Fraunces',serif; font-weight:600; font-size:1.2rem; margin-bottom:.3rem; }
-.b-date{ font-size:.82rem; color:rgba(250,246,239,.6); margin-bottom:1rem; }
-.seats-bar{ height:5px; background:rgba(250,246,239,.12); border-radius:3px; overflow:hidden; margin-bottom:.5rem; }
-.seats-fill{ height:100%; background:var(--coral); border-radius:3px; }
-.seats-text{ font-size:.76rem; color:rgba(250,246,239,.55); margin-bottom:1.2rem; }
-.b-btn{ display:block; text-align:center; background:var(--coral); color:#fff; padding:.8rem; border-radius:var(--r-full); font-weight:700; font-size:.84rem; text-decoration:none; }
+/* ============================================================
+   COACHES
+   ============================================================ */
+.coach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.coach-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--r-xl);
+  padding: 24px;
+}
+.coach-name { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; margin-bottom: 2px; }
+.coach-role { font-size: 13px; color: var(--blue); font-weight: 600; margin-bottom: 6px; }
+.coach-exams { font-size: 12px; color: var(--ink-muted); margin-bottom: 10px; }
+.coach-bio { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
 
-/* ---- faq ---- */
-.faq-list{ max-width:760px; }
-.faq-item{ border-bottom:1.5px solid var(--line); }
-.faq-q{ width:100%; background:none; border:none; text-align:left; padding:1.4rem 0; display:flex; justify-content:space-between; align-items:center; gap:1rem; font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:600; color:var(--ink); cursor:pointer; }
-.faq-icon{ flex-shrink:0; font-size:1.3rem; color:var(--coral); transition:transform .25s; }
-.faq-item.open .faq-icon{ transform:rotate(45deg); }
-.faq-a{ max-height:0; overflow:hidden; transition:max-height .3s var(--ease); }
-.faq-item.open .faq-a{ max-height:400px; }
-.faq-a-inner{ padding:0 0 1.4rem; font-size:.92rem; color:var(--ink-soft); line-height:1.7; max-width:680px; }
-.faq-cta-row{ margin-top:2.4rem; display:flex; justify-content:space-between; align-items:center; gap:1.5rem; background:var(--coral-pale); border-radius:var(--r-lg); padding:1.6rem 2rem; flex-wrap:wrap; }
-.faq-cta-row .t{ font-weight:700; font-size:1rem; }
-.faq-cta-row .s{ font-size:.84rem; color:var(--ink-soft); }
-.faq-cta-btn{ background:var(--ink); color:var(--paper); padding:.8rem 1.4rem; border-radius:var(--r-full); font-weight:700; font-size:.84rem; text-decoration:none; white-space:nowrap; }
+@media (max-width: 860px) { .coach-grid { grid-template-columns: 1fr; } }
+@media (min-width: 641px) and (max-width: 860px) { .coach-grid { grid-template-columns: 1fr 1fr; } }
 
-/* ---- whatsapp contact ---- */
-.wa-section{ background:var(--moss); color:var(--paper); text-align:center; }
-.wa-section .kicker{ color:#CDEAD2; justify-content:center; }
-.wa-section .kicker::before{ background:#CDEAD2; }
-.wa-section .h2{ color:var(--paper); }
-.wa-section .h2 em{ color:#F2B85A; }
-.wa-section p{ color:rgba(250,246,239,.7); max-width:520px; margin:0 auto 2rem; }
-.wa-row{ display:flex; justify-content:center; align-items:center; gap:1.4rem; flex-wrap:wrap; margin-bottom:1.6rem; }
-.wa-num-box{ background:rgba(250,246,239,.08); border:1px solid rgba(250,246,239,.2); border-radius:var(--r-lg); padding:1rem 1.6rem; text-align:left; }
-.wa-num-box .l{ font-size:.7rem; color:rgba(250,246,239,.55); }
-.wa-num-box .n{ font-family:'Fraunces',serif; font-weight:600; font-size:1.2rem; }
-.wa-big-btn{ background:#fff; color:var(--moss); padding:1rem 1.8rem; border-radius:var(--r-full); font-weight:700; text-decoration:none; }
-.wa-tip{ font-size:.84rem; color:rgba(250,246,239,.55); }
-.wa-tip strong{ color:#fff; }
+/* ============================================================
+   FRENCH SECTION
+   ============================================================ */
+.fr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.fr-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--r-xl);
+  padding: 24px;
+}
+.fr-tag {
+  display: inline-block; background: var(--bg-alt); color: var(--ink-soft);
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  padding: 4px 10px; border-radius: 100px; margin-bottom: 12px;
+}
+.fr-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.fr-card p { font-size: 14px; color: var(--ink-soft); line-height: 1.65; margin-bottom: 14px; }
+.fr-feats { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.fr-feats li { font-size: 13px; color: var(--ink-soft); padding-left: 16px; position: relative; }
+.fr-feats li::before { content: '→'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+.fr-cta { border-color: var(--blue); background: var(--blue-light); }
+.fr-proof { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.fr-proof span {
+  background: var(--white); border: 1px solid var(--line); border-radius: 100px;
+  font-size: 11px; font-weight: 600; padding: 4px 10px; color: var(--ink-soft);
+}
 
-/* ---- final cta ---- */
-.fcta{ text-align:center; }
-.fcta .h2{ font-size:clamp(2.2rem,5vw,3.6rem); }
-.fcta p{ max-width:520px; margin:0 auto 2rem; color:var(--ink-soft); }
-.fcta-btns{ display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; }
+@media (max-width: 860px) { .fr-grid { grid-template-columns: 1fr; } }
+@media (min-width: 641px) and (max-width: 860px) { .fr-grid { grid-template-columns: 1fr 1fr; } }
 
-/* ---- footer ---- */
-footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; }
-.foot-top{ display:flex; justify-content:space-between; gap:2rem; flex-wrap:wrap; padding-bottom:2.4rem; border-bottom:1px solid rgba(250,246,239,.12); }
-.foot-brand .fn{ font-family:'Fraunces',serif; font-weight:600; font-size:1.6rem; color:var(--paper); margin-bottom:.7rem; }
-.foot-brand .fn em{ font-style:italic; color:var(--coral); }
-.foot-brand p{ max-width:380px; font-size:.86rem; line-height:1.6; }
-.foot-wa{ text-align:right; }
-.foot-wa-label{ font-size:.72rem; color:rgba(250,246,239,.45); }
-.foot-wa-num{ font-family:'Fraunces',serif; font-weight:600; font-size:1.3rem; color:var(--paper); margin:.2rem 0 .6rem; }
-.foot-wa-link{ display:block; color:var(--coral); text-decoration:none; font-size:.84rem; font-weight:600; }
-.foot-social{ display:flex; justify-content:center; gap:1.6rem; padding:1.6rem 0; flex-wrap:wrap; }
-.foot-social a{ color:rgba(250,246,239,.7); text-decoration:none; font-size:.84rem; font-weight:600; display:flex; align-items:center; gap:.4rem; }
-.foot-copy{ text-align:center; font-size:.76rem; color:rgba(250,246,239,.35); }
-@media (max-width:700px){ .foot-top{ flex-direction:column; } .foot-wa{ text-align:left; } }
+/* ============================================================
+   BAND CALCULATOR
+   ============================================================ */
+.calc-section {
+  background: var(--ink); color: #fff;
+  padding: 80px 0;
+}
+.calc-wrap {
+  max-width: 640px; margin: 0 auto; padding: 0 24px;
+}
+.calc-wrap .eyebrow { color: #93C5FD; }
+.calc-wrap .eyebrow::before { background: #93C5FD; }
+.calc-wrap h2 { color: #fff; margin-bottom: 12px; }
+.calc-wrap p { color: rgba(255,255,255,.65); margin-bottom: 28px; }
+.qbar-row {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 8px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,.5);
+}
+.qbar-track {
+  flex: 1; height: 4px; background: rgba(255,255,255,.15); border-radius: 4px;
+  margin-right: 12px; overflow: hidden;
+}
+.qbar-fill { height: 100%; background: var(--blue-mid); border-radius: 4px; transition: width .4s ease; }
+#QBOX { margin-top: 20px; }
 
-/* ---- sticky mobile cta ---- */
-.sticky-cta{ position:fixed; bottom:0; left:0; right:0; z-index:998; display:none; gap:.7rem; padding:.8rem 5%; background:var(--cream); border-top:1px solid var(--line); box-shadow:0 -8px 26px rgba(33,28,22,.1); }
-@media (max-width:760px){ .sticky-cta{ display:flex; } }
-.sticky-cta a{ flex:1; text-align:center; padding:.8rem; border-radius:var(--r-full); font-weight:700; font-size:.84rem; text-decoration:none; }
-.sticky-cta .s1{ background:var(--ink); color:var(--paper); }
-.sticky-cta .s2{ background:var(--wa); color:#fff; }
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-list { display: flex; flex-direction: column; max-width: 740px; }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-q {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  background: none; border: none; cursor: pointer; text-align: left;
+  font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--ink);
+  padding: 18px 0; gap: 12px; transition: color .15s;
+}
+.faq-q:hover { color: var(--blue); }
+.faq-icon { font-size: 20px; color: var(--blue); font-weight: 400; flex-shrink: 0; transition: transform .3s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { overflow: hidden; max-height: 0; transition: max-height .4s ease; }
+.faq-item.open .faq-a { max-height: 300px; }
+.faq-a-inner { padding: 0 0 18px; font-size: 14px; color: var(--ink-soft); line-height: 1.7; }
 
-/* ---- wa float ---- */
-.wa-float{ position:fixed; bottom:90px; right:1.6rem; z-index:997; display:flex; align-items:center; gap:.6rem; }
-@media (max-width:760px){ .wa-float{ bottom:5.5rem; } }
-.wa-float .tip{ background:var(--ink); color:var(--paper); font-size:.78rem; font-weight:600; padding:.5rem .9rem; border-radius:var(--r-full); white-space:nowrap; opacity:0; transform:translateX(8px); transition:opacity .2s, transform .2s; }
-.wa-float:hover .tip{ opacity:1; transform:translateX(0); }
-.wa-btn-float{ width:56px; height:56px; border-radius:50%; background:var(--wa); display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.5rem; text-decoration:none; box-shadow:var(--shadow-sm); }
+/* CTA row */
+.cta-row {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px; background: var(--bg); border-radius: var(--r-xl);
+  padding: 24px 28px; margin-top: 32px;
+}
+.cta-row .ct { font-weight: 700; font-size: 15px; }
+.cta-row .cs { font-size: 14px; color: var(--ink-muted); }
 
-/* ---- back to top ---- */
-#back-top{ position:fixed; bottom:1.6rem; left:1.6rem; z-index:997; width:44px; height:44px; border-radius:50%; background:var(--ink); color:var(--paper); border:none; cursor:pointer; opacity:0; visibility:hidden; transition:opacity .25s, visibility .25s; font-size:1.1rem; }
-#back-top.show{ opacity:1; visibility:visible; }
-@media (max-width:760px){ #back-top{ bottom:5.5rem; } }
+/* ============================================================
+   DEMO BOX
+   ============================================================ */
+.demo-box {
+  background: var(--ink); border-radius: var(--r-xl); padding: 56px;
+  text-align: center; color: #fff;
+}
+.demo-box .eyebrow { color: #93C5FD; justify-content: center; }
+.demo-box .eyebrow::before { background: #93C5FD; }
+.demo-box h2 { color: #fff; margin-bottom: 12px; }
+.demo-box .lede { color: rgba(255,255,255,.65); margin: 0 auto 36px; text-align: center; }
+.demo-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 36px;
+}
+.demo-card { background: rgba(255,255,255,.07); border-radius: var(--r-lg); padding: 20px; text-align: left; }
+.demo-card .di { font-size: 1.5rem; margin-bottom: 8px; }
+.demo-card .dt { font-weight: 700; font-size: 14px; margin-bottom: 6px; color: #fff; }
+.demo-card .dd { font-size: 13px; color: rgba(255,255,255,.55); line-height: 1.6; }
+.demo-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.demo-note { font-size: 13px; color: rgba(255,255,255,.4); }
+.btn-white { background: #fff; color: var(--ink); }
+.btn-white:hover { background: var(--bg); }
+.btn-dark-ghost {
+  background: transparent; color: rgba(255,255,255,.7); border: 1.5px solid rgba(255,255,255,.2);
+}
+.btn-dark-ghost:hover { border-color: rgba(255,255,255,.5); color: #fff; }
 
-/* ---- video lightbox ---- */
-.vt-modal{ position:fixed; inset:0; z-index:1100; display:none; align-items:center; justify-content:center; }
-.vt-modal.open{ display:flex; }
-.vt-modal-bg{ position:absolute; inset:0; background:rgba(33,28,22,.85); }
-.vt-modal-content{ position:relative; width:min(900px,92vw); aspect-ratio:16/9; z-index:1; }
-.vt-modal-content iframe{ width:100%; height:100%; border-radius:var(--r-md); }
-.vt-modal-close{ position:absolute; top:-2.6rem; right:0; background:none; border:none; color:#fff; font-size:1.8rem; cursor:pointer; }
+@media (max-width: 640px) {
+  .demo-box { padding: 32px 20px; }
+  .demo-cards { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   BATCH SECTION
+   ============================================================ */
+.batch-section { background: var(--ink); color: #fff; }
+.batch-section .eyebrow { color: #93C5FD; }
+.batch-section .eyebrow::before { background: #93C5FD; }
+.batch-section h2 { color: #fff; }
+.batch-section .lede { color: rgba(255,255,255,.55); }
+.countdown-banner {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 20px;
+  background: rgba(255,255,255,.07); border-radius: var(--r-lg); padding: 20px 24px;
+  margin-bottom: 32px;
+}
+.cb-label { font-size: 14px; font-weight: 600; color: rgba(255,255,255,.7); }
+.cd-units { display: flex; align-items: center; gap: 8px; }
+.cu { text-align: center; }
+.cu-val {
+  font-family: var(--font-head); font-size: 1.6rem; font-weight: 800; color: #fff;
+  background: rgba(255,255,255,.12); border-radius: var(--r-md); padding: 6px 14px; min-width: 52px; display: block;
+}
+.cu-lbl { font-size: 10px; color: rgba(255,255,255,.4); margin-top: 3px; text-transform: uppercase; }
+.cu-sep { font-size: 1.4rem; font-weight: 700; color: rgba(255,255,255,.3); margin-top: -10px; }
+.batch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.batch-card {
+  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--r-xl); padding: 24px;
+}
+.batch-card.hot { border-color: rgba(245,158,11,.5); }
+.b-badge {
+  display: inline-block; font-size: 11px; font-weight: 700; padding: 4px 10px;
+  border-radius: 100px; margin-bottom: 12px;
+}
+.b-badge.hot { background: rgba(245,158,11,.2); color: #FCD34D; }
+.b-badge.open { background: rgba(37,211,102,.15); color: #6EE7B7; }
+.b-type { font-size: 12px; color: rgba(255,255,255,.4); margin-bottom: 4px; }
+.b-name { font-family: var(--font-head); font-weight: 700; font-size: 1rem; color: #fff; margin-bottom: 6px; }
+.b-date { font-size: 13px; color: rgba(255,255,255,.55); margin-bottom: 14px; }
+.seats-bar { height: 4px; background: rgba(255,255,255,.12); border-radius: 4px; overflow: hidden; margin-bottom: 4px; }
+.seats-fill { height: 100%; background: #F59E0B; border-radius: 4px; }
+.seats-text { font-size: 12px; color: rgba(255,255,255,.4); margin-bottom: 16px; }
+.b-btn {
+  display: block; width: 100%; text-align: center; padding: 10px;
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+  border-radius: var(--r-md); font-size: 13px; font-weight: 700; color: #fff;
+  transition: background .2s;
+}
+.b-btn:hover { background: rgba(255,255,255,.2); }
+
+@media (max-width: 860px) { .batch-grid { grid-template-columns: 1fr; } }
+@media (min-width: 641px) and (max-width: 860px) { .batch-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ============================================================
+   YOUTUBE SECTION
+   ============================================================ */
+.yt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.yt-stats-row { display: flex; gap: 28px; margin-top: 24px; }
+.yt-stats-row .v { font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; color: var(--ink); }
+.yt-stats-row .l { font-size: 12px; color: var(--ink-muted); }
+.yt-cta-row {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  background: var(--bg); border-radius: var(--r-xl); padding: 24px 28px; margin-top: 32px;
+}
+.yt-cta-row .t { font-weight: 700; font-size: 15px; }
+.yt-cta-row .s { font-size: 13px; color: var(--ink-muted); margin-top: 2px; }
+
+@media (max-width: 860px) { .yt-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background: var(--ink); color: rgba(255,255,255,.6); padding: 56px 0 32px;
+}
+.foot-top {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 36px;
+  padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.foot-logo { font-family: var(--font-head); font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+.foot-logo span { color: #93C5FD; }
+.foot-desc { font-size: 14px; line-height: 1.6; }
+.foot-wa-label { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: rgba(255,255,255,.4); margin-bottom: 4px; }
+.foot-wa-num { font-family: var(--font-head); font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+.foot-links { display: flex; flex-direction: column; gap: 8px; }
+.foot-links a { font-size: 14px; color: rgba(255,255,255,.5); transition: color .15s; }
+.foot-links a:hover { color: #fff; }
+.foot-social { display: flex; gap: 20px; margin-bottom: 28px; flex-wrap: wrap; }
+.foot-social a { font-size: 14px; color: rgba(255,255,255,.4); transition: color .15s; }
+.foot-social a:hover { color: #fff; }
+.foot-copy { font-size: 12px; color: rgba(255,255,255,.25); border-top: 1px solid rgba(255,255,255,.08); padding-top: 20px; }
+
+@media (max-width: 640px) { .foot-top { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   STICKY / FLOAT
+   ============================================================ */
+.sticky-cta {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+  background: var(--white); border-top: 1px solid var(--line);
+  padding: 10px 16px; gap: 10px;
+}
+.sticky-cta a {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  padding: 12px; border-radius: var(--r-md); font-weight: 700; font-size: 14px;
+}
+.sticky-cta .s1 { background: var(--blue); color: #fff; }
+.sticky-cta .s2 { background: var(--wa); color: #fff; }
+@media (max-width: 640px) { .sticky-cta { display: flex; } body { padding-bottom: 72px; } }
+
+.wa-float {
+  position: fixed; bottom: 88px; right: 20px; z-index: 199;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+}
+.wa-float .tip {
+  background: var(--ink); color: #fff; border-radius: 100px;
+  padding: 6px 14px; font-size: 12px; font-weight: 600; white-space: nowrap;
+  opacity: 0; transition: opacity .3s; pointer-events: none;
+}
+.wa-float:hover .tip { opacity: 1; }
+.wa-btn-float {
+  width: 52px; height: 52px; background: var(--wa); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(37,211,102,.4); font-size: 24px;
+  transition: transform .2s;
+}
+.wa-btn-float:hover { transform: scale(1.08); }
+@media (max-width: 640px) { .wa-float { bottom: 84px; } }
+
+/* ============================================================
+   FINAL CTA SECTION
+   ============================================================ */
+.fcta { background: var(--blue); color: #fff; text-align: center; }
+.fcta h2 { color: #fff; margin-bottom: 12px; }
+.fcta p { color: rgba(255,255,255,.8); margin-bottom: 28px; }
+.fcta-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+/* VIDEO MODAL */
+.vt-modal {
+  display: none; position: fixed; inset: 0; z-index: 1000;
+  align-items: center; justify-content: center;
+}
+.vt-modal.open { display: flex; }
+.vt-modal-bg {
+  position: absolute; inset: 0; background: rgba(0,0,0,.8);
+  backdrop-filter: blur(4px);
+}
+.vt-modal-content {
+  position: relative; width: min(90vw, 900px); aspect-ratio: 16/9;
+  border-radius: var(--r-lg); overflow: hidden; z-index: 1;
+}
+.vt-modal-close {
+  position: absolute; top: -40px; right: 0; background: none; border: none;
+  color: #fff; font-size: 32px; cursor: pointer; line-height: 1; z-index: 2;
+}
+#vt-iframe { width: 100%; height: 100%; border: none; }
+
+/* BACK TO TOP */
+#back-top {
+  display: none; position: fixed; bottom: 88px; left: 20px; z-index: 199;
+  width: 40px; height: 40px; background: var(--white); color: var(--ink);
+  border: 1px solid var(--line); border-radius: var(--r-md); cursor: pointer;
+  font-size: 16px; align-items: center; justify-content: center;
+  box-shadow: var(--shadow); transition: all .2s;
+}
+#back-top.show { display: flex; }
+#back-top:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+/* ============================================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================================ */
+@media (max-width: 480px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  .sec { padding: 56px 0; }
+  .trust-bar { gap: 10px; }
+  .hero-btns { flex-direction: column; }
+  .hero-btns .btn { width: 100%; justify-content: center; }
+}
 </style>
+</head>
 <body>
 
-<div class="ubar" id="ubar">
-  <span class="dot"></span>
-  <span class="txt">March batch closing soon — <strong>only 3 seats left</strong> in Live Coaching. Reserve yours on WhatsApp.</span>
-  <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20reserve%20a%20seat%20before%20the%20March%20batch%20closes" class="cta" target="_blank">Reserve Seat</a>
-  <button class="x" id="ubar-x" aria-label="Close">×</button>
-</div>
-
-<div id="splash">
-  <div class="splash-mark">Prep<em>Eve</em></div>
-  <div class="splash-bar-wrap"><div class="splash-bar"></div></div>
-</div>
-
-<div id="progress-bar"></div>
-
-<nav id="navbar">
-  <a href="/" class="brand">Prep<em>Eve</em></a>
-  <ul>
-    <li><a href="#coaching">Coaching</a></li>
-    <li><a href="#coaches">Coaches</a></li>
-    <li><a href="#batches">Batches</a></li>
-    <li><a href="book-demo" class="nav-cta" target="_blank">Book Free Demo</a></li>
-    <li><a href="#french">French</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="https://wa.me/919877714284" class="nav-wa" target="_blank">WhatsApp Us</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">Prep<span>Eve</span></a>
+    <ul class="nav-links">
+      <li><a href="#coaching">Courses</a></li>
+      <li><a href="#compare">Why PrepEve</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#calculator">Band Quiz</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="book-demo" class="btn btn-blue nav-cta" target="_blank">Book Free Demo →</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
 <div class="mob-menu" id="mob-menu">
-  <a href="#coaching">Coaching Types</a>
-  <a href="#coaches">Our Coaches</a>
-  <a href="#batches">Batches</a>
-  <a href="#calculator">Band Calculator</a>
+  <a href="#coaching">Courses</a>
+  <a href="#compare">Why PrepEve</a>
   <a href="#pricing">Pricing</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#calculator">Band Quiz</a>
   <a href="#faq">FAQ</a>
-  <a href="#french" style="color:var(--coral-deep);font-weight:700;">French Classes</a>
-  <a href="book-demo" class="mob-cta" style="background:var(--ink);color:var(--paper);" target="_blank">Book My Free Demo Class →</a>
-  <a href="https://chat.whatsapp.com/EoZiGZKTLak9FUD1JjMFdi" class="mob-cta" style="background:var(--wa);color:#fff;margin-top:.4rem" target="_blank">Join Free WhatsApp Group →</a>
+  <a href="book-demo" class="mob-cta btn btn-blue" target="_blank">Book Free Demo →</a>
+  <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20about%20IELTS%20coaching" class="mob-cta btn btn-wa" style="margin-top:8px" target="_blank">💬 WhatsApp Us</a>
 </div>
 
 <!-- HERO -->
@@ -539,71 +823,116 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="hero-eyebrow"><span class="dot"></span> India's most trusted IELTS platform</div>
-        <h1>Stop guessing<br>your <span class="it">band score.</span><br>Go <span class="ul">earn it.</span></h1>
-        <p class="hero-p">15,000+ students have used PrepEve's live coaching and certified feedback to cross Band 7+ in 30 days — backed by a money-back guarantee.</p>
+        <div class="hero-eyebrow">India's most trusted IELTS platform</div>
+        <h1>+1.5 Band Score<br>Improvement,<br><span class="accent">Guaranteed.</span></h1>
+        <p class="hero-sub">PrepEve's live IELTS coaching gets you to Band 7+ — or we refund every rupee. 15,000+ students. British-certified coaches. Results in 30 days.</p>
         <div class="hero-btns">
-          <a href="book-demo" class="btn btn-coral" target="_blank">Book your free demo class →</a>
-          <a href="https://www.youtube.com/@prepeveclasses" class="btn btn-ghost" target="_blank">Watch free classes</a>
+          <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20enroll%20in%20PrepEve%20IELTS%20coaching" class="btn btn-wa btn-lg" target="_blank">💬 Chat on WhatsApp to Enroll</a>
+          <a href="book-demo" class="btn btn-blue-outline btn-lg" target="_blank">Book Free Demo →</a>
         </div>
-        <div class="hero-note">⚡ <strong>We confirm your slot within 30 minutes</strong> on WhatsApp — 100% free, no payment, no obligation.</div>
-        <div class="proof-row">
-          <div class="proof-item"><b>15K+</b>Students Trained</div>
-          <div class="proof-item"><b>97%</b>Hit Band 7+</div>
-          <div class="proof-item"><b>4.7★</b>Google Rating</div>
-          <div class="proof-item"><b>+1.5</b>Avg Band Lift</div>
+        <p class="hero-note">⚡ <strong>Slot confirmed within 30 minutes</strong> on WhatsApp — 100% free, no payment, no obligation.</p>
+        <div class="trust-bar">
+          <div class="trust-item">⭐ <strong>4.7</strong> Google Rating</div>
+          <div class="trust-sep">|</div>
+          <div class="trust-item">🎓 <strong>15,000+</strong> Students</div>
+          <div class="trust-sep">|</div>
+          <div class="trust-item">✅ <strong>97%</strong> Band 7+</div>
+          <div class="trust-sep">|</div>
+          <div class="trust-item">🛡️ <strong>Money-Back</strong> Guarantee</div>
         </div>
       </div>
       <div class="hero-panel">
-        <div class="float-chip fc1">🎉 <div><div class="fv">Band 8.5</div><div class="fl">Anooj — Verified Student</div></div></div>
-        <div class="score-card">
-          <div class="score-head">
-            <span class="lbl">Score Report · Academic</span>
-            <span class="badge">✓ Official Result</span>
+        <div class="float-chip">
+          <div>🎉</div>
+          <div>
+            <div class="fv">Band 8.5</div>
+            <div class="fl">Anooj — Verified Student</div>
           </div>
+        </div>
+        <div class="score-card">
+          <div class="score-card-label">Latest Result</div>
+          <div class="score-card-title">IELTS Score Report · PrepEve Student</div>
           <div class="score-bands">
-            <div class="sband"><div class="k">Listening</div><div class="v">8.5</div></div>
-            <div class="sband"><div class="k">Reading</div><div class="v">8.0</div></div>
-            <div class="sband"><div class="k">Writing</div><div class="v">7.5</div></div>
-            <div class="sband"><div class="k">Speaking</div><div class="v">8.0</div></div>
+            <div class="sband"><div class="sk">Listening</div><div class="sv">8.5</div></div>
+            <div class="sband"><div class="sk">Reading</div><div class="sv">8.0</div></div>
+            <div class="sband"><div class="sk">Writing</div><div class="sv">7.5</div></div>
+            <div class="sband"><div class="sk">Speaking</div><div class="sv">8.0</div></div>
           </div>
           <div class="score-total">
             <div>
-              <div class="stl">Overall Band Score</div>
-              <span class="sname">PrepEve Student · 2024</span>
+              <div class="score-total-lbl">Overall Band Score</div>
+              <div class="score-total-name">Anooj Motghare · Verified</div>
             </div>
-            <div class="sval">8.0</div>
+            <div class="score-total-val">8.5</div>
           </div>
         </div>
-        <div class="float-chip fc2">🇬🇧 <div><div class="fv">UK Visa Approved</div><div class="fl">Pratishtha — Masters, UCL</div></div></div>
-        <div class="g-row"><span class="stars">★★★★★</span> 4.7 rating · 300+ Google reviews</div>
+        <div class="guarantee-badge">
+          🛡️ Band 7+ Guaranteed or Full Refund
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="ticker-wrap">
-  <div class="ticker-t">
-    <span>Band 7+ Guaranteed</span><span>15,000+ Students</span><span>Average +1.5 Band Improvement</span><span>Live Online Classes</span><span>Money-Back Guarantee</span><span>Canada · UK · Australia · USA</span><span>Academic &amp; General Training</span><span>WhatsApp Support 24/7</span>
-    <span>Band 7+ Guaranteed</span><span>15,000+ Students</span><span>Average +1.5 Band Improvement</span><span>Live Online Classes</span><span>Money-Back Guarantee</span><span>Canada · UK · Australia · USA</span><span>Academic &amp; General Training</span><span>WhatsApp Support 24/7</span>
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item">Band 7+ Guaranteed</span>
+    <span class="ticker-item">15,000+ Students Trained</span>
+    <span class="ticker-item">Average +1.5 Band Improvement</span>
+    <span class="ticker-item">Live Online Classes</span>
+    <span class="ticker-item">Money-Back Guarantee</span>
+    <span class="ticker-item">Canada · UK · Australia · USA</span>
+    <span class="ticker-item">Academic &amp; General Training</span>
+    <span class="ticker-item">WhatsApp Support 24/7</span>
+    <span class="ticker-item">Band 7+ Guaranteed</span>
+    <span class="ticker-item">15,000+ Students Trained</span>
+    <span class="ticker-item">Average +1.5 Band Improvement</span>
+    <span class="ticker-item">Live Online Classes</span>
+    <span class="ticker-item">Money-Back Guarantee</span>
+    <span class="ticker-item">Canada · UK · Australia · USA</span>
+    <span class="ticker-item">Academic &amp; General Training</span>
+    <span class="ticker-item">WhatsApp Support 24/7</span>
   </div>
 </div>
-<!-- COACHING TYPES -->
+
+<!-- SOCIAL PROOF STRIP -->
+<section class="proof-strip">
+  <div class="container">
+    <div class="proof-strip-inner">
+      <div class="proof-stat rv"><div class="ps-val">15,000+</div><div class="ps-lbl">Students Trained</div></div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat rv"><div class="ps-val">97%</div><div class="ps-lbl">Achieve Band 7+</div></div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat rv"><div class="ps-val">+1.5</div><div class="ps-lbl">Avg Band Improvement</div></div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat rv"><div class="ps-val">30</div><div class="ps-lbl">Days to Band 7+</div></div>
+      <div class="proof-divider"></div>
+      <div class="proof-google rv">
+        <div>
+          <div class="pg-stars">★★★★★</div>
+          <div class="pg-text">4.7 Google Rating</div>
+          <div class="pg-sub">300+ verified reviews</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSE OPTIONS -->
 <section class="sec" id="coaching">
   <div class="container">
-    <div class="sec-head">
-      <div>
-        <div class="kicker rv">01 — Course Options</div>
-        <h2 class="h2 rv">Choose your <em>learning path</em></h2>
-      </div>
+    <div class="section-head">
+      <div class="eyebrow rv">Course Options</div>
+      <h2 class="rv">Choose your learning path</h2>
       <p class="lede rv">Structured live coaching or flexible self-paced learning — chat with us on WhatsApp and we'll tell you, honestly, which one fits your timeline.</p>
     </div>
     <div class="ctype-grid">
-      <div class="ctype-card ct-pop rv">
+      <div class="ctype-card popular rv">
         <div class="ctype-tag">Most Popular</div>
         <h3>Live Online Coaching (1-on-1)</h3>
         <p>1-on-1 human-evaluated feedback from certified coaches, real-time doubt clearing, and expert guidance on every task you submit.</p>
-        <ul class="ctype-feats">
+        <ul class="feat-list">
           <li>Daily 1-hr live sessions</li>
           <li>1-on-1 speaking practice sessions</li>
           <li>Writing evaluated within 24 hours</li>
@@ -611,38 +940,40 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
           <li>WhatsApp doubt support 24/7</li>
           <li>Exam cleared or full refund</li>
         </ul>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20more%20about%20IELTS%20coaching" class="btn btn-wa" target="_blank">Ask on WhatsApp →</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20more%20about%20IELTS%20live%20coaching" class="btn btn-wa" target="_blank">💬 Ask on WhatsApp →</a>
       </div>
-      <div class="ctype-card ct-flex rv">
-        <div class="ctype-tag">Flexible &amp; Affordable</div>
+      <div class="ctype-card rv">
+        <div class="ctype-tag flex-tag">Flexible &amp; Affordable</div>
         <h3>Self-Paced Program</h3>
         <p>Learn at your own schedule with 200+ recorded lectures, unlimited mock tests, and community access.</p>
-        <ul class="ctype-feats">
+        <ul class="feat-list">
           <li>200+ HD recorded lectures</li>
           <li>1-on-1 human evaluated feedback</li>
           <li>Unlimited mock tests</li>
           <li>Personalised study plan included</li>
         </ul>
-        <a href="book-demo" class="btn btn-ink" target="_blank">Book Free Demo →</a>
+        <a href="book-demo" class="btn btn-blue-outline" target="_blank">Book Free Demo →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMPARISON -->
-<section class="sec" id="compare" style="background:var(--paper-deep);">
+<!-- COMPARISON TABLE -->
+<section class="sec sec-alt" id="compare">
   <div class="container">
-    <div class="kicker rv">02 — Why PrepEve Wins</div>
-    <h2 class="h2 rv">PrepEve vs <em>the alternatives</em></h2>
-    <p class="lede rv">See why thousands of students choose PrepEve over self-study or other coaching centres.</p>
+    <div class="section-head">
+      <div class="eyebrow rv">Why PrepEve Wins</div>
+      <h2 class="rv">PrepEve vs the alternatives</h2>
+      <p class="lede rv">See why thousands of students choose PrepEve over self-study or other coaching centres.</p>
+    </div>
     <div class="cmp-scroll rv">
       <table class="cmp-table">
         <thead>
           <tr>
             <th>Feature</th>
             <th class="col-pe">🏆 PrepEve</th>
-            <th class="col-other">Other Coaching</th>
-            <th class="col-self">Self Study</th>
+            <th>Other Coaching</th>
+            <th>Self Study</th>
           </tr>
         </thead>
         <tbody>
@@ -652,15 +983,122 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
           <tr><td>Certified Trainer Feedback</td><td class="yes">✓</td><td class="no">✗</td><td class="no">✗</td></tr>
           <tr><td>WhatsApp Support 24/7</td><td class="yes">✓</td><td class="no">✗</td><td class="no">✗</td></tr>
           <tr><td>1-on-1 Speaking Practice</td><td class="yes">✓</td><td class="partial">Extra cost</td><td class="no">✗</td></tr>
-          <tr><td>Average Student Score Improvement</td><td style="font-weight:700">+1.5 Bands</td><td class="partial">+0.5–1.0</td><td class="partial">+0.5</td></tr>
-          <tr><td>Price</td><td style="font-weight:700">From ₹4,999</td><td>₹20,000–50,000</td><td>Free – ₹2,000</td></tr>
-          <tr><td>Success Rate (Band 7+)</td><td style="font-weight:700">97%</td><td class="partial">~60%</td><td class="partial">~35%</td></tr>
+          <tr><td>Average Student Score Improvement</td><td style="font-weight:700;color:var(--blue)">+1.5 Bands</td><td class="partial">+0.5–1.0</td><td class="partial">+0.5</td></tr>
+          <tr><td>Price</td><td style="font-weight:700;color:var(--blue)">From ₹4,999</td><td>₹20,000–50,000</td><td>Free – ₹2,000</td></tr>
+          <tr><td>Success Rate (Band 7+)</td><td style="font-weight:700;color:var(--blue)">97%</td><td class="partial">~60%</td><td class="partial">~35%</td></tr>
         </tbody>
       </table>
     </div>
     <p class="cmp-note rv">*Data based on student surveys and publicly available information. Other coaching figures are industry averages.</p>
-    <div class="rv" style="margin-top:2rem">
-      <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20more%20about%20PrepEve%20IELTS" class="btn btn-coral" target="_blank">Ask Us on WhatsApp</a>
+    <div class="rv" style="margin-top:24px">
+      <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20more%20about%20PrepEve%20IELTS" class="btn btn-blue" target="_blank">Ask Us on WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec" id="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow rv">Student Reviews</div>
+      <h2 class="rv">What our students say</h2>
+      <p class="lede rv">Real reviews from students who achieved their target scores with PrepEve.</p>
+    </div>
+    <div class="t-grid">
+      <div class="t-card rv">
+        <div class="t-band-row">
+          <div class="t-band">8.5</div>
+          <div class="t-band-lbl">Band Score</div>
+        </div>
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Honestly, I can't thank the team enough. It's been almost two years since I took my IELTS classes with them, and they still support me whenever I reach out. That kind of dedication is rare. Highly recommend to anyone serious about their IELTS journey."</p>
+        <div class="t-name">Anooj Motghare</div>
+        <a href="https://www.google.com/maps/contrib/102113621604889428073/reviews/@49.1476785,-165.0496148,3z/data=!4m3!8m2!3m1!1e1?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="t-link">⭐ View on Google</a>
+        <div class="t-verified">✓ Verified Student</div>
+      </div>
+      <div class="t-card rv">
+        <div class="t-band-row">
+          <div class="t-band">8.0</div>
+          <div class="t-band-lbl">Band Score</div>
+        </div>
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"I had a great experience with PrepEve for my IELTS preparation. The coaching was extremely helpful and highly effective. The study materials were well-structured and perfectly aligned with the actual exam pattern. I truly appreciate the support and guidance provided throughout the process."</p>
+        <div class="t-name">Yashaswini Palakonda</div>
+        <a href="https://www.google.com/maps/contrib/109065652692536741630/reviews?hl=en-IN" target="_blank" class="t-link">⭐ View on Google</a>
+        <div class="t-verified">✓ Verified Student</div>
+      </div>
+      <div class="t-card rv">
+        <div class="t-band-row">
+          <div class="t-band">7.5</div>
+          <div class="t-band-lbl">Band Score</div>
+        </div>
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Highly recommended! I was so confused watching videos online. After attending a 2-day free webinar, I enrolled. Their class notes let you skim through every module quickly. They will assist with Speaking &amp; Writing mock tests. I felt like I benefited more than what I paid for. Just go with it — they will give you exactly what you need!"</p>
+        <div class="t-name">Shashikanth Revelly</div>
+        <a href="https://www.google.com/maps/contrib/110923457556373260953/reviews?hl=en-IN" target="_blank" class="t-link">⭐ View on Google</a>
+        <div class="t-verified">✓ Verified Student</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO TESTIMONIALS -->
+<section class="sec sec-alt" id="video-testimonials">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow rv">Video Proof</div>
+      <h2 class="rv">Hear it from our students</h2>
+    </div>
+    <div class="v-grid">
+      <div class="v-card rv">
+        <a href="https://www.youtube.com/watch?v=8agy5ojp36I" target="_blank" class="v-thumb" data-vid="8agy5ojp36I">
+          <img src="https://img.youtube.com/vi/8agy5ojp36I/hqdefault.jpg" alt="Student testimonial — Taranjeet" loading="lazy">
+          <div class="v-play"><div class="v-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+          <div class="v-band-badge">8.5 Band</div>
+        </a>
+        <div class="v-info">
+          <div class="v-stars">★★★★★</div>
+          <p class="v-quote">"I was stuck at Band 6.5 for a year. PrepEve's speaking framework changed everything — I hit 8.0 in just 30 days!"</p>
+          <div class="v-name">Taranjeet</div>
+          <div class="v-meta">Watch on YouTube</div>
+          <div class="v-imp">↑ From 7.0 to 8.0</div>
+        </div>
+      </div>
+      <div class="v-card rv">
+        <a href="https://www.youtube.com/watch?v=5FbjLsycE2k" target="_blank" class="v-thumb" data-vid="5FbjLsycE2k">
+          <img src="https://img.youtube.com/vi/5FbjLsycE2k/hqdefault.jpg" alt="Student testimonial — Pratishtha" loading="lazy">
+          <div class="v-play"><div class="v-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+          <div class="v-band-badge">8.0 Band</div>
+        </a>
+        <div class="v-info">
+          <div class="v-stars">★★★★★</div>
+          <p class="v-quote">"The writing feedback is better than any tutor I've had. Got into UCL — dream come true!"</p>
+          <div class="v-name">Pratishtha</div>
+          <div class="v-meta">Watch on YouTube</div>
+          <div class="v-imp">↑ From 6.0 to 8.0</div>
+        </div>
+      </div>
+      <div class="v-card rv">
+        <a href="https://www.youtube.com/watch?v=2f9jwGWIREI" target="_blank" class="v-thumb" data-vid="2f9jwGWIREI">
+          <img src="https://img.youtube.com/vi/2f9jwGWIREI/hqdefault.jpg" alt="Student testimonial — Deepanshu" loading="lazy">
+          <div class="v-play"><div class="v-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
+          <div class="v-band-badge">7.5 Band</div>
+        </a>
+        <div class="v-info">
+          <div class="v-stars">★★★★★</div>
+          <p class="v-quote">"I enrolled via WhatsApp in 10 minutes. The support throughout the 30 days was incredible."</p>
+          <div class="v-name">Deepanshu</div>
+          <div class="v-meta">Watch on YouTube</div>
+          <div class="v-imp">↑ From 6.5 to 8.0</div>
+        </div>
+      </div>
+    </div>
+    <div class="yt-cta-row rv">
+      <div>
+        <div class="t">🎥 50+ student success stories on YouTube</div>
+        <div class="s">Watch real students share their journey — from fear to Band 7+.</div>
+      </div>
+      <a href="https://www.youtube.com/@prepeveclasses" class="btn btn-blue" target="_blank">Watch on YouTube</a>
     </div>
   </div>
 </section>
@@ -668,62 +1106,70 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
 <!-- PRICING -->
 <section class="sec" id="pricing">
   <div class="container">
-    <div class="kicker rv">03 — Pricing</div>
-    <h2 class="h2 rv">Simple, transparent <em>pricing</em></h2>
-    <p class="lede rv">Not sure which plan? <a href="https://wa.me/919877714284?text=Hi!%20Help%20me%20choose%20the%20right%20IELTS%20plan" target="_blank" style="color:var(--coral-deep);font-weight:700;text-decoration:underline;">Chat with us on WhatsApp</a> — we'll recommend the best one for your goal and timeline.</p>
-    <div class="pgrid">
-      <div class="pcard rv">
-        <div class="pname">Self-Paced</div>
-        <div class="pdisc"><span class="poriginal">₹6,999</span><span class="pbadge">30% OFF</span></div>
-        <div class="pamount"><sup>₹</sup>4,999</div>
-        <div class="pper">30-day access · One-time payment</div>
-        <ul class="pfeats">
+    <div class="section-head">
+      <div class="eyebrow rv">Pricing</div>
+      <h2 class="rv">Simple, transparent pricing</h2>
+      <p class="lede rv">Not sure which plan? <a href="https://wa.me/919877714284?text=Hi!%20Help%20me%20choose%20the%20right%20IELTS%20plan" target="_blank" style="color:var(--blue);font-weight:600;text-decoration:underline;">Chat with us on WhatsApp</a> — we'll recommend the best one for your goal and timeline.</p>
+    </div>
+    <div class="p-grid">
+      <div class="p-card rv">
+        <div class="p-name">Self-Paced</div>
+        <div><span class="p-orig">₹6,999</span><span class="p-disc-badge">30% OFF</span></div>
+        <div class="p-amount"><sup>₹</sup>4,999</div>
+        <div class="p-per">30-day access · One-time payment</div>
+        <div class="p-guarantee">🛡️ Band 7+ Guaranteed or Money Back</div>
+        <ul class="p-feats">
           <li>30 recorded video lectures</li>
           <li>Covers all 4 IELTS modules</li>
           <li>2 full-length mock tests</li>
           <li>Study notes &amp; module guides</li>
           <li>WhatsApp support for queries</li>
         </ul>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20Self-Paced%20program%20at%20Rs.4999" class="pbtn pbtn-out" target="_blank">Enroll via WhatsApp</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20Self-Paced%20program%20at%20Rs.4999" class="btn btn-blue-outline" target="_blank">Enroll via WhatsApp</a>
       </div>
-      <div class="pcard pop rv">
-        <div class="pop-flag">🔥 Most Popular</div>
-        <div class="pname">Live Coaching</div>
-        <div class="pdisc"><span class="poriginal">₹21,999</span><span class="pbadge">30% OFF</span></div>
-        <div class="pamount"><sup>₹</sup>14,999</div>
-        <div class="pper">30-day intensive · Max 5 students per batch</div>
-        <ul class="pfeats">
+      <div class="p-card pop rv">
+        <div class="p-pop-flag">🔥 Most Popular</div>
+        <div class="p-name">Live Coaching</div>
+        <div><span class="p-orig">₹21,999</span><span class="p-disc-badge">30% OFF</span></div>
+        <div class="p-amount"><sup>₹</sup>14,999</div>
+        <div class="p-per">30-day intensive · Max 5 students per batch</div>
+        <div class="p-guarantee">🛡️ Band 7+ Guaranteed or Money Back</div>
+        <ul class="p-feats">
           <li>Alternate-day live sessions (1.5 hrs each)</li>
           <li>1-on-1 speaking mock interviews</li>
           <li>Unlimited writing evaluations</li>
           <li>5 full-length mock tests</li>
           <li>WhatsApp doubt support 24/7</li>
         </ul>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20Live%20Coaching%20at%20Rs.14999" class="pbtn pbtn-fill" target="_blank">Enroll via WhatsApp</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20Live%20Coaching%20at%20Rs.14999" class="btn btn-wa" target="_blank">💬 Enroll via WhatsApp</a>
       </div>
-      <div class="pcard rv">
-        <div class="pname">1-on-1 Mentorship</div>
-        <div class="pdisc"><span class="poriginal">₹27,999</span><span class="pbadge">30% OFF</span></div>
-        <div class="pamount"><sup>₹</sup>19,999</div>
-        <div class="pper">30-day elite program · Limited seats</div>
-        <ul class="pfeats">
+      <div class="p-card rv">
+        <div class="p-name">1-on-1 Mentorship</div>
+        <div><span class="p-orig">₹27,999</span><span class="p-disc-badge">30% OFF</span></div>
+        <div class="p-amount"><sup>₹</sup>19,999</div>
+        <div class="p-per">30-day elite program · Limited seats</div>
+        <div class="p-guarantee">🛡️ Band 7+ Guaranteed or Money Back</div>
+        <ul class="p-feats">
           <li>Everything in Live Coaching</li>
           <li>Dedicated personal coach</li>
-          <li>Alternate-day 1-on-1 personalised sessions (1.5 hrs each)</li>
+          <li>Alternate-day 1-on-1 sessions (1.5 hrs each)</li>
           <li>Custom study plan built for you</li>
           <li>Priority feedback within 4 hours</li>
         </ul>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20about%201-on-1%20Mentorship" class="pbtn pbtn-out" target="_blank">Book Free Consultation</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20about%201-on-1%20Mentorship" class="btn btn-blue-outline" target="_blank">Book Free Consultation →</a>
       </div>
     </div>
   </div>
 </section>
+
 <!-- FRENCH -->
-<section class="sec" id="french" style="background:var(--paper-deep);">
+<section class="sec sec-alt" id="french">
   <div class="container">
-    <div class="kicker alt rv">04 — Also Available</div>
-    <h2 class="h2 rv">Learn French — <em>A1 to C1</em></h2>
-    <p class="lede rv">From Canada PR to DELF/DALF — live 1-on-1 French coaching with a certified trainer. Start with a free 60-min demo class, walk out with a personal study plan.</p>
+    <div class="section-head">
+      <div class="eyebrow rv">Also Available</div>
+      <h2 class="rv">French Coaching — A1 to C1</h2>
+      <p class="lede rv">From Canada PR to DELF/DALF — live 1-on-1 French coaching with a certified trainer. Start with a free 60-min demo class, walk out with a personal study plan.</p>
+    </div>
     <div class="fr-grid">
       <div class="fr-card rv">
         <div class="fr-tag">Most Popular</div>
@@ -757,7 +1203,7 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
           <span>★ 4.7 Google Rating</span>
           <span>Regulated Immigration Consultant</span>
         </div>
-        <a href="book-demo-french" class="fr-btn" target="_blank">Book My Free French Demo →</a>
+        <a href="book-demo-french" class="btn btn-blue" target="_blank">Book My Free French Demo →</a>
       </div>
     </div>
   </div>
@@ -766,9 +1212,11 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
 <!-- COACHES -->
 <section class="sec" id="coaches">
   <div class="container">
-    <div class="kicker rv">05 — Meet the Team</div>
-    <h2 class="h2 rv">Learn from <em>the best</em></h2>
-    <p class="lede rv">CELTA/DELTA certified British-trained experts with a track record of transforming student scores.</p>
+    <div class="section-head">
+      <div class="eyebrow rv">Meet the Team</div>
+      <h2 class="rv">Learn from the best</h2>
+      <p class="lede rv">CELTA/DELTA certified British-trained experts with a track record of transforming student scores.</p>
+    </div>
     <div class="coach-grid">
       <div class="coach-card rv">
         <div class="coach-name">Sanjita</div>
@@ -792,106 +1240,13 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="sec" id="testimonials" style="background:var(--paper-deep);">
-  <div class="container">
-    <div class="kicker rv">06 — Student Stories</div>
-    <h2 class="h2 rv">What our <em>students say</em></h2>
-    <p class="lede rv">Real reviews from students who achieved their target scores with PrepEve.</p>
-    <div class="tgrid">
-      <div class="tcard rv">
-        <div class="tband">8.5</div>
-        <div class="tband-lbl">BAND SCORE</div>
-        <div class="tstars">★★★★★</div>
-        <p class="ttext">"Honestly, I can't thank the team enough. It's been almost two years since I took my IELTS classes with them, and they still support me whenever I reach out. That kind of dedication is rare. Highly recommend to anyone serious about their IELTS journey."</p>
-        <div class="tname">Anooj Motghare</div>
-        <a href="https://www.google.com/maps/contrib/102113621604889428073/reviews/@49.1476785,-165.0496148,3z/data=!4m3!8m2!3m1!1e1?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="tlink">⭐ View on Google</a>
-        <div class="tverif">✓ Verified Student</div>
-      </div>
-      <div class="tcard rv">
-        <div class="tband">8.0</div>
-        <div class="tband-lbl">BAND SCORE</div>
-        <div class="tstars">★★★★★</div>
-        <p class="ttext">"I had a great experience with PrepEve for my IELTS preparation. The coaching was extremely helpful and highly effective. The study materials were well-structured and perfectly aligned with the actual exam pattern. I truly appreciate the support and guidance provided throughout the process."</p>
-        <div class="tname">Yashaswini Palakonda</div>
-        <a href="https://www.google.com/maps/contrib/109065652692536741630/reviews?hl=en-IN" target="_blank" class="tlink">⭐ View on Google</a>
-        <div class="tverif">✓ Verified Student</div>
-      </div>
-      <div class="tcard rv">
-        <div class="tband">7.5</div>
-        <div class="tband-lbl">BAND SCORE</div>
-        <div class="tstars">★★★★★</div>
-        <p class="ttext">"Highly recommended! I was so confused watching videos online. After attending a 2-day free webinar, I enrolled. Their class notes let you skim through every module quickly. They will assist with Speaking &amp; Writing mock tests. I felt like I benefited more than what I paid for. Just go with it — they will give you exactly what you need!"</p>
-        <div class="tname">Shashikanth Revelly</div>
-        <a href="https://www.google.com/maps/contrib/110923457556373260953/reviews?hl=en-IN" target="_blank" class="tlink">⭐ View on Google</a>
-        <div class="tverif">✓ Verified Student</div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- VIDEO TESTIMONIALS -->
-<section class="sec" id="video-testimonials">
-  <div class="container">
-    <div class="kicker rv">07 — Video Proof</div>
-    <h2 class="h2 rv">Hear it from <em>our students</em></h2>
-    <div class="vgrid">
-      <div class="vcard rv">
-        <a href="https://www.youtube.com/watch?v=8agy5ojp36I" target="_blank" class="vthumb">
-          <img src="https://img.youtube.com/vi/8agy5ojp36I/hqdefault.jpg" alt="Student testimonial — Taranjeet">
-          <div class="play"><span><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></span></div>
-          <div class="vband">8.5 Band</div>
-        </a>
-        <div class="vinfo">
-          <div class="vstars">★★★★★</div>
-          <p class="vquote">"I was stuck at Band 6.5 for a year. PrepEve's speaking framework changed everything — I hit 8.0 in just 30 days!"</p>
-          <div class="vname">Taranjeet</div>
-          <div class="vmeta">Watch on YouTube</div>
-          <div class="vimp">↑ From 7.0 to 8.0</div>
-        </div>
-      </div>
-      <div class="vcard rv">
-        <a href="https://www.youtube.com/watch?v=5FbjLsycE2k" target="_blank" class="vthumb">
-          <img src="https://img.youtube.com/vi/5FbjLsycE2k/hqdefault.jpg" alt="Student testimonial — Pratishtha">
-          <div class="play"><span><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></span></div>
-          <div class="vband">8.0 Band</div>
-        </a>
-        <div class="vinfo">
-          <div class="vstars">★★★★★</div>
-          <p class="vquote">"The writing feedback is better than any tutor I've had. Got into UCL — dream come true!"</p>
-          <div class="vname">Pratishtha</div>
-          <div class="vmeta">Watch on YouTube</div>
-          <div class="vimp">↑ From 6.0 to 8.0</div>
-        </div>
-      </div>
-      <div class="vcard rv">
-        <a href="https://www.youtube.com/watch?v=2f9jwGWIREI" target="_blank" class="vthumb">
-          <img src="https://img.youtube.com/vi/2f9jwGWIREI/hqdefault.jpg" alt="Student testimonial — Deepanshu">
-          <div class="play"><span><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></span></div>
-          <div class="vband">7.5 Band</div>
-        </a>
-        <div class="vinfo">
-          <div class="vstars">★★★★★</div>
-          <p class="vquote">"I enrolled via WhatsApp in 10 minutes. The support throughout the 30 days was incredible."</p>
-          <div class="vname">Deepanshu</div>
-          <div class="vmeta">Watch on YouTube</div>
-          <div class="vimp">↑ From 6.5 to 8.0</div>
-        </div>
-      </div>
-    </div>
-    <div class="yt-cta-row rv">
-      <div><div class="t">🎥 50+ student success stories on YouTube</div><div class="s">Watch real students share their journey — from fear to Band 7+. Subscribe for new testimonials every week.</div></div>
-      <a href="https://www.youtube.com/@prepeveclasses" class="btn btn-coral" target="_blank">Watch on YouTube</a>
-    </div>
-  </div>
-</section>
-
-<!-- DEMO CLASS -->
-<section class="sec" id="demo">
+<!-- DEMO BOX -->
+<section class="sec" id="demo" style="background:var(--bg)">
   <div class="container">
     <div class="demo-box rv">
-      <div class="kicker" style="color:#F2B85A"><span style="display:none"></span>08 — Try Before You Buy</div>
-      <h2 class="h2">Experience a <em>free demo class</em> before you enrol</h2>
-      <p class="lede">Not sure if PrepEve is right for you? Join a live demo session with one of our certified trainers — completely free, no commitment needed. See our teaching style, ask questions, and decide with confidence.</p>
+      <div class="eyebrow" style="justify-content:center">Try Before You Buy</div>
+      <h2>Experience a free demo class before you enrol</h2>
+      <p class="lede">Not sure if PrepEve is right for you? Join a live demo session with one of our certified trainers — completely free, no commitment needed.</p>
       <div class="demo-cards">
         <div class="demo-card">
           <div class="di">🎯</div>
@@ -910,8 +1265,8 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
         </div>
       </div>
       <div class="demo-btns">
-        <a href="book-demo" class="btn btn-coral" target="_blank">Book My Free Demo Class</a>
-        <a href="https://www.youtube.com/@prepeveclasses" class="btn btn-ghost" style="border-color:rgba(250,246,239,.3);color:var(--paper)" target="_blank">Watch Free Classes First</a>
+        <a href="book-demo" class="btn btn-white btn-lg" target="_blank">Book My Free Demo Class</a>
+        <a href="https://www.youtube.com/@prepeveclasses" class="btn btn-dark-ghost btn-lg" target="_blank">Watch Free Classes First</a>
       </div>
       <p class="demo-note">✅ 100% Free &nbsp;·&nbsp; No credit card &nbsp;·&nbsp; No obligation &nbsp;·&nbsp; Limited spots per week</p>
     </div>
@@ -919,14 +1274,14 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
 </section>
 
 <!-- YOUTUBE -->
-<section class="sec yt-section" id="youtube">
+<section class="sec" id="youtube">
   <div class="container">
     <div class="yt-grid">
       <div>
-        <div class="kicker rv">09 — Free Content</div>
-        <h2 class="h2 rv">@PrepEveClasses <em>on YouTube</em></h2>
+        <div class="eyebrow rv">Free Content</div>
+        <h2 class="rv">@PrepEveClasses on YouTube</h2>
         <p class="lede rv">Weekly free lessons, student success stories, and exam strategy — no signup required.</p>
-        <a href="https://www.youtube.com/@prepeveclasses" class="btn btn-ink rv" target="_blank">Subscribe — it's free</a>
+        <a href="https://www.youtube.com/@prepeveclasses" class="btn btn-blue rv" target="_blank" style="margin-top:20px">Subscribe — it's free</a>
         <div class="yt-stats-row rv">
           <div><div class="v">120K+</div><div class="l">Subscribers</div></div>
           <div><div class="v">100+</div><div class="l">Free Lessons</div></div>
@@ -934,10 +1289,10 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
         </div>
       </div>
       <div class="rv">
-        <a href="https://www.youtube.com/watch?v=U9P_CHZMrYE" target="_blank" style="display:block;position:relative;border-radius:16px;overflow:hidden;text-decoration:none;">
-          <img src="https://img.youtube.com/vi/U9P_CHZMrYE/maxresdefault.jpg" alt="Watch on YouTube" style="width:100%;aspect-ratio:16/9;object-fit:cover" onerror="this.src='https://img.youtube.com/vi/U9P_CHZMrYE/hqdefault.jpg'">
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(33,28,22,.3)">
-            <div style="width:64px;height:64px;background:var(--coral);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+        <a href="https://www.youtube.com/@prepeveclasses" target="_blank" style="display:block;position:relative;border-radius:var(--r-xl);overflow:hidden;text-decoration:none;">
+          <img src="https://img.youtube.com/vi/U9P_CHZMrYE/maxresdefault.jpg" alt="Watch PrepEve on YouTube" style="width:100%;aspect-ratio:16/9;object-fit:cover" onerror="this.src='https://img.youtube.com/vi/U9P_CHZMrYE/hqdefault.jpg'" loading="lazy">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.3)">
+            <div style="width:64px;height:64px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
             </div>
           </div>
@@ -946,11 +1301,12 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
     </div>
   </div>
 </section>
+
 <!-- BAND CALCULATOR -->
 <section class="calc-section" id="calculator">
   <div class="calc-wrap">
-    <div class="kicker">Free Tool</div>
-    <h2>Band score <em>calculator</em></h2>
+    <div class="eyebrow">Free Tool</div>
+    <h2>Band score calculator</h2>
     <p>Answer 5 quick questions — get your estimated band score and a free personalised study plan instantly.</p>
     <div class="qbar-row">
       <div class="qbar-track"><div class="qbar-fill" id="QBar"></div></div>
@@ -960,14 +1316,12 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
   </div>
 </section>
 
-<!-- BATCHES -->
+<!-- BATCH SECTION -->
 <section class="sec batch-section" id="batches">
   <div class="container">
-    <div class="kicker rv" style="color:#F2B85A"></div>
-    <div class="kicker rv" style="color:rgba(250,246,239,.55)">10 — Upcoming Batches</div>
-    <h2 class="h2 rv">Next batch starts <em>soon</em></h2>
-    <p class="lede rv" style="color:rgba(250,246,239,.55)">Seats fill up fast — every batch is capped at 5 students for quality. Reserve yours now on WhatsApp.</p>
-
+    <div class="eyebrow rv" style="color:#93C5FD">Upcoming Batches</div>
+    <h2 class="rv" style="margin-bottom:8px">Next batch starts soon</h2>
+    <p class="lede rv" style="color:rgba(255,255,255,.55);margin-bottom:32px">Seats fill up fast — every batch is capped at 5 students for quality. Reserve yours now on WhatsApp.</p>
     <div class="countdown-banner rv">
       <div class="cb-label">🔥 Next batch enrollment closes in:</div>
       <div class="cd-units">
@@ -980,25 +1334,24 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
         <div class="cu"><div class="cu-val" id="cd-sec">--</div><div class="cu-lbl">Secs</div></div>
       </div>
     </div>
-
     <div class="batch-grid">
       <div class="batch-card hot rv">
         <span class="b-badge hot">🔥 Filling Fast</span>
         <div class="b-type">Live Coaching · Academic</div>
-        <div class="b-name">March Batch</div>
-        <div class="b-date">📅 Starts Apr 1, 2026</div>
+        <div class="b-name">October Batch</div>
+        <div class="b-date">📅 Starts Oct 1, 2026</div>
         <div class="seats-bar"><div class="seats-fill" style="width:85%"></div></div>
         <div class="seats-text">3 seats left</div>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20reserve%20a%20seat%20in%20the%20February%20Batch" class="b-btn" target="_blank">Reserve My Seat</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20reserve%20a%20seat%20in%20the%20October%20Batch" class="b-btn" target="_blank">Reserve My Seat</a>
       </div>
       <div class="batch-card rv">
         <span class="b-badge open">✓ Enrolling Open</span>
         <div class="b-type">Live Coaching · General Training</div>
-        <div class="b-name">March Batch</div>
-        <div class="b-date">📅 Starts Apr 1, 2026</div>
+        <div class="b-name">October Batch</div>
+        <div class="b-date">📅 Starts Oct 1, 2026</div>
         <div class="seats-bar"><div class="seats-fill" style="width:40%"></div></div>
         <div class="seats-text">12 seats left</div>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20the%20March%20General%20Training%20Batch" class="b-btn" target="_blank">Reserve My Seat</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20the%20October%20General%20Training%20Batch" class="b-btn" target="_blank">Reserve My Seat</a>
       </div>
       <div class="batch-card rv">
         <span class="b-badge open">✓ Enrolling Open</span>
@@ -1016,75 +1369,63 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
 <!-- FAQ -->
 <section class="sec" id="faq">
   <div class="container">
-    <div class="kicker rv">11 — FAQ</div>
-    <h2 class="h2 rv">Frequently asked <em>questions</em></h2>
-    <p class="lede rv">Still have questions? WhatsApp us — we reply within minutes.</p>
-    <div class="faq-list">
-      <div class="faq-item open rv">
+    <div class="section-head">
+      <div class="eyebrow rv">FAQ</div>
+      <h2 class="rv">Frequently asked questions</h2>
+      <p class="lede rv">Still have questions? WhatsApp us — we reply within minutes.</p>
+    </div>
+    <div class="faq-list rv">
+      <div class="faq-item open">
         <button class="faq-q">What is the Exam Cleared Guarantee? <span class="faq-icon">+</span></button>
         <div class="faq-a"><div class="faq-a-inner">If you complete all sessions, submit all practice tasks, and attend all mock tests but still don't clear your exam, we give you a full refund — no questions asked. This applies to our Live Coaching and 1-on-1 Mentorship plans.</div></div>
       </div>
-      <div class="faq-item rv">
+      <div class="faq-item">
         <button class="faq-q">How do I enroll? Can I do it on WhatsApp? <span class="faq-icon">+</span></button>
         <div class="faq-a"><div class="faq-a-inner">Yes! Most of our students enroll directly through WhatsApp. Just message us on +91 98777 14284 and our team will guide you through the process, answer any questions, and help you pick the right plan — all in a quick chat.</div></div>
       </div>
-      <div class="faq-item rv">
+      <div class="faq-item">
         <button class="faq-q">How are live classes conducted? <span class="faq-icon">+</span></button>
         <div class="faq-a"><div class="faq-a-inner">All live classes are on Zoom, 1.5 hours each, Monday to Friday. Every session is recorded. Batches are capped at just 5 students for maximum personal attention. You'll be added to a WhatsApp group for your batch for daily updates and doubt-solving.</div></div>
       </div>
-      <div class="faq-item rv">
+      <div class="faq-item">
         <button class="faq-q">Can I join if I'm a complete beginner? <span class="faq-icon">+</span></button>
         <div class="faq-a"><div class="faq-a-inner">Absolutely! After enrollment, you take a free diagnostic test and we build a personalised study plan. Beginners typically need 60–90 days; those with some prep can see results in 30–45 days. WhatsApp us and we'll assess your level for free.</div></div>
       </div>
-      <div class="faq-item rv">
+      <div class="faq-item">
         <button class="faq-q">Do you offer General Training IELTS? <span class="faq-icon">+</span></button>
         <div class="faq-a"><div class="faq-a-inner">Yes! Both Academic and General Training. Our coach Ananya specialises in General Training and has helped 1,500+ students achieve Band 7+ for Canadian PR, UK Visa, and Australian migration.</div></div>
       </div>
-      <div class="faq-item rv">
+      <div class="faq-item">
         <button class="faq-q">Do you offer PTE, Duolingo, CELPIP or TOEFL coaching? <span class="faq-icon">+</span></button>
         <div class="faq-a"><div class="faq-a-inner">Yes! Our certified trainers coach for IELTS, PTE, Duolingo English Test, CELPIP, and TOEFL. WhatsApp us to discuss which exam is best for your visa or immigration pathway.</div></div>
       </div>
-      <div class="faq-item rv">
+      <div class="faq-item">
         <button class="faq-q">What are the class timings? <span class="faq-icon">+</span></button>
         <div class="faq-a"><div class="faq-a-inner">We offer flexible morning and evening slots to suit working professionals and students. Once you enrol, your trainer will coordinate a schedule that works for you. WhatsApp us to check available slots.</div></div>
       </div>
-      <div class="faq-item rv">
+      <div class="faq-item">
         <button class="faq-q">Why choose PrepEve over other IELTS coaching platforms? <span class="faq-icon">+</span></button>
         <div class="faq-a"><div class="faq-a-inner">Most coaching platforms charge ₹20,000–50,000 for batch classes 2–3 times a week with limited personal feedback. PrepEve runs daily live sessions in batches capped at 5 students, gives certified trainer feedback on every submission, and backs it with an exam-cleared-or-refund guarantee — starting from ₹4,999. See the full comparison above, or just ask us on WhatsApp.</div></div>
       </div>
     </div>
-    <div class="faq-cta-row rv">
-      <div><div class="t">💬 Still have a question?</div><div class="s">Our team replies on WhatsApp within 5 minutes — no bots, real people.</div></div>
-      <a href="https://wa.me/919877714284?text=Hi!%20I%20have%20a%20question%20about%20IELTS%20coaching" class="faq-cta-btn" target="_blank">Ask on WhatsApp →</a>
-    </div>
-  </div>
-</section>
-
-<!-- WHATSAPP CONTACT -->
-<section class="sec wa-section">
-  <div class="container">
-    <div class="kicker rv">Talk To A Real Person</div>
-    <h2 class="h2 rv">Questions? <em>Just WhatsApp us</em></h2>
-    <p class="rv">No forms, no waiting on hold. Message our team directly and get a reply within minutes — every day.</p>
-    <div class="wa-row rv">
-      <div class="wa-num-box">
-        <div class="l">WhatsApp Us Directly</div>
-        <div class="n">+91 98777 14284</div>
+    <div class="cta-row rv">
+      <div>
+        <div class="ct">💬 Still have a question?</div>
+        <div class="cs">Our team replies on WhatsApp within 5 minutes — no bots, real people.</div>
       </div>
-      <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20more%20about%20PrepEve%20IELTS" class="wa-big-btn" target="_blank">Start WhatsApp Chat</a>
+      <a href="https://wa.me/919877714284?text=Hi!%20I%20have%20a%20question%20about%20IELTS%20coaching" class="btn btn-wa" target="_blank">Ask on WhatsApp →</a>
     </div>
-    <p class="wa-tip rv"><strong>Tip:</strong> Tell us your target band score and exam date — we'll recommend the right plan instantly.</p>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="sec fcta">
   <div class="container">
-    <h2 class="h2 rv">Ready to get your <em>dream band?</em></h2>
-    <p class="rv">Join 15,000+ students who trusted PrepEve. Start with a free counselling call on WhatsApp — no commitment needed.</p>
-    <div class="fcta-btns rv">
-      <a href="https://wa.me/919877714284?text=Hi!%20I%27d%20like%20a%20free%20IELTS%20counselling%20call" target="_blank" class="btn btn-wa">Get Free Counselling</a>
-      <a href="https://www.youtube.com/@prepeveclasses" class="btn btn-ghost" target="_blank">Watch Free Classes</a>
+    <h2>Ready to get your dream band?</h2>
+    <p>Join 15,000+ students who trusted PrepEve. Start with a free counselling call on WhatsApp — no commitment needed.</p>
+    <div class="fcta-btns">
+      <a href="https://wa.me/919877714284?text=Hi!%20I%27d%20like%20a%20free%20IELTS%20counselling%20call" target="_blank" class="btn btn-white btn-lg">💬 Get Free Counselling on WhatsApp</a>
+      <a href="book-demo" class="btn btn-dark-ghost btn-lg" target="_blank">Book Free Demo →</a>
     </div>
   </div>
 </section>
@@ -1093,20 +1434,23 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
 <footer>
   <div class="container">
     <div class="foot-top">
-      <div class="foot-brand">
-        <div class="fn">Prep<em>eve</em></div>
-        <p>India's most trusted IELTS coaching platform. Band 7+ guaranteed or your money back.</p>
+      <div>
+        <div class="foot-logo">Prep<span>Eve</span></div>
+        <p class="foot-desc">India's most trusted IELTS coaching platform. Band 7+ guaranteed or your money back.</p>
       </div>
-      <div class="foot-wa">
+      <div>
         <div class="foot-wa-label">WhatsApp &amp; Enquiries</div>
         <div class="foot-wa-num">+91 98777 14284</div>
-        <a href="https://wa.me/919877714284" class="foot-wa-link" target="_blank">Chat on WhatsApp</a>
-        <a href="https://www.youtube.com/@prepeveclasses" class="foot-wa-link" target="_blank">▶ youtube.com/@prepeveclasses</a>
+        <div class="foot-links">
+          <a href="https://wa.me/919877714284" target="_blank">💬 Chat on WhatsApp</a>
+          <a href="https://www.youtube.com/@prepeveclasses" target="_blank">▶ youtube.com/@prepeveclasses</a>
+          <a href="https://instagram.com/prepeve" target="_blank">📸 Instagram</a>
+        </div>
       </div>
     </div>
     <div class="foot-social">
       <a href="https://www.youtube.com/@prepeveclasses" target="_blank">▶ YouTube</a>
-      <a href="https://wa.me/919877714284" target="_blank" style="color:var(--wa)">💬 WhatsApp</a>
+      <a href="https://wa.me/919877714284" target="_blank">💬 WhatsApp</a>
       <a href="https://instagram.com/prepeve" target="_blank">📸 Instagram</a>
     </div>
     <div class="foot-copy">© 2025 PrepEve Education Pvt. Ltd. · All rights reserved · Band 7+ Guarantee · Privacy Policy · Terms of Service · WhatsApp: +91 98777 14284</div>
@@ -1136,26 +1480,119 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
 
 <!-- BACK TO TOP -->
 <button id="back-top" title="Back to top">↑</button>
-<script src="/assets/js/prepeve-home.js"></script>
-<script id="calc-script">
+
+<script>
+// ---- Reveal on scroll ----
+(function(){
+  var els = document.querySelectorAll('.rv');
+  if (!els.length) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  els.forEach(function(el){ io.observe(el); });
+})();
+
+// ---- Mobile menu ----
+(function(){
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mob-menu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function(){
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ menu.classList.remove('open'); });
+  });
+})();
+
+// ---- FAQ accordion ----
+(function(){
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+})();
+
+// ---- Video lightbox ----
+(function(){
+  var modal = document.getElementById('vt-modal');
+  var iframe = document.getElementById('vt-iframe');
+  var bg = document.getElementById('vt-modal-bg');
+  var closeBtn = document.getElementById('vt-modal-close');
+  if (!modal) return;
+  function open(vid){
+    iframe.src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1';
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    modal.classList.remove('open');
+    iframe.src = '';
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.v-thumb[data-vid]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      open(a.dataset.vid);
+    });
+  });
+  bg.addEventListener('click', close);
+  closeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+})();
+
+// ---- Back to top ----
+(function(){
+  var btn = document.getElementById('back-top');
+  if (!btn) return;
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('show', window.scrollY > 600);
+  });
+  btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+})();
+
+// ---- Countdown timer ----
+(function(){
+  function updateCountdown(){
+    var now = new Date();
+    var target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7, 23, 59, 59);
+    var diff = Math.max(target - now, 0);
+    function pad(n){ return String(Math.floor(n)).padStart(2,'0'); }
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000)  / 60000);
+    var s = Math.floor((diff % 60000)    / 1000);
+    var elD = document.getElementById('cd-days');
+    var elH = document.getElementById('cd-hrs');
+    var elM = document.getElementById('cd-min');
+    var elS = document.getElementById('cd-sec');
+    if(elD) elD.textContent = pad(d);
+    if(elH) elH.textContent = pad(h);
+    if(elM) elM.textContent = pad(m);
+    if(elS) elS.textContent = pad(s);
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+})();
+
+// ---- Band Calculator Quiz ----
 (function(){
   var ANS=[0,0,0,0,0], CUR=1;
   var QS=[
     {q:"How comfortable are you speaking English in everyday conversations?",
-     o:["I struggle - I often cannot express what I mean","I manage but make many mistakes","I am fairly fluent with occasional errors","Very comfortable - I speak naturally and confidently"],
-     em:["1","2","3","4"]},
+     o:["I struggle - I often cannot express what I mean","I manage but make many mistakes","I am fairly fluent with occasional errors","Very comfortable - I speak naturally and confidently"]},
     {q:"When you read an English article, how much do you understand?",
-     o:["Less than 50% - I need to look up many words","About 60-70% - I get the main idea","Around 80-90% - I understand most details","Almost everything including complex texts"],
-     em:["1","2","3","4"]},
+     o:["Less than 50% - I need to look up many words","About 60-70% - I get the main idea","Around 80-90% - I understand most details","Almost everything including complex texts"]},
     {q:"How would you rate your English writing skills?",
-     o:["Basic - I make lots of grammar and vocabulary errors","Intermediate - I can write but structure is weak","Good - I write clearly with minor errors","Strong - I write complex, well-structured essays"],
-     em:["1","2","3","4"]},
+     o:["Basic - I make lots of grammar and vocabulary errors","Intermediate - I can write but structure is weak","Good - I write clearly with minor errors","Strong - I write complex, well-structured essays"]},
     {q:"How much IELTS preparation have you done so far?",
-     o:["None - I am a complete beginner to IELTS","A little - I have read about the format","Some - I have done a few practice tests","Extensive - I have taken coaching or a real test before"],
-     em:["1","2","3","4"]},
+     o:["None - I am a complete beginner to IELTS","A little - I have read about the format","Some - I have done a few practice tests","Extensive - I have taken coaching or a real test before"]},
     {q:"What is your target band score?",
-     o:["Band 6.0 - 6.5 (minimum requirement)","Band 8.0 (Canada PR / UK Visa)","Band 8.0 - 8.5 (top universities / Australia)","Band 9.0 (maximum - teaching / research)"],
-     em:["1","2","3","4"]}
+     o:["Band 6.0 - 6.5 (minimum requirement)","Band 7.0 - 7.5 (Canada PR / UK Visa)","Band 8.0 - 8.5 (top universities / Australia)","Band 9.0 (maximum - teaching / research)"]}
   ];
 
   function setBar(n){
@@ -1171,33 +1608,33 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
     setBar(CUR);
     var q=QS[CUR-1];
     var h="";
-    h+='<div style="font-size:1rem;font-weight:700;color:#FAF6EF;margin-bottom:1.3rem;line-height:1.6">';
-    h+='<span style="color:#E5572C">Q'+CUR+'. </span>'+q.q+'</div>';
+    h+='<div style="font-size:1rem;font-weight:700;color:#fff;margin-bottom:1.3rem;line-height:1.6">';
+    h+='<span style="color:#93C5FD">Q'+CUR+'. </span>'+q.q+'</div>';
     h+='<div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem">';
     for(var i=0;i<4;i++){
       var p=i+1;
       var sel=(ANS[CUR-1]===p);
-      var bg=sel?"rgba(229,87,44,.22)":"rgba(250,246,239,.06)";
-      var bd=sel?"1.5px solid rgba(229,87,44,.85)":"1.5px solid rgba(250,246,239,.12)";
-      var fc=sel?"#FAF6EF":"rgba(250,246,239,.78)";
+      var bg=sel?"rgba(59,130,246,.25)":"rgba(255,255,255,.05)";
+      var bd=sel?"1.5px solid rgba(59,130,246,.85)":"1.5px solid rgba(255,255,255,.12)";
+      var fc=sel?"#fff":"rgba(255,255,255,.75)";
       var fw=sel?"700":"500";
       h+='<button type="button" onclick="window._qpick('+p+')" ';
       h+='style="display:flex;align-items:center;gap:.8rem;width:100%;padding:.9rem 1rem;';
-      h+='background:'+bg+';border:'+bd+';border-radius:11px;cursor:pointer;text-align:left;';
+      h+='background:'+bg+';border:'+bd+';border-radius:10px;cursor:pointer;text-align:left;';
       h+='font-size:.875rem;font-weight:'+fw+';color:'+fc+';font-family:inherit">';
-      h+='<span style="width:24px;height:24px;border-radius:50%;background:rgba(250,246,239,.12);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;flex-shrink:0">'+p+'</span>';
+      h+='<span style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;flex-shrink:0">'+p+'</span>';
       h+=q.o[i];
       h+='</button>';
     }
     h+='</div>';
     h+='<div style="display:flex;justify-content:'+(CUR>1?"space-between":"flex-end")+';gap:.7rem">';
     if(CUR>1){
-      h+='<button type="button" onclick="window._qback()" style="padding:.65rem 1.5rem;border-radius:8px;font-weight:700;font-size:.84rem;cursor:pointer;background:rgba(250,246,239,.1);color:rgba(250,246,239,.65);border:1px solid rgba(250,246,239,.15);font-family:inherit">&larr; Back</button>';
+      h+='<button type="button" onclick="window._qback()" style="padding:.65rem 1.5rem;border-radius:8px;font-weight:700;font-size:.84rem;cursor:pointer;background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.15);font-family:inherit">&larr; Back</button>';
     }
     if(CUR<5){
-      h+='<button type="button" onclick="window._qnext()" style="padding:.65rem 1.8rem;border-radius:8px;font-weight:700;font-size:.84rem;cursor:pointer;background:#E5572C;color:#FAF6EF;border:none;font-family:inherit">Next &rarr;</button>';
+      h+='<button type="button" onclick="window._qnext()" style="padding:.65rem 1.8rem;border-radius:8px;font-weight:700;font-size:.84rem;cursor:pointer;background:#1A56DB;color:#fff;border:none;font-family:inherit">Next &rarr;</button>';
     } else {
-      h+='<button type="button" onclick="window._qresult()" style="padding:.65rem 1.8rem;border-radius:8px;font-weight:700;font-size:.84rem;cursor:pointer;background:#1E8A4C;color:#fff;border:none;font-family:inherit">See My Result &rarr;</button>';
+      h+='<button type="button" onclick="window._qresult()" style="padding:.65rem 1.8rem;border-radius:8px;font-weight:700;font-size:.84rem;cursor:pointer;background:#25D366;color:#fff;border:none;font-family:inherit">See My Result &rarr;</button>';
     }
     h+='</div>';
     box.innerHTML=h;
@@ -1206,7 +1643,7 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
   function shake(){
     var b=document.getElementById("QBOX");
     if(!b) return;
-    b.style.boxShadow="0 0 0 3px rgba(229,87,44,.7)";
+    b.style.boxShadow="0 0 0 3px rgba(59,130,246,.7)";
     setTimeout(function(){b.style.boxShadow="";},700);
   }
 
@@ -1226,7 +1663,7 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
     } else if(avg<=2.4){
       band="5.5 - 6.5";title="Developing Level";
       desc="Your estimated band is 5.5-6.5. You have a solid foundation. With the right strategies, Band 7+ is well within reach in 30 days.";
-      plan=["30-day Live Coaching program","Writing Task 2 structure and Speaking fluency","10 full mock tests with detailed analysis","certified trainer feedback on every submission"];
+      plan=["30-day Live Coaching program","Writing Task 2 structure and Speaking fluency","10 full mock tests with detailed analysis","Certified trainer feedback on every submission"];
       msg="Hi! I used the Prepeve band calculator and got Band 5.5-6.5. I want to reach Band 7+.";
     } else if(avg<=3.2){
       band="6.5 - 7.5";title="Upper-Intermediate!";
@@ -1245,52 +1682,30 @@ footer{ background:var(--ink); color:rgba(250,246,239,.6); padding:4rem 0 2rem; 
     if(l)l.textContent="Your Result!";
     var pl="";
     for(var i=0;i<plan.length;i++){
-      pl+='<li style="font-size:.84rem;color:rgba(250,246,239,.78);padding:.3rem 0;display:flex;gap:.5rem"><span style="color:#E5572C;font-weight:800;flex-shrink:0">&rarr;</span>'+plan[i]+'</li>';
+      pl+='<li style="font-size:.84rem;color:rgba(255,255,255,.75);padding:.3rem 0;display:flex;gap:.5rem"><span style="color:#93C5FD;font-weight:800;flex-shrink:0">&rarr;</span>'+plan[i]+'</li>';
     }
     var waUrl="https://wa.me/919877714284?text="+encodeURIComponent(msg);
     document.getElementById("QBOX").innerHTML=
       '<div style="text-align:center;margin-bottom:1.4rem">'+
-      '<div style="width:110px;height:110px;border-radius:50%;background:#E5572C;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 8px 32px rgba(229,87,44,.4)">'+
+      '<div style="width:110px;height:110px;border-radius:50%;background:#1A56DB;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 8px 32px rgba(26,86,219,.4)">'+
       '<div style="font-size:2rem;font-weight:800;color:#fff;line-height:1">'+band.split(" ")[0]+'</div>'+
       '<div style="font-size:.48rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85)">EST. BAND</div>'+
       '</div>'+
-      '<div style="font-size:1.5rem;font-weight:800;color:#FAF6EF;margin-bottom:.5rem;font-family:\'Fraunces\',serif">'+title+'</div>'+
-      '<p style="font-size:.87rem;color:rgba(250,246,239,.62);line-height:1.8;max-width:440px;margin:0 auto">'+desc+'</p>'+
+      '<div style="font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:.5rem;font-family:\'Plus Jakarta Sans\',sans-serif">'+title+'</div>'+
+      '<p style="font-size:.87rem;color:rgba(255,255,255,.6);line-height:1.8;max-width:440px;margin:0 auto">'+desc+'</p>'+
       '</div>'+
-      '<div style="background:rgba(250,246,239,.07);border:1px solid rgba(250,246,239,.1);border-radius:13px;padding:1.1rem 1.3rem;margin-bottom:1.3rem">'+
-      '<div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E5572C;margin-bottom:.7rem">Your Recommended Study Plan</div>'+
+      '<div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.1rem 1.3rem;margin-bottom:1.3rem">'+
+      '<div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#93C5FD;margin-bottom:.7rem">Your Recommended Study Plan</div>'+
       '<ul style="list-style:none;padding:0;margin:0">'+pl+'</ul>'+
       '</div>'+
       '<div style="display:flex;flex-direction:column;gap:.65rem">'+
-      '<a href="'+waUrl+'" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem;background:#1E8A4C;color:#fff;border-radius:10px;font-weight:700;font-size:.9rem;text-decoration:none">Chat on WhatsApp &rarr; Get Free Plan</a>'+
-      '<button type="button" onclick="window._qreset()" style="padding:.75rem;background:rgba(250,246,239,.09);color:rgba(250,246,239,.6);border:1px solid rgba(250,246,239,.13);border-radius:10px;font-weight:700;font-size:.84rem;cursor:pointer;font-family:inherit">Retake Quiz</button>'+
+      '<a href="'+waUrl+'" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem;background:#25D366;color:#fff;border-radius:10px;font-weight:700;font-size:.9rem;text-decoration:none">💬 Chat on WhatsApp &rarr; Get Free Plan</a>'+
+      '<button type="button" onclick="window._qreset()" style="padding:.75rem;background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.13);border-radius:10px;font-weight:700;font-size:.84rem;cursor:pointer;font-family:inherit">Retake Quiz</button>'+
       '</div>';
   };
   window._qreset=function(){ ANS=[0,0,0,0,0]; CUR=1; render(); };
   render();
 })();
 </script>
-<script>
-// Countdown timer — page-specific
-function updateCountdown() {
-  var now    = new Date();
-  var target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7, 23, 59, 59);
-  var diff   = Math.max(target - now, 0);
-  function pad(n) { return String(Math.floor(n)).padStart(2, '0'); }
-  var d = Math.floor(diff / 86400000);
-  var h = Math.floor((diff % 86400000) / 3600000);
-  var m = Math.floor((diff % 3600000)  / 60000);
-  var s = Math.floor((diff % 60000)    / 1000);
-  var elD = document.getElementById('cd-days');
-  var elH = document.getElementById('cd-hrs');
-  var elM = document.getElementById('cd-min');
-  var elS = document.getElementById('cd-sec');
-  if (elD) elD.textContent = pad(d);
-  if (elH) elH.textContent = pad(h);
-  if (elM) elM.textContent = pad(m);
-  if (elS) elS.textContent = pad(s);
-}
-updateCountdown();
-setInterval(updateCountdown, 1000);
-</script>
-</body></html>
+</body>
+</html>
