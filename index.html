@@ -482,13 +482,23 @@ h3 { font-size: 1.1rem; font-weight: 700; }
 /* ============================================================
    COACHES
    ============================================================ */
-.coach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.coach-section { background: #F8F9FA; }
+.coach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .coach-card {
   background: var(--white); border: 1px solid var(--line); border-radius: var(--r-xl);
-  padding: 24px;
+  padding: 28px 24px; box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  transition: box-shadow .2s;
+}
+.coach-card:hover { box-shadow: 0 6px 24px rgba(26,86,219,.10); }
+.coach-avatar {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #1A56DB; color: #fff;
+  font-family: var(--font-head); font-size: 1.4rem; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
 }
 .coach-name { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; margin-bottom: 2px; }
-.coach-role { font-size: 13px; color: var(--blue); font-weight: 600; margin-bottom: 6px; }
+.coach-role { font-size: 13px; color: #1A56DB; font-weight: 600; margin-bottom: 6px; }
 .coach-exams { font-size: 12px; color: var(--ink-muted); margin-bottom: 10px; }
 .coach-bio { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
 
@@ -1210,27 +1220,30 @@ footer {
 </section>
 
 <!-- COACHES -->
-<section class="sec" id="coaches">
+<section class="sec coach-section" id="coaches">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow rv">Meet the Team</div>
-      <h2 class="rv">Learn from the best</h2>
+      <div class="eyebrow rv">Meet Your Trainers</div>
+      <h2 class="rv">The experts behind your band score</h2>
       <p class="lede rv">CELTA/DELTA certified British-trained experts with a track record of transforming student scores.</p>
     </div>
     <div class="coach-grid">
       <div class="coach-card rv">
+        <div class="coach-avatar">S</div>
         <div class="coach-name">Sanjita</div>
         <div class="coach-role">Founder &amp; Trainer — PrepEve · Regulated Canadian Immigration Consultant</div>
         <div class="coach-exams">IELTS · Duolingo · PTE · CELPIP · TOEFL</div>
         <p class="coach-bio">The driving force behind PrepEve. Sanjita built this institute from the ground up with one mission — to make every student's band dream a reality through personal, focused coaching.</p>
       </div>
       <div class="coach-card rv">
+        <div class="coach-avatar" style="background:#2563EB;">L</div>
         <div class="coach-name">Lesancy Sharma</div>
         <div class="coach-role">IELTS Trainer · PrepEve Master Trainer</div>
         <div class="coach-exams">IELTS · Duolingo · PTE · CELPIP · TOEFL</div>
         <p class="coach-bio">Passionate about helping students unlock their true potential in English. Known for clear explanations, structured feedback, and a student-first approach to every session.</p>
       </div>
       <div class="coach-card rv">
+        <div class="coach-avatar" style="background:#1D4ED8;">K</div>
         <div class="coach-name">Khushpreet</div>
         <div class="coach-role">IELTS Trainer · PrepEve Trainer</div>
         <div class="coach-exams">IELTS · Duolingo · PTE · CELPIP · TOEFL</div>
