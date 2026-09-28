@@ -57,892 +57,162 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/css/prepeve.css"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the Exam Cleared Guarantee?","acceptedAnswer":{"@type":"Answer","text":"If you complete all sessions, submit all practice tasks, and attend all mock tests but still don't clear your exam, we give you a full refund — no questions asked. This applies to our Live Coaching and 1-on-1 Mentorship plans."}},
+{"@type":"Question","name":"How do I enroll? Can I do it on WhatsApp?","acceptedAnswer":{"@type":"Answer","text":"Yes! Most of our students enroll directly through WhatsApp. Just message us on +91 98777 14284 and our team will guide you through the process, answer any questions, and help you pick the right plan — all in a quick chat."}},
+{"@type":"Question","name":"How are live classes conducted?","acceptedAnswer":{"@type":"Answer","text":"All live classes are on Zoom, 1.5 hours each, Monday to Friday. Every session is recorded. Batches are capped at just 5 students for maximum personal attention. You'll be added to a WhatsApp group for your batch for daily updates and doubt-solving."}},
+{"@type":"Question","name":"Can I join if I'm a complete beginner?","acceptedAnswer":{"@type":"Answer","text":"Absolutely! After enrollment, you take a free diagnostic test and we build a personalised study plan. Beginners typically need 60–90 days; those with some prep can see results in 30–45 days. WhatsApp us and we'll assess your level for free."}},
+{"@type":"Question","name":"Do you offer General Training IELTS?","acceptedAnswer":{"@type":"Answer","text":"Yes — we coach both IELTS Academic and General Training, including General Training for Canada PR, UK and Australia visas."}},
+{"@type":"Question","name":"Do you offer PTE, Duolingo, CELPIP or TOEFL coaching?","acceptedAnswer":{"@type":"Answer","text":"Yes! Our certified trainers coach for IELTS, PTE, Duolingo English Test, CELPIP, and TOEFL. WhatsApp us to discuss which exam is best for your visa or immigration pathway."}},
+{"@type":"Question","name":"What are the class timings?","acceptedAnswer":{"@type":"Answer","text":"We offer flexible morning and evening slots to suit working professionals and students. Once you enrol, your trainer will coordinate a schedule that works for you. WhatsApp us to check available slots."}},
+{"@type":"Question","name":"Why choose PrepEve over other IELTS coaching platforms?","acceptedAnswer":{"@type":"Answer","text":"Most coaching platforms charge ₹20,000–50,000 for batch classes 2–3 times a week with limited personal feedback. PrepEve runs daily live sessions in batches capped at 5 students, gives certified trainer feedback on every submission, and backs it with an exam-cleared-or-refund guarantee — starting from ₹4,999. See the full comparison above, or just ask us on WhatsApp."}}
+]}
+</script>
 <style>
-/* ============================================================
-   PREPEVE — CLEAN PROFESSIONAL REDESIGN
-   Background: white / near-white
-   Type: Plus Jakarta Sans (headings) + Inter (body)
-   Accent: Deep Blue #1A56DB
-   WA green only for WhatsApp CTAs
-   ============================================================ */
-:root {
-  --white: #FFFFFF;
-  --bg: #F8F9FA;
-  --bg-alt: #F1F3F5;
-  --ink: #111827;
-  --ink-soft: #374151;
-  --ink-muted: #6B7280;
-  --ink-faint: #9CA3AF;
-  --line: #E5E7EB;
-  --blue: #1A56DB;
-  --blue-dark: #1341B0;
-  --blue-light: #EEF2FF;
-  --blue-mid: #3B82F6;
-  --wa: #25D366;
-  --wa-dark: #128C7E;
-  --r-sm: 8px;
-  --r-md: 12px;
-  --r-lg: 16px;
-  --r-xl: 24px;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
-  --shadow: 0 4px 16px rgba(0,0,0,.08);
-  --shadow-lg: 0 10px 40px rgba(0,0,0,.1);
-  --container: 1160px;
-  --font-head: 'Plus Jakarta Sans', sans-serif;
-  --font-body: 'Inter', sans-serif;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--white);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-
-.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
-.sec { padding: 80px 0; }
-.sec-alt { background: var(--bg); }
-
-/* reveal */
-.rv { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
-.rv.in { opacity: 1; transform: translateY(0); }
-
-/* ---- TYPOGRAPHY ---- */
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  color: var(--blue); margin-bottom: 12px;
-}
-.eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--blue); border-radius: 2px; }
-
-h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.2; }
-h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 800; color: var(--ink); }
-h2 { font-size: clamp(1.6rem, 3.5vw, 2.25rem); font-weight: 800; color: var(--ink); }
-h3 { font-size: 1.1rem; font-weight: 700; }
-.lede { font-size: 1.05rem; color: var(--ink-soft); max-width: 600px; line-height: 1.7; }
-.section-head { margin-bottom: 48px; }
-.section-head .lede { margin-top: 12px; }
-
-/* ---- BUTTONS ---- */
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  font-family: var(--font-body); font-size: 15px; font-weight: 600; line-height: 1;
-  padding: 12px 22px; border-radius: var(--r-md); border: none; cursor: pointer;
-  text-decoration: none; transition: all .2s ease; white-space: nowrap;
-}
-.btn-blue { background: var(--blue); color: #fff; }
-.btn-blue:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(26,86,219,.3); }
-.btn-blue-outline { background: transparent; color: var(--blue); border: 2px solid var(--blue); }
-.btn-blue-outline:hover { background: var(--blue-light); }
-.btn-wa { background: var(--wa); color: #fff; }
-.btn-wa:hover { background: var(--wa-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37,211,102,.3); }
-.btn-ghost { background: transparent; color: var(--ink-soft); border: 1.5px solid var(--line); }
-.btn-ghost:hover { border-color: var(--ink-muted); color: var(--ink); }
-.btn-lg { padding: 15px 28px; font-size: 16px; border-radius: var(--r-lg); }
-
-/* ============================================================
-   NAVBAR
-   ============================================================ */
-.nav {
-  position: sticky; top: 0; z-index: 100;
-  background: rgba(255,255,255,.95); backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
-}
-.nav-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  height: 64px; max-width: var(--container); margin: 0 auto; padding: 0 24px;
-}
-.logo { font-family: var(--font-head); font-size: 1.35rem; font-weight: 800; color: var(--ink); }
-.logo span { color: var(--blue); }
-.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
-.nav-links a { font-size: 14px; font-weight: 500; color: var(--ink-soft); transition: color .15s; }
-.nav-links a:hover { color: var(--blue); }
-.nav-cta { margin-left: 12px; }
-.hamburger {
-  display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer; padding: 4px;
-}
-.hamburger span { width: 22px; height: 2px; background: var(--ink); border-radius: 2px; display: block; transition: .3s; }
-.mob-menu {
-  display: none; position: fixed; inset: 64px 0 0 0; background: var(--white);
-  z-index: 99; padding: 24px; flex-direction: column; gap: 4px;
-  border-top: 1px solid var(--line); overflow-y: auto;
-}
-.mob-menu.open { display: flex; }
-.mob-menu a {
-  padding: 12px 16px; border-radius: var(--r-md); font-size: 15px; font-weight: 500;
-  color: var(--ink-soft); transition: all .15s;
-}
-.mob-menu a:hover { background: var(--bg); color: var(--blue); }
-.mob-menu .mob-cta {
-  margin-top: 8px; display: flex; align-items: center; justify-content: center;
-  padding: 14px; border-radius: var(--r-lg); font-weight: 700; text-align: center;
-}
-
-@media (max-width: 768px) {
-  .nav-links, .nav-cta { display: none; }
-  .hamburger { display: flex; }
-}
-
-/* ============================================================
-   HERO
-   ============================================================ */
-.hero {
-  background: var(--white);
-  padding: 80px 0 64px;
-  border-bottom: 1px solid var(--line);
-}
-.hero-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
-}
-.hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--blue-light); color: var(--blue); border-radius: 100px;
-  font-size: 13px; font-weight: 600; padding: 6px 14px; margin-bottom: 20px;
-}
-.hero-eyebrow::before { content: ''; width: 7px; height: 7px; background: var(--blue); border-radius: 50%; flex-shrink: 0; }
-.hero h1 { margin-bottom: 16px; }
-.hero h1 .accent { color: var(--blue); }
-.hero-sub { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 28px; max-width: 520px; }
-.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
-.hero-note {
-  font-size: 13px; color: var(--ink-muted); display: flex; align-items: center; gap: 6px;
-  margin-bottom: 28px;
-}
-.hero-note strong { color: var(--ink-soft); }
-
-/* Trust bar */
-.trust-bar {
-  display: flex; flex-wrap: wrap; gap: 16px;
-  padding: 16px 0; border-top: 1px solid var(--line);
-}
-.trust-item {
-  display: flex; align-items: center; gap: 8px;
-  font-size: 13px; color: var(--ink-soft);
-}
-.trust-item strong { color: var(--ink); font-size: 14px; }
-.trust-sep { color: var(--line); font-size: 18px; }
-
-/* Hero panel (score card) */
-.hero-panel {
-  position: relative;
-}
-.score-card {
-  background: var(--white); border: 1px solid var(--line); border-radius: var(--r-xl);
-  padding: 24px; box-shadow: var(--shadow-lg);
-}
-.score-card-label {
-  font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--ink-muted); margin-bottom: 4px;
-}
-.score-card-title { font-family: var(--font-head); font-size: 1rem; font-weight: 700; margin-bottom: 20px; }
-.score-bands { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-.sband {
-  background: var(--bg); border-radius: var(--r-md); padding: 12px 14px;
-  border: 1px solid var(--line);
-}
-.sband .sk { font-size: 11px; color: var(--ink-muted); font-weight: 600; margin-bottom: 2px; }
-.sband .sv { font-family: var(--font-head); font-weight: 800; font-size: 1.5rem; color: var(--ink); }
-.score-total {
-  display: flex; justify-content: space-between; align-items: center;
-  border-top: 1px dashed var(--line); padding-top: 16px;
-}
-.score-total-lbl { font-size: 13px; color: var(--ink-soft); }
-.score-total-name { font-size: 11px; color: var(--ink-faint); margin-top: 2px; }
-.score-total-val {
-  font-family: var(--font-head); font-weight: 800; font-size: 2.5rem; color: var(--blue);
-}
-.float-chip {
-  position: absolute; top: -20px; right: -16px;
-  display: inline-flex; align-items: center; gap: 10px;
-  background: var(--white); border: 1px solid var(--line); border-radius: 100px;
-  padding: 8px 16px; box-shadow: var(--shadow); font-size: 13px;
-  font-family: var(--font-head); font-weight: 600;
-}
-.float-chip .fv { font-weight: 800; color: var(--blue); }
-.float-chip .fl { font-size: 11px; color: var(--ink-muted); }
-
-/* Guarantee badge on card */
-.guarantee-badge {
-  margin-top: 16px;
-  display: flex; align-items: center; gap: 8px;
-  background: #F0FDF4; border: 1px solid #86EFAC; border-radius: var(--r-md);
-  padding: 10px 14px; font-size: 13px; font-weight: 600; color: #166534;
-}
-
-@media (max-width: 860px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero-panel { display: none; }
-  .hero { padding: 56px 0 48px; }
-}
-
-/* ============================================================
-   TICKER STRIP
-   ============================================================ */
-.ticker-wrap {
-  background: var(--blue); color: #fff; overflow: hidden; padding: 10px 0;
-}
-.ticker-track {
-  display: flex; gap: 0; width: max-content;
-  animation: ticker 28s linear infinite;
-}
-@keyframes ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.ticker-item {
-  white-space: nowrap; padding: 0 28px; font-size: 13px; font-weight: 600;
-  display: flex; align-items: center; gap: 10px;
-}
-.ticker-item::after { content: '·'; margin-left: 10px; opacity: .5; }
-
-/* ============================================================
-   SOCIAL PROOF STRIP
-   ============================================================ */
-.proof-strip {
-  padding: 40px 0;
-  border-bottom: 1px solid var(--line);
-}
-.proof-strip-inner {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px;
-}
-.proof-stat { text-align: center; }
-.proof-stat .ps-val {
-  font-family: var(--font-head); font-size: 2rem; font-weight: 800; color: var(--ink); line-height: 1;
-}
-.proof-stat .ps-lbl { font-size: 13px; color: var(--ink-muted); margin-top: 4px; }
-.proof-divider { width: 1px; height: 48px; background: var(--line); }
-.proof-google {
-  display: flex; align-items: center; gap: 12px;
-  background: var(--bg); border: 1px solid var(--line); border-radius: var(--r-lg);
-  padding: 12px 20px;
-}
-.proof-google .pg-stars { color: #F59E0B; font-size: 18px; letter-spacing: 2px; }
-.proof-google .pg-text { font-size: 13px; font-weight: 600; }
-.proof-google .pg-sub { font-size: 11px; color: var(--ink-muted); }
-
-/* ============================================================
-   COURSE OPTIONS
-   ============================================================ */
-.ctype-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-}
-.ctype-card {
-  border: 1.5px solid var(--line); border-radius: var(--r-xl); padding: 28px;
-  background: var(--white); position: relative;
-  transition: box-shadow .2s, border-color .2s;
-}
-.ctype-card:hover { box-shadow: var(--shadow-lg); border-color: var(--blue); }
-.ctype-card.popular { border-color: var(--blue); }
-.ctype-tag {
-  display: inline-block; background: var(--blue); color: #fff;
-  font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
-  padding: 4px 10px; border-radius: 100px; margin-bottom: 14px;
-}
-.ctype-card .ctype-tag.flex-tag { background: var(--bg-alt); color: var(--ink-soft); }
-.ctype-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
-.ctype-card p { font-size: 14px; color: var(--ink-soft); margin-bottom: 16px; line-height: 1.6; }
-.feat-list { list-style: none; display: flex; flex-direction: column; gap: 7px; margin-bottom: 24px; }
-.feat-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: var(--ink-soft); }
-.feat-list li::before { content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
-
-@media (max-width: 640px) { .ctype-grid { grid-template-columns: 1fr; } }
-
-/* ============================================================
-   COMPARISON TABLE
-   ============================================================ */
-.cmp-scroll { overflow-x: auto; }
-.cmp-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-.cmp-table th {
-  padding: 14px 18px; text-align: center; font-weight: 700; font-size: 13px;
-  border-bottom: 2px solid var(--line); background: var(--bg);
-}
-.cmp-table th:first-child { text-align: left; }
-.cmp-table th.col-pe { background: var(--blue-light); color: var(--blue); }
-.cmp-table td { padding: 12px 18px; border-bottom: 1px solid var(--line); text-align: center; }
-.cmp-table td:first-child { text-align: left; font-weight: 500; }
-.cmp-table tr:last-child td { border-bottom: none; }
-.cmp-table tr:hover td { background: var(--bg); }
-.cmp-table .yes { color: #16a34a; font-weight: 700; font-size: 16px; }
-.cmp-table .no { color: #dc2626; font-size: 16px; }
-.cmp-table .partial { color: var(--ink-muted); font-size: 13px; }
-.cmp-note { font-size: 12px; color: var(--ink-faint); margin-top: 12px; }
-
-/* ============================================================
-   TESTIMONIALS
-   ============================================================ */
-.t-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.t-card {
-  background: var(--white); border: 1px solid var(--line); border-radius: var(--r-xl);
-  padding: 24px; display: flex; flex-direction: column; gap: 12px;
-  transition: box-shadow .2s;
-}
-.t-card:hover { box-shadow: var(--shadow); }
-.t-band-row { display: flex; align-items: center; gap: 10px; }
-.t-band {
-  font-family: var(--font-head); font-size: 1.75rem; font-weight: 800; color: var(--blue);
-}
-.t-band-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--ink-muted); letter-spacing: .06em; }
-.t-stars { color: #F59E0B; font-size: 15px; letter-spacing: 2px; }
-.t-text { font-size: 14px; color: var(--ink-soft); line-height: 1.7; flex: 1; }
-.t-name { font-weight: 700; font-size: 14px; }
-.t-link { font-size: 12px; color: var(--blue); font-weight: 600; }
-.t-link:hover { text-decoration: underline; }
-.t-verified { font-size: 11px; color: #16a34a; font-weight: 600; }
-
-@media (max-width: 900px) { .t-grid { grid-template-columns: 1fr; } }
-@media (min-width: 641px) and (max-width: 900px) { .t-grid { grid-template-columns: 1fr 1fr; } }
-
-/* ============================================================
-   VIDEO TESTIMONIALS
-   ============================================================ */
-.v-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.v-card { border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--line); }
-.v-thumb {
-  display: block; position: relative; aspect-ratio: 16/9; overflow: hidden;
-  background: var(--bg);
-}
-.v-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
-.v-thumb:hover img { transform: scale(1.03); }
-.v-play {
-  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-  background: rgba(0,0,0,.3);
-}
-.v-play-btn {
-  width: 52px; height: 52px; background: var(--blue); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 16px rgba(26,86,219,.4);
-  transition: transform .2s;
-}
-.v-thumb:hover .v-play-btn { transform: scale(1.1); }
-.v-band-badge {
-  position: absolute; top: 10px; right: 10px; background: var(--ink); color: #fff;
-  border-radius: 100px; padding: 3px 10px; font-size: 12px; font-weight: 700;
-}
-.v-info { padding: 16px; background: var(--white); }
-.v-stars { color: #F59E0B; font-size: 13px; margin-bottom: 6px; }
-.v-quote { font-size: 13px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 8px; }
-.v-name { font-weight: 700; font-size: 14px; }
-.v-meta { font-size: 12px; color: var(--ink-muted); }
-.v-imp { font-size: 12px; font-weight: 700; color: var(--blue); margin-top: 4px; }
-
-@media (max-width: 860px) { .v-grid { grid-template-columns: 1fr; } }
-@media (min-width: 641px) and (max-width: 860px) { .v-grid { grid-template-columns: 1fr 1fr; } }
-
-/* ============================================================
-   PRICING
-   ============================================================ */
-.p-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.p-card {
-  background: var(--white); border: 1.5px solid var(--line); border-radius: var(--r-xl);
-  padding: 28px; display: flex; flex-direction: column;
-  transition: box-shadow .2s, border-color .2s;
-}
-.p-card:hover { box-shadow: var(--shadow-lg); }
-.p-card.pop { border-color: var(--blue); position: relative; }
-.p-pop-flag {
-  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-  background: var(--blue); color: #fff; font-size: 12px; font-weight: 700;
-  padding: 5px 16px; border-radius: 100px; white-space: nowrap;
-}
-.p-name { font-family: var(--font-head); font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
-.p-orig { font-size: 14px; color: var(--ink-muted); text-decoration: line-through; }
-.p-disc-badge {
-  display: inline-block; background: #FEF3C7; color: #92400E;
-  font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 100px;
-  margin-left: 6px;
-}
-.p-amount {
-  font-family: var(--font-head); font-size: 2.5rem; font-weight: 800;
-  color: var(--ink); line-height: 1; margin: 8px 0 4px;
-}
-.p-amount sup { font-size: 1rem; vertical-align: super; }
-.p-per { font-size: 13px; color: var(--ink-muted); margin-bottom: 20px; }
-.p-feats { list-style: none; flex: 1; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
-.p-feats li { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: var(--ink-soft); }
-.p-feats li::before { content: '✓'; color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
-.p-guarantee {
-  display: flex; align-items: center; gap: 6px;
-  background: #F0FDF4; border: 1px solid #86EFAC; border-radius: var(--r-md);
-  padding: 8px 12px; font-size: 12px; font-weight: 600; color: #166534;
-  margin-bottom: 16px;
-}
-
-@media (max-width: 860px) { .p-grid { grid-template-columns: 1fr; } }
-@media (min-width: 641px) and (max-width: 860px) { .p-grid { grid-template-columns: 1fr 1fr; } }
-
-/* ============================================================
-   COACHES
-   ============================================================ */
-.coach-section { background: #F8F9FA; }
-.coach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.coach-card {
-  background: var(--white); border: 1px solid var(--line); border-radius: var(--r-xl);
-  padding: 28px 24px; box-shadow: 0 2px 12px rgba(0,0,0,.06);
-  transition: box-shadow .2s;
-}
-.coach-card:hover { box-shadow: 0 6px 24px rgba(26,86,219,.10); }
-.coach-avatar {
-  width: 56px; height: 56px; border-radius: 50%;
-  background: #1A56DB; color: #fff;
-  font-family: var(--font-head); font-size: 1.4rem; font-weight: 800;
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 16px;
-}
-.coach-name { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; margin-bottom: 2px; }
-.coach-role { font-size: 13px; color: #1A56DB; font-weight: 600; margin-bottom: 6px; }
-.coach-exams { font-size: 12px; color: var(--ink-muted); margin-bottom: 10px; }
-.coach-bio { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
-
-@media (max-width: 860px) { .coach-grid { grid-template-columns: 1fr; } }
-@media (min-width: 641px) and (max-width: 860px) { .coach-grid { grid-template-columns: 1fr 1fr; } }
-
-/* ============================================================
-   FRENCH SECTION
-   ============================================================ */
-.fr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.fr-card {
-  background: var(--white); border: 1px solid var(--line); border-radius: var(--r-xl);
-  padding: 24px;
-}
-.fr-tag {
-  display: inline-block; background: var(--bg-alt); color: var(--ink-soft);
-  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
-  padding: 4px 10px; border-radius: 100px; margin-bottom: 12px;
-}
-.fr-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
-.fr-card p { font-size: 14px; color: var(--ink-soft); line-height: 1.65; margin-bottom: 14px; }
-.fr-feats { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-.fr-feats li { font-size: 13px; color: var(--ink-soft); padding-left: 16px; position: relative; }
-.fr-feats li::before { content: '→'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
-.fr-cta { border-color: var(--blue); background: var(--blue-light); }
-.fr-proof { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-.fr-proof span {
-  background: var(--white); border: 1px solid var(--line); border-radius: 100px;
-  font-size: 11px; font-weight: 600; padding: 4px 10px; color: var(--ink-soft);
-}
-
-@media (max-width: 860px) { .fr-grid { grid-template-columns: 1fr; } }
-@media (min-width: 641px) and (max-width: 860px) { .fr-grid { grid-template-columns: 1fr 1fr; } }
-
-/* ============================================================
-   BAND CALCULATOR
-   ============================================================ */
-.calc-section {
-  background: var(--ink); color: #fff;
-  padding: 80px 0;
-}
-.calc-wrap {
-  max-width: 640px; margin: 0 auto; padding: 0 24px;
-}
-.calc-wrap .eyebrow { color: #93C5FD; }
-.calc-wrap .eyebrow::before { background: #93C5FD; }
-.calc-wrap h2 { color: #fff; margin-bottom: 12px; }
-.calc-wrap p { color: rgba(255,255,255,.65); margin-bottom: 28px; }
-.qbar-row {
-  display: flex; justify-content: space-between; align-items: center;
-  margin-bottom: 8px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,.5);
-}
-.qbar-track {
-  flex: 1; height: 4px; background: rgba(255,255,255,.15); border-radius: 4px;
-  margin-right: 12px; overflow: hidden;
-}
-.qbar-fill { height: 100%; background: var(--blue-mid); border-radius: 4px; transition: width .4s ease; }
-#QBOX { margin-top: 20px; }
-
-/* ============================================================
-   FAQ
-   ============================================================ */
-.faq-list { display: flex; flex-direction: column; max-width: 740px; }
-.faq-item { border-bottom: 1px solid var(--line); }
-.faq-q {
-  width: 100%; display: flex; justify-content: space-between; align-items: center;
-  background: none; border: none; cursor: pointer; text-align: left;
-  font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--ink);
-  padding: 18px 0; gap: 12px; transition: color .15s;
-}
-.faq-q:hover { color: var(--blue); }
-.faq-icon { font-size: 20px; color: var(--blue); font-weight: 400; flex-shrink: 0; transition: transform .3s; }
-.faq-item.open .faq-icon { transform: rotate(45deg); }
-.faq-a { overflow: hidden; max-height: 0; transition: max-height .4s ease; }
-.faq-item.open .faq-a { max-height: 300px; }
-.faq-a-inner { padding: 0 0 18px; font-size: 14px; color: var(--ink-soft); line-height: 1.7; }
-
-/* CTA row */
-.cta-row {
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 16px; background: var(--bg); border-radius: var(--r-xl);
-  padding: 24px 28px; margin-top: 32px;
-}
-.cta-row .ct { font-weight: 700; font-size: 15px; }
-.cta-row .cs { font-size: 14px; color: var(--ink-muted); }
-
-/* ============================================================
-   DEMO BOX
-   ============================================================ */
-.demo-box {
-  background: var(--ink); border-radius: var(--r-xl); padding: 56px;
-  text-align: center; color: #fff;
-}
-.demo-box .eyebrow { color: #93C5FD; justify-content: center; }
-.demo-box .eyebrow::before { background: #93C5FD; }
-.demo-box h2 { color: #fff; margin-bottom: 12px; }
-.demo-box .lede { color: rgba(255,255,255,.65); margin: 0 auto 36px; text-align: center; }
-.demo-cards {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 36px;
-}
-.demo-card { background: rgba(255,255,255,.07); border-radius: var(--r-lg); padding: 20px; text-align: left; }
-.demo-card .di { font-size: 1.5rem; margin-bottom: 8px; }
-.demo-card .dt { font-weight: 700; font-size: 14px; margin-bottom: 6px; color: #fff; }
-.demo-card .dd { font-size: 13px; color: rgba(255,255,255,.55); line-height: 1.6; }
-.demo-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
-.demo-note { font-size: 13px; color: rgba(255,255,255,.4); }
-.btn-white { background: #fff; color: var(--ink); }
-.btn-white:hover { background: var(--bg); }
-.btn-dark-ghost {
-  background: transparent; color: rgba(255,255,255,.7); border: 1.5px solid rgba(255,255,255,.2);
-}
-.btn-dark-ghost:hover { border-color: rgba(255,255,255,.5); color: #fff; }
-
-@media (max-width: 640px) {
-  .demo-box { padding: 32px 20px; }
-  .demo-cards { grid-template-columns: 1fr; }
-}
-
-/* ============================================================
-   BATCH SECTION
-   ============================================================ */
-.batch-section { background: var(--ink); color: #fff; }
-.batch-section .eyebrow { color: #93C5FD; }
-.batch-section .eyebrow::before { background: #93C5FD; }
-.batch-section h2 { color: #fff; }
-.batch-section .lede { color: rgba(255,255,255,.55); }
-.countdown-banner {
-  display: flex; align-items: center; flex-wrap: wrap; gap: 20px;
-  background: rgba(255,255,255,.07); border-radius: var(--r-lg); padding: 20px 24px;
-  margin-bottom: 32px;
-}
-.cb-label { font-size: 14px; font-weight: 600; color: rgba(255,255,255,.7); }
-.cd-units { display: flex; align-items: center; gap: 8px; }
-.cu { text-align: center; }
-.cu-val {
-  font-family: var(--font-head); font-size: 1.6rem; font-weight: 800; color: #fff;
-  background: rgba(255,255,255,.12); border-radius: var(--r-md); padding: 6px 14px; min-width: 52px; display: block;
-}
-.cu-lbl { font-size: 10px; color: rgba(255,255,255,.4); margin-top: 3px; text-transform: uppercase; }
-.cu-sep { font-size: 1.4rem; font-weight: 700; color: rgba(255,255,255,.3); margin-top: -10px; }
-.batch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.batch-card {
-  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
-  border-radius: var(--r-xl); padding: 24px;
-}
-.batch-card.hot { border-color: rgba(245,158,11,.5); }
-.b-badge {
-  display: inline-block; font-size: 11px; font-weight: 700; padding: 4px 10px;
-  border-radius: 100px; margin-bottom: 12px;
-}
-.b-badge.hot { background: rgba(245,158,11,.2); color: #FCD34D; }
-.b-badge.open { background: rgba(37,211,102,.15); color: #6EE7B7; }
-.b-type { font-size: 12px; color: rgba(255,255,255,.4); margin-bottom: 4px; }
-.b-name { font-family: var(--font-head); font-weight: 700; font-size: 1rem; color: #fff; margin-bottom: 6px; }
-.b-date { font-size: 13px; color: rgba(255,255,255,.55); margin-bottom: 14px; }
-.seats-bar { height: 4px; background: rgba(255,255,255,.12); border-radius: 4px; overflow: hidden; margin-bottom: 4px; }
-.seats-fill { height: 100%; background: #F59E0B; border-radius: 4px; }
-.seats-text { font-size: 12px; color: rgba(255,255,255,.4); margin-bottom: 16px; }
-.b-btn {
-  display: block; width: 100%; text-align: center; padding: 10px;
-  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
-  border-radius: var(--r-md); font-size: 13px; font-weight: 700; color: #fff;
-  transition: background .2s;
-}
-.b-btn:hover { background: rgba(255,255,255,.2); }
-
-@media (max-width: 860px) { .batch-grid { grid-template-columns: 1fr; } }
-@media (min-width: 641px) and (max-width: 860px) { .batch-grid { grid-template-columns: 1fr 1fr; } }
-
-/* ============================================================
-   YOUTUBE SECTION
-   ============================================================ */
-.yt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-.yt-stats-row { display: flex; gap: 28px; margin-top: 24px; }
-.yt-stats-row .v { font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; color: var(--ink); }
-.yt-stats-row .l { font-size: 12px; color: var(--ink-muted); }
-.yt-cta-row {
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
-  background: var(--bg); border-radius: var(--r-xl); padding: 24px 28px; margin-top: 32px;
-}
-.yt-cta-row .t { font-weight: 700; font-size: 15px; }
-.yt-cta-row .s { font-size: 13px; color: var(--ink-muted); margin-top: 2px; }
-
-@media (max-width: 860px) { .yt-grid { grid-template-columns: 1fr; } }
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-footer {
-  background: var(--ink); color: rgba(255,255,255,.6); padding: 56px 0 32px;
-}
-.foot-top {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 36px;
-  padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.1);
-}
-.foot-logo { font-family: var(--font-head); font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
-.foot-logo span { color: #93C5FD; }
-.foot-desc { font-size: 14px; line-height: 1.6; }
-.foot-wa-label { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: rgba(255,255,255,.4); margin-bottom: 4px; }
-.foot-wa-num { font-family: var(--font-head); font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
-.foot-links { display: flex; flex-direction: column; gap: 8px; }
-.foot-links a { font-size: 14px; color: rgba(255,255,255,.5); transition: color .15s; }
-.foot-links a:hover { color: #fff; }
-.foot-social { display: flex; gap: 20px; margin-bottom: 28px; flex-wrap: wrap; }
-.foot-social a { font-size: 14px; color: rgba(255,255,255,.4); transition: color .15s; }
-.foot-social a:hover { color: #fff; }
-.foot-copy { font-size: 12px; color: rgba(255,255,255,.25); border-top: 1px solid rgba(255,255,255,.08); padding-top: 20px; }
-
-@media (max-width: 640px) { .foot-top { grid-template-columns: 1fr; } }
-
-/* ============================================================
-   STICKY / FLOAT
-   ============================================================ */
-.sticky-cta {
-  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
-  background: var(--white); border-top: 1px solid var(--line);
-  padding: 10px 16px; gap: 10px;
-}
-.sticky-cta a {
-  flex: 1; display: flex; align-items: center; justify-content: center;
-  padding: 12px; border-radius: var(--r-md); font-weight: 700; font-size: 14px;
-}
-.sticky-cta .s1 { background: var(--blue); color: #fff; }
-.sticky-cta .s2 { background: var(--wa); color: #fff; }
-@media (max-width: 640px) { .sticky-cta { display: flex; } body { padding-bottom: 72px; } }
-
-.wa-float {
-  position: fixed; bottom: 88px; right: 20px; z-index: 199;
-  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
-}
-.wa-float .tip {
-  background: var(--ink); color: #fff; border-radius: 100px;
-  padding: 6px 14px; font-size: 12px; font-weight: 600; white-space: nowrap;
-  opacity: 0; transition: opacity .3s; pointer-events: none;
-}
-.wa-float:hover .tip { opacity: 1; }
-.wa-btn-float {
-  width: 52px; height: 52px; background: var(--wa); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 16px rgba(37,211,102,.4); font-size: 24px;
-  transition: transform .2s;
-}
-.wa-btn-float:hover { transform: scale(1.08); }
-@media (max-width: 640px) { .wa-float { bottom: 84px; } }
-
-/* ============================================================
-   FINAL CTA SECTION
-   ============================================================ */
-.fcta { background: var(--blue); color: #fff; text-align: center; }
-.fcta h2 { color: #fff; margin-bottom: 12px; }
-.fcta p { color: rgba(255,255,255,.8); margin-bottom: 28px; }
-.fcta-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-
-/* VIDEO MODAL */
-.vt-modal {
-  display: none; position: fixed; inset: 0; z-index: 1000;
-  align-items: center; justify-content: center;
-}
-.vt-modal.open { display: flex; }
-.vt-modal-bg {
-  position: absolute; inset: 0; background: rgba(0,0,0,.8);
-  backdrop-filter: blur(4px);
-}
-.vt-modal-content {
-  position: relative; width: min(90vw, 900px); aspect-ratio: 16/9;
-  border-radius: var(--r-lg); overflow: hidden; z-index: 1;
-}
-.vt-modal-close {
-  position: absolute; top: -40px; right: 0; background: none; border: none;
-  color: #fff; font-size: 32px; cursor: pointer; line-height: 1; z-index: 2;
-}
-#vt-iframe { width: 100%; height: 100%; border: none; }
-
-/* BACK TO TOP */
-#back-top {
-  display: none; position: fixed; bottom: 88px; left: 20px; z-index: 199;
-  width: 40px; height: 40px; background: var(--white); color: var(--ink);
-  border: 1px solid var(--line); border-radius: var(--r-md); cursor: pointer;
-  font-size: 16px; align-items: center; justify-content: center;
-  box-shadow: var(--shadow); transition: all .2s;
-}
-#back-top.show { display: flex; }
-#back-top:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
-
-/* ============================================================
-   RESPONSIVE ADJUSTMENTS
-   ============================================================ */
-@media (max-width: 480px) {
-  h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.5rem; }
-  .sec { padding: 56px 0; }
-  .trust-bar { gap: 10px; }
-  .hero-btns { flex-direction: column; }
-  .hero-btns .btn { width: 100%; justify-content: center; }
-}
+.hero-cta{margin-top:26px}
+.hero-note{margin-top:14px;font-size:.9rem;color:var(--muted)}
+.hero .trust{margin-top:22px}
+.score{padding:24px}
+.score-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.score-top small{display:block;color:var(--muted);font-size:.8rem}
+.score-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.score-grid div{background:var(--bg-2);border-radius:var(--r);padding:12px;text-align:center;font-size:.82rem;color:var(--muted)}
+.score-grid b{display:block;font-family:var(--f-head);font-size:1.4rem;color:var(--ink)}
+.score-all{display:flex;align-items:center;justify-content:space-between;margin-top:12px;padding:14px 16px;border-radius:var(--r);background:var(--blue);color:#DCE7FD;font-size:.85rem}
+.score-all b{font-family:var(--f-head);font-size:2rem;color:#fff}
+.score-foot{margin-top:14px;text-align:center}
+.g-logo{display:inline-flex;vertical-align:middle}
+.course .badge{margin-bottom:14px}
+.course .ticks{margin:16px 0 22px;font-size:.94rem}
+.course{display:flex;flex-direction:column}.course .btn{margin-top:auto}
+.cmp td:not(:first-child),.cmp th:not(:first-child){text-align:center}
+.disc{margin:14px auto 0;font-size:.82rem;color:var(--faint);text-align:center}
+.vbadge{position:absolute;left:12px;top:12px;background:var(--ok);color:#fff;font-family:var(--f-head);font-weight:800;font-size:.78rem;padding:5px 10px;border-radius:var(--r-sm)}
+.vcap q{display:block;margin-top:6px;font-size:.92rem;color:var(--ink-2)}
+.trainer .avatar{width:56px;height:56px;font-size:1.3rem;margin-bottom:14px}
+.trainer .role{color:var(--blue);font-weight:600;font-size:.88rem;margin-bottom:4px}
+.trainer .exams{font-size:.8rem;color:var(--faint);margin-bottom:12px}
+.per{color:var(--muted);font-size:.86rem}
+.guar{margin-top:10px;font-size:.84rem;font-weight:600;color:var(--ok)}
+.promo{display:grid;gap:22px;align-items:center}
+@media(min-width:860px){.promo{grid-template-columns:1.4fr 1fr}}
+.promo .btn-row{justify-content:flex-start}
+.fr .card h3{margin-bottom:6px}.fr .ticks{margin-top:14px;font-size:.93rem}
+.quiz{max-width:720px;margin:0 auto}
+.qprog{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.qtrack{flex:1;height:8px;border-radius:var(--r-full);background:var(--line);overflow:hidden}
+#QBar{height:100%;width:0;background:var(--blue);transition:width .3s}
+#QLabel{font-size:.85rem;font-weight:600;color:var(--muted);white-space:nowrap}
+.qq{font-family:var(--f-head);font-weight:700;font-size:1.12rem;color:var(--ink);margin-bottom:16px}
+.qq span{color:var(--blue)}
+.qopts{display:grid;gap:10px}
+.qopt{display:flex;align-items:center;gap:12px;width:100%;min-height:52px;padding:12px 14px;background:#fff;border:1.5px solid var(--line-2);border-radius:var(--r);cursor:pointer;text-align:left;font-size:.95rem}
+.qopt:hover{border-color:var(--blue)}
+.qopt.sel{border-color:var(--blue);background:var(--blue-lt);font-weight:600;color:var(--ink)}
+.qopt i{font-style:normal;flex-shrink:0;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--bg-2);font-weight:700;font-size:.85rem}
+.qopt.sel i{background:var(--blue);color:#fff}
+.qnav{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
+.qnav .btn:only-child{margin-left:auto}
+.quiz.shake{box-shadow:0 0 0 3px rgba(26,86,219,.5)}
+.qres-top{display:flex;gap:16px;align-items:center;margin-bottom:12px}
+.qband{flex-shrink:0;width:84px;height:84px;border-radius:var(--r-lg);background:var(--blue);color:#fff;display:grid;place-content:center;text-align:center;font-family:var(--f-head);font-weight:800;font-size:1.6rem;line-height:1}
+.qband small{font-size:.6rem;letter-spacing:.08em;margin-top:6px;opacity:.85}
+.qres h4{margin:18px 0 10px;font-size:.95rem}
+.qres .btn-row{margin-top:20px}
 </style>
 </head>
 <body>
-
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="/" class="logo">Prep<span>Eve</span></a>
+<header class="nav">
+  <div class="wrap">
+    <a href="/" class="logo" aria-label="PrepEve home">Prep<span>Eve</span></a>
     <ul class="nav-links">
-      <li><a href="#coaching">Courses</a></li>
-      <li><a href="#compare">Why PrepEve</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#testimonials">Reviews</a></li>
-      <li><a href="#calculator">Band Quiz</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="/#courses">Courses</a></li>
+      <li><a href="/#results">Results</a></li>
+      <li><a href="/#trainers">Trainers</a></li>
+      <li><a href="/webinar">Free Webinar</a></li>
+      <li><a href="/book-demo-french">French for Canada PR</a></li>
+      <li><a href="/#faq">FAQ</a></li>
     </ul>
-    <a href="book-demo" class="btn btn-blue nav-cta" target="_blank">Book Free Demo →</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right">
+      <a href="/book-demo" class="btn btn-primary nav-cta" data-cta="nav">Book Free Demo</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
+    </div>
   </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobile">
+  <a href="/#courses">Courses</a>
+  <a href="/#results">Results</a>
+  <a href="/#trainers">Trainers</a>
+  <a href="/webinar">Free IELTS Webinar</a>
+  <a href="/book-demo-french">French for Canada PR</a>
+  <a href="/#faq">FAQ</a>
+  <a href="/book-demo" class="btn btn-primary btn-block" data-cta="mnav">Book Free Demo Class</a>
 </nav>
 
-<div class="mob-menu" id="mob-menu">
-  <a href="#coaching">Courses</a>
-  <a href="#compare">Why PrepEve</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#testimonials">Reviews</a>
-  <a href="#calculator">Band Quiz</a>
-  <a href="#faq">FAQ</a>
-  <a href="book-demo" class="mob-cta btn btn-blue" target="_blank">Book Free Demo →</a>
-  <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20about%20IELTS%20coaching" class="mob-cta btn btn-wa" style="margin-top:8px" target="_blank">💬 WhatsApp Us</a>
-</div>
-
+<main>
 <!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div>
-        <div class="hero-eyebrow">India's most trusted IELTS platform</div>
-        <h1>+1.5 Band Score<br>Improvement,<br><span class="accent">Guaranteed.</span></h1>
-        <p class="hero-sub">PrepEve's live IELTS coaching gets you to Band 7+ — or we refund every rupee. 15,000+ students. British-certified coaches. Results in 30 days.</p>
-        <div class="hero-btns">
-          <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20enroll%20in%20PrepEve%20IELTS%20coaching" class="btn btn-wa btn-lg" target="_blank">💬 Chat on WhatsApp to Enroll</a>
-          <a href="book-demo" class="btn btn-blue-outline btn-lg" target="_blank">Book Free Demo →</a>
-        </div>
-        <p class="hero-note">⚡ <strong>Slot confirmed within 30 minutes</strong> on WhatsApp — 100% free, no payment, no obligation.</p>
-        <div class="trust-bar">
-          <div class="trust-item">⭐ <strong>4.7</strong> Google Rating</div>
-          <div class="trust-sep">|</div>
-          <div class="trust-item">🎓 <strong>15,000+</strong> Students</div>
-          <div class="trust-sep">|</div>
-          <div class="trust-item">✅ <strong>97%</strong> Band 7+</div>
-          <div class="trust-sep">|</div>
-          <div class="trust-item">🛡️ <strong>Money-Back</strong> Guarantee</div>
-        </div>
+<section class="hero" data-hide-mcta>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge">India's most trusted IELTS platform</span>
+      <h1>+1.5 Band Score Improvement, <em>Guaranteed.</em></h1>
+      <p class="lead">PrepEve's live IELTS coaching gets you to Band 7+ — or we refund every rupee. 15,000+ students. British-certified coaches. Results in 30 days.</p>
+      <div class="btn-row hero-cta">
+        <a href="/book-demo" class="btn btn-primary btn-lg" data-cta="hero">Book Free Demo Class</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20enroll%20in%20PrepEve%20IELTS%20coaching" class="btn btn-wa btn-lg" data-cta="hero" target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
-      <div class="hero-panel">
-        <div class="float-chip">
-          <div>🎉</div>
-          <div>
-            <div class="fv">Band 8.5</div>
-            <div class="fl">Anooj — Verified Student</div>
-          </div>
-        </div>
-        <div class="score-card">
-          <div class="score-card-label">Latest Result</div>
-          <div class="score-card-title">IELTS Score Report · PrepEve Student</div>
-          <div class="score-bands">
-            <div class="sband"><div class="sk">Listening</div><div class="sv">8.5</div></div>
-            <div class="sband"><div class="sk">Reading</div><div class="sv">8.0</div></div>
-            <div class="sband"><div class="sk">Writing</div><div class="sv">7.5</div></div>
-            <div class="sband"><div class="sk">Speaking</div><div class="sv">8.0</div></div>
-          </div>
-          <div class="score-total">
-            <div>
-              <div class="score-total-lbl">Overall Band Score</div>
-              <div class="score-total-name">Anooj Motghare · Verified</div>
-            </div>
-            <div class="score-total-val">8.5</div>
-          </div>
-        </div>
-        <div class="guarantee-badge">
-          🛡️ Band 7+ Guaranteed or Full Refund
-        </div>
+      <p class="hero-note"><strong>Slot confirmed within 30 minutes</strong> on WhatsApp — 100% free, no payment, no obligation.</p>
+      <div class="trust">
+        <span><span class="stars">★★★★★</span> <strong>4.7</strong> Google Rating</span>
+        <span><strong>15,000+</strong> Students</span>
+        <span><strong>97%</strong> Band 7+</span>
+        <span><strong>Money-Back</strong> Guarantee</span>
       </div>
     </div>
+    <aside class="form-card score" aria-label="Latest student result">
+      <div class="score-top">
+        <div><span class="eyebrow" style="margin:0">Latest Result</span><small>IELTS Score Report · PrepEve Student</small></div>
+        <span class="band-pill">Band 8.5</span>
+      </div>
+      <div class="score-grid">
+        <div><b>8.5</b>Listening</div>
+        <div><b>8.0</b>Reading</div>
+        <div><b>7.5</b>Writing</div>
+        <div><b>8.0</b>Speaking</div>
+      </div>
+      <div class="score-all"><div>Overall Band Score<br/><strong style="color:#fff">Anooj Motghare · Verified</strong></div><b>8.5</b></div>
+      <div class="score-foot"><span class="badge badge-ok">Band 7+ Guaranteed or Full Refund</span></div>
+    </aside>
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="ticker-wrap" aria-hidden="true">
-  <div class="ticker-track">
-    <span class="ticker-item">Band 7+ Guaranteed</span>
-    <span class="ticker-item">15,000+ Students Trained</span>
-    <span class="ticker-item">Average +1.5 Band Improvement</span>
-    <span class="ticker-item">Live Online Classes</span>
-    <span class="ticker-item">Money-Back Guarantee</span>
-    <span class="ticker-item">Canada · UK · Australia · USA</span>
-    <span class="ticker-item">Academic &amp; General Training</span>
-    <span class="ticker-item">WhatsApp Support 24/7</span>
-    <span class="ticker-item">Band 7+ Guaranteed</span>
-    <span class="ticker-item">15,000+ Students Trained</span>
-    <span class="ticker-item">Average +1.5 Band Improvement</span>
-    <span class="ticker-item">Live Online Classes</span>
-    <span class="ticker-item">Money-Back Guarantee</span>
-    <span class="ticker-item">Canada · UK · Australia · USA</span>
-    <span class="ticker-item">Academic &amp; General Training</span>
-    <span class="ticker-item">WhatsApp Support 24/7</span>
-  </div>
-</div>
-
-<!-- SOCIAL PROOF STRIP -->
-<section class="proof-strip">
-  <div class="container">
-    <div class="proof-strip-inner">
-      <div class="proof-stat rv"><div class="ps-val">15,000+</div><div class="ps-lbl">Students Trained</div></div>
-      <div class="proof-divider"></div>
-      <div class="proof-stat rv"><div class="ps-val">97%</div><div class="ps-lbl">Achieve Band 7+</div></div>
-      <div class="proof-divider"></div>
-      <div class="proof-stat rv"><div class="ps-val">+1.5</div><div class="ps-lbl">Avg Band Improvement</div></div>
-      <div class="proof-divider"></div>
-      <div class="proof-stat rv"><div class="ps-val">30</div><div class="ps-lbl">Days to Band 7+</div></div>
-      <div class="proof-divider"></div>
-      <div class="proof-google rv">
-        <div>
-          <div class="pg-stars">★★★★★</div>
-          <div class="pg-text">4.7 Google Rating</div>
-          <div class="pg-sub">300+ verified reviews</div>
-        </div>
-      </div>
-    </div>
+<!-- STATS -->
+<section class="wrap" style="margin-top:-8px">
+  <div class="stats rv">
+    <div class="stat"><b>15,000+</b><span>Students Trained</span></div>
+    <div class="stat"><b>97%</b><span>Achieve Band 7+</span></div>
+    <div class="stat"><b>+1.5</b><span>Avg Band Improvement</span></div>
+    <div class="stat"><b>4.7 <span class="stars" style="font-size:1rem">★</span></b><span>Google Rating · 300+ reviews</span></div>
   </div>
 </section>
 
-<!-- COURSE OPTIONS -->
-<section class="sec" id="coaching">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow rv">Course Options</div>
-      <h2 class="rv">Choose your learning path</h2>
-      <p class="lede rv">Structured live coaching or flexible self-paced learning — chat with us on WhatsApp and we'll tell you, honestly, which one fits your timeline.</p>
+<!-- COURSES -->
+<section class="sec" id="courses">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Course Options</span>
+      <h2>Choose your learning path</h2>
+      <p>Structured live coaching or flexible self-paced learning — chat with us on WhatsApp and we'll tell you, honestly, which one fits your timeline.</p>
     </div>
-    <div class="ctype-grid">
-      <div class="ctype-card popular rv">
-        <div class="ctype-tag">Most Popular</div>
+    <div class="grid g2">
+      <div class="card course rv">
+        <span class="badge">Most Popular</span>
         <h3>Live Online Coaching (1-on-1)</h3>
         <p>1-on-1 human-evaluated feedback from certified coaches, real-time doubt clearing, and expert guidance on every task you submit.</p>
-        <ul class="feat-list">
+        <ul class="ticks">
           <li>Daily 1-hr live sessions</li>
           <li>1-on-1 speaking practice sessions</li>
           <li>Writing evaluated within 24 hours</li>
@@ -950,648 +220,380 @@ footer {
           <li>WhatsApp doubt support 24/7</li>
           <li>Exam cleared or full refund</li>
         </ul>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20more%20about%20IELTS%20live%20coaching" class="btn btn-wa" target="_blank">💬 Ask on WhatsApp →</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20more%20about%20IELTS%20live%20coaching" class="btn btn-wa btn-block" data-cta="courses-live" target="_blank" rel="noopener">Ask on WhatsApp</a>
       </div>
-      <div class="ctype-card rv">
-        <div class="ctype-tag flex-tag">Flexible &amp; Affordable</div>
+      <div class="card course rv">
+        <span class="badge badge-gold">Flexible &amp; Affordable</span>
         <h3>Self-Paced Program</h3>
-        <p>Learn at your own schedule with 200+ recorded lectures, unlimited mock tests, and community access.</p>
-        <ul class="feat-list">
-          <li>200+ HD recorded lectures</li>
-          <li>1-on-1 human evaluated feedback</li>
-          <li>Unlimited mock tests</li>
-          <li>Personalised study plan included</li>
+        <p>Recorded video lectures, notes and mock tests for independent learners who want structure without a fixed schedule.</p>
+        <ul class="ticks">
+          <li>30 recorded HD video lectures</li>
+          <li>Covers all four IELTS modules</li>
+          <li>2 full-length mock tests</li>
+          <li>Downloadable notes &amp; module guides</li>
+          <li>WhatsApp support for queries</li>
         </ul>
-        <a href="book-demo" class="btn btn-blue-outline" target="_blank">Book Free Demo →</a>
+        <a href="/book-demo" class="btn btn-primary btn-block" data-cta="courses-selfpaced">Book Free Demo</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMPARISON TABLE -->
+<!-- WHY / COMPARISON -->
 <section class="sec sec-alt" id="compare">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow rv">Why PrepEve Wins</div>
-      <h2 class="rv">PrepEve vs the alternatives</h2>
-      <p class="lede rv">See why thousands of students choose PrepEve over self-study or other coaching centres.</p>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Why PrepEve Wins</span>
+      <h2>PrepEve vs the alternatives</h2>
+      <p>See why thousands of students choose PrepEve over self-study or other coaching centres.</p>
     </div>
-    <div class="cmp-scroll rv">
-      <table class="cmp-table">
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th class="col-pe">🏆 PrepEve</th>
-            <th>Other Coaching</th>
-            <th>Self Study</th>
-          </tr>
-        </thead>
+    <div class="tbl-wrap rv">
+      <table class="cmp">
+        <thead><tr><th scope="col">Feature</th><th scope="col" class="us">PrepEve</th><th scope="col">Other Coaching</th><th scope="col">Self Study</th></tr></thead>
         <tbody>
-          <tr><td>Band 7+ Money-Back Guarantee</td><td class="yes">✓</td><td class="no">✗</td><td class="no">✗</td></tr>
-          <tr><td>British-Certified Coaches (CELTA/DELTA)</td><td class="yes">✓</td><td class="partial">Sometimes</td><td class="no">✗</td></tr>
-          <tr><td>Daily Live Classes</td><td class="yes">✓</td><td class="partial">2–3x / week</td><td class="no">✗</td></tr>
-          <tr><td>Certified Trainer Feedback</td><td class="yes">✓</td><td class="no">✗</td><td class="no">✗</td></tr>
-          <tr><td>WhatsApp Support 24/7</td><td class="yes">✓</td><td class="no">✗</td><td class="no">✗</td></tr>
-          <tr><td>1-on-1 Speaking Practice</td><td class="yes">✓</td><td class="partial">Extra cost</td><td class="no">✗</td></tr>
-          <tr><td>Average Student Score Improvement</td><td style="font-weight:700;color:var(--blue)">+1.5 Bands</td><td class="partial">+0.5–1.0</td><td class="partial">+0.5</td></tr>
-          <tr><td>Price</td><td style="font-weight:700;color:var(--blue)">From ₹4,999</td><td>₹20,000–50,000</td><td>Free – ₹2,000</td></tr>
-          <tr><td>Success Rate (Band 7+)</td><td style="font-weight:700;color:var(--blue)">97%</td><td class="partial">~60%</td><td class="partial">~35%</td></tr>
+          <tr><td>Band 7+ Money-Back Guarantee</td><td class="us">✓</td><td>✗</td><td>✗</td></tr>
+          <tr><td>British-Certified Coaches (CELTA/DELTA)</td><td class="us">✓</td><td>Sometimes</td><td>✗</td></tr>
+          <tr><td>Daily Live Classes</td><td class="us">✓</td><td>2–3x / week</td><td>✗</td></tr>
+          <tr><td>Certified Trainer Feedback</td><td class="us">✓</td><td>✗</td><td>✗</td></tr>
+          <tr><td>WhatsApp Support 24/7</td><td class="us">✓</td><td>✗</td><td>✗</td></tr>
+          <tr><td>1-on-1 Speaking Practice</td><td class="us">✓</td><td>Extra cost</td><td>✗</td></tr>
+          <tr><td>Average Student Score Improvement</td><td class="us">+1.5 Bands</td><td>+0.5–1.0</td><td>+0.5</td></tr>
+          <tr><td>Price</td><td class="us">From ₹4,999</td><td>₹20,000–50,000</td><td>Free – ₹2,000</td></tr>
+          <tr><td>Success Rate (Band 7+)</td><td class="us">97%</td><td>~60%</td><td>~35%</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="cmp-note rv">*Data based on student surveys and publicly available information. Other coaching figures are industry averages.</p>
-    <div class="rv" style="margin-top:24px">
-      <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20more%20about%20PrepEve%20IELTS" class="btn btn-blue" target="_blank">Ask Us on WhatsApp →</a>
+    <p class="disc">*Data based on student surveys and publicly available information. Other coaching figures are industry averages.</p>
+    <div class="btn-row mt" style="justify-content:center">
+      <a href="/book-demo" class="btn btn-primary" data-cta="compare">Book Free Demo</a>
+      <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20more%20about%20PrepEve%20IELTS" class="btn btn-ghost" data-cta="compare" target="_blank" rel="noopener">Ask Us on WhatsApp</a>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="sec" id="testimonials">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow rv">Student Reviews</div>
-      <h2 class="rv">What our students say</h2>
-      <p class="lede rv">Real reviews from students who achieved their target scores with PrepEve.</p>
+<!-- RESULTS -->
+<section class="sec" id="results">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Student Reviews</span>
+      <h2>What our students say</h2>
+      <p>Real reviews from students who achieved their target scores with PrepEve. <span class="stars">★★★★★</span> 4.7 on Google from 300+ reviews.</p>
     </div>
-    <div class="t-grid">
-      <div class="t-card rv">
-        <div class="t-band-row">
-          <div class="t-band">8.5</div>
-          <div class="t-band-lbl">Band Score</div>
-        </div>
-        <div class="t-stars">★★★★★</div>
-        <p class="t-text">"Honestly, I can't thank the team enough. It's been almost two years since I took my IELTS classes with them, and they still support me whenever I reach out. That kind of dedication is rare. Highly recommend to anyone serious about their IELTS journey."</p>
-        <div class="t-name">Anooj Motghare</div>
-        <a href="https://www.google.com/maps/contrib/102113621604889428073/reviews/@49.1476785,-165.0496148,3z/data=!4m3!8m2!3m1!1e1?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="t-link">⭐ View on Google</a>
-        <div class="t-verified">✓ Verified Student</div>
+    <div class="grid g3">
+      <figure class="card quote rv">
+        <span class="stars">★★★★★</span>
+        <blockquote>"Honestly, I can't thank the team enough. It's been almost two years since I took my IELTS classes with them, and they still support me whenever I reach out. That kind of dedication is rare. Highly recommend to anyone serious about their IELTS journey."</blockquote>
+        <figcaption class="quote-by"><span class="avatar">A</span><div><b>Anooj Motghare</b><a class="src" href="https://www.google.com/maps/contrib/102113621604889428073/reviews/@49.1476785,-165.0496148,3z/data=!4m3!8m2!3m1!1e1?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">View on Google</a></div><span class="band-pill">Band 8.5</span></figcaption>
+      </figure>
+      <figure class="card quote rv">
+        <span class="stars">★★★★★</span>
+        <blockquote>"I had a great experience with PrepEve for my IELTS preparation. The coaching was extremely helpful and highly effective. The study materials were well-structured and perfectly aligned with the actual exam pattern. I truly appreciate the support and guidance provided throughout the process."</blockquote>
+        <figcaption class="quote-by"><span class="avatar">Y</span><div><b>Yashaswini Palakonda</b><a class="src" href="https://www.google.com/maps/contrib/109065652692536741630/reviews?hl=en-IN" target="_blank" rel="noopener">View on Google</a></div><span class="band-pill">Band 8.0</span></figcaption>
+      </figure>
+      <figure class="card quote rv">
+        <span class="stars">★★★★★</span>
+        <blockquote>"Highly recommended! I was so confused watching videos online. After attending a 2-day free webinar, I enrolled. Their class notes let you skim through every module quickly. They will assist with Speaking &amp; Writing mock tests. I felt like I benefited more than what I paid for. Just go with it — they will give you exactly what you need!"</blockquote>
+        <figcaption class="quote-by"><span class="avatar">S</span><div><b>Shashikanth Revelly</b><a class="src" href="https://www.google.com/maps/contrib/110923457556373260953/reviews?hl=en-IN" target="_blank" rel="noopener">View on Google</a></div><span class="band-pill">Band 7.5</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="sec-head mt" style="margin-top:64px">
+      <span class="eyebrow">Video Proof</span>
+      <h2>Hear it from our students</h2>
+    </div>
+    <div class="grid g3">
+      <div class="rv">
+        <button class="vcard" data-vid="8agy5ojp36I" aria-label="Play Taranjeet's testimonial"><img src="https://img.youtube.com/vi/8agy5ojp36I/hqdefault.jpg" alt="Student testimonial — Taranjeet" loading="lazy"/><span class="vbadge">8.5 Band</span><span class="play"></span></button>
+        <div class="vcap"><b>Taranjeet</b><span>↑ From 7.0 to 8.0</span><q>I was stuck at Band 6.5 for a year. PrepEve's speaking framework changed everything — I hit 8.0 in just 30 days!</q></div>
       </div>
-      <div class="t-card rv">
-        <div class="t-band-row">
-          <div class="t-band">8.0</div>
-          <div class="t-band-lbl">Band Score</div>
-        </div>
-        <div class="t-stars">★★★★★</div>
-        <p class="t-text">"I had a great experience with PrepEve for my IELTS preparation. The coaching was extremely helpful and highly effective. The study materials were well-structured and perfectly aligned with the actual exam pattern. I truly appreciate the support and guidance provided throughout the process."</p>
-        <div class="t-name">Yashaswini Palakonda</div>
-        <a href="https://www.google.com/maps/contrib/109065652692536741630/reviews?hl=en-IN" target="_blank" class="t-link">⭐ View on Google</a>
-        <div class="t-verified">✓ Verified Student</div>
+      <div class="rv">
+        <button class="vcard" data-vid="5FbjLsycE2k" aria-label="Play Pratishtha's testimonial"><img src="https://img.youtube.com/vi/5FbjLsycE2k/hqdefault.jpg" alt="Student testimonial — Pratishtha" loading="lazy"/><span class="vbadge">8.0 Band</span><span class="play"></span></button>
+        <div class="vcap"><b>Pratishtha</b><span>↑ From 6.0 to 8.0</span><q>The writing feedback is better than any tutor I've had. Got into UCL — dream come true!</q></div>
       </div>
-      <div class="t-card rv">
-        <div class="t-band-row">
-          <div class="t-band">7.5</div>
-          <div class="t-band-lbl">Band Score</div>
-        </div>
-        <div class="t-stars">★★★★★</div>
-        <p class="t-text">"Highly recommended! I was so confused watching videos online. After attending a 2-day free webinar, I enrolled. Their class notes let you skim through every module quickly. They will assist with Speaking &amp; Writing mock tests. I felt like I benefited more than what I paid for. Just go with it — they will give you exactly what you need!"</p>
-        <div class="t-name">Shashikanth Revelly</div>
-        <a href="https://www.google.com/maps/contrib/110923457556373260953/reviews?hl=en-IN" target="_blank" class="t-link">⭐ View on Google</a>
-        <div class="t-verified">✓ Verified Student</div>
+      <div class="rv">
+        <button class="vcard" data-vid="2f9jwGWIREI" aria-label="Play Deepanshu's testimonial"><img src="https://img.youtube.com/vi/2f9jwGWIREI/hqdefault.jpg" alt="Student testimonial — Deepanshu" loading="lazy"/><span class="vbadge">7.5 Band</span><span class="play"></span></button>
+        <div class="vcap"><b>Deepanshu</b><span>↑ From 6.5 to 8.0</span><q>I enrolled via WhatsApp in 10 minutes. The support throughout the 30 days was incredible.</q></div>
+      </div>
+    </div>
+    <p class="center mt"><a href="https://www.youtube.com/@prepeveclasses" class="btn btn-ghost" data-cta="results-youtube" target="_blank" rel="noopener">More success stories on YouTube</a></p>
+  </div>
+</section>
+
+<!-- TRAINERS -->
+<section class="sec sec-alt" id="trainers">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Meet Your Trainers</span>
+      <h2>The experts behind your band score</h2>
+      <p>CELTA/DELTA certified British-trained experts with a track record of transforming student scores.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card trainer rv">
+        <span class="avatar">S</span>
+        <h3>Sanjita</h3>
+        <p class="role">Founder &amp; Trainer — PrepEve · Regulated Canadian Immigration Consultant</p>
+        <p class="exams">IELTS · Duolingo · PTE · CELPIP · TOEFL</p>
+        <p>The driving force behind PrepEve. Sanjita built this institute from the ground up with one mission — to make every student's band dream a reality through personal, focused coaching.</p>
+      </div>
+      <div class="card trainer rv">
+        <span class="avatar">L</span>
+        <h3>Lesancy Sharma</h3>
+        <p class="role">IELTS Trainer · PrepEve Master Trainer</p>
+        <p class="exams">IELTS · Duolingo · PTE · CELPIP · TOEFL</p>
+        <p>Passionate about helping students unlock their true potential in English. Known for clear explanations, structured feedback, and a student-first approach to every session.</p>
+      </div>
+      <div class="card trainer rv">
+        <span class="avatar">K</span>
+        <h3>Khushpreet</h3>
+        <p class="role">IELTS Trainer · PrepEve Trainer</p>
+        <p class="exams">IELTS · Duolingo · PTE · CELPIP · TOEFL</p>
+        <p>Dedicated to helping students achieve their target scores with structured guidance, personalised feedback, and proven exam strategies across all modules.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VIDEO TESTIMONIALS -->
-<section class="sec sec-alt" id="video-testimonials">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow rv">Video Proof</div>
-      <h2 class="rv">Hear it from our students</h2>
+<!-- HOW IT WORKS -->
+<section class="sec" id="demo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Try Before You Buy</span>
+      <h2>Experience a free demo class before you enrol</h2>
+      <p>Not sure if PrepEve is right for you? Join a live demo session with one of our certified trainers — completely free, no commitment needed.</p>
     </div>
-    <div class="v-grid">
-      <div class="v-card rv">
-        <a href="https://www.youtube.com/watch?v=8agy5ojp36I" target="_blank" class="v-thumb" data-vid="8agy5ojp36I">
-          <img src="https://img.youtube.com/vi/8agy5ojp36I/hqdefault.jpg" alt="Student testimonial — Taranjeet" loading="lazy">
-          <div class="v-play"><div class="v-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
-          <div class="v-band-badge">8.5 Band</div>
-        </a>
-        <div class="v-info">
-          <div class="v-stars">★★★★★</div>
-          <p class="v-quote">"I was stuck at Band 6.5 for a year. PrepEve's speaking framework changed everything — I hit 8.0 in just 30 days!"</p>
-          <div class="v-name">Taranjeet</div>
-          <div class="v-meta">Watch on YouTube</div>
-          <div class="v-imp">↑ From 7.0 to 8.0</div>
-        </div>
-      </div>
-      <div class="v-card rv">
-        <a href="https://www.youtube.com/watch?v=5FbjLsycE2k" target="_blank" class="v-thumb" data-vid="5FbjLsycE2k">
-          <img src="https://img.youtube.com/vi/5FbjLsycE2k/hqdefault.jpg" alt="Student testimonial — Pratishtha" loading="lazy">
-          <div class="v-play"><div class="v-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
-          <div class="v-band-badge">8.0 Band</div>
-        </a>
-        <div class="v-info">
-          <div class="v-stars">★★★★★</div>
-          <p class="v-quote">"The writing feedback is better than any tutor I've had. Got into UCL — dream come true!"</p>
-          <div class="v-name">Pratishtha</div>
-          <div class="v-meta">Watch on YouTube</div>
-          <div class="v-imp">↑ From 6.0 to 8.0</div>
-        </div>
-      </div>
-      <div class="v-card rv">
-        <a href="https://www.youtube.com/watch?v=2f9jwGWIREI" target="_blank" class="v-thumb" data-vid="2f9jwGWIREI">
-          <img src="https://img.youtube.com/vi/2f9jwGWIREI/hqdefault.jpg" alt="Student testimonial — Deepanshu" loading="lazy">
-          <div class="v-play"><div class="v-play-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div></div>
-          <div class="v-band-badge">7.5 Band</div>
-        </a>
-        <div class="v-info">
-          <div class="v-stars">★★★★★</div>
-          <p class="v-quote">"I enrolled via WhatsApp in 10 minutes. The support throughout the 30 days was incredible."</p>
-          <div class="v-name">Deepanshu</div>
-          <div class="v-meta">Watch on YouTube</div>
-          <div class="v-imp">↑ From 6.5 to 8.0</div>
-        </div>
-      </div>
+    <div class="grid g3">
+      <div class="step rv"><span class="step-n">1</span><div><h3>Live 30-Min Demo Session</h3><p>Join a real 30-minute live session with our certified trainer. Get a genuine feel for our teaching style, pace, and quality.</p></div></div>
+      <div class="step rv"><span class="step-n">2</span><div><h3>Writing Sample Evaluated</h3><p>Submit one writing task and get genuine human feedback from our trainer — so you see exactly how we assess and improve your work.</p></div></div>
+      <div class="step rv"><span class="step-n">3</span><div><h3>Personalised Study Plan</h3><p>Leave the demo with a clear roadmap of what you need to work on and how long it will take to hit your target band score.</p></div></div>
     </div>
-    <div class="yt-cta-row rv">
-      <div>
-        <div class="t">🎥 50+ student success stories on YouTube</div>
-        <div class="s">Watch real students share their journey — from fear to Band 7+.</div>
-      </div>
-      <a href="https://www.youtube.com/@prepeveclasses" class="btn btn-blue" target="_blank">Watch on YouTube</a>
+    <div class="btn-row mt" style="justify-content:center">
+      <a href="/book-demo" class="btn btn-primary btn-lg" data-cta="how">Book My Free Demo Class</a>
+      <a href="https://www.youtube.com/@prepeveclasses" class="btn btn-ghost btn-lg" data-cta="how-youtube" target="_blank" rel="noopener">Watch Free Classes First</a>
     </div>
+    <p class="center mt-s" style="font-size:.88rem;color:var(--muted);margin-left:auto;margin-right:auto">100% Free · No credit card · No obligation</p>
   </div>
 </section>
 
 <!-- PRICING -->
-<section class="sec" id="pricing">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow rv">Pricing</div>
-      <h2 class="rv">Simple, transparent pricing</h2>
-      <p class="lede rv">Not sure which plan? <a href="https://wa.me/919877714284?text=Hi!%20Help%20me%20choose%20the%20right%20IELTS%20plan" target="_blank" style="color:var(--blue);font-weight:600;text-decoration:underline;">Chat with us on WhatsApp</a> — we'll recommend the best one for your goal and timeline.</p>
+<section class="sec sec-alt" id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Pricing</span>
+      <h2>Simple, transparent pricing</h2>
+      <p>Not sure which plan? <a href="https://wa.me/919877714284?text=Hi!%20Help%20me%20choose%20the%20right%20IELTS%20plan" data-cta="pricing-help" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">Chat with us on WhatsApp</a> — we'll recommend the best one for your goal and timeline.</p>
     </div>
-    <div class="p-grid">
-      <div class="p-card rv">
-        <div class="p-name">Self-Paced</div>
-        <div><span class="p-orig">₹6,999</span><span class="p-disc-badge">30% OFF</span></div>
-        <div class="p-amount"><sup>₹</sup>4,999</div>
-        <div class="p-per">30-day access · One-time payment</div>
-        <div class="p-guarantee">🛡️ Band 7+ Guaranteed or Money Back</div>
-        <ul class="p-feats">
+    <div class="grid g3" style="align-items:stretch">
+      <div class="card price rv">
+        <h3>Self-Paced</h3>
+        <div class="amt">₹4,999<s>₹6,999</s></div>
+        <span class="per">30% OFF · 30-day access · One-time payment</span>
+        <p class="guar">Band 7+ Guaranteed or Money Back</p>
+        <ul class="ticks">
           <li>30 recorded video lectures</li>
           <li>Covers all 4 IELTS modules</li>
           <li>2 full-length mock tests</li>
           <li>Study notes &amp; module guides</li>
           <li>WhatsApp support for queries</li>
         </ul>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20Self-Paced%20program%20at%20Rs.4999" class="btn btn-blue-outline" target="_blank">Enroll via WhatsApp</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20Self-Paced%20program%20at%20Rs.4999" class="btn btn-ghost btn-block" data-cta="pricing-selfpaced" target="_blank" rel="noopener">Enroll via WhatsApp</a>
       </div>
-      <div class="p-card pop rv">
-        <div class="p-pop-flag">🔥 Most Popular</div>
-        <div class="p-name">Live Coaching</div>
-        <div><span class="p-orig">₹21,999</span><span class="p-disc-badge">30% OFF</span></div>
-        <div class="p-amount"><sup>₹</sup>14,999</div>
-        <div class="p-per">30-day intensive · Max 5 students per batch</div>
-        <div class="p-guarantee">🛡️ Band 7+ Guaranteed or Money Back</div>
-        <ul class="p-feats">
+      <div class="card price pop rv">
+        <span class="badge tag" style="background:var(--blue);color:#fff">Most Popular</span>
+        <h3>Live Coaching</h3>
+        <div class="amt">₹14,999<s>₹21,999</s></div>
+        <span class="per">30% OFF · 30-day intensive · Max 5 students per batch</span>
+        <p class="guar">Band 7+ Guaranteed or Money Back</p>
+        <ul class="ticks">
           <li>Alternate-day live sessions (1.5 hrs each)</li>
           <li>1-on-1 speaking mock interviews</li>
           <li>Unlimited writing evaluations</li>
           <li>5 full-length mock tests</li>
           <li>WhatsApp doubt support 24/7</li>
         </ul>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20Live%20Coaching%20at%20Rs.14999" class="btn btn-wa" target="_blank">💬 Enroll via WhatsApp</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20Live%20Coaching%20at%20Rs.14999" class="btn btn-wa btn-block" data-cta="pricing-live" target="_blank" rel="noopener">Enroll via WhatsApp</a>
       </div>
-      <div class="p-card rv">
-        <div class="p-name">1-on-1 Mentorship</div>
-        <div><span class="p-orig">₹27,999</span><span class="p-disc-badge">30% OFF</span></div>
-        <div class="p-amount"><sup>₹</sup>19,999</div>
-        <div class="p-per">30-day elite program · Limited seats</div>
-        <div class="p-guarantee">🛡️ Band 7+ Guaranteed or Money Back</div>
-        <ul class="p-feats">
+      <div class="card price rv">
+        <h3>1-on-1 Mentorship</h3>
+        <div class="amt">₹19,999<s>₹27,999</s></div>
+        <span class="per">30% OFF · 30-day elite program · Limited seats</span>
+        <p class="guar">Band 7+ Guaranteed or Money Back</p>
+        <ul class="ticks">
           <li>Everything in Live Coaching</li>
           <li>Dedicated personal coach</li>
           <li>Alternate-day 1-on-1 sessions (1.5 hrs each)</li>
           <li>Custom study plan built for you</li>
           <li>Priority feedback within 4 hours</li>
         </ul>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20about%201-on-1%20Mentorship" class="btn btn-blue-outline" target="_blank">Book Free Consultation →</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20about%201-on-1%20Mentorship" class="btn btn-ghost btn-block" data-cta="pricing-mentorship" target="_blank" rel="noopener">Book Free Consultation</a>
       </div>
+    </div>
+    <p class="center mt" style="margin-left:auto;margin-right:auto">Not ready to pay? <a href="/book-demo" data-cta="pricing-demo" style="color:var(--blue);font-weight:700">Book a free demo class first →</a></p>
+  </div>
+</section>
+
+<!-- WEBINAR PROMO -->
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band promo rv" style="text-align:left">
+      <div>
+        <span class="eyebrow" style="color:#fff;opacity:.85">Free IELTS Webinar</span>
+        <h2>Not ready for a class yet? Start with our free webinar.</h2>
+        <p style="margin:0">See how PrepEve teaches before you commit — many of our students enrolled after attending a free webinar.</p>
+      </div>
+      <div class="btn-row"><a href="/webinar" class="btn btn-light btn-lg btn-block" data-cta="webinar-promo">Reserve My Free Seat</a></div>
     </div>
   </div>
 </section>
 
 <!-- FRENCH -->
-<section class="sec sec-alt" id="french">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow rv">Also Available</div>
-      <h2 class="rv">French Coaching — A1 to C1</h2>
-      <p class="lede rv">From Canada PR to DELF/DALF — live 1-on-1 French coaching with a certified trainer. Start with a free 60-min demo class, walk out with a personal study plan.</p>
+<section class="sec sec-dark fr" id="french">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Also Available</span>
+      <h2>French Coaching — A1 to C1</h2>
+      <p style="color:#CBD5E1">From Canada PR to DELF/DALF — live 1-on-1 French coaching with a certified trainer. Start with a free 60-min demo class, walk out with a personal study plan.</p>
     </div>
-    <div class="fr-grid">
-      <div class="fr-card rv">
-        <div class="fr-tag">Most Popular</div>
-        <h3>🍁 Canada PR French</h3>
+    <div class="grid g3">
+      <div class="card rv">
+        <span class="badge">Most Popular</span>
+        <h3 class="mt-s">Canada PR French</h3>
         <p>TEF Canada &amp; TCF prep. Hit the exact CLB scores Express Entry and PNP programs require.</p>
-        <ul class="fr-feats">
+        <ul class="ticks">
           <li>TEF Canada &amp; TCF CLB strategy</li>
           <li>Speaking, Listening, Reading, Writing</li>
           <li>Mock tests with trainer feedback</li>
           <li>Most students crack CLB 7 in 8–12 weeks</li>
         </ul>
       </div>
-      <div class="fr-card rv">
-        <div class="fr-tag">Exam Track</div>
-        <h3>📝 DELF / DALF Preparation</h3>
+      <div class="card rv">
+        <span class="badge badge-gold">Exam Track</span>
+        <h3 class="mt-s">DELF / DALF Preparation</h3>
         <p>From A1 to C2 — structured coaching for DELF and DALF exams for university admission, work, or residency.</p>
-        <ul class="fr-feats">
+        <ul class="ticks">
           <li>All DELF levels: A1, A2, B1, B2</li>
           <li>DALF C1 &amp; C2 advanced track</li>
           <li>Exam-pattern writing &amp; oral practice</li>
           <li>Past papers with detailed feedback</li>
         </ul>
       </div>
-      <div class="fr-card fr-cta rv">
-        <div class="fr-tag">Free Demo</div>
-        <h3>💬 Not Sure Where to Start?</h3>
+      <div class="card rv" style="display:flex;flex-direction:column">
+        <span class="badge badge-ok">Free Demo</span>
+        <h3 class="mt-s">Not Sure Where to Start?</h3>
         <p>Book a free 60-min demo. Your trainer assesses your level live and hands you a study plan before you leave.</p>
-        <div class="fr-proof">
-          <span>6,000+ students trained</span>
-          <span>A1 to C1 all levels</span>
-          <span>★ 4.7 Google Rating</span>
-          <span>Regulated Immigration Consultant</span>
-        </div>
-        <a href="book-demo-french" class="btn btn-blue" target="_blank">Book My Free French Demo →</a>
+        <ul class="ticks">
+          <li>A1 to C1 all levels</li>
+          <li>★ 4.7 Google Rating</li>
+          <li>Regulated Immigration Consultant</li>
+        </ul>
+        <a href="/book-demo-french" class="btn btn-primary btn-block mt-s" style="margin-top:auto" data-cta="french-promo">Book My Free French Demo</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COACHES -->
-<section class="sec coach-section" id="coaches">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow rv">Meet Your Trainers</div>
-      <h2 class="rv">The experts behind your band score</h2>
-      <p class="lede rv">CELTA/DELTA certified British-trained experts with a track record of transforming student scores.</p>
+<!-- BAND QUIZ -->
+<section class="sec sec-alt" id="band-quiz">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Free Tool</span>
+      <h2>Band score calculator</h2>
+      <p>Answer 5 quick questions — get your estimated band score and a free personalised study plan instantly.</p>
     </div>
-    <div class="coach-grid">
-      <div class="coach-card rv">
-        <div class="coach-avatar">S</div>
-        <div class="coach-name">Sanjita</div>
-        <div class="coach-role">Founder &amp; Trainer — PrepEve · Regulated Canadian Immigration Consultant</div>
-        <div class="coach-exams">IELTS · Duolingo · PTE · CELPIP · TOEFL</div>
-        <p class="coach-bio">The driving force behind PrepEve. Sanjita built this institute from the ground up with one mission — to make every student's band dream a reality through personal, focused coaching.</p>
-      </div>
-      <div class="coach-card rv">
-        <div class="coach-avatar" style="background:#2563EB;">L</div>
-        <div class="coach-name">Lesancy Sharma</div>
-        <div class="coach-role">IELTS Trainer · PrepEve Master Trainer</div>
-        <div class="coach-exams">IELTS · Duolingo · PTE · CELPIP · TOEFL</div>
-        <p class="coach-bio">Passionate about helping students unlock their true potential in English. Known for clear explanations, structured feedback, and a student-first approach to every session.</p>
-      </div>
-      <div class="coach-card rv">
-        <div class="coach-avatar" style="background:#1D4ED8;">K</div>
-        <div class="coach-name">Khushpreet</div>
-        <div class="coach-role">IELTS Trainer · PrepEve Trainer</div>
-        <div class="coach-exams">IELTS · Duolingo · PTE · CELPIP · TOEFL</div>
-        <p class="coach-bio">Dedicated to helping students achieve their target scores with structured guidance, personalised feedback, and proven exam strategies across all modules.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DEMO BOX -->
-<section class="sec" id="demo" style="background:var(--bg)">
-  <div class="container">
-    <div class="demo-box rv">
-      <div class="eyebrow" style="justify-content:center">Try Before You Buy</div>
-      <h2>Experience a free demo class before you enrol</h2>
-      <p class="lede">Not sure if PrepEve is right for you? Join a live demo session with one of our certified trainers — completely free, no commitment needed.</p>
-      <div class="demo-cards">
-        <div class="demo-card">
-          <div class="di">🎯</div>
-          <div class="dt">Live 30-Min Demo Session</div>
-          <div class="dd">Join a real 30-minute live session with our certified trainer. Get a genuine feel for our teaching style, pace, and quality.</div>
-        </div>
-        <div class="demo-card">
-          <div class="di">✍️</div>
-          <div class="dt">Writing Sample Evaluated</div>
-          <div class="dd">Submit one writing task and get genuine human feedback from our trainer — so you see exactly how we assess and improve your work.</div>
-        </div>
-        <div class="demo-card">
-          <div class="di">🗺️</div>
-          <div class="dt">Personalised Study Plan</div>
-          <div class="dd">Leave the demo with a clear roadmap of what you need to work on and how long it will take to hit your target band score.</div>
-        </div>
-      </div>
-      <div class="demo-btns">
-        <a href="book-demo" class="btn btn-white btn-lg" target="_blank">Book My Free Demo Class</a>
-        <a href="https://www.youtube.com/@prepeveclasses" class="btn btn-dark-ghost btn-lg" target="_blank">Watch Free Classes First</a>
-      </div>
-      <p class="demo-note">✅ 100% Free &nbsp;·&nbsp; No credit card &nbsp;·&nbsp; No obligation &nbsp;·&nbsp; Limited spots per week</p>
-    </div>
-  </div>
-</section>
-
-<!-- YOUTUBE -->
-<section class="sec" id="youtube">
-  <div class="container">
-    <div class="yt-grid">
-      <div>
-        <div class="eyebrow rv">Free Content</div>
-        <h2 class="rv">@PrepEveClasses on YouTube</h2>
-        <p class="lede rv">Weekly free lessons, student success stories, and exam strategy — no signup required.</p>
-        <a href="https://www.youtube.com/@prepeveclasses" class="btn btn-blue rv" target="_blank" style="margin-top:20px">Subscribe — it's free</a>
-        <div class="yt-stats-row rv">
-          <div><div class="v">120K+</div><div class="l">Subscribers</div></div>
-          <div><div class="v">100+</div><div class="l">Free Lessons</div></div>
-          <div><div class="v">5M+</div><div class="l">Total Views</div></div>
-        </div>
-      </div>
-      <div class="rv">
-        <a href="https://www.youtube.com/@prepeveclasses" target="_blank" style="display:block;position:relative;border-radius:var(--r-xl);overflow:hidden;text-decoration:none;">
-          <img src="https://img.youtube.com/vi/U9P_CHZMrYE/maxresdefault.jpg" alt="Watch PrepEve on YouTube" style="width:100%;aspect-ratio:16/9;object-fit:cover" onerror="this.src='https://img.youtube.com/vi/U9P_CHZMrYE/hqdefault.jpg'" loading="lazy">
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.3)">
-            <div style="width:64px;height:64px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BAND CALCULATOR -->
-<section class="calc-section" id="calculator">
-  <div class="calc-wrap">
-    <div class="eyebrow">Free Tool</div>
-    <h2>Band score calculator</h2>
-    <p>Answer 5 quick questions — get your estimated band score and a free personalised study plan instantly.</p>
-    <div class="qbar-row">
-      <div class="qbar-track"><div class="qbar-fill" id="QBar"></div></div>
-      <div id="QLabel">Q 1 of 5</div>
-    </div>
-    <div id="QBOX"></div>
-  </div>
-</section>
-
-<!-- BATCH SECTION -->
-<section class="sec batch-section" id="batches">
-  <div class="container">
-    <div class="eyebrow rv" style="color:#93C5FD">Upcoming Batches</div>
-    <h2 class="rv" style="margin-bottom:8px">Next batch starts soon</h2>
-    <p class="lede rv" style="color:rgba(255,255,255,.55);margin-bottom:32px">Seats fill up fast — every batch is capped at 5 students for quality. Reserve yours now on WhatsApp.</p>
-    <div class="countdown-banner rv">
-      <div class="cb-label">🔥 Next batch enrollment closes in:</div>
-      <div class="cd-units">
-        <div class="cu"><div class="cu-val" id="cd-days">--</div><div class="cu-lbl">Days</div></div>
-        <div class="cu-sep">:</div>
-        <div class="cu"><div class="cu-val" id="cd-hrs">--</div><div class="cu-lbl">Hours</div></div>
-        <div class="cu-sep">:</div>
-        <div class="cu"><div class="cu-val" id="cd-min">--</div><div class="cu-lbl">Mins</div></div>
-        <div class="cu-sep">:</div>
-        <div class="cu"><div class="cu-val" id="cd-sec">--</div><div class="cu-lbl">Secs</div></div>
-      </div>
-    </div>
-    <div class="batch-grid">
-      <div class="batch-card hot rv">
-        <span class="b-badge hot">🔥 Filling Fast</span>
-        <div class="b-type">Live Coaching · Academic</div>
-        <div class="b-name">October Batch</div>
-        <div class="b-date">📅 Starts Oct 1, 2026</div>
-        <div class="seats-bar"><div class="seats-fill" style="width:85%"></div></div>
-        <div class="seats-text">3 seats left</div>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20reserve%20a%20seat%20in%20the%20October%20Batch" class="b-btn" target="_blank">Reserve My Seat</a>
-      </div>
-      <div class="batch-card rv">
-        <span class="b-badge open">✓ Enrolling Open</span>
-        <div class="b-type">Live Coaching · General Training</div>
-        <div class="b-name">October Batch</div>
-        <div class="b-date">📅 Starts Oct 1, 2026</div>
-        <div class="seats-bar"><div class="seats-fill" style="width:40%"></div></div>
-        <div class="seats-text">12 seats left</div>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20join%20the%20October%20General%20Training%20Batch" class="b-btn" target="_blank">Reserve My Seat</a>
-      </div>
-      <div class="batch-card rv">
-        <span class="b-badge open">✓ Enrolling Open</span>
-        <div class="b-type">1-on-1 Mentorship</div>
-        <div class="b-name">Flexible Slots</div>
-        <div class="b-date">📅 Start anytime · Your schedule</div>
-        <div class="seats-bar"><div class="seats-fill" style="width:60%"></div></div>
-        <div class="seats-text">8 slots available</div>
-        <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20book%20a%20slot%20for%201-on-1%20Mentorship" class="b-btn" target="_blank">Book a Slot</a>
-      </div>
+    <div class="card quiz rv" data-form="band-quiz">
+      <div class="qprog"><div class="qtrack"><div id="QBar"></div></div><div id="QLabel">Question 1 of 5</div></div>
+      <div id="QBOX" aria-live="polite"></div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
 <section class="sec" id="faq">
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow rv">FAQ</div>
-      <h2 class="rv">Frequently asked questions</h2>
-      <p class="lede rv">Still have questions? WhatsApp us — we reply within minutes.</p>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Frequently asked questions</h2>
+      <p>Still have questions? WhatsApp us — we reply within minutes.</p>
     </div>
-    <div class="faq-list rv">
-      <div class="faq-item open">
-        <button class="faq-q">What is the Exam Cleared Guarantee? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">If you complete all sessions, submit all practice tasks, and attend all mock tests but still don't clear your exam, we give you a full refund — no questions asked. This applies to our Live Coaching and 1-on-1 Mentorship plans.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How do I enroll? Can I do it on WhatsApp? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes! Most of our students enroll directly through WhatsApp. Just message us on +91 98777 14284 and our team will guide you through the process, answer any questions, and help you pick the right plan — all in a quick chat.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How are live classes conducted? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">All live classes are on Zoom, 1.5 hours each, Monday to Friday. Every session is recorded. Batches are capped at just 5 students for maximum personal attention. You'll be added to a WhatsApp group for your batch for daily updates and doubt-solving.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Can I join if I'm a complete beginner? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Absolutely! After enrollment, you take a free diagnostic test and we build a personalised study plan. Beginners typically need 60–90 days; those with some prep can see results in 30–45 days. WhatsApp us and we'll assess your level for free.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do you offer General Training IELTS? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes! Both Academic and General Training. Our coach Ananya specialises in General Training and has helped 1,500+ students achieve Band 7+ for Canadian PR, UK Visa, and Australian migration.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do you offer PTE, Duolingo, CELPIP or TOEFL coaching? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes! Our certified trainers coach for IELTS, PTE, Duolingo English Test, CELPIP, and TOEFL. WhatsApp us to discuss which exam is best for your visa or immigration pathway.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">What are the class timings? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">We offer flexible morning and evening slots to suit working professionals and students. Once you enrol, your trainer will coordinate a schedule that works for you. WhatsApp us to check available slots.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Why choose PrepEve over other IELTS coaching platforms? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Most coaching platforms charge ₹20,000–50,000 for batch classes 2–3 times a week with limited personal feedback. PrepEve runs daily live sessions in batches capped at 5 students, gives certified trainer feedback on every submission, and backs it with an exam-cleared-or-refund guarantee — starting from ₹4,999. See the full comparison above, or just ask us on WhatsApp.</div></div>
-      </div>
+    <div class="faq">
+      <details><summary>What is the Exam Cleared Guarantee?</summary><div>If you complete all sessions, submit all practice tasks, and attend all mock tests but still don't clear your exam, we give you a full refund — no questions asked. This applies to our Live Coaching and 1-on-1 Mentorship plans.</div></details>
+      <details><summary>How do I enroll? Can I do it on WhatsApp?</summary><div>Yes! Most of our students enroll directly through WhatsApp. Just message us on +91 98777 14284 and our team will guide you through the process, answer any questions, and help you pick the right plan — all in a quick chat.</div></details>
+      <details><summary>How are live classes conducted?</summary><div>All live classes are on Zoom, 1.5 hours each, Monday to Friday. Every session is recorded. Batches are capped at just 5 students for maximum personal attention. You'll be added to a WhatsApp group for your batch for daily updates and doubt-solving.</div></details>
+      <details><summary>Can I join if I'm a complete beginner?</summary><div>Absolutely! After enrollment, you take a free diagnostic test and we build a personalised study plan. Beginners typically need 60–90 days; those with some prep can see results in 30–45 days. WhatsApp us and we'll assess your level for free.</div></details>
+      <details><summary>Do you offer General Training IELTS?</summary><div>Yes — we coach both IELTS Academic and General Training, including General Training for Canada PR, UK and Australia visas.</div></details>
+      <details><summary>Do you offer PTE, Duolingo, CELPIP or TOEFL coaching?</summary><div>Yes! Our certified trainers coach for IELTS, PTE, Duolingo English Test, CELPIP, and TOEFL. WhatsApp us to discuss which exam is best for your visa or immigration pathway.</div></details>
+      <details><summary>What are the class timings?</summary><div>We offer flexible morning and evening slots to suit working professionals and students. Once you enrol, your trainer will coordinate a schedule that works for you. WhatsApp us to check available slots.</div></details>
+      <details><summary>Why choose PrepEve over other IELTS coaching platforms?</summary><div>Most coaching platforms charge ₹20,000–50,000 for batch classes 2–3 times a week with limited personal feedback. PrepEve runs daily live sessions in batches capped at 5 students, gives certified trainer feedback on every submission, and backs it with an exam-cleared-or-refund guarantee — starting from ₹4,999. See the full comparison above, or just ask us on WhatsApp.</div></details>
     </div>
-    <div class="cta-row rv">
-      <div>
-        <div class="ct">💬 Still have a question?</div>
-        <div class="cs">Our team replies on WhatsApp within 5 minutes — no bots, real people.</div>
-      </div>
-      <a href="https://wa.me/919877714284?text=Hi!%20I%20have%20a%20question%20about%20IELTS%20coaching" class="btn btn-wa" target="_blank">Ask on WhatsApp →</a>
-    </div>
+    <p class="center mt" style="margin-left:auto;margin-right:auto"><a href="https://wa.me/919877714284?text=Hi!%20I%20have%20a%20question%20about%20IELTS%20coaching" class="btn btn-wa" data-cta="faq" target="_blank" rel="noopener">Ask on WhatsApp</a></p>
   </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="sec fcta">
-  <div class="container">
-    <h2>Ready to get your dream band?</h2>
-    <p>Join 15,000+ students who trusted PrepEve. Start with a free counselling call on WhatsApp — no commitment needed.</p>
-    <div class="fcta-btns">
-      <a href="https://wa.me/919877714284?text=Hi!%20I%27d%20like%20a%20free%20IELTS%20counselling%20call" target="_blank" class="btn btn-white btn-lg">💬 Get Free Counselling on WhatsApp</a>
-      <a href="book-demo" class="btn btn-dark-ghost btn-lg" target="_blank">Book Free Demo →</a>
+<section class="sec" style="padding-top:0" data-hide-mcta>
+  <div class="wrap">
+    <div class="cta-band rv">
+      <h2>Ready to get your dream band?</h2>
+      <p>Join 15,000+ students who trusted PrepEve. Start with a free demo class — no commitment needed.</p>
+      <div class="btn-row" style="justify-content:center">
+        <a href="/book-demo" class="btn btn-light btn-lg" data-cta="final">Book Free Demo Class</a>
+        <a href="https://wa.me/919877714284?text=Hi!%20I%27d%20like%20a%20free%20IELTS%20counselling%20call" class="btn btn-wa btn-lg" data-cta="final" target="_blank" rel="noopener">Free Counselling on WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
+</main>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="foot-top">
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
       <div>
-        <div class="foot-logo">Prep<span>Eve</span></div>
-        <p class="foot-desc">India's most trusted IELTS coaching platform. Band 7+ guaranteed or your money back.</p>
+        <a href="/" class="logo">Prep<span>Eve</span></a>
+        <p class="mt-s">Live online IELTS coaching and French for Canada PR, taught by certified trainers.</p>
       </div>
       <div>
-        <div class="foot-wa-label">WhatsApp &amp; Enquiries</div>
-        <div class="foot-wa-num">+91 98777 14284</div>
-        <div class="foot-links">
-          <a href="https://wa.me/919877714284" target="_blank">💬 Chat on WhatsApp</a>
-          <a href="https://www.youtube.com/@prepeveclasses" target="_blank">▶ youtube.com/@prepeveclasses</a>
-          <a href="https://instagram.com/prepeve" target="_blank">📸 Instagram</a>
-        </div>
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="/#courses">IELTS Courses</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/book-demo-french">French for Canada PR</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Free</h4>
+        <ul>
+          <li><a href="/webinar">IELTS Webinar</a></li>
+          <li><a href="/book-demo">Demo Class</a></li>
+          <li><a href="/#band-quiz">Band Estimator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/919877714284" data-cta="footer" target="_blank" rel="noopener">WhatsApp +91 98777 14284</a></li>
+          <li><a href="https://www.youtube.com/@prepeveclasses" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
       </div>
     </div>
-    <div class="foot-social">
-      <a href="https://www.youtube.com/@prepeveclasses" target="_blank">▶ YouTube</a>
-      <a href="https://wa.me/919877714284" target="_blank">💬 WhatsApp</a>
-      <a href="https://instagram.com/prepeve" target="_blank">📸 Instagram</a>
+    <div class="foot-bot">
+      <span>© <span data-year>2026</span> PrepEve. All rights reserved.</span>
+      <span>IELTS is a registered trademark of the British Council, IDP and Cambridge. PrepEve is independent.</span>
     </div>
-    <div class="foot-copy">© 2025 PrepEve Education Pvt. Ltd. · All rights reserved · Band 7+ Guarantee · Privacy Policy · Terms of Service · WhatsApp: +91 98777 14284</div>
   </div>
 </footer>
 
-<!-- MOBILE STICKY CTA -->
-<div class="sticky-cta" id="sticky-cta">
-  <a href="book-demo" class="s1" target="_blank">🎓 Book Free Demo</a>
-  <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20about%20IELTS%20coaching" class="s2" target="_blank">💬 WhatsApp</a>
+<div class="mcta">
+  <a href="/book-demo" class="btn btn-primary" data-cta="mcta">Book Free Demo</a>
+  <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20about%20IELTS%20coaching" class="btn btn-wa" data-cta="mcta" target="_blank" rel="noopener">WhatsApp</a>
 </div>
 
-<!-- WA FLOAT -->
-<div class="wa-float">
-  <div class="tip">Chat on WhatsApp →</div>
-  <a href="https://wa.me/919877714284?text=Hi!%20I%20want%20to%20know%20about%20IELTS%20coaching" class="wa-btn-float" target="_blank" aria-label="WhatsApp">💬</a>
-</div>
-
-<!-- VIDEO LIGHTBOX MODAL -->
-<div id="vt-modal" class="vt-modal">
-  <div id="vt-modal-bg" class="vt-modal-bg"></div>
-  <div class="vt-modal-content">
-    <button id="vt-modal-close" class="vt-modal-close" aria-label="Close video">×</button>
-    <iframe id="vt-iframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="vmodal" role="dialog" aria-modal="true" aria-label="Video">
+  <div class="vmodal-in">
+    <button class="vmodal-x" aria-label="Close video">×</button>
+    <iframe title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
 
-<!-- BACK TO TOP -->
-<button id="back-top" title="Back to top">↑</button>
-
 <script>
-// ---- Reveal on scroll ----
-(function(){
-  var els = document.querySelectorAll('.rv');
-  if (!els.length) return;
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold: 0.1});
-  els.forEach(function(el){ io.observe(el); });
-})();
-
-// ---- Mobile menu ----
-(function(){
-  var btn = document.getElementById('hamburger');
-  var menu = document.getElementById('mob-menu');
-  if (!btn || !menu) return;
-  btn.addEventListener('click', function(){
-    menu.classList.toggle('open');
-  });
-  menu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){ menu.classList.remove('open'); });
-  });
-})();
-
-// ---- FAQ accordion ----
-(function(){
-  document.querySelectorAll('.faq-q').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var item = btn.closest('.faq-item');
-      var wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
-      if (!wasOpen) item.classList.add('open');
-    });
-  });
-})();
-
-// ---- Video lightbox ----
-(function(){
-  var modal = document.getElementById('vt-modal');
-  var iframe = document.getElementById('vt-iframe');
-  var bg = document.getElementById('vt-modal-bg');
-  var closeBtn = document.getElementById('vt-modal-close');
-  if (!modal) return;
-  function open(vid){
-    iframe.src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1';
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function close(){
-    modal.classList.remove('open');
-    iframe.src = '';
-    document.body.style.overflow = '';
-  }
-  document.querySelectorAll('.v-thumb[data-vid]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      e.preventDefault();
-      open(a.dataset.vid);
-    });
-  });
-  bg.addEventListener('click', close);
-  closeBtn.addEventListener('click', close);
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
-})();
-
-// ---- Back to top ----
-(function(){
-  var btn = document.getElementById('back-top');
-  if (!btn) return;
-  window.addEventListener('scroll', function(){
-    btn.classList.toggle('show', window.scrollY > 600);
-  });
-  btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
-})();
-
-// ---- Countdown timer ----
-(function(){
-  function updateCountdown(){
-    var now = new Date();
-    var target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7, 23, 59, 59);
-    var diff = Math.max(target - now, 0);
-    function pad(n){ return String(Math.floor(n)).padStart(2,'0'); }
-    var d = Math.floor(diff / 86400000);
-    var h = Math.floor((diff % 86400000) / 3600000);
-    var m = Math.floor((diff % 3600000)  / 60000);
-    var s = Math.floor((diff % 60000)    / 1000);
-    var elD = document.getElementById('cd-days');
-    var elH = document.getElementById('cd-hrs');
-    var elM = document.getElementById('cd-min');
-    var elS = document.getElementById('cd-sec');
-    if(elD) elD.textContent = pad(d);
-    if(elH) elH.textContent = pad(h);
-    if(elM) elM.textContent = pad(m);
-    if(elS) elS.textContent = pad(s);
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-})();
-
 // ---- Band Calculator Quiz ----
 (function(){
   var ANS=[0,0,0,0,0], CUR=1;
@@ -1607,57 +609,35 @@ footer {
     {q:"What is your target band score?",
      o:["Band 6.0 - 6.5 (minimum requirement)","Band 7.0 - 7.5 (Canada PR / UK Visa)","Band 8.0 - 8.5 (top universities / Australia)","Band 9.0 (maximum - teaching / research)"]}
   ];
-
   function setBar(n){
     var b=document.getElementById("QBar");
     var l=document.getElementById("QLabel");
     if(b) b.style.width=(((n-1)/5)*100)+"%";
     if(l) l.textContent="Question "+n+" of 5";
   }
-
   function render(){
     var box=document.getElementById("QBOX");
     if(!box) return;
     setBar(CUR);
     var q=QS[CUR-1];
-    var h="";
-    h+='<div style="font-size:1rem;font-weight:700;color:#fff;margin-bottom:1.3rem;line-height:1.6">';
-    h+='<span style="color:#93C5FD">Q'+CUR+'. </span>'+q.q+'</div>';
-    h+='<div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem">';
+    var h='<div class="qq"><span>Q'+CUR+'. </span>'+q.q+'</div><div class="qopts">';
     for(var i=0;i<4;i++){
       var p=i+1;
       var sel=(ANS[CUR-1]===p);
-      var bg=sel?"rgba(59,130,246,.25)":"rgba(255,255,255,.05)";
-      var bd=sel?"1.5px solid rgba(59,130,246,.85)":"1.5px solid rgba(255,255,255,.12)";
-      var fc=sel?"#fff":"rgba(255,255,255,.75)";
-      var fw=sel?"700":"500";
-      h+='<button type="button" onclick="window._qpick('+p+')" ';
-      h+='style="display:flex;align-items:center;gap:.8rem;width:100%;padding:.9rem 1rem;';
-      h+='background:'+bg+';border:'+bd+';border-radius:10px;cursor:pointer;text-align:left;';
-      h+='font-size:.875rem;font-weight:'+fw+';color:'+fc+';font-family:inherit">';
-      h+='<span style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;flex-shrink:0">'+p+'</span>';
-      h+=q.o[i];
-      h+='</button>';
+      h+='<button type="button" class="qopt'+(sel?' sel':'')+'" aria-pressed="'+sel+'" onclick="window._qpick('+p+')"><i>'+p+'</i>'+q.o[i]+'</button>';
     }
-    h+='</div>';
-    h+='<div style="display:flex;justify-content:'+(CUR>1?"space-between":"flex-end")+';gap:.7rem">';
-    if(CUR>1){
-      h+='<button type="button" onclick="window._qback()" style="padding:.65rem 1.5rem;border-radius:8px;font-weight:700;font-size:.84rem;cursor:pointer;background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.15);font-family:inherit">&larr; Back</button>';
-    }
-    if(CUR<5){
-      h+='<button type="button" onclick="window._qnext()" style="padding:.65rem 1.8rem;border-radius:8px;font-weight:700;font-size:.84rem;cursor:pointer;background:#1A56DB;color:#fff;border:none;font-family:inherit">Next &rarr;</button>';
-    } else {
-      h+='<button type="button" onclick="window._qresult()" style="padding:.65rem 1.8rem;border-radius:8px;font-weight:700;font-size:.84rem;cursor:pointer;background:#25D366;color:#fff;border:none;font-family:inherit">See My Result &rarr;</button>';
-    }
+    h+='</div><div class="qnav">';
+    if(CUR>1) h+='<button type="button" class="btn btn-ghost" onclick="window._qback()">&larr; Back</button>';
+    if(CUR<5) h+='<button type="button" class="btn btn-primary" onclick="window._qnext()">Next &rarr;</button>';
+    else h+='<button type="button" class="btn btn-primary" data-cta="quiz-result" onclick="window._qresult()">See My Result &rarr;</button>';
     h+='</div>';
     box.innerHTML=h;
   }
-
   function shake(){
-    var b=document.getElementById("QBOX");
+    var b=document.querySelector(".quiz");
     if(!b) return;
-    b.style.boxShadow="0 0 0 3px rgba(59,130,246,.7)";
-    setTimeout(function(){b.style.boxShadow="";},700);
+    b.classList.add("shake");
+    setTimeout(function(){b.classList.remove("shake");},700);
   }
 
   window._qpick=function(p){ ANS[CUR-1]=p; render(); };
@@ -1694,31 +674,27 @@ footer {
     if(b)b.style.width="100%";
     if(l)l.textContent="Your Result!";
     var pl="";
-    for(var i=0;i<plan.length;i++){
-      pl+='<li style="font-size:.84rem;color:rgba(255,255,255,.75);padding:.3rem 0;display:flex;gap:.5rem"><span style="color:#93C5FD;font-weight:800;flex-shrink:0">&rarr;</span>'+plan[i]+'</li>';
-    }
+    for(var i=0;i<plan.length;i++){ pl+='<li>'+plan[i]+'</li>'; }
     var waUrl="https://wa.me/919877714284?text="+encodeURIComponent(msg);
     document.getElementById("QBOX").innerHTML=
-      '<div style="text-align:center;margin-bottom:1.4rem">'+
-      '<div style="width:110px;height:110px;border-radius:50%;background:#1A56DB;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1rem;box-shadow:0 8px 32px rgba(26,86,219,.4)">'+
-      '<div style="font-size:2rem;font-weight:800;color:#fff;line-height:1">'+band.split(" ")[0]+'</div>'+
-      '<div style="font-size:.48rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85)">EST. BAND</div>'+
-      '</div>'+
-      '<div style="font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:.5rem;font-family:\'Plus Jakarta Sans\',sans-serif">'+title+'</div>'+
-      '<p style="font-size:.87rem;color:rgba(255,255,255,.6);line-height:1.8;max-width:440px;margin:0 auto">'+desc+'</p>'+
-      '</div>'+
-      '<div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.1rem 1.3rem;margin-bottom:1.3rem">'+
-      '<div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#93C5FD;margin-bottom:.7rem">Your Recommended Study Plan</div>'+
-      '<ul style="list-style:none;padding:0;margin:0">'+pl+'</ul>'+
-      '</div>'+
-      '<div style="display:flex;flex-direction:column;gap:.65rem">'+
-      '<a href="'+waUrl+'" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem;background:#25D366;color:#fff;border-radius:10px;font-weight:700;font-size:.9rem;text-decoration:none">💬 Chat on WhatsApp &rarr; Get Free Plan</a>'+
-      '<button type="button" onclick="window._qreset()" style="padding:.75rem;background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.13);border-radius:10px;font-weight:700;font-size:.84rem;cursor:pointer;font-family:inherit">Retake Quiz</button>'+
+      '<div class="qres">'+
+        '<div class="qres-top"><div class="qband">'+band.split(" ")[0]+'<small>EST. BAND</small></div>'+
+        '<div><h3>'+title+'</h3><p style="color:var(--muted);font-size:.95rem">Estimated band '+band+'</p></div></div>'+
+        '<p>'+desc+'</p>'+
+        '<h4>Your Recommended Study Plan</h4>'+
+        '<ul class="ticks">'+pl+'</ul>'+
+        '<div class="btn-row">'+
+          '<a href="/book-demo" class="btn btn-primary" data-cta="quiz-result">Book Free Demo Class</a>'+
+          '<a href="'+waUrl+'" class="btn btn-wa" data-cta="quiz-result" target="_blank" rel="noopener">Chat on WhatsApp &rarr; Get Free Plan</a>'+
+          '<button type="button" class="btn btn-ghost" onclick="window._qreset()">Retake Quiz</button>'+
+        '</div>'+
       '</div>';
+    if(window.pvTrack) window.pvTrack('quiz_complete',{band:band});
   };
   window._qreset=function(){ ANS=[0,0,0,0,0]; CUR=1; render(); };
   render();
 })();
 </script>
+<script src="/assets/js/prepeve.js" defer></script>
 </body>
 </html>
