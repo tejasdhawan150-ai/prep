@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
-<title>Free IELTS Webinar — Band 7+ Strategy | PrepEve</title>
-<meta name="description" content="Free live IELTS masterclass. Learn exact Band 7+ strategies in 60 minutes. Limited seats — register now."/>
+<title>Free IELTS Masterclass — Band 7+ Strategy | PrepEve</title>
+<meta name="description" content="Free live IELTS masterclass with Sanjita. Learn exact Band 7+ strategies in 60 minutes. Limited seats — register now."/>
 <meta name="robots" content="noindex"/>
-<meta property="og:title" content="Free IELTS Webinar — How to Score Band 7+ | PrepEve"/>
+<meta property="og:title" content="Free IELTS Masterclass — How to Score Band 7+ | PrepEve"/>
 <meta property="og:description" content="Join this free 60-min live session and get the exact roadmap to Band 7+. Limited seats."/>
 <meta property="og:image" content="https://prepeve.com/og-webinar.png"/>
 
@@ -26,1004 +26,751 @@ function fireConv(){
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 
 <style>
-/* ============================================================================
-   PREPEVE WEBINAR PAGE — New premium design
-   Plus Jakarta Sans (headings) + Inter (body)
-   Accent: #1A56DB  ·  WA green: #25D366 (WA buttons only)
-   Background: #FFFFFF / #F8F9FA  ·  No gradients, no old fonts
-   ========================================================================= */
-
-/* ── Design tokens ── */
-:root {
-  --white:    #FFFFFF;
-  --bg:       #F8F9FA;
-  --bg-alt:   #F1F3F5;
-  --ink:      #111827;
-  --ink-soft: #374151;
+/* ── Tokens ── */
+:root{
+  --white:#FFFFFF;
+  --bg:#F8F9FA;
+  --ink:#111827;
+  --ink-soft:#374151;
   --ink-muted:#6B7280;
-  --ink-faint:#9CA3AF;
-  --line:     #E5E7EB;
-
-  --blue:     #1A56DB;
+  --line:#E5E7EB;
+  --blue:#1A56DB;
   --blue-dark:#1341B0;
-  --blue-mid: #3B82F6;
-  --blue-light:#EEF2FF;
-  --blue-50:  #EEF2FF;
-  --blue-100: #C7D7F9;
-  --blue-300: #93ADEF;
-
-  --wa:       #25D366;
-  --wa-dark:  #128C7E;
-
-  --red:      #DC2626;
-  --red-50:   #FEF2F2;
-  --green:    #16A34A;
-  --gold:     #F59E0B;
-  --teal:     #0D9488;
-
-  --ink-50:   #F9FAFB;
-  --ink-300:  #9CA3AF;
-
-  --nav-height: 60px;
-  --r-sm:   8px;
-  --r-md:   12px;
-  --r-lg:   16px;
-  --r-xl:   20px;
-  --r-2xl:  24px;
-  --r-full: 9999px;
-
-  --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
-  --shadow:    0 4px 16px rgba(0,0,0,.08);
-  --shadow-lg: 0 10px 40px rgba(0,0,0,.1);
-  --shadow-wa: 0 6px 20px rgba(37,211,102,.28);
-
-  --font-head: 'Plus Jakarta Sans', sans-serif;
-  --font-body: 'Inter', sans-serif;
-
-  /* legacy aliases used in this page's CSS */
-  --font-serif: 'Plus Jakarta Sans', sans-serif;
-  --blue2: #3B82F6;
-  --border: #E5E7EB;
-  --muted: #6B7280;
+  --blue-bg:#EEF2FF;
+  --wa:#25D366;
+  --wa-dark:#1aad54;
+  --green:#16A34A;
+  --gold:#F59E0B;
+  --font-head:'Plus Jakarta Sans',sans-serif;
+  --font-body:'Inter',sans-serif;
+  --r-sm:8px;
+  --r-md:12px;
+  --r-lg:16px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.04);
+  --shadow:0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.1);
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--white);
-  font-family: var(--font-body);
-  color: var(--ink);
-  font-size: 1rem;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--white);
+  font-family:var(--font-body);
+  color:var(--ink);
+  font-size:1rem;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{cursor:pointer;border:none;background:none;font-family:inherit;}
+
+/* ── Layout ── */
+.wrap{max-width:1140px;margin:0 auto;padding:0 1rem;}
+.sec{padding:4rem 0;}
+.sec-alt{background:var(--bg);}
+
+/* ── Typography ── */
+.sec-label{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:var(--font-head);font-size:.75rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--blue);background:var(--blue-bg);
+  padding:.3rem .75rem;border-radius:99px;margin-bottom:1rem;
+}
+h1,h2,h3{font-family:var(--font-head);}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);font-weight:800;letter-spacing:-.035em;line-height:1.08;}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.15;}
+h3{font-size:1.1rem;font-weight:700;letter-spacing:-.01em;}
+em{font-style:normal;color:var(--blue);}
+
+/* ── Urgency bar ── */
+#urg-bar{
+  background:var(--blue);
+  color:#fff;
+  text-align:center;
+  font-size:.8rem;
+  font-weight:600;
+  padding:.55rem 1rem;
+  letter-spacing:.01em;
+}
+#urg-bar span{opacity:.85;margin:0 .6rem;}
+#urg-bar a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:2px;}
+#urg-bar strong{font-weight:800;}
+
+/* ── Navbar ── */
+#navbar{
+  position:sticky;top:0;z-index:200;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid transparent;
+  transition:border-color .2s, box-shadow .2s;
+  padding:.75rem 0;
+}
+#navbar.sc{border-color:var(--line);box-shadow:var(--shadow-sm);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.nav-logo{font-family:var(--font-head);font-weight:800;font-size:1.25rem;color:var(--ink);letter-spacing:-.02em;}
+.nav-logo span{color:var(--blue);}
+.nav-right{display:flex;align-items:center;gap:.75rem;}
+.nav-trust{font-size:.78rem;color:var(--ink-muted);font-weight:500;}
+.nav-cta{
+  background:var(--blue);color:#fff;
+  font-family:var(--font-head);font-size:.82rem;font-weight:700;
+  padding:.45rem 1.1rem;border-radius:var(--r-sm);
+  white-space:nowrap;transition:background .15s;
+}
+.nav-cta:hover{background:var(--blue-dark);}
+
+/* ── Hero ── */
+.hero{padding:3rem 0 4rem;}
+.hero-grid{display:grid;grid-template-columns:1fr 440px;gap:3.5rem;align-items:start;}
+.hero-copy{}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.8rem;font-weight:700;font-family:var(--font-head);
+  color:var(--blue);background:var(--blue-bg);
+  padding:.35rem .85rem;border-radius:99px;margin-bottom:1.2rem;
+}
+.hero-eyebrow .dot{width:7px;height:7px;background:#ef4444;border-radius:50%;animation:pulse 1.4s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+.hero-h1{margin-bottom:1rem;}
+.hero-h1 .accent{color:var(--blue);}
+.hero-sub{font-size:1.05rem;color:var(--ink-soft);line-height:1.65;margin-bottom:1.5rem;max-width:52ch;}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem;}
+.chip{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-size:.8rem;font-weight:600;
+  border:1.5px solid var(--line);
+  border-radius:99px;padding:.3rem .75rem;
+  color:var(--ink-soft);background:var(--white);
+}
+.chip.live{border-color:#ef4444;color:#ef4444;}
+.proof-bar{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.proof-item{text-align:center;}
+.proof-num{font-family:var(--font-head);font-size:1.35rem;font-weight:800;color:var(--ink);line-height:1;}
+.proof-lbl{font-size:.72rem;font-weight:500;color:var(--ink-muted);margin-top:.2rem;}
+.proof-sep{width:1px;background:var(--line);align-self:stretch;}
+
+/* ── Form card ── */
+.form-card{
+  background:var(--white);
+  border:1.5px solid var(--line);
+  border-radius:var(--r-lg);
+  box-shadow:var(--shadow-lg);
+  overflow:hidden;
+  position:sticky;top:80px;
+}
+.form-header{
+  background:var(--blue);
+  padding:1.25rem 1.5rem 1rem;
+  color:#fff;
+}
+.form-header-badge{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.72rem;font-weight:700;
+  background:rgba(255,255,255,.18);
+  border-radius:99px;padding:.25rem .65rem;margin-bottom:.6rem;
+}
+.form-header-badge .dot{width:6px;height:6px;background:#4ade80;border-radius:50%;}
+.form-title{font-family:var(--font-head);font-size:1.15rem;font-weight:800;letter-spacing:-.02em;line-height:1.2;}
+.form-sub{font-size:.78rem;opacity:.85;margin-top:.3rem;}
+.form-body{padding:1.25rem 1.5rem 1.5rem;}
+.field{margin-bottom:.9rem;}
+.field label{display:block;font-size:.75rem;font-weight:600;font-family:var(--font-head);color:var(--ink-soft);margin-bottom:.3rem;}
+.field label .req{color:#ef4444;}
+.field input,.field select{
+  width:100%;height:44px;
+  padding:0 .85rem;
+  border:1.5px solid var(--line);border-radius:var(--r-sm);
+  font-family:var(--font-body);font-size:.88rem;color:var(--ink);
+  background:var(--white);outline:none;
+  transition:border-color .15s,box-shadow .15s;
+  -webkit-appearance:none;appearance:none;
+}
+.field input:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,86,219,.1);}
+.field-err{display:none;font-size:.72rem;color:#ef4444;margin-top:.25rem;font-weight:500;}
+.fields-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+.btn-submit{
+  width:100%;height:50px;
+  background:var(--blue);color:#fff;
+  font-family:var(--font-head);font-size:.95rem;font-weight:700;
+  border-radius:var(--r-sm);
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  transition:background .15s,transform .1s;margin-top:.25rem;
+}
+.btn-submit:hover{background:var(--blue-dark);}
+.btn-submit:active{transform:scale(.99);}
+.btn-submit svg{flex-shrink:0;}
+#spinner{display:none;width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.form-footer{font-size:.72rem;color:var(--ink-muted);text-align:center;margin-top:.85rem;line-height:1.5;}
+.form-footer strong{color:var(--ink-soft);}
+
+/* ── Success wrap ── */
+#success-wrap{display:none;padding:2rem 1.5rem;text-align:center;}
+.success-ico{font-size:3rem;margin-bottom:.75rem;}
+.success-h{font-family:var(--font-head);font-size:1.3rem;font-weight:800;color:var(--green);margin-bottom:.5rem;}
+.success-sub{font-size:.9rem;color:var(--ink-soft);line-height:1.6;}
+
+/* ── Section headings ── */
+.section-head{margin-bottom:2.5rem;}
+.section-head p{font-size:1.05rem;color:var(--ink-soft);margin-top:.5rem;max-width:56ch;}
+
+/* ── Learn cards ── */
+.learn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;}
+.learn-card{
+  background:var(--white);border:1.5px solid var(--line);
+  border-radius:var(--r-lg);padding:1.25rem 1.25rem 1.25rem 1rem;
+  display:flex;gap:1rem;align-items:flex-start;
+  box-shadow:var(--shadow-sm);
+  transition:border-color .15s,box-shadow .15s;
+}
+.learn-card:hover{border-color:#93ADEF;box-shadow:var(--shadow);}
+.learn-num{
+  flex-shrink:0;width:32px;height:32px;
+  background:var(--blue-bg);color:var(--blue);
+  border-radius:var(--r-sm);
+  font-family:var(--font-head);font-size:.88rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .15s,color .15s;
+}
+.learn-card:hover .learn-num{background:var(--blue);color:#fff;}
+.learn-text h3{font-size:.9rem;font-weight:700;margin-bottom:.3rem;line-height:1.35;}
+.learn-text p{font-size:.82rem;color:var(--ink-muted);line-height:1.5;}
+
+/* ── Instructor ── */
+.instructor-grid{display:grid;grid-template-columns:240px 1fr;gap:3rem;align-items:start;}
+.instructor-photo{
+  width:200px;height:200px;
+  background:var(--blue-bg);
+  border:3px solid var(--line);
+  border-radius:var(--r-lg);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-head);font-size:4rem;font-weight:800;color:var(--blue);
+}
+.instructor-role{font-size:.78rem;font-weight:600;color:var(--blue);letter-spacing:.04em;text-transform:uppercase;margin-bottom:.35rem;}
+.instructor-name{font-family:var(--font-head);font-size:2rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.6rem;}
+.instructor-bio{font-size:.95rem;color:var(--ink-soft);line-height:1.7;margin-bottom:1.2rem;max-width:54ch;}
+.instructor-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem;}
+.inst-badge{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-size:.78rem;font-weight:600;
+  border:1.5px solid var(--line);border-radius:99px;
+  padding:.3rem .75rem;color:var(--ink-soft);
+}
+.instructor-quote{
+  border-left:3px solid var(--blue);
+  padding-left:1rem;
+  font-size:.92rem;color:var(--ink-soft);
+  font-style:italic;line-height:1.6;
 }
 
-a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
+/* ── Score results ── */
+.results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;}
+.result-card{
+  background:var(--white);border:1.5px solid var(--line);
+  border-radius:var(--r-lg);padding:1.25rem;
+  box-shadow:var(--shadow-sm);
+}
+.result-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.85rem;gap:.5rem;}
+.result-name{font-size:.82rem;font-weight:600;color:var(--ink-soft);}
+.result-badge{
+  flex-shrink:0;
+  font-size:.72rem;font-weight:700;
+  background:#dcfce7;color:#15803d;
+  border-radius:99px;padding:.2rem .6rem;
+}
+.result-score-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.85rem;}
+.score-before,.score-after{font-family:var(--font-head);font-size:1.1rem;font-weight:800;}
+.score-before{color:var(--ink-muted);}
+.score-after{color:var(--green);}
+.score-arrow{font-size:.85rem;color:var(--ink-muted);}
+.result-quote{font-size:.82rem;color:var(--ink-muted);line-height:1.55;font-style:italic;}
+.result-quote::before{content:'"';}
+.result-quote::after{content:'"';}
 
-/* ── Shared typography ── */
-.ds-h1 {
-  font-family: var(--font-head);
-  font-size: clamp(2.4rem,8vw,3.6rem);
-  font-weight: 800;
-  letter-spacing: -.04em;
-  line-height: 1.0;
-  color: var(--ink);
+/* ── Videos ── */
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.video-card{
+  background:var(--white);border:1.5px solid var(--line);
+  border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  transition:box-shadow .15s,transform .15s;
+  display:block;
 }
-.ds-h2 {
-  font-family: var(--font-head);
-  font-size: clamp(1.5rem,4vw,2rem);
-  font-weight: 800;
-  letter-spacing: -.03em;
-  color: var(--ink);
+.video-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+.video-thumb-wrap{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000;}
+.video-thumb{width:100%;height:100%;object-fit:cover;transition:opacity .2s;}
+.video-card:hover .video-thumb{opacity:.85;}
+.video-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+.video-play{
+  width:48px;height:48px;
+  background:rgba(255,255,255,.92);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 12px rgba(0,0,0,.25);
+  transition:transform .15s;
 }
-.ds-h2 em { font-style: normal; color: var(--blue); }
+.video-card:hover .video-play{transform:scale(1.1);}
+.video-play svg{fill:var(--blue);margin-left:3px;}
+.video-band{
+  position:absolute;top:.6rem;right:.6rem;
+  font-size:.7rem;font-weight:700;
+  background:var(--blue);color:#fff;
+  border-radius:99px;padding:.2rem .55rem;
+}
+.video-info{padding:.9rem 1rem;}
+.video-title{font-family:var(--font-head);font-size:.88rem;font-weight:700;margin-bottom:.2rem;}
+.video-meta{font-size:.75rem;color:var(--ink-muted);}
 
-/* ── Form fields (shared) ── */
-.field { display: flex; flex-direction: column; gap: .3rem; margin-bottom: .9rem; }
-.field label {
-  font-family: var(--font-head);
-  font-size: .78rem;
-  font-weight: 600;
-  color: var(--ink-soft);
+/* ── WhatsApp CTA ── */
+.wa-section{
+  background:#f0fdf4;
+  border-top:1.5px solid #bbf7d0;
+  border-bottom:1.5px solid #bbf7d0;
+  padding:3rem 0;
 }
-.field input, .field select {
-  width: 100%;
-  height: 44px;
-  padding: 0 .85rem;
-  border: 1.5px solid var(--line);
-  border-radius: var(--r-sm);
-  font-family: var(--font-body);
-  font-size: .88rem;
-  color: var(--ink);
-  background: var(--white);
-  outline: none;
-  transition: border-color .17s, box-shadow .17s;
-  -webkit-appearance: none;
-  appearance: none;
+.wa-inner{max-width:620px;margin:0 auto;text-align:center;}
+.wa-icon-wrap{
+  width:64px;height:64px;background:var(--wa);border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1rem;box-shadow:0 6px 20px rgba(37,211,102,.28);
 }
-.field input:focus, .field select:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(26,86,219,.1);
+.wa-h{font-family:var(--font-head);font-size:1.5rem;font-weight:800;letter-spacing:-.025em;margin-bottom:.5rem;}
+.wa-sub{font-size:.95rem;color:var(--ink-soft);margin-bottom:1.5rem;line-height:1.6;}
+.wa-perks{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-bottom:1.5rem;}
+.wa-perk{
+  font-size:.78rem;font-weight:600;
+  border:1.5px solid #bbf7d0;border-radius:99px;
+  padding:.3rem .75rem;color:#166534;background:#f0fdf4;
 }
-.field input::placeholder { color: var(--ink-faint); }
-
-/* ── Buttons ── */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: .55rem;
-  padding: .85rem 1.8rem;
-  border-radius: var(--r-md);
-  font-family: var(--font-head);
-  font-size: .95rem;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  transition: all .18s;
-  -webkit-tap-highlight-color: transparent;
-  letter-spacing: -.01em;
+.btn-wa{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:var(--wa);color:#fff;
+  font-family:var(--font-head);font-size:1rem;font-weight:700;
+  padding:.85rem 2rem;border-radius:var(--r-sm);
+  transition:background .15s,transform .1s;
+  box-shadow:0 4px 16px rgba(37,211,102,.3);
 }
-.btn-primary {
-  background: var(--blue);
-  color: #fff;
-  box-shadow: 0 4px 14px rgba(26,86,219,.3);
-}
-.btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); }
-.btn-whatsapp {
-  background: var(--wa);
-  color: #fff;
-  box-shadow: var(--shadow-wa);
-}
-.btn-whatsapp:hover { opacity: .92; transform: translateY(-2px); }
-.btn-block { width: 100%; }
-
-/* ── Reveal animation ── */
-.rv { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
-.rv.in { opacity: 1; transform: none; }
+.btn-wa:hover{background:var(--wa-dark);}
+.btn-wa:active{transform:scale(.99);}
+.wa-note{font-size:.75rem;color:#4b7a5a;margin-top:.85rem;}
 
 /* ── FAQ ── */
-.faq-list { display: flex; flex-direction: column; gap: .5rem; }
-.faq-item { border: 1.5px solid var(--line); border-radius: var(--r-md); overflow: hidden; background: var(--white); }
-.faq-q {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: .8rem;
-  padding: .95rem 1.1rem;
-  background: transparent;
-  border: none;
-  font-family: var(--font-head);
-  font-size: .88rem;
-  font-weight: 700;
-  color: var(--ink);
-  cursor: pointer;
-  text-align: left;
-  -webkit-tap-highlight-color: transparent;
+.faq-list{max-width:720px;margin:0 auto;}
+.faq-item{border-bottom:1.5px solid var(--line);}
+.faq-item:first-child{border-top:1.5px solid var(--line);}
+.faq-q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  font-family:var(--font-head);font-size:.95rem;font-weight:700;
+  color:var(--ink);text-align:left;
+  padding:1rem 0;
 }
-.faq-icon { font-size: 1.2rem; color: var(--blue); flex-shrink: 0; transition: transform .2s; }
-.faq-item.open .faq-icon { transform: rotate(45deg); }
-.faq-a {
-  padding: 0 1.1rem;
-  max-height: 0;
-  overflow: hidden;
-  font-size: .84rem;
-  color: var(--ink-muted);
-  line-height: 1.7;
-  transition: max-height .3s ease, padding .3s ease;
+.faq-icon{
+  flex-shrink:0;width:22px;height:22px;
+  border:2px solid var(--line);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.85rem;color:var(--ink-muted);
+  transition:transform .2s,border-color .2s,color .2s;
 }
-.faq-item.open .faq-a { max-height: 300px; padding: 0 1.1rem .95rem; }
+.faq-item.open .faq-icon{transform:rotate(45deg);border-color:var(--blue);color:var(--blue);}
+.faq-a{
+  max-height:0;overflow:hidden;
+  font-size:.9rem;color:var(--ink-soft);line-height:1.65;
+  transition:max-height .3s ease,padding .3s;
+  padding:0 0 0 0;
+}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:1rem;}
 
-/* ---- URGENCY TOPBAR --------------------------------------------------- */
-.urg-top {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1002;
-  background: var(--red); padding: .5rem 1rem; text-align: center;
-  display: flex; align-items: center; justify-content: center; gap: .55rem; flex-wrap: wrap;
+/* ── Footer CTA ── */
+.footer-cta{background:var(--blue);color:#fff;padding:3.5rem 0;}
+.footer-cta-inner{max-width:600px;margin:0 auto;text-align:center;}
+.footer-cta h2{font-family:var(--font-head);font-size:1.6rem;font-weight:800;letter-spacing:-.025em;margin-bottom:.5rem;}
+.footer-cta p{font-size:.95rem;opacity:.85;margin-bottom:1.5rem;line-height:1.6;}
+.btn-footer{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:#fff;color:var(--blue);
+  font-family:var(--font-head);font-size:.95rem;font-weight:800;
+  padding:.85rem 2rem;border-radius:var(--r-sm);
+  transition:opacity .15s;
 }
-.urg-top-dot { width: 7px; height: 7px; border-radius: 50%; background: #FFD700; flex-shrink: 0; animation: blink 1.3s ease-in-out infinite; }
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.15} }
-.urg-top-text { font-size: .72rem; font-weight: 700; color: #fff; letter-spacing: .025em; }
-.urg-top-text b { color: #FFD700; }
+.btn-footer:hover{opacity:.92;}
+.footer-note{font-size:.75rem;opacity:.7;margin-top:.85rem;}
 
-/* ---- NAV --------------------------------------------------------------- */
-#navbar {
-  position: fixed; top: 34px; left: 0; right: 0; z-index: 1000; height: var(--nav-height);
-  display: flex; align-items: center; justify-content: space-between; padding: 0 4%;
-  background: rgba(255,255,255,.92); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);
-  transition: box-shadow .25s, background .25s;
-}
-#navbar.sc { box-shadow: 0 2px 16px rgba(12,26,46,.08); background: rgba(255,255,255,.98); }
-.nav-logo {
-  font-family: var(--font-head);
-  font-size: 1.3rem; font-weight: 800; color: var(--ink); letter-spacing: -.03em;
-}
-.nav-logo em { font-style: normal; color: var(--blue); }
-.nav-cta {
-  display: none; background: var(--blue); color: #fff; border: none;
-  border-radius: var(--r-md); padding: .5rem 1.1rem; font-family: var(--font-head); font-size: .78rem; font-weight: 700;
-  cursor: pointer; letter-spacing: .01em; -webkit-tap-highlight-color: transparent;
-}
-@media(min-width:560px){ .nav-cta { display: block; } }
-body { padding-top: calc(var(--nav-height) + 34px + 38px); }
+/* ── Bottom footer ── */
+.site-footer{background:var(--ink);color:rgba(255,255,255,.55);font-size:.78rem;text-align:center;padding:1.25rem;}
+.site-footer a{color:rgba(255,255,255,.7);}
 
-/* ---- TICKER ------------------------------------------------------------ */
-.ticker-wrap {
-  position: fixed; top: calc(34px + var(--nav-height)); left: 0; right: 0; z-index: 999;
-  background: var(--bg-alt); border-bottom: 1px solid var(--line); padding: .42rem 0; overflow: hidden;
-}
-.ticker-inner { display: flex; width: max-content; animation: tickermove 30s linear infinite; }
-.ticker-inner:hover { animation-play-state: paused; }
-@keyframes tickermove { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-.ti { display: inline-flex; align-items: center; gap: .35rem; padding: 0 1.4rem; font-size: .68rem; font-weight: 500; color: var(--ink-muted); white-space: nowrap; }
-.ti b { color: var(--ink); font-weight: 700; }
-.ti::after { content: '·'; margin-left: 1.4rem; color: var(--line); }
+/* ── Scroll-reveal ── */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease;}
+.rv.in{opacity:1;transform:none;}
 
-@media(max-width:700px){ .urg-top-text { font-size: .66rem; } }
-
-/* ---- HERO --------------------------------------------------------------- */
-.hero { background: var(--white); position: relative; overflow: hidden; }
-.hero::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: repeating-linear-gradient(-55deg, transparent 0, transparent 28px, rgba(26,86,219,.025) 28px, rgba(26,86,219,.025) 29px);
-  pointer-events: none; z-index: 0;
+/* ── Sticky bar (mobile) ── */
+#sticky-bar{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;z-index:300;
+  background:var(--white);border-top:1.5px solid var(--line);
+  padding:.75rem 1rem;
+  box-shadow:0 -4px 16px rgba(0,0,0,.08);
 }
-.hero-inner {
-  position: relative; z-index: 1; padding: 2.2rem 1.25rem 2.6rem; display: flex; flex-direction: column;
-  gap: 1.8rem; max-width: 1160px; margin: 0 auto;
-}
-@media(min-width:800px){
-  .hero-inner { flex-direction: row; align-items: flex-start; gap: 3.5rem; padding: 3.4rem 3rem; }
-  .hero-copy { flex: 1; }
-  .hero-form-wrap { flex: 0 0 380px; }
-}
-.hero-badge {
-  display: inline-flex; align-items: center; gap: .5rem; background: var(--blue-50); border: 1.5px solid var(--blue-100);
-  border-radius: var(--r-full); padding: .28rem .9rem; font-family: var(--font-head); font-size: .65rem; font-weight: 700;
-  letter-spacing: .1em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; width: fit-content;
-}
-.badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red); flex-shrink: 0; animation: blink 1.4s infinite; }
-.h1-top { display: block; font-size: clamp(1rem,4vw,1.2rem); font-style: italic; color: var(--ink-muted); font-weight: 400; margin-bottom: .2rem; font-family: var(--font-body); }
-.h1-main { display: block; font-size: clamp(2.6rem,9vw,4rem); font-family: var(--font-head); font-weight: 800; letter-spacing: -.04em; color: var(--ink); line-height: .96; }
-.h1-main em { font-style: normal; color: var(--blue); }
-.h1-sub { display: block; font-size: clamp(1rem,3.5vw,1.35rem); font-weight: 400; color: var(--ink-muted); margin-top: .35rem; font-family: var(--font-body); font-style: italic; }
-.hero-sub { font-size: .92rem; color: var(--ink-muted); line-height: 1.75; margin: 1rem 0 1.4rem; max-width: 500px; }
-.hero-sub strong { color: var(--ink); font-weight: 700; }
-
-.chip-row { display: flex; flex-wrap: wrap; gap: .42rem; margin-bottom: 1.6rem; }
-.chip {
-  display: inline-flex; align-items: center; gap: .32rem; background: var(--bg-alt); border: 1px solid var(--line);
-  border-radius: var(--r-sm); padding: .32rem .78rem; font-size: .7rem; font-weight: 500; color: var(--ink-muted);
-}
-.chip b { color: var(--ink); font-weight: 700; }
-.chip-live { background: var(--red); border-color: var(--red); color: #fff; font-weight: 700; box-shadow: 0 2px 10px rgba(220,38,38,.3); }
-.chip-live b { color: #FFD700; }
-
-.desktop-cta-row { margin-bottom: 1.4rem; }
-.proof-row { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; padding-top: 1.4rem; border-top: 1px solid var(--line); }
-.pv { font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; color: var(--ink); line-height: 1; letter-spacing: -.03em; }
-.pl { font-size: .57rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-muted); margin-top: .18rem; }
-.psep { width: 1px; height: 28px; background: var(--line); }
-
-/* ---- FORM CARD ---------------------------------------------------------- */
-.form-card { background: var(--white); border: 1.5px solid var(--line); border-radius: var(--r-2xl); box-shadow: var(--shadow-lg); overflow: hidden; }
-.form-head {
-  padding: 1.15rem 1.35rem 1rem; background: var(--blue); position: relative; overflow: hidden;
-}
-.form-head::after {
-  content: ''; position: absolute; width: 140px; height: 140px; border-radius: 50%;
-  background: rgba(255,255,255,.07); top: -50px; right: -35px; pointer-events: none;
-}
-.form-urg {
-  display: inline-flex; align-items: center; gap: .38rem; background: rgba(255,215,0,.18); border: 1px solid rgba(255,215,0,.35);
-  border-radius: 100px; padding: .2rem .65rem; font-size: .6rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: #FFD700; margin-bottom: .6rem;
-}
-.form-urg-dot { width: 5px; height: 5px; border-radius: 50%; background: #FFD700; animation: blink 1.6s ease infinite; }
-.form-title { font-family: var(--font-head); font-size: 1.25rem; font-weight: 800; color: #fff; line-height: 1.1; margin-bottom: .2rem; letter-spacing: -.02em; }
-.form-subtitle { font-size: .69rem; color: rgba(255,255,255,.6); line-height: 1.5; }
-.form-body { padding: 1.15rem 1.35rem 1.35rem; }
-
-.req { color: var(--blue); }
-.field-err { font-size: .68rem; color: var(--red); margin-top: .22rem; display: none; }
-.phone-wrap {
-  display: flex; align-items: stretch; border: 1.5px solid var(--line); border-radius: var(--r-sm);
-  overflow: hidden; background: var(--white); transition: border-color .17s, box-shadow .17s;
-}
-.phone-wrap:focus-within { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,86,219,.1); }
-.phone-pre {
-  display: flex; align-items: center; padding: 0 .75rem; font-size: .87rem; font-weight: 500; color: var(--ink-muted);
-  background: var(--bg-alt); border-right: 1.5px solid var(--line); flex-shrink: 0; white-space: nowrap;
-}
-.phone-wrap input { border: none!important; border-radius: 0!important; box-shadow: none!important; background: transparent!important; flex: 1; min-width: 0; }
-.sel-wrap { position: relative; }
-.sel-wrap::after { content: '▾'; position: absolute; right: .88rem; top: 50%; transform: translateY(-50%); color: var(--ink-muted); pointer-events: none; font-size: .78rem; }
-.field select { padding-right: 2.2rem; cursor: pointer; }
-.privacy { font-size: .63rem; color: var(--ink-muted); text-align: center; margin-bottom: .75rem; line-height: 1.4; }
-
-.spinner { display: none; width: 16px; height: 16px; border-radius: 50%; border: 2.5px solid rgba(255,255,255,.3); border-top-color: #fff; animation: spin .65s linear infinite; flex-shrink: 0; }
-@keyframes spin { to { transform: rotate(360deg); } }
-
-.form-trust { display: flex; align-items: center; justify-content: center; gap: .9rem; flex-wrap: wrap; margin-top: .72rem; }
-.form-trust span { font-size: .65rem; color: var(--ink-muted); font-weight: 500; display: flex; align-items: center; gap: .25rem; }
-
-/* ---- COUNTDOWN ----------------------------------------------------------- */
-.countdown-wrap { background: var(--ink); padding: 1.4rem 1.25rem; text-align: center; }
-.cd-label { font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: .7rem; }
-.cd-row { display: flex; align-items: center; justify-content: center; gap: .5rem; }
-.cd-block { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); border-radius: var(--r-sm); padding: .6rem .85rem; min-width: 62px; }
-.cd-num { font-family: var(--font-head); font-size: 1.8rem; font-weight: 800; color: #fff; line-height: 1; letter-spacing: -.02em; }
-.cd-unit { font-size: .52rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-top: .1rem; }
-.cd-sep { font-family: var(--font-head); font-size: 1.8rem; color: rgba(255,255,255,.2); line-height: 1; margin-bottom: .5rem; }
-.cd-sub { font-size: .72rem; color: rgba(255,255,255,.4); margin-top: .7rem; }
-.cd-sub b { color: rgba(255,255,255,.7); font-weight: 700; }
-
-/* ---- PAGE BODY ------------------------------------------------------------ */
-.page-body { max-width: 820px; margin: 0 auto; padding: 0 1.25rem; }
-.sec { padding: 2.6rem 0; border-bottom: 1px solid var(--line); }
-.sec:last-child { border-bottom: none; }
-.sec-eye { font-size: .6rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: .42rem; }
-
-/* ---- LEARN LIST ----------------------------------------------------------- */
-.learn-list { display: flex; flex-direction: column; gap: .5rem; }
-.learn-item {
-  display: flex; align-items: flex-start; gap: .9rem; padding: 1rem 1.1rem; border: 1.5px solid var(--line);
-  border-radius: 13px; background: var(--white); transition: border-color .2s, background .2s, box-shadow .2s;
-}
-.learn-item:hover { border-color: var(--blue-300); background: var(--blue-50); box-shadow: var(--shadow-sm); }
-.li-num {
-  width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0; background: var(--blue-50); border: 1.5px solid var(--blue-300);
-  display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: .82rem; font-weight: 800;
-  color: var(--blue); margin-top: .04rem; transition: background .2s, color .2s, border-color .2s;
-}
-.learn-item:hover .li-num { background: var(--blue); border-color: var(--blue); color: #fff; }
-.li-title { font-family: var(--font-head); font-size: .86rem; font-weight: 700; color: var(--ink); margin-bottom: .14rem; }
-.li-desc { font-size: .73rem; color: var(--ink-muted); line-height: 1.58; }
-
-/* ---- INLINE CTA ------------------------------------------------------------ */
-.inline-cta { background: var(--blue); border-radius: var(--r-lg); padding: 1.5rem 1.25rem; text-align: center; position: relative; overflow: hidden; }
-.inline-cta::before { content: ''; position: absolute; width: 140px; height: 140px; border-radius: 50%; background: rgba(255,255,255,.07); top: -50px; right: -35px; pointer-events: none; }
-.inline-cta>* { position: relative; z-index: 1; }
-.ict-eye { font-size: .6rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: .35rem; }
-.ict-h { font-family: var(--font-head); font-size: 1.25rem; font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: .28rem; }
-.ict-sub { font-size: .78rem; color: rgba(255,255,255,.55); margin-bottom: 1rem; }
-.ict-btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: .52rem; background: var(--wa);
-  color: #fff; border: none; border-radius: 11px; padding: .85rem 1.6rem; font-family: var(--font-head); font-size: .9rem; font-weight: 700; cursor: pointer;
-  box-shadow: var(--shadow-wa); transition: transform .14s; -webkit-tap-highlight-color: transparent; width: 100%;
-}
-.ict-btn:active { transform: scale(.975); }
-.ict-note { font-size: .65rem; color: rgba(255,255,255,.3); margin-top: .55rem; }
-
-/* ---- WHO IT'S FOR ----------------------------------------------------------- */
-.who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
-@media(max-width:420px){ .who-grid { grid-template-columns: 1fr; } }
-.who-card { padding: .88rem .95rem; background: var(--bg-alt); border: 1.5px solid var(--line); border-radius: var(--r-md); display: flex; align-items: flex-start; gap: .65rem; }
-.who-ico { font-size: 1.2rem; flex-shrink: 0; margin-top: .04rem; }
-.who-title { font-family: var(--font-head); font-size: .82rem; font-weight: 700; color: var(--ink); }
-.who-desc { font-size: .7rem; color: var(--ink-muted); line-height: 1.5; margin-top: .12rem; }
-.who-not {
-  margin-top: .65rem; padding: .75rem .95rem; background: var(--red-50); border: 1.5px solid rgba(220,38,38,.15); border-radius: var(--r-md);
-  font-size: .78rem; color: var(--ink-muted); display: flex; align-items: center; gap: .55rem;
-}
-.who-not b { color: var(--ink); font-weight: 700; }
-
-/* ---- SCORE PROGRESS ---------------------------------------------------------- */
-.score-grid { display: flex; flex-direction: column; gap: .75rem; }
-.score-row { background: var(--white); border: 1.5px solid var(--line); border-radius: 13px; padding: 1rem 1.1rem; box-shadow: var(--shadow-sm); }
-.score-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: .6rem; flex-wrap: wrap; gap: .3rem; }
-.score-name { font-family: var(--font-head); font-size: .82rem; font-weight: 700; color: var(--ink); }
-.score-badge { font-size: .65rem; font-weight: 700; background: var(--blue); color: #fff; border-radius: 6px; padding: .1rem .45rem; white-space: nowrap; }
-.score-bar-bg { height: 9px; background: var(--bg-alt); border-radius: 100px; overflow: hidden; position: relative; }
-.score-bar-before { position: absolute; left: 0; top: 0; height: 100%; background: var(--line); border-radius: 100px; }
-.score-bar-after { position: absolute; left: 0; top: 0; height: 100%; background: linear-gradient(90deg, var(--blue), var(--blue-mid)); border-radius: 100px; animation: barGrow 1.4s ease forwards; width: 0; }
-@keyframes barGrow { to { width: var(--w); } }
-.score-vals { display: flex; justify-content: space-between; align-items: center; margin-top: .45rem; }
-.sv-before { font-size: .7rem; color: var(--ink-300); font-weight: 500; }
-.sv-arrow { font-size: .78rem; color: var(--green); font-weight: 700; }
-.sv-after { font-size: .82rem; font-weight: 800; color: var(--green); }
-.score-quote { font-size: .73rem; color: var(--ink-muted); font-style: italic; margin-top: .4rem; line-height: 1.5; padding-left: .7rem; border-left: 2px solid var(--blue-300); }
-
-/* ---- GOOGLE-REVIEW TESTIMONIALS ------------------------------------------------ */
-.gtesti-grid { display: flex; flex-direction: column; gap: .9rem; }
-@media(min-width:560px){ .gtesti-grid { flex-direction: row; } }
-.gtesti-card {
-  flex: 1; padding: 1.25rem; border: 1.5px solid var(--line); border-radius: var(--r-lg); display: flex; flex-direction: column;
-  gap: .65rem; background: var(--white); box-shadow: var(--shadow-sm); position: relative; overflow: hidden; transition: border-color .2s, box-shadow .2s;
-}
-.gtesti-card:hover { border-color: var(--blue-300); box-shadow: var(--shadow-lg); }
-.gt-top { display: flex; align-items: center; gap: .75rem; }
-.gt-av {
-  width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-head); font-size: .9rem; font-weight: 800; color: #fff;
-}
-.gt-name { font-family: var(--font-head); font-size: .84rem; font-weight: 700; color: var(--ink); }
-.gt-loc { font-size: .63rem; color: var(--ink-300); margin-top: .14rem; display: block; }
-.gt-stars { font-size: .72rem; color: var(--gold); margin-left: auto; }
-.gt-quote { font-size: .79rem; color: var(--ink-muted); line-height: 1.75; font-style: italic; border-left: 2px solid var(--blue-300); padding-left: .72rem; }
-
-/* ---- HOST ----------------------------------------------------------------------- */
-.host-wrap {
-  display: flex; align-items: flex-start; gap: 1.4rem; padding: 1.5rem; background: var(--bg-alt);
-  border: 1.5px solid var(--line); border-radius: var(--r-lg);
-}
-@media(max-width:480px){ .host-wrap { flex-direction: column; align-items: center; text-align: center; } }
-.host-img {
-  width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--blue-300); flex-shrink: 0; background: var(--blue-50);
-  display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: 2rem; font-weight: 800; color: var(--blue);
-}
-.host-role { font-size: .58rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); margin-bottom: .18rem; }
-.host-name { font-family: var(--font-head); font-size: 1.25rem; font-weight: 800; color: var(--ink); letter-spacing: -.02em; margin-bottom: .28rem; }
-.host-bio { font-size: .72rem; color: var(--ink-muted); line-height: 1.6; margin-bottom: .75rem; }
-.host-badges { display: flex; flex-wrap: wrap; gap: .42rem; margin-bottom: .9rem; }
-@media(max-width:480px){ .host-badges { justify-content: center; } }
-.hb { display: flex; align-items: center; gap: .3rem; font-size: .67rem; font-weight: 500; color: var(--ink); background: var(--white); border: 1.5px solid var(--line); border-radius: var(--r-sm); padding: .28rem .65rem; }
-.host-quote { font-size: .8rem; font-style: italic; color: var(--ink-muted); line-height: 1.65; border-left: 3px solid var(--blue-300); padding-left: .82rem; }
-
-/* ---- URGENCY BLOCK ---------------------------------------------------------------- */
-.urg-block {
-  background: #1A0505; border: 1.5px solid rgba(220,38,38,.25); border-radius: var(--r-xl);
-  padding: 1.6rem 1.35rem; position: relative; overflow: hidden;
-}
-.urg-block::before { content: ''; position: absolute; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(220,38,38,.22), transparent 65%); top: -60px; right: -50px; pointer-events: none; }
-.urg-block>* { position: relative; z-index: 1; }
-.urg-tag { font-size: .6rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: rgba(255,100,100,.6); margin-bottom: .5rem; }
-.urg-h { font-family: var(--font-head); font-size: 1.35rem; font-weight: 800; color: #fff; line-height: 1.18; margin-bottom: .9rem; }
-.urg-h em { font-style: normal; color: #FCA5A5; }
-.seats-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: .7rem; }
-.seat-bar-bg { flex: 1; height: 10px; background: rgba(255,255,255,.1); border-radius: 100px; overflow: hidden; margin: 0 .8rem; }
-.seat-bar-fill { height: 100%; background: linear-gradient(90deg, var(--red), #FF6B35); border-radius: 100px; width: 0; animation: seatFill 1.8s ease forwards; }
-@keyframes seatFill { to { width: 78%; } }
-.seat-label { font-size: .68rem; font-weight: 700; color: rgba(255,255,255,.5); white-space: nowrap; }
-.seat-label.taken { color: #FCA5A5; }
-.urg-list { display: flex; flex-direction: column; gap: .48rem; margin-bottom: 1.2rem; }
-.urg-li { display: flex; align-items: flex-start; gap: .65rem; font-size: .81rem; color: rgba(255,255,255,.65); line-height: 1.5; }
-.urg-li-dot { width: 18px; height: 18px; border-radius: 50%; background: rgba(220,38,38,.3); color: #FCA5A5; display: flex; align-items: center; justify-content: center; font-size: .65rem; font-weight: 800; flex-shrink: 0; margin-top: .12rem; }
-.urg-li b { color: rgba(255,255,255,.85); }
-
-/* ---- VIDEO PROOF GRID ---------------------------------------------------------------- */
-.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1rem; margin-top: 1rem; }
-.video-card { display: block; border: 1.5px solid var(--line); border-radius: var(--r-lg); overflow: hidden; background: var(--white); box-shadow: var(--shadow-sm); transition: transform .2s; }
-.video-card:hover { transform: translateY(-3px); }
-.video-thumb-wrap { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #000; }
-.video-thumb { width: 100%; height: 100%; object-fit: cover; display: block; }
-.video-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.28); }
-.video-play { width: 52px; height: 52px; background: #FF0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(0,0,0,.4); }
-.video-band-badge { position: absolute; top: .5rem; right: .5rem; background: rgba(245,158,11,.95); color: #fff; font-size: .62rem; font-weight: 800; padding: .2rem .5rem; border-radius: 6px; }
-.video-info { padding: .75rem 1rem; }
-.video-info-title { font-family: var(--font-head); font-size: .82rem; font-weight: 700; color: var(--ink); }
-.video-info-meta { font-size: .7rem; color: var(--ink-muted); margin-top: .15rem; }
-
-/* ---- BOTTOM STRIP --------------------------------------------------------------------- */
-.bottom-strip { background: var(--ink); padding: 2.8rem 1.25rem; text-align: center; }
-.bs-h { font-family: var(--font-head); font-size: clamp(1.5rem,5vw,2rem); font-weight: 800; color: #fff; letter-spacing: -.03em; margin-bottom: .42rem; }
-.bs-p { font-size: .84rem; color: rgba(255,255,255,.45); margin-bottom: 1.4rem; line-height: 1.6; }
-.bs-btn {
-  display: inline-flex; align-items: center; gap: .55rem; padding: .9rem 1.8rem; background: var(--wa);
-  color: #fff; border: none; border-radius: var(--r-md); font-family: var(--font-head); font-size: .92rem; font-weight: 700; cursor: pointer;
-  box-shadow: var(--shadow-wa); transition: opacity .14s; -webkit-tap-highlight-color: transparent; max-width: 360px; width: 100%; justify-content: center;
-}
-.bs-btn:active { opacity: .85; }
-.bs-note { font-size: .67rem; color: rgba(255,255,255,.22); margin-top: .65rem; }
-
-/* ---- SUCCESS STATE --------------------------------------------------------------------- */
-.success-wrap {
-  display: none; background: var(--white); border-radius: var(--r-2xl); border: 1.5px solid rgba(22,163,74,.25);
-  overflow: hidden; box-shadow: var(--shadow-lg);
-}
-.success-head { background: var(--green); padding: 1.3rem 1.35rem; text-align: center; }
-.success-tick { width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,.2); display: flex; align-items: center; justify-content: center; margin: 0 auto .6rem; font-size: 1.5rem; }
-.success-title { font-family: var(--font-head); font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: .2rem; }
-.success-sub { font-size: .72rem; color: rgba(255,255,255,.7); }
-.success-body { padding: 1.35rem; }
-.success-step { display: flex; align-items: flex-start; gap: .8rem; margin-bottom: .9rem; }
-.ss-num {
-  width: 26px; height: 26px; border-radius: 50%; background: var(--blue-50); border: 1.5px solid var(--blue-300);
-  display: flex; align-items: center; justify-content: center; font-size: .72rem; font-weight: 700; color: var(--blue); flex-shrink: 0;
-}
-.ss-title { font-family: var(--font-head); font-size: .84rem; font-weight: 700; color: var(--ink); margin-bottom: .12rem; }
-.ss-desc { font-size: .72rem; color: var(--ink-muted); line-height: 1.5; }
-.wa-join-btn {
-  display: flex; align-items: center; justify-content: center; gap: .55rem; background: var(--wa);
-  color: #fff; border: none; border-radius: var(--r-md); padding: .92rem; font-family: var(--font-head); font-size: .92rem; font-weight: 700;
-  cursor: pointer; width: 100%; box-shadow: var(--shadow-wa); -webkit-tap-highlight-color: transparent; text-decoration: none; margin-top: .3rem;
+.sticky-btn{
+  width:100%;height:48px;
+  background:var(--blue);color:#fff;
+  font-family:var(--font-head);font-size:.9rem;font-weight:700;
+  border-radius:var(--r-sm);
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
 }
 
-/* ---- STICKY BAR (mobile) ----------------------------------------------------------------- */
-.sticky-bar {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 500; background: var(--white); border-top: 2px solid var(--line);
-  padding: .68rem 1.1rem calc(.68rem + env(safe-area-inset-bottom)); box-shadow: 0 -5px 24px rgba(0,0,0,.09);
+/* ── Responsive ── */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:2rem;}
+  .form-card{position:static;}
+  .instructor-grid{grid-template-columns:1fr;gap:1.5rem;}
+  .video-grid{grid-template-columns:repeat(2,1fr);}
+  #sticky-bar{display:block;}
+  body{padding-bottom:68px;}
 }
-.sticky-inner { max-width: 540px; margin: 0 auto; display: flex; align-items: center; gap: .6rem; }
-.sticky-text { flex: 1; }
-.sticky-text b { display: block; font-size: .8rem; font-weight: 700; color: var(--ink); }
-.sticky-text span { font-size: .66rem; color: var(--ink-muted); }
-.sticky-btn {
-  background: var(--wa); color: #fff; border: none; border-radius: 11px; padding: .7rem 1.05rem;
-  font-family: var(--font-head); font-size: .8rem; font-weight: 700; cursor: pointer; white-space: nowrap; display: flex; align-items: center; gap: .38rem;
-  box-shadow: var(--shadow-wa); -webkit-tap-highlight-color: transparent;
+@media(max-width:640px){
+  .hero{padding:2rem 0 3rem;}
+  .sec{padding:2.5rem 0;}
+  h1{font-size:clamp(1.9rem,8vw,2.6rem);}
+  h2{font-size:clamp(1.4rem,5vw,1.75rem);}
+  .video-grid{grid-template-columns:1fr;}
+  .proof-bar{gap:1rem;}
+  .fields-row{grid-template-columns:1fr;}
+  .learn-grid{grid-template-columns:1fr;}
+  .results-grid{grid-template-columns:1fr;}
+  .nav-trust{display:none;}
 }
-.page-spacer { height: 72px; }
-@media(min-width:800px){ .sticky-bar { display: none; } .page-spacer { height: 0; } }
 </style>
 </head>
 <body>
 
-<!-- ═══ URGENCY TOPBAR ═══ -->
-<div class="urg-top">
-  <div class="urg-top-dot"></div>
-  <span class="urg-top-text">🔴 <b>FREE LIVE WEBINAR</b> — Limited Seats · <span id="urg-txt">Next session filling fast</span></span>
+<!-- ── Urgency Bar ── -->
+<div id="urg-bar">
+  <strong>🎓 Free IELTS Masterclass</strong>
+  <span>·</span>
+  Limited Seats Available Every Weekend
+  <span>·</span>
+  <a href="#form" onclick="scrollForm();return false;">Register Now →</a>
 </div>
 
-<!-- ═══ NAV ═══ -->
+<!-- ── Navbar ── -->
 <nav id="navbar">
-  <a href="/" class="nav-logo">Prep<em>Eve</em></a>
-  <button class="nav-cta" onclick="scrollForm()">Reserve My Free Seat →</button>
+  <div class="wrap nav-inner">
+    <div class="nav-logo">Prep<span>Eve</span></div>
+    <div class="nav-right">
+      <span class="nav-trust">⭐ 4.7 · 10,000+ students</span>
+      <a class="nav-cta" href="#form" onclick="scrollForm();return false;">Reserve Free Seat →</a>
+    </div>
+  </div>
 </nav>
 
-<!-- ═══ TICKER ═══ -->
-<div class="ticker-wrap">
-  <div class="ticker-inner">
-    <span class="ti">🎓 <b>10,000+</b> students trained</span>
-    <span class="ti">⭐ <b>4.7/5</b> Google Rating</span>
-    <span class="ti">🏆 <b>97%</b> hit Band 7+</span>
-    <span class="ti">📺 <b>1.2 lakh+</b> YouTube subscribers</span>
-    <span class="ti">💸 <b>100% Free</b> — no card needed</span>
-    <span class="ti">📝 IELTS Academic · General · CELPIP</span>
-    <span class="ti">🇨🇦 Canada · UK · Australia · USA</span>
-    <span class="ti">🎓 <b>10,000+</b> students trained</span>
-    <span class="ti">⭐ <b>4.7/5</b> Google Rating</span>
-    <span class="ti">🏆 <b>97%</b> hit Band 7+</span>
-    <span class="ti">📺 <b>1.2 lakh+</b> YouTube subscribers</span>
-    <span class="ti">💸 <b>100% Free</b> — no card needed</span>
-    <span class="ti">📝 IELTS Academic · General · CELPIP</span>
-    <span class="ti">🇨🇦 Canada · UK · Australia · USA</span>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════
-     HERO
-══════════════════════════════════════ -->
+<!-- ── Hero ── -->
 <section class="hero" id="top">
-  <div class="hero-inner">
+  <div class="wrap">
+    <div class="hero-grid">
 
-    <!-- COPY -->
-    <div class="hero-copy rv">
-      <div class="hero-badge">
-        <div class="badge-dot"></div>
-        Free Live Webinar · Limited Seats
+      <!-- Copy -->
+      <div class="hero-copy rv">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          Free Live Masterclass · Limited Seats
+        </div>
+        <h1 class="hero-h1">
+          Get <span class="accent">Band 7+</span> in 60 Days —<br>
+          Free Live Masterclass
+        </h1>
+        <p class="hero-sub">
+          Join Sanjita's <strong>free 60-minute live session</strong> and get the exact strategy top scorers use — common mistakes, Speaking &amp; Writing frameworks, and a personalised 2–4 week roadmap. 100% free, no credit card.
+        </p>
+        <div class="chips">
+          <div class="chip live"><span>🔴</span> LIVE Session</div>
+          <div class="chip">🕖 <b id="chip-time">Every Sat &amp; Sun · 7 PM IST</b></div>
+          <div class="chip">⏱ 60 minutes</div>
+          <div class="chip">💸 100% Free</div>
+          <div class="chip">📅 <span id="chip-date">This Weekend</span></div>
+        </div>
+        <div class="proof-bar">
+          <div class="proof-item"><div class="proof-num">15,000+</div><div class="proof-lbl">Students Registered</div></div>
+          <div class="proof-sep"></div>
+          <div class="proof-item"><div class="proof-num">97%</div><div class="proof-lbl">Hit Band 7+</div></div>
+          <div class="proof-sep"></div>
+          <div class="proof-item"><div class="proof-num">★ 4.7</div><div class="proof-lbl">Google Rating</div></div>
+          <div class="proof-sep"></div>
+          <div class="proof-item"><div class="proof-num">1.2L+</div><div class="proof-lbl">YouTube Subscribers</div></div>
+        </div>
       </div>
 
-      <h1 class="ds-h1" style="margin-bottom:0;">
-        <span class="h1-top">How to Score</span>
-        <span class="h1-main">Band <em>7+</em></span>
-        <span class="h1-sub">even if you're stuck at 5.5 or 6.</span>
-      </h1>
+      <!-- Form -->
+      <div id="form">
+        <div class="form-card">
 
-      <p class="hero-sub">
-        Join this <strong>free 60-minute live session</strong> and learn the exact strategy top scorers use — including common mistakes, speaking shortcuts, and a 2–4 week roadmap to your target band.
-      </p>
+          <!-- Registration form -->
+          <div id="reg-form">
+            <div class="form-header">
+              <div class="form-header-badge"><span class="dot"></span> <span id="form-urg-txt">Only 14 seats remaining</span></div>
+              <div class="form-title">Reserve My Free Seat</div>
+              <div class="form-sub">Takes 30 seconds · WhatsApp confirmation · Zero cost</div>
+            </div>
+            <div class="form-body">
+              <div class="field">
+                <label for="fname">Your Name <span class="req">*</span></label>
+                <input type="text" id="fname" placeholder="e.g. Priya Sharma" autocomplete="name" inputmode="text"/>
+                <div class="field-err" id="fname-err">Please enter your name</div>
+              </div>
+              <div class="field">
+                <label for="phone">WhatsApp Number <span class="req">*</span></label>
+                <input type="tel" id="phone" placeholder="10-digit mobile number" autocomplete="tel" inputmode="tel"/>
+                <div class="field-err" id="phone-err">Please enter a valid phone number</div>
+              </div>
+              <div class="fields-row">
+                <div class="field">
+                  <label for="exam">Exam Type</label>
+                  <select id="exam">
+                    <option value="">Select exam</option>
+                    <option value="IELTS Academic">IELTS Academic</option>
+                    <option value="IELTS General">IELTS General</option>
+                    <option value="CELPIP">CELPIP</option>
+                    <option value="TEF Canada">TEF Canada</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="band">Target Band</label>
+                  <select id="band">
+                    <option value="">Select band</option>
+                    <option value="6.0">6.0</option>
+                    <option value="6.5">6.5</option>
+                    <option value="7.0">7.0</option>
+                    <option value="7.5">7.5</option>
+                    <option value="8.0+">8.0+</option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn-submit" id="submit-btn" type="button">
+                <div id="spinner"></div>
+                <svg class="wa-ico" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <span id="cta-txt">Register Free →</span>
+              </button>
+              <div class="form-footer">
+                <strong>✓ Instant WhatsApp confirmation</strong> · No credit card · No spam · Unsubscribe anytime
+              </div>
+            </div>
+          </div>
 
-      <div class="chip-row">
-        <div class="chip chip-live"><b>🔴 LIVE</b>&nbsp;Session</div>
-        <div class="chip">🕖 <b id="chip-time">Today at 7 PM IST</b></div>
-        <div class="chip">⏱ <b>60 minutes</b></div>
-        <div class="chip">💸 <b>100% Free</b></div>
-        <div class="chip">📅 <span id="chip-date">This Weekend</span></div>
+          <!-- Success state -->
+          <div id="success-wrap">
+            <div class="success-ico">🎉</div>
+            <div class="success-h">You're registered!</div>
+            <div class="success-sub">Check your WhatsApp for the session link. We're sending you a confirmation now.</div>
+          </div>
+
+        </div>
       </div>
 
-      <!-- DESKTOP-ONLY mini CTA -->
-      <div class="desktop-cta-row" style="display:none;" id="desktop-cta-row">
-        <button class="btn btn-primary" style="max-width:340px;" onclick="scrollForm()">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Reserve My Free Seat
-        </button>
-      </div>
-
-      <div class="proof-row">
-        <div><div class="pv">10,000+</div><div class="pl">Students Trained</div></div>
-        <div class="psep"></div>
-        <div><div class="pv">★ 4.7</div><div class="pl">Google Rating</div></div>
-        <div class="psep"></div>
-        <div><div class="pv">97%</div><div class="pl">Hit Band 7+</div></div>
-      </div>
     </div>
-
-    <!-- FORM -->
-    <div class="hero-form-wrap rv" id="form">
-
-      <!-- DEFAULT: Registration Form -->
-      <div class="form-card" id="reg-form">
-        <div class="form-head">
-          <div class="form-urg"><div class="form-urg-dot"></div><span id="form-urg-txt">Only 14 seats remaining</span></div>
-          <div class="form-title">Reserve My Free Seat</div>
-          <div class="form-subtitle">Takes 30 seconds · WhatsApp confirmation · Zero cost</div>
-        </div>
-        <div class="form-body">
-          <div class="field">
-            <label for="fname">Your Name <span class="req">*</span></label>
-            <input type="text" id="fname" placeholder="e.g. Priya Sharma" autocomplete="name" inputmode="text"/>
-            <div class="field-err" id="fname-err">Please enter your name</div>
-          </div>
-          <div class="field">
-            <label for="phone">WhatsApp Number <span class="req">*</span></label>
-            <div class="phone-wrap">
-              <div class="phone-pre">🇮🇳 +91</div>
-              <input type="tel" id="phone" placeholder="98765 43210" autocomplete="tel" inputmode="tel"/>
-            </div>
-            <div class="field-err" id="phone-err">Enter a valid 10-digit number</div>
-          </div>
-          <div class="field">
-            <label for="exam">Exam Type</label>
-            <div class="sel-wrap">
-              <select id="exam">
-                <option value="" disabled selected>Which exam are you preparing for?</option>
-                <option value="IELTS Academic">IELTS Academic</option>
-                <option value="IELTS General Training">IELTS General Training</option>
-                <option value="CELPIP">CELPIP</option>
-                <option value="Not sure yet">Not sure yet</option>
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <label for="band">Current / Target Band</label>
-            <div class="sel-wrap">
-              <select id="band">
-                <option value="" disabled selected>What's your target band?</option>
-                <option value="Below 5.5">Currently below 5.5</option>
-                <option value="5.5-6">Currently 5.5–6, target 7+</option>
-                <option value="6-6.5">Currently 6–6.5, target 7+</option>
-                <option value="First attempt">First attempt, targeting 7+</option>
-                <option value="7+ target">Targeting 7.5 or above</option>
-              </select>
-            </div>
-          </div>
-          <div class="privacy">🔒 We never share your details. Ever.</div>
-          <button class="btn btn-whatsapp btn-block" id="submit-btn" type="button">
-            <div class="spinner" id="spinner"></div>
-            <svg class="wa-ico" width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            <span id="cta-txt">Reserve My Free Seat →</span>
-          </button>
-          <div class="form-trust">
-            <span>✅ Free forever</span>
-            <span>⚡ Instant confirmation</span>
-            <span>🙅 No spam</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- SUCCESS STATE (shown after registration) -->
-      <div class="success-wrap" id="success-wrap">
-        <div class="success-head">
-          <div class="success-tick">✅</div>
-          <div class="success-title">You're registered!</div>
-          <div class="success-sub">Webinar link sent to your WhatsApp</div>
-        </div>
-        <div class="success-body">
-          <div class="success-step">
-            <div class="ss-num">1</div>
-            <div>
-              <div class="ss-title">Check WhatsApp</div>
-              <div class="ss-desc">You'll get a confirmation + webinar link within 30 minutes.</div>
-            </div>
-          </div>
-          <div class="success-step">
-            <div class="ss-num">2</div>
-            <div>
-              <div class="ss-title">Join the WhatsApp Study Group</div>
-              <div class="ss-desc">Get study tips, reminders, and connect with other IELTS aspirants before the session.</div>
-            </div>
-          </div>
-          <div class="success-step" style="margin-bottom:1rem;">
-            <div class="ss-num">3</div>
-            <div>
-              <div class="ss-title">Attend the live session</div>
-              <div class="ss-desc">Join on Google Meet. Bring a notebook. Ask questions live.</div>
-            </div>
-          </div>
-          <a href="https://chat.whatsapp.com/EoZiGZKTLak9FUD1JjMFdi" target="_blank" rel="noopener" class="wa-join-btn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Join WhatsApp Group for Updates
-          </a>
-        </div>
-      </div>
-
-    </div><!-- /hero-form-wrap -->
-  </div><!-- /hero-inner -->
+  </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     COUNTDOWN TIMER
-══════════════════════════════════════ -->
-<div class="countdown-wrap">
-  <div class="cd-label">⏰ Session starts in</div>
-  <div class="cd-row">
-    <div class="cd-block"><div class="cd-num" id="cd-h">00</div><div class="cd-unit">Hours</div></div>
-    <div class="cd-sep">:</div>
-    <div class="cd-block"><div class="cd-num" id="cd-m">00</div><div class="cd-unit">Mins</div></div>
-    <div class="cd-sep">:</div>
-    <div class="cd-block"><div class="cd-num" id="cd-s">00</div><div class="cd-unit">Secs</div></div>
+<!-- ── What You'll Learn ── -->
+<section class="sec sec-alt rv">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sec-label">📚 Webinar Curriculum</div>
+      <h2>What you'll learn in <em>this session</em></h2>
+      <p>A structured 60-minute live class covering the exact techniques that moved 10,000+ students from Band 5.5/6 to Band 7+.</p>
+    </div>
+    <div class="learn-grid">
+      <div class="learn-card">
+        <div class="learn-num">1</div>
+        <div class="learn-text">
+          <h3>How to jump from Band 5.5 / 6 to Band 7+</h3>
+          <p>The exact gap between where you are and Band 7 — and the fastest, proven way to close it.</p>
+        </div>
+      </div>
+      <div class="learn-card">
+        <div class="learn-num">2</div>
+        <div class="learn-text">
+          <h3>The common mistakes keeping your score stuck</h3>
+          <p>90% of repeat test-takers lose marks in one specific place. We'll identify yours live in the session.</p>
+        </div>
+      </div>
+      <div class="learn-card">
+        <div class="learn-num">3</div>
+        <div class="learn-text">
+          <h3>Speaking &amp; Writing strategies used by toppers</h3>
+          <p>Frameworks that work even if you're not a native-level speaker — tested across 10,000+ students.</p>
+        </div>
+      </div>
+      <div class="learn-card">
+        <div class="learn-num">4</div>
+        <div class="learn-text">
+          <h3>Time management for Reading &amp; Listening</h3>
+          <p>How to stop running out of time and start using it as your weapon on exam day.</p>
+        </div>
+      </div>
+      <div class="learn-card">
+        <div class="learn-num">5</div>
+        <div class="learn-text">
+          <h3>Your personalised 2–4 week roadmap</h3>
+          <p>Walk away with a week-by-week plan tailored to your target band and timeline. Yours to keep, free.</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="cd-sub">Next session: <b id="cd-next-label">This Saturday at 7 PM IST</b></div>
-</div>
+</section>
 
-<!-- ══════════════════════════════════════
-     PAGE BODY
-══════════════════════════════════════ -->
-<div class="page-body">
-
-  <!-- 1. WHAT YOU'LL LEARN -->
-  <section class="sec rv">
-    <div class="sec-eye">📚 Webinar Curriculum</div>
-    <h2 class="ds-h2" style="margin-bottom:1.4rem;">What you'll learn in <em>this session</em></h2>
-    <div class="learn-list">
-      <div class="learn-item">
-        <div class="li-num">1</div>
-        <div>
-          <div class="li-title">How to jump from Band 5.5 / 6 to Band 7+</div>
-          <div class="li-desc">The exact gap between where you are and Band 7 — and the fastest way to close it.</div>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="li-num">2</div>
-        <div>
-          <div class="li-title">The common mistakes keeping your score stuck</div>
-          <div class="li-desc">90% of repeat test-takers lose marks in one specific place. We'll identify yours live.</div>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="li-num">3</div>
-        <div>
-          <div class="li-title">Speaking &amp; Writing strategies used by toppers</div>
-          <div class="li-desc">Frameworks that work even if you're not a native-level speaker — tested across 10,000+ students.</div>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="li-num">4</div>
-        <div>
-          <div class="li-title">Time management for Reading &amp; Listening</div>
-          <div class="li-desc">How to stop running out of time and start using it as your weapon.</div>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="li-num">5</div>
-        <div>
-          <div class="li-title">Your personalised 2–4 week roadmap</div>
-          <div class="li-desc">Walk away with a week-by-week plan tailored to your target band and timeline. Yours to keep, free.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INLINE CTA 1 -->
-  <div class="inline-cta sec rv" style="border-bottom:none;padding-top:0;">
-    <div class="ict-eye">Limited Seats · Free · Instant confirmation</div>
-    <h3 class="ict-h">Save My Spot Now</h3>
-    <p class="ict-sub">Register in 30 seconds. WhatsApp link sent immediately.</p>
-    <button class="ict-btn" onclick="scrollForm()">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Reserve My Free Seat →
-    </button>
-    <div class="ict-note">⚡ Instant WhatsApp confirmation · No credit card · 100% free</div>
-  </div>
-
-  <!-- 2. WHO IT'S FOR -->
-  <section class="sec rv">
-    <div class="sec-eye">🎯 Is This For You?</div>
-    <h2 class="ds-h2" style="margin-bottom:1.4rem;">This webinar is <em>exactly right</em> if you are…</h2>
-    <div class="who-grid">
-      <div class="who-card"><div class="who-ico">✈️</div><div><div class="who-title">Planning to study abroad</div><div class="who-desc">Canada, UK, Australia, USA — needs Band 7+ for admission or visa.</div></div></div>
-      <div class="who-card"><div class="who-ico">😩</div><div><div class="who-title">Stuck below Band 7</div><div class="who-desc">Taken IELTS once or twice and still not reaching the score you need.</div></div></div>
-      <div class="who-card"><div class="who-ico">💼</div><div><div class="who-title">Working professional</div><div class="who-desc">Limited study time. Need a focused, efficient strategy — not endless content.</div></div></div>
-      <div class="who-card"><div class="who-ico">😕</div><div><div class="who-title">Confused about preparation</div><div class="who-desc">Don't know where to start, what to focus on, or how long it will take.</div></div></div>
-    </div>
-    <div class="who-not">
-      <span style="font-size:1.1rem;">✋</span>
-      <div><b>Not for you if:</b> You've already scored Band 7+ and don't need immigration or academic proof.</div>
-    </div>
-  </section>
-
-  <!-- 3. SCORE IMPROVEMENTS -->
-  <section class="sec rv">
-    <div class="sec-eye">📈 Real Score Improvements</div>
-    <h2 class="ds-h2" style="margin-bottom:1.4rem;">Students who <em>attended this class</em></h2>
-
-    <div class="score-grid">
-      <div class="score-row">
-        <div class="score-top">
-          <span class="score-name">Rahul S. · Software Engineer, Hyderabad</span>
-          <span class="score-badge">+1.5 bands</span>
-        </div>
-        <div class="score-bar-bg">
-          <div class="score-bar-before" style="width:60%"></div>
-          <div class="score-bar-after" style="--w:85%"></div>
-        </div>
-        <div class="score-vals">
-          <span class="sv-before">Band 6.0</span>
-          <span class="sv-arrow">→ improved to →</span>
-          <span class="sv-after">Band 7.5 ✓</span>
-        </div>
-        <p class="score-quote">"I improved from 6.0 to 7.5 in 3 weeks after applying what Sanjita taught in this free class. The Writing Task 2 framework alone was worth it."</p>
-      </div>
-
-      <div class="score-row">
-        <div class="score-top">
-          <span class="score-name">Priya M. · Pharmacist, Pune</span>
-          <span class="score-badge">+1.0 band</span>
-        </div>
-        <div class="score-bar-bg">
-          <div class="score-bar-before" style="width:70%"></div>
-          <div class="score-bar-after" style="--w:90%;animation-delay:.3s;"></div>
-        </div>
-        <div class="score-vals">
-          <span class="sv-before">Band 6.5</span>
-          <span class="sv-arrow">→ improved to →</span>
-          <span class="sv-after">Band 7.5 ✓</span>
-        </div>
-        <p class="score-quote">"I had a great experience with PrepEve. The coaching was extremely helpful and effective. The study materials were well-structured and perfectly aligned with the actual exam pattern."</p>
-      </div>
-
-      <div class="score-row">
-        <div class="score-top">
-          <span class="score-name">Arjun K. · Engineer, Bengaluru</span>
-          <span class="score-badge">First attempt 7+</span>
-        </div>
-        <div class="score-bar-bg">
-          <div class="score-bar-before" style="width:0%"></div>
-          <div class="score-bar-after" style="--w:80%;animation-delay:.5s;"></div>
-        </div>
-        <div class="score-vals">
-          <span class="sv-before">First attempt</span>
-          <span class="sv-arrow">→ scored →</span>
-          <span class="sv-after">Band 7.0 ✓</span>
-        </div>
-        <p class="score-quote">"Attended the free webinar, joined the 4-week programme. Got 7.0 overall on my very first attempt. Canada PR is now in process."</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. TESTIMONIALS -->
-  <section class="sec rv">
-    <div class="sec-eye">💬 What Students Say</div>
-    <h2 class="ds-h2" style="margin-bottom:1.4rem;">Trusted by <em>thousands</em> across India</h2>
-    <div class="gtesti-grid">
-      <div class="gtesti-card">
-        <div class="gt-top">
-          <div class="gt-av" style="background:linear-gradient(135deg,var(--blue),var(--blue-mid))">AM</div>
-          <div>
-            <div class="gt-name">Anooj Motghare</div>
-            <span class="gt-loc">Verified Google Review</span>
-          </div>
-          <div class="gt-stars">★★★★★</div>
-        </div>
-        <p class="gt-quote">"Attended the free webinar expecting generic tips. Got a personalised strategy I could actually use. Went from 6.0 to 7.5 in 3 weeks."</p>
-      </div>
-      <div class="gtesti-card">
-        <div class="gt-top">
-          <div class="gt-av" style="background:linear-gradient(135deg,var(--teal),#14b8a6)">YP</div>
-          <div>
-            <div class="gt-name">Yashaswini Palakonda</div>
-            <span class="gt-loc">Verified Google Review</span>
-          </div>
-          <div class="gt-stars">★★★★★</div>
-        </div>
-        <p class="gt-quote">"Two failed attempts before this. The webinar showed me exactly what I was doing wrong in Speaking. Next attempt: 7.5 overall. Thank you Sanjita!"</p>
-      </div>
-      <div class="gtesti-card">
-        <div class="gt-top">
-          <div class="gt-av" style="background:linear-gradient(135deg,var(--gold),#FBBF24);color:#92400E">SR</div>
-          <div>
-            <div class="gt-name">Shashikanth Revelly</div>
-            <span class="gt-loc">Verified Google Review</span>
-          </div>
-          <div class="gt-stars">★★★★★</div>
-        </div>
-        <p class="gt-quote">"Registered for the webinar, ended up joining the course. Scored 7.0 on my first attempt. If you're serious about IELTS, this is the only class you need."</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. HOST -->
-  <section class="sec rv">
-    <div class="sec-eye">👩‍🏫 Your Instructor</div>
-    <h2 class="ds-h2" style="margin-bottom:1.4rem;">Meet <em>Sanjita</em></h2>
-    <div class="host-wrap">
-      <div class="host-img">S</div>
+<!-- ── Instructor ── -->
+<section class="sec rv">
+  <div class="wrap">
+    <div class="sec-label">👩‍🏫 Your Instructor</div>
+    <div class="instructor-grid">
       <div>
-        <div class="host-role">Founder, PrepEve · IELTS Expert · RCIC</div>
-        <div class="host-name">Sanjita</div>
-        <div class="host-bio">10+ years coaching IELTS, CELPIP, and TEF Canada. Trained 10,000+ students across India. Known for making Band 7+ feel achievable — even for repeat test-takers and complete beginners.</div>
-        <div class="host-badges">
-          <div class="hb"><span>🎓</span> 10,000+ students</div>
-          <div class="hb"><span>⭐</span> 4.7 Google Rating</div>
-          <div class="hb"><span>🏅</span> RCIC Certified</div>
-          <div class="hb"><span>📺</span> 1.2L+ YouTube Subscribers</div>
+        <div class="instructor-photo">S</div>
+      </div>
+      <div>
+        <div class="instructor-role">Founder, PrepEve · IELTS Expert · RCIC Certified</div>
+        <div class="instructor-name">Sanjita</div>
+        <div class="instructor-bio">10+ years coaching IELTS, CELPIP, and TEF Canada. Trained 10,000+ students across India. Known for making Band 7+ feel achievable — even for repeat test-takers and complete beginners who don't know where to start.</div>
+        <div class="instructor-badges">
+          <div class="inst-badge">🎓 10,000+ students trained</div>
+          <div class="inst-badge">⭐ 4.7 Google Rating</div>
+          <div class="inst-badge">🏅 RCIC Certified</div>
+          <div class="inst-badge">📺 1.2L+ YouTube Subscribers</div>
         </div>
-        <div class="host-quote">"Most students fail IELTS not because they lack English — but because nobody showed them the format. One class changes everything."</div>
+        <div class="instructor-quote">"Most students fail IELTS not because they lack English — but because nobody showed them the format. One class changes everything."</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 6. URGENCY -->
-  <section class="sec rv">
-    <div class="urg-block">
-      <div class="urg-tag">⚠️ Seats filling fast</div>
-      <div class="urg-h">Don't wait — every session<br><em>fills up completely.</em></div>
-      <div class="seats-row">
-        <span class="seat-label taken">78% Filled</span>
-        <div class="seat-bar-bg"><div class="seat-bar-fill"></div></div>
-        <span class="seat-label">Last few spots</span>
-      </div>
-      <div class="urg-list">
-        <div class="urg-li"><div class="urg-li-dot">1</div><div><b>Every session fills completely</b> — latecomers get waitlisted and miss the live session.</div></div>
-        <div class="urg-li"><div class="urg-li-dot">2</div><div><b>Seats are capped deliberately</b> — Sanjita takes live questions and gives real-time feedback. Smaller group = better for you.</div></div>
-        <div class="urg-li"><div class="urg-li-dot">3</div><div><b>The longer you wait, the longer you stay stuck</b> — Band 7+ is 60 minutes away. Register now.</div></div>
-      </div>
-      <button class="ict-btn" onclick="scrollForm()" style="border-radius:12px;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Save My Spot — Before It's Gone
-      </button>
+<!-- ── Student Score Results ── -->
+<section class="sec sec-alt rv">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sec-label">📈 Real Results</div>
+      <h2>Students who <em>attended this class</em></h2>
     </div>
-  </section>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-top">
+          <div class="result-name">Rahul S. · Software Engineer, Hyderabad</div>
+          <div class="result-badge">+1.5 bands</div>
+        </div>
+        <div class="result-score-row">
+          <span class="score-before">Band 6.0</span>
+          <span class="score-arrow">→</span>
+          <span class="score-after">Band 7.5 ✓</span>
+        </div>
+        <div class="result-quote">I improved from 6.0 to 7.5 in 3 weeks after applying what Sanjita taught in this free class. The Writing Task 2 framework alone was worth it.</div>
+      </div>
+      <div class="result-card">
+        <div class="result-top">
+          <div class="result-name">Priya M. · Pharmacist, Pune</div>
+          <div class="result-badge">+1.0 band</div>
+        </div>
+        <div class="result-score-row">
+          <span class="score-before">Band 6.5</span>
+          <span class="score-arrow">→</span>
+          <span class="score-after">Band 7.5 ✓</span>
+        </div>
+        <div class="result-quote">Registered for the webinar, ended up joining the course. Scored 7.0 on my first attempt. If you're serious about IELTS, this is the only class you need.</div>
+      </div>
+      <div class="result-card">
+        <div class="result-top">
+          <div class="result-name">Verified Google Review</div>
+          <div class="result-badge">Band 7.5</div>
+        </div>
+        <div class="result-score-row">
+          <span class="score-before">Band 5.5</span>
+          <span class="score-arrow">→</span>
+          <span class="score-after">Band 7.5 ✓</span>
+        </div>
+        <div class="result-quote">Two failed attempts before this. The webinar showed me exactly what I was doing wrong in Speaking. Next attempt: 7.5 overall. Thank you Sanjita!</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- VIDEO TESTIMONIALS -->
-  <section class="sec rv" id="video-testi" style="padding-bottom:2rem;">
-    <div class="sec-eye">🎥 Video Proof</div>
-    <h2 class="ds-h2" style="margin-bottom:1.4rem;">Hear it from <em>our students</em></h2>
+<!-- ── Video Testimonials ── -->
+<section class="sec rv">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sec-label">🎥 Video Proof</div>
+      <h2>Hear it from <em>our students</em></h2>
+    </div>
     <div class="video-grid">
-
       <a href="https://www.youtube.com/watch?v=8agy5ojp36I" target="_blank" rel="noopener" class="video-card">
         <div class="video-thumb-wrap">
-          <img src="https://img.youtube.com/vi/8agy5ojp36I/hqdefault.jpg" alt="Student testimonial" class="video-thumb" loading="lazy"/>
-          <div class="video-overlay">
-            <div class="video-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-          <div class="video-band-badge">Band 8.5</div>
+          <img src="https://img.youtube.com/vi/8agy5ojp36I/hqdefault.jpg" alt="Taranjeet Band 8.5 testimonial" loading="lazy"/>
+          <div class="video-overlay"><div class="video-play"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+          <div class="video-band">Band 8.5</div>
         </div>
         <div class="video-info">
-          <div class="video-info-title">Taranjeet — Band 8.5</div>
-          <div class="video-info-meta">6.5 → 8.5 in 30 days · Watch on YouTube →</div>
+          <div class="video-title">Taranjeet — Band 8.5</div>
+          <div class="video-meta">6.5 → 8.5 in 30 days · Watch on YouTube →</div>
         </div>
       </a>
-
       <a href="https://www.youtube.com/watch?v=5FbjLsycE2k" target="_blank" rel="noopener" class="video-card">
         <div class="video-thumb-wrap">
-          <img src="https://img.youtube.com/vi/5FbjLsycE2k/hqdefault.jpg" alt="Student testimonial" class="video-thumb" loading="lazy"/>
-          <div class="video-overlay">
-            <div class="video-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-          <div class="video-band-badge">Band 8.0</div>
+          <img src="https://img.youtube.com/vi/5FbjLsycE2k/hqdefault.jpg" alt="Pratishtha Band 8.0 testimonial" loading="lazy"/>
+          <div class="video-overlay"><div class="video-play"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+          <div class="video-band">Band 8.0</div>
         </div>
         <div class="video-info">
-          <div class="video-info-title">Pratishtha — Band 8.0</div>
-          <div class="video-info-meta">6.0 → 8.0 · UK UCL · Watch on YouTube →</div>
+          <div class="video-title">Pratishtha — Band 8.0</div>
+          <div class="video-meta">6.0 → 8.0 · UK UCL · Watch on YouTube →</div>
         </div>
       </a>
-
       <a href="https://www.youtube.com/watch?v=2f9jwGWIREI" target="_blank" rel="noopener" class="video-card">
         <div class="video-thumb-wrap">
-          <img src="https://img.youtube.com/vi/2f9jwGWIREI/hqdefault.jpg" alt="Student testimonial" class="video-thumb" loading="lazy"/>
-          <div class="video-overlay">
-            <div class="video-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-          <div class="video-band-badge">Band 7.5</div>
+          <img src="https://img.youtube.com/vi/2f9jwGWIREI/hqdefault.jpg" alt="Deepanshu Band 7.5 testimonial" loading="lazy"/>
+          <div class="video-overlay"><div class="video-play"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+          <div class="video-band">Band 7.5</div>
         </div>
         <div class="video-info">
-          <div class="video-info-title">Deepanshu — Band 7.5</div>
-          <div class="video-info-meta">6.5 → 7.5 · Watch on YouTube →</div>
+          <div class="video-title">Deepanshu — Band 7.5</div>
+          <div class="video-meta">6.5 → 7.5 · Watch on YouTube →</div>
         </div>
       </a>
-
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 7. FAQ -->
-  <section class="sec rv">
-    <div class="sec-eye">❓ Quick Answers</div>
-    <h2 class="ds-h2" style="margin-bottom:1.4rem;">Still thinking? <em>Read this first.</em></h2>
+<!-- ── WhatsApp Community ── -->
+<section class="wa-section rv">
+  <div class="wrap">
+    <div class="wa-inner">
+      <div class="wa-icon-wrap">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <h2 class="wa-h">Join the PrepEve WhatsApp Community</h2>
+      <p class="wa-sub">Get free IELTS tips, study materials, mock test reminders, and live session updates — all in one group. 4,000+ active learners inside.</p>
+      <div class="wa-perks">
+        <div class="wa-perk">✓ Free daily IELTS tips</div>
+        <div class="wa-perk">✓ Mock test links</div>
+        <div class="wa-perk">✓ Session reminders</div>
+        <div class="wa-perk">✓ 4,000+ active members</div>
+      </div>
+      <a class="btn-wa" href="https://chat.whatsapp.com/EoZiGZKTLak9FUD1JjMFdi" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Join WhatsApp Group — Free
+      </a>
+      <div class="wa-note">Free to join · No spam · Leave anytime</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="sec rv">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;">
+      <div class="sec-label">❓ Quick Answers</div>
+      <h2>Still thinking? <em>Read this first.</em></h2>
+    </div>
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-q"><span>Is this webinar really free?</span><span class="faq-icon">+</span></button>
@@ -1050,40 +797,32 @@ body { padding-top: calc(var(--nav-height) + 34px + 38px); }
         <div class="faq-a">Especially for you. Repeat test-takers usually have one specific issue — and Sanjita identifies it live in the session. That alone is worth attending for.</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-</div><!-- /page-body -->
-
-<!-- ══════════════════════════════════════
-     BOTTOM STRIP
-══════════════════════════════════════ -->
-<div class="bottom-strip">
-  <h3 class="bs-h">Still reading? Your spot is waiting.</h3>
-  <p class="bs-p" id="bottom-txt">Session this weekend · 7:00 PM IST · 60 minutes · 100% Free</p>
-  <a href="#form" class="bs-btn" onclick="scrollForm();return false;">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Reserve My Free Seat Now
-  </a>
-  <p class="bs-note">⚡ 30 seconds to register · WhatsApp confirmation · Zero commitment</p>
+<!-- ── Footer CTA ── -->
+<div class="footer-cta rv">
+  <div class="wrap footer-cta-inner">
+    <h2>One free class. Band 7+ starts here.</h2>
+    <p>Limited seats every weekend. Register in 30 seconds and get your WhatsApp confirmation immediately.</p>
+    <button class="btn-footer" onclick="scrollForm()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Reserve My Free Seat →
+    </button>
+    <div class="footer-note">100% Free · No Credit Card · Instant WhatsApp Confirmation</div>
+  </div>
 </div>
 
-<!-- ═══ SPACER FOR MOBILE STICKY ═══ -->
-<div class="page-spacer"></div>
+<!-- ── Site Footer ── -->
+<footer class="site-footer">
+  &copy; 2025 PrepEve · <a href="https://prepeve.com">prepeve.com</a> · <span id="bottom-txt">Every Sat &amp; Sun · 7:00 PM IST · 60 min · Free</span>
+</footer>
 
-<!-- ══════════════════════════════════════
-     STICKY BOTTOM BAR (MOBILE)
-══════════════════════════════════════ -->
-<div class="sticky-bar" id="sticky-bar">
-  <div class="sticky-inner">
-    <div class="sticky-text">
-      <b>Free IELTS Webinar 🎯</b>
-      <span>Register in 30 sec · Limited seats</span>
-    </div>
-    <button class="sticky-btn" onclick="scrollForm()">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Reserve Seat
-    </button>
-  </div>
+<!-- ── Sticky Mobile Bar ── -->
+<div id="sticky-bar">
+  <button class="sticky-btn" onclick="scrollForm()">
+    Reserve My Free Seat — Register Now →
+  </button>
 </div>
 
 <script src="/assets/js/common.js"></script>
@@ -1110,19 +849,12 @@ function v(id){return document.getElementById(id).value.trim();}
   var sunStr = 'Sun ' + dSun.getDate() + ' ' + mo[dSun.getMonth()];
   var rangeStr = satStr + ' & ' + sunStr;
 
-  // Update chip
   var chipDate = document.getElementById('chip-date');
   if(chipDate) chipDate.innerHTML = rangeStr;
 
-  // Update time chip
   var chipTime = document.getElementById('chip-time');
   if(chipTime) chipTime.textContent = 'Every Sat & Sun · 7 PM IST';
 
-  // Countdown label
-  var cdLabel = document.getElementById('cd-next-label');
-  if(cdLabel) cdLabel.textContent = satStr + ' at 7:00 PM IST';
-
-  // Bottom text
   var bt = document.getElementById('bottom-txt');
   if(bt) bt.textContent = rangeStr + ' · 7:00 PM IST · 60 min · Free';
 
@@ -1130,42 +862,15 @@ function v(id){return document.getElementById(id).value.trim();}
   var d = now.getDay();
   if(d===0||d===5||d===6){
     var msgs = ['🔴 Only 9 seats left this weekend','🔴 Filling fast — last few spots','🔴 Registration closes Sunday'];
-    document.getElementById('urg-txt').textContent = msgs[Math.floor(Math.random()*msgs.length)];
-    // form header urgency
+    var urgEl = document.getElementById('urg-bar');
+    if(urgEl){
+      var strong = urgEl.querySelector('strong');
+      if(strong) strong.textContent = msgs[Math.floor(Math.random()*msgs.length)];
+    }
     var seats = [8,9,10,11,12,13,14][Math.floor(Math.random()*7)];
-    document.getElementById('form-urg-txt').textContent = 'Only ' + seats + ' seats remaining';
+    var formUrgEl = document.getElementById('form-urg-txt');
+    if(formUrgEl) formUrgEl.textContent = 'Only ' + seats + ' seats remaining';
   }
-})();
-
-/* ── Countdown Timer ── */
-(function(){
-  function nextSession(){
-    var now = new Date();
-    // Target: next Saturday at 7pm IST (UTC+5:30)
-    var ist = new Date(now.getTime() + (5.5 * 3600000));
-    var target = new Date(ist);
-    var day = target.getDay();
-    var diff = (6 - day + 7) % 7;
-    if(diff === 0 && target.getHours() >= 19) diff = 7;
-    target.setDate(target.getDate() + diff);
-    target.setHours(19,0,0,0);
-    return new Date(target.getTime() - 5.5*3600000); // back to UTC
-  }
-
-  function pad(n){return String(n).padStart(2,'0');}
-
-  function tick(){
-    var now = new Date();
-    var diff = Math.max(0, nextSession() - now);
-    var h = Math.floor(diff/3600000);
-    var m = Math.floor((diff%3600000)/60000);
-    var s = Math.floor((diff%60000)/1000);
-    document.getElementById('cd-h').textContent = pad(h);
-    document.getElementById('cd-m').textContent = pad(m);
-    document.getElementById('cd-s').textContent = pad(s);
-  }
-  tick();
-  setInterval(tick, 1000);
 })();
 
 /* ── Scroll to form ── */
@@ -1179,7 +884,7 @@ function scrollForm(){
   }, 600);
 }
 
-/* ── Hide sticky when form visible ── */
+/* ── Hide sticky bar when form visible ── */
 (function(){
   var formEl = document.getElementById('form');
   var bar = document.getElementById('sticky-bar');
@@ -1254,25 +959,6 @@ document.getElementById('submit-btn').addEventListener('click', function(){
   }, 900);
 });
 
-/* ── Score bar animation on scroll ── */
-(function(){
-  if(!('IntersectionObserver' in window)) return;
-  var rows = document.querySelectorAll('.score-row');
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        var bar = e.target.querySelector('.score-bar-after');
-        if(bar){bar.style.animationPlayState='running';}
-      }
-    });
-  },{threshold:.3});
-  rows.forEach(function(r){
-    var bar = r.querySelector('.score-bar-after');
-    if(bar){bar.style.animationPlayState='paused';}
-    obs.observe(r);
-  });
-})();
-
 /* ── FAQ accordion ── */
 document.querySelectorAll('.faq-q').forEach(function(btn){
   btn.addEventListener('click', function(){
@@ -1296,7 +982,7 @@ window.addEventListener('scroll', function(){
   }
   var obs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
-  },{threshold:.1});
+  },{threshold:.08});
   document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
 })();
 </script>
