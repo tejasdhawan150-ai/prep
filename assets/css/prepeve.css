@@ -38,6 +38,7 @@ p{max-width:68ch}
 .sec-head{max-width:720px;margin:0 auto 44px;text-align:center}
 .sec-head p{margin:14px auto 0;color:var(--muted);font-size:1.05rem}
 .eyebrow{display:inline-block;font-family:var(--f-head);font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.eyebrow,.badge,.nav-label{font-size:.8125rem}
 .sec-dark .eyebrow{color:#93B4F5}
 .grid{display:grid;gap:20px}
 .g2,.g3,.g4{grid-template-columns:1fr}
