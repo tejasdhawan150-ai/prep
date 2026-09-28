@@ -237,3 +237,14 @@ small,.src,.form-note,.stat span,.quote-by small{font-size:max(.8rem,13px)}
 .foot a,.form-alt a,.src,.nav-links a{display:inline-block;min-height:32px;line-height:32px}
 @media(max-width:899px){.foot a{min-height:44px;line-height:44px}}
 @media(max-width:959px){.nav-right .nav-cta{display:none}}
+
+/* Alignment: paragraphs keep a readable measure, but centre themselves in centred contexts */
+p.center,.center p,.center>p,.sec-head p,.cta-band p{margin-left:auto;margin-right:auto}
+p.center{max-width:none}
+/* Decorative glows must never create horizontal scroll */
+.hero,.sec{overflow-x:clip}
+/* Button labels stay on one line on wider screens; rows wrap instead */
+@media(min-width:480px){.btn{white-space:nowrap}}
+/* Even heading line lengths: no lone word on the last line */
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
