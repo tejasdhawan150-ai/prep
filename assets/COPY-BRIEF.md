@@ -7,19 +7,22 @@ Single source of truth for all site copy. Every page rewrite must follow it. Not
 
 What they're really buying: the band their visa or university needs, on the next attempt, without wasting more months or another exam fee. Underneath that: fear of failing again, time pressure, money spent, family plans on hold. Acknowledge it; never exploit it.
 
-## Core positioning
-**Most IELTS students don't need more material. They need someone to show them exactly where they're losing marks — and fix it with them.**
+## Core positioning (updated 29 Sep 2026 — overrides earlier versions)
+**PrepEve is a preparation system for IELTS and PTE that finds exactly why you're losing marks — and trains you until those weaknesses are fixed.** Not "classes". A system.
 
-PrepEve does that with:
-1. Live classes in batches of max 5 → a trainer actually hears you and corrects you.
-2. Trainer-marked writing (unlimited evaluations on Live) → you know why Writing is stuck.
-3. 1-on-1 speaking mocks → you rehearse the real test with a human.
-4. Full-length mock tests → no surprises on exam day.
-5. WhatsApp access to your trainer → doubts don't wait for the next class.
+The PrepEve Method (use this naming and order everywhere):
+01 Assess — find out where you are losing marks now.
+02 Diagnose — pinpoint the specific weaknesses behind your score.
+03 Train — targeted practice on those weaknesses.
+04 Correct — a trainer reviews your work and tells you exactly what to change.
+05 Repeat — practise again under real exam conditions until the mistake is gone. → Exam ready.
 
-Hierarchy on every page: PROMISE → REASON TO BELIEVE → PROOF → BENEFITS → FEATURES → CTA.
-Translate every feature: FEATURE → so what (benefit) → so what (outcome) → what it feels like.
-Example: "Unlimited writing evaluations" → "Every essay comes back marked by a trainer, with the exact sentences costing you marks" → "You stop guessing why Writing is stuck at 6.5".
+Differentiators (always as outcomes): trainers identify where marks are lost; every essay reviewed by a trainer with specific, actionable feedback; 1-on-1 speaking mocks that recreate exam pressure; full mock tests in real exam conditions; feedback → correction → repetition loop; personal to your weaknesses rather than generic lessons; WhatsApp access to trainers.
+NEVER mention class size, batch size, "max 5", "small batches", "5 or fewer" — owner decision, not part of the positioning. (Price-card features may describe live sessions but not their size.)
+Authority comes from evidence, not adjectives: show the Google rating, real scores, named reviews, trainer credentials, the method. Never "best/#1/leading/top".
+Proof architecture: hero → Google rating line; method → trainer feedback; results → real before→after scores; stories → named reviews with links; final CTA → rating + students trained.
+PTE: no PTE score results exist yet — PTE pages lead with the method, never invent PTE scores.
+CTA vocabulary (only what PrepEve fulfils): "Book My Free Assessment Class" (= the free demo class, where your level is assessed), "Find My Score Gaps" (→ band calculator / demo), "See How PrepEve Works" (→ #method), "Explore IELTS Preparation", "Explore PTE Preparation" (→ /pte-coaching), "Talk to a Trainer on WhatsApp", "Reserve My Free Webinar Seat".
 
 ## Voice
 Confident, expert, direct, warm, honest, specific. Short sentences. Strong verbs. Numbers only where real.
@@ -30,7 +33,6 @@ USE freely (sourced on the original site):
 - PrepEve is based in India and Canada (confirmed by the owner). Core offering / main moat: online IELTS coaching. No city or office address is verified.
 - 15,000+ students trained (IELTS). Where relevant: "across Canada PR, UK, Australia and study-abroad goals".
 - 4.7★ on Google from 300+ reviews.
-- Live Coaching batches capped at 5 students.
 - Prices: Self-Paced ₹4,999 (was ₹6,999), Live Coaching ₹14,999 (was ₹21,999), 1-on-1 Mentorship ₹19,999 (was ₹27,999). Keep features exactly as on the current homepage pricing cards.
 - Free demo class; slot confirmed on WhatsApp within 30 minutes.
 - Google reviews: Anooj Motghare (Band 8.5, supported for 2 years), Yashaswini Palakonda (Band 8.0, structured materials), Shashikanth Revelly (Band 7.5, attended webinar then enrolled). Quote only their real words from the current page; keep their exact Google links.
