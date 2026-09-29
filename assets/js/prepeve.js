@@ -1,6 +1,6 @@
 /* PrepEve shared behaviour: nav, reveal, video modal, sticky CTA, analytics events. */
 /* Analytics IDs: paste them here once and every page picks them up. Leave '' to keep disabled. */
-var PV_GA4_ID = '';          // e.g. 'G-XXXXXXXXXX'
+var PV_GA4_ID = 'G-VR61XWFSW3';          // e.g. 'G-XXXXXXXXXX'
 var PV_META_PIXEL_ID = '';   // e.g. '123456789012345'
 
 (function () {
