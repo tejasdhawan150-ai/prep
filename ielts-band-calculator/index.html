@@ -119,6 +119,11 @@
 .srcline{font-size:.88rem;color:var(--muted)}
 .fits{background:var(--ok-lt);border:1px solid #BFE3CF;border-radius:var(--r-lg);padding:6px 22px 14px;margin:2em 0}
 .fits h2{margin-top:.8em}
+.lead-card{margin-top:18px;padding:20px;border:1.5px solid var(--line);border-radius:var(--r-lg);background:#fff}
+.lead-card h3{margin:0 0 6px}.lead-card>p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.lead-grid{display:grid;gap:0 14px}
+@media(min-width:720px){.lead-grid{grid-template-columns:1fr 1fr 1fr}}
+.field.has-err input{border-color:var(--err)}
 </style><style>
 .calc{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--sh);padding:22px;margin:24px 0}
 .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
@@ -183,6 +188,20 @@
 <div class="tbl-wrap"><table class="cmp"><caption class="sr-only">Your CLB level per skill</caption><thead><tr><th scope="col">Skill</th><th scope="col">Your band</th><th scope="col">CLB level</th></tr></thead><tbody><tr><th scope="row">Listening</th><td><span id="cb-l">–</span></td><td><span id="cl-l">–</span></td></tr><tr><th scope="row">Reading</th><td><span id="cb-r">–</span></td><td><span id="cl-r">–</span></td></tr><tr><th scope="row">Writing</th><td><span id="cb-w">–</span></td><td><span id="cl-w">–</span></td></tr><tr><th scope="row">Speaking</th><td><span id="cb-sp">–</span></td><td><span id="cl-sp">–</span></td></tr></tbody></table></div>
 <p id="clbMin"></p>
 <p class="srcline">Your CLB is typically judged per skill; many programs require a minimum in each. Based on IELTS General Training only. IRCC can update these levels, so check the current <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/standard-requirements/language-requirements/test-equivalency-charts.html" target="_blank" rel="noopener">equivalency chart on canada.ca</a> before you apply.</p>
+</div>
+
+<div class="lead-card" id="planCard">
+  <h3>Want a plan to close the gap?</h3>
+  <p>Tell us your target and a PrepEve trainer will send you a short plan on WhatsApp for the skills pulling your band down. Free, no payment.</p>
+  <form id="planForm" novalidate>
+    <div class="lead-grid">
+      <div class="field"><label for="p-target">Target overall band</label><select id="p-target"><option value="6.0">6.0</option><option value="6.5">6.5</option><option value="7.0" selected>7.0</option><option value="7.5">7.5</option><option value="8.0">8.0</option><option value="8.5">8.5</option></select></div>
+      <div class="field"><label for="p-name">Your name</label><input id="p-name" autocomplete="name" placeholder="e.g. Priya Sharma"/><div class="err-msg" id="p-name-err">Please enter your name.</div></div>
+      <div class="field"><label for="p-phone">WhatsApp number</label><input id="p-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile number"/><div class="err-msg" id="p-phone-err">Please enter a valid mobile number.</div></div>
+    </div>
+    <button type="submit" class="btn btn-wa btn-block" data-cta="calculator-plan">Get My Plan on WhatsApp</button>
+    <p class="form-note">We reply on WhatsApp · No spam · No payment</p>
+  </form>
 </div>
 </section>
 
@@ -323,6 +342,34 @@
     </div>
   </div>
 </footer>
+<script>
+(function () {
+  var SHEET = 'https://script.google.com/macros/s/AKfycbxV6D1QlPWjlPg7QNH4RBQb3PoyisOElpEaKW_mbFkVkyeBfIJKPi7eiGfO42jUSTYLzg/exec';
+  var f = document.getElementById('planForm'); if (!f) return;
+  function v(id) { return document.getElementById(id).value.trim(); }
+  function err(id, on) { var el = document.getElementById(id); el.closest('.field').classList.toggle('has-err', on); }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = v('p-name'), phone = v('p-phone').replace(/\D/g, '');
+    if (phone.length === 10) phone = '91' + phone;
+    var okN = name.length >= 2, okP = phone.length >= 11;
+    err('p-name', !okN); err('p-phone', !okP);
+    if (!okN) { document.getElementById('p-name').focus(); return; }
+    if (!okP) { document.getElementById('p-phone').focus(); return; }
+    var s = ['l', 'r', 'w', 'sp'].map(function (k) { return v('b-' + k); });
+    var overall = document.getElementById('ovBand').textContent, target = v('p-target');
+    var summary = 'L' + s[0] + ' R' + s[1] + ' W' + s[2] + ' S' + s[3];
+    fetch(SHEET + '?name=' + encodeURIComponent(name) + '&phone=' + encodeURIComponent(phone)
+      + '&band=' + encodeURIComponent('Calculator|' + summary + '|Overall:' + overall + '|Target:' + target)
+      + '&source=band-calculator', { method: 'GET', mode: 'no-cors', keepalive: true }).catch(function () {});
+    if (window.pvTrack) window.pvTrack('generate_lead', { lead_source: 'band-calculator' });
+    var msg = 'Hi PrepEve! I used your IELTS band calculator.\n\nName: ' + name + '\nScores: Listening ' + s[0] + ', Reading ' + s[1] + ', Writing ' + s[2] + ', Speaking ' + s[3]
+      + '\nOverall: ' + overall + '\nTarget: ' + target + '\n\nPlease send me a plan to reach my target.';
+    var btn = f.querySelector('button'); btn.disabled = true; btn.textContent = 'Opening WhatsApp…';
+    setTimeout(function () { location.href = 'https://wa.me/919877714284?text=' + encodeURIComponent(msg); }, 250);
+  });
+})();
+</script>
 <script src="/assets/js/prepeve.js?v=4c90b2a1" defer></script>
 </body>
 </html>

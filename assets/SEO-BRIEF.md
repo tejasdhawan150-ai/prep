@@ -13,7 +13,7 @@ Only facts in the COPY-BRIEF claims ledger. Summary:
 - Trainers: Sanjita (founder & trainer, Regulated Canadian Immigration Consultant), Lesancy Sharma (master trainer), Khushpreet (trainer).
 - Free: live demo class (level assessed, study plan to keep) → /book-demo; free 60-min live webinar Sat & Sun 7:00 PM IST → /webinar.
 - Real outcomes: Taranjeet (Canada PR) 6.5 → 8.5 in 30 days; Pratishtha (UCL, UK) 6.0 → 8.0; Deepanshu 6.5 → 7.5; Google reviews by Anooj Motghare (8.5), Yashaswini Palakonda (8.0), Shashikanth Revelly (7.5) — exact review links are on the homepage.
-- NOT verified (never state): physical office/city, years in business, trainer years of experience or certifications beyond the above, pass rates beyond "97% of our students hit Band 7+ (PrepEve student data)" (max once per page, never in a heading), batch start dates, recordings policy.
+- NOT verified (never state): physical office/city, years in business, trainer years of experience or certifications beyond the above, any pass rate (the 97% figure is removed), batch start dates, recordings policy.
 If a page needs a fact not listed → `[VERIFY: …]` in an HTML comment and leave it out of visible copy.
 
 ## Competitor & external facts

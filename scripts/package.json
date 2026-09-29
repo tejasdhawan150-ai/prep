@@ -1,0 +1,1 @@
+{ "private": true, "name": "prepeve-site-check", "devDependencies": { "playwright": "^1.47.0" } }

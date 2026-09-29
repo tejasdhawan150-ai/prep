@@ -42,7 +42,7 @@ USE freely (sourced on the original site):
 GUARANTEE — REMOVED (owner decision, 29 Sep 2026). PrepEve does not advertise any money-back / score / exam-cleared guarantee. Never mention a guarantee, refund promise or "risk-free" on any page.
 
 USE ONLY WITH CARE (on the original, but no source given — never in a headline, max one mention per page, phrased exactly):
-- "97% of our students hit Band 7+" → only in a stats strip, labelled as PrepEve student data.
+- "97% Band 7+": REMOVED (no source). Do not use.
 - "Most students improve +1.5 bands in 30–60 days" → this wording only; never "guaranteed".
 
 DO NOT USE (unverifiable, invented by earlier rebuilds, or misleading):
