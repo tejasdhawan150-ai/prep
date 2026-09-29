@@ -8,7 +8,7 @@ Only facts in the COPY-BRIEF claims ledger. Summary:
 - Live Coaching ₹14,999 (30 days): alternate-day live sessions of 1.5 hrs, max 5 students per batch, 1-on-1 speaking mock interviews, unlimited writing evaluations, 5 full-length mock tests, WhatsApp doubt support.
 - 1-on-1 Mentorship ₹19,999 (30 days): dedicated coach, alternate-day 1-on-1 sessions (1.5 hrs), custom study plan, priority feedback within 4 hours, everything in Live Coaching.
 - Self-Paced ₹4,999 (30-day access): 30 recorded lectures, all 4 modules, 2 mock tests, notes, WhatsApp support for queries.
-- Exam-Cleared Guarantee (Live + Mentorship only): attend every session, submit every practice task, take every mock test — if you still don't clear your exam, full fee refunded. Always show the conditions with it. Full terms page is not yet published → say "conditions apply; ask us on WhatsApp for the full terms".
+- Guarantee: REMOVED by the owner (29 Sep 2026). Never mention a money-back, exam-cleared or score guarantee.
 - 15,000+ students trained; 4.7★ on Google from 300+ reviews; 6,000+ students taught French.
 - Trainers: Sanjita (founder & trainer, Regulated Canadian Immigration Consultant), Lesancy Sharma (master trainer), Khushpreet (trainer).
 - Free: live demo class (level assessed, study plan to keep) → /book-demo; free 60-min live webinar Sat & Sun 7:00 PM IST → /webinar.
@@ -26,7 +26,7 @@ Only from `research/sources.md` (official sources, dated). Cite inline as a numb
 4. "Last updated: 28 September 2026" line + "Written by the PrepEve team" (no fake author bios).
 5. Key facts box where relevant (dl or short table).
 6. H2s phrased as the questions people ask; each H2 is followed immediately by a 1–3 sentence direct answer, then detail (lists, tables).
-7. "Where PrepEve fits" section — factual, from the source of truth, with the guarantee conditions if mentioned.
+7. "Where PrepEve fits" section — factual, from the source of truth.
 8. FAQ (4–8 real questions) rendered as `<details>` in `.faq`; FAQPage JSON-LD ONLY mirroring the visible text exactly.
 9. Contextual CTA matched to intent (see below), related pages block, Sources list.
 Target 900–1,800 words of genuinely useful content; no filler.

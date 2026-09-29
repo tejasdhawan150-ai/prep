@@ -16,7 +16,6 @@ PrepEve does that with:
 3. 1-on-1 speaking mocks → you rehearse the real test with a human.
 4. Full-length mock tests → no surprises on exam day.
 5. WhatsApp access to your trainer → doubts don't wait for the next class.
-6. The Exam-Cleared Guarantee (conditions below) → the risk sits with us if you do the work.
 
 Hierarchy on every page: PROMISE → REASON TO BELIEVE → PROOF → BENEFITS → FEATURES → CTA.
 Translate every feature: FEATURE → so what (benefit) → so what (outcome) → what it feels like.
@@ -40,8 +39,7 @@ USE freely (sourced on the original site):
 - French: 6,000+ students taught French (French page only). NCLC 7 in all four skills adds up to 50 extra CRS points (IRCC rule). French-category draw on 22 July 2026 cut off at 399 CRS with 5,000 invitations — always say "as of July 2026".
 - Webinar: live, free, 60 minutes, Saturdays & Sundays 7:00 PM IST (the page computes the next dates — keep that logic).
 
-GUARANTEE — only ever with its conditions in the same view:
-"The Exam-Cleared Guarantee: attend every session, submit every practice task and take every mock test — if you still don't clear your exam, we refund your full fee. Applies to Live Coaching and 1-on-1 Mentorship." Never "Band 7+ guaranteed", never "+1.5 guaranteed", never "refund every rupee" without the conditions.
+GUARANTEE — REMOVED (owner decision, 29 Sep 2026). PrepEve does not advertise any money-back / score / exam-cleared guarantee. Never mention a guarantee, refund promise or "risk-free" on any page.
 
 USE ONLY WITH CARE (on the original, but no source given — never in a headline, max one mention per page, phrased exactly):
 - "97% of our students hit Band 7+" → only in a stats strip, labelled as PrepEve student data.
@@ -80,4 +78,4 @@ Webinar: "Even if you never join a course, you'll leave knowing where your marks
 Demo: a live mini-class + your current level assessed + a personal study plan to keep.
 
 ## Objections every sales page should answer
-Is online coaching effective? · I'm a beginner · I've already failed · I work full-time · Why pay when YouTube is free? · How is this different? · Can I reach Band 7? · What if I don't improve? (guarantee + conditions) · Will I get personal feedback? · Academic or General?
+Is online coaching effective? · I'm a beginner · I've already failed · I work full-time · Why pay when YouTube is free? · How is this different? · Can I reach Band 7? · What if I don't improve? (answer with the feedback loop and 1-on-1 support — no guarantee) · Will I get personal feedback? · Academic or General?
