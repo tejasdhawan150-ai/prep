@@ -44,7 +44,7 @@ function fireConv(){
 </script>
 <link rel="preload" href="/assets/fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin/>
-<link rel="stylesheet" href="/assets/css/prepeve.css?v=809c1a72"/>
+<link rel="stylesheet" href="/assets/css/prepeve.css?v=e1694311"/>
 <link rel="icon" type="image/svg+xml" href="/assets/img/mark.svg"/>
 <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
 <style>
@@ -116,7 +116,7 @@ function fireConv(){
     <div class="form-card hero-form rv" id="register" data-hide-mcta>
       <div id="reg-form" data-form="webinar-register">
         <h2>Save your free seat before you retake</h2>
-        <p class="form-sub">Every Sat &amp; Sun · 7:00 PM IST · 60 minutes · join either day</p>
+        <p class="form-sub"><span id="next-cd">Every Sat &amp; Sun · 7:00 PM IST</span> · 60 minutes · join either day</p>
         <div class="field">
           <label for="fname">Your name <span class="req">*</span></label>
           <input type="text" id="fname" placeholder="e.g. Priya Sharma" autocomplete="name"/>
@@ -127,7 +127,9 @@ function fireConv(){
           <input type="tel" id="phone" placeholder="10-digit mobile number" autocomplete="tel" inputmode="tel"/>
           <div class="field-err" id="phone-err" role="alert">Please enter your 10-digit WhatsApp number so we can send your link</div>
         </div>
-        <div class="f2">
+        <details class="opt-fields">
+          <summary>Add your exam &amp; target band (optional)</summary>
+          <div class="f2">
           <div class="field">
             <label for="exam">Which IELTS? (optional)</label>
             <select id="exam">
@@ -148,7 +150,9 @@ function fireConv(){
               <option value="8.0">Band 8.0+</option>
             </select>
           </div>
-        </div>
+          </div>
+        </details>
+        <div class="hp-field" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"/></div>
         <button class="btn btn-primary btn-lg btn-block" id="submit-btn" type="button">
           <span class="spin" id="spinner" aria-hidden="true"></span>
           <span class="wa-ico" aria-hidden="true"></span>
@@ -440,23 +444,40 @@ function fireConv(){
 var WA = '919877714284';
 var SHEET = 'https://script.google.com/macros/s/AKfycbxV6D1QlPWjlPg7QNH4RBQb3PoyisOElpEaKW_mbFkVkyeBfIJKPi7eiGfO42jUSTYLzg/exec';
 function v(id){return document.getElementById(id).value.trim();}
-/* ── Dynamic weekend dates (Sat & Sun, 7:00 PM IST) ── */
+/* ── Next live session: Sat & Sun 7:00 PM IST (a session counts as upcoming until it ends at 8:00 PM IST) ── */
+var PV_NEXT = (function(){
+  var IST = 330 * 60000, mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], dn = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var now = Date.now(), ist = new Date(now + IST);
+  function startOf(d){ return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), 19, 0) - IST; }
+  var list = [];
+  for (var i = 0; i < 9 && list.length < 2; i++) {
+    var d = new Date(ist.getTime() + i * 864e5), wd = d.getUTCDay();
+    if ((wd === 6 || wd === 0) && startOf(d) + 36e5 > now) list.push({ t: startOf(d), d: d });
+  }
+  function lbl(x){ return dn[x.d.getUTCDay()] + ' ' + x.d.getUTCDate() + ' ' + mo[x.d.getUTCMonth()]; }
+  function iso(x){ return x.d.getUTCFullYear() + '-' + ('0' + (x.d.getUTCMonth() + 1)).slice(-2) + '-' + ('0' + x.d.getUTCDate()).slice(-2); }
+  var a = list[0], b = list[1];
+  var range = (a.d.getUTCDay() === 6 && b && b.t - a.t < 2 * 864e5) ? lbl(a) + ' & ' + lbl(b) : lbl(a);
+  return { first: a, range: range, label: lbl(a), iso: iso(a) };
+})();
 (function(){
-  var now = new Date();
-  var day = now.getDay();
-  var mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  var dSat = new Date(now);
-  var diffSat = (6 - day + 7) % 7 || 7;
-  dSat.setDate(now.getDate() + diffSat);
-  var dSun = new Date(dSat);
-  dSun.setDate(dSat.getDate() + 1);
-  var satStr = 'Sat ' + dSat.getDate() + ' ' + mo[dSat.getMonth()];
-  var sunStr = 'Sun ' + dSun.getDate() + ' ' + mo[dSun.getMonth()];
-  var rangeStr = satStr + ' & ' + sunStr;
   var chipDate = document.getElementById('chip-date');
-  if(chipDate) chipDate.textContent = rangeStr;
+  if (chipDate) chipDate.textContent = PV_NEXT.range;
   var chipTime = document.getElementById('chip-time');
-  if(chipTime) chipTime.textContent = '7:00 PM IST';
+  if (chipTime) chipTime.textContent = '7:00 PM IST';
+  var cd = document.getElementById('next-cd');
+  if (!cd) return;
+  function tick(){
+    var ms = PV_NEXT.first.t - Date.now(), txt;
+    if (ms <= 0) txt = 'Live now: ' + PV_NEXT.label + ', 7:00 PM IST. Reserve and join';
+    else {
+      var m = Math.floor(ms / 6e4), dd = Math.floor(m / 1440), h = Math.floor(m % 1440 / 60), mm = m % 60;
+      var left = dd ? dd + (dd > 1 ? ' days ' : ' day ') + h + ' hr' : (h ? h + ' hr ' + mm + ' min' : mm + ' min');
+      txt = 'Next session: ' + PV_NEXT.label + ', 7:00 PM IST · starts in ' + left;
+    }
+    cd.textContent = txt;
+  }
+  tick(); setInterval(tick, 30000);
 })();
 /* ── Form submit ── */
 function pvUserData(phone, email){
@@ -494,6 +515,7 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     ok = false;
   }
   if(!ok) return;
+  if(document.getElementById('website') && document.getElementById('website').value){ return; }
 
   // Loading state
   document.getElementById('spinner').style.display = 'block';
@@ -529,9 +551,7 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     document.getElementById('reg-form').style.display = 'none';
     document.getElementById('success-wrap').style.display = 'block';
     setTimeout(function(){
-      var ref = new Date(), sat = new Date(ref);
-      sat.setDate(ref.getDate() + ((6 - ref.getDay() + 7) % 7 || 7));
-      var sess = sat.getFullYear() + '-' + ('0' + (sat.getMonth() + 1)).slice(-2) + '-' + ('0' + sat.getDate()).slice(-2);
+      var sess = PV_NEXT.iso;
       window.location.href = '/thank-you?src=webinar'
         + '&name=' + encodeURIComponent(name)
         + '&wa=' + encodeURIComponent(waUrl)
@@ -548,6 +568,6 @@ document.getElementById('submit-btn').addEventListener('click', function(){
   document.querySelectorAll('.js-date').forEach(function(el){ el.textContent = d.textContent; });
 })();
 </script>
-<script src="/assets/js/prepeve.js?v=809c1a72" defer></script>
+<script src="/assets/js/prepeve.js?v=e1694311" defer></script>
 </body>
 </html>
