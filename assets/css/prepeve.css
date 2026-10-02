@@ -416,3 +416,8 @@ p{text-wrap:pretty}
 .gr-col{flex:1 1 0;min-width:0}
 .gr-src{white-space:nowrap}
 @media (max-width:720px){.gr-top .band-pill{font-size:.75rem;padding:4px 8px}}
+/* Google review screenshots: simple grid, no carousel */
+.ss-wall{display:grid;grid-template-columns:1fr;gap:16px;max-width:1100px;margin:0 auto}
+.ss-wall .ss-item{margin:0}
+@media (min-width:760px){.ss-wall:not(.ss-one){grid-template-columns:1fr 1fr;align-items:start}.ss-wall .ss-last{grid-column:1/-1;justify-self:center;width:calc(50% - 8px)}}
+.ss-one{max-width:720px}
