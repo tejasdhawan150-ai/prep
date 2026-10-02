@@ -148,10 +148,15 @@ document.querySelectorAll('.rv-wall').forEach(function (w) {
   w.removeAttribute('data-collapsed');
   var nav = document.createElement('div');
   nav.className = 'rv-nav';
-  nav.innerHTML = '<button type="button" aria-label="Previous">←</button><button type="button" aria-label="Next">→</button>';
-  var step = function (d) { w.scrollBy({ left: d * w.clientWidth * 0.9, behavior: 'smooth' }); };
-  nav.children[0].addEventListener('click', function () { step(-1); });
-  nav.children[1].addEventListener('click', function () { step(1); });
+  nav.innerHTML = '<button type="button" aria-label="Previous">←</button><span class="rv-count" aria-live="polite"></span><button type="button" aria-label="Next">→</button>';
+  var items = w.children, count = nav.children[1];
+  var cur = function () { var best = 0, d = 1e9; for (var i = 0; i < items.length; i++) { var x = Math.abs(items[i].offsetLeft - w.offsetLeft - w.scrollLeft); if (x < d) { d = x; best = i; } } return best; };
+  var go = function (i) { i = Math.max(0, Math.min(items.length - 1, i)); w.scrollTo({ left: items[i].offsetLeft - w.offsetLeft, behavior: 'smooth' }); };
+  var upd = function () { var c = cur(); count.textContent = (c + 1) + ' / ' + items.length; nav.children[0].disabled = c === 0; nav.children[2].disabled = w.scrollLeft + w.clientWidth >= w.scrollWidth - 4; };
+  nav.children[0].addEventListener('click', function () { go(cur() - 1); });
+  nav.children[2].addEventListener('click', function () { go(cur() + 1); });
+  var ut; w.addEventListener('scroll', function () { clearTimeout(ut); ut = setTimeout(upd, 60); }, { passive: true });
+  window.addEventListener('load', upd); upd();
   w.parentNode.insertBefore(nav, w.nextSibling);
 });
 

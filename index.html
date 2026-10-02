@@ -87,7 +87,7 @@
 </script>
 <link rel="preload" href="/assets/fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin/>
-<link rel="stylesheet" href="/assets/css/prepeve.css?v=4fdb6e68"/>
+<link rel="stylesheet" href="/assets/css/prepeve.css?v=2a87b02e"/>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Will this actually help me improve?","acceptedAnswer":{"@type":"Answer","text":"It helps when the problem is found and fixed, not just practised. Every PrepEve student goes through the same loop: we assess you, pinpoint the specific weaknesses behind your score, train those, a trainer corrects your work, and you repeat under exam conditions until the mistake is gone. How far you move depends on your starting level and the practice you put in, and in your free assessment class a trainer will tell you honestly what it will take."}},
@@ -214,6 +214,8 @@
 .fnext{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:22px;font-size:.88rem;color:#DCE7FD}
 /* quiz */
 .quiz{max-width:720px;margin:0 auto}
+.bq-points{margin-top:18px}
+@media(min-width:1000px){.bq-grid{display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:center}.bq-intro{text-align:left;margin:0}.bq-intro p{margin-left:0}.bq-grid .quiz{max-width:none;margin:0}}
 .qprog{display:flex;align-items:center;gap:14px;margin-bottom:18px}
 .qtrack{flex:1;height:8px;border-radius:var(--r-full);background:var(--line);overflow:hidden}
 #QBar{height:100%;width:0;background:var(--blue);transition:width .3s}
@@ -399,7 +401,6 @@
       <figure class="sc-item"><picture><source srcset="/assets/img/reviews/anchal.webp" type="image/webp"><img src="/assets/img/reviews/anchal.jpg" alt="5-star Google review of PrepEve by Anchal Sharma" loading="lazy" width="680" height="476"></picture></figure>
       <div class="sc-item sc-stack"><figure class="sc-item"><picture><source srcset="/assets/img/reviews/melfin.webp" type="image/webp"><img src="/assets/img/reviews/melfin.jpg" alt="5-star Google review of PrepEve by Melfin Aruldhas" loading="lazy" width="657" height="257"></picture></figure><figure class="sc-item"><picture><source srcset="/assets/img/reviews/bhunesh.webp" type="image/webp"><img src="/assets/img/reviews/bhunesh.jpg" alt="5-star Google review of PrepEve by Bhunesh Sharma" loading="lazy" width="687" height="151"></picture></figure></div>
       <figure class="sc-item"><picture><source srcset="/assets/img/reviews/abhishek.webp" type="image/webp"><img src="/assets/img/reviews/abhishek.jpg" alt="5-star Google review of PrepEve by Abhishek Pandey" loading="lazy" width="655" height="164"></picture></figure>
-      <figure class="sc-item"><picture><source srcset="/assets/img/reviews/roma.webp" type="image/webp"><img src="/assets/img/reviews/roma.jpg" alt="5-star Google review of PrepEve by Roma Chauhan" loading="lazy" width="580" height="617"></picture></figure>
     </div>
   </div>
 </section>
@@ -656,14 +657,21 @@
 <!-- BAND QUIZ -->
 <section class="sec sec-alt" id="band-quiz">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="bq-grid">
+    <div class="sec-head bq-intro">
       <span class="eyebrow">Step 01, on your own</span>
       <h2>Estimate your band and the gap to your target</h2>
       <p>Five quick questions, about one minute.<span class="m-hide"> A trainer confirms the real picture in your free assessment class.</span></p>
+      <ul class="ticks bq-points m-hide">
+        <li>See your likely band today</li>
+        <li>See how far you are from the band you need</li>
+        <li>Then book a free class where a trainer checks your speaking and writing</li>
+      </ul>
     </div>
     <div class="card quiz rv" data-form="band-quiz">
       <div class="qprog"><div class="qtrack"><div id="QBar"></div></div><div id="QLabel">Question 1 of 5</div></div>
       <div id="QBOX" aria-live="polite"></div>
+    </div>
     </div>
   </div>
 </section>
@@ -872,7 +880,7 @@
   render();
 })();
 </script>
-<script src="/assets/js/prepeve.js?v=4fdb6e68" defer></script>
+<script src="/assets/js/prepeve.js?v=2a87b02e" defer></script>
 <script>
 // ---- Mobile FAQ toggle ----
 (function(){
