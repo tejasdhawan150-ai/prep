@@ -275,3 +275,10 @@ p{text-wrap:pretty}
 .pcta-mid .btn-primary:hover{background:#EEF2FF}
 .pcta-proof{margin:14px 0 0;font-size:.9rem;color:#BFDBFE}
 @media (max-width:560px){.pcta-btns .btn{width:100%;justify-content:center}}
+/* Google review screenshots */
+.rv-wall{columns:2 420px}
+.rv-wall .sc-item{border-color:#E5E7EB}
+.gstrip{margin:2.6em 0 0}
+.gstrip h2{margin:0 0 4px}
+.gstrip-sub{color:var(--muted);margin:0 0 16px}
+.gstrip .sc-wall{columns:1}

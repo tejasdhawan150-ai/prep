@@ -122,5 +122,5 @@ var PV_META_PIXEL_ID = '';   // e.g. '123456789012345'
 })();
 
 document.querySelectorAll('.sc-more').forEach(function (b) {
-  b.addEventListener('click', function () { var w = b.closest('.wrap').querySelector('.sc-wall'); if (w) w.removeAttribute('data-collapsed'); });
+  b.addEventListener('click', function () { var w = b.parentNode.previousElementSibling; if (w) w.removeAttribute('data-collapsed'); });
 });
