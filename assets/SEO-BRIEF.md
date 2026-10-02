@@ -57,7 +57,7 @@ Owner decisions:
 
 What PrepEve coaches (verified from the owner's original site):
 - English tests: IELTS (Academic & General), PTE, CELPIP, TOEFL, Duolingo English Test — same trainers (Sanjita, Lesancy Sharma, Khushpreet). IELTS prices/features are in the ledger; for PTE/CELPIP/TOEFL/Duolingo prices and course structure → "ask us on WhatsApp for current batches and fees" (not published).
-- French for Canada PR: live online classes toward NCLC 7; DELF, TEF Canada and TCF Canada preparation; 6,000+ students taught French; free French demo at /book-demo-french. French prices not published → ask on WhatsApp.
+- French for Canada PR: live online classes toward NCLC 7; DELF, TEF Canada and TCF Canada preparation; 6,000+ students taught French; free French demo at /book-demo-french; every French class is recorded (owner-confirmed 2 Oct 2026; IELTS recordings policy still unverified). French prices not published → ask on WhatsApp.
 - OET: out of scope (owner decision). Do not create OET pages or mention OET.
 
 Immigration content rules:
