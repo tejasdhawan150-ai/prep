@@ -30,7 +30,6 @@
 </script>
 <!-- Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR61XWFSW3"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-765652199"></script>
 <script>
 window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
@@ -45,7 +44,7 @@ function fireConv(){
 </script>
 <link rel="preload" href="/assets/fonts/jakarta.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin/>
-<link rel="stylesheet" href="/assets/css/prepeve.css?v=903f1f94"/>
+<link rel="stylesheet" href="/assets/css/prepeve.css?v=809c1a72"/>
 <link rel="icon" type="image/svg+xml" href="/assets/img/mark.svg"/>
 <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
 <style>
@@ -87,6 +86,7 @@ function fireConv(){
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="nav">
   <div class="wrap">
@@ -96,7 +96,7 @@ function fireConv(){
   </div>
 </header>
 
-<main>
+<main id="main">
 <!-- HERO -->
 <section class="hero">
   <div class="wrap hero-grid">
@@ -120,12 +120,12 @@ function fireConv(){
         <div class="field">
           <label for="fname">Your name <span class="req">*</span></label>
           <input type="text" id="fname" placeholder="e.g. Priya Sharma" autocomplete="name"/>
-          <div class="field-err" id="fname-err">Please type your name so we know who's joining</div>
+          <div class="field-err" id="fname-err" role="alert">Please type your name so we know who's joining</div>
         </div>
         <div class="field">
           <label for="phone">WhatsApp number — your joining link comes here <span class="req">*</span></label>
           <input type="tel" id="phone" placeholder="10-digit mobile number" autocomplete="tel" inputmode="tel"/>
-          <div class="field-err" id="phone-err">Please enter your 10-digit WhatsApp number so we can send your link</div>
+          <div class="field-err" id="phone-err" role="alert">Please enter your 10-digit WhatsApp number so we can send your link</div>
         </div>
         <div class="f2">
           <div class="field">
@@ -169,7 +169,7 @@ function fireConv(){
         <span>15,000+ students trained</span>
         <span><span class="stars" aria-hidden="true">★</span> 4.7 on Google from 300+ reviews</span>
       </div>
-      <p>Hosted by PrepEve — 15,000+ students trained, 4.7★ on Google from 300+ reviews. Works on your phone. No IELTS knowledge needed.</p>
+      <p>Works on your phone. No IELTS knowledge needed. Join either day.</p>
     </div>
   </div>
 </section>
@@ -180,9 +180,10 @@ function fireConv(){
     <div class="sec-head center">
       <span class="eyebrow">Scorecards from our students</span>
       <h2>Real results, shared by real students</h2>
-      <p>Score reports and thank-you messages students sent us. Names, photos and ID numbers are hidden to protect their privacy.</p>
+      <p>Score reports and thank-you messages students sent us. Names, ID numbers and dates are hidden to protect their privacy.</p>
     </div>
-    <div class="sc-wall" data-collapsed>
+    <span class="rv-hint" aria-hidden="true">Swipe to see more →</span>
+    <div class="sc-wall rv-wall sc-car">
       <figure class="sc-item"><picture><source srcset="/assets/img/results/f04-v2.webp" type="image/webp"><img src="/assets/img/results/f04-v2.jpg" alt="IELTS Academic Test Report Form, overall 7.5 shared by a PrepEve student. Personal details hidden." loading="lazy" width="720" height="907"></picture></figure>
       <figure class="sc-item"><picture><source srcset="/assets/img/results/f09-v2.webp" type="image/webp"><img src="/assets/img/results/f09-v2.jpg" alt="IELTS General Training Test Report Form, overall 8.0 shared by a PrepEve student. Personal details hidden." loading="lazy" width="591" height="874"></picture></figure>
       <figure class="sc-item"><picture><source srcset="/assets/img/results/f02-v2.webp" type="image/webp"><img src="/assets/img/results/f02-v2.jpg" alt="CELPIP-General score report, average 8 shared by a PrepEve student. Personal details hidden." loading="lazy" width="591" height="802"></picture></figure>
@@ -200,7 +201,6 @@ function fireConv(){
       <figure class="sc-item"><picture><source srcset="/assets/img/results/s07-v2.webp" type="image/webp"><img src="/assets/img/results/s07-v2.jpg" alt="IELTS result shared by a PrepEve student: Overall 7 on first attempt, student's message. Personal details hidden." loading="lazy" width="591" height="506"></picture></figure>
       <figure class="sc-item"><picture><source srcset="/assets/img/results/s00.webp" type="image/webp"><img src="/assets/img/results/s00.jpg" alt="IELTS result shared by a PrepEve student: Band 7, student's thank-you message. Personal details hidden." loading="lazy" width="591" height="311"></picture></figure>
     </div>
-    <div class="center mt-s"><button type="button" class="btn btn-ghost sc-more" data-cta="retake-scorecards-more">See all scorecards</button></div>
   </div>
 </section>
 
@@ -478,14 +478,18 @@ document.getElementById('submit-btn').addEventListener('click', function(){
   var ok = true;
   document.getElementById('fname-err').style.display = 'none';
   document.getElementById('phone-err').style.display = 'none';
+  document.getElementById('fname').removeAttribute('aria-invalid');
+  document.getElementById('phone').removeAttribute('aria-invalid');
 
   if(name.length < 2){
     document.getElementById('fname-err').style.display = 'block';
+    document.getElementById('fname').setAttribute('aria-invalid','true');
     document.getElementById('fname').focus();
     ok = false;
   }
   if(phone.replace(/\D/g,'').length < 11){
     document.getElementById('phone-err').style.display = 'block';
+    document.getElementById('phone').setAttribute('aria-invalid','true');
     if(ok) document.getElementById('phone').focus();
     ok = false;
   }
@@ -528,7 +532,7 @@ document.getElementById('submit-btn').addEventListener('click', function(){
       var ref = new Date(), sat = new Date(ref);
       sat.setDate(ref.getDate() + ((6 - ref.getDay() + 7) % 7 || 7));
       var sess = sat.getFullYear() + '-' + ('0' + (sat.getMonth() + 1)).slice(-2) + '-' + ('0' + sat.getDate()).slice(-2);
-      window.location.href = 'https://www.prepeve.com/thank-you?src=webinar'
+      window.location.href = '/thank-you?src=webinar'
         + '&name=' + encodeURIComponent(name)
         + '&wa=' + encodeURIComponent(waUrl)
         + '&sess=' + sess;
@@ -544,6 +548,6 @@ document.getElementById('submit-btn').addEventListener('click', function(){
   document.querySelectorAll('.js-date').forEach(function(el){ el.textContent = d.textContent; });
 })();
 </script>
-<script src="/assets/js/prepeve.js?v=903f1f94" defer></script>
+<script src="/assets/js/prepeve.js?v=809c1a72" defer></script>
 </body>
 </html>
