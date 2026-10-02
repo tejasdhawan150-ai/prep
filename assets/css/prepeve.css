@@ -384,3 +384,35 @@ p{text-wrap:pretty}
 }
 .rv-count{min-width:56px;text-align:center;font-size:.85rem;font-weight:700;color:var(--muted)}
 .rv-nav button:disabled{opacity:.35;cursor:default}
+/* Google reviews as readable text cards */
+.gr-wall{column-gap:18px}
+.gr-card{break-inside:avoid;display:inline-block;width:100%;margin:0 0 18px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 22px 16px;box-shadow:0 2px 10px rgba(15,30,70,.05)}
+.gr-top{display:flex;align-items:center;gap:12px}
+.gr-top .avatar{width:42px;height:42px;font-size:1.05rem;flex-shrink:0}
+.gr-top b{display:block;font-family:var(--f-head);color:var(--ink);font-size:1rem;line-height:1.3}
+.gr-src{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;color:var(--muted)}
+.gr-g{width:14px;height:14px}
+.gr-top .band-pill{margin-left:auto;white-space:nowrap}
+.gr-stars{color:#F5B301;letter-spacing:2px;margin:12px 0 8px;font-size:1rem}
+.gr-text p{margin:0 0 10px;color:var(--ink-2);font-size:.97rem;line-height:1.65;overflow-wrap:anywhere}
+.gr-shot{background:none;border:0;padding:6px 0 0;color:var(--blue);font-weight:600;font-size:.85rem;cursor:pointer;min-height:32px}
+.gr-shot:hover{text-decoration:underline}
+.gr-more-wrap{margin-top:8px}
+.gr-wall.collapsed>.gr-card:nth-child(n+7){display:none}
+.gr-static{columns:1!important}
+@media (min-width:721px){.gr-wall{columns:2}}
+@media (min-width:1000px){.gr-wall{columns:3}}
+.gr-nav{display:none}
+@media (max-width:720px){
+  .gr-wall:not(.gr-static){display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;align-items:flex-start;padding:4px 16px 8px;margin:0 -16px;scrollbar-width:none;transition:height .25s ease}
+  .gr-wall:not(.gr-static)::-webkit-scrollbar{display:none}
+  .gr-wall:not(.gr-static)>.gr-card{flex:0 0 86%;margin:0;scroll-snap-align:center}
+  .gr-more-wrap{display:none}
+  .gr-nav{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:6px}
+}
+.gr-nav button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line-2);background:#fff;font-size:20px;cursor:pointer;color:var(--ink)}
+.gr-nav button:disabled{opacity:.35;cursor:default}
+.gr-wall.gr-cols{columns:auto;display:flex;gap:18px;align-items:flex-start}
+.gr-col{flex:1 1 0;min-width:0}
+.gr-src{white-space:nowrap}
+@media (max-width:720px){.gr-top .band-pill{font-size:.75rem;padding:4px 8px}}
