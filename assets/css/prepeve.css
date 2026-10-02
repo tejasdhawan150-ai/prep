@@ -2,7 +2,7 @@
 @font-face{font-family:'Inter';src:url('/assets/fonts/inter.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
 @font-face{font-family:'Plus Jakarta Sans';src:url('/assets/fonts/jakarta.woff2') format('woff2');font-weight:200 800;font-style:normal;font-display:swap}
 :root{
-  --ink:#0B1B33;--ink-2:#334155;--muted:#64748B;--faint:#94A3B8;
+  --ink:#0B1B33;--ink-2:#1E293B;--muted:#475569;--faint:#94A3B8;
   --line:#E2E8F0;--line-2:#CBD5E1;
   --bg:#FFFFFF;--bg-2:#F6F8FC;--bg-3:#EEF3FF;
   --blue:#1A56DB;--blue-dk:#1240A8;--blue-lt:#E8EFFD;--navy:#0B1B33;
@@ -286,3 +286,27 @@ p{text-wrap:pretty}
 .hp-trf img{display:block;width:100%;height:auto}
 .hp-trf span{display:block;padding:8px 12px;font-size:.82rem;color:var(--muted);border-top:1px solid var(--line)}
 .hp-trf u{color:var(--blue);text-decoration:none;font-weight:600}
+.hp-list .avatar-photo{width:44px;height:44px}
+/* Google reviews: swipe on mobile */
+@media (max-width:720px){
+  .rv-wall,.rv-wall[data-collapsed]{columns:auto;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;max-height:none;-webkit-mask-image:none;mask-image:none;padding:4px 16px 12px;margin:0 -16px}
+  .rv-wall .sc-item{flex:0 0 92%;scroll-snap-align:center;margin:0}
+  .rv-wall+div .sc-more{display:none}
+  .rv-wall::after{content:"";flex:0 0 1px}
+}
+.rv-hint{display:none}
+@media (max-width:720px){.rv-hint{display:block;margin:0 0 8px;font-size:13px;color:var(--muted);text-align:right}}
+.sc-item img{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(10,20,40,.92);display:flex;align-items:center;justify-content:center;padding:16px;overflow:auto;cursor:zoom-out}
+.lb img{max-width:min(100%,900px);max-height:none;height:auto;border-radius:8px;background:#fff}
+.lb-x{position:fixed;top:12px;right:12px;width:40px;height:40px;border-radius:50%;border:0;background:#fff;font-size:24px;line-height:1;cursor:pointer}
+.lb-tip{position:fixed;bottom:16px;left:0;right:0;text-align:center;color:#CBD5E1;font-size:13px}
+@media (max-width:720px){
+  .lb{display:block;padding:64px 0 56px}
+  .lb img{display:block;max-width:none;width:640px;margin:0 12px}
+}
+/* Cards inside dark sections keep dark, readable text */
+.sec-dark .card{color:var(--ink-2)}
+.sec-dark .card h3{color:var(--ink)}
+.sec-dark .card p{color:var(--muted)}
+.sec-dark .card .ticks li{color:var(--ink-2)}

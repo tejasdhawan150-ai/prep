@@ -124,3 +124,22 @@ var PV_META_PIXEL_ID = '';   // e.g. '123456789012345'
 document.querySelectorAll('.sc-more').forEach(function (b) {
   b.addEventListener('click', function () { var w = b.parentNode.previousElementSibling; if (w) w.removeAttribute('data-collapsed'); });
 });
+
+document.addEventListener('click', function (e) {
+  var img = e.target.closest('.sc-item img');
+  if (!img) return;
+  var lb = document.createElement('div');
+  lb.className = 'lb';
+  lb.setAttribute('role', 'dialog');
+  lb.setAttribute('aria-label', img.alt);
+  lb.innerHTML = '<button class="lb-x" aria-label="Close">×</button><img alt=""><p class="lb-tip">Drag to read · tap outside to close</p>';
+  lb.querySelector('img').src = img.currentSrc || img.src;
+  lb.querySelector('img').alt = img.alt;
+  document.body.appendChild(lb);
+  document.body.style.overflow = 'hidden';
+  var close = function () { lb.remove(); document.body.style.overflow = ''; document.removeEventListener('keydown', esc); };
+  var esc = function (k) { if (k.key === 'Escape') close(); };
+  document.addEventListener('keydown', esc);
+  lb.addEventListener('click', function (ev) { if (ev.target === lb || ev.target.classList.contains('lb-x')) close(); });
+  if (typeof window.pvTrack === 'function') window.pvTrack('proof_zoom', { src: img.getAttribute('src') });
+});
