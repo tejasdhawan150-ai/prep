@@ -310,3 +310,12 @@ p{text-wrap:pretty}
 .sec-dark .card h3{color:var(--ink)}
 .sec-dark .card p{color:var(--muted)}
 .sec-dark .card .ticks li{color:var(--ink-2)}
+/* Google reviews: carousel on all screens */
+.rv-wall,.rv-wall[data-collapsed]{columns:auto;display:flex;align-items:flex-start;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;max-height:none;-webkit-mask-image:none;mask-image:none;padding:4px 2px 14px;scrollbar-width:thin}
+.rv-wall .sc-item{flex:0 0 calc(50% - 8px);scroll-snap-align:start;margin:0}
+.rv-wall+div .sc-more{display:none}
+.rv-nav{display:flex;justify-content:center;gap:10px;margin-top:6px}
+.rv-nav button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line-2);background:#fff;font-size:20px;cursor:pointer;color:var(--ink)}
+.rv-nav button:hover{border-color:var(--blue);color:var(--blue)}
+.gstrip .rv-wall .sc-item{flex-basis:85%}
+@media (max-width:720px){.rv-wall .sc-item{flex:0 0 92%;scroll-snap-align:center}.rv-nav{display:none}}

@@ -143,3 +143,14 @@ document.addEventListener('click', function (e) {
   lb.addEventListener('click', function (ev) { if (ev.target === lb || ev.target.classList.contains('lb-x')) close(); });
   if (typeof window.pvTrack === 'function') window.pvTrack('proof_zoom', { src: img.getAttribute('src') });
 });
+
+document.querySelectorAll('.rv-wall').forEach(function (w) {
+  w.removeAttribute('data-collapsed');
+  var nav = document.createElement('div');
+  nav.className = 'rv-nav';
+  nav.innerHTML = '<button type="button" aria-label="Previous reviews">←</button><button type="button" aria-label="Next reviews">→</button>';
+  var step = function (d) { w.scrollBy({ left: d * w.clientWidth * 0.9, behavior: 'smooth' }); };
+  nav.children[0].addEventListener('click', function () { step(-1); });
+  nav.children[1].addEventListener('click', function () { step(1); });
+  w.parentNode.insertBefore(nav, w.nextSibling);
+});
