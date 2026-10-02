@@ -374,3 +374,13 @@ p{text-wrap:pretty}
 .hp-web{margin-top:20px;max-width:520px}
 .hp-web .hp-more{display:inline-block}
 @media (max-width:560px){.hp-web .hp-head small{display:none}.hp-web{padding:18px}}
+/* Use more of large screens (less empty margin on wide monitors) */
+@media (min-width:1500px){:root{--wrap:1360px}}
+@media (min-width:1800px){:root{--wrap:1480px}html{font-size:17px}}
+/* Review carousel on phones: visible arrows + position counter, next card peeks in */
+@media (max-width:720px){
+  .rv-wall:not(.sc-car)>.sc-item{flex:0 0 86%}
+  .rv-nav{display:flex;align-items:center}
+}
+.rv-count{min-width:56px;text-align:center;font-size:.85rem;font-weight:700;color:var(--muted)}
+.rv-nav button:disabled{opacity:.35;cursor:default}
