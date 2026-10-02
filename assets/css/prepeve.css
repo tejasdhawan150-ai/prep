@@ -282,3 +282,7 @@ p{text-wrap:pretty}
 .gstrip h2{margin:0 0 4px}
 .gstrip-sub{color:var(--muted);margin:0 0 16px}
 .gstrip .sc-wall{columns:1}
+.hp-trf{display:block;margin:14px 0 6px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;text-decoration:none;box-shadow:var(--sh-sm)}
+.hp-trf img{display:block;width:100%;height:auto}
+.hp-trf span{display:block;padding:8px 12px;font-size:.82rem;color:var(--muted);border-top:1px solid var(--line)}
+.hp-trf u{color:var(--blue);text-decoration:none;font-weight:600}
