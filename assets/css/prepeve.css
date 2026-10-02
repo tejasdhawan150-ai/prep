@@ -253,3 +253,8 @@ p{text-wrap:pretty}
 .avatar-photo img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
 .fee-note{background:var(--bg-3);border:1px solid var(--line);border-radius:var(--r);padding:12px 16px;margin-top:14px}
 .fee-note a{font-weight:700}
+.sc-wall{columns:3 260px;column-gap:16px}
+.sc-item{break-inside:avoid;margin:0 0 16px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 2px 10px rgba(15,30,70,.06)}
+.sc-item img{display:block;width:100%;height:auto}
+.sc-wall[data-collapsed]{max-height:900px;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(#000 80%,transparent);mask-image:linear-gradient(#000 80%,transparent)}
+.sc-wall:not([data-collapsed])+div .sc-more{display:none}
