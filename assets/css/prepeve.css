@@ -2,7 +2,7 @@
 @font-face{font-family:'Inter';src:url('/assets/fonts/inter.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
 @font-face{font-family:'Plus Jakarta Sans';src:url('/assets/fonts/jakarta.woff2') format('woff2');font-weight:200 800;font-style:normal;font-display:swap}
 :root{
-  --ink:#0B1B33;--ink-2:#334155;--muted:#64748B;--faint:#94A3B8;
+  --ink:#0B1B33;--ink-2:#1E293B;--muted:#475569;--faint:#94A3B8;
   --line:#E2E8F0;--line-2:#CBD5E1;
   --bg:#FFFFFF;--bg-2:#F6F8FC;--bg-3:#EEF3FF;
   --blue:#1A56DB;--blue-dk:#1240A8;--blue-lt:#E8EFFD;--navy:#0B1B33;
@@ -305,3 +305,8 @@ p{text-wrap:pretty}
   .lb{display:block;padding:64px 0 56px}
   .lb img{display:block;max-width:none;width:640px;margin:0 12px}
 }
+/* Cards inside dark sections keep dark, readable text */
+.sec-dark .card{color:var(--ink-2)}
+.sec-dark .card h3{color:var(--ink)}
+.sec-dark .card p{color:var(--muted)}
+.sec-dark .card .ticks li{color:var(--ink-2)}
