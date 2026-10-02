@@ -154,3 +154,35 @@ document.querySelectorAll('.rv-wall').forEach(function (w) {
   nav.children[1].addEventListener('click', function () { step(1); });
   w.parentNode.insertBefore(nav, w.nextSibling);
 });
+
+/* Mark review cards whose screenshot is taller than the card, so CSS shows "Tap to read full review" */
+(function () {
+  var mark = function () {
+    document.querySelectorAll('.rv-wall:not(.sc-car) > .sc-item:not(.sc-stack)').forEach(function (f) {
+      var img = f.querySelector('img');
+      if (img) f.classList.toggle('is-long', img.getBoundingClientRect().height > f.clientHeight + 4);
+    });
+  };
+  window.addEventListener('load', mark);
+  window.addEventListener('resize', mark);
+  document.querySelectorAll('.rv-wall:not(.sc-car) img').forEach(function (i) { i.addEventListener('load', mark); });
+})();
+
+/* Phones: size each review carousel to the slide in view, so short slides leave no empty space */
+(function () {
+  var walls = document.querySelectorAll('.rv-wall:not(.sc-car)');
+  if (!walls.length) return;
+  var fit = function (w) {
+    if (window.innerWidth > 720) { w.style.height = ''; return; }
+    var best = null, d = 1e9;
+    [].forEach.call(w.children, function (c) { var x = Math.abs(c.offsetLeft - w.offsetLeft - w.scrollLeft); if (x < d) { d = x; best = c; } });
+    if (best) w.style.height = (best.offsetHeight + 18) + 'px';
+  };
+  walls.forEach(function (w) {
+    var t;
+    w.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(function () { fit(w); }, 80); }, { passive: true });
+    window.addEventListener('load', function () { fit(w); });
+    window.addEventListener('resize', function () { fit(w); });
+    w.querySelectorAll('img').forEach(function (i) { i.addEventListener('load', function () { fit(w); }); });
+  });
+})();
