@@ -120,3 +120,7 @@ var PV_META_PIXEL_ID = '';   // e.g. '123456789012345'
   var y = document.querySelectorAll('[data-year]');
   y.forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
+
+document.querySelectorAll('.sc-more').forEach(function (b) {
+  b.addEventListener('click', function () { var w = b.closest('.wrap').querySelector('.sc-wall'); if (w) w.removeAttribute('data-collapsed'); });
+});
