@@ -421,3 +421,4 @@ p{text-wrap:pretty}
 .ss-wall .ss-item{margin:0}
 @media (min-width:760px){.ss-wall:not(.ss-one){grid-template-columns:1fr 1fr;align-items:start}.ss-wall .ss-last{grid-column:1/-1;justify-self:center;width:calc(50% - 8px)}}
 .ss-one{max-width:720px}
+@media (min-width:760px){.ss-wall:not(.ss-one){grid-auto-flow:row dense}.ss-wall .ss-tall{grid-row:span 2}}
