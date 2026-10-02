@@ -191,3 +191,61 @@ document.querySelectorAll('.rv-wall').forEach(function (w) {
     w.querySelectorAll('img').forEach(function (i) { i.addEventListener('load', function () { fit(w); }); });
   });
 })();
+
+/* Google review cards: "Show more" on desktop, carousel with arrows/counter and auto-height on phones, screenshot proof in the lightbox */
+(function () {
+  document.querySelectorAll('.gr-wall:not(.gr-static)').forEach(function (w) {
+    var all = [].slice.call(w.querySelectorAll('.gr-card')), more = w.parentNode.querySelector('.gr-more');
+    var cards = w.getElementsByClassName('gr-card');
+    var collapsed = all.length > 6 && !!more, mode = '';
+    if (more) {
+      if (collapsed) more.addEventListener('click', function () { collapsed = false; mode = ''; layout(); more.parentNode.style.display = 'none'; });
+      else more.parentNode.style.display = 'none';
+    }
+    /* Desktop: place each card in the shortest column (even columns, no gaps). Phones: one flat row for the carousel. */
+    var layout = function () {
+      var n = window.innerWidth <= 720 ? 1 : window.innerWidth < 1000 ? 2 : 3;
+      var key = n + (collapsed ? 'c' : 'o');
+      if (key === mode) return; mode = key;
+      w.innerHTML = '';
+      if (n === 1) { all.forEach(function (c) { w.appendChild(c); }); w.classList.remove('gr-cols'); return; }
+      w.classList.add('gr-cols');
+      var cols = [];
+      for (var i = 0; i < n; i++) { var c = document.createElement('div'); c.className = 'gr-col'; w.appendChild(c); cols.push(c); }
+      (collapsed ? all.slice(0, 6) : all).forEach(function (card) {
+        var t = cols[0]; cols.forEach(function (c) { if (c.offsetHeight < t.offsetHeight) t = c; });
+        t.appendChild(card);
+      });
+    };
+    layout();
+    var nav = document.createElement('div');
+    nav.className = 'gr-nav';
+    nav.innerHTML = '<button type="button" aria-label="Previous review">←</button><span class="rv-count" aria-live="polite"></span><button type="button" aria-label="Next review">→</button>';
+    w.parentNode.insertBefore(nav, w.nextSibling);
+    var mobile = function () { return window.innerWidth <= 720; };
+    var cur = function () { var b = 0, d = 1e9; for (var i = 0; i < cards.length; i++) { var x = Math.abs(cards[i].offsetLeft - w.offsetLeft - w.scrollLeft - 16); if (x < d) { d = x; b = i; } } return b; };
+    var fit = function () {
+      if (!mobile()) { w.style.height = ''; return; }
+      var c = cur(); w.style.height = (cards[c].offsetHeight + 14) + 'px';
+      nav.children[1].textContent = (c + 1) + ' / ' + cards.length;
+      nav.children[0].disabled = c === 0; nav.children[2].disabled = c === cards.length - 1;
+    };
+    var go = function (i) { i = Math.max(0, Math.min(cards.length - 1, i)); w.scrollTo({ left: cards[i].offsetLeft - w.offsetLeft - 16, behavior: 'smooth' }); };
+    nav.children[0].addEventListener('click', function () { go(cur() - 1); });
+    nav.children[2].addEventListener('click', function () { go(cur() + 1); });
+    var t; w.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(fit, 70); }, { passive: true });
+    window.addEventListener('resize', function () { layout(); fit(); }); window.addEventListener('load', fit); fit();
+  });
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-shot]');
+    if (!b) return;
+    var lb = document.createElement('div');
+    lb.className = 'lb'; lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-label', b.getAttribute('data-alt') || 'Screenshot');
+    lb.innerHTML = '<button class="lb-x" aria-label="Close">×</button><img alt=""><p class="lb-tip">Tap outside to close</p>';
+    lb.querySelector('img').src = b.getAttribute('data-shot'); lb.querySelector('img').alt = b.getAttribute('data-alt') || '';
+    document.body.appendChild(lb); document.body.style.overflow = 'hidden';
+    var close = function () { lb.remove(); document.body.style.overflow = ''; };
+    lb.addEventListener('click', function (ev) { if (ev.target === lb || ev.target.classList.contains('lb-x')) close(); });
+    document.addEventListener('keydown', function k(ev) { if (ev.key === 'Escape') { close(); document.removeEventListener('keydown', k); } });
+  });
+})();
