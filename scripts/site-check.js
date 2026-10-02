@@ -8,7 +8,7 @@
 const fs = require('fs'), path = require('path'), http = require('http');
 const ROOT = path.resolve(__dirname, '..');
 const IGNORE = fs.readFileSync(path.join(ROOT, '.vercelignore'), 'utf8').split('\n').map(s => s.trim()).filter(Boolean);
-const BANNED = /exam-cleared|money.?back|risk.?free|97% (hit|of our)|#1 ielts|india'?s (best|top|leading|most trusted)/i;
+const BANNED = /exam-cleared|money.?back|risk.?free|97% (hit|of our)|#1 ielts|india'?s (best|top|leading|most trusted)|class of \d|batch of \d|max(imum)? \d+ students|small batch(es)?\b/i;
 let fails = 0; const fail = m => { fails++; console.log('FAIL ' + m); };
 
 function walk(dir, out = []) {

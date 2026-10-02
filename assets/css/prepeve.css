@@ -327,3 +327,12 @@ p{text-wrap:pretty}
 @media(max-width:360px){.nav .logo{font-size:1.15rem}.nav .logo img{width:30px;height:30px}.nav-cta{padding:9px 10px;font-size:.78rem}}
 .skip{position:absolute;left:12px;top:-60px;z-index:300;background:var(--blue);color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;transition:top .15s}
 .skip:focus{top:12px}
+/* Webinar form: optional fields tucked away, honeypot hidden */
+.opt-fields{margin:4px 0 14px}
+.opt-fields summary{cursor:pointer;font-size:.9rem;font-weight:600;color:var(--blue);padding:6px 0;list-style:none}
+.opt-fields summary::-webkit-details-marker{display:none}
+.opt-fields summary::before{content:"+ "}
+.opt-fields[open] summary::before{content:"− "}
+.opt-fields .f2{margin-top:8px}
+.hp-field{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
+#next-cd{font-weight:600;color:var(--ink)}
