@@ -263,7 +263,7 @@ document.querySelectorAll('.rv-wall').forEach(function (w) {
     var cur = function () { return Math.round(w.scrollLeft / (items[0].offsetWidth + parseFloat(getComputedStyle(w).columnGap || 0))); };
     var fit = function () {
       var c = Math.max(0, Math.min(items.length - 1, cur()));
-      w.style.height = items[c].offsetHeight + 'px';
+      var mx = 0; [].forEach.call(items, function (it) { mx = Math.max(mx, it.offsetHeight); }); w.style.height = mx + 'px';
       nav.children[1].textContent = (c + 1) + ' / ' + items.length;
       nav.children[0].disabled = c === 0; nav.children[2].disabled = c === items.length - 1;
     };

@@ -441,3 +441,7 @@ p{text-wrap:pretty}
 .ss-nav{margin:0 0 14px}
 .ss-zoom{margin:-6px 0 10px}
 .ss-wall,.ss-wall:not(.ss-one){transition:none}
+/* Review slider: fixed height (tallest review) so the page below never jumps; shorter reviews centred */
+.ss-wall,.ss-wall:not(.ss-one){align-items:center}
+/* Mobile pricing: Live Coaching first */
+@media (max-width:999px){#courses .m-scroll>.price.pop{order:-1}}
