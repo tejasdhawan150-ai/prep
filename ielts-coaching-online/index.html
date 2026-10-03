@@ -305,26 +305,27 @@ function fireConv(){
       <form id="leadForm" data-form="ielts-coaching-lead" novalidate>
         <div id="formBody">
           <h2>Get free counselling</h2>
-          <p class="sub">Talk to an IELTS counsellor about your target band and the right plan. Free, no obligation.</p>
+          <p class="sub">Takes 20 seconds. A counsellor calls you back. Free, no obligation.</p>
           <div class="field"><label for="fname">Full name <span class="req">*</span></label>
             <input type="text" id="fname" name="name" autocomplete="name" placeholder="e.g. Priya Sharma" required/>
             <div class="field-err" id="fname-err" role="alert">Please enter your full name</div></div>
           <div class="field"><label for="phone">Phone number (WhatsApp) <span class="req">*</span></label>
             <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="10-digit mobile number" required/>
             <div class="field-err" id="phone-err" role="alert">Please enter a valid 10-digit mobile number</div></div>
-          <div class="field"><label for="email">Email <span class="req">*</span></label>
-            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required/>
-            <div class="field-err" id="email-err" role="alert">Please enter a valid email address</div></div>
-          <div class="f2">
-            <div class="field"><label for="band">Target IELTS band <span class="req">*</span></label>
-              <select id="band" name="band" required><option value="">Select band</option><option>6.0</option><option>6.5</option><option>7.0</option><option>7.5</option><option>8.0+</option><option>Not sure yet</option></select>
-              <div class="field-err" id="band-err" role="alert">Please choose your target band</div></div>
-            <div class="field"><label for="when">Planning to take IELTS <span class="req">*</span></label>
-              <select id="when" name="when" required><option value="">Select</option><option>Within 1 month</option><option>In 1–3 months</option><option>In 3–6 months</option><option>Not decided yet</option></select>
-              <div class="field-err" id="when-err" role="alert">Please choose when you plan to take IELTS</div></div>
-          </div>
-          <div class="field"><label for="slot">Preferred class time</label>
-            <select id="slot" name="slot"><option value="">Flexible</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekends</option></select></div>
+          <div class="field"><label for="band">Target IELTS band <span class="req">*</span></label>
+            <select id="band" name="band" required><option value="">Select band</option><option>6.0</option><option>6.5</option><option>7.0</option><option>7.5</option><option>8.0+</option><option>Not sure yet</option></select>
+            <div class="field-err" id="band-err" role="alert">Please choose your target band</div></div>
+          <details class="opt-fields"><summary>Add email &amp; test date (optional)</summary>
+            <div class="field"><label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com"/>
+              <div class="field-err" id="email-err" role="alert">Please enter a valid email address</div></div>
+            <div class="f2">
+              <div class="field"><label for="when">Planning to take IELTS</label>
+                <select id="when" name="when"><option value="">Not decided</option><option>Within 1 month</option><option>In 1–3 months</option><option>In 3–6 months</option></select></div>
+              <div class="field"><label for="slot">Preferred class time</label>
+                <select id="slot" name="slot"><option value="">Flexible</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekends</option></select></div>
+            </div>
+          </details>
           <div class="hp-field" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"/></div>
           <button class="btn btn-primary btn-lg btn-block" id="submitBtn" type="submit" data-cta="lp-form-submit"><span class="spin" id="spinner" aria-hidden="true"></span><span id="btnTxt">Get Free Counselling</span></button>
           <div class="lp-err-box" id="sendErr" role="alert">We couldn't send your details. Please check your internet and try again, or <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%27d%20like%20to%20talk%20to%20an%20IELTS%20expert%20about%20coaching." target="_blank" rel="noopener" data-cta="lp-form-error-wa">message us on WhatsApp</a>.</div>
@@ -354,78 +355,7 @@ function fireConv(){
     </div>
   </div>
 </section>
-
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="eyebrow">Why PrepEve</span>
-      <h2>Why students choose our IELTS coaching</h2>
-      <p>Coaching built around one goal: find where you lose marks, and fix it.</p>
-    </div>
-    <div class="lp-cards">
-      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><h3>Expert guidance</h3><p>Trainers who identify exactly which skill and which mistakes are costing you marks.</p></div>
-      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h8a3 3 0 0 0 0-6H8a3 3 0 0 1 0-6h8"/></svg></span><h3>A structured plan</h3><p>A clear study plan based on your level, target band and test date.</p></div>
-      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><h3>Speaking &amp; Writing feedback</h3><p>Every essay marked by a trainer. 1-on-1 speaking mocks with specific corrections.</p></div>
-      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v2h6V3M9 11h6M9 15h4"/></svg></span><h3>Mock tests</h3><p>Full-length mock tests in real exam conditions, so the test day feels familiar.</p></div>
-      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg></span><h3>Study material</h3><p>Class notes for every module, plus recorded lectures on the Self-Paced plan.</p></div>
-      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></span><h3>Flexible online learning</h3><p>Live online classes from anywhere in India. No commute.</p></div>
-      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg></span><h3>Doubt support</h3><p>Ask your doubts on WhatsApp between classes.</p></div>
-      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>Personalised improvement</h3><p>Feedback, correction and practice repeated until the mistake is gone.</p></div>
-    </div>
-    <div class="lp-cta-mid"><a href="#lead" class="btn btn-primary btn-lg" data-cta="lp-why">Get Free Counselling</a></div>
-  </div>
-</section>
-
-<section class="sec sec-alt">
-  <div class="wrap">
-    <div class="sec-head center"><span class="eyebrow">Is this for you?</span><h2>Our IELTS coaching is for you if…</h2></div>
-    <ul class="lp-for">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You're starting IELTS preparation from scratch</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You've taken IELTS before and want a higher score</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You need help with Speaking or Writing</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You're targeting a specific band score</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You're preparing for study abroad or Canada PR</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You want a structured plan and expert guidance</li>
-    </ul>
-    <div class="lp-cta-mid"><a href="#lead" class="btn btn-primary btn-lg" data-cta="lp-for">Get Free Counselling</a></div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head center"><span class="eyebrow">How it works</span><h2>Start in three simple steps</h2></div>
-    <div class="lp-steps">
-      <div class="lp-step"><b>1</b><h3>Submit your details</h3><p>Fill in the short form. It takes under a minute.</p></div>
-      <div class="lp-step"><b>2</b><h3>Speak with our IELTS counsellor</h3><p>We understand your target band, test date and current level.</p></div>
-      <div class="lp-step"><b>3</b><h3>Start your IELTS preparation</h3><p>Get the right coaching plan and a structured study plan.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- GOOGLE REVIEWS -->
-<section class="sec sec-alt" id="google-reviews">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="eyebrow">Google reviews</span>
-      <h2>4.7★ from 300+ reviews on Google</h2>
-      <p>Screenshots of real reviews from our Google profile. Use the arrows or swipe to read each one.</p>
-    </div>
-    <div class="ss-wall">
-      <figure class="sc-item ss-item"><picture><source srcset="/assets/img/reviews/shashikanth.webp" type="image/webp"><img src="/assets/img/reviews/shashikanth.jpg" alt="5-star Google review of PrepEve by Shashikanth Revelly" loading="lazy" width="649" height="412"></picture></figure>
-      <figure class="sc-item ss-item"><picture><source srcset="/assets/img/reviews/meera.webp" type="image/webp"><img src="/assets/img/reviews/meera.jpg" alt="5-star Google review of PrepEve by Meera Bhatia" loading="lazy" width="652" height="437"></picture></figure>
-      <figure class="sc-item ss-item"><picture><source srcset="/assets/img/reviews/rajesh.webp" type="image/webp"><img src="/assets/img/reviews/rajesh.jpg" alt="5-star Google review of PrepEve by Rajesh R" loading="lazy" width="647" height="430"></picture></figure>
-      <figure class="sc-item ss-item"><picture><source srcset="/assets/img/reviews/anchal.webp" type="image/webp"><img src="/assets/img/reviews/anchal.jpg" alt="5-star Google review of PrepEve by Anchal Sharma" loading="lazy" width="680" height="476"></picture></figure>
-      <figure class="sc-item ss-item"><picture><source srcset="/assets/img/reviews/anooj.webp" type="image/webp"><img src="/assets/img/reviews/anooj.jpg" alt="5-star Google review of PrepEve by Anooj Motghare" loading="lazy" width="675" height="280"></picture></figure>
-      <div class="ss-item ss-pair"><figure class="sc-item"><picture><source srcset="/assets/img/reviews/kirni.webp" type="image/webp"><img src="/assets/img/reviews/kirni.jpg" alt="5-star Google review of PrepEve by Kirni Kaur" loading="lazy" width="687" height="174"></picture></figure><figure class="sc-item"><picture><source srcset="/assets/img/reviews/bhunesh.webp" type="image/webp"><img src="/assets/img/reviews/bhunesh.jpg" alt="5-star Google review of PrepEve by Bhunesh Sharma" loading="lazy" width="687" height="151"></picture></figure></div>
-      <div class="ss-item ss-pair"><figure class="sc-item"><picture><source srcset="/assets/img/reviews/shvi.webp" type="image/webp"><img src="/assets/img/reviews/shvi.jpg" alt="5-star Google review of PrepEve by Shvi Pruthi" loading="lazy" width="675" height="157"></picture></figure><figure class="sc-item"><picture><source srcset="/assets/img/reviews/manish.webp" type="image/webp"><img src="/assets/img/reviews/manish.jpg" alt="5-star Google review of PrepEve by Manish Kumar" loading="lazy" width="612" height="166"></picture></figure></div>
-      <div class="ss-item ss-pair"><figure class="sc-item"><picture><source srcset="/assets/img/reviews/melfin.webp" type="image/webp"><img src="/assets/img/reviews/melfin.jpg" alt="5-star Google review of PrepEve by Melfin Aruldhas" loading="lazy" width="657" height="257"></picture></figure><figure class="sc-item"><picture><source srcset="/assets/img/reviews/abhishek.webp" type="image/webp"><img src="/assets/img/reviews/abhishek.jpg" alt="5-star Google review of PrepEve by Abhishek Pandey" loading="lazy" width="655" height="164"></picture></figure></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- SCORECARDS -->
-<section class="sec" id="scorecards">
+<section class="sec sec-alt" id="scorecards">
   <div class="wrap">
     <div class="sec-head center">
       <span class="eyebrow">Scorecards from our students</span>
@@ -448,7 +378,7 @@ function fireConv(){
 </section>
 
 
-<section class="sec sec-alt">
+<section class="sec">
   <div class="wrap">
     <div class="sec-head center"><span class="eyebrow">Student stories</span><h2>Real students. Real band scores.</h2></div>
     <div class="grid g3">
@@ -478,20 +408,6 @@ function fireConv(){
   </div>
 </section>
 
-<section class="sec">
-  <div class="wrap">
-    <div class="sec-head center"><span class="eyebrow">What you get</span><h2>Complete preparation for all four modules</h2></div>
-    <div class="lp-feat">
-      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg></span><div><h3>Speaking</h3><p>1-on-1 speaking mock interviews with a trainer, and specific corrections on fluency, vocabulary and grammar.</p></div></div>
-      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><div><h3>Writing</h3><p>Every essay marked by a trainer against the four official criteria, with exactly what to change.</p></div></div>
-      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg></span><div><h3>Reading</h3><p>Strategies for each question type and a timing plan, practised under real time limits.</p></div></div>
-      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 16a2 2 0 0 1-2 2h-1v-6h3zM3 16a2 2 0 0 0 2 2h1v-6H3z"/></svg></span><div><h3>Listening</h3><p>Techniques for every part, and practice to stop losing marks on spelling and word limits.</p></div></div>
-      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v2h6V3M9 11h6M9 15h4"/></svg></span><div><h3>Mock tests</h3><p>5 full-length mock tests in Live Coaching, taken in real exam conditions.</p></div></div>
-      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg></span><div><h3>Doubt support</h3><p>WhatsApp doubt support between classes, so you never stay stuck.</p></div></div>
-    </div>
-  </div>
-</section>
-
 <section class="sec sec-alt" id="trainer">
   <div class="wrap">
     <div class="sec-head center"><span class="eyebrow">Who you'll learn with</span><h2>Taught by IELTS trainers, not recordings</h2></div>
@@ -513,7 +429,89 @@ function fireConv(){
   </div>
 </section>
 
+<section class="sec" id="google-reviews">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Google reviews</span>
+      <h2>4.7★ from 300+ reviews on Google</h2>
+      <p>Screenshots of real reviews from our Google profile. Use the arrows or swipe to read each one.</p>
+    </div>
+    <div class="ss-wall">
+      <figure class="sc-item ss-item"><picture><source srcset="/assets/img/reviews/shashikanth.webp" type="image/webp"><img src="/assets/img/reviews/shashikanth.jpg" alt="5-star Google review of PrepEve by Shashikanth Revelly" loading="lazy" width="649" height="412"></picture></figure>
+      <figure class="sc-item ss-item"><picture><source srcset="/assets/img/reviews/meera.webp" type="image/webp"><img src="/assets/img/reviews/meera.jpg" alt="5-star Google review of PrepEve by Meera Bhatia" loading="lazy" width="652" height="437"></picture></figure>
+      <figure class="sc-item ss-item"><picture><source srcset="/assets/img/reviews/rajesh.webp" type="image/webp"><img src="/assets/img/reviews/rajesh.jpg" alt="5-star Google review of PrepEve by Rajesh R" loading="lazy" width="647" height="430"></picture></figure>
+      <figure class="sc-item ss-item"><picture><source srcset="/assets/img/reviews/anchal.webp" type="image/webp"><img src="/assets/img/reviews/anchal.jpg" alt="5-star Google review of PrepEve by Anchal Sharma" loading="lazy" width="680" height="476"></picture></figure>
+      <figure class="sc-item ss-item"><picture><source srcset="/assets/img/reviews/anooj.webp" type="image/webp"><img src="/assets/img/reviews/anooj.jpg" alt="5-star Google review of PrepEve by Anooj Motghare" loading="lazy" width="675" height="280"></picture></figure>
+      <div class="ss-item ss-pair"><figure class="sc-item"><picture><source srcset="/assets/img/reviews/kirni.webp" type="image/webp"><img src="/assets/img/reviews/kirni.jpg" alt="5-star Google review of PrepEve by Kirni Kaur" loading="lazy" width="687" height="174"></picture></figure><figure class="sc-item"><picture><source srcset="/assets/img/reviews/bhunesh.webp" type="image/webp"><img src="/assets/img/reviews/bhunesh.jpg" alt="5-star Google review of PrepEve by Bhunesh Sharma" loading="lazy" width="687" height="151"></picture></figure></div>
+      <div class="ss-item ss-pair"><figure class="sc-item"><picture><source srcset="/assets/img/reviews/shvi.webp" type="image/webp"><img src="/assets/img/reviews/shvi.jpg" alt="5-star Google review of PrepEve by Shvi Pruthi" loading="lazy" width="675" height="157"></picture></figure><figure class="sc-item"><picture><source srcset="/assets/img/reviews/manish.webp" type="image/webp"><img src="/assets/img/reviews/manish.jpg" alt="5-star Google review of PrepEve by Manish Kumar" loading="lazy" width="612" height="166"></picture></figure></div>
+      <div class="ss-item ss-pair"><figure class="sc-item"><picture><source srcset="/assets/img/reviews/melfin.webp" type="image/webp"><img src="/assets/img/reviews/melfin.jpg" alt="5-star Google review of PrepEve by Melfin Aruldhas" loading="lazy" width="657" height="257"></picture></figure><figure class="sc-item"><picture><source srcset="/assets/img/reviews/abhishek.webp" type="image/webp"><img src="/assets/img/reviews/abhishek.jpg" alt="5-star Google review of PrepEve by Abhishek Pandey" loading="lazy" width="655" height="164"></picture></figure></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Why PrepEve</span>
+      <h2>Why students choose our IELTS coaching</h2>
+      <p>Coaching built around one goal: find where you lose marks, and fix it.</p>
+    </div>
+    <div class="lp-cards">
+      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><h3>Expert guidance</h3><p>Trainers who identify exactly which skill and which mistakes are costing you marks.</p></div>
+      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h8a3 3 0 0 0 0-6H8a3 3 0 0 1 0-6h8"/></svg></span><h3>A structured plan</h3><p>A clear study plan based on your level, target band and test date.</p></div>
+      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><h3>Speaking &amp; Writing feedback</h3><p>Every essay marked by a trainer. 1-on-1 speaking mocks with specific corrections.</p></div>
+      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v2h6V3M9 11h6M9 15h4"/></svg></span><h3>Mock tests</h3><p>Full-length mock tests in real exam conditions, so the test day feels familiar.</p></div>
+      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg></span><h3>Study material</h3><p>Class notes for every module, plus recorded lectures on the Self-Paced plan.</p></div>
+      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></span><h3>Flexible online learning</h3><p>Live online classes from anywhere in India. No commute.</p></div>
+      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg></span><h3>Doubt support</h3><p>Ask your doubts on WhatsApp between classes.</p></div>
+      <div class="lp-card rv"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>Personalised improvement</h3><p>Feedback, correction and practice repeated until the mistake is gone.</p></div>
+    </div>
+    <div class="lp-cta-mid"><a href="#lead" class="btn btn-primary btn-lg" data-cta="lp-why">Get Free Counselling</a></div>
+  </div>
+</section>
+
 <section class="sec">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">Is this for you?</span><h2>Our IELTS coaching is for you if…</h2></div>
+    <ul class="lp-for">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You're starting IELTS preparation from scratch</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You've taken IELTS before and want a higher score</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You need help with Speaking or Writing</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You're targeting a specific band score</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You're preparing for study abroad or Canada PR</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>You want a structured plan and expert guidance</li>
+    </ul>
+    <div class="lp-cta-mid"><a href="#lead" class="btn btn-primary btn-lg" data-cta="lp-for">Get Free Counselling</a></div>
+  </div>
+</section>
+
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">How it works</span><h2>Start in three simple steps</h2></div>
+    <div class="lp-steps">
+      <div class="lp-step"><b>1</b><h3>Submit your details</h3><p>Fill in the short form. It takes under a minute.</p></div>
+      <div class="lp-step"><b>2</b><h3>Speak with our IELTS counsellor</h3><p>We understand your target band, test date and current level.</p></div>
+      <div class="lp-step"><b>3</b><h3>Start your IELTS preparation</h3><p>Get the right coaching plan and a structured study plan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">What you get</span><h2>Complete preparation for all four modules</h2></div>
+    <div class="lp-feat">
+      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg></span><div><h3>Speaking</h3><p>1-on-1 speaking mock interviews with a trainer, and specific corrections on fluency, vocabulary and grammar.</p></div></div>
+      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><div><h3>Writing</h3><p>Every essay marked by a trainer against the four official criteria, with exactly what to change.</p></div></div>
+      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg></span><div><h3>Reading</h3><p>Strategies for each question type and a timing plan, practised under real time limits.</p></div></div>
+      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 16a2 2 0 0 1-2 2h-1v-6h3zM3 16a2 2 0 0 0 2 2h1v-6H3z"/></svg></span><div><h3>Listening</h3><p>Techniques for every part, and practice to stop losing marks on spelling and word limits.</p></div></div>
+      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v2h6V3M9 11h6M9 15h4"/></svg></span><div><h3>Mock tests</h3><p>5 full-length mock tests in Live Coaching, taken in real exam conditions.</p></div></div>
+      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg></span><div><h3>Doubt support</h3><p>WhatsApp doubt support between classes, so you never stay stuck.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt">
   <div class="wrap">
     <div class="sec-head center"><span class="eyebrow">Plans</span><h2>Simple plans, clear fees</h2><p>Your counsellor helps you pick the right one. Each plan runs for 30 days.</p></div>
     <div class="lp-plans">
@@ -525,7 +523,7 @@ function fireConv(){
   </div>
 </section>
 
-<section class="sec sec-alt">
+<section class="sec">
   <div class="wrap">
     <div class="sec-head center"><span class="eyebrow">Questions</span><h2>Before you get started</h2></div>
     <div class="faq">
@@ -546,6 +544,7 @@ function fireConv(){
     </div>
   </div>
 </section>
+
 </main>
 
 <footer class="foot foot-min">
@@ -576,7 +575,7 @@ function fireConv(){
   function ev(n,p){if(typeof gtag==='function')gtag('event',n,p||{});}
   function setErr(id,on){var fld=$(id).closest('.field');fld.classList.toggle('has-err',on);$(id).setAttribute('aria-invalid',on?'true':'false');}
   function normPhone(raw){var d=raw.replace(/\D/g,'');if(d.length===12&&d.indexOf('91')===0)d=d.slice(2);if(d.length===11&&d[0]==='0')d=d.slice(1);return d;}
-  ['fname','phone','email','band','when'].forEach(function(id){$(id).addEventListener('input',function(){setErr(id,false);});$(id).addEventListener('change',function(){setErr(id,false);});});
+  ['fname','phone','email','band'].forEach(function(id){$(id).addEventListener('input',function(){setErr(id,false);});$(id).addEventListener('change',function(){setErr(id,false);});});
   // "Get Free Counselling" links focus the first field
   document.querySelectorAll('a[href="#lead"]').forEach(function(a){a.addEventListener('click',function(){setTimeout(function(){if(f.style.display!=='none')$('fname').focus({preventScroll:true});},450);});});
   f.addEventListener('submit',function(e){
@@ -584,14 +583,13 @@ function fireConv(){
     if(sending)return;
     $('sendErr').classList.remove('show');
     if(val('website'))return;
-    var name=val('fname'),phone=normPhone(val('phone')),email=val('email').toLowerCase(),band=val('band'),when=val('when'),slot=val('slot')||'Flexible';
+    var name=val('fname'),phone=normPhone(val('phone')),email=val('email').toLowerCase(),band=val('band'),when=val('when')||'Not decided',slot=val('slot')||'Flexible';
     var bad=[];
     if(name.length<2||!/[a-zA-Z\u0900-\u097F]/.test(name))bad.push('fname');
     if(!/^[6-9]\d{9}$/.test(phone))bad.push('phone');
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email))bad.push('email');
+    if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email))bad.push('email');
     if(!band)bad.push('band');
-    if(!when)bad.push('when');
-    ['fname','phone','email','band','when'].forEach(function(id){setErr(id,bad.indexOf(id)>-1);});
+    ['fname','phone','email','band'].forEach(function(id){setErr(id,bad.indexOf(id)>-1);});
     if(bad.length){$(bad[0]).focus();ev('form_error',{form_id:'ielts-coaching-lead',field:bad[0]});return;}
     sending=true;btn.disabled=true;btn.classList.add('loading');$('spinner').style.display='block';$('btnTxt').textContent='Sending…';
     ev('form_submit',{form_id:'ielts-coaching-lead',target_band:band,test_timing:when});
@@ -603,11 +601,11 @@ function fireConv(){
     fetch(url,{method:'GET',mode:'no-cors',keepalive:true}).then(function(){
       if(done)return;done=true;clearTimeout(t);
       // Lead captured: Google Ads conversion (with enhanced conversion data), GA4 lead, Meta Lead
-      if(typeof gtag==='function'){gtag('set','user_data',{phone_number:'+91'+phone,email:email});}
+      if(typeof gtag==='function'){var ud={phone_number:'+91'+phone};if(email)ud.email=email;gtag('set','user_data',ud);}
       if(typeof fireConv==='function')fireConv();
       ev('generate_lead',{form_id:'ielts-coaching-lead',target_band:band,test_timing:when});
       if(window.fbq)window.fbq('track','Lead');
-      var msg='Hi PrepEve! I just requested free IELTS counselling.\n\nName: '+name+'\nPhone: +91'+phone+'\nEmail: '+email+'\nTarget band: '+band+'\nTest: '+when+'\nClass time: '+slot;
+      var msg='Hi PrepEve! I just requested free IELTS counselling.\n\nName: '+name+'\nPhone: +91'+phone+(email?'\nEmail: '+email:'')+'\nTarget band: '+band+'\nTest: '+when+'\nClass time: '+slot;
       $('okWa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
       $('okName').textContent=name.split(' ')[0];$('okPhone').textContent='+91 '+phone;
       $('formBody').style.display='none';$('formOk').style.display='block';$('formOk').focus();
