@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/ielts-coaching/counselling",
+      "destination": "/ielts-coaching-online",
+      "permanent": false
+    },
+    {
       "source": "/td",
       "destination": "/",
       "permanent": true
