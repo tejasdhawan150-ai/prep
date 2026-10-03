@@ -127,6 +127,11 @@ function fireConv(){
           <input type="tel" id="phone" placeholder="10-digit mobile number" autocomplete="tel" inputmode="tel"/>
           <div class="field-err" id="phone-err" role="alert">Please enter your 10-digit WhatsApp number so we can send your link</div>
         </div>
+        <div class="field">
+          <label for="email">Email <span class="hint">(optional)</span></label>
+          <input type="email" id="email" placeholder="you@example.com" autocomplete="email" inputmode="email"/>
+          <div class="field-err" id="email-err" role="alert">Please check your email address, or leave it blank</div>
+        </div>
         <details class="opt-fields">
           <summary>Add your exam &amp; target band (optional)</summary>
           <div class="f2">
@@ -518,6 +523,13 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     if(ok) document.getElementById('phone').focus();
     ok = false;
   }
+  var email = v('email').toLowerCase();
+  document.getElementById('email-err').style.display = 'none';
+  if(email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){
+    document.getElementById('email-err').style.display = 'block';
+    if(ok) document.getElementById('email').focus();
+    ok = false;
+  }
   if(!ok) return;
   if(document.getElementById('website') && document.getElementById('website').value){ return; }
 
@@ -533,18 +545,20 @@ document.getElementById('submit-btn').addEventListener('click', function(){
   // Push to Google Sheets
   fetch(SHEET + '?name=' + encodeURIComponent(name)
     + '&phone=' + encodeURIComponent(phone)
+    + '&email=' + encodeURIComponent(email)
     + '&band=' + encodeURIComponent('Webinar|' + exam + '|Target:' + band)
     + '&source=ielts-webinar-retake',
     {method:'GET', mode:'no-cors'}).catch(function(){});
 
   // Enhanced Conversions: gtag hashes these before sending
-  pvUserData(phone, '');
+  pvUserData(phone, email);
   // Fire Google Ads conversion
   fireConv();
 
   // Build WhatsApp message
   var msg = 'Hi PrepEve! I just reserved my free seat for the IELTS webinar. Please send me the joining link.\n\nName: ' + name
     + '\nPhone: +' + phone
+    + (email ? '\nEmail: ' + email : '')
     + '\nExam: ' + exam
     + '\nTarget Band: ' + band;
 

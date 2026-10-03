@@ -200,6 +200,7 @@
       <div class="field"><label for="p-target">Target overall band</label><select id="p-target"><option value="6.0">6.0</option><option value="6.5">6.5</option><option value="7.0" selected>7.0</option><option value="7.5">7.5</option><option value="8.0">8.0</option><option value="8.5">8.5</option></select></div>
       <div class="field"><label for="p-name">Your name</label><input id="p-name" autocomplete="name" placeholder="e.g. Priya Sharma"/><div class="err-msg" id="p-name-err">Please enter your name.</div></div>
       <div class="field"><label for="p-phone">WhatsApp number</label><input id="p-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile number"/><div class="err-msg" id="p-phone-err">Please enter a valid mobile number.</div></div>
+      <div class="field"><label for="p-email">Email (optional)</label><input id="p-email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com"/></div>
     </div>
     <button type="submit" class="btn btn-wa btn-block" data-cta="calculator-plan">Get My Plan on WhatsApp</button>
     <p class="form-note">We reply on WhatsApp · No spam · No payment</p>
@@ -364,7 +365,7 @@
     var s = ['l', 'r', 'w', 'sp'].map(function (k) { return v('b-' + k); });
     var overall = document.getElementById('ovBand').textContent, target = v('p-target');
     var summary = 'L' + s[0] + ' R' + s[1] + ' W' + s[2] + ' S' + s[3];
-    fetch(SHEET + '?name=' + encodeURIComponent(name) + '&phone=' + encodeURIComponent(phone)
+    fetch(SHEET + '?name=' + encodeURIComponent(name) + '&phone=' + encodeURIComponent(phone) + '&email=' + encodeURIComponent((document.getElementById('p-email').value||'').trim())
       + '&band=' + encodeURIComponent('Calculator|' + summary + '|Overall:' + overall + '|Target:' + target)
       + '&source=band-calculator', { method: 'GET', mode: 'no-cors', keepalive: true }).catch(function () {});
     if (window.pvTrack) window.pvTrack('generate_lead', { lead_source: 'band-calculator' });

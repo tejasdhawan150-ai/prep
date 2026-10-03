@@ -429,7 +429,16 @@
 @media(min-width:1000px){.hero-grid .lp-form{grid-column:2;grid-row:1 / span 3;align-self:start}}
 @media(max-width:999px){.hero .hero-cta,.hero .hero-wa{display:none}.hero .lead{margin-bottom:6px}}
 .hp-list .avatar-photo{width:44px;height:44px}
-.trainer-solo{max-width:560px;margin:0 auto}
+.trainer-solo{max-width:980px;margin:0 auto}
+.trainer-big{display:grid;gap:26px;padding:26px;align-items:center}
+@media(min-width:760px){.trainer-big{grid-template-columns:320px 1fr;gap:40px;padding:36px}}
+.tb-photo picture,.tb-photo img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:24px}
+.tb-photo{max-width:320px;margin:0 auto;width:100%;box-shadow:0 20px 40px rgba(15,30,70,.15);border-radius:24px;border:4px solid #fff}
+.trainer-big h3{font-size:2rem;margin:6px 0 4px}
+.tb-role{color:var(--blue);font-weight:700;margin:0 0 12px}
+.trainer-big p{color:var(--ink-2);font-size:1.02rem}
+.tb-pills{list-style:none;padding:0;margin:16px 0 20px;display:flex;flex-wrap:wrap;gap:8px}
+.tb-pills li{background:var(--blue-lt);color:var(--blue);font-weight:700;font-size:.85rem;padding:6px 12px;border-radius:99px}
 </style>
 </head>
 <body>
@@ -475,10 +484,10 @@
           <div class="field"><label for="band">Target IELTS band <span class="req">*</span></label>
             <select id="band" name="band" required><option value="">Select band</option><option>6.0</option><option>6.5</option><option>7.0</option><option>7.5</option><option>8.0+</option><option>Not sure yet</option></select>
             <div class="field-err" id="band-err" role="alert">Please choose your target band</div></div>
-          <details class="opt-fields"><summary>Add email &amp; test date (optional)</summary>
-            <div class="field"><label for="email">Email</label>
-              <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com"/>
-              <div class="field-err" id="email-err" role="alert">Please enter a valid email address</div></div>
+          <div class="field"><label for="email">Email <span class="hint">(optional)</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com"/>
+            <div class="field-err" id="email-err" role="alert">Please enter a valid email address</div></div>
+          <details class="opt-fields"><summary>Add test date &amp; class time (optional)</summary>
             <div class="f2">
               <div class="field"><label for="when">Planning to take IELTS</label>
                 <select id="when" name="when"><option value="">Not decided</option><option>Within 1 month</option><option>In 1–3 months</option><option>In 3–6 months</option></select></div>
@@ -598,13 +607,16 @@
       <p>Every essay and speaking mock is reviewed by a PrepEve trainer, and you can message the team on WhatsApp.</p>
     </div>
     <div class="trainer-solo">
-      <div class="card trainer rv">
-        <picture class="avatar avatar-photo"><source srcset="/assets/img/sanjita-240.webp" type="image/webp"><img src="/assets/img/sanjita-240.jpg" alt="Sanjita, founder and trainer at PrepEve" width="120" height="120" loading="lazy"></picture>
-        <h3>Sanjita</h3>
-        <p class="role">Founder &amp; Trainer · Regulated Canadian Immigration Consultant</p>
-        <p class="exams">IELTS · CELPIP · TOEFL · Duolingo</p>
-        <p>Sanjita founded PrepEve and still teaches. As a Regulated Canadian Immigration Consultant, she knows which score your visa or PR pathway needs.</p>
-        <p class="focus"><b>Focus:</b> planning your prep around the band your pathway requires.</p>
+      <div class="card trainer-big rv">
+        <div class="tb-photo"><picture><source srcset="/assets/img/sanjita-480.webp" type="image/webp"><img src="/assets/img/sanjita-480.jpg" alt="Sanjita, founder and trainer at PrepEve" width="480" height="480" loading="lazy"></picture></div>
+        <div class="tb-body">
+          <span class="eyebrow">Founder &amp; trainer</span>
+          <h3>Sanjita</h3>
+          <p class="tb-role">Regulated Canadian Immigration Consultant · Teaches IELTS, CELPIP, TOEFL &amp; Duolingo</p>
+          <p>Sanjita founded PrepEve and still teaches. She built it around one idea: students improve fastest when a trainer actually hears them and corrects them. As a Regulated Canadian Immigration Consultant, she also knows which score your visa or PR pathway needs.</p>
+          <ul class="tb-pills"><li>15,000+ students trained</li><li>★ 4.7 on Google</li><li>Trainer-marked essays</li></ul>
+          <a href="#lead" class="btn btn-primary btn-lg" data-cta="lp-trainer">Get Free Counselling</a>
+        </div>
       </div>
     </div>
   </div>
