@@ -438,3 +438,6 @@ p{text-wrap:pretty}
 .ss-wall .ss-pair{display:flex;flex-direction:column;gap:14px;background:none;border:0;box-shadow:none}
 .ss-pair>.sc-item{margin:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
 @media (max-width:720px){.ss-wall .ss-pair{gap:10px}.ss-pair>.sc-item{border-radius:0;border-left:0;border-right:0}}
+.ss-nav{margin:0 0 14px}
+.ss-zoom{margin:-6px 0 10px}
+.ss-wall,.ss-wall:not(.ss-one){transition:none}

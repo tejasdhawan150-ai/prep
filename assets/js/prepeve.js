@@ -258,8 +258,8 @@ document.querySelectorAll('.rv-wall').forEach(function (w) {
     var nav = document.createElement('div');
     nav.className = 'ss-nav';
     nav.innerHTML = '<button type="button" aria-label="Previous review">←</button><span class="rv-count" aria-live="polite"></span><button type="button" aria-label="Next review">→</button>';
-    w.parentNode.insertBefore(nav, w.nextSibling);
-    var z = document.createElement('p'); z.className = 'ss-zoom'; z.textContent = 'Tap a review to read it full size'; nav.parentNode.insertBefore(z, nav.nextSibling);
+    w.parentNode.insertBefore(nav, w);
+    var z = document.createElement('p'); z.className = 'ss-zoom'; z.textContent = 'Tap a review to read it full size'; w.parentNode.insertBefore(z, w);
     var cur = function () { return Math.round(w.scrollLeft / (items[0].offsetWidth + parseFloat(getComputedStyle(w).columnGap || 0))); };
     var fit = function () {
       var c = Math.max(0, Math.min(items.length - 1, cur()));
