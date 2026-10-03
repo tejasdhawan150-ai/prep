@@ -217,6 +217,13 @@ body{background:linear-gradient(180deg,var(--bg-3) 0%,#fff 420px) no-repeat,#fff
   } catch (e) {}
 }());
 </script>
+<script>
+(function(){var q=new URLSearchParams(location.search);if(q.get('src')!=='coaching')return;
+var b=document.querySelector('.badge-ok');if(b)b.textContent='Request received · reply on WhatsApp';
+var h=document.querySelector('h1');if(h)h.innerHTML='Thanks, <span id="name-display">'+(document.getElementById('name-display')||{}).textContent+'</span>. One last tap.';
+var p=document.querySelector('.ty-sub');if(p)p.innerHTML='<strong>Send the WhatsApp message</strong> and a trainer will reply with fees, batch timings and a free class slot, usually within 30&nbsp;minutes.';
+})();
+</script>
 <script src="/assets/js/prepeve.js?v=734bd72b" defer></script>
 </body>
 </html>
