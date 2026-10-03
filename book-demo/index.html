@@ -427,13 +427,11 @@ function pvUserData(phone, email){
     // Save to sheet in background — never blocks redirect
     if(SHEET_URL){
       var params='?name='+encodeURIComponent(fname)
-        +'&phone='+encodeURIComponent(val('phone'))
+        +'&phone='+encodeURIComponent(phone.replace(/\D/g,''))
         +'&email='+encodeURIComponent(val('email'))
         +'&band='+encodeURIComponent(bandLabel);
       var sheetTarget=SHEET_URL+params+'&t='+Date.now();
-      if(navigator.sendBeacon){navigator.sendBeacon(sheetTarget);}
-      else{(new Image()).src=sheetTarget;}
-      fetch(sheetTarget,{method:'GET',mode:'no-cors'}).catch(function(){});
+      fetch(sheetTarget,{method:'GET',mode:'no-cors',keepalive:true}).catch(function(){});
     }
 
     // Redirect immediately — no waiting
