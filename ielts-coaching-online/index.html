@@ -777,8 +777,7 @@
     if(bad.length){$(bad[0]).focus();ev('form_error',{form_id:'ielts-coaching-lead',field:bad[0]});return;}
     sending=true;btn.disabled=true;btn.classList.add('loading');$('spinner').style.display='block';$('btnTxt').textContent='Sending…';
     ev('form_submit',{form_id:'ielts-coaching-lead',target_band:band,test_timing:when});
-    var details='Coaching LP|Band:'+band+'|Test:'+when+'|Time:'+slot+'|Email:'+email;
-    var url=SHEET+'?name='+encodeURIComponent(name)+'&phone='+encodeURIComponent('91'+phone)+'&email='+encodeURIComponent(email)+'&band='+encodeURIComponent(details)+'&source=ielts-coaching-lp';
+    var url=SHEET+'?name='+encodeURIComponent(name)+'&phone='+encodeURIComponent('91'+phone)+'&email='+encodeURIComponent(email)+'&band='+encodeURIComponent('Band '+band)+'&when='+encodeURIComponent(when)+'&slot='+encodeURIComponent(slot)+'&source=ielts-coaching-lp';
     var done=false;
     var t=setTimeout(function(){fail();},12000);
     function fail(){if(done)return;done=true;sending=false;btn.disabled=false;btn.classList.remove('loading');$('spinner').style.display='none';$('btnTxt').textContent='Talk to an IELTS Expert';$('sendErr').classList.add('show');ev('lead_error',{form_id:'ielts-coaching-lead'});}

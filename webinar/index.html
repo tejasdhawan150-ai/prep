@@ -586,7 +586,7 @@ document.getElementById('submit-btn').addEventListener('click', function(){
   fetch(SHEET + '?name=' + encodeURIComponent(name)
     + '&phone=' + encodeURIComponent(phone)
     + '&email=' + encodeURIComponent(email)
-    + '&band=' + encodeURIComponent('Webinar|' + exam + '|Target:' + band)
+    + '&source=webinar' + '&band=' + encodeURIComponent('Webinar|' + exam + '|Target:' + band)
     + '&source=ielts-webinar',
     {method:'GET', mode:'no-cors'}).catch(function(){});
 
