@@ -429,7 +429,6 @@
 @media(min-width:1000px){.hero-grid .lp-form{grid-column:2;grid-row:1 / span 3;align-self:start}}
 @media(max-width:999px){.hero .hero-cta,.hero .hero-wa{display:none}.hero .lead{margin-bottom:6px}}
 .hp-list .avatar-photo{width:44px;height:44px}
-.trainer-solo{max-width:980px;margin:0 auto}
 .trainer-big{display:grid;gap:26px;padding:26px;align-items:center}
 @media(min-width:760px){.trainer-big{grid-template-columns:320px 1fr;gap:40px;padding:36px}}
 .tb-photo picture,.tb-photo img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:24px}
@@ -439,6 +438,40 @@
 .trainer-big p{color:var(--ink-2);font-size:1.02rem}
 .tb-pills{list-style:none;padding:0;margin:16px 0 20px;display:flex;flex-wrap:wrap;gap:8px}
 .tb-pills li{background:var(--blue-lt);color:var(--blue);font-weight:700;font-size:.85rem;padding:6px 12px;border-radius:99px}
+
+/* Trainer feature */
+.tf-sec{padding:64px 0}
+.tf{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.tf-sec{padding:88px 0}.tf{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px}}
+.tf-photo{position:relative;margin:0;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(15,30,70,.35);aspect-ratio:4/5;max-height:620px;background:var(--bg-3)}
+.tf-photo picture,.tf-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.tf-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(180deg,transparent,rgba(11,27,51,.55));pointer-events:none}
+.tf-tag{position:absolute;left:18px;bottom:18px;z-index:1;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.95);color:var(--ink);font-weight:700;font-size:.9rem;padding:10px 16px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.15)}
+.tf-dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(22,163,74,.18)}
+.tf-body .eyebrow{display:block}
+.tf-body h2{font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.12;letter-spacing:-.025em;margin:10px 0 12px}
+.tf-body h2 em{font-style:normal;color:var(--blue)}
+.tf-lead{font-size:1.1rem;color:var(--ink-2);margin:0 0 24px;max-width:58ch}
+.tf-person{border-left:3px solid var(--blue);padding-left:18px;margin-bottom:22px}
+.tf-person h3{font-size:1.5rem;margin:0}
+.tf-role{color:var(--blue);font-weight:600;font-size:.95rem;margin:4px 0 10px}
+.tf-person p:last-child{color:var(--ink-2);margin:0}
+.tf-stats{display:grid;grid-template-columns:repeat(3,1fr);margin:0 0 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tf-stats div{padding:14px 12px 14px 0}
+.tf-stats div+div{padding-left:16px;border-left:1px solid var(--line)}
+.tf-stats dt{font-family:var(--f-head);font-weight:800;font-size:1.35rem;color:var(--ink);line-height:1.1}
+.tf-stats dt span{color:#F5B301;font-size:1.05rem;margin-left:2px}
+.tf-stats dd{margin:4px 0 0;font-size:.85rem;color:var(--muted)}
+.tf-flow{list-style:none;padding:0;margin:0 0 26px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.tf-flow li{position:relative;padding-right:10px;font-size:.86rem;color:var(--ink-2);line-height:1.35}
+.tf-flow b{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--blue-lt);color:var(--blue);font-family:var(--f-head);font-size:.85rem;margin-bottom:8px;position:relative;z-index:1}
+.tf-flow li:not(:last-child)::before{content:"";position:absolute;left:34px;right:4px;top:15px;height:2px;background:linear-gradient(90deg,var(--blue-lt),#C7D6F6)}
+.tf-flow li:last-child b{background:var(--ok-lt);color:var(--ok)}
+.tf-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.tf-cta span{font-size:.9rem;color:var(--muted)}
+@media(max-width:899px){.tf-photo{aspect-ratio:4/3;max-width:520px;width:100%;margin:0 auto}}
+@media(max-width:560px){.tf-photo{aspect-ratio:5/4}.tf-person p:last-child{font-size:.95rem}.tf-flow li{font-size:.82rem}}
+@media(max-width:560px){.tf-sec{padding:48px 0}.tf-stats dt{font-size:1.1rem}.tf-stats div+div{padding-left:10px}.tf-flow{grid-template-columns:1fr 1fr;gap:14px 10px}.tf-flow li::before{display:none}.tf-cta .btn{width:100%}.tf-cta span{width:100%;text-align:center}}
 </style>
 </head>
 <body>
@@ -599,23 +632,40 @@
 
 
 <!-- 7. TRAINERS -->
-<section class="sec sec-alt" id="trainers">
+<section class="sec sec-alt tf-sec" id="trainers">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Who gives the feedback</span>
-      <h2>Your work is marked by a trainer, not an app</h2>
-      <p>Every essay and speaking mock is reviewed by a PrepEve trainer, and you can message the team on WhatsApp.</p>
-    </div>
-    <div class="trainer-solo">
-      <div class="card trainer-big rv">
-        <div class="tb-photo"><picture><source srcset="/assets/img/sanjita-480.webp" type="image/webp"><img src="/assets/img/sanjita-480.jpg" alt="Sanjita, founder and trainer at PrepEve" width="480" height="480" loading="lazy"></picture></div>
-        <div class="tb-body">
-          <span class="eyebrow">Founder &amp; trainer</span>
+    <div class="tf">
+      <figure class="tf-photo rv">
+        <picture><source srcset="/assets/img/sanjita-480.webp" type="image/webp"><img src="/assets/img/sanjita-480.jpg" alt="Sanjita, founder and trainer at PrepEve" width="480" height="480" loading="lazy"></picture>
+        <figcaption class="tf-tag"><span class="tf-dot" aria-hidden="true"></span>Founder &amp; Trainer</figcaption>
+      </figure>
+      <div class="tf-body rv">
+        <span class="eyebrow">Who gives the feedback</span>
+        <h2>Your work is marked by a <em>trainer</em>, not an app</h2>
+        <p class="tf-lead">Every essay and speaking mock is reviewed by a real PrepEve trainer — with personalised feedback you can actually act on.</p>
+
+        <div class="tf-person">
           <h3>Sanjita</h3>
-          <p class="tb-role">Regulated Canadian Immigration Consultant · Teaches IELTS, CELPIP, TOEFL &amp; Duolingo</p>
+          <p class="tf-role">Regulated Canadian Immigration Consultant · Teaches IELTS, CELPIP, TOEFL &amp; Duolingo</p>
           <p>Sanjita founded PrepEve and still teaches. She built it around one idea: students improve fastest when a trainer actually hears them and corrects them. As a Regulated Canadian Immigration Consultant, she also knows which score your visa or PR pathway needs.</p>
-          <ul class="tb-pills"><li>15,000+ students trained</li><li>★ 4.7 on Google</li><li>Trainer-marked essays</li></ul>
+        </div>
+
+        <dl class="tf-stats">
+          <div><dt>15,000+</dt><dd>students trained</dd></div>
+          <div><dt>4.7<span aria-hidden="true">★</span></dt><dd>on Google</dd></div>
+          <div><dt>Every essay</dt><dd>marked by a trainer</dd></div>
+        </dl>
+
+        <ol class="tf-flow" aria-label="How feedback works">
+          <li><b>1</b><span>You submit your essay or speaking</span></li>
+          <li><b>2</b><span>A trainer reviews it</span></li>
+          <li><b>3</b><span>You get personal feedback</span></li>
+          <li><b>4</b><span>You fix it and improve</span></li>
+        </ol>
+
+        <div class="tf-cta">
           <a href="#lead" class="btn btn-primary btn-lg" data-cta="lp-trainer">Get Free Counselling</a>
+          <span>Talk to the PrepEve team · free, no obligation</span>
         </div>
       </div>
     </div>
