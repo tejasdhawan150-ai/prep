@@ -95,6 +95,8 @@ var PV_META_PIXEL_ID = '';   // e.g. '123456789012345'
     var loc = a.getAttribute('data-cta') || '';
     if (href.indexOf('wa.me') > -1 || href.indexOf('chat.whatsapp.com') > -1) {
       track('whatsapp_click', { cta_location: loc || 'unlabelled' });
+      /* Count a WhatsApp click as a Google Ads lead (once per page view) */
+      if (!window.__pvWaConv && typeof window.gtag === 'function') { window.__pvWaConv = 1; window.gtag('event', 'conversion', { send_to: 'AW-765652199/zZIDCPHd74McEOfZi-0C' }); }
       if (window.fbq) window.fbq('track', 'Contact');
     }
     else if (loc) track('cta_click', { cta_location: loc });
