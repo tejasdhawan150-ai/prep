@@ -366,7 +366,7 @@
     var overall = document.getElementById('ovBand').textContent, target = v('p-target');
     var summary = 'L' + s[0] + ' R' + s[1] + ' W' + s[2] + ' S' + s[3];
     fetch(SHEET + '?name=' + encodeURIComponent(name) + '&phone=' + encodeURIComponent(phone) + '&email=' + encodeURIComponent((document.getElementById('p-email').value||'').trim())
-      + '&band=' + encodeURIComponent('Calculator|' + summary + '|Overall:' + overall + '|Target:' + target)
+      + '&source=band-calculator' + '&band=' + encodeURIComponent('Calculator|' + summary + '|Overall:' + overall + '|Target:' + target)
       + '&source=band-calculator', { method: 'GET', mode: 'no-cors', keepalive: true }).catch(function () {});
     if (window.pvTrack) window.pvTrack('generate_lead', { lead_source: 'band-calculator' });
     var msg = 'Hi PrepEve! I used your IELTS band calculator.\n\nName: ' + name + '\nScores: Listening ' + s[0] + ', Reading ' + s[1] + ', Writing ' + s[2] + ', Speaking ' + s[3]

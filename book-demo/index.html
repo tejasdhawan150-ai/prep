@@ -429,7 +429,8 @@ function pvUserData(phone, email){
       var params='?name='+encodeURIComponent(fname)
         +'&phone='+encodeURIComponent(phone.replace(/\D/g,''))
         +'&email='+encodeURIComponent(val('email'))
-        +'&band='+encodeURIComponent(bandLabel);
+        +'&band='+encodeURIComponent(bandLabel)
+        +'&source=book-demo';
       var sheetTarget=SHEET_URL+params+'&t='+Date.now();
       fetch(sheetTarget,{method:'GET',mode:'no-cors',keepalive:true}).catch(function(){});
     }
