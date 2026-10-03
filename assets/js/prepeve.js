@@ -249,3 +249,30 @@ document.querySelectorAll('.rv-wall').forEach(function (w) {
     document.addEventListener('keydown', function k(ev) { if (ev.key === 'Escape') { close(); document.removeEventListener('keydown', k); } });
   });
 })();
+
+/* Review screenshots: one per view, arrows + counter, height follows the current review */
+(function () {
+  document.querySelectorAll('.ss-wall').forEach(function (w) {
+    var items = w.children;
+    if (items.length < 2) return;
+    var nav = document.createElement('div');
+    nav.className = 'ss-nav';
+    nav.innerHTML = '<button type="button" aria-label="Previous review">←</button><span class="rv-count" aria-live="polite"></span><button type="button" aria-label="Next review">→</button>';
+    w.parentNode.insertBefore(nav, w.nextSibling);
+    var z = document.createElement('p'); z.className = 'ss-zoom'; z.textContent = 'Tap a review to read it full size'; nav.parentNode.insertBefore(z, nav.nextSibling);
+    var cur = function () { return Math.round(w.scrollLeft / (items[0].offsetWidth + parseFloat(getComputedStyle(w).columnGap || 0))); };
+    var fit = function () {
+      var c = Math.max(0, Math.min(items.length - 1, cur()));
+      w.style.height = items[c].offsetHeight + 'px';
+      nav.children[1].textContent = (c + 1) + ' / ' + items.length;
+      nav.children[0].disabled = c === 0; nav.children[2].disabled = c === items.length - 1;
+    };
+    var go = function (d) { var c = Math.max(0, Math.min(items.length - 1, cur() + d)); w.scrollTo({ left: items[c].offsetLeft - items[0].offsetLeft, behavior: 'smooth' }); };
+    nav.children[0].addEventListener('click', function () { go(-1); });
+    nav.children[2].addEventListener('click', function () { go(1); });
+    var t; w.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(fit, 60); }, { passive: true });
+    window.addEventListener('resize', fit); window.addEventListener('load', fit);
+    [].forEach.call(w.querySelectorAll('img'), function (i) { i.loading = 'eager'; i.addEventListener('load', fit); });
+    fit();
+  });
+})();
