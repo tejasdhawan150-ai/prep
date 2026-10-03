@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:J;src:url('/assets/fonts/jakarta.woff2')}@font-face{font-family:I;src:url('/assets/fonts/inter.woff2')}
+*{box-sizing:border-box;margin:0}
+body{width:var(--w);height:var(--h);overflow:hidden;font-family:I;background:#0B1B33;color:#fff}
+.c{position:relative;width:100%;height:100%;padding:var(--p);display:flex;flex-direction:column;background:radial-gradient(circle at 85% 10%,rgba(37,99,235,.55),transparent 55%),radial-gradient(circle at 0% 100%,rgba(37,99,235,.35),transparent 50%)}
+.top{display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;font-family:J;font-weight:800;font-size:40px}.logo img{width:52px;margin-right:14px}.logo span{color:#93B4F5}
+.pill{border:2px solid rgba(255,255,255,.35);border-radius:99px;padding:10px 22px;font-weight:700;font-size:22px;letter-spacing:.08em}
+.mid{flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:20px}
+.k{font-weight:700;font-size:26px;letter-spacing:.12em;color:#93B4F5;text-transform:uppercase}
+.big{font-family:J;font-weight:800;font-size:var(--big);line-height:.9;color:#FCD34D;letter-spacing:-.04em}
+.sub{font-family:J;font-weight:700;font-size:44px;margin-top:6px}
+.sheet{margin-top:var(--g);background:#fff;border-radius:22px;padding:22px 24px;box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.sheet img{display:block;width:100%}.sheet .h{width:46%;margin-bottom:12px}
+.note{margin-top:12px;font-size:20px;color:#94A3B8}
+.line{font-family:J;font-weight:700;font-size:var(--line);line-height:1.2;margin-top:var(--g)}
+.cta{margin-top:26px;display:flex;align-items:center;justify-content:space-between;background:#22C55E;border-radius:20px;padding:26px 34px;font-family:J;font-weight:800;font-size:36px;color:#fff}
+.cta small{font-family:I;font-weight:600;font-size:24px;opacity:.95}
+.stars{color:#FCD34D;font-size:64px;letter-spacing:6px}
+.q{font-family:J;font-weight:800;font-size:var(--q);line-height:1.15;margin-top:24px;letter-spacing:-.02em}
+.q em{font-style:normal;color:#FCD34D}
+.who{display:flex;align-items:center;gap:18px;margin-top:34px}
+.av{width:72px;height:72px;border-radius:50%;background:#1E3A8A;display:grid;place-items:center;font-family:J;font-weight:800;font-size:32px}
+.who b{display:block;font-size:30px}.who span{font-size:24px;color:#BFDBFE}
+.g{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;margin-top:var(--g);background:rgba(255,255,255,.1);border-radius:99px;padding:12px 24px;font-size:26px;font-weight:600}
+.list{margin-top:var(--g);display:grid;gap:18px}.list div{display:flex;gap:18px;align-items:flex-start;font-size:var(--li);font-weight:600;line-height:1.3}.list b{flex:0 0 auto;width:52px;height:52px;border-radius:50%;background:#22C55E;display:grid;place-items:center;font-size:28px}
+.tr{display:flex;align-items:center;gap:28px;margin-top:var(--g)}.tr img{width:var(--ph);height:var(--ph);border-radius:50%;object-fit:cover;border:5px solid #FCD34D}.tr b{display:block;font-family:J;font-size:40px}.tr span{font-size:24px;color:#BFDBFE;line-height:1.35;display:block;margin-top:6px}
+.plans{margin-top:var(--g);display:grid;gap:14px}.plans div{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.15);border-radius:18px;padding:20px 26px;font-size:30px;font-weight:600}.plans div.pop{background:#fff;color:#0B1B33;border-color:#FCD34D}.plans em{font-style:normal;font-family:J;font-weight:800;font-size:38px}.plans small{display:block;font-size:20px;opacity:.75;font-weight:500}
+</style></head><body><div class="c" id="root"></div><script>
+const t=new URLSearchParams(location.search).get('t');const demo=t.startsWith('d');
+const hdr='<div class="top"><div class="logo"><img src="/assets/img/mark-white.svg">Prep<span>Eve</span></div><div class="pill">'+(demo?'FREE IELTS CLASS':'FREE IELTS WEBINAR')+'</div></div>';
+const cta=demo?'<div class="cta"><span>Book free class →</span><small>Confirmed on WhatsApp</small></div>':'<div class="cta"><span>Reserve free seat →</span><small>Sat &amp; Sun · 7 PM IST</small></div>';
+const D={
+ d1: hdr+'<div class="mid"><div class="k">Free IELTS assessment class</div><div class="q" style="margin-top:14px">Find out <em>exactly</em> where you\u2019re losing marks.</div><div class="list"><div><b>✓</b>A live class with a trainer</div><div><b>✓</b>Your current band checked</div><div><b>✓</b>A study plan to keep, free</div></div></div>'+cta,
+ d2: hdr+'<div class="mid"><div class="q">\u201cMost students lose marks in <em>one skill</em> and don\u2019t know which.\u201d</div><div class="tr"><img src="/assets/img/sanjita-480.jpg"><div><b>Sanjita</b><span>Founder &amp; trainer, PrepEve<br>Regulated Canadian Immigration Consultant</span></div></div><div class="g">★ 4.7 on Google · 15,000+ students trained</div></div>'+cta,
+ d3: hdr+'<div class="mid"><div class="k">Live online IELTS coaching</div><div class="q" style="margin-top:14px">A trainer marks <em>every essay</em> you write.</div><div class="plans"><div><span>Self-Paced<small>30 recorded lectures</small></span><em>₹4,999</em></div><div class="pop"><span>Live Coaching<small>Live classes · 1-on-1 speaking mocks</small></span><em>₹14,999</em></div><div><span>1-on-1 Mentorship<small>Dedicated coach</small></span><em>₹19,999</em></div></div></div>'+cta
+};
+document.getElementById('root').innerHTML = demo ? D[t] : t==='score' ?
+ hdr+'<div class="mid"><div class="k">Real PrepEve student</div><div class="big">8.5</div><div class="sub">IELTS overall band</div><div class="sheet"><img class="h" src="ieltshead.png"><img src="row.png"></div><div class="note">From a real Test Report Form. Personal details hidden.</div><div class="line">Find out what is holding<br>your band back.</div></div>'+cta
+ :
+ hdr+'<div class="mid"><div class="stars">★★★★★</div><div class="q">“It’s been almost two years since I took my IELTS classes with them, and <em>they still support me</em> whenever I reach out.”</div><div class="who"><div class="av">A</div><div><b>Anooj Motghare</b><span>IELTS Band 8.5 · Google review</span></div></div><div><div class="g">★ 4.7 on Google · 300+ reviews</div></div></div>'+cta;
+</script></body></html>
