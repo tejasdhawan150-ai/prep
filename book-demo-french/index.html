@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Free French Class for Canada PR (+50 CRS) | PrepEve</title>
-<meta name="description" content="NCLC 7 in all four French skills adds up to 50 CRS points and opens French-category draws. Book a free live French class on WhatsApp."/>
+<title>French Demo Class for Canada PR (+50 CRS) | PrepEve</title>
+<meta name="description" content="NCLC 7 in all four French skills adds up to 50 CRS points and opens French-category draws. Book a live French demo class with PrepEve."/>
 <meta name="robots" content="noindex"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://prepeve.com/book-demo-french"/>
 <meta property="og:title" content="CRS stuck below the cutoff? French is the lever you still control."/>
-<meta property="og:description" content="NCLC 7 in all four French skills adds up to 50 CRS points and opens French-category Express Entry draws. Your first live French class is free."/>
+<meta property="og:description" content="NCLC 7 in all four French skills adds up to 50 CRS points and opens French-category Express Entry draws. Book a live French demo class."/>
 <meta property="og:image" content="https://www.prepeve.com/og-image.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="CRS stuck below the cutoff? French is the lever you still control."/>
-<meta name="twitter:description" content="Up to 50 extra CRS points with NCLC 7 in French, plus access to French-category draws. Book a free live French class."/>
+<meta name="twitter:description" content="Up to 50 extra CRS points with NCLC 7 in French, plus access to French-category draws. Book a live French demo class."/>
 <meta name="twitter:image" content="https://www.prepeve.com/og-image.jpg"/>
 <!-- Google Ads Tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR61XWFSW3"></script>
@@ -31,24 +31,95 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
 <link rel="icon" type="image/svg+xml" href="/assets/img/mark.svg"/>
 <link rel="icon" type="image/png" href="/assets/img/logo.png"/>
 <style>
-/* Page-only: CRS checker modal + small hero helpers */
-.hero-ctas{display:grid;gap:12px;margin:26px 0 20px}
-@media(min-width:600px){.hero-ctas{grid-template-columns:auto auto;justify-content:start}}
-.cta-note{font-size:.85rem;color:var(--muted);margin-top:10px}
-.fact{background:var(--blue-lt);border-radius:var(--r-lg);padding:22px}
-.fact b.big{display:block;font-family:var(--f-head);font-size:2.4rem;color:var(--blue);line-height:1}
-.fine{font-size:.8rem;color:var(--faint);margin-top:10px}
-.crs-box{max-width:640px;margin:0 auto;text-align:center}
-.crs-modal{position:fixed;inset:0;z-index:100;background:rgba(11,27,51,.55);display:flex;align-items:flex-end;justify-content:center;padding:0}
-.crs-modal[hidden]{display:none}
-.crs-sheet{background:#fff;width:100%;max-width:460px;max-height:92vh;overflow-y:auto;border-radius:var(--r-xl) var(--r-xl) 0 0;padding:26px 22px calc(22px + env(safe-area-inset-bottom));box-shadow:var(--sh-lg)}
-@media(min-width:600px){.crs-modal{align-items:center;padding:20px}.crs-sheet{border-radius:var(--r-xl)}}
-.crs-sheet h2{font-size:1.4rem;margin:4px 0 6px}
-.crs-sheet>p{color:var(--muted);font-size:.92rem;margin-bottom:18px}
-#m-result{display:none;background:var(--blue-lt);border-radius:var(--r);padding:16px;text-align:center;margin:6px 0 14px}
-#m-new-score{font-family:var(--f-head);font-weight:800;font-size:2.4rem;color:var(--ink);line-height:1.1}
-#m-boost{font-weight:700;color:var(--ok)}
-.crs-x{margin-top:10px;background:none;border:0;color:var(--muted);font-weight:600;cursor:pointer;width:100%;min-height:44px}
+/* French demo lead page */
+.lp-hero{padding:28px 0 48px;background:radial-gradient(circle at 90% 0%,rgba(26,86,219,.10),transparent 45%),linear-gradient(180deg,var(--bg-3) 0%,#fff 85%)}
+.lp-grid{display:grid;gap:24px;align-items:start}
+@media(min-width:1000px){.lp-hero{padding:56px 0 80px}.lp-grid{grid-template-columns:1.05fr .95fr;gap:20px 56px}}
+.lp-hero h1{font-size:clamp(1.9rem,5vw,3.2rem);line-height:1.08;margin:14px 0 14px;letter-spacing:-.03em}
+.lp-hero h1 em{font-style:normal;color:var(--blue)}
+.lp-lead{font-size:1.08rem;color:var(--ink-2);max-width:560px}
+.lp-ticks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+.lp-ticks li{display:flex;gap:10px;align-items:flex-start;font-weight:600;color:var(--ink)}
+.lp-ticks svg{flex:0 0 22px;width:22px;height:22px;color:var(--ok);margin-top:1px}
+.lp-proof{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:20px;font-size:.92rem;color:var(--ink-2);font-weight:600}
+.lp-proof .st{color:#F5B301}
+.lp-form{scroll-margin-top:calc(var(--nav-h) + 12px)}
+.lp-form h2{font-size:1.45rem;margin-bottom:4px}
+.lp-form .sub{color:var(--muted);font-size:.92rem;margin:0 0 16px}
+.lp-form .f2{display:grid;gap:0 12px}@media(min-width:520px){.lp-form .f2{grid-template-columns:1fr 1fr}}
+.lp-form input,.lp-form select{font-size:16px}
+.lp-form .hint{font-weight:400;color:var(--faint);font-size:.85em}
+.lp-safe{display:flex;gap:8px;align-items:flex-start;justify-content:center;margin-top:12px;font-size:.82rem;color:var(--muted);text-align:left}
+.lp-safe svg{flex:0 0 16px;width:16px;height:16px;margin-top:2px;color:var(--ok)}
+.lp-alt{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line-2);text-align:center;font-size:.9rem;color:var(--muted)}
+.lp-alt a{color:var(--wa-dk);font-weight:700}
+.lp-err-box{display:none;margin-top:12px;padding:12px 14px;border-radius:12px;background:#FEF2F2;border:1px solid #FECACA;color:#991B1B;font-size:.9rem}
+.lp-err-box.show{display:block}.lp-err-box a{color:#991B1B;font-weight:700;text-decoration:underline}
+.lp-ok{display:none;text-align:center;padding:10px 4px}
+.lp-ok .okc{width:64px;height:64px;border-radius:50%;background:var(--ok-lt);color:var(--ok);display:grid;place-items:center;margin:0 auto 14px}
+.lp-ok .okc svg{width:32px;height:32px}
+.lp-ok h3{font-size:1.4rem}.lp-ok p{color:var(--ink-2);margin:8px 0 16px}
+#spinner{display:none}#submitBtn[disabled]{opacity:.75;cursor:wait}
+@media(max-width:999px){.lp-hero{padding:18px 0 40px}.lp-hero .badge{font-size:.72rem}.lp-hero h1{font-size:1.8rem;margin:10px 0}.lp-lead{font-size:1rem}.lp-form h2{font-size:1.3rem}}
+@media(max-width:600px){.lp-copy .lp-lead,.lp-ticks li:nth-child(n+2){display:none}.lp-ticks{margin-top:10px}.lp-proof{margin-top:12px}}
+/* proof tiles */
+.ptiles{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+@media(min-width:900px){.ptiles{grid-template-columns:repeat(4,1fr)}}
+.ptile{background:#fff;padding:20px 18px;display:flex;flex-direction:column;gap:2px}
+.ptile .k{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.ptile .v{font-family:var(--f-head);font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--ink);letter-spacing:-.03em;line-height:1.1}
+.ptile .w{font-size:.85rem;color:var(--muted);line-height:1.45}
+.pfine{font-size:.78rem;color:var(--faint);margin:10px auto 0;text-align:center}
+/* compare */
+.cmp{display:grid;gap:14px;max-width:960px;margin:0 auto}
+@media(min-width:800px){.cmp{grid-template-columns:1fr 1fr}}
+.cmp .card h3{font-size:1.1rem;margin-bottom:10px}
+.cmp .card.win{border-color:#C7D6F6;background:var(--bg-3)}
+/* inline CRS checker */
+.chk{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:24px;box-shadow:var(--sh-sm)}
+.chk .f2{display:grid;gap:0 14px}@media(min-width:600px){.chk .f2{grid-template-columns:1fr 1fr}}
+.chk input,.chk select{font-size:16px}
+.chk-out{display:none;margin-top:6px;padding:18px;border-radius:var(--r);background:var(--blue-lt);text-align:center}
+.chk-out .row{display:flex;justify-content:center;align-items:baseline;gap:14px;flex-wrap:wrap}
+.chk-out .from{font-family:var(--f-head);font-weight:700;font-size:1.4rem;color:var(--faint);text-decoration:line-through}
+.chk-out .to{font-family:var(--f-head);font-weight:800;font-size:2.6rem;color:var(--ink);line-height:1}
+.chk-out .up{display:block;font-weight:700;color:var(--ok);margin-top:4px}
+.chk-out .note{font-size:.8rem;color:var(--muted);margin:10px 0 14px}
+/* trainer feature */
+.tf-sec{padding:64px 0}
+.tf{display:grid;gap:20px;align-items:center;grid-template-areas:"head" "photo" "body"}.tf-head{grid-area:head}.tf-photo{grid-area:photo}.tf-body{grid-area:body}
+@media(min-width:900px){.tf-sec{padding:88px 0}.tf{grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"photo head" "photo body";gap:0 56px;align-items:start}.tf-head{align-self:end}.tf-photo{align-self:center}}
+.tf-photo{margin:0;border-radius:24px;overflow:hidden;box-shadow:0 24px 50px -20px rgba(15,30,70,.35);aspect-ratio:4/5;max-height:520px;background:var(--bg-3)}
+.tf-photo picture,.tf-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.tf-head h2{font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.12;margin:10px 0 12px}
+.tf-head h2 em{font-style:normal;color:var(--blue)}
+.tf-lead{font-size:1.05rem;color:var(--ink-2);margin:0 0 20px;max-width:58ch}
+.tf-body .ticks{margin-bottom:22px}
+@media(max-width:899px){.tf-photo{aspect-ratio:4/3;max-width:520px;width:100%;margin:0 auto}}
+@media(max-width:560px){.tf-sec{padding:44px 0}.tf-head h2{font-size:1.6rem}.tf-photo{aspect-ratio:5/4}.tf-body .btn{width:100%}}
+/* feature cards */
+.lp-feat{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:620px){.lp-feat{grid-template-columns:1fr 1fr}}@media(min-width:1000px){.lp-feat{grid-template-columns:repeat(3,1fr)}}
+.lp-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;box-shadow:var(--sh-sm);display:flex;gap:14px;align-items:flex-start}
+.lp-card h3{font-size:1.05rem;margin:2px 0 6px}.lp-card p{color:var(--muted);font-size:.93rem;margin:0}
+.lp-ico{flex:0 0 44px;width:44px;height:44px;border-radius:12px;background:var(--blue-lt);color:var(--blue);display:grid;place-items:center}
+.lp-ico svg{width:22px;height:22px}
+.lp-cta-mid{text-align:center;margin-top:28px}
+/* timeline */
+.tl{display:grid;gap:12px;max-width:860px;margin:0 auto;grid-template-columns:1fr}
+@media(min-width:760px){.tl{grid-template-columns:repeat(3,1fr)}}
+.tl-i{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;text-align:center}
+.tl-i .lv{font-family:var(--f-head);font-weight:800;font-size:1.5rem;color:var(--blue)}
+.tl-i p{color:var(--muted);font-size:.9rem;margin:6px 0 0}
+.tl-note{max-width:720px;margin:20px auto 0;text-align:center;color:var(--ink-2)}
+/* steps */
+.lp-steps{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:860px){.lp-steps{grid-template-columns:repeat(3,1fr)}}
+.lp-step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 20px 20px 74px;box-shadow:var(--sh-sm)}
+.lp-step b{position:absolute;left:20px;top:20px;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-family:var(--f-head)}
+.lp-step h3{font-size:1.08rem;margin:0 0 4px}.lp-step p{margin:0;color:var(--muted);font-size:.93rem}
+.lp-final{background:linear-gradient(135deg,var(--blue),#1E3A8A);color:#fff;border-radius:var(--r-xl);padding:40px 24px;text-align:center}
+.lp-final h2{color:#fff}.lp-final p{color:#DBEAFE;max-width:580px;margin:12px auto 22px}
 </style>
 </head>
 <body>
@@ -58,76 +129,210 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
   <div class="wrap">
     <a href="/" class="logo" aria-label="PrepEve home"><img src="/assets/img/mark.svg" alt="" width="36" height="36"/>Prep<span>Eve</span></a>
     <span class="nav-label">French for Canada PR</span>
-    <a href="#book" class="btn btn-primary nav-cta" data-cta="nav">Book My Free French Class</a>
+    <a href="#lead" class="btn btn-primary nav-cta" data-cta="nav">Book a Demo Class</a>
   </div>
 </header>
 
 <main id="main">
-<!-- HERO -->
-<section class="hero" data-hide-mcta>
+<!-- HERO + FORM -->
+<section class="lp-hero">
   <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <span class="badge">For Express Entry candidates</span>
-        <h1>CRS stuck below the cutoff? <em>French is the lever you still control.</em></h1>
-        <p class="lead">You can't make yourself younger or add years of Canadian work experience. You can learn French. NCLC 7 in all four French skills adds <b>up to 50 CRS points</b> and makes you eligible for French-language category draws. Your first live class is free.</p>
-        <div class="hero-ctas">
-          <a href="https://wa.me/919877714284?text=Hi%20PrepEve%2C%20I%20want%20to%20book%20my%20free%20French%20class%20for%20Canada%20PR." onclick="fireConversion()" class="btn btn-wa btn-lg" id="hero-wa" data-cta="hero_whatsapp" target="_blank" rel="noopener">Book My Free French Class</a>
-          <button type="button" class="btn btn-ghost btn-lg" onclick="openScoreChecker()" data-cta="hero_crs_checker">See What French Adds to My CRS</button>
-        </div>
-        <div class="trust">
+    <div class="lp-grid">
+      <div class="lp-copy">
+        <span class="badge">For Express Entry candidates · TEF Canada &amp; TCF Canada</span>
+        <h1>CRS stuck below the cutoff? <em>French can add up to 50 points.</em></h1>
+        <p class="lp-lead">You can't get younger or add Canadian work years overnight. You can learn French. NCLC 7 in all four French skills adds up to 50 CRS points and makes you eligible for French-language Express Entry draws.</p>
+        <ul class="lp-ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Live online classes from A1, every class recorded</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Morning, evening and weekend batches for working adults</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>TEF Canada &amp; TCF Canada prep with trainer-checked mock tests</li>
+        </ul>
+        <div class="lp-proof">
+          <span><span class="st" aria-hidden="true">★</span> 4.7 on Google · 300+ reviews</span>
           <span>6,000+ students taught French</span>
-          <span><span class="stars" aria-hidden="true">★</span> 4.7 on Google · 300+ reviews for PrepEve</span>
-          <span>Live online · no payment to book</span>
         </div>
       </div>
-      <div class="fact">
-        <!-- VERIFY before publishing: IRCC changes draw cutoffs constantly. Source: IRCC Express Entry rounds of invitations. Last checked for the 22 July 2026 French-language draw. -->
-        <span class="eyebrow">French-language draw, 22 July 2026</span>
-        <b class="big num">399</b>
-        <p>The CRS cutoff in that draw, which issued <b>5,000</b> invitations. General draws that month sat in the 500s.</p>
-        <p class="fine">As of July 2026. Cutoffs change every round. Check IRCC's official rounds of invitations.</p>
+
+      <div class="form-card lp-form" id="lead" data-hide-mcta>
+        <form id="leadForm" data-form="french-demo-lead" novalidate>
+          <div id="formBody">
+            <h2>Book your French demo class</h2>
+            <p class="sub">Takes 20 seconds. We'll WhatsApp you a class time. No payment to book.</p>
+            <div class="field"><label for="fname">Full name <span class="req">*</span></label>
+              <input type="text" id="fname" name="name" autocomplete="name" placeholder="e.g. Priya Sharma" required/>
+              <div class="field-err" id="fname-err" role="alert">Please enter your full name</div></div>
+            <div class="field"><label for="phone">WhatsApp number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="e.g. 98765 43210" required/>
+              <div class="field-err" id="phone-err" role="alert">Please enter a valid mobile number</div></div>
+            <div class="field"><label for="level">Your French right now <span class="req">*</span></label>
+              <select id="level" name="level" required><option value="">Choose one</option><option>Complete beginner</option><option>Some basics (A1–A2)</option><option>Intermediate (B1)</option><option>B2 or above</option><option>Not sure</option></select>
+              <div class="field-err" id="level-err" role="alert">Please choose your current level</div></div>
+            <div class="field"><label for="email">Email <span class="hint">(optional)</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com"/>
+              <div class="field-err" id="email-err" role="alert">Please enter a valid email address</div></div>
+            <details class="opt-fields"><summary>Add your goal &amp; class time (optional)</summary>
+              <div class="f2">
+                <div class="field"><label for="goal">Main goal</label>
+                  <select id="goal" name="goal"><option value="">Not decided</option><option>Express Entry (CRS)</option><option>PNP / Quebec</option><option>DELF / DALF</option><option>Work or study</option></select></div>
+                <div class="field"><label for="slot">Preferred class time</label>
+                  <select id="slot" name="slot"><option value="">Flexible</option><option>Morning</option><option>Evening</option><option>Weekends</option></select></div>
+              </div>
+            </details>
+            <div class="hp-field" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"/></div>
+            <button class="btn btn-primary btn-lg btn-block" id="submitBtn" type="submit" data-cta="fr-form-submit"><span class="spin" id="spinner" aria-hidden="true"></span><span id="btnTxt">Book My Demo Class</span></button>
+            <div class="lp-err-box" id="sendErr" role="alert">We couldn't send your details. Please check your internet and try again, or <a href="https://wa.me/919877714284?text=Hi%20PrepEve%2C%20I%20want%20to%20book%20a%20French%20demo%20class%20for%20Canada%20PR." target="_blank" rel="noopener" data-cta="fr-form-error-wa">message us on WhatsApp</a>.</div>
+            <p class="lp-safe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>Your details stay with PrepEve. No card details, no auto-enrolment.</span></p>
+            <div class="lp-alt">Prefer WhatsApp? <a href="https://wa.me/919877714284?text=Hi%20PrepEve%2C%20I%20want%20to%20book%20a%20French%20demo%20class%20for%20Canada%20PR." onclick="fireConversion()" target="_blank" rel="noopener" data-cta="fr-form-wa">Chat with us on WhatsApp</a></div>
+          </div>
+          <div class="lp-ok" id="formOk" role="status" aria-live="polite" tabindex="-1">
+            <div class="okc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Thanks, <span id="okName">we've got your details</span>!</h3>
+            <p>We'll WhatsApp you on <b id="okPhone"></b> with a class time. Want it faster? Send us a message now.</p>
+            <a href="https://wa.me/919877714284" id="okWa" class="btn btn-wa btn-lg btn-block" target="_blank" rel="noopener" data-cta="fr-success-wa">Message us on WhatsApp</a>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="sec sec-alt">
+<!-- PROOF / FACTS -->
+<section class="sec" style="padding-top:8px">
   <div class="wrap">
-    <div class="sec-head">
+    <!-- VERIFY regularly: IRCC changes draw cutoffs every round. Last checked for the 22 July 2026 French-language draw. -->
+    <div class="ptiles">
+      <div class="ptile"><span class="k">CRS boost</span><span class="v">+50</span><span class="w">with NCLC 7 in all four French skills (IRCC rule)</span></div>
+      <div class="ptile"><span class="k">French draw cutoff</span><span class="v">399</span><span class="w">22 July 2026, 5,000 invitations. General draws sat in the 500s.</span></div>
+      <div class="ptile"><span class="k">Students taught French</span><span class="v">6,000+</span><span class="w">live online, from A1 upwards</span></div>
+      <div class="ptile"><span class="k">Google rating</span><span class="v">4.7★</span><span class="w">from 300+ reviews of PrepEve</span></div>
+    </div>
+    <p class="pfine">Cutoffs change every round. Check IRCC's official rounds of invitations.</p>
+  </div>
+</section>
+
+<!-- CRS CHECKER (inline) -->
+<section class="sec sec-alt" id="checker">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">French bonus checker</span>
+      <h2>See what French adds to your CRS</h2>
+      <p>Two answers, no sign-up. Uses IRCC's bonus rule for NCLC 7+ in all four French skills.</p>
+    </div>
+    <div class="chk">
+      <div class="f2">
+        <div class="field"><label for="m-crs">Your current CRS (approx.)</label>
+          <input id="m-crs" type="number" inputmode="numeric" placeholder="e.g. 450"/></div>
+        <div class="field"><label for="m-ielts">Your English test result</label>
+          <select id="m-ielts"><option value="">Choose one</option><option value="50">CLB 5+ in every skill (IELTS GT ~5.0+)</option><option value="25">Below that / no English test</option></select></div>
+      </div>
+      <div class="chk-out" id="m-result" aria-live="polite">
+        <div class="row"><span class="from" id="m-old"></span><span class="to" id="m-new-score"></span></div>
+        <span class="up" id="m-boost"></span>
+        <p class="note">French bonus only. Second-language points can add more, and NCLC 7 also opens French-language draws. We check your full profile in the demo class.</p>
+        <a href="#lead" class="btn btn-primary btn-lg" data-cta="fr-checker-cta">Book My Demo Class</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center">
       <span class="eyebrow">Why your score isn't moving</span>
       <h2>Waiting for general draws to drop is not a plan</h2>
-      <p>If your CRS is below the general cutoff, another IELTS attempt usually adds only a few points. French adds two things at once: extra points, and a separate set of draws to compete in.</p>
+      <p>Another IELTS attempt usually adds only a few points. French adds two things at once: extra points, and a separate set of draws to compete in.</p>
     </div>
-    <div class="grid g2">
+    <div class="cmp">
       <div class="card">
         <h3>Your profile today</h3>
         <ul class="ticks ticks-x">
           <li>You compete only in general draws, which sat in the 500s in July 2026</li>
           <li>You can't enter French-language category draws</li>
-          <li>Every month in the pool without an invitation is a month your plans stay on hold</li>
+          <li>Every month in the pool without an invitation keeps your plans on hold</li>
         </ul>
       </div>
-      <div class="card">
+      <div class="card win">
         <h3>With NCLC 7 in all four French skills</h3>
         <ul class="ticks">
-          <li>Up to 50 additional CRS points (50 if your English is CLB 5+ in all four skills, 25 otherwise)</li>
-          <li>Eligible for French-language category draws. The 22 July 2026 draw cut off at 399</li>
-          <li>A certified French level Quebec's economic streams also ask for</li>
+          <li>Up to 50 extra CRS points (50 with English CLB 5+, 25 otherwise)</li>
+          <li>Eligible for French-language draws. The 22 July 2026 draw cut off at 399</li>
+          <li>A certified French level that Quebec's economic streams also ask for</li>
         </ul>
+      </div>
+    </div>
+    <div class="lp-cta-mid"><a href="#lead" class="btn btn-primary btn-lg" data-cta="fr-compare">Book My Demo Class</a></div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="sec sec-alt tf-sec">
+  <div class="wrap">
+    <div class="tf">
+      <figure class="tf-photo">
+        <picture><source srcset="/assets/img/sanjita-480.webp" type="image/webp"><img src="/assets/img/sanjita-480.jpg" alt="Sanjita, founder of PrepEve" width="480" height="480" loading="lazy"></picture>
+      </figure>
+      <div class="tf-head">
+        <span class="eyebrow">Built by someone who knows PR</span>
+        <h2>French coaching planned around <em>your PR pathway</em></h2>
+        <p class="tf-lead">PrepEve was founded by Sanjita, a Regulated Canadian Immigration Consultant. So the plan isn't just "learn French". It's the level, the exam and the timing your Express Entry profile actually needs.</p>
+      </div>
+      <div class="tf-body">
+        <ul class="ticks">
+          <li>Your target set by the NCLC score that moves your CRS</li>
+          <li>TEF Canada or TCF Canada chosen for your deadline</li>
+          <li>Live trainers who correct your speaking and writing</li>
+        </ul>
+        <a href="#lead" class="btn btn-primary btn-lg" data-cta="fr-founder">Book My Demo Class</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GOOGLE REVIEWS -->
+<!-- WHAT THE DEMO COVERS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Your demo class</span>
+      <h2>Leave with your level, your exam and your timeline</h2>
+      <p>Even if you never join, you'll know exactly where you stand.</p>
+    </div>
+    <div class="lp-feat">
+      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><h3>A real live lesson</h3><p>You speak actual French with a trainer. It's a lesson, not a sales call.</p></div></div>
+      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></span><div><h3>Your level, checked</h3><p>Speaking and comprehension checked, so you start at the right level.</p></div></div>
+      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>An honest timeline to NCLC 7</h3><p>Based on where you start and the hours you have each week.</p></div></div>
+      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><div><h3>TEF or TCF Canada</h3><p>Which exam suits your pathway and deadline, and when to book it.</p></div></div>
+      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></span><div><h3>Recorded classes</h3><p>Every class in the course is recorded, so a late shift never costs you a lesson.</p></div></div>
+      <div class="lp-card"><span class="lp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/></svg></span><div><h3>Batches that fit work</h3><p>Morning, evening and weekend slots, about 4–5 hours a week.</p></div></div>
+    </div>
+    <div class="lp-cta-mid"><a href="#lead" class="btn btn-primary btn-lg" data-cta="fr-demo-covers">Book My Demo Class</a></div>
+  </div>
+</section>
+
+<!-- HONEST TIMELINE -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Honest timing</span>
+      <h2>How long NCLC 7 really takes</h2>
+      <p>NCLC 7 sits around B2. Typical ranges for working adults at 4–5 hours a week, including exam prep:</p>
+    </div>
+    <div class="tl">
+      <div class="tl-i"><div class="lv">From zero</div><p>about 9–14 months</p></div>
+      <div class="tl-i"><div class="lv">From A2</div><p>shorter: we estimate it in your demo</p></div>
+      <div class="tl-i"><div class="lv">From B1</div><p>often mainly exam prep</p></div>
+    </div>
+    <p class="tl-note">Intensive batches compress it. Anyone promising B2 in eight weeks from scratch is selling you something. You'll get your own estimate in the demo class.</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
 <section class="sec" id="google-reviews">
   <div class="wrap">
     <div class="sec-head center">
       <span class="eyebrow">PrepEve on Google</span>
       <h2>4.7★ from 300+ reviews</h2>
-      <p>Real reviews from students on our Google profile. 6,000+ students have learned French with PrepEve.</p>
+      <p>Real reviews from students on our Google profile.</p>
     </div>
     <div class="ss-wall">
       <figure class="sc-item ss-item"><picture><source srcset="/assets/img/reviews/meera.webp" type="image/webp"><img src="/assets/img/reviews/meera.jpg" alt="5-star Google review of PrepEve by Meera Bhatia" loading="lazy" width="652" height="437"></picture></figure>
@@ -139,88 +344,51 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
       <div class="ss-item ss-pair"><figure class="sc-item"><picture><source srcset="/assets/img/reviews/shvi.webp" type="image/webp"><img src="/assets/img/reviews/shvi.jpg" alt="5-star Google review of PrepEve by Shvi Pruthi" loading="lazy" width="675" height="157"></picture></figure><figure class="sc-item"><picture><source srcset="/assets/img/reviews/manish.webp" type="image/webp"><img src="/assets/img/reviews/manish.jpg" alt="5-star Google review of PrepEve by Manish Kumar" loading="lazy" width="612" height="166"></picture></figure></div>
       <div class="ss-item ss-pair"><figure class="sc-item"><picture><source srcset="/assets/img/reviews/melfin.webp" type="image/webp"><img src="/assets/img/reviews/melfin.jpg" alt="5-star Google review of PrepEve by Melfin Aruldhas" loading="lazy" width="657" height="257"></picture></figure><figure class="sc-item"><picture><source srcset="/assets/img/reviews/abhishek.webp" type="image/webp"><img src="/assets/img/reviews/abhishek.jpg" alt="5-star Google review of PrepEve by Abhishek Pandey" loading="lazy" width="655" height="164"></picture></figure></div>
     </div>
-    <div class="center mt"><a href="https://wa.me/919877714284?text=Hi%20PrepEve%2C%20I%20want%20to%20book%20my%20free%20French%20class%20for%20Canada%20PR." onclick="fireConversion()" class="btn btn-wa btn-lg" data-cta="reviews_whatsapp" target="_blank" rel="noopener">Book My Free French Class</a></div>
-  </div>
-</section>
-
-<!-- CRS CHECKER -->
-<section class="sec">
-  <div class="wrap">
-    <div class="crs-box">
-      <span class="eyebrow">French bonus checker</span>
-      <h2>See what French adds to your CRS in 20 seconds</h2>
-      <p class="mt-s" style="margin-left:auto;margin-right:auto;color:var(--muted)">Enter your current CRS and your English level. We'll show the French bonus points IRCC adds for NCLC 7. No sign-up.</p>
-      <div class="btn-row mt" style="justify-content:center">
-        <button type="button" class="btn btn-primary btn-lg" onclick="openScoreChecker()" data-cta="crs_section_checker">See What French Adds to My CRS</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT THE FREE CLASS COVERS -->
-<section class="sec sec-alt" id="book">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Your free French class</span>
-      <h2>What your first free class covers</h2>
-      <p>Even if you never join, you'll leave knowing your level, your exam, and how long NCLC 7 will realistically take you.</p>
-    </div>
-    <div class="grid g4">
-      <div class="card"><h3>A real 45-minute live class</h3><p>You'll speak actual French with a trainer. It's a lesson, not a sales call.</p></div>
-      <div class="card"><h3>Your level, checked</h3><p>Speaking and comprehension checked, so you start at the right level, not at page one by default.</p></div>
-      <div class="card"><h3>An honest timeline to NCLC 7</h3><p>Based on where you start and the hours you actually have each week. Yours to keep.</p></div>
-      <div class="card"><h3>TEF Canada or TCF Canada</h3><p>Which exam suits your pathway and deadline, and when to book it.</p></div>
-    </div>
-    <div class="center mt">
-      <a href="https://wa.me/919877714284?text=Hi%20PrepEve%2C%20I%20want%20to%20book%20my%20free%20French%20class.%20My%20current%20CRS%20is%20about%20___." onclick="fireConversion()" class="btn btn-wa btn-lg" data-cta="benefits_whatsapp" target="_blank" rel="noopener">Book My Free French Class</a>
-      <p class="cta-note">What happens next: we reply on WhatsApp with a class time. No payment, no card details, no auto-enrolment.</p>
-    </div>
+    <div class="lp-cta-mid"><a href="#lead" class="btn btn-primary btn-lg" data-cta="fr-reviews">Book My Demo Class</a></div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="sec">
+<section class="sec sec-alt">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head center">
       <span class="eyebrow">How it works</span>
-      <h2>From one WhatsApp message to your NCLC 7 plan</h2>
+      <h2>From one form to your NCLC 7 plan</h2>
     </div>
-    <div class="steps" style="max-width:720px;margin:0 auto">
-      <div class="step"><span class="step-n">1</span><div><h3>Send one message</h3><p>Tell us your current CRS, your English score and when you want to apply.</p></div></div>
-      <div class="step"><span class="step-n">2</span><div><h3>Take your free class</h3><p>A live class, a level check, and a realistic plan for TEF or TCF Canada.</p></div></div>
-      <div class="step"><span class="step-n">3</span><div><h3>Decide, with no pressure</h3><p>If it fits, join a live batch: morning, evening or weekend, with every class recorded for revision.</p></div></div>
+    <div class="lp-steps">
+      <div class="lp-step"><b>1</b><h3>Fill the form</h3><p>20 seconds. Tell us your level and goal.</p></div>
+      <div class="lp-step"><b>2</b><h3>Take your demo class</h3><p>A live lesson, a level check and a realistic plan for TEF or TCF Canada.</p></div>
+      <div class="lp-step"><b>3</b><h3>Decide, no pressure</h3><p>If it fits, join a live batch. If not, keep the plan.</p></div>
     </div>
-    <p class="center mt" style="margin-left:auto;margin-right:auto;max-width:720px"><b>Honest timing:</b> zero to B2 (where NCLC 7 sits) takes most working adults 9–14 months at 4–5 hours a week, including exam prep. Intensive batches compress it. Anyone promising B2 in eight weeks from scratch is selling you something.</p>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="sec sec-alt">
+<section class="sec">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Before you book</span>
       <h2>Questions people ask first</h2>
     </div>
     <div class="faq">
-      <details><summary>How many CRS points does French actually add?</summary><div><p>With NCLC 7 or higher in all four French skills, IRCC adds 50 points if your English test is CLB 5 or higher in all four skills, or 25 points if it isn't (or you have no English test). That's on top of any second-language points. Separately, NCLC 7 makes you eligible for French-language category draws, which have closed far below general draws (as of July 2026).</p></div></details>
+      <details><summary>How many CRS points does French actually add?</summary><div><p>With NCLC 7 or higher in all four French skills, IRCC adds 50 points if your English test is CLB 5 or higher in all four skills, or 25 points if it isn't (or you have no English test). That's on top of any second-language points. NCLC 7 also makes you eligible for French-language category draws, which have closed far below general draws (as of July 2026).</p></div></details>
       <details><summary>I have zero French. Is this realistic?</summary><div><p>Yes. Most of our French students start at absolute zero. A1 assumes no French, and instructions are in English until you don't need them.</p></div></details>
-      <details><summary>How long will it take me to reach NCLC 7?</summary><div><p>From zero, most working adults need 9–14 months at 4–5 hours a week, including exam prep. If you already have some French, it's shorter. We'll give you your own estimate in the free class. We'd rather quote you an honest number than a marketable one.</p></div></details>
-      <details><summary>I work full-time. Can I fit this in?</summary><div><p>That's who the batches are built for: early morning, evening and weekend slots, about 4–5 hours a week. Every class is recorded, so a late shift doesn't cost you a lesson.</p></div></details>
-      <details><summary>TEF Canada or TCF Canada?</summary><div><p>Both are accepted for Express Entry. The better choice depends on your deadline and test dates available to you. We'll recommend one in your free class. DELF is a lifetime certificate but is not the exam for Express Entry.</p></div></details>
-      <details><summary>What does it cost?</summary><div><p>Fees depend on your starting level and whether you choose group or one-to-one classes. <a href="https://wa.me/919877714284?text=Hi%20PrepEve%21%20Please%20share%20the%20current%20prices%20for%20French%20classes." target="_blank" rel="noopener" data-cta="french-faq-fees-wa">WhatsApp us for current prices</a>, or ask at the end of your free class, with no pressure to decide on the call.</p></div></details>
-      <details><summary>Are you immigration consultants?</summary><div><p>No. PrepEve teaches French and prepares you for the exam. We don't file applications. CRS rules and draw cutoffs are set by IRCC and change often, so always check the official IRCC website.</p></div></details>
+      <details><summary>How long will it take me to reach NCLC 7?</summary><div><p>From zero, most working adults need 9–14 months at 4–5 hours a week, including exam prep. With some French already, it's shorter. You'll get your own estimate in the demo class.</p></div></details>
+      <details><summary>I work full-time. Can I fit this in?</summary><div><p>That's who the batches are built for: morning, evening and weekend slots, about 4–5 hours a week. Every class is recorded, so a late shift doesn't cost you a lesson.</p></div></details>
+      <details><summary>TEF Canada or TCF Canada?</summary><div><p>Both are accepted for Express Entry. The better choice depends on your deadline and the test dates available to you. We'll recommend one in your demo class. DELF is a lifetime certificate but is not the exam for Express Entry.</p></div></details>
+      <details><summary>What does it cost?</summary><div><p>Fees depend on your starting level and whether you choose group or one-to-one classes. Ask at the end of your demo class, or <a href="https://wa.me/919877714284?text=Hi%20PrepEve%21%20Please%20share%20the%20current%20prices%20for%20French%20classes." target="_blank" rel="noopener" data-cta="fr-faq-fees-wa">WhatsApp us for current prices</a>.</p></div></details>
+      <details><summary>Do you file immigration applications?</summary><div><p>No. PrepEve teaches French and prepares you for the exam. Our founder is a Regulated Canadian Immigration Consultant, but PrepEve itself does not file applications. CRS rules and draw cutoffs are set by IRCC and change often, so always check the official IRCC website.</p></div></details>
     </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="sec">
+<section class="sec" style="padding-top:0">
   <div class="wrap">
-    <div class="cta-band" data-hide-mcta>
+    <div class="lp-final" data-hide-mcta>
       <h2>The points you need might be in a language you haven't started yet</h2>
-      <p>Your first class is free: 45 minutes live, a level check and an honest timeline to NCLC 7. One WhatsApp message to book.</p>
-      <a href="https://wa.me/919877714284?text=Hi%20PrepEve%2C%20I%20want%20to%20book%20my%20free%20French%20class%20and%20find%20out%20what%20French%20adds%20to%20my%20CRS." onclick="fireConversion()" class="btn btn-wa btn-lg" data-cta="final_whatsapp" target="_blank" rel="noopener">Book My Free French Class</a>
-      <p class="cta-note" style="color:inherit;opacity:.85">No payment to book. We reply on WhatsApp with a class time.</p>
+      <p>Book a demo class: a live lesson, a level check and an honest timeline to NCLC 7.</p>
+      <a href="#lead" class="btn btn-wa btn-lg" data-cta="fr-final">Book My Demo Class</a>
     </div>
   </div>
 </section>
@@ -230,91 +398,70 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
   <div class="wrap">
     <a href="/" class="logo"><img src="/assets/img/mark-white.svg" alt="" width="36" height="36" loading="lazy"/>Prep<span>Eve</span></a>
     <p class="mt-s">Live online French classes for Canada PR: TEF Canada and TCF Canada preparation. WhatsApp <a href="https://wa.me/919877714284?text=Hi%20PrepEve%2C%20I%20have%20a%20question%20about%20French%20classes%20for%20Canada%20PR." onclick="fireConversion()" data-cta="footer_whatsapp" target="_blank" rel="noopener">+91 98777 14284</a>.</p>
-    <p class="mt-s" style="font-size:.82rem">PrepEve is a language training institute, not an immigration consultancy, and does not file immigration applications. CRS points and draw cutoffs are set by IRCC and change frequently. Verify current requirements on official government websites.</p>
+    <p class="mt-s" style="font-size:.82rem">PrepEve is a language training institute and does not file immigration applications. CRS points and draw cutoffs are set by IRCC and change frequently. Verify current requirements on official government websites.</p>
     <div class="foot-bot"><span>© <span data-year>2026</span> PrepEve. All rights reserved.</span><span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/refund">Refunds</a></span></div>
   </div>
 </footer>
 
 <!-- MOBILE STICKY CTA -->
 <div class="mcta" id="sticky">
-  <a href="https://wa.me/919877714284?text=Hi%20PrepEve%2C%20I%20want%20to%20book%20my%20free%20French%20class%20for%20Canada%20PR." onclick="fireConversion()" class="btn btn-wa" data-cta="sticky_whatsapp" target="_blank" rel="noopener">Book My Free French Class</a>
-</div>
-
-<!-- CRS CHECKER MODAL -->
-<div id="score-modal" class="crs-modal" hidden>
-  <div class="crs-sheet" role="dialog" aria-modal="true" aria-labelledby="m-title">
-    <span class="eyebrow">French bonus estimate</span>
-    <h2 id="m-title">What NCLC 7 in French adds</h2>
-    <p>This estimates the French bonus points only, using IRCC's rule for NCLC 7+ in all four French skills. It is not a full CRS calculation.</p>
-    <div class="field">
-      <label for="m-crs">Your current CRS score (approx.)</label>
-      <input id="m-crs" type="number" inputmode="numeric" placeholder="e.g. 450" oninput="calcCRS()"/>
-    </div>
-    <div class="field">
-      <label for="m-ielts">Your English test result</label>
-      <select id="m-ielts" onchange="calcCRS()">
-        <option value="">Choose one</option>
-        <option value="50">IELTS 5.0+ in every skill (CLB 5+)</option>
-        <option value="25">Below that / no English test</option>
-      </select>
-    </div>
-    <div id="m-result" aria-live="polite">
-      <div class="eyebrow" style="margin-bottom:4px">Estimated CRS with the French bonus</div>
-      <div id="m-new-score"></div>
-      <div id="m-boost"></div>
-      <p class="fine">Estimate of the French bonus only. Your full CRS may also change through second-language points. NCLC 7 also makes you eligible for French-language category draws, which is a separate advantage. We check your full profile in your free class.</p>
-    </div>
-    <a id="m-wa-btn" href="#" onclick="fireConversion()" style="display:none" class="btn btn-wa btn-block" data-cta="modal_whatsapp" target="_blank" rel="noopener">Book My Free French Class</a>
-    <button type="button" onclick="closeModal()" class="crs-x" data-cta="modal_close">Close</button>
-  </div>
+  <a href="#lead" class="btn btn-primary" data-cta="sticky">Book My Demo Class</a>
 </div>
 
 <script>
-var lastFocus=null;
-function openScoreChecker(){
-  lastFocus=document.activeElement;
-  document.getElementById('score-modal').hidden=false;
-  document.body.style.overflow='hidden';
-  document.getElementById('m-crs').focus();
-}
-function closeModal(){
-  document.getElementById('score-modal').hidden=true;
-  document.body.style.overflow='';
-  if(lastFocus&&lastFocus.focus)lastFocus.focus();
-}
-document.getElementById('score-modal').addEventListener('click',function(e){
-  if(e.target===this)closeModal();
-});
-document.addEventListener('keydown',function(e){
-  var m=document.getElementById('score-modal');
-  if(m.hidden)return;
-  if(e.key==='Escape'){closeModal();return;}
-  if(e.key==='Tab'){
-    var f=[].filter.call(m.querySelectorAll('input,select,a[href],button'),function(el){return el.offsetParent!==null;});
-    if(!f.length)return;
-    var first=f[0],last=f[f.length-1];
-    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
-    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+(function(){
+  var SHEET='https://script.google.com/macros/s/AKfycbxV6D1QlPWjlPg7QNH4RBQb3PoyisOElpEaKW_mbFkVkyeBfIJKPi7eiGfO42jUSTYLzg/exec';
+  var WA='919877714284',f=document.getElementById('leadForm'),btn=document.getElementById('submitBtn'),sending=false;
+  var $=function(id){return document.getElementById(id);},val=function(id){return ($(id).value||'').trim();};
+  function ev(n,p){if(typeof gtag==='function')gtag('event',n,p||{});}
+  function setErr(id,on){$(id).closest('.field').classList.toggle('has-err',on);$(id).setAttribute('aria-invalid',on?'true':'false');}
+  ['fname','phone','email','level'].forEach(function(id){$(id).addEventListener('input',function(){setErr(id,false);});$(id).addEventListener('change',function(){setErr(id,false);});});
+  document.querySelectorAll('a[href="#lead"]').forEach(function(a){a.addEventListener('click',function(){setTimeout(function(){if($('formBody').style.display!=='none')$('fname').focus({preventScroll:true});},450);});});
+
+  // CRS checker
+  function calc(){
+    var crs=parseInt(val('m-crs'),10)||0,eng=val('m-ielts'),out=$('m-result');
+    if(crs<100||crs>1200||(eng!=='50'&&eng!=='25')){out.style.display='none';return;}
+    var b=+eng;$('m-old').textContent=crs;$('m-new-score').textContent=crs+b;$('m-boost').textContent='+'+b+' French bonus points (estimate)';
+    out.style.display='block';ev('french_crs_check',{crs:crs,bonus:b});
   }
-});
-/* IRCC additional points for French: NCLC 7+ in all four French skills
-   -> +50 if English is CLB 5+ in all four skills, +25 if CLB 4 or lower / no English test. */
-function calcCRS(){
-  var crs=parseInt(document.getElementById('m-crs').value,10)||0;
-  var eng=document.getElementById('m-ielts').value;
-  var res=document.getElementById('m-result');
-  var waBtn=document.getElementById('m-wa-btn');
-  if(crs<100||crs>1200||(eng!=='50'&&eng!=='25')){res.style.display='none';waBtn.style.display='none';return;}
+  $('m-crs').addEventListener('input',calc);$('m-ielts').addEventListener('change',calc);
 
-  var boost=eng==='50'?50:25;
-  var newScore=crs+boost;
-  res.style.display='block';
-  document.getElementById('m-new-score').textContent=newScore;
-  document.getElementById('m-boost').textContent='+'+boost+' French bonus points (estimate)';
-
-  waBtn.style.display='flex';
-  waBtn.href='https://wa.me/919877714284?text='+encodeURIComponent('Hi PrepEve, my CRS is about '+crs+' and the checker shows +'+boost+' with NCLC 7 in French. I want to book my free French class.');
-}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(sending)return;
+    $('sendErr').classList.remove('show');
+    if(val('website'))return;
+    var name=val('fname'),phone=val('phone').replace(/\D/g,''),email=val('email').toLowerCase(),level=val('level'),goal=val('goal')||'Not decided',slot=val('slot')||'Flexible';
+    if(phone.length===10)phone='91'+phone;
+    if(phone.length===11&&phone[0]==='0')phone='91'+phone.slice(1);
+    var bad=[];
+    if(name.length<2)bad.push('fname');
+    if(phone.length<11||phone.length>15)bad.push('phone');
+    if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email))bad.push('email');
+    if(!level)bad.push('level');
+    ['fname','phone','email','level'].forEach(function(id){setErr(id,bad.indexOf(id)>-1);});
+    if(bad.length){$(bad[0]).focus();ev('form_error',{form_id:'french-demo-lead',field:bad[0]});return;}
+    sending=true;btn.disabled=true;$('spinner').style.display='block';$('btnTxt').textContent='Sending…';
+    var crs=val('m-crs');
+    var url=SHEET+'?name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone)+'&email='+encodeURIComponent(email)
+      +'&band='+encodeURIComponent('French · '+level+(crs?' · CRS '+crs:''))+'&when='+encodeURIComponent(goal)+'&slot='+encodeURIComponent(slot)+'&source=french-demo';
+    var done=false;
+    var t=setTimeout(fail,12000);
+    function fail(){if(done)return;done=true;sending=false;btn.disabled=false;$('spinner').style.display='none';$('btnTxt').textContent='Book My Demo Class';$('sendErr').classList.add('show');}
+    fetch(url,{method:'GET',mode:'no-cors',keepalive:true}).then(function(){
+      if(done)return;done=true;clearTimeout(t);
+      if(typeof gtag==='function'){var ud={phone_number:'+'+phone};if(email)ud.email=email;gtag('set','user_data',ud);}
+      fireConversion();
+      ev('generate_lead',{form_id:'french-demo-lead',french_level:level,goal:goal});
+      if(window.fbq)window.fbq('track','Lead');
+      var msg='Hi PrepEve! I just booked a French demo class.\n\nName: '+name+'\nFrench level: '+level+'\nGoal: '+goal+'\nClass time: '+slot+(crs?'\nCRS: '+crs:'');
+      $('okWa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
+      $('okName').textContent=name.split(' ')[0];$('okPhone').textContent='+'+phone;
+      $('formBody').style.display='none';$('formOk').style.display='block';$('formOk').focus();
+    }).catch(fail);
+  });
+})();
 </script>
 <script src="/assets/js/prepeve.js?v=734bd72b" defer></script>
 </body>
