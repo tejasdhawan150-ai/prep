@@ -12,7 +12,8 @@ var SOURCES = {
   'ielts-band-7': 'Band 7 page',
   'ielts-canada-pr': 'Canada PR page',
   'ielts-retake': 'Retake page',
-  'band-calculator': 'Band calculator'
+  'band-calculator': 'Band calculator',
+  'french-demo': 'French demo'
 };
 
 function doGet(e) { return save_(e); }
