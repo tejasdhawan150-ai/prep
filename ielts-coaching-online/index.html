@@ -423,8 +423,8 @@
             <input type="text" id="fname" name="name" autocomplete="name" placeholder="e.g. Priya Sharma" required/>
             <div class="field-err" id="fname-err" role="alert">Please enter your full name</div></div>
           <div class="field"><label for="phone">Phone number (WhatsApp) <span class="req">*</span></label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="10-digit mobile number" required/>
-            <div class="field-err" id="phone-err" role="alert">Please enter a valid 10-digit mobile number</div></div>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="10-digit mobile, or +1 for Canada" required/>
+            <div class="field-err" id="phone-err" role="alert">Please enter a valid mobile number (add country code if outside India)</div></div>
           <div class="field"><label for="band">Target IELTS band <span class="req">*</span></label>
             <select id="band" name="band" required><option value="">Select band</option><option>6.0</option><option>6.5</option><option>7.0</option><option>7.5</option><option>8.0+</option><option>Not sure yet</option></select>
             <div class="field-err" id="band-err" role="alert">Please choose your target band</div></div>
@@ -758,7 +758,10 @@
   var $=function(id){return document.getElementById(id);}, val=function(id){return ($(id).value||'').trim();};
   function ev(n,p){if(typeof gtag==='function')gtag('event',n,p||{});}
   function setErr(id,on){var fld=$(id).closest('.field');fld.classList.toggle('has-err',on);$(id).setAttribute('aria-invalid',on?'true':'false');}
-  function normPhone(raw){var d=raw.replace(/\D/g,'');if(d.length===12&&d.indexOf('91')===0)d=d.slice(2);if(d.length===11&&d[0]==='0')d=d.slice(1);return d;}
+  var CC=/[?&]cc=1(&|$)/.test(location.search)?'1':'91';
+  if(CC==='1'){var ph0=document.getElementById('phone');if(ph0)ph0.placeholder='e.g. 604 555 1234';}
+  function normPhone(raw){var intl=/^\s*(\+|00)/.test(raw),d=raw.replace(/\D/g,'');if(/^00/.test(d))d=d.slice(2);if(!intl&&d.length===11&&d[0]==='0')d=d.slice(1);if(!intl&&d.length===10)d=(CC==='1'?'1':(/^[6-9]/.test(d)?'91':''))+d;return d;}
+  function okPhone(d){return d.indexOf('91')===0?/^91[6-9]\d{9}$/.test(d):/^[1-9]\d{9,14}$/.test(d);}
   ['fname','phone','email','band'].forEach(function(id){$(id).addEventListener('input',function(){setErr(id,false);});$(id).addEventListener('change',function(){setErr(id,false);});});
   // "Talk to an IELTS Expert" links focus the first field
   document.querySelectorAll('a[href="#lead"]').forEach(function(a){a.addEventListener('click',function(){setTimeout(function(){if(f.style.display!=='none')$('fname').focus({preventScroll:true});},450);});});
@@ -770,27 +773,27 @@
     var name=val('fname'),phone=normPhone(val('phone')),email=val('email').toLowerCase(),band=val('band'),when=val('when')||'Not decided',slot=val('slot')||'Flexible';
     var bad=[];
     if(name.length<2||!/[a-zA-Z\u0900-\u097F]/.test(name))bad.push('fname');
-    if(!/^[6-9]\d{9}$/.test(phone))bad.push('phone');
+    if(!okPhone(phone))bad.push('phone');
     if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email))bad.push('email');
     if(!band)bad.push('band');
     ['fname','phone','email','band'].forEach(function(id){setErr(id,bad.indexOf(id)>-1);});
     if(bad.length){$(bad[0]).focus();ev('form_error',{form_id:'ielts-coaching-lead',field:bad[0]});return;}
     sending=true;btn.disabled=true;btn.classList.add('loading');$('spinner').style.display='block';$('btnTxt').textContent='Sending…';
     ev('form_submit',{form_id:'ielts-coaching-lead',target_band:band,test_timing:when});
-    var url=SHEET+'?name='+encodeURIComponent(name)+'&phone='+encodeURIComponent('91'+phone)+'&email='+encodeURIComponent(email)+'&band='+encodeURIComponent('Band '+band)+'&when='+encodeURIComponent(when)+'&slot='+encodeURIComponent(slot)+'&source=ielts-coaching-lp';
+    var url=SHEET+'?name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone)+'&email='+encodeURIComponent(email)+'&band='+encodeURIComponent('Band '+band)+'&when='+encodeURIComponent(when)+'&slot='+encodeURIComponent(slot)+'&source=ielts-coaching-lp';
     var done=false;
     var t=setTimeout(function(){fail();},12000);
     function fail(){if(done)return;done=true;sending=false;btn.disabled=false;btn.classList.remove('loading');$('spinner').style.display='none';$('btnTxt').textContent='Talk to an IELTS Expert';$('sendErr').classList.add('show');ev('lead_error',{form_id:'ielts-coaching-lead'});}
     fetch(url,{method:'GET',mode:'no-cors',keepalive:true}).then(function(){
       if(done)return;done=true;clearTimeout(t);
       // Lead captured: Google Ads conversion (with enhanced conversion data), GA4 lead, Meta Lead
-      if(typeof gtag==='function'){var ud={phone_number:'+91'+phone};if(email)ud.email=email;gtag('set','user_data',ud);}
+      if(typeof gtag==='function'){var ud={phone_number:'+'+phone};if(email)ud.email=email;gtag('set','user_data',ud);}
       if(typeof fireConv==='function')fireConv();
       ev('generate_lead',{form_id:'ielts-coaching-lead',target_band:band,test_timing:when});
       if(window.fbq)window.fbq('track','Lead');
-      var msg='Hi PrepEve! I just requested a call with an IELTS expert.\n\nName: '+name+'\nPhone: +91'+phone+(email?'\nEmail: '+email:'')+'\nTarget band: '+band+'\nTest: '+when+'\nClass time: '+slot;
+      var msg='Hi PrepEve! I just requested a call with an IELTS expert.\n\nName: '+name+'\nPhone: +'+phone+(email?'\nEmail: '+email:'')+'\nTarget band: '+band+'\nTest: '+when+'\nClass time: '+slot;
       $('okWa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
-      $('okName').textContent=name.split(' ')[0];$('okPhone').textContent='+91 '+phone;
+      $('okName').textContent=name.split(' ')[0];$('okPhone').textContent='+'+phone;
       $('formBody').style.display='none';$('formOk').style.display='block';$('formOk').focus();
       try{sessionStorage.setItem('pv_lead_done','1');}catch(x){}
     }).catch(fail);
