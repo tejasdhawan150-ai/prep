@@ -176,7 +176,7 @@ p{max-width:68ch}
 .faq details[open]{border-color:#C7D6F6;box-shadow:var(--sh-sm)}
 .faq summary{list-style:none;cursor:pointer;padding:18px 52px 18px 20px;font-family:var(--f-head);font-weight:700;color:var(--ink);position:relative}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.5rem;font-weight:400;color:var(--blue);transition:transform .2s}
+.faq summary::after{content:"+";content:"+" / "";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.5rem;font-weight:400;color:var(--blue);transition:transform .2s}
 .faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
 .faq details>div{padding:0 20px 20px;color:var(--muted)}
 
@@ -331,8 +331,8 @@ p{text-wrap:pretty}
 .opt-fields{margin:4px 0 14px}
 .opt-fields summary{cursor:pointer;font-size:.9rem;font-weight:600;color:var(--blue);padding:6px 0;list-style:none}
 .opt-fields summary::-webkit-details-marker{display:none}
-.opt-fields summary::before{content:"+ "}
-.opt-fields[open] summary::before{content:"− "}
+.opt-fields summary::before{content:"+ ";content:"+ " / ""}
+.opt-fields[open] summary::before{content:"− ";content:"− " / ""}
 .opt-fields .f2{margin-top:8px}
 .hp-field{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
 #next-cd{font-weight:600;color:var(--ink)}
