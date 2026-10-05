@@ -13,7 +13,8 @@ var SOURCES = {
   'ielts-canada-pr': 'Canada PR page',
   'ielts-retake': 'Retake page',
   'band-calculator': 'Band calculator',
-  'french-demo': 'French demo'
+  'french-demo': 'French demo',
+  'pte-coaching': 'PTE page'
 };
 
 function doGet(e) { return save_(e); }
