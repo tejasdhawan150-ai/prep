@@ -761,7 +761,7 @@
   var CC=/[?&]cc=1(&|$)/.test(location.search)?'1':'91';
   if(CC==='1'){var ph0=document.getElementById('phone');if(ph0)ph0.placeholder='e.g. 604 555 1234';}
   function normPhone(raw){var intl=/^\s*(\+|00)/.test(raw),d=raw.replace(/\D/g,'');if(/^00/.test(d))d=d.slice(2);if(!intl&&d.length===11&&d[0]==='0')d=d.slice(1);if(!intl&&d.length===10)d=(CC==='1'?'1':(/^[6-9]/.test(d)?'91':''))+d;return d;}
-  function okPhone(d){return d.indexOf('91')===0?/^91[6-9]\d{9}$/.test(d):/^[1-9]\d{9,14}$/.test(d);}
+  function okPhone(d,raw){if(d.indexOf('91')===0)return /^91[6-9]\d{9}$/.test(d);if(CC==='1'&&/^1[2-9]\d{9}$/.test(d))return true;return /^\s*(\+|00)/.test(raw)&&/^[1-9]\d{9,14}$/.test(d);}
   ['fname','phone','email','band'].forEach(function(id){$(id).addEventListener('input',function(){setErr(id,false);});$(id).addEventListener('change',function(){setErr(id,false);});});
   // "Talk to an IELTS Expert" links focus the first field
   document.querySelectorAll('a[href="#lead"]').forEach(function(a){a.addEventListener('click',function(){setTimeout(function(){if(f.style.display!=='none')$('fname').focus({preventScroll:true});},450);});});
@@ -773,7 +773,7 @@
     var name=val('fname'),phone=normPhone(val('phone')),email=val('email').toLowerCase(),band=val('band'),when=val('when')||'Not decided',slot=val('slot')||'Flexible';
     var bad=[];
     if(name.length<2||!/[a-zA-Z\u0900-\u097F]/.test(name))bad.push('fname');
-    if(!okPhone(phone))bad.push('phone');
+    if(!okPhone(phone,val('phone')))bad.push('phone');
     if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email))bad.push('email');
     if(!band)bad.push('band');
     ['fname','phone','email','band'].forEach(function(id){setErr(id,bad.indexOf(id)>-1);});
