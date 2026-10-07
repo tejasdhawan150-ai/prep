@@ -341,6 +341,31 @@
       "source": "/canada-pr-language-test",
       "destination": "/canada-pr-language-requirements",
       "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/lead-collection-1",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-8",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/book-online",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/grammar",
+      "destination": "/ielts-preparation",
+      "permanent": true
     }
   ],
   "headers": [
