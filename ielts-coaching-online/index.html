@@ -352,6 +352,24 @@
 @media(min-width:1000px){.hero-grid .lp-form{grid-column:2;grid-row:1 / span 3;align-self:start}}
 @media(max-width:999px){.hero .hero-cta,.hero .hero-wa{display:none}.hero .lead{margin-bottom:6px}}
 @media(max-width:999px){.hero .hproof{display:none!important}}
+/* Phones: whole form (name, phone, band, button) on the first screen; hero text kept */
+@media(max-width:600px){
+.hero{padding-top:12px!important}
+.hero-grid{gap:14px}
+.hero .badge{font-size:11px;padding:5px 11px;margin-bottom:8px}
+.hero h1{font-size:1.62rem!important;line-height:1.1!important;max-width:none;margin:0}
+.hero .lead{font-size:.95rem;line-height:1.5;margin:6px 0 0}
+.lp-form{padding:16px 16px 18px}
+.lp-form h2{font-size:1.2rem;margin:0}
+.lp-form .sub{font-size:.84rem;margin:2px 0 10px}
+.lp-form .field{position:relative;margin-bottom:10px}
+.lp-form .field label{position:absolute;left:15px;top:6px;z-index:1;margin:0;font-size:11.5px;color:var(--muted);pointer-events:none}
+.lp-form .field input,.lp-form .field select{min-height:54px;padding:22px 14px 6px}
+.lp-form .field select{padding-right:40px}
+.lp-form .opt-fields{margin:0 0 10px}
+.lp-form .opt-fields summary{font-size:.84rem;padding:4px 0}
+.lp-form #submitBtn{min-height:52px;padding-top:12px;padding-bottom:12px}
+}
 .hp-list .avatar-photo{width:44px;height:44px}
 .trainer-big{display:grid;gap:26px;padding:26px;align-items:center}
 @media(min-width:760px){.trainer-big{grid-template-columns:320px 1fr;gap:40px;padding:36px}}
@@ -424,7 +442,7 @@
       <form id="leadForm" data-form="ielts-coaching-lead" novalidate>
         <div id="formBody">
           <h2>Talk to an IELTS expert</h2>
-          <p class="sub">Takes 20 seconds. A counsellor calls you back.</p>
+          <p class="sub">20 seconds. A counsellor calls you back.</p>
           <div class="field"><label for="fname">Full name <span class="req">*</span></label>
             <input type="text" id="fname" name="name" autocomplete="name" placeholder="e.g. Priya Sharma" required/>
             <div class="field-err" id="fname-err" role="alert">Please enter your full name</div></div>
@@ -434,7 +452,7 @@
           <div class="field"><label for="band">Target IELTS band <span class="req">*</span></label>
             <select id="band" name="band" required><option value="">Select band</option><option>6.0</option><option>6.5</option><option>7.0</option><option>7.5</option><option>8.0+</option><option>Not sure yet</option></select>
             <div class="field-err" id="band-err" role="alert">Please choose your target band</div></div>
-          <details class="opt-fields"><summary>Add email, test date &amp; class time (optional)</summary>
+          <details class="opt-fields"><summary>Email, test date &amp; class time (optional)</summary>
             <div class="field"><label for="email">Email <span class="hint">(optional)</span></label>
             <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com"/>
             <div class="field-err" id="email-err" role="alert">Please enter a valid email address</div></div>
@@ -790,9 +808,12 @@
     ev('form_submit',{form_id:'ielts-coaching-lead',target_band:band,test_timing:when});
     var url=SHEET+'?name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone)+'&email='+encodeURIComponent(email)+'&band='+encodeURIComponent('Band '+band)+'&when='+encodeURIComponent(when)+'&slot='+encodeURIComponent(slot)+'&source=ielts-coaching-lp';
     var done=false;
-    var t=setTimeout(function(){fail();},12000);
     function fail(){if(done)return;done=true;sending=false;btn.disabled=false;btn.classList.remove('loading');$('spinner').style.display='none';$('btnTxt').textContent='Talk to an IELTS Expert';$('sendErr').classList.add('show');ev('lead_error',{form_id:'ielts-coaching-lead'});}
-    fetch(url,{method:'GET',mode:'no-cors',keepalive:true}).then(function(){
+    if(navigator.onLine===false){fail();return;}
+    // The Sheet script often takes several seconds to reply. keepalive lets the request finish in the background, so show success without waiting for it.
+    var t=setTimeout(ok,900);
+    fetch(url,{method:'GET',mode:'no-cors',keepalive:true}).then(ok).catch(function(){if(done){ev('lead_error',{form_id:'ielts-coaching-lead',after_ok:1});return;}clearTimeout(t);fail();});
+    function ok(){
       if(done)return;done=true;clearTimeout(t);
       // Lead captured: Google Ads conversion (with enhanced conversion data), GA4 lead, Meta Lead
       if(typeof gtag==='function'){var ud={phone_number:'+'+phone};if(email)ud.email=email;gtag('set','user_data',ud);}
@@ -804,7 +825,7 @@
       $('okName').textContent=name.split(' ')[0];$('okPhone').textContent='+'+phone;
       $('formBody').style.display='none';$('formOk').style.display='block';$('formOk').focus();
       try{sessionStorage.setItem('pv_lead_done','1');}catch(x){}
-    }).catch(fail);
+    }
   });
 })();
 </script>
