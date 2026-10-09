@@ -311,6 +311,19 @@
 .lp-ok .okc{width:64px;height:64px;border-radius:50%;background:var(--ok-lt);color:var(--ok);display:grid;place-items:center;margin:0 auto 14px}
 .lp-ok .okc svg{width:32px;height:32px}
 .lp-ok h3{font-size:1.4rem}.lp-ok p{color:var(--ink-2);margin:8px 0 16px}
+.hero-grid>.lp-form,.ok-proof{min-width:0}
+.ok-proof{margin-top:22px;padding-top:18px;border-top:1px dashed var(--line-2);text-align:left}
+.lp-ok .ok-proof p{margin:0}
+.ok-proof .okp-h{font-family:var(--f-head);font-weight:800;color:var(--ink);font-size:1rem;line-height:1.3;margin:0 0 10px}
+.okp-sc,.okp-rv{display:flex;align-items:flex-start;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 8px;margin:0 -2px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.okp-sc .sc-item,.okp-rv .sc-item{margin:0;scroll-snap-align:start;position:relative;flex:0 0 auto}
+.okp-sc .sc-item{width:132px}
+.okp-sc .sc-item b{position:absolute;left:6px;bottom:6px;background:#16A34A;color:#fff;font:800 12px/1 var(--f-head);padding:5px 8px;border-radius:7px;pointer-events:none}
+.okp-rv .sc-item{width:82%;max-width:300px}
+.ok-proof .okp-cap{font-size:.78rem;color:var(--muted);margin:2px 0 16px}
+.okp-rate{display:flex;align-items:center;gap:8px;font-size:.95rem;color:var(--ink-2);margin:0 0 10px;text-decoration:none}
+.okp-rate b{font-family:var(--f-head);color:var(--ink)}.okp-rate .stars{color:#F5B301;letter-spacing:1px}
+.okp-more{display:block;text-align:center;font-weight:700;color:var(--blue);font-size:.92rem;margin-top:8px;min-height:32px;line-height:32px}
 #submitBtn[disabled]{opacity:.75;cursor:wait}
 #spinner{display:none}
 @media(max-width:999px){.lp-copy{order:1}.lp-form{order:2}.lp-more{order:3}.lp-grid .hero-trust{order:4}.lp-hero{padding:18px 0 40px}.lp-hero .badge{font-size:.72rem}.lp-hero h1{font-size:1.85rem;margin:10px 0 10px}.lp-lead{font-size:1rem}.lp-form h2{font-size:1.3rem}.lp-form .sub{margin-bottom:12px}}
@@ -474,6 +487,26 @@
           <h3>Thanks, <span id="okName">we've got your details</span>!</h3>
           <p>An IELTS counsellor will contact you shortly on <b id="okPhone"></b>. Want a faster reply? Send us a message on WhatsApp now.</p>
           <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%27d%20like%20to%20talk%20to%20an%20IELTS%20expert%20about%20coaching." id="okWa" class="btn btn-wa btn-lg btn-block" target="_blank" rel="noopener" data-cta="lp-success-wa">Message us on WhatsApp</a>
+          <div class="ok-proof">
+            <p class="okp-h">While you wait: real scorecards from PrepEve students</p>
+            <div class="okp-sc" role="region" aria-label="Student scorecards, scroll sideways" tabindex="0">
+              <figure class="sc-item"><picture><source srcset="/assets/img/results/f10-v2.webp" type="image/webp"><img src="/assets/img/results/f10-v2.jpg" alt="IELTS General Training Test Report Form, overall 8.5 shared by a PrepEve student. Personal details hidden." loading="lazy" width="591" height="868"></picture><b>GT 8.5</b></figure>
+              <figure class="sc-item"><picture><source srcset="/assets/img/results/f09-v2.webp" type="image/webp"><img src="/assets/img/results/f09-v2.jpg" alt="IELTS General Training Test Report Form, overall 8.0 shared by a PrepEve student. Personal details hidden." loading="lazy" width="591" height="874"></picture><b>GT 8.0</b></figure>
+              <figure class="sc-item"><picture><source srcset="/assets/img/results/s05-v2.webp" type="image/webp"><img src="/assets/img/results/s05-v2.jpg" alt="IELTS result shared by a PrepEve student: Overall 8 (L 8, R 9, S 7, W 7) with thank-you message. Personal details hidden." loading="lazy" width="591" height="776"></picture><b>Band 8</b></figure>
+              <figure class="sc-item"><picture><source srcset="/assets/img/results/f04-v2.webp" type="image/webp"><img src="/assets/img/results/f04-v2.jpg" alt="IELTS Academic Test Report Form, overall 7.5 shared by a PrepEve student. Personal details hidden." loading="lazy" width="720" height="907"></picture><b>Academic 7.5</b></figure>
+              <figure class="sc-item"><picture><source srcset="/assets/img/results/f12-v2.webp" type="image/webp"><img src="/assets/img/results/f12-v2.jpg" alt="IELTS General Training Test Report Form, overall 7.5 shared by a PrepEve student. Personal details hidden." loading="lazy" width="591" height="868"></picture><b>GT 7.5</b></figure>
+              <figure class="sc-item"><picture><source srcset="/assets/img/results/f11-v2.webp" type="image/webp"><img src="/assets/img/results/f11-v2.jpg" alt="IELTS Academic Test Report Form, overall 7.5 shared by a PrepEve student. Personal details hidden." loading="lazy" width="591" height="868"></picture><b>Academic 7.5</b></figure>
+            </div>
+            <p class="okp-cap">Details hidden for privacy · tap to enlarge · swipe →</p>
+            <a class="okp-rate" href="https://share.google/zxOM5s1aDVqw20ORd" target="_blank" rel="noopener" data-cta="lp-success-google"><span class="stars" aria-hidden="true">★★★★★</span><span><b>4.7</b> on Google · 300+ reviews</span></a>
+            <div class="okp-rv" role="region" aria-label="Google reviews, scroll sideways" tabindex="0">
+              <figure class="sc-item"><picture><source srcset="/assets/img/reviews/meera.webp" type="image/webp"><img src="/assets/img/reviews/meera.jpg" alt="5-star Google review of PrepEve by Meera Bhatia" loading="lazy" width="652" height="437"></picture></figure>
+              <figure class="sc-item"><picture><source srcset="/assets/img/reviews/rajesh.webp" type="image/webp"><img src="/assets/img/reviews/rajesh.jpg" alt="5-star Google review of PrepEve by Rajesh R" loading="lazy" width="647" height="430"></picture></figure>
+              <figure class="sc-item"><picture><source srcset="/assets/img/reviews/anchal.webp" type="image/webp"><img src="/assets/img/reviews/anchal.jpg" alt="5-star Google review of PrepEve by Anchal Sharma" loading="lazy" width="680" height="476"></picture></figure>
+              <figure class="sc-item"><picture><source srcset="/assets/img/reviews/shashikanth.webp" type="image/webp"><img src="/assets/img/reviews/shashikanth.jpg" alt="5-star Google review of PrepEve by Shashikanth Revelly" loading="lazy" width="649" height="412"></picture></figure>
+            </div>
+            <a class="okp-more" href="https://share.google/zxOM5s1aDVqw20ORd" target="_blank" rel="noopener" data-cta="lp-success-google-all">Read all reviews on Google →</a>
+          </div>
         </div>
       </form>
     </div>
