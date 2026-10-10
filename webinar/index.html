@@ -83,6 +83,30 @@ function fireConv(){
 .foot-min{padding:28px 0}
 .foot-min .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
 .foot-min a:hover{color:#fff}
+.local-time{display:block;margin-top:6px;font-size:.84rem;color:var(--muted)}
+.local-time[hidden]{display:none}
+/* Phones: name, WhatsApp number and the button on the first screen; hero text kept */
+@media(max-width:600px){
+.hero{padding-top:12px!important}
+.hero-grid{gap:14px}
+.hero .badge{font-size:11px;padding:5px 11px;margin-bottom:8px}
+.hero h1{font-size:1.62rem!important;line-height:1.1;margin:0 0 6px}
+.hero .lead{font-size:.95rem;line-height:1.5;margin:0}
+.facts{margin-top:10px;gap:5px}.facts li{padding:4px 10px;font-size:.78rem}
+.facts{display:none}
+.hero-form{padding:16px 16px 18px}
+.hero-form h2{font-size:1.2rem;margin:0}
+.hero-form .form-sub{font-size:.86rem;margin:2px 0 10px}
+.cd-left{margin-top:4px;padding:3px 9px;font-size:.78rem}
+.hero-form .field{position:relative;margin-bottom:10px}
+.hero-form .field label{position:absolute;left:15px;top:6px;z-index:1;margin:0;font-size:11.5px;color:var(--muted);pointer-events:none}
+.hero-form .field input,.hero-form .field select{min-height:54px;padding:22px 14px 6px}
+.hero-form .field select{padding-right:40px}
+.hero-form .opt-fields{margin:0 0 10px}
+.hero-form .opt-fields summary{font-size:.84rem;padding:4px 0}
+#submit-btn{min-height:52px;padding-top:12px;padding-bottom:12px}
+.form-note{margin-top:10px}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -140,14 +164,14 @@ function fireConv(){
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy rv">
-      <span class="badge"><span class="dot"></span>Free live IELTS session</span>
+      <span class="badge"><span class="dot"></span>Free 60-min live IELTS session</span>
       <h1>Find out exactly where you're losing IELTS marks<span class="h1-x"> — <em>in one free 60-minute live session</em></span></h1>
       <p class="lead">See how examiners actually mark you, spot what's holding your band back, and leave knowing what to fix first.</p>
       <ul class="facts" aria-label="Session details">
         <li>Free</li>
         <li>Live online</li>
-        <li><span id="chip-date">Sat &amp; Sun</span></li>
-        <li><span id="chip-time">7:00 PM IST</span></li>
+        <li class="f-when"><span id="chip-date">Sat &amp; Sun</span></li>
+        <li class="f-when"><span id="chip-time">7:00 PM IST</span></li>
         <li>60 min</li>
       </ul>
     </div>
@@ -155,7 +179,7 @@ function fireConv(){
     <div class="form-card hero-form rv" id="register" data-hide-mcta>
       <div id="reg-form" data-form="webinar-register">
         <h2>Save your free seat</h2>
-        <p class="form-sub"><span id="next-cd">Every Sat &amp; Sun · 7:00 PM IST</span><span class="cd-left" id="next-left" hidden></span></p>
+        <p class="form-sub"><span id="next-cd">Every Sat &amp; Sun · 7:00 PM IST</span><span class="cd-left" id="next-left" hidden></span><span class="local-time" id="local-time" hidden></span></p>
         <div class="field">
           <label for="fname">Your name <span class="req">*</span></label>
           <input type="text" id="fname" placeholder="e.g. Priya Sharma" autocomplete="name"/>
@@ -163,16 +187,16 @@ function fireConv(){
         </div>
         <div class="field">
           <label for="phone">WhatsApp number — your joining link comes here <span class="req">*</span></label>
-          <input type="tel" id="phone" placeholder="10-digit mobile number" autocomplete="tel" inputmode="tel"/>
-          <div class="field-err" id="phone-err" role="alert">Please enter your 10-digit WhatsApp number so we can send your link</div>
-        </div>
-        <div class="field">
-          <label for="email">Email <span class="hint">(optional)</span></label>
-          <input type="email" id="email" placeholder="you@example.com" autocomplete="email" inputmode="email"/>
-          <div class="field-err" id="email-err" role="alert">Please check your email address, or leave it blank</div>
+          <input type="tel" id="phone" placeholder="10-digit mobile, or +country code" autocomplete="tel" inputmode="tel"/>
+          <div class="field-err" id="phone-err" role="alert">Please enter a valid WhatsApp number (add the country code if outside India)</div>
         </div>
         <details class="opt-fields">
-          <summary>Add your exam &amp; target band (optional)</summary>
+          <summary>Add email, exam &amp; target band (optional)</summary>
+          <div class="field">
+            <label for="email">Email <span class="hint">(optional)</span></label>
+            <input type="email" id="email" placeholder="you@example.com" autocomplete="email" inputmode="email"/>
+            <div class="field-err" id="email-err" role="alert">Please check your email address, or leave it blank</div>
+          </div>
           <div class="f2">
           <div class="field">
             <label for="exam">Which IELTS? (optional)</label>
@@ -394,9 +418,10 @@ function fireConv(){
       <div>
         <div class="inst-role">Founder &amp; Trainer, PrepEve · Regulated Canadian Immigration Consultant</div>
         <h3>Sanjita</h3>
-        <p>Sanjita built PrepEve from the ground up around one idea: students improve fastest when a trainer actually hears them and corrects them. She teaches IELTS, CELPIP, PTE, TOEFL and Duolingo.</p>
+        <p>Sanjita built PrepEve from the ground up around one idea: students improve fastest when a trainer actually hears them and corrects them. She has over 8 years of experience and teaches IELTS, CELPIP, PTE, TOEFL and Duolingo.</p>
         <p>As a Regulated Canadian Immigration Consultant, she also knows why your band matters, not just how the test works. Bring your questions about your score and your plans.</p>
         <div class="pills">
+          <span class="badge">8+ years of experience</span>
           <span class="badge">15,000+ students trained</span>
           <span class="badge badge-gold">4.7★ on Google</span>
           <span class="badge badge-ok">Regulated Canadian Immigration Consultant</span>
@@ -528,6 +553,19 @@ var PV_NEXT = (function(){
   }
   tick(); setInterval(tick, 30000);
 })();
+/* ── Viewers outside India: show the session in their own time ── */
+(function(){
+  var el = document.getElementById('local-time');
+  if (!el || new Date().getTimezoneOffset() === -330 || !window.Intl) return;
+  try {
+    var t = new Intl.DateTimeFormat(undefined, { weekday:'short', hour:'numeric', minute:'2-digit', timeZoneName:'short' }).format(new Date(PV_NEXT.first.t));
+    el.textContent = 'In your time: ' + t; el.hidden = false;
+  } catch (e) {}
+})();
+/* ── Phone: 10-digit Indian numbers, or any number typed with + / 00 and its country code ── */
+var CC = /[?&]cc=1(&|$)/.test(location.search) ? '1' : '91';
+function normPhone(raw){var intl=/^\s*(\+|00)/.test(raw),d=raw.replace(/\D/g,'');if(/^00/.test(d))d=d.slice(2);if(!intl&&d.length===11&&d[0]==='0')d=d.slice(1);if(!intl&&d.length===10)d=(CC==='1'?'1':(/^[6-9]/.test(d)?'91':''))+d;return d;}
+function okPhone(d,raw){if(d.indexOf('91')===0)return /^91[6-9]\d{9}$/.test(d);if(CC==='1'&&/^1[2-9]\d{9}$/.test(d))return true;return /^\s*(\+|00)/.test(raw)&&/^[1-9]\d{9,14}$/.test(d);}
 /* ── Form submit ── */
 function pvUserData(phone, email){
   if(typeof gtag!=='function') return;
@@ -541,9 +579,8 @@ function pvUserData(phone, email){
 
 document.getElementById('submit-btn').addEventListener('click', function(){
   var name = v('fname');
-  var rawPhone = v('phone').replace(/\s/g,'');
-  var phone = rawPhone.replace(/\D/g,'');
-  if(phone.length === 10) phone = '91' + phone;
+  var rawPhone = v('phone');
+  var phone = normPhone(rawPhone);
 
   var ok = true;
   document.getElementById('fname-err').style.display = 'none';
@@ -557,7 +594,7 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     document.getElementById('fname').focus();
     ok = false;
   }
-  if(phone.replace(/\D/g,'').length < 11){
+  if(!okPhone(phone, rawPhone)){
     document.getElementById('phone-err').style.display = 'block';
     document.getElementById('phone').setAttribute('aria-invalid','true');
     if(ok) document.getElementById('phone').focus();
@@ -567,6 +604,7 @@ document.getElementById('submit-btn').addEventListener('click', function(){
   document.getElementById('email-err').style.display = 'none';
   if(email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){
     document.getElementById('email-err').style.display = 'block';
+    document.querySelector('.opt-fields').open = true;
     if(ok) document.getElementById('email').focus();
     ok = false;
   }
@@ -586,9 +624,9 @@ document.getElementById('submit-btn').addEventListener('click', function(){
   fetch(SHEET + '?name=' + encodeURIComponent(name)
     + '&phone=' + encodeURIComponent(phone)
     + '&email=' + encodeURIComponent(email)
-    + '&source=webinar' + '&band=' + encodeURIComponent('Webinar|' + exam + '|Target:' + band)
-    + '&source=ielts-webinar',
-    {method:'GET', mode:'no-cors'}).catch(function(){});
+    + '&band=' + encodeURIComponent('Webinar|' + exam + '|Target:' + band)
+    + '&source=webinar',
+    {method:'GET', mode:'no-cors', keepalive:true}).catch(function(){});
 
   // Enhanced Conversions: gtag hashes these before sending
   pvUserData(phone, email);
@@ -603,9 +641,9 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     + '\nTarget Band: ' + band;
 
   var waUrl = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+  window.open(waUrl, '_blank');
 
   setTimeout(function(){
-    window.open(waUrl, '_blank');
     document.getElementById('reg-form').style.display = 'none';
     document.getElementById('success-wrap').style.display = 'block';
     setTimeout(function(){
