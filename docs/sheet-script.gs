@@ -22,6 +22,8 @@ function doPost(e) { return save_(e); }
 
 function save_(e) {
   var p = (e && e.parameter) || {};
+  // Every website form sends a phone number. Skip empty hits (bots calling this URL directly).
+  if (String(p.phone || '').replace(/\D/g, '').length < 8) return ContentService.createTextOutput('skip');
   var lock = LockService.getScriptLock();
   lock.waitLock(10000);
   try {
