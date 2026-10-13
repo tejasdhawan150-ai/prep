@@ -111,6 +111,7 @@ function gtag_report_conversion(url) {
     <div class="form-card" id="register" data-hide-mcta data-form="book-demo">
       <h2>Book your free assessment class</h2>
       <p class="form-sub">Takes 30 seconds. We'll confirm your slot on WhatsApp within 30 minutes.</p>
+      <div class="hp-field" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"/></div>
 
       <div class="field">
         <label for="fname">Your name <span class="req">*</span><span class="hint">So your trainer knows who they're meeting</span></label>
@@ -384,6 +385,8 @@ function pvUserData(phone, email){
 
   btn.addEventListener('click',function(){
     var fname=val('fname');
+    // Bots: hidden field filled, or a random-letter name (e.g. hpCFamijEakNsIMaJhix). No lead, no conversion.
+    if(val('website')||(/^[A-Za-z]{12,}$/.test(fname)&&(fname.slice(1).match(/[A-Z]/g)||[]).length>=3))return;
     var phone=val('phone').replace(/[\s\-\(\)\+]/g,'');
     var ok=true;
 
