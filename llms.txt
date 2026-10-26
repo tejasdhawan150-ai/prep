@@ -1,52 +1,141 @@
 # PrepEve
 
-> PrepEve is an online IELTS coaching company based in India and Canada. It coaches IELTS (Academic and General Training) and French for Canada PR. Classes are taught live online in batches of at most 5 students, with trainer-marked writing and 1-on-1 speaking mock interviews. 15,000+ students trained; rated 4.7 on Google from 300+ reviews.
+> PrepEve is an online coaching company for IELTS (Academic and General Training), PTE, CELPIP and French for Canada PR, for learners in India and Canada. Classes are live online, with trainer-marked writing and 1-on-1 speaking practice. 15,000+ students trained; rated 4.7 on Google from 300+ reviews.
 
 Key facts:
-- Format: live online classes, max 5 students per batch; also 1-on-1 mentorship and a self-paced course.
-- Programs and prices (INR, 30-day programs): Self-Paced ₹4,999; Live Coaching ₹14,999; 1-on-1 Mentorship ₹19,999.
-- Free options: a free live demo class (level assessed, study plan to keep) and a free 60-minute live IELTS webinar every Saturday and Sunday at 7:00 PM IST.
-- Trainers: Sanjita (founder and trainer, Regulated Canadian Immigration Consultant), Lesancy Sharma (master trainer), Khushpreet (trainer).
-- French for Canada PR: coaching toward NCLC 7, which can add up to 50 CRS points in Express Entry; 6,000+ students taught French.
+- Format: live online classes; also 1-on-1 mentorship and a self-paced course.
+- Fees: Self-Paced ₹4,999. Live Coaching and 1-on-1 Mentorship fees are shared on request on WhatsApp.
+- Free options: a free live demo class with a level check, and a free 60-minute live IELTS webinar on Saturdays and Sundays at 7:00 PM IST.
+- Founder: Sanjita, trainer with over 8 years of experience and a Regulated Canadian Immigration Consultant (RCIC). Trainers: Lesancy Sharma (master trainer) and Khushpreet.
+- French for Canada PR: live online classes towards NCLC 7 for TEF Canada and TCF Canada. Every class is recorded, and timings suit learners in India and Canada. 6,000+ students taught French.
+- Refunds: a full refund within 3 days of payment, if you have attended no more than one live class (for Self-Paced, watched no more than one recorded lecture). See the refund policy.
 - Contact: WhatsApp +91 98777 14284 · YouTube @prepeveclasses · https://www.prepeve.com
+- PrepEve guides are general information. IRCC, IDP and other official bodies set the rules and decide applications.
 
-## Main pages
-- [Home — live online IELTS coaching](https://www.prepeve.com/): programs, pricing, trainers, student results, FAQ
-- [About PrepEve](https://www.prepeve.com/about): facts, programs, trainers, how coaching works
-- [Free IELTS webinar](https://www.prepeve.com/webinar): free 60-minute live strategy session, weekends 7:00 PM IST
-- [Free IELTS demo class](https://www.prepeve.com/book-demo): book a free live trial class
-- [French for Canada PR](https://www.prepeve.com/book-demo-french): French classes for Express Entry CRS points
+## Start here
+- [Online IELTS Coaching That Fixes Your Mistakes](https://www.prepeve.com/)
+- [About PrepEve — The PrepEve Method for IELTS & PTE](https://www.prepeve.com/about)
+- [Online IELTS Coaching in India: Live Classes](https://www.prepeve.com/online-ielts-coaching-india)
+- [IELTS Preparation: Guides, Tools and Coaching Options](https://www.prepeve.com/ielts-preparation)
+- [Free IELTS Webinar: Find Where You Lose Marks](https://www.prepeve.com/webinar)
+- [Free IELTS demo class](https://www.prepeve.com/book-demo)
+- [French Demo Class for Canada PR (+50 CRS)](https://www.prepeve.com/book-demo-french)
+- [Online French Coaching for Canada PR (TEF & TCF)](https://www.prepeve.com/french-online-coaching)
+- [PTE Coaching Online: Live PTE Classes With Trainers](https://www.prepeve.com/pte-coaching)
+- [PrepEve IELTS Blog: Guides and Study Plans](https://www.prepeve.com/blog)
+- [Refund Policy](https://www.prepeve.com/refund)
+
+## IELTS exam: fee, booking, format and results
+- [IELTS Exam Fee & Booking in India 2026: How to Book](https://www.prepeve.com/how-to-book-ielts-exam)
+- [How to Check IELTS Result Online (2026): TRF, Re-mark](https://www.prepeve.com/how-to-check-ielts-result)
+- [IELTS Exam Pattern 2026: Paper Format, Time & Marks](https://www.prepeve.com/ielts-exam-pattern)
+- [IELTS Sample Paper 2026: Practice Questions with Answers](https://www.prepeve.com/ielts-sample-paper)
+- [IELTS Eligibility 2026: Age Limit, Qualification & Passport](https://www.prepeve.com/ielts-eligibility)
+- [IELTS Mock Test: How to Take One and Use the Results](https://www.prepeve.com/ielts-mock-test)
+- [IELTS Band Descriptors Explained Simply (Band 6 vs 7)](https://www.prepeve.com/ielts-band-descriptors)
+- [How IELTS Band Scores Work: Rounding & Criteria](https://www.prepeve.com/ielts-guide/band-scores)
+- [IELTS Listening Band Score Chart & Calculator](https://www.prepeve.com/ielts-listening-band-score)
+- [IELTS Reading Band Score Chart: Academic & General](https://www.prepeve.com/ielts-reading-band-score)
+- [IELTS Validity for Canada PR: The 2-Year Rule](https://www.prepeve.com/ielts-validity-canada-pr)
+
+## IELTS preparation guides
+- [How to Prepare for IELTS at Home: Self-Study Plan 2026](https://www.prepeve.com/how-to-prepare-for-ielts-at-home)
+- [How Long to Prepare for IELTS? Realistic Timelines](https://www.prepeve.com/how-long-to-prepare-for-ielts)
+- [How to Score Band 7 in IELTS: A Practical Plan](https://www.prepeve.com/how-to-score-7-in-ielts)
+- [How to Score Band 8 in IELTS: What Changes From 7](https://www.prepeve.com/how-to-score-8-in-ielts)
+- [How to Score 7 in IELTS Writing: Criteria and Fixes](https://www.prepeve.com/how-to-score-7-in-ielts-writing)
+- [How to Score 8 in IELTS Writing: What Examiners Want](https://www.prepeve.com/how-to-score-8-in-ielts-writing)
+- [How to Score 8 in IELTS Speaking: Fluency and Accuracy](https://www.prepeve.com/how-to-score-8-in-ielts-speaking)
+- [How to Score 8 in IELTS Reading: Scores and Strategy](https://www.prepeve.com/how-to-score-8-in-ielts-reading)
+- [How to Score 8 in IELTS Listening: Scores and Tips](https://www.prepeve.com/how-to-score-8-in-ielts-listening)
+- [IELTS Listening: Format, Question Types and Tips](https://www.prepeve.com/ielts-listening)
+- [IELTS Reading: Academic vs General, Time Strategy](https://www.prepeve.com/ielts-reading)
+- [IELTS True False Not Given: Method & Practice](https://www.prepeve.com/ielts-reading-true-false-not-given)
+- [IELTS Speaking Cue Cards with Band 8 Sample Answers](https://www.prepeve.com/ielts-speaking-cue-cards)
+- [IELTS Speaking Part 1 Questions with Sample Answers](https://www.prepeve.com/ielts-speaking-part-1-questions)
+- [IELTS Speaking Part 3 Questions with Sample Answers](https://www.prepeve.com/ielts-speaking-part-3-questions)
+- [IELTS Writing Task 1 Academic: Format & Sample Answer](https://www.prepeve.com/ielts-writing-task-1-academic)
+- [IELTS Writing Task 2 Topics & Band 8 Sample Essay](https://www.prepeve.com/ielts-writing-task-2-topics)
+- [IELTS Writing Task 2 Mistakes That Keep You at 6.5](https://www.prepeve.com/ielts-guide/writing-task-2-mistakes)
+- [IELTS General Training Letter Samples (Formal & Informal)](https://www.prepeve.com/ielts-general-training-letter-samples)
+- [IELTS Vocabulary for Band 7: Words, Phrases & Collocations](https://www.prepeve.com/ielts-vocabulary-band-7)
 
 ## Choosing IELTS coaching
-- [IELTS preparation hub](https://www.prepeve.com/ielts-preparation): step-by-step roadmap and every guide
-- [How to choose online IELTS coaching in India](https://www.prepeve.com/best-online-ielts-coaching-india): what to compare, by provider type
-- [IELTS coaching fees in India](https://www.prepeve.com/ielts-coaching-fees-india): what fees pay for, hidden costs
-- [IELTS coaching for Band 7+](https://www.prepeve.com/best-ielts-coaching-for-band-7)
-- [IELTS coaching for working professionals](https://www.prepeve.com/ielts-coaching-for-working-professionals)
-- [IELTS Writing coaching](https://www.prepeve.com/ielts-writing-coaching) · [IELTS Speaking coaching](https://www.prepeve.com/ielts-speaking-coaching)
-- [IELTS for Canada PR](https://www.prepeve.com/ielts-coaching-for-canada) · [IELTS for the UK](https://www.prepeve.com/ielts-coaching-for-uk) · [IELTS for Australia](https://www.prepeve.com/ielts-coaching-for-australia)
+- [Best Online IELTS Coaching in India: How to Choose](https://www.prepeve.com/best-online-ielts-coaching-india)
+- [IELTS Coaching & Course Fees in India 2026](https://www.prepeve.com/ielts-coaching-fees-india)
+- [IELTS Coaching for Band 7+: What to Look For](https://www.prepeve.com/best-ielts-coaching-for-band-7)
+- [IELTS Coaching for Working Professionals](https://www.prepeve.com/ielts-coaching-for-working-professionals)
+- [IELTS Writing Coaching: From Band 6 to 7](https://www.prepeve.com/ielts-writing-coaching)
+- [IELTS Speaking Coaching: What Raises Your Band](https://www.prepeve.com/ielts-speaking-coaching)
+- [IELTS Coaching for Canada PR: General Training & CLB](https://www.prepeve.com/ielts-coaching-for-canada)
+- [IELTS for the UK: Visas & Universities](https://www.prepeve.com/ielts-coaching-for-uk)
+- [IELTS Coaching for Australia: Skilled & Student Visas](https://www.prepeve.com/ielts-coaching-for-australia)
+- [Online vs Offline IELTS Coaching in Chandigarh](https://www.prepeve.com/blog/online-vs-offline-ielts-coaching-chandigarh)
+- [IELTS Preparation While Working in Mohali or Panchkula](https://www.prepeve.com/blog/ielts-preparation-working-professionals-mohali-panchkula)
 
-## Language tests & PR (PrepEve coaches IELTS, PTE, CELPIP, TOEFL, Duolingo and French online)
-- [All language tests: which fits your goal](https://www.prepeve.com/language-tests)
-- [Canada PR language requirements (IRCC tests, CLB/NCLC)](https://www.prepeve.com/canada-pr-language-requirements)
-- [English tests for Australia PR](https://www.prepeve.com/australia-pr-english-test) · [UK English requirements](https://www.prepeve.com/uk-english-language-requirements)
-- [PTE](https://www.prepeve.com/pte) · [PTE coaching](https://www.prepeve.com/pte-coaching) · [PTE vs IELTS](https://www.prepeve.com/pte-vs-ielts)
-- [CELPIP and coaching](https://www.prepeve.com/celpip) · [CELPIP vs IELTS](https://www.prepeve.com/celpip-vs-ielts)
-- [Duolingo English Test](https://www.prepeve.com/duolingo-english-test) · [PTE Core vs IELTS General for Canada PR](https://www.prepeve.com/pte-core-vs-ielts-general)
-- [TOEFL](https://www.prepeve.com/toefl) · [TOEFL vs IELTS](https://www.prepeve.com/toefl-vs-ielts)
+## Calculators
+- [CRS Calculator 2026 (New 3 November Rules)](https://www.prepeve.com/crs-calculator)
+- [67 Points Calculator for Canada PR (FSW 2026)](https://www.prepeve.com/fsw-67-points-calculator)
+- [IELTS Band Calculator: Overall Band & CLB](https://www.prepeve.com/ielts-band-calculator)
+- [IELTS to CLB Calculator (Canada PR, CRS Points)](https://www.prepeve.com/ielts-clb-calculator)
+- [PTE Core to CLB Calculator (Canada PR, CRS)](https://www.prepeve.com/pte-core-clb-calculator)
+- [TCF Canada to NCLC Calculator (Canada PR)](https://www.prepeve.com/tcf-canada-nclc-calculator)
+- [CRS French Points Calculator (NCLC 7, +50)](https://www.prepeve.com/crs-french-points-calculator)
+
+## Canada PR and Express Entry
+- [Canada PR Process from India 2026: Express Entry Steps](https://www.prepeve.com/canada-pr-process-from-india)
+- [Express Entry CRS Changes from 3 November 2026](https://www.prepeve.com/express-entry-changes-november-2026)
+- [Express Entry Draws 2026: Latest CRS Cut-Offs](https://www.prepeve.com/express-entry-draws-2026)
+- [Express Entry Categories 2026: Category-Based Draws](https://www.prepeve.com/express-entry-category-based-draws)
+- [Canada PR Fees 2026: Full Cost from India](https://www.prepeve.com/canada-pr-fees)
+- [Proof of Funds for Canada PR 2026: Amounts & Rules](https://www.prepeve.com/proof-of-funds-canada-pr)
+- [WES ECA for Canada PR from India: Steps, Fee & Time](https://www.prepeve.com/wes-eca-canada-pr)
+- [Canada PR Documents Checklist from India (2026)](https://www.prepeve.com/canada-pr-documents-checklist)
+- [Provincial Nominee Program (PNP) Canada: How It Works](https://www.prepeve.com/pnp-canada)
+- [Canada PR Age Limit: CRS Age Points After 30, 35 & 40](https://www.prepeve.com/canada-pr-age-limit)
+- [Study in Canada to PR: PGWP and CEC Route Explained](https://www.prepeve.com/study-in-canada-to-pr)
+- [IELTS Score for Canada Student Visa 2026 (After SDS)](https://www.prepeve.com/ielts-score-for-canada-student-visa)
+- [IRCC Language Requirements for Canada PR (CLB & NCLC)](https://www.prepeve.com/canada-pr-language-requirements)
+- [Increase Your CRS Score: IELTS and French](https://www.prepeve.com/increase-crs-score-ielts-french)
+- [Spouse IELTS Score for Canada PR: CRS Points](https://www.prepeve.com/spouse-ielts-score-canada-pr)
+
+## Language scores for Canada PR (CLB and NCLC)
+- [IELTS General vs Academic for Canada PR (CLB Table)](https://www.prepeve.com/ielts-guide/general-vs-academic-canada-pr)
+- [CLB 6 and CLB 5 IELTS Score: Bands & Where They Count](https://www.prepeve.com/clb-6-ielts-score)
+- [CLB 7 IELTS Score: What You Need for Canada PR](https://www.prepeve.com/clb-7-ielts-score)
+- [CLB 8 IELTS Score: Bands, CRS Points & Canada PR](https://www.prepeve.com/clb-8-ielts-score)
+- [CLB 9 in IELTS: The 8777 Score for Canada PR](https://www.prepeve.com/ielts-8777-canada-pr)
+- [CLB 10 in IELTS: Bands Needed and CRS Points](https://www.prepeve.com/clb-10-ielts-score)
+- [CELPIP Score Chart: CELPIP to CLB and IELTS](https://www.prepeve.com/celpip-score-chart)
+- [CELPIP General: Format, CLB Levels and CELPIP Coaching](https://www.prepeve.com/celpip)
+- [CELPIP vs IELTS for Canada PR: Which Is Easier for You?](https://www.prepeve.com/celpip-vs-ielts)
+- [PTE Core vs IELTS General Training for Canada PR](https://www.prepeve.com/pte-core-vs-ielts-general)
+- [Is TOEFL or Duolingo Accepted for Canada PR?](https://www.prepeve.com/toefl-duolingo-canada-pr)
 
 ## French for Canada PR
-- [French for Canada PR: tests, NCLC, CRS points](https://www.prepeve.com/french-for-canada-pr)
-- [Online French coaching (TEF & TCF)](https://www.prepeve.com/french-online-coaching)
-- [TEF Canada](https://www.prepeve.com/tef-canada) · [TCF Canada](https://www.prepeve.com/tcf-canada) · [TEF vs TCF](https://www.prepeve.com/tef-vs-tcf) · [NCLC levels explained](https://www.prepeve.com/french-nclc) · [French while working full-time](https://www.prepeve.com/french-for-working-professionals)
+- [French Test for Canada PR: TEF, TCF & Level Needed](https://www.prepeve.com/french-for-canada-pr)
+- [Express Entry French Draws 2026: NCLC 7 & CRS Points](https://www.prepeve.com/express-entry-french-draws)
+- [TEF Canada: Format, Scoring and How to Prepare](https://www.prepeve.com/tef-canada)
+- [TEF Canada Score Chart: NCLC Levels for Express Entry](https://www.prepeve.com/tef-canada-score-chart)
+- [TCF Canada 2026: What It Is, Format & Scoring](https://www.prepeve.com/tcf-canada)
+- [TEF Canada vs TCF Canada: Which to Take?](https://www.prepeve.com/tef-vs-tcf)
+- [NCLC Levels Explained: What NCLC 7, 9 and 10 Mean](https://www.prepeve.com/french-nclc)
+- [Learning French for Canada PR While Working Full-Time](https://www.prepeve.com/french-for-working-professionals)
 
-## Chandigarh, Mohali & Panchkula (online)
-- [Online IELTS coaching for the Tricity](https://www.prepeve.com/ielts-coaching-chandigarh)
-- [Blog](https://www.prepeve.com/blog)
+## Other countries and English tests
+- [Language Tests for Study Abroad & PR](https://www.prepeve.com/language-tests)
+- [English Test for Australia PR: IELTS vs PTE](https://www.prepeve.com/australia-pr-english-test)
+- [PTE Score for Australia PR: New 2025 Scores & Points](https://www.prepeve.com/pte-score-australia-pr)
+- [UK English Requirements: SELT & IELTS UKVI](https://www.prepeve.com/uk-english-language-requirements)
+- [IELTS for New Zealand: Skilled Migrant & Student Visa Scores](https://www.prepeve.com/ielts-for-new-zealand)
+- [IELTS for USA: What Score US Universities Ask For](https://www.prepeve.com/ielts-for-usa)
+- [IELTS for Ireland: Study Visa Scores & College Requirements](https://www.prepeve.com/ielts-for-ireland)
+- [PTE Academic and PTE Core: Format, Scoring and Uses](https://www.prepeve.com/pte)
+- [PTE vs IELTS: Which English Test Should You Take?](https://www.prepeve.com/pte-vs-ielts)
+- [TOEFL iBT: Format, Scoring and Preparation](https://www.prepeve.com/toefl)
+- [TOEFL vs IELTS: Which Test Should You Take?](https://www.prepeve.com/toefl-vs-ielts)
+- [Duolingo English Test: Format, Scores, Uses](https://www.prepeve.com/duolingo-english-test)
 
-## IELTS guides
-- [IELTS Listening](https://www.prepeve.com/ielts-listening) · [IELTS Reading](https://www.prepeve.com/ielts-reading)
-- [How IELTS band scores work](https://www.prepeve.com/ielts-guide/band-scores): the 0–9 scale, overall-band rounding, marking criteria
-- [Writing Task 2 mistakes that keep you at 6.5](https://www.prepeve.com/ielts-guide/writing-task-2-mistakes)
-- [IELTS General vs Academic for Canada PR](https://www.prepeve.com/ielts-guide/general-vs-academic-canada-pr): IELTS-to-CLB table
-- [IELTS band score calculator](https://www.prepeve.com/ielts-band-calculator): overall band and CLB level
+## Online IELTS coaching by city
+- India: [Chandigarh](https://www.prepeve.com/ielts-coaching-chandigarh) · [Delhi](https://www.prepeve.com/ielts-coaching-delhi) · [Bangalore](https://www.prepeve.com/ielts-coaching-bangalore) · [Mumbai](https://www.prepeve.com/ielts-coaching-mumbai) · [Hyderabad](https://www.prepeve.com/ielts-coaching-hyderabad) · [Chennai](https://www.prepeve.com/ielts-coaching-chennai) · [Ludhiana](https://www.prepeve.com/ielts-coaching-ludhiana) · [Jalandhar](https://www.prepeve.com/ielts-coaching-jalandhar) · [Amritsar](https://www.prepeve.com/ielts-coaching-amritsar) · [Patiala](https://www.prepeve.com/ielts-coaching-patiala) · [Ambala](https://www.prepeve.com/ielts-coaching-ambala) · [Karnal](https://www.prepeve.com/ielts-coaching-karnal) · [Ahmedabad](https://www.prepeve.com/ielts-coaching-ahmedabad) · [Surat](https://www.prepeve.com/ielts-coaching-surat) · [Vadodara](https://www.prepeve.com/ielts-coaching-vadodara) · [Vijayawada](https://www.prepeve.com/ielts-coaching-vijayawada) · [Visakhapatnam](https://www.prepeve.com/ielts-coaching-visakhapatnam) · [Kochi](https://www.prepeve.com/ielts-coaching-kochi) · [Bathinda](https://www.prepeve.com/ielts-coaching-bathinda) · [Jaipur](https://www.prepeve.com/ielts-coaching-jaipur) · [Lucknow](https://www.prepeve.com/ielts-coaching-lucknow) · [Rajkot](https://www.prepeve.com/ielts-coaching-rajkot) · [Dehradun](https://www.prepeve.com/ielts-coaching-dehradun) · [Bhopal](https://www.prepeve.com/ielts-coaching-bhopal)
+- Canada: [Canada (all provinces)](https://www.prepeve.com/ielts-coaching-canada) · [Toronto](https://www.prepeve.com/ielts-coaching-toronto) · [Surrey](https://www.prepeve.com/ielts-coaching-surrey) · [Calgary](https://www.prepeve.com/ielts-coaching-calgary) · [Edmonton](https://www.prepeve.com/ielts-coaching-edmonton) · [Winnipeg](https://www.prepeve.com/ielts-coaching-winnipeg)
