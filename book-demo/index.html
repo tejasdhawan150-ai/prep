@@ -126,10 +126,6 @@ function gtag_report_conversion(url) {
         <div class="err-msg" id="phone-err">Please enter your WhatsApp number, e.g. 98765 43210. We need it to send your class link.</div>
       </div>
 
-      <div class="field">
-        <label for="email">Email <span class="hint">Optional — for a copy of your study plan</span></label>
-        <input type="email" id="email" placeholder="e.g. priya@gmail.com" autocomplete="email" inputmode="email" enterkeyhint="next"/>
-      </div>
 
       <div class="field">
         <label for="goal">Band you need <span class="hint">Helps your trainer plan the class around your goal</span></label>
@@ -379,7 +375,7 @@ function pvUserData(phone, email){
   }
   // Reset loading state if the user comes back via browser Back (bfcache)
   window.addEventListener('pageshow',function(){btn.classList.remove('loading');btn.disabled=false;});
-  ['fname','phone','email'].forEach(function(id){
+  ['fname','phone'].forEach(function(id){
     var el=document.getElementById(id);
     if(el) el.addEventListener('input',function(){setErr(id,false);});
   });
@@ -413,7 +409,6 @@ function pvUserData(phone, email){
 
     var waMsg='Hi PrepEve! I want to book a Free Demo Class.\n\n'
       +'Name: '+fname+'\nPhone: '+val('phone')
-      +'\nEmail: '+val('email')
       +'\nTarget Band: '+bandLabel;
 
     var waUrl='https://wa.me/919877714284?text='+encodeURIComponent(waMsg);
@@ -430,14 +425,13 @@ function pvUserData(phone, email){
     }
 
     // Fire Google Ads conversion
-    pvUserData(uae?'+'+uae:val('phone'), val('email'));
+    pvUserData(uae?'+'+uae:val('phone'), '');
     gtag_report_conversion();
 
     // Save to sheet in background — never blocks redirect
     if(SHEET_URL){
       var params='?name='+encodeURIComponent(fname)
         +'&phone='+encodeURIComponent(phone.replace(/\D/g,''))
-        +'&email='+encodeURIComponent(val('email'))
         +'&band='+encodeURIComponent(bandLabel)
         +'&source=book-demo';
       var sheetTarget=SHEET_URL+params+'&t='+Date.now();

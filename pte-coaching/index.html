@@ -352,7 +352,6 @@
 <div class="field"><label for="pPhone">Phone number (WhatsApp) <span class="req">*</span></label><input type="tel" id="pPhone" autocomplete="tel" inputmode="tel" placeholder="e.g. 98765 43210"/><div class="field-err" role="alert">Please enter a valid mobile number</div></div>
 <div class="f2">
 <div class="field"><label for="pTarget">Target PTE score <span class="req">*</span></label><select id="pTarget"><option value="">Select score</option><option>50+</option><option>58+</option><option>65+</option><option>79+</option><option>Not sure yet</option></select><div class="field-err" role="alert">Please choose your target</div></div>
-<div class="field"><label for="pEmail">Email <span class="hint">(optional)</span></label><input type="email" id="pEmail" autocomplete="email" inputmode="email" placeholder="you@example.com"/><div class="field-err" role="alert">Please enter a valid email</div></div>
 </div>
 <div class="hp-field" aria-hidden="true"><label for="pWeb">Leave this empty</label><input type="text" id="pWeb" tabindex="-1" autocomplete="off"/></div>
 <button class="btn btn-primary btn-lg btn-block" id="pBtn" type="submit" data-cta="pte-coaching-form-submit"><span class="spin" id="pSpin" aria-hidden="true"></span><span id="pTxt">Talk to a PTE Expert</span></button>
@@ -431,22 +430,22 @@
   var SHEET='https://script.google.com/macros/s/AKfycbxV6D1QlPWjlPg7QNH4RBQb3PoyisOElpEaKW_mbFkVkyeBfIJKPi7eiGfO42jUSTYLzg/exec';
   var $=function(i){return document.getElementById(i);},v=function(i){return ($(i).value||'').trim();},busy=false;
   function err(i,on){var f=$(i).closest('.field');f.classList.toggle('has-err',on);$(i).setAttribute('aria-invalid',on?'true':'false');}
-  ['pName','pPhone','pTarget','pEmail'].forEach(function(i){$(i).addEventListener('input',function(){err(i,false);});$(i).addEventListener('change',function(){err(i,false);});});
+  ['pName','pPhone','pTarget'].forEach(function(i){$(i).addEventListener('input',function(){err(i,false);});$(i).addEventListener('change',function(){err(i,false);});});
   document.querySelectorAll('a[href="#lead"]').forEach(function(a){a.addEventListener('click',function(){setTimeout(function(){if($('pBody').style.display!=='none')$('pName').focus({preventScroll:true});},450);});});
   $('pForm').addEventListener('submit',function(e){
     e.preventDefault();if(busy||v('pWeb'))return;$('pErr').classList.remove('show');
-    var name=v('pName'),ph=v('pPhone').replace(/\D/g,''),em=v('pEmail').toLowerCase(),t=v('pTarget');
+    var name=v('pName'),ph=v('pPhone').replace(/\D/g,''),t=v('pTarget');
     if(ph.length===12&&ph.indexOf('91')===0)ph=ph.slice(2);if(ph.length===11&&ph[0]==='0')ph=ph.slice(1);
-    var bad=[];if(name.length<2||!/[a-zA-Z\u0900-\u097F]/.test(name))bad.push('pName');if(!/^[6-9]\d{9}$/.test(ph))bad.push('pPhone');if(!t)bad.push('pTarget');if(em&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em))bad.push('pEmail');
-    ['pName','pPhone','pTarget','pEmail'].forEach(function(i){err(i,bad.indexOf(i)>-1);});
+    var bad=[];if(name.length<2||!/[a-zA-Z\u0900-\u097F]/.test(name))bad.push('pName');if(!/^[6-9]\d{9}$/.test(ph))bad.push('pPhone');if(!t)bad.push('pTarget');
+    ['pName','pPhone','pTarget'].forEach(function(i){err(i,bad.indexOf(i)>-1);});
     if(bad.length){$(bad[0]).focus();return;}
     busy=true;$('pBtn').disabled=true;$('pSpin').style.display='block';$('pTxt').textContent='Sending…';
-    var url=SHEET+'?name='+encodeURIComponent(name)+'&phone=91'+ph+'&email='+encodeURIComponent(em)+'&band='+encodeURIComponent('PTE '+t)+'&source=pte-coaching';
+    var url=SHEET+'?name='+encodeURIComponent(name)+'&phone=91'+ph+'&band='+encodeURIComponent('PTE '+t)+'&source=pte-coaching';
     var done=false,tm=setTimeout(fail,12000);
     function fail(){if(done)return;done=true;busy=false;$('pBtn').disabled=false;$('pSpin').style.display='none';$('pTxt').textContent='Talk to a PTE Expert';$('pErr').classList.add('show');}
     fetch(url,{method:'GET',mode:'no-cors',keepalive:true}).then(function(){
       if(done)return;done=true;clearTimeout(tm);
-      if(typeof gtag==='function'){var ud={phone_number:'+91'+ph};if(em)ud.email=em;gtag('set','user_data',ud);gtag('event','conversion',{send_to:'AW-765652199/zZIDCPHd74McEOfZi-0C'});gtag('event','generate_lead',{form_id:'pte-coaching-lead',target_score:t});}
+      if(typeof gtag==='function'){var ud={phone_number:'+91'+ph};gtag('set','user_data',ud);gtag('event','conversion',{send_to:'AW-765652199/zZIDCPHd74McEOfZi-0C'});gtag('event','generate_lead',{form_id:'pte-coaching-lead',target_score:t});}
       if(window.fbq)window.fbq('track','Lead');
       $('pOkWa').href='https://wa.me/919877714284?text='+encodeURIComponent('Hi PrepEve! I just asked for a call about PTE coaching.\n\nName: '+name+'\nTarget PTE score: '+t);
       $('pOkName').textContent=name.split(' ')[0];$('pBody').style.display='none';$('pOk').style.display='block';$('pOk').focus();
