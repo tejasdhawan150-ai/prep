@@ -33,11 +33,6 @@
       "permanent": true
     },
     {
-      "source": "/ielts-coaching-mohali",
-      "destination": "/ielts-coaching-chandigarh#mohali",
-      "permanent": true
-    },
-    {
       "source": "/ielts-coaching-panchkula",
       "destination": "/ielts-coaching-chandigarh#panchkula",
       "permanent": true
