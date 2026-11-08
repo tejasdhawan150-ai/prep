@@ -395,7 +395,7 @@
       ]
     },
     {
-      "source": "/assets/(fonts|img)/(.*)",
+      "source": "/assets/(fonts|img|css|js)/(.*)",
       "headers": [
         {
           "key": "Cache-Control",

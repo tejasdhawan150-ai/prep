@@ -23,8 +23,11 @@ const files = walk(ROOT);
 const exists = h => { const p = path.join(ROOT, h.replace(/^\//, '').replace(/\/$/, '')); return h === '/' || fs.existsSync(p) || fs.existsSync(p + '.html') || fs.existsSync(path.join(p, 'index.html')); };
 const redirects = new Set((JSON.parse(fs.readFileSync(path.join(ROOT, 'vercel.json'))).redirects || []).map(r => r.source));
 
+// CSS/JS are cached for a year, so every page must use the current ?v= stamp (run scripts/bump-assets.sh after editing them)
+const ASSET_V = require('crypto').createHash('md5').update(Buffer.concat(['assets/css/prepeve.css', 'assets/js/prepeve.js'].map(a => fs.readFileSync(path.join(ROOT, a))))).digest('hex').slice(0, 8);
 for (const f of files) {
   const s = fs.readFileSync(path.join(ROOT, f), 'utf8');
+  for (const [, a, ver] of s.matchAll(/\/assets\/(css\/prepeve\.css|js\/prepeve\.js)(?:\?v=([a-z0-9]+))?"/g)) if (ver !== ASSET_V) fail(`${f}: ${a} has ?v=${ver || 'none'}, expected ${ASSET_V} (run scripts/bump-assets.sh)`);
   for (const [, h] of s.matchAll(/href="(\/[^"#?]*)/g)) if (!exists(h) && !redirects.has(h.replace(/\/$/, ''))) fail(`${f}: broken link ${h}`);
   const h1 = (s.match(/<h1[\s>]/g) || []).length; if (h1 !== 1) fail(`${f}: ${h1} <h1>`);
   const text = s.replace(/<!--[\s\S]*?-->/g, '');
