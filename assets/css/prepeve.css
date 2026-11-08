@@ -237,6 +237,12 @@ body.has-mcta{padding-bottom:80px}
 small,.src,.form-note,.stat span,.quote-by small{font-size:max(.8rem,13px)}
 .foot a,.form-alt a,.src,.nav-links a{display:inline-block;min-height:32px;line-height:32px}
 @media(max-width:899px){.foot a{min-height:44px;line-height:44px}}
+/* Footer city row: compact inline links */
+.foot-cities{margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1)}
+.foot-cities p{margin-top:4px;line-height:32px;max-width:none}
+.foot-cities b{color:#E2E8F0;font-weight:700;margin-right:6px}
+.foot .foot-cities a{min-height:32px;line-height:32px}
+.foot .foot-cities a[aria-current]{color:#fff}
 @media(max-width:959px){.nav-right .nav-cta{display:none}}
 
 /* Alignment: paragraphs keep a readable measure, but centre themselves in centred contexts */
@@ -445,3 +451,8 @@ p{text-wrap:pretty}
 .ss-wall,.ss-wall:not(.ss-one){align-items:center}
 /* Mobile pricing: Live Coaching first */
 @media (max-width:999px){#courses .m-scroll>.price.pop{order:-1}}
+
+/* In-text links on guide and city pages: make them look like links */
+:where(.art-body) a:where(:not([class])){color:var(--blue);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:rgba(26,86,219,.4)}
+:where(.art-body) a:where(:not([class])):hover{color:var(--blue-dk);text-decoration-color:currentColor}
+.art-body .toc a,.art-body .crumbs a{text-decoration:none}
