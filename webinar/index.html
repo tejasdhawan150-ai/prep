@@ -152,12 +152,7 @@ function fireConv(){
           <div class="field-err" id="phone-err" role="alert">Please enter a valid WhatsApp number (add the country code if outside India)</div>
         </div>
         <details class="opt-fields">
-          <summary>Add email, exam &amp; target band (optional)</summary>
-          <div class="field">
-            <label for="email">Email <span class="hint">(optional)</span></label>
-            <input type="email" id="email" placeholder="you@example.com" autocomplete="email" inputmode="email"/>
-            <div class="field-err" id="email-err" role="alert">Please check your email address, or leave it blank</div>
-          </div>
+          <summary>Add exam &amp; target band (optional)</summary>
           <div class="f2">
           <div class="field">
             <label for="exam">Which IELTS? (optional)</label>
@@ -562,14 +557,6 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     if(ok) document.getElementById('phone').focus();
     ok = false;
   }
-  var email = v('email').toLowerCase();
-  document.getElementById('email-err').style.display = 'none';
-  if(email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){
-    document.getElementById('email-err').style.display = 'block';
-    document.querySelector('.opt-fields').open = true;
-    if(ok) document.getElementById('email').focus();
-    ok = false;
-  }
   if(!ok) return;
   if(document.getElementById('website') && document.getElementById('website').value){ return; }
 
@@ -585,20 +572,18 @@ document.getElementById('submit-btn').addEventListener('click', function(){
   // Push to Google Sheets
   fetch(SHEET + '?name=' + encodeURIComponent(name)
     + '&phone=' + encodeURIComponent(phone)
-    + '&email=' + encodeURIComponent(email)
     + '&band=' + encodeURIComponent('Webinar|' + exam + '|Target:' + band)
     + '&source=webinar',
     {method:'GET', mode:'no-cors', keepalive:true}).catch(function(){});
 
   // Enhanced Conversions: gtag hashes these before sending
-  pvUserData(phone, email);
+  pvUserData(phone, '');
   // Fire Google Ads conversion
   fireConv();
 
   // Build WhatsApp message
   var msg = 'Hi PrepEve! I just reserved my free seat for the IELTS webinar. Please send me the joining link.\n\nName: ' + name
     + '\nPhone: +' + phone
-    + (email ? '\nEmail: ' + email : '')
     + '\nExam: ' + exam
     + '\nTarget Band: ' + band;
 

@@ -168,9 +168,6 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
             <div class="field"><label for="level">Your French right now <span class="req">*</span></label>
               <select id="level" name="level" required><option value="">Choose one</option><option>Complete beginner</option><option>Some basics (A1–A2)</option><option>Intermediate (B1)</option><option>B2 or above</option><option>Not sure</option></select>
               <div class="field-err" id="level-err" role="alert">Please choose your current level</div></div>
-            <div class="field"><label for="email">Email <span class="hint">(optional)</span></label>
-              <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com"/>
-              <div class="field-err" id="email-err" role="alert">Please enter a valid email address</div></div>
             <details class="opt-fields"><summary>Add your goal &amp; class time (optional)</summary>
               <div class="f2">
                 <div class="field"><label for="goal">Main goal</label>
@@ -416,7 +413,7 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
   var $=function(id){return document.getElementById(id);},val=function(id){return ($(id).value||'').trim();};
   function ev(n,p){if(typeof gtag==='function')gtag('event',n,p||{});}
   function setErr(id,on){$(id).closest('.field').classList.toggle('has-err',on);$(id).setAttribute('aria-invalid',on?'true':'false');}
-  ['fname','phone','email','level'].forEach(function(id){$(id).addEventListener('input',function(){setErr(id,false);});$(id).addEventListener('change',function(){setErr(id,false);});});
+  ['fname','phone','level'].forEach(function(id){$(id).addEventListener('input',function(){setErr(id,false);});$(id).addEventListener('change',function(){setErr(id,false);});});
   document.querySelectorAll('a[href="#lead"]').forEach(function(a){a.addEventListener('click',function(){setTimeout(function(){if($('formBody').style.display!=='none')$('fname').focus({preventScroll:true});},450);});});
 
   // CRS checker
@@ -436,7 +433,7 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
     if(sending)return;
     $('sendErr').classList.remove('show');
     if(val('website'))return;
-    var name=val('fname'),phone=val('phone').replace(/\D/g,''),email=val('email').toLowerCase(),level=val('level'),goal=val('goal')||'Not decided',slot=val('slot')||'Flexible';
+    var name=val('fname'),phone=val('phone').replace(/\D/g,''),level=val('level'),goal=val('goal')||'Not decided',slot=val('slot')||'Flexible';
     var uae=PV_CC==='971'?pvUae(phone):'';
     if(uae)phone=uae;
     else{if(phone.length===10)phone='91'+phone;
@@ -444,20 +441,19 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
     var bad=[];
     if(name.length<2)bad.push('fname');
     if(phone.length<11||phone.length>15)bad.push('phone');
-    if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email))bad.push('email');
     if(!level)bad.push('level');
-    ['fname','phone','email','level'].forEach(function(id){setErr(id,bad.indexOf(id)>-1);});
+    ['fname','phone','level'].forEach(function(id){setErr(id,bad.indexOf(id)>-1);});
     if(bad.length){$(bad[0]).focus();ev('form_error',{form_id:'french-demo-lead',field:bad[0]});return;}
     sending=true;btn.disabled=true;$('spinner').style.display='block';$('btnTxt').textContent='Sending…';
     var crs=val('m-crs');
-    var url=SHEET+'?name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone)+'&email='+encodeURIComponent(email)
+    var url=SHEET+'?name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone)
       +'&band='+encodeURIComponent('French · '+level+(crs?' · CRS '+crs:''))+'&when='+encodeURIComponent(goal)+'&slot='+encodeURIComponent(slot)+'&source=french-demo';
     var done=false;
     var t=setTimeout(fail,12000);
     function fail(){if(done)return;done=true;sending=false;btn.disabled=false;$('spinner').style.display='none';$('btnTxt').textContent='Book My Demo Class';$('sendErr').classList.add('show');}
     fetch(url,{method:'GET',mode:'no-cors',keepalive:true}).then(function(){
       if(done)return;done=true;clearTimeout(t);
-      if(typeof gtag==='function'){var ud={phone_number:'+'+phone};if(email)ud.email=email;gtag('set','user_data',ud);}
+      if(typeof gtag==='function'){var ud={phone_number:'+'+phone};gtag('set','user_data',ud);}
       fireConversion();
       ev('generate_lead',{form_id:'french-demo-lead',french_level:level,goal:goal});
       if(window.fbq)window.fbq('track','Lead');
