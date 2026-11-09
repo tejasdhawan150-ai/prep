@@ -390,8 +390,8 @@ function pvUserData(phone, email){
   if(PV_CC==='971'){var pvE=document.getElementById('phone-err');if(pvE)pvE.textContent='Please enter your WhatsApp number, e.g. 050 123 4567. We need it to send your class link.';}
   btn.addEventListener('click',function(){
     var fname=val('fname');
-    // Bots: hidden field filled, or a random-letter name (e.g. hpCFamijEakNsIMaJhix). No lead, no conversion.
-    if(val('website')||(/^[A-Za-z]{12,}$/.test(fname)&&(fname.slice(1).match(/[A-Z]/g)||[]).length>=3))return;
+    // Only bots can fill this hidden field (visitors never see it).
+    if(val('website'))return;
     var phone=val('phone').replace(/[\s\-\(\)\+]/g,'');
     var uae=PV_CC==='971'?pvUae(phone):'';if(uae)phone=uae;
     var ok=true;
