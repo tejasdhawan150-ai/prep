@@ -809,6 +809,8 @@
   function ev(n,p){if(typeof gtag==='function')gtag('event',n,p||{});}
   function setErr(id,on){var fld=$(id).closest('.field');fld.classList.toggle('has-err',on);$(id).setAttribute('aria-invalid',on?'true':'false');}
   var CCm=/[?&]cc=(1|971)(&|$)/.exec(location.search),CC=CCm?CCm[1]:'91';
+  // Visitors sent from the home page are labelled "Home page" in the leads sheet, not "Google Ads page"
+  var SRC=/[?&]src=home(&|$)/.test(location.search)?'Home page':'ielts-coaching-lp';
   try{if(CCm)sessionStorage.setItem('pv_cc',CC);else{var pvS=sessionStorage.getItem('pv_cc');if(pvS==='1'||pvS==='971')CC=pvS;}}catch(x){}
   if(CC==='1'){var ph0=document.getElementById('phone');if(ph0)ph0.placeholder='e.g. 604 555 1234';}
   if(CC==='971'){var ph1=document.getElementById('phone');if(ph1)ph1.placeholder='e.g. 050 123 4567';}
@@ -831,7 +833,7 @@
     if(bad.length){$(bad[0]).focus();ev('form_error',{form_id:'ielts-coaching-lead',field:bad[0]});return;}
     sending=true;btn.disabled=true;btn.classList.add('loading');$('spinner').style.display='block';$('btnTxt').textContent='Sending…';
     ev('form_submit',{form_id:'ielts-coaching-lead',target_band:band,test_timing:when});
-    var url=SHEET+'?name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone)+'&band='+encodeURIComponent('Band '+band)+'&when='+encodeURIComponent(when)+'&slot='+encodeURIComponent(slot)+'&source=ielts-coaching-lp';
+    var url=SHEET+'?name='+encodeURIComponent(name)+'&phone='+encodeURIComponent(phone)+'&band='+encodeURIComponent('Band '+band)+'&when='+encodeURIComponent(when)+'&slot='+encodeURIComponent(slot)+'&source='+encodeURIComponent(SRC);
     var done=false;
     function fail(){if(done)return;done=true;sending=false;btn.disabled=false;btn.classList.remove('loading');$('spinner').style.display='none';$('btnTxt').textContent='Talk to an IELTS Expert';$('sendErr').classList.add('show');ev('lead_error',{form_id:'ielts-coaching-lead'});}
     if(navigator.onLine===false){fail();return;}
