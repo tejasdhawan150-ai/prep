@@ -365,8 +365,8 @@
   f.addEventListener('submit', function (e) {
     e.preventDefault();
     var name = v('p-name'), phone = v('p-phone').replace(/\D/g, '');
-    // Bots: hidden field filled, or a random-letter name (e.g. hpCFamijEakNsIMaJhix).
-    if (v('website') || (/^[A-Za-z]{12,}$/.test(name)&&(name.slice(1).match(/[A-Z]/g)||[]).length>=3)) return;
+    // Only bots can fill this hidden field (visitors never see it).
+    if (v('website')) return;
     if (phone.length === 10) phone = '91' + phone;
     var okN = name.length >= 2, okP = phone.length >= 11;
     err('p-name', !okN); err('p-phone', !okP);
