@@ -36,6 +36,8 @@ USE freely (sourced on the original site):
 - Prices: Self-Paced ₹4,999 (was ₹6,999), Live Coaching ₹14,999 (was ₹21,999), 1-on-1 Mentorship ₹19,999 (was ₹27,999). Keep features exactly as on the current homepage pricing cards.
 - Free demo class; slot confirmed on WhatsApp within 30 minutes.
 - Google reviews: Anooj Motghare (Band 8.5, supported for 2 years), Yashaswini Palakonda (Band 8.0, structured materials), Shashikanth Revelly (Band 7.5, attended webinar then enrolled). Quote only their real words from the current page; keep their exact Google links.
+- Google review from an immigration client: Siddharth Ashta, 5 stars (screenshot supplied by the owner, 12 Nov 2026). Quote his words verbatim only; shown on the home page, About, ielts-canada-pr and the Canada PR pages. No Review schema (self-serving reviews are not eligible).
+- Sanjita's RCIC certificate photo: owner decided not to show it on the site (12 Nov 2026).
 - Video stories: Taranjeet — Canada PR, 6.5 → 8.5 in 30 days (`8agy5ojp36I`); Pratishtha — UCL, UK, 6.0 → 8.0 (`5FbjLsycE2k`); Deepanshu — 6.5 → 7.5 (`2f9jwGWIREI`).
 - Trainers: Sanjita (founder, Regulated Canadian Immigration Consultant, IELTS & CELPIP), Lesancy Sharma, Khushpreet — real roles/bios from the current homepage only.
 - French: 6,000+ students taught French (French page only). Every French class is recorded for revision/catch-up (owner-confirmed 2 Oct 2026). NCLC 7 in all four skills adds up to 50 extra CRS points (IRCC rule). French-category draw on 22 July 2026 cut off at 399 CRS with 5,000 invitations — always say "as of July 2026".
