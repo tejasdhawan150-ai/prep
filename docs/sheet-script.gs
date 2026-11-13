@@ -23,7 +23,8 @@ var SOURCES = {
   'ielts-retake': 'Retake page',
   'band-calculator': 'Band calculator',
   'french-demo': 'French demo',
-  'pte-coaching': 'PTE page'
+  'pte-coaching': 'PTE page',
+  'canada-pr-consultant': 'PR consultant page'
 };
 var DOUBLE_TAP_MS = 10 * 60 * 1000;
 
