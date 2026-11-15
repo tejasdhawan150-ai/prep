@@ -1,19 +1,27 @@
 /**
  * PrepEve Leads — Google Apps Script (Sheet → Extensions → Apps Script).
+ * Version: 15 Nov 2026
+ *
  * Sheet1 columns:
  *   A Time | B Name | C Phone | D Email | E Target Band | F Exam Date | G (your notes) | H Source | I Call Time
+ *
  * After pasting: Deploy → Manage deployments → pencil (Edit) → Version: New version → Deploy.
  * Do NOT click "New deployment": that changes the URL and the website stops saving leads.
+ *
+ * To see which version is live, open the web app URL in a browser: it shows the version date.
+ *
+ * Every form submission is saved as its own row. Nothing is skipped as a repeat, so test leads
+ * always show and a returning lead is never hidden. (Older versions skipped a lead that had the
+ * same phone number and band as the last row.)
  *
  * Built so a lead is never lost:
  *  - If another lead is being saved at the same moment, it waits up to 20 seconds, then saves anyway.
  *  - If Google Sheets has a hiccup, it tries 3 times. If it still fails, the lead is kept by the
  *    script and added to the sheet with the next lead.
- *  - The same phone and target sent again within 10 minutes counts as one lead (a double tap).
- *    Later repeats are saved, because a returning lead is worth seeing.
  *  - If the "Sheet1" tab is renamed or deleted, a new "Sheet1" tab is created for new leads.
  *  - Every problem is written to the log: Apps Script editor → Executions.
  */
+var VERSION = '15 Nov 2026';
 var SOURCES = {
   'ielts-coaching-lp': 'Google Ads page',
   'webinar': 'Webinar',
@@ -26,7 +34,6 @@ var SOURCES = {
   'pte-coaching': 'PTE page',
   'canada-pr-consultant': 'PR consultant page'
 };
-var DOUBLE_TAP_MS = 10 * 60 * 1000;
 
 function doGet(e) { return save_(e); }
 function doPost(e) { return save_(e); }
@@ -34,8 +41,10 @@ function doPost(e) { return save_(e); }
 function save_(e) {
   var p = (e && e.parameter) || {};
   var phone = String(p.phone || '').replace(/\D/g, '');
-  // Every website form sends a phone number. Skip empty hits (bots calling this URL directly).
-  if (phone.length < 8) return text_('skip');
+  // Every website form sends a phone number. A hit without one is someone opening this URL directly.
+  if (phone.length < 8) {
+    return text_('PrepEve leads script is running. Version: ' + VERSION + '. No lead was saved because this request had no phone number.');
+  }
 
   var band = String(p.band || '');
   var source = SOURCES[p.source] || p.source || (band.indexOf('Webinar') === 0 ? 'Webinar' : 'Website');
@@ -45,12 +54,10 @@ function save_(e) {
 
   var lock = LockService.getScriptLock();
   var locked = lock.tryLock(20000);
-  if (!locked) console.warn('Busy for 20 seconds: saving without the double-tap check');
+  if (!locked) console.warn('Busy for 20 seconds: saving anyway');
   try {
     var props = PropertiesService.getScriptProperties();
-    if (locked && isDoubleTap_(props, phone, band)) return text_('dup');
     if (append_(row)) {
-      props.setProperties({ lastKey: phone + '|' + band, lastAt: String(Date.now()) });
       addKeptLeads_(props);
       return text_('ok');
     }
@@ -63,11 +70,6 @@ function save_(e) {
   } finally {
     if (locked) lock.releaseLock();
   }
-}
-
-function isDoubleTap_(props, phone, band) {
-  return props.getProperty('lastKey') === phone + '|' + band &&
-    Date.now() - Number(props.getProperty('lastAt') || 0) < DOUBLE_TAP_MS;
 }
 
 function sheet_() {
