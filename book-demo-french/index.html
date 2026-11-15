@@ -176,7 +176,6 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
                   <select id="slot" name="slot"><option value="">Flexible</option><option>Morning</option><option>Evening</option><option>Weekends</option></select></div>
               </div>
             </details>
-            <div class="hp-field" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"/></div>
             <button class="btn btn-primary btn-lg btn-block" id="submitBtn" type="submit" data-cta="fr-form-submit"><span class="spin" id="spinner" aria-hidden="true"></span><span id="btnTxt">Book My Demo Class</span></button>
             <div class="lp-err-box" id="sendErr" role="alert">We couldn't send your details. Please check your internet and try again, or <a href="https://wa.me/919877714284?text=Hi%20PrepEve%2C%20I%20want%20to%20book%20a%20French%20demo%20class%20for%20Canada%20PR." target="_blank" rel="noopener" data-cta="fr-form-error-wa">message us on WhatsApp</a>.</div>
             <p class="lp-safe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>Your details stay with PrepEve. No card details, no auto-enrolment.</span></p>
@@ -432,7 +431,6 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
     e.preventDefault();
     if(sending)return;
     $('sendErr').classList.remove('show');
-    if(val('website'))return;
     var name=val('fname'),phone=val('phone').replace(/\D/g,''),level=val('level'),goal=val('goal')||'Not decided',slot=val('slot')||'Flexible';
     var uae=PV_CC==='971'?pvUae(phone):'';
     if(uae)phone=uae;

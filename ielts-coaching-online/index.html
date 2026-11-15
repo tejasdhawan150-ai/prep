@@ -469,7 +469,6 @@
                 <select id="slot" name="slot"><option value="">Flexible</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekends</option></select></div>
             </div>
           </details>
-          <div class="hp-field" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"/></div>
           <button class="btn btn-primary btn-lg btn-block" id="submitBtn" type="submit" data-cta="lp-form-submit"><span class="spin" id="spinner" aria-hidden="true"></span><span id="btnTxt">Talk to an IELTS Expert</span></button>
           <div class="lp-err-box" id="sendErr" role="alert">We couldn't send your details. Please check your internet and try again, or <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%27d%20like%20to%20talk%20to%20an%20IELTS%20expert%20about%20coaching." target="_blank" rel="noopener" data-cta="lp-form-error-wa">message us on WhatsApp</a>.</div>
           <p class="lp-safe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>Your information is safe with us. An IELTS counsellor will contact you shortly. No payment needed.</span></p>
@@ -822,7 +821,6 @@
     e.preventDefault();
     if(sending)return;
     $('sendErr').classList.remove('show');
-    if(val('website'))return;
     var name=val('fname'),phone=normPhone(val('phone')),band=val('band'),when=val('when')||'Not decided',slot=val('slot')||'Flexible';
     var bad=[];
     if(name.length<2||!/[a-zA-Z\u0900-\u097F]/.test(name))bad.push('fname');
