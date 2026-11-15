@@ -152,7 +152,6 @@ function fireConv(){
           </div>
           </div>
         </details>
-        <div class="hp-field" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"/></div>
         <button class="btn btn-primary btn-lg btn-block" id="submit-btn" type="button">
           <span class="spin" id="spinner" aria-hidden="true"></span>
           <span class="wa-ico" aria-hidden="true"></span>
@@ -519,7 +518,6 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     ok = false;
   }
   if(!ok) return;
-  if(document.getElementById('website') && document.getElementById('website').value){ return; }
 
   // Loading state
   document.getElementById('spinner').style.display = 'block';

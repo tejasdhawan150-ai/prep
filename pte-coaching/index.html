@@ -354,7 +354,6 @@
 <div class="f2">
 <div class="field"><label for="pTarget">Target PTE score <span class="req">*</span></label><select id="pTarget"><option value="">Select score</option><option>50+</option><option>58+</option><option>65+</option><option>79+</option><option>Not sure yet</option></select><div class="field-err" role="alert">Please choose your target</div></div>
 </div>
-<div class="hp-field" aria-hidden="true"><label for="pWeb">Leave this empty</label><input type="text" id="pWeb" tabindex="-1" autocomplete="off"/></div>
 <button class="btn btn-primary btn-lg btn-block" id="pBtn" type="submit" data-cta="pte-coaching-form-submit"><span class="spin" id="pSpin" aria-hidden="true"></span><span id="pTxt">Talk to a PTE Expert</span></button>
 <div class="err" id="pErr" role="alert">We couldn't send your details. Please try again, or <a href="https://wa.me/919877714284?text=Hi%20PrepEve!%20I%27m%20interested%20in%20PTE%20coaching." target="_blank" rel="noopener">message us on WhatsApp</a>.</div>
 <p class="safe">No payment needed. Your details stay with PrepEve.</p>
@@ -435,7 +434,7 @@
   ['pName','pPhone','pTarget'].forEach(function(i){$(i).addEventListener('input',function(){err(i,false);});$(i).addEventListener('change',function(){err(i,false);});});
   document.querySelectorAll('a[href="#lead"]').forEach(function(a){a.addEventListener('click',function(){setTimeout(function(){if($('pBody').style.display!=='none')$('pName').focus({preventScroll:true});},450);});});
   $('pForm').addEventListener('submit',function(e){
-    e.preventDefault();if(busy||v('pWeb'))return;$('pErr').classList.remove('show');
+    e.preventDefault();if(busy)return;$('pErr').classList.remove('show');
     var name=v('pName'),ph=v('pPhone').replace(/\D/g,''),t=v('pTarget');
     if(ph.length===12&&ph.indexOf('91')===0)ph=ph.slice(2);if(ph.length===11&&ph[0]==='0')ph=ph.slice(1);
     var bad=[];if(name.length<2||!/[a-zA-Z\u0900-\u097F]/.test(name))bad.push('pName');if(!/^[6-9]\d{9}$/.test(ph))bad.push('pPhone');if(!t)bad.push('pTarget');
