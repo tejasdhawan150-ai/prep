@@ -74,6 +74,7 @@ var PV_META_PIXEL_ID = '';   // e.g. '123456789012345'
   var mcta = document.querySelector('.mcta');
   if (mcta) {
     document.body.classList.add('has-mcta');
+    if (mcta.classList.contains('mcta-wa')) document.body.classList.add('has-mcta-wa');
     var hide = document.querySelectorAll('[data-hide-mcta]');
     var visible = new Set();
     var update = function () { mcta.classList.toggle('show', window.scrollY > 420 && visible.size === 0); };
