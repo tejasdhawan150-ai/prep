@@ -361,6 +361,16 @@
       "source": "/grammar",
       "destination": "/ielts-preparation",
       "permanent": true
+    },
+    {
+      "source": "/express-entry-draws-2026",
+      "destination": "/express-entry-draws",
+      "permanent": true
+    },
+    {
+      "source": "/ielts-exam-dates-2026",
+      "destination": "/ielts-exam-dates",
+      "permanent": true
     }
   ],
   "headers": [
