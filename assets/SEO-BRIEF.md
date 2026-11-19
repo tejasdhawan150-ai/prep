@@ -18,7 +18,7 @@ Only facts in the COPY-BRIEF claims ledger. Summary:
 If a page needs a fact not listed → `[VERIFY: …]` in an HTML comment and leave it out of visible copy.
 
 ## Competitor & external facts
-Only from `research/sources.md` (official sources, dated). Cite inline as a numbered source list at the end of the page ("Sources", with links and "checked September 2026"). Never rank providers, never say best/worst/#1/winner about any company. Compare documented characteristics only. Unknown cells → "Not published".
+Only from `research/sources.md` (official sources, dated). Owner decision (19 Nov 2026): no "Sources" / "Official sources" link lists on pages (too many links). Name the official body in the text instead (for example "IRCC says…", "checked on IDP's page, 10 Nov 2026"). Never rank providers, never say best/worst/#1/winner about any company. Compare documented characteristics only. Unknown cells → "Not published".
 
 ## Page structure (answer-engine friendly)
 1. Breadcrumb (Home › [Hub] › Page) + BreadcrumbList JSON-LD.
@@ -29,7 +29,7 @@ Only from `research/sources.md` (official sources, dated). Cite inline as a numb
 6. H2s phrased as the questions people ask; each H2 is followed immediately by a 1–3 sentence direct answer, then detail (lists, tables).
 7. "Where PrepEve fits" section — factual, from the source of truth.
 8. FAQ (4–8 real questions) rendered as `<details>` in `.faq`; FAQPage JSON-LD ONLY mirroring the visible text exactly.
-9. Contextual CTA matched to intent (see below), related pages block, Sources list.
+9. Contextual CTA matched to intent (see below), related pages block (no Sources list).
 Target 900–1,800 words of genuinely useful content; no filler.
 
 ## Writing rules
