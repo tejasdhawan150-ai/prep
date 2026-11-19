@@ -279,3 +279,132 @@ document.querySelectorAll('.rv-wall').forEach(function (w) {
     fit();
   });
 })();
+
+/* Lead box (.lead-box): the inline form in the middle of guide pages. It saves the lead to the
+   Prepeve Leads sheet, then opens WhatsApp with the details filled in. Class bookings then go to
+   /thank-you; Canada, PR and Express Entry enquiries get a short thank-you inside the box. */
+(function () {
+  var boxes = document.querySelectorAll('.lead-box');
+  if (!boxes.length) return;
+  var SHEET = 'https://script.google.com/macros/s/AKfycbxV6D1QlPWjlPg7QNH4RBQb3PoyisOElpEaKW_mbFkVkyeBfIJKPi7eiGfO42jUSTYLzg/exec';
+  var WA = 'https://wa.me/919877714284?text=';
+  /* [code, flag, name, calling code, example number, national number pattern (without the leading 0)] */
+  var C = [
+    ['IN', '🇮🇳', 'India', '91', '98765 43210', /^[6-9]\d{9}$/],
+    ['CA', '🇨🇦', 'Canada', '1', '416 555 0123', /^[2-9]\d{2}[2-9]\d{6}$/],
+    ['US', '🇺🇸', 'USA', '1', '415 555 0123', /^[2-9]\d{2}[2-9]\d{6}$/],
+    ['AE', '🇦🇪', 'UAE', '971', '50 123 4567', /^(5\d{8}|[2-46-79]\d{7})$/],
+    ['AU', '🇦🇺', 'Australia', '61', '412 345 678', /^[2-478]\d{8}$/],
+    ['GB', '🇬🇧', 'UK', '44', '7400 123456', /^\d{9,10}$/],
+    ['NZ', '🇳🇿', 'New Zealand', '64', '21 123 4567', /^\d{8,10}$/],
+    ['SA', '🇸🇦', 'Saudi Arabia', '966', '50 123 4567', /^5\d{8}$/],
+    ['QA', '🇶🇦', 'Qatar', '974', '3312 3456', /^\d{8}$/],
+    ['KW', '🇰🇼', 'Kuwait', '965', '5012 3456', /^\d{8}$/],
+    ['OM', '🇴🇲', 'Oman', '968', '9212 3456', /^\d{8}$/],
+    ['BH', '🇧🇭', 'Bahrain', '973', '3600 1234', /^\d{8}$/],
+    ['SG', '🇸🇬', 'Singapore', '65', '8123 4567', /^\d{8}$/],
+    ['NP', '🇳🇵', 'Nepal', '977', '984 1234567', /^9\d{9}$/],
+    ['BD', '🇧🇩', 'Bangladesh', '880', '1812 345678', /^1\d{9}$/],
+    ['LK', '🇱🇰', 'Sri Lanka', '94', '71 234 5678', /^7\d{8}$/],
+    ['IE', '🇮🇪', 'Ireland', '353', '85 123 4567', /^\d{9}$/],
+    ['XX', '🌐', 'Other country', '', '+ country code and number', null]
+  ];
+  function find(code) { for (var i = 0; i < C.length; i++) if (C[i][0] === code) return C[i]; return null; }
+  function byPrefix(d) { var best = null; for (var i = 0; i < C.length; i++) { var c = C[i]; if (c[3] && d.indexOf(c[3]) === 0 && (!best || c[3].length > best[3].length)) best = c; } return best; }
+  /* A full number with its country code: 8 to 15 digits, in the right format for countries in the list. */
+  function okFull(d) { if (!/^[1-9]\d{7,14}$/.test(d)) return false; var c = byPrefix(d); return c ? c[5].test(d.slice(c[3].length)) : true; }
+  /* Returns the number as digits with the country code (e.g. 919876543210), or '' if it isn't valid. */
+  function norm(raw, code) {
+    raw = String(raw || '');
+    var d = raw.replace(/\D/g, '');
+    if (/^\s*(\+|00)/.test(raw)) { if (/^\s*00/.test(raw)) d = d.slice(2); return okFull(d) ? d : ''; }
+    var c = find(code);
+    if (!c || !c[3]) return okFull(d) ? d : '';
+    var n = d.replace(/^0+/, '');
+    if (c[5].test(n)) return c[3] + n;
+    if (n.indexOf(c[3]) === 0 && okFull(n)) return n;
+    return '';
+  }
+  /* Starting country: from the phone's time zone, else the page's default (data-cc), else India. */
+  function detect(box) {
+    var tz = '';
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+    var m = { 'Asia/Kolkata': 'IN', 'Asia/Calcutta': 'IN', 'Asia/Dubai': 'AE', 'Asia/Riyadh': 'SA', 'Asia/Qatar': 'QA', 'Asia/Kuwait': 'KW', 'Asia/Muscat': 'OM', 'Asia/Bahrain': 'BH', 'Asia/Singapore': 'SG', 'Asia/Kathmandu': 'NP', 'Asia/Katmandu': 'NP', 'Asia/Dhaka': 'BD', 'Asia/Colombo': 'LK', 'Europe/London': 'GB', 'Europe/Belfast': 'GB', 'Europe/Dublin': 'IE', 'Pacific/Auckland': 'NZ', 'Pacific/Honolulu': 'US' };
+    if (m[tz]) return m[tz];
+    if (/^Australia\//.test(tz)) return 'AU';
+    if (/^(Canada\/|America\/(Toronto|Vancouver|Edmonton|Winnipeg|Halifax|St_Johns|Regina|Moncton|Montreal|Whitehorse|Yellowknife|Iqaluit|Glace_Bay|Goose_Bay|Swift_Current|Dawson_Creek|Dawson|Fort_Nelson|Creston|Atikokan|Coral_Harbour|Rankin_Inlet|Cambridge_Bay|Inuvik|Nipigon|Thunder_Bay|Rainy_River|Pangnirtung|Resolute|Blanc-Sablon)$)/.test(tz)) return 'CA';
+    if (/^(US\/|America\/(New_York|Chicago|Denver|Los_Angeles|Phoenix|Anchorage|Juneau|Sitka|Metlakatla|Yakutat|Nome|Adak|Boise|Detroit|Menominee|Indianapolis|Louisville|Indiana\/|Kentucky\/|North_Dakota\/))/.test(tz)) return 'US';
+    var q = /[?&]cc=(1|971)(&|$)/.exec(location.search);
+    if (q) return q[1] === '971' ? 'AE' : 'CA';
+    return box.getAttribute('data-cc') || 'IN';
+  }
+  function enc(s) { return encodeURIComponent(s); }
+
+  [].forEach.call(boxes, function (box) {
+    var form = box.querySelector('form');
+    if (!form) return;
+    var cc = box.querySelector('.lb-cc select'), flag = box.querySelector('.lb-flag'), code = box.querySelector('.lb-code');
+    var nm = form.querySelector('input[name=name]'), ph = form.querySelector('input[name=phone]'), q = form.querySelector('select[name=q]');
+    var btn = form.querySelector('.lb-btn'), label = btn.textContent, start = detect(box);
+    C.forEach(function (c) {
+      var o = document.createElement('option');
+      o.value = c[0]; o.textContent = c[1] + ' ' + c[2] + (c[3] ? ' +' + c[3] : '');
+      if (c[0] === start) o.selected = true;
+      cc.appendChild(o);
+    });
+    /* Many visitors abroad still use an Indian WhatsApp number, so remind them when another country is picked. */
+    var hint = document.createElement('p');
+    hint.className = 'lb-hint'; hint.textContent = 'Using an Indian WhatsApp number? Tap the flag and choose India.';
+    ph.parentNode.parentNode.insertBefore(hint, ph.parentNode.nextSibling);
+    function sync() { var c = find(cc.value) || C[0]; flag.textContent = c[1]; code.textContent = '+' + c[3]; ph.placeholder = c[4]; hint.hidden = c[0] === 'IN'; }
+    function err(el, on) { el.setAttribute('aria-invalid', on ? 'true' : 'false'); var p = el.closest('.lb-f').querySelector('.lb-err'); if (p) p.hidden = !on; }
+    sync();
+    cc.addEventListener('change', function () { sync(); err(ph, false); });
+    [nm, ph].forEach(function (el) { el.addEventListener('input', function () { if (el.getAttribute('aria-invalid') === 'true') err(el, false); }); });
+    window.addEventListener('pageshow', function () { btn.disabled = false; btn.textContent = label; });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = nm.value.trim().slice(0, 60), phone = norm(ph.value, cc.value), bad = null;
+      if (name.length < 2) { err(nm, true); bad = nm; } else err(nm, false);
+      if (!phone) { err(ph, true); bad = bad || ph; } else err(ph, false);
+      if (bad) { bad.focus(); return; }
+
+      var kind = box.getAttribute('data-kind') || '', src = box.getAttribute('data-src') || location.pathname.replace(/^\/|\/$/g, '');
+      var ans = q && q.value ? q.value : '', when = box.getAttribute('data-field') === 'when';
+      var band = when ? (box.getAttribute('data-test') || '') : (box.getAttribute('data-prefix') || '') + (ans || 'Not specified');
+      var msg = (box.getAttribute('data-intro') || 'Hi PrepEve!') + '\n\nName: ' + name + (ans ? '\n' + (box.getAttribute('data-ml') || 'Answer') + ': ' + ans : '');
+      var waUrl = WA + enc(msg);
+      var url = SHEET + '?name=' + enc(name) + '&phone=' + enc(phone) + '&band=' + enc(band)
+        + (when ? '&when=' + enc(ans || 'Not specified') : '') + '&source=' + enc(src) + '&t=' + Date.now();
+      try { fetch(url, { method: 'GET', mode: 'no-cors', keepalive: true }).catch(function () {}); } catch (x) { new Image().src = url; }
+
+      var consult = /^(canada|pr|ee)$/.test(kind);
+      if (typeof window.gtag === 'function') {
+        window.gtag('set', 'user_data', { phone_number: '+' + phone });
+        window.gtag('event', 'lead_form_submit', { form_id: 'leadbox', cta_location: src + '-leadbox', lead_type: kind });
+        window.gtag('event', 'conversion', { send_to: 'AW-765652199/zZIDCPHd74McEOfZi-0C', transport_type: 'beacon' });
+        window.__pvWaConv = 1;
+        if (consult && PV_GA4_ID) window.gtag('event', 'generate_lead', { send_to: PV_GA4_ID });
+      }
+      btn.disabled = true; btn.textContent = 'Sending…';
+      var desk = window.innerWidth >= 769;
+      setTimeout(function () {
+        if (consult) {
+          var d = document.createElement('div');
+          d.className = 'lb-done'; d.setAttribute('role', 'status');
+          d.innerHTML = '<p class="lb-done-t"></p><p>Now tap <b>Send</b> in WhatsApp so ' + (kind === 'canada' ? 'Sanjita' : 'our team')
+            + ' can reply. We usually reply in 5–15 minutes.</p><a class="lb-wa" target="_blank" rel="noopener">Open WhatsApp</a>';
+          d.querySelector('.lb-done-t').textContent = '✓ Thanks, ' + name.split(' ')[0] + '! We have your details.';
+          d.querySelector('.lb-wa').href = waUrl;
+          form.parentNode.replaceChild(d, form);
+          if (desk) window.open(waUrl, '_blank'); else window.location.href = waUrl;
+          return;
+        }
+        var ty = '/thank-you?name=' + enc(name) + '&wa=' + enc(waUrl);
+        if (desk) { window.open(waUrl, '_blank'); window.location.href = ty; }
+        else { window.location.href = waUrl; setTimeout(function () { window.location.href = ty; }, 1500); }
+      }, 300);
+    });
+  });
+})();

@@ -471,3 +471,41 @@ body.has-mcta-wa{padding-bottom:104px}
 .mcta-wa .btn{flex:0 0 auto;min-width:230px;min-height:52px;font-size:.95rem}
 body.has-mcta-wa{padding-bottom:84px}
 }
+/* Lead box: inline lead form in the middle of guide pages (replaced the .pcta-mid box on 19 Nov 2026).
+   Two-class selectors so page-level rules such as .art h3 and .art-body p cannot override it. */
+.lead-box{border-radius:var(--r-lg);margin:1.8em 0;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 12px 32px rgba(15,23,42,.10);font-family:var(--f-body);color:var(--ink-2)}
+.lead-box .lb-head{background:linear-gradient(135deg,var(--blue),#1E40AF);padding:22px 20px 18px}
+.lead-box .lb-eye{display:inline-block;font:800 .7rem/1 var(--f-head);letter-spacing:.07em;text-transform:uppercase;padding:7px 12px;border-radius:var(--r-full);margin:0 0 12px;background:rgba(255,255,255,.18);color:#fff}
+.lead-box .lb-head h3{font-size:1.4rem;line-height:1.25;margin:0 0 6px;color:#fff}
+.lead-box .lb-sub{margin:0;max-width:none;font-size:.97rem;line-height:1.5;color:#DBEAFE}
+.lead-box .lb-sub a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.lead-box .lb-form{display:grid;gap:12px;padding:18px 20px 20px}
+.lead-box .lb-f label{display:block;font:700 .82rem var(--f-head);margin:0 0 5px;color:var(--ink)}
+.lead-box .lb-f input,.lead-box .lb-f select{display:block;width:100%;min-height:50px;border-radius:12px;padding:12px 14px;font:500 1rem var(--f-body);color:var(--ink);background-color:#F8FAFC;border:1.5px solid var(--line-2);-webkit-appearance:none;appearance:none}
+.lead-box .lb-f input:focus,.lead-box .lb-f select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,86,219,.15)}
+.lead-box .lb-f select{padding-right:38px;background-image:linear-gradient(45deg,transparent 50%,#475569 50%),linear-gradient(135deg,#475569 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+.lead-box .lb-phone{display:flex;gap:8px}
+.lead-box .lb-phone input{flex:1;min-width:0}
+.lead-box .lb-cc{position:relative;flex:0 0 108px;display:flex;align-items:center;gap:7px;padding:0 12px;border-radius:12px;background:#F8FAFC;border:1.5px solid var(--line-2);font:700 1rem var(--f-body);color:var(--ink);min-height:50px}
+.lead-box .lb-cc::after{content:"";margin-left:auto;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid #475569}
+.lead-box .lb-cc:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,86,219,.15)}
+.lead-box .lb-flag{font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;font-size:1.15rem;line-height:1}
+.lead-box .lb-cc select{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;min-height:0;padding:0;border:0;opacity:0;cursor:pointer;background:none}
+.lead-box .lb-err{margin:6px 0 0;max-width:none;font-size:.85rem;font-weight:600;color:var(--err)}
+.lead-box .lb-hint{margin:6px 0 0;max-width:none;font-size:.82rem;line-height:1.45;color:var(--muted)}
+.lead-box .lb-f [aria-invalid=true]{border-color:var(--err)}
+.lead-box .lb-btn{display:block;width:100%;min-height:54px;margin-top:2px;border:0;border-radius:12px;font:800 1.05rem var(--f-head);color:#fff;background:var(--blue);box-shadow:0 8px 20px rgba(26,86,219,.28);cursor:pointer}
+.lead-box .lb-btn:hover{background:var(--blue-dk)}
+.lead-box .lb-btn:disabled{opacity:.75;cursor:wait}
+.lead-box .lb-trust{margin:2px 0 0;max-width:none;font-size:.88rem;line-height:1.7;color:var(--muted)}
+.lead-box .lb-trust b{color:var(--ink)}
+.lead-box .lb-ok{color:#16A34A;font-weight:800}
+.lead-box .lb-star{color:#F59E0B}
+.lead-box .lb-alt{margin:0;max-width:none;font-size:.92rem;color:var(--ink-2)}
+.lead-box .lb-alt a{color:#128C4A;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.lead-box .lb-nw{white-space:nowrap}
+.lead-box .lb-done{padding:22px 20px 24px}
+.lead-box .lb-done p{margin:0 0 12px;max-width:none;color:var(--ink-2)}
+.lead-box .lb-done .lb-done-t{font:800 1.15rem/1.35 var(--f-head);color:var(--ink)}
+.lead-box .lb-wa{display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;border-radius:12px;background:#128C4A;color:#fff;font:800 1.05rem var(--f-head)}
+@media(min-width:769px){.lead-box .lb-head{padding:26px 28px 20px}.lead-box .lb-form,.lead-box .lb-done{padding-left:28px;padding-right:28px}}
