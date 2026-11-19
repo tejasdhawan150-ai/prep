@@ -124,8 +124,8 @@ function fireConv(){
         </div>
         <div class="field">
           <label for="phone">WhatsApp number — your joining link comes here <span class="req">*</span></label>
-          <input type="tel" id="phone" placeholder="10-digit mobile number" autocomplete="tel" inputmode="tel"/>
-          <div class="field-err" id="phone-err" role="alert">Please enter your 10-digit WhatsApp number so we can send your link</div>
+          <input type="tel" id="phone" placeholder="10-digit mobile, or +country code" autocomplete="tel" inputmode="tel"/>
+          <div class="field-err" id="phone-err" role="alert">Please enter your WhatsApp number so we can send your link (add the country code if outside India, e.g. +1 or +971)</div>
         </div>
         <details class="opt-fields">
           <summary>Add your exam &amp; target band (optional)</summary>
@@ -495,9 +495,9 @@ function pvUserData(phone, email){
 
 document.getElementById('submit-btn').addEventListener('click', function(){
   var name = v('fname');
-  var rawPhone = v('phone').replace(/\s/g,'');
-  var phone = rawPhone.replace(/\D/g,'');
-  if(phone.length === 10) phone = '91' + phone;
+  function pvNormPh(raw){raw=String(raw||'');var intl=/^\s*(\+|00)/.test(raw),d=raw.replace(/\D/g,'');if(/^\s*00/.test(raw))d=d.replace(/^00/,'');if(!intl&&d.length===11&&d[0]==='0')d=d.slice(1);if(!intl&&d.length===10&&/^[6-9]/.test(d))d='91'+d;return d;}function pvOkPh(d){return d.indexOf('91')===0?/^91[6-9]\d{9}$/.test(d):/^[1-9]\d{10,14}$/.test(d);}
+  var rawPhone = v('phone');
+  var phone = pvNormPh(rawPhone);
 
   var ok = true;
   document.getElementById('fname-err').style.display = 'none';
@@ -511,7 +511,7 @@ document.getElementById('submit-btn').addEventListener('click', function(){
     document.getElementById('fname').focus();
     ok = false;
   }
-  if(phone.replace(/\D/g,'').length < 11){
+  if(!pvOkPh(phone)){
     document.getElementById('phone-err').style.display = 'block';
     document.getElementById('phone').setAttribute('aria-invalid','true');
     if(ok) document.getElementById('phone').focus();

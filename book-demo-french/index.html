@@ -163,8 +163,8 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
               <input type="text" id="fname" name="name" autocomplete="name" placeholder="e.g. Priya Sharma" required/>
               <div class="field-err" id="fname-err" role="alert">Please enter your full name</div></div>
             <div class="field"><label for="phone">WhatsApp number <span class="req">*</span></label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="e.g. 98765 43210" required/>
-              <div class="field-err" id="phone-err" role="alert">Please enter a valid mobile number</div></div>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="10-digit mobile, or +country code" required/>
+              <div class="field-err" id="phone-err" role="alert">Please enter a valid WhatsApp number (add the country code if outside India, e.g. +1 or +971)</div></div>
             <div class="field"><label for="level">Your French right now <span class="req">*</span></label>
               <select id="level" name="level" required><option value="">Choose one</option><option>Complete beginner</option><option>Some basics (A1–A2)</option><option>Intermediate (B1)</option><option>B2 or above</option><option>Not sure</option></select>
               <div class="field-err" id="level-err" role="alert">Please choose your current level</div></div>
@@ -431,14 +431,13 @@ function fireConversion(){gtag('event','conversion',{'send_to':'AW-765652199/zZI
     e.preventDefault();
     if(sending)return;
     $('sendErr').classList.remove('show');
-    var name=val('fname'),phone=val('phone').replace(/\D/g,''),level=val('level'),goal=val('goal')||'Not decided',slot=val('slot')||'Flexible';
+    function pvNormPh(raw){raw=String(raw||'');var intl=/^\s*(\+|00)/.test(raw),d=raw.replace(/\D/g,'');if(/^\s*00/.test(raw))d=d.replace(/^00/,'');if(!intl&&d.length===11&&d[0]==='0')d=d.slice(1);if(!intl&&d.length===10&&/^[6-9]/.test(d))d='91'+d;return d;}function pvOkPh(d){return d.indexOf('91')===0?/^91[6-9]\d{9}$/.test(d):/^[1-9]\d{10,14}$/.test(d);}
+var name=val('fname'),phone=val('phone').replace(/\D/g,''),level=val('level'),goal=val('goal')||'Not decided',slot=val('slot')||'Flexible';
     var uae=PV_CC==='971'?pvUae(phone):'';
-    if(uae)phone=uae;
-    else{if(phone.length===10)phone='91'+phone;
-    if(phone.length===11&&phone[0]==='0')phone='91'+phone.slice(1);}
+    phone=uae||pvNormPh(val('phone'));
     var bad=[];
     if(name.length<2)bad.push('fname');
-    if(phone.length<11||phone.length>15)bad.push('phone');
+    if(!pvOkPh(phone))bad.push('phone');
     if(!level)bad.push('level');
     ['fname','phone','level'].forEach(function(id){setErr(id,bad.indexOf(id)>-1);});
     if(bad.length){$(bad[0]).focus();ev('form_error',{form_id:'french-demo-lead',field:bad[0]});return;}
