@@ -363,6 +363,36 @@
       "permanent": true
     },
     {
+      "source": "/group-batches",
+      "destination": "/online-ielts-coaching-india",
+      "permanent": true
+    },
+    {
+      "source": "/copy-of-group-batches",
+      "destination": "/online-ielts-coaching-india",
+      "permanent": true
+    },
+    {
+      "source": "/online-ielts-coaching",
+      "destination": "/online-ielts-coaching-india",
+      "permanent": true
+    },
+    {
+      "source": "/ielts/workshop",
+      "destination": "/webinar",
+      "permanent": true
+    },
+    {
+      "source": "/study-abroad",
+      "destination": "/canada-study-permit-india",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/book-demo",
+      "permanent": true
+    },
+    {
       "source": "/express-entry-draws-2026",
       "destination": "/express-entry-draws",
       "permanent": true
