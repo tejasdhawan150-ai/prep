@@ -223,7 +223,7 @@ aside.rcic-profile{display:grid;grid-template-columns:150px 1fr;gap:20px;align-i
 .cue details div{margin-top:10px;color:var(--ink-2)}
 .letter{white-space:pre-line;background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:var(--r);padding:16px 18px;margin:0 0 1.2em;font-size:.98rem}
 .vocab td:first-child{font-weight:700;color:var(--ink)}
-</style>
+#enquiry{scroll-margin-top:calc(var(--nav-h) + 16px)}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -260,10 +260,6 @@ aside.rcic-profile{display:grid;grid-template-columns:150px 1fr;gap:20px;align-i
 <h1>IELTS to CLB Calculator</h1>
 <p class="answer">Enter your four IELTS General Training scores to see your CLB level in each skill and the CRS points they earn for Express Entry. CLB 9 needs Listening 8.0 and 7.0 in Reading, Writing and Speaking (8777).</p>
 <p class="meta-line">Last updated: 18 November 2026 · Written by the <a href="/about">PrepEve team</a></p>
-<div class="pcta pcta-top" role="note">
-<p><strong>PrepEve coaches IELTS live online.</strong> Trainers find where you lose marks and fix it with you.</p>
-<div class="pcta-btns"><a href="/book-demo" class="btn btn-primary" data-cta="ielts-clb-calculator-top-demo">Book My Free Assessment Class</a><a href="https://wa.me/919877714284?text=Hi%20PrepEve%21%20I%27d%20like%20to%20know%20more%20about%20IELTS%20coaching." class="btn btn-wa" target="_blank" rel="noopener" data-cta="ielts-clb-calculator-top-wa">WhatsApp a Trainer</a></div>
-</div>
 <!-- VERIFY: IRCC IELTS GT→CLB table and CRS first-language points; re-check canada.ca if IRCC updates them. -->
 <div class="tool" id="clbTool">
 <div class="f4">
@@ -280,6 +276,17 @@ aside.rcic-profile{display:grid;grid-template-columns:150px 1fr;gap:20px;align-i
 <p class="note">Estimate of first-official-language CRS points only, using IRCC's tables for IELTS General Training. It is not a full CRS calculation. Academic scores are not accepted for Express Entry.</p>
 </div>
 </div>
+<aside class="lead-box" id="enquiry" aria-label="Free assessment class" data-hide-mcta data-kind="clb" data-src="ielts-clb-calculator" data-intro="Hi PrepEve! I&#x27;d like to book a free IELTS assessment class." data-ml="Target CLB">
+<div class="lb-head"><span class="lb-eye">Free assessment class</span><h3>Find out how far you are from your CLB target</h3><p class="lb-sub">Book a free IELTS assessment class. A trainer checks each skill and tells you which one is holding your CLB back.</p></div>
+<form class="lb-form" id="leadbox" novalidate>
+<div class="lb-f"><label for="lb-name">Your name</label><input id="lb-name" name="name" autocomplete="name" placeholder="e.g. Priya Sharma" required><p class="lb-err" hidden>Please enter your name.</p></div>
+<div class="lb-f"><label for="lb-phone">WhatsApp number</label><div class="lb-phone"><span class="lb-cc"><span class="lb-flag" aria-hidden="true">🇮🇳</span><span class="lb-code">+91</span><select name="cc" aria-label="Country code"></select></span><input id="lb-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="98765 43210" required></div><p class="lb-err" hidden>Please enter a valid WhatsApp number. Outside India? Choose your country first.</p></div>
+<div class="lb-f"><label for="lb-q">Your target CLB</label><select id="lb-q" name="q"><option value="">Choose one</option><option>CLB 6</option><option>CLB 7</option><option>CLB 8</option><option>CLB 9</option><option>CLB 10 or higher</option><option>Not sure yet</option></select></div>
+<button type="submit" class="lb-btn">Book my free class</button>
+<p class="lb-trust"><span class="lb-ok">✓</span> <b>We usually reply on WhatsApp in <span class="lb-nw">5–15 minutes</span></b><br><span class="lb-star">★</span> 4.7 on Google · 15,000+ students trained</p>
+<p class="lb-alt">Prefer to chat? <a href="https://wa.me/919877714284?text=Hi%20PrepEve%21%20I%27d%20like%20to%20know%20more%20about%20IELTS%20coaching." target="_blank" rel="noopener" data-cta="ielts-clb-calculator-mid-wa">Message us on WhatsApp</a></p>
+</form>
+</aside>
 
 <h2 id="table">IELTS to CLB conversion table</h2>
 <p>IRCC converts each IELTS General Training score into a Canadian Language Benchmark (CLB) level separately. You need the score shown for every skill to reach that level in it.</p>
@@ -312,17 +319,6 @@ aside.rcic-profile{display:grid;grid-template-columns:150px 1fr;gap:20px;align-i
 <li><strong>Citizenship (ages 18–54):</strong> CLB 4 in speaking and listening.</li>
 </ul>
 <p>Requirements change, so confirm them on the official IRCC website. More detail: <a href="/canada-pr-language-requirements">Canada PR language requirements</a>.</p>
-<aside class="lead-box" aria-label="Free assessment class" data-hide-mcta data-kind="clb" data-src="ielts-clb-calculator" data-intro="Hi PrepEve! I&#x27;d like to book a free IELTS assessment class." data-ml="Target CLB">
-<div class="lb-head"><span class="lb-eye">Free assessment class</span><h3>Find out how far you are from your CLB target</h3><p class="lb-sub">Book a free IELTS assessment class. A trainer checks each skill and tells you which one is holding your CLB back.</p></div>
-<form class="lb-form" id="leadbox" novalidate>
-<div class="lb-f"><label for="lb-name">Your name</label><input id="lb-name" name="name" autocomplete="name" placeholder="e.g. Priya Sharma" required><p class="lb-err" hidden>Please enter your name.</p></div>
-<div class="lb-f"><label for="lb-phone">WhatsApp number</label><div class="lb-phone"><span class="lb-cc"><span class="lb-flag" aria-hidden="true">🇮🇳</span><span class="lb-code">+91</span><select name="cc" aria-label="Country code"></select></span><input id="lb-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="98765 43210" required></div><p class="lb-err" hidden>Please enter a valid WhatsApp number. Outside India? Choose your country first.</p></div>
-<div class="lb-f"><label for="lb-q">Your target CLB</label><select id="lb-q" name="q"><option value="">Choose one</option><option>CLB 6</option><option>CLB 7</option><option>CLB 8</option><option>CLB 9</option><option>CLB 10 or higher</option><option>Not sure yet</option></select></div>
-<button type="submit" class="lb-btn">Book my free class</button>
-<p class="lb-trust"><span class="lb-ok">✓</span> <b>We usually reply on WhatsApp in <span class="lb-nw">5–15 minutes</span></b><br><span class="lb-star">★</span> 4.7 on Google · 15,000+ students trained</p>
-<p class="lb-alt">Prefer to chat? <a href="https://wa.me/919877714284?text=Hi%20PrepEve%21%20I%27d%20like%20to%20know%20more%20about%20IELTS%20coaching." target="_blank" rel="noopener" data-cta="ielts-clb-calculator-mid-wa">Message us on WhatsApp</a></p>
-</form>
-</aside>
 <aside class="rcic-profile" aria-label="Canada PR help from Sanjita, RCIC">
 <picture><source srcset="/assets/img/sanjita-480.webp" type="image/webp"><img src="/assets/img/sanjita-480.jpg" alt="Sanjita, Regulated Canadian Immigration Consultant (RCIC) and founder of PrepEve" width="480" height="480" loading="lazy" decoding="async"></picture>
 <div>
