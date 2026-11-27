@@ -218,30 +218,6 @@
 .fproof{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin:0 0 22px;font-size:.92rem;color:#fff}
 .fproof span{white-space:nowrap}
 .fnext{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:22px;font-size:.88rem;color:#DCE7FD}
-/* quiz */
-.quiz{max-width:720px;margin:0 auto}
-.bq-points{margin-top:18px}
-@media(min-width:1000px){.bq-grid{display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:center}.bq-intro{text-align:left;margin:0}.bq-intro p{margin-left:0}.bq-grid .quiz{max-width:none;margin:0}}
-.qprog{display:flex;align-items:center;gap:14px;margin-bottom:18px}
-.qtrack{flex:1;height:8px;border-radius:var(--r-full);background:var(--line);overflow:hidden}
-#QBar{height:100%;width:0;background:var(--blue);transition:width .3s}
-#QLabel{font-size:.85rem;font-weight:600;color:var(--muted);white-space:nowrap}
-.qq{font-family:var(--f-head);font-weight:700;font-size:1.12rem;color:var(--ink);margin-bottom:16px}
-.qq span{color:var(--blue)}
-.qopts{display:grid;gap:10px}
-.qopt{display:flex;align-items:center;gap:12px;width:100%;min-height:52px;padding:12px 14px;background:#fff;border:1.5px solid var(--line-2);border-radius:var(--r);cursor:pointer;text-align:left;font-size:.95rem}
-.qopt:hover{border-color:var(--blue)}
-.qopt.sel{border-color:var(--blue);background:var(--blue-lt);font-weight:600;color:var(--ink)}
-.qopt i{font-style:normal;flex-shrink:0;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--bg-2);font-weight:700;font-size:.85rem}
-.qopt.sel i{background:var(--blue);color:#fff}
-.qnav{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
-.qnav .btn:only-child{margin-left:auto}
-.quiz.shake{box-shadow:0 0 0 3px rgba(26,86,219,.5)}
-.qres-top{display:flex;gap:16px;align-items:center;margin-bottom:12px}
-.qband{flex-shrink:0;width:84px;height:84px;border-radius:var(--r-lg);background:var(--blue);color:#fff;display:grid;place-content:center;text-align:center;font-family:var(--f-head);font-weight:800;font-size:1.6rem;line-height:1}
-.qband small{font-size:.6rem;letter-spacing:.08em;margin-top:6px;opacity:.85}
-.qres h4{margin:18px 0 10px;font-size:.95rem}
-.qres .btn-row{margin-top:20px}
 /* ---- Mobile (<768px) ---- */
 .m-only{display:none}
 @media (max-width:767px){
@@ -638,26 +614,6 @@
 </section>
 
 <!-- BAND QUIZ -->
-<section class="sec sec-alt" id="band-quiz">
-  <div class="wrap">
-    <div class="bq-grid">
-    <div class="sec-head bq-intro">
-      <span class="eyebrow">Step 01, on your own</span>
-      <h2>Estimate your band and the gap to your target</h2>
-      <p>Five quick questions, about one minute.<span class="m-hide"> A trainer confirms the real picture in your free assessment class.</span></p>
-      <ul class="ticks bq-points m-hide">
-        <li>See your likely band today</li>
-        <li>See how far you are from the band you need</li>
-        <li>Then book a free class where a trainer checks your speaking and writing</li>
-      </ul>
-    </div>
-    <div class="card quiz rv" data-form="band-quiz">
-      <div class="qprog"><div class="qtrack"><div id="QBar"></div></div><div id="QLabel">Question 1 of 5</div></div>
-      <div id="QBOX" aria-live="polite"></div>
-    </div>
-    </div>
-  </div>
-</section>
 
 <!-- FAQ -->
 <section class="sec" id="faq">
@@ -835,108 +791,6 @@
   </div>
 </div>
 
-<script>
-// ---- Band Calculator Quiz ----
-(function(){
-  var ANS=[0,0,0,0,0], CUR=1;
-  var QS=[
-    {q:"How comfortable are you speaking English in everyday conversations?",
-     o:["I struggle - I often cannot express what I mean","I manage but make many mistakes","I am fairly fluent with occasional errors","Very comfortable - I speak naturally and confidently"]},
-    {q:"When you read an English article, how much do you understand?",
-     o:["Less than 50% - I need to look up many words","About 60-70% - I get the main idea","Around 80-90% - I understand most details","Almost everything including complex texts"]},
-    {q:"How would you rate your English writing skills?",
-     o:["Basic - I make lots of grammar and vocabulary errors","Intermediate - I can write but structure is weak","Good - I write clearly with minor errors","Strong - I write complex, well-structured essays"]},
-    {q:"How much IELTS preparation have you done so far?",
-     o:["None - I am a complete beginner to IELTS","A little - I have read about the format","Some - I have done a few practice tests","Extensive - I have taken coaching or a real test before"]},
-    {q:"What is your target band score?",
-     o:["Band 6.0 - 6.5 (minimum requirement)","Band 7.0 - 7.5 (Canada PR / UK Visa)","Band 8.0 - 8.5 (top universities / Australia)","Band 9.0 (maximum - teaching / research)"]}
-  ];
-  function setBar(n){
-    var b=document.getElementById("QBar");
-    var l=document.getElementById("QLabel");
-    if(b) b.style.width=(((n-1)/5)*100)+"%";
-    if(l) l.textContent="Question "+n+" of 5";
-  }
-  function render(){
-    var box=document.getElementById("QBOX");
-    if(!box) return;
-    setBar(CUR);
-    var q=QS[CUR-1];
-    var h='<div class="qq"><span>Q'+CUR+'. </span>'+q.q+'</div><div class="qopts">';
-    for(var i=0;i<4;i++){
-      var p=i+1;
-      var sel=(ANS[CUR-1]===p);
-      h+='<button type="button" class="qopt'+(sel?' sel':'')+'" aria-pressed="'+sel+'" onclick="window._qpick('+p+')"><i>'+p+'</i>'+q.o[i]+'</button>';
-    }
-    h+='</div><div class="qnav">';
-    if(CUR>1) h+='<button type="button" class="btn btn-ghost" onclick="window._qback()">&larr; Back</button>';
-    if(CUR<5) h+='<button type="button" class="btn btn-primary" onclick="window._qnext()">Next &rarr;</button>';
-    else h+='<button type="button" class="btn btn-primary" data-cta="quiz-result" onclick="window._qresult()">See My Result &rarr;</button>';
-    h+='</div>';
-    box.innerHTML=h;
-  }
-  function shake(){
-    var b=document.querySelector(".quiz");
-    if(!b) return;
-    b.classList.add("shake");
-    setTimeout(function(){b.classList.remove("shake");},700);
-  }
-
-  window._qpick=function(p){ ANS[CUR-1]=p; render(); };
-  window._qback=function(){ if(CUR>1){CUR--;render();} };
-  window._qnext=function(){ if(!ANS[CUR-1]){shake();return;} CUR++; render(); };
-  window._qresult=function(){
-    if(!ANS[4]){shake();return;}
-    var total=ANS[0]+ANS[1]+ANS[2]+ANS[3]+ANS[4];
-    var avg=total/5;
-    var band,title,desc,plan,msg;
-    if(avg<=1.6){
-      band="5.0 - 5.5";title="Starting Level";
-      desc="Your estimated band is 5.0-5.5. You have ground to cover, and that is fine. Build the foundations first with a trainer checking your work, and Band 7 becomes a realistic next step.";
-      plan=["Live Coaching with a longer runway","Grammar and vocabulary foundations first","Free diagnostic test after you enrol","WhatsApp doubt support throughout"];
-      msg="Hi! I used the Prepeve band calculator and got Band 5.0-5.5. I need help reaching Band 7+.";
-    } else if(avg<=2.4){
-      band="5.5 - 6.5";title="Developing Level";
-      desc="Your estimated band is 5.5-6.5. You have a solid base. The gap to Band 7 is usually in Writing structure and Speaking fluency, and both improve fastest with trainer feedback.";
-      plan=["Live Coaching with trainer-marked writing","Writing Task 2 structure and Speaking fluency","5 full-length mock tests","Trainer-marked feedback on every essay"];
-      msg="Hi! I used the Prepeve band calculator and got Band 5.5-6.5. I want to reach Band 7+.";
-    } else if(avg<=3.2){
-      band="6.5 - 7.5";title="Upper-Intermediate";
-      desc="Your estimated band is 6.5-7.5. You are close. The last half band usually comes from fixing a few specific habits, and a trainer can show you which ones.";
-      plan=["Targeted work on your weakest module","1-on-1 speaking mocks to close the gap","Writing Task 1 and Task 2 refinement","5 timed full-length mocks with trainer feedback"];
-      msg="Hi! I used the Prepeve band calculator and got Band 6.5-7.5. I want to push to Band 8+.";
-    } else {
-      band="7.5 - 8.5";title="Advanced Learner";
-      desc="Your estimated band is 7.5-8.5. You don't need more lessons, you need precision. 1-on-1 Mentorship puts every session on your specific gaps.";
-      plan=["1-on-1 Mentorship with a dedicated coach","Advanced vocabulary and precision writing","Targeted drills to close the last 0.5 band gap","Exam-day strategy"];
-      msg="Hi! I used the Prepeve band calculator and got Band 7.5-8.5. I want to reach Band 9.";
-    }
-    var b=document.getElementById("QBar");
-    var l=document.getElementById("QLabel");
-    if(b)b.style.width="100%";
-    if(l)l.textContent="Your result";
-    var pl="";
-    for(var i=0;i<plan.length;i++){ pl+='<li>'+plan[i]+'</li>'; }
-    var waUrl="https://wa.me/919877714284?text="+encodeURIComponent(msg);
-    document.getElementById("QBOX").innerHTML=
-      '<div class="qres">'+
-        '<div class="qres-top"><div class="qband">'+band.split(" ")[0]+'<small>EST. BAND</small></div>'+
-        '<div><h3>'+title+'</h3><p style="color:var(--muted);font-size:.95rem">Estimated band '+band+'</p></div></div>'+
-        '<p>'+desc+'</p>'+
-        '<h4>The plan we\'d suggest from here</h4>'+
-        '<ul class="ticks">'+pl+'</ul>'+
-        '<div class="btn-row">'+
-          '<a href="/book-demo" class="btn btn-primary" data-cta="quiz-result">Book My Free Assessment Class</a>'+
-          '<a href="'+waUrl+'" class="btn btn-wa" data-cta="quiz-result" target="_blank" rel="noopener">Send My Result on WhatsApp</a>'+
-          '<button type="button" class="btn btn-ghost" onclick="window._qreset()">Retake the Estimator</button>'+
-        '</div>'+
-      '</div>';
-    if(window.pvTrack) window.pvTrack('quiz_complete',{band:band});
-  };
-  window._qreset=function(){ ANS=[0,0,0,0,0]; CUR=1; render(); };
-  render();
-})();
-</script>
 <script src="/assets/js/prepeve.js?v=6fc5c795" defer></script>
 <script>
 // ---- Mobile FAQ toggle ----
